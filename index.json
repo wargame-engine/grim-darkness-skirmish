@@ -125,16 +125,6 @@
                 "marksmanship_focus": {"name": "Marksmanship", "id": "marksmanship_focus", "description": "An Ascended Astro-Raptors with the best shooting skill in the galaxy."}
             }
         },
-        "knight_lords": {
-            "name": "Knight Lords",
-            "id": "knight_lords",
-            "url": "knight_lords.json",
-            "color": "#396e9e",
-            "secondary_color": "#9a1115",
-            "alliance": "imperial_alliance",
-            "version": "0.1",
-            "description": "The Knight Lords are a loose organization of many different knight guilds which build and maintain unique and gigantic war machines. The Knight Lords rely on huge Knight war machines and good old fashioned chivalry to pound their foes."
-        },
         "battle_sisters": {
             "name": "Battle Sisters",
             "id": "battle_sisters",
