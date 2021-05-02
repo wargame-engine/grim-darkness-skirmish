@@ -1,0 +1,305 @@
+{
+    "id": "elven_keepers",
+    "name": "Elven Keepers",
+    "author": "Caliallie#6369",
+    "background": "Keepers of the Grand Library, these elves are clad in a unique Jester design. Their combat style revolves around a display of acrobatics and swift movement, one could attribute to a dance of blades.",
+    "units": {
+        "troupe_master": {
+            "name": "Troupe Master",
+            "description": "A master of the Elven Keepers. Highly swift and deadly on foot.",
+            "min": 1,
+            "max": 1,
+            "category": "command",
+            "rules": [{"id": "leader_x", "x": "Infantry"}, "agile", {"id": "keeper_tactics", "x": 1}, {"id": "tough", "x": 1}, {"id": "wounds", "x": 3}],
+            "keywords": ["Infantry"],
+            "models": [
+                {
+                    "name": "Troupe Master",
+                    "movement": 7,
+                    "courage": 7,
+                    "shoot": 7,
+                    "fight": 7,
+                    "defense": 6,
+                    "reflexes": 6,
+                    "weapons": ["shard_pistol", {"id": "elven_blade", "count": 5}, "plasma_grenade"],
+                    "options": [
+                        {"replaceRule": {"id": "keeper_tactics", "x": 1}, "withRule": {"id": "keeper_tactics", "x": 2}},
+                        {"replaceWeapon": "shard_pistol", "withWeapon": ["neuron_pistol", "fusion_pistol"]},
+                        {
+                            "replaceWeapon": {"id": "elven_blade", "count": 5},
+                            "withWeapon": [{"id": "energy_sword", "count": 5}, {"id": "deathly_caress", "count": 5}, {"id": "deathly_kiss", "count": 5}, {"id": "deathly_embrace", "count": 5}]
+                        }
+                    ],
+                    "rules": [],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "solitaire": {
+            "name": "Solitaire",
+            "description": "A solo wandering player who has perfected the dance of war and occasionally joins the main troupe to deadly effect.",
+            "min": 1,
+            "max": 1,
+            "category": "specialist",
+            "rules": [{"id": "leader_x", "x": "Infantry"}, "agile", {"id": "tough", "x": 1}, {"id": "wounds", "x": 3}],
+            "keywords": ["Infantry"],
+            "models": [
+                {
+                    "name": "Solitaire",
+                    "courage": 7,
+                    "movement": 8,
+                    "shoot": 7,
+                    "fight": 7,
+                    "defense": 7,
+                    "reflexes": 6,
+                    "weapons": ["deadly_arts"],
+                    "options": [{"addRule": ["ambush"]}],
+                    "rules": [],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "elven_seer": {
+            "name": "Elven Seer",
+            "description": "An elven keeper gifted with the power of minor foresight and energy manipulation.",
+            "min": 1,
+            "max": 1,
+            "category": "command",
+            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "psychic", "x": 1}, "agile", {"id": "tough", "x": 1}, {"id": "wounds", "x": 3}],
+            "keywords": ["Infantry"],
+            "models": [
+                {
+                    "name": "Elven Seer",
+                    "courage": 7,
+                    "movement": 7,
+                    "shoot": 7,
+                    "fight": 7,
+                    "defense": 6,
+                    "reflexes": 6,
+                    "weapons": ["shard_pistol", {"id": "elven_blade", "count": 3}],
+                    "options": [
+                        {"replaceWeapon": "shard_pistol", "withWeapon": ["neuron_pistol", "fusion_pistol"]},
+                        {"replaceRule": [{"id": "psychic", "x": 1}], "withRule": [{"id": "psychic", "x": 2}]},
+                        {"addWeapon": "grenade_launcher_backpack"}
+                    ],
+                    "rules": [],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "jester_assassin": {
+            "name": "Jester Assassin",
+            "description": "A highly trained troupe member that specializes in accurate long-range weaponry.",
+            "min": 1,
+            "max": 1,
+            "category": "specialist",
+            "rules": [{"id": "leader_x", "x": "Infantry"}, "agile", {"id": "wounds", "x": 3}],
+            "keywords": ["Infantry"],
+            "models": [
+                {
+                    "name": "Jester Assassin",
+                    "courage": 7,
+                    "movement": 7,
+                    "shoot": 7,
+                    "fight": 7,
+                    "defense": 6,
+                    "reflexes": 6,
+                    "weapons": ["sniper_cannon", {"id": "elven_blade", "count": 4}],
+                    "rules": [],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "troupe": {
+            "name": "Troupe",
+            "description": "A group of elven jesters on foot.",
+            "min": 1,
+            "max": 1,
+            "category": "core",
+            "rules": ["agile"],
+            "keywords": ["Infantry"],
+            "models": [
+                {
+                    "name": "Jester",
+                    "courage": 6,
+                    "movement": 7,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 6,
+                    "reflexes": 6,
+                    "weapons": ["shard_pistol", {"id": "elven_blade", "count": 3}, "plasma_grenade"],
+                    "options": [
+                        {"replaceWeapon": "shard_pistol", "withWeapon": ["neuron_pistol", "fusion_pistol", "exploding_bola"]},
+                        {
+                            "replaceWeapon": {"id": "elven_blade", "count": 3},
+                            "withWeapon": [
+                                {"id": "energy_sword", "count": 3},
+                                {"id": "deathly_kiss", "count": 3},
+                                {"id": "deathly_caress", "count": 3},
+                                {"id": "deathly_embrace", "count": 3},
+                                {"id": "energy_glaive", "count": 4}
+                            ]
+                        },
+                        {"adRule": "ambush"}
+                    ],
+                    "rules": [],
+                    "min": 5,
+                    "max": 15
+                }
+            ]
+        },
+        "mimes": {
+            "name": "Mimes",
+            "description": "A group of newly indicted troupe mebers doing their best to prove themselves on and off of the battlefield.",
+            "min": 1,
+            "max": 1,
+            "category": "core",
+            "rules": ["agile"],
+            "keywords": ["Infantry"],
+            "models": [
+                {
+                    "name": "Mimes",
+                    "courage": 5,
+                    "movement": 7,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "weapons": ["shard_pistol", {"id": "elven_blade", "count": 3}],
+                    "options": [
+                        {"replaceWeapon": "shard_pistol", "withWeapon": ["neuron_pistol", "fusion_pistol", "exploding_bola"]},
+                        {
+                            "replaceWeapon": {"id": "elven_blade", "count": 3},
+                            "withWeapon": [
+                                {"id": "energy_sword", "count": 3},
+                                {"id": "deathly_kiss", "count": 3},
+                                {"id": "deathly_caress", "count": 3},
+                                {"id": "deathly_embrace", "count": 3},
+                                {"id": "energy_glaive", "count": 4}
+                            ]
+                        },
+                        {"adRule": "ambush"}
+                    ],
+                    "min": 5,
+                    "max": 20
+                }
+            ]
+        },
+        "jetbikes": {
+            "name": "Jetbikes",
+            "description": "Fast-moving hover bikes outfitted with deadly weapons to choreograph the dance of war.",
+            "min": 1,
+            "max": 1,
+            "category": "strike",
+            "rules": ["hover", {"id": "wounds", "x": 2}],
+            "keywords": ["Biker"],
+            "models": [
+                {
+                    "name": "Jetbikes",
+                    "courage": 6,
+                    "movement": 10,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 7,
+                    "reflexes": 5,
+                    "weapons": ["shard_cannon", {"id": "energy_glaive", "count": 2}],
+                    "options": [{"replaceWeapon": "shard_cannon", "withWeapon": ["emp_cannon"]}, {"replaceWeapon": "energy_glaive", "withWeapon": ["exploding_bola"]}],
+                    "min": 2,
+                    "max": 6
+                }
+            ]
+        },
+        "hover_transport": {
+            "name": "Hover Transport",
+            "description": "A light transport outfitted to carry troupes.",
+            "min": 1,
+            "max": 1,
+            "category": "transport",
+            "rules": ["hover", {"id": "impact", "x": 3}, {"id": "transport", "x": 6}, {"id": "open_topped", "x": 6}, "damage_table_vehicle"],
+            "keywords": ["Vehicle"],
+            "models": [{"name": "Hover Tank", "courage": 6, "movement": 10, "shoot": 6, "fight": 6, "defense": 8, "reflexes": 5, "weapons": [{"id": "shard_cannon", "count": 2}], "min": 1, "max": 1}]
+        },
+        "hover_tank": {
+            "name": "Hover Tank",
+            "description": "A light hover tank that can be outfitted to carry troupes or with heavier weaponry to eliminate threats.",
+            "min": 1,
+            "max": 1,
+            "category": "heavy",
+            "rules": ["hover", {"id": "impact", "x": 3}, "damage_table_vehicle"],
+            "keywords": ["Vehicle"],
+            "models": [
+                {
+                    "name": "Hover Tank",
+                    "courage": 6,
+                    "movement": 10,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 8,
+                    "reflexes": 5,
+                    "weapons": [{"id": "shard_cannon", "count": 2}, "emp_cannon"],
+                    "options": [{"replaceWeapon": "emp_cannon", "withWeapon": "irridescent_cannon"}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        }
+    },
+    "weapons": {
+        "neuron_pistol": {"name": "Neuron Pistol", "attacks": 1, "short": 6, "medium": 12, "rules": ["pistol", {"id": "poison", "x": 2}], "ap": 2},
+        "deathly_caress": {"name": "Deathly Caress", "attacks": 1, "short": "Melee", "ap": 4},
+        "deathly_kiss": {"name": "Deathly Kiss", "attacks": 1, "short": "Melee", "ap": 1},
+        "deathly_embrace": {"name": "Deathly Embrace", "attacks": 1, "ap": 3, "short": "Melee"},
+        "deadly_arts": {"name": "Deadly Arts", "attacks": 6, "short": "Melee", "ap": 3, "rules": ["rending"]},
+        "sniper_cannon": {
+            "name": "Sniper Cannon",
+            "profiles": [
+                {"name": "Sniper Mode", "attacks": 1, "short": 12, "medium": 24, "rules": ["sniper", {"id": "poison", "x": 2}, "rending"], "ap": 3},
+                {"name": "Suppression Mode", "attacks": 3, "short": 12, "medium": 24, "rules": ["assault", "rending"], "ap": 3}
+            ]
+        },
+        "exploding_bola": {"name": "Exploding Bola", "attacks": 1, "short": 6, "medium": 12, "ap": 4, "rules": [{"id": "blast", "x": 2}]}
+    },
+    "rules": {
+        "keeper_tactics": {
+            "name": "Keeper Tactics",
+            "inputs": ["x"],
+            "description": "When this unit is activated, choose up to X friendly Infantry units within 6\" to receive one of the following bonuses until the end of the round: \n * Re-roll failed Accuracy tests of 9+ \n * Re-roll failed Strength tests of 9+",
+            "points": ["rule.x", {"multiply": 10}]
+        }
+    },
+    "strategies": {
+        "blur_field": {
+            "name": "Blur Field",
+            "phase": "activation",
+            "flavor": "The speed of the elven keepers outshines any others in the galaxy allowing them to accomplish incredible feats and dodge even the best gunman's bullets.",
+            "description": "Use this strategy when an elven keeper unit is targeted by an enemy unit. That unit gets -1 Accuracy and -1 Strength for this attack.",
+            "cost": 2
+        },
+        "dance_of_war": {
+            "name": "Dance of War",
+            "phase": "activation",
+            "flavor": "The mesmerizing dance of the elven keepers allows them to overwhelm and overpower their enemies.",
+            "description": "Use this strategy when one of your units is given a Fight action. This unit may immediately make a 3\" move.",
+            "cost": 1
+        },
+        "expedient_retreat": {
+            "name": "Expedient Retreat",
+            "phase": "activation",
+            "flavor": "The elven keepers are not equipped for long, attrition-based battles. Instead, they employ hit and run tactics to wear down their enemy without taking may losses themselves.",
+            "description": "Use after one of your units finishes taking a Shooting action. You may immediately take a free move action. You may not charge with a unit in the same round that it has been affected by this strategy.",
+            "cost": 2
+        }
+    },
+    "powers": {
+        "storm": {"name": "Storm", "description": "Target enemy unit within 12\" take 5 hits each with AP 0.", "charge": 7},
+        "magic_shield": {"name": "Shield", "description": "Target friendly unit within 12\". Until the end of the round, roll a D10 each time that unit is hit. On a 3 or less, that hit is ignored.", "charge": 7},
+        "time_warp": {"name": "Warp", "description": "Target friendly unit within 12\" may immediately make a free move action.", "charge": 7},
+        "weakness": {"name": "Weakness", "description": "Target enemy unit within 12\" must re-roll one die of your choice on its next Save test.", "charge": 6},
+        "death": {"name": "Bolt", "description": "Target enemy unit within 18\" takes 1 hit with AP 7.", "charge": 6},
+        "clouded_vision": {"name": "Clouded", "description": "Target enemy unit within 12\" gets -1 Accuracy until the end of the round.", "charge": 6}
+    }
+}
