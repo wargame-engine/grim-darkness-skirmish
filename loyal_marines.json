@@ -1511,8 +1511,7 @@
                     "defense": 8,
                     "reflexes": 6,
                     "weapons": [{"id": "storm_rifle"}, "psychic_grenade", {"id": "psychic_sword", "count": 2}],
-                    "options": [{"replaceWeapon": "storm_rifle", "withWeapon": ["incinerator", "psychic_silencer", "psychic_cannon"], "modelLimit": 2}],
-                    "rules": [],
+                    "options": [{"replaceWeapon": ["storm_rifle", {"id": "psychic_sword", "count": 2}], "withWeapon": [["heavy_ccw", "incinerator"], ["heavy_ccw", "psychic_silencer"], ["heavy_ccw", "psychic_cannon"]], "modelLimit": "1/5"}],
                     "min": 1,
                     "max": 1
                 }
@@ -1551,8 +1550,7 @@
                     "defense": 8,
                     "reflexes": 6,
                     "weapons": [{"id": "storm_rifle"}, "psychic_grenade", {"id": "psychic_sword", "count": 2}],
-                    "options": [{"replaceWeapon": "storm_rifle", "withWeapon": ["incinerator", "psychic_silencer", "psychic_cannon"], "modelLimit": 2}],
-                    "rules": [],
+                    "options": [{"replaceWeapon": ["storm_rifle", {"id": "psychic_sword", "count": 2}], "withWeapon": [["heavy_ccw", "incinerator"], ["heavy_ccw", "psychic_silencer"], ["heavy_ccw", "psychic_cannon"]], "modelLimit": "1/5"}],
                     "min": 1,
                     "max": 1
                 }
@@ -1596,8 +1594,7 @@
                     "defense": 8,
                     "reflexes": 6,
                     "weapons": [{"id": "storm_rifle"}, "psychic_grenade", {"id": "psychic_sword", "count": 2}],
-                    "options": [{"replaceWeapon": "storm_rifle", "withWeapon": ["incinerator", "psychic_silencer", "psychic_cannon"], "modelLimit": 2}],
-                    "rules": [],
+                    "options": [{"replaceWeapon": ["storm_rifle", {"id": "psychic_sword", "count": 2}], "withWeapon": [["heavy_ccw", "incinerator"], ["heavy_ccw", "psychic_silencer"], ["heavy_ccw", "psychic_cannon"]], "modelLimit": "1/5"}],
                     "min": 1,
                     "max": 1
                 }
@@ -1642,7 +1639,6 @@
                     "reflexes": 6,
                     "weapons": [{"id": "twin_marine_rifle"}, "psychic_grenade", {"id": "psychic_sword", "count": 2}],
                     "options": [{"replaceWeapon": "twin_marine_rifle", "withWeapon": ["incinerator", "psychic_silencer", "psychic_cannon"], "modelLimit": 2}],
-                    "rules": [],
                     "min": 1,
                     "max": 1
                 }
@@ -1685,7 +1681,6 @@
                     "reflexes": 6,
                     "weapons": [{"id": "twin_marine_rifle"}, "psychic_grenade", {"id": "psychic_sword", "count": 2}],
                     "options": [{"replaceWeapon": "twin_marine_rifle", "withWeapon": ["incinerator", "psychic_silencer", "psychic_cannon"], "modelLimit": 2}],
-                    "rules": [],
                     "min": 1,
                     "max": 1
                 }
