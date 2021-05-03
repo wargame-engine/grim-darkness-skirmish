@@ -249,7 +249,7 @@
     },
     "organizations": {
         "skirmish": {
-            "name": "Battle (Core)",
+            "name": "Skirmish (Core)",
             "cost": 0,
             "description": "A well-rounded force for taking on any mission.",
             "categories": {
@@ -258,7 +258,6 @@
                 "specialist": {"max": 3},
                 "strike": {"max": 3},
                 "heavy": {"max": 2},
-                "transport": {"max": 5},
                 "fortification": {"max": 4}
             }
         },
@@ -272,7 +271,6 @@
                 "specialist": {"max": 3},
                 "strike": {"min": 2, "max": 5},
                 "heavy": {"max": 2},
-                "transport": {"max": 5},
                 "fortification": {"max": 4}
             }
         },
@@ -286,7 +284,6 @@
                 "specialist": {"min": 2, "max": 5},
                 "strike": {"max": 3},
                 "heavy": {"max": 2},
-                "transport": {"max": 5},
                 "fortification": {"max": 4}
             }
         },
@@ -300,7 +297,6 @@
                 "specialist": {"max": 3},
                 "strike": {"max": 3},
                 "heavy": {"min": 2, "max": 4},
-                "transport": {"max": 4},
                 "fortification": {"max": 4}
             }
         },
