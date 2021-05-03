@@ -147,8 +147,8 @@
                         {"adRule": "ambush"}
                     ],
                     "rules": [],
-                    "min": 5,
-                    "max": 15
+                    "min": 1,
+                    "max": 1
                 }
             ]
         },
@@ -184,8 +184,8 @@
                         },
                         {"adRule": "ambush"}
                     ],
-                    "min": 5,
-                    "max": 20
+                    "min": 1,
+                    "max": 1
                 }
             ]
         },
@@ -208,40 +208,6 @@
                     "reflexes": 5,
                     "weapons": ["shard_cannon", {"id": "energy_glaive", "count": 2}],
                     "options": [{"replaceWeapon": "shard_cannon", "withWeapon": ["emp_cannon"]}, {"replaceWeapon": "energy_glaive", "withWeapon": ["exploding_bola"]}],
-                    "min": 2,
-                    "max": 6
-                }
-            ]
-        },
-        "hover_transport": {
-            "name": "Hover Transport",
-            "description": "A light transport outfitted to carry troupes.",
-            "min": 1,
-            "max": 1,
-            "category": "transport",
-            "rules": ["hover", {"id": "impact", "x": 3}, {"id": "transport", "x": 6}, {"id": "open_topped", "x": 6}, "damage_table_vehicle"],
-            "keywords": ["Vehicle"],
-            "models": [{"name": "Hover Tank", "courage": 6, "movement": 10, "shoot": 6, "fight": 6, "defense": 8, "reflexes": 5, "weapons": [{"id": "shard_cannon", "count": 2}], "min": 1, "max": 1}]
-        },
-        "hover_tank": {
-            "name": "Hover Tank",
-            "description": "A light hover tank that can be outfitted to carry troupes or with heavier weaponry to eliminate threats.",
-            "min": 1,
-            "max": 1,
-            "category": "heavy",
-            "rules": ["hover", {"id": "impact", "x": 3}, "damage_table_vehicle"],
-            "keywords": ["Vehicle"],
-            "models": [
-                {
-                    "name": "Hover Tank",
-                    "courage": 6,
-                    "movement": 10,
-                    "shoot": 6,
-                    "fight": 6,
-                    "defense": 8,
-                    "reflexes": 5,
-                    "weapons": [{"id": "shard_cannon", "count": 2}, "emp_cannon"],
-                    "options": [{"replaceWeapon": "emp_cannon", "withWeapon": "irridescent_cannon"}],
                     "min": 1,
                     "max": 1
                 }

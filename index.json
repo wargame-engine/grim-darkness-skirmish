@@ -254,7 +254,7 @@
             "description": "A well-rounded force for taking on any mission.",
             "categories": {
                 "command": {"min": 1, "max": 2},
-                "core": {"min": 2, "max": 5},
+                "core": {"min": 2, "max": 10},
                 "specialist": {"max": 3},
                 "strike": {"max": 3},
                 "heavy": {"max": 2},
@@ -267,7 +267,7 @@
             "description": "A strike force for outflanking or shock assaulting.",
             "categories": {
                 "command": {"min": 1, "max": 2},
-                "core": {"max": 3},
+                "core": {"max": 5},
                 "specialist": {"max": 3},
                 "strike": {"min": 2, "max": 5},
                 "heavy": {"max": 2},
@@ -280,7 +280,7 @@
             "description": "An elite force to deal with specific targets.",
             "categories": {
                 "command": {"min": 1, "max": 2},
-                "core": {"max": 3},
+                "core": {"max": 5},
                 "specialist": {"min": 2, "max": 5},
                 "strike": {"max": 3},
                 "heavy": {"max": 2},
@@ -289,11 +289,11 @@
         },
         "heavy": {
             "name": "Heavy (Core)",
-            "cost": 2,
+            "cost": 1,
             "description": "A heavy force to pack a punch on the field.",
             "categories": {
                 "command": {"min": 1, "max": 2},
-                "core": {"max": 2},
+                "core": {"max": 5},
                 "specialist": {"max": 3},
                 "strike": {"max": 3},
                 "heavy": {"min": 2, "max": 4},
@@ -304,7 +304,7 @@
             "name": "Support (Core)",
             "cost": 1,
             "description": "A small supporting force.",
-            "categories": {"command": {"max": 1}, "core": {"max": 2}, "specialist": {"max": 2}, "strike": {"max": 2}, "heavy": {"max": 1}, "transport": {"max": 2}, "fortification": {"max": 4}}
+            "categories": {"command": {"max": 1}, "core": {"max": 5}, "specialist": {"max": 2}, "strike": {"max": 2}, "heavy": {"max": 1}, "transport": {"max": 2}, "fortification": {"max": 4}}
         }
     },
     "relics": {
