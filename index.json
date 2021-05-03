@@ -362,7 +362,7 @@
         "marine_rifle": {"name": "Marine Rifle", "attacks": 1, "short": 12, "medium": 24, "ap": 1, "rules": ["rapid_fire"]},
         "veteran_marine_rifle": {"name": "Veteran Marine Rifle", "attacks": 1, "short": 12, "medium": 24, "ap": 2, "rules": ["rapid_fire"]},
         "auto_rifle": {"name": "Auto Rifle", "attacks": 2, "short": 12, "medium": 24, "long": 30, "ap": 1, "rules": ["assault"]},
-        "storm_rifle": {"name": "Storm Rifle", "profiles": [{"name": "Single", "attacks": 1, "short": 12, "medium": 24, "ap": 1, "rules": ["rapid_fire"]}, {"name": "Rapid", "attacks": 2, "short": 12, "medium": 24, "rules": ["rapid_fire"]}]},
+        "storm_rifle": {"name": "Storm Rifle", "attacks": 1, "short": 6, "ap": 1, "medium": 12, "rules": ["rapid_fire"]},
         "twin_twin_marine_rifle": {"name": "Twin Storm Rifle", "attacks": 4, "short": 12, "ap": 1, "medium": 24, "rules": ["rapid_fire"]},
         "energy_pick": {"name": "Energy Pick", "attacks": 1, "short": "Melee", "ap": 2, "rules": ["rending"]},
         "energy_sword": {"name": "Energy Sword", "attacks": 1, "short": "Melee", "ap": 2},
@@ -798,7 +798,7 @@
         "psychic": {
             "name": "Psychic",
             "inputs": ["x"],
-            "description": "This unit may cast X psychic powers at any point during its movement. To cast, roll a D10 and if the result is equal to or less than the psychic power's cast value it is successful. A unit may only successfully cast each psychic power once per turn. Any other Psychic unit within 24\" may attempt to dispel the Psychic attack. Roll a D10. If the value is lower than the rolled value for the psychic test, the power is stopped. If the spell is not stopped, no further attempts may be made to stop the same power. If this model is locked in Melee, it may only target units in the combat. This ability may not be used against enemy units in melee with friendly units.",
+            "description": "This unit may cast X psychic powers at any point during its movement. To cast, roll a D10 and if the result is equal to or less than the psychic power's cast value it is successful. On a roll of 10, the user takes 2 Shock. A unit may only successfully cast each psychic power once per turn. Any other Psychic unit within 24\" may attempt to dispel the Psychic attack. Roll a D10. If the value is lower than the rolled value for the psychic test, the power is stopped. If the spell is not stopped, no further attempts may be made to stop the same power. If this model is locked in Melee, it may only target units in the combat. This ability may not be used against enemy units in melee with friendly units.",
             "points": [15, {"multiply": "rule.x"}]
         },
         "psychic_prowess": {
