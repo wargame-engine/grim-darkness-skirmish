@@ -481,7 +481,7 @@
         },
         "core" : {
           "min" : 2,
-          "max" : 5
+          "max" : 8
         },
         "specialist" : {
           "max" : 3
@@ -511,7 +511,7 @@
           "max" : 2
         },
         "core" : {
-          "max" : 3
+          "max" : 5
         },
         "specialist" : {
           "max" : 3
@@ -542,7 +542,7 @@
           "max" : 2
         },
         "core" : {
-          "max" : 3
+          "max" : 5
         },
         "specialist" : {
           "min" : 2,
@@ -573,7 +573,7 @@
           "max" : 2
         },
         "core" : {
-          "max" : 2
+          "max" : 3
         },
         "specialist" : {
           "max" : 3
