@@ -136,7 +136,7 @@
                     "defense": 7,
                     "reflexes": 6,
                     "weapons": ["marine_rifle", "psychic_grenade", {"id": "ccw", "count": 2}],
-                    "rules": [{"id": "ward", "x": 1}],
+                    "rules": [{"id": "ward", "x": 1}, {"id": "leader_x", "x": "Infantry"}],
                     "options": [
                         {
                             "replaceWeapon": ["marine_rifle", {"id": "ccw", "count": 2}],
@@ -249,7 +249,7 @@
             "min": 5,
             "max": 10,
             "category": "leader",
-            "rules": [{"id": "wounds", "x": 2}, "leader"],
+            "rules": [{"id": "wounds", "x": 2}, {"id": "leader_x", "x": "Infantry"}],
             "models": [
                 {
                     "name": "Guardian",
@@ -280,7 +280,6 @@
             "max": 10,
             "category": "core",
             "rules": [{"id": "wounds", "x": 2}],
-
             "models": [
                 {
                     "name": "Guardian",
@@ -365,7 +364,7 @@
             "min": 5,
             "max": 10,
             "category": "leader",
-            "rules": [{"id": "resilient", "x": 3}, {"id": "wounds", "x": 2}],
+            "rules": [{"id": "resilient", "x": 3}, {"id": "wounds", "x": 2}, {"id": "leader_x", "x": "Infantry"}],
             "models": [
                 {
                     "name": "Warden",
