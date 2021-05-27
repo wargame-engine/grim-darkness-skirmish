@@ -9,7 +9,7 @@
             "description": "A master of the Elven Keepers. Highly swift and deadly on foot.",
             "min": 1,
             "max": 1,
-            "category": "command",
+            "category": "commander",
             "rules": [{"id": "leader_x", "x": "Infantry"}, "agile", {"id": "keeper_tactics", "x": 1},  {"id": "wounds", "x": 3}],
             "keywords": ["Infantry"],
             "models": [
@@ -41,7 +41,7 @@
             "description": "A solo wandering player who has perfected the dance of war and occasionally joins the main troupe to deadly effect.",
             "min": 1,
             "max": 1,
-            "category": "specialist",
+            "category": "leader",
             "rules": [{"id": "support_x", "x": "Infantry"}, "agile",  {"id": "wounds", "x": 3}],
             "keywords": ["Infantry"],
             "models": [
@@ -66,7 +66,7 @@
             "description": "An elven keeper gifted with the power of minor foresight and energy manipulation.",
             "min": 1,
             "max": 1,
-            "category": "command",
+            "category": "commander",
             "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "power", "x": 1}, "agile",  {"id": "wounds", "x": 3}],
             "keywords": ["Infantry"],
             "models": [
@@ -95,7 +95,7 @@
             "description": "A highly trained troupe member that specializes in accurate long-range weaponry.",
             "min": 1,
             "max": 1,
-            "category": "specialist",
+            "category": "leader",
             "rules": [{"id": "support_x", "x": "Infantry"}, "agile", {"id": "wounds", "x": 3}],
             "keywords": ["Infantry"],
             "models": [
@@ -114,9 +114,47 @@
                 }
             ]
         },
+        "troupe_leader": {
+            "name": "Jester Leader",
+            "description": "Elven jesters on foot.",
+            "min": 1,
+            "max": 1,
+            "category": "leader",
+            "rules": ["agile"],
+            "keywords": ["Infantry"],
+            "models": [
+                {
+                    "name": "Jester Leader",
+                    "courage": 6,
+                    "movement": 7,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 6,
+                    "reflexes": 6,
+                    "weapons": ["shard_pistol", {"id": "elven_blade", "count": 3}, "plasma_grenade"],
+                    "options": [
+                        {"replaceWeapon": "shard_pistol", "withWeapon": ["neuron_pistol", "fusion_pistol", "exploding_bola"]},
+                        {
+                            "replaceWeapon": {"id": "elven_blade", "count": 3},
+                            "withWeapon": [
+                                {"id": "energy_sword", "count": 3},
+                                {"id": "deathly_kiss", "count": 3},
+                                {"id": "deathly_caress", "count": 3},
+                                {"id": "deathly_embrace", "count": 3},
+                                {"id": "energy_glaive", "count": 4}
+                            ]
+                        },
+                        {"adRule": "ambush"}
+                    ],
+                    "rules": ["leader"],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
         "troupe": {
-            "name": "Troupe",
-            "description": "A group of elven jesters on foot.",
+            "name": "Jester",
+            "description": "Elven jesters on foot.",
             "min": 1,
             "max": 1,
             "category": "core",
@@ -147,22 +185,22 @@
                         {"adRule": "ambush"}
                     ],
                     "rules": [],
-                    "min": 5,
-                    "max": 15
+                    "min": 1,
+                    "max": 1
                 }
             ]
         },
-        "mimes": {
-            "name": "Mimes",
-            "description": "A group of newly indicted troupe mebers doing their best to prove themselves on and off of the battlefield.",
+        "mime_leader": {
+            "name": "Mime Leader",
+            "description": "Newly indicted troupe members doing their best to prove themselves on and off of the battlefield.",
             "min": 1,
             "max": 1,
-            "category": "core",
+            "category": "leader",
             "rules": ["agile"],
             "keywords": ["Infantry"],
             "models": [
                 {
-                    "name": "Mimes",
+                    "name": "Mime Leader",
                     "courage": 5,
                     "movement": 7,
                     "shoot": 6,
@@ -181,16 +219,51 @@
                                 {"id": "deathly_embrace", "count": 3},
                                 {"id": "energy_glaive", "count": 4}
                             ]
-                        },
-                        {"adRule": "ambush"}
+                        }
                     ],
                     "min": 5,
                     "max": 20
                 }
             ]
         },
+        "mime": {
+            "name": "Mime",
+            "description": "Newly indicted troupe members doing their best to prove themselves on and off of the battlefield.",
+            "min": 1,
+            "max": 1,
+            "category": "core",
+            "rules": ["agile"],
+            "keywords": ["Infantry"],
+            "models": [
+                {
+                    "name": "Mime",
+                    "courage": 5,
+                    "movement": 7,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 5,
+                    "reflexes": 6,
+                    "weapons": ["shard_pistol", {"id": "elven_blade", "count": 3}],
+                    "options": [
+                        {"replaceWeapon": "shard_pistol", "withWeapon": ["neuron_pistol", "fusion_pistol", "exploding_bola"]},
+                        {
+                            "replaceWeapon": {"id": "elven_blade", "count": 3},
+                            "withWeapon": [
+                                {"id": "energy_sword", "count": 3},
+                                {"id": "deathly_kiss", "count": 3},
+                                {"id": "deathly_caress", "count": 3},
+                                {"id": "deathly_embrace", "count": 3},
+                                {"id": "energy_glaive", "count": 4}
+                            ]
+                        }
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
         "jetbikes": {
-            "name": "Jetbikes",
+            "name": "Jetbike",
             "description": "Fast-moving hover bikes outfitted with deadly weapons to choreograph the dance of war.",
             "min": 1,
             "max": 1,
@@ -199,7 +272,7 @@
             "keywords": ["Biker"],
             "models": [
                 {
-                    "name": "Jetbikes",
+                    "name": "Jetbike",
                     "courage": 6,
                     "movement": 10,
                     "shoot": 6,
@@ -208,40 +281,6 @@
                     "reflexes": 6,
                     "weapons": ["shard_cannon", {"id": "energy_glaive", "count": 2}],
                     "options": [{"replaceWeapon": "shard_cannon", "withWeapon": ["emp_cannon"]}, {"replaceWeapon": "energy_glaive", "withWeapon": ["exploding_bola"]}],
-                    "min": 2,
-                    "max": 6
-                }
-            ]
-        },
-        "hover_transport": {
-            "name": "Hover Transport",
-            "description": "A light transport outfitted to carry troupes.",
-            "min": 1,
-            "max": 1,
-            "category": "transport",
-            "rules": ["hover", {"id": "impact", "x": 3}, {"id": "transport", "x": 6}, {"id": "open_topped", "x": 6}, "damage_table_vehicle", "vulnerable_side_rear"],
-            "keywords": ["Vehicle"],
-            "models": [{"name": "Hover Tank", "courage": 6, "movement": 10, "shoot": 6, "fight": 6, "defense": 9, "reflexes": 6, "weapons": [{"id": "shard_cannon", "count": 2}], "min": 1, "max": 1}]
-        },
-        "hover_tank": {
-            "name": "Hover Tank",
-            "description": "A light hover tank that can be outfitted to carry troupes or with heavier weaponry to eliminate threats.",
-            "min": 1,
-            "max": 1,
-            "category": "heavy",
-            "rules": ["hover", {"id": "impact", "x": 3}, "damage_table_vehicle", "vulnerable_side_rear"],
-            "keywords": ["Vehicle"],
-            "models": [
-                {
-                    "name": "Hover Tank",
-                    "courage": 6,
-                    "movement": 10,
-                    "shoot": 6,
-                    "fight": 6,
-                    "defense": 10,
-                    "reflexes": 6,
-                    "weapons": [{"id": "shard_cannon", "count": 2}, "emp_cannon"],
-                    "options": [{"replaceWeapon": "emp_cannon", "withWeapon": "irridescent_cannon"}],
                     "min": 1,
                     "max": 1
                 }

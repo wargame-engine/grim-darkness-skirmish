@@ -52,6 +52,15 @@
                 "speed_focus": {"name": "Speed", "id": "speed_focus", "description": "An Orc Clan with a need for speed."},
                 "shooting_focus": {"name": "Shooting", "id": "shooting_focus", "description": "An Orc Clan with an addiction for shiny weapons."}
             }
+        },
+        "elven_keepers": {
+            "name": "Elven Keepers",
+            "id": "elven_keepers",
+            "url": "elven_keepers.json",
+            "color": "#7761ab",
+            "alliance": "elven_coaliation",
+            "version": "0.1",
+            "description": "The Elven Keepers are a race of elves who are tasked with keeping the grand elf library. They have a unique close combat and fast oriented style with deadly weaponry and quick jetbike and hovercraft vehicles."
         }
     },
     "unfinished_factions": {
@@ -151,15 +160,6 @@
                 "solar_fire": {"name": "Solar Fire", "id": "solar_fire", "description": "Undying Machines focused on overwhelming firepower."},
                 "combat_focus": {"name": "Close Combat", "id": "combat_focus", "description": "Undying Machines focused on deadly close assaults."}
             }
-        },
-        "elven_keepers": {
-            "name": "Elven Keepers",
-            "id": "elven_keepers",
-            "url": "elven_keepers.json",
-            "color": "#7761ab",
-            "alliance": "elven_coaliation",
-            "version": "0.1",
-            "description": "The Elven Keepers are a race of elves who are tasked with keeping the grand elf library. They have a unique close combat and fast oriented style with deadly weaponry and quick jetbike and hovercraft vehicles."
         },
         "tao_federation": {
             "alliance": "federation",
