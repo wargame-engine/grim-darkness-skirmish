@@ -9,7 +9,7 @@
             "description": "The smartest and most intelligent machine guild leader.",
             "min": 1,
             "max": 1,
-            "category": "command",
+            "category": "commander",
             "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "repair", "x": 3}],
             "keywords": ["Infantry"],
             "models": [
@@ -39,7 +39,7 @@
             "description": "A master craftsman and leader of the machine guild.",
             "min": 1,
             "max": 1,
-            "category": "command",
+            "category": "commander",
             "rules": [{"id": "leader_x", "x": "Infantry"},  {"id": "wounds", "x": 3}, {"id": "canticles", "x": 2}],
             "models": [
                 {
@@ -73,7 +73,7 @@
             "description": "A machine tinkerer of the guild.",
             "min": 1,
             "max": 1,
-            "category": "command",
+            "category": "commander",
             "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "wounds", "x": 2}, "manipulator"],
             "models": [
                 {
@@ -96,7 +96,7 @@
             "description": "A master craftsman and leader of the machine guild.",
             "min": 1,
             "max": 1,
-            "category": "command",
+            "category": "commander",
             "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "wounds", "x": 2}, {"id": "canticles", "x": 1}],
             "models": [
                 {
@@ -123,7 +123,7 @@
             "description": "An expert in manipulating machine data.",
             "min": 1,
             "max": 1,
-            "category": "specialist",
+            "category": "leader",
             "rules": [{"id": "leader_x", "x": "Infantry"}],
             "models": [
                 {
@@ -146,7 +146,7 @@
             "description": "Commander of the foot-mobile machine guild protection forces.",
             "min": 1,
             "max": 1,
-            "category": "command",
+            "category": "commander",
             "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "wounds", "x": 2}, {"id": "vanguard_tactics", "x": 1}],
             "models": [
                 {
@@ -168,12 +168,12 @@
                 }
             ]
         },
-        "vanguards": {
-            "name": "Vanguards",
+        "vanguard_leader": {
+            "name": "Vanguard Leader",
             "description": "Foot-mobile machine guild protection forces.",
             "min": 1,
             "max": 1,
-            "category": "core",
+            "category": "leader",
             "models": [
                 {
                     "name": "Vanguard Leader",
@@ -183,6 +183,7 @@
                     "fight": 5,
                     "defense": 6,
                     "reflexes": 6,
+                    "rules": ["leader"],
                     "weapons": ["radiation_carbine", "ccw"],
                     "options": [
                         {"addRule": [{"id": "data_link"}, "heat_scanner"]},
@@ -192,7 +193,16 @@
                     ],
                     "min": 1,
                     "max": 1
-                },
+                }
+            ]
+        },
+        "vanguard": {
+            "name": "Vanguard",
+            "description": "Foot-mobile machine guild protection forces.",
+            "min": 1,
+            "max": 1,
+            "category": "core",
+            "models": [
                 {
                     "name": "Vanguard",
                     "courage": 5,
@@ -202,18 +212,39 @@
                     "defense": 6,
                     "reflexes": 6,
                     "weapons": ["radiation_carbine", "ccw"],
-                    "options": [{"replaceWeapon": "radiation_carbine", "withWeapon": ["flamethrower", "emp_rifle", "plasma_burst_carbine", "uranium_rifle"], "modelLimit": "1/5"}],
-                    "min": 4,
-                    "max": 9
+                    "min": 1,
+                    "max": 1
                 }
             ]
         },
-        "rangers": {
-            "name": "Rangers",
+        "vanguard_specialist": {
+            "name": "Vanguard Specialist",
+            "description": "Foot-mobile machine guild protection forces.",
+            "min": 1,
+            "max": 1,
+            "category": "specialist",
+            "models": [
+                {
+                    "name": "Vanguard Specialist",
+                    "courage": 5,
+                    "movement": 6,
+                    "shoot": 6,
+                    "fight": 5,
+                    "defense": 6,
+                    "reflexes": 6,
+                    "weapons": ["radiation_carbine", "ccw"],
+                    "options": [{"replaceWeapon": "radiation_carbine", "withWeapon": ["flamethrower", "emp_rifle", "plasma_burst_carbine", "uranium_rifle"]}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "ranger_leader": {
+            "name": "Ranger Leader",
             "description": "Foot-mobile machine guild long range recon and marksmen forces.",
             "min": 1,
             "max": 1,
-            "category": "core",
+            "category": "leader",
             "rules": ["scout"],
             "models": [
                 {
@@ -224,6 +255,7 @@
                     "fight": 5,
                     "defense": 6,
                     "reflexes": 6,
+                    "rules": ["leader"],
                     "weapons": ["ranger_rifle", "ccw"],
                     "options": [
                         {"addRule": [{"id": "data_link"}, "heat_scanner"]},
@@ -233,7 +265,17 @@
                     ],
                     "min": 1,
                     "max": 1
-                },
+                }
+            ]
+        },
+        "rangers": {
+            "name": "Ranger",
+            "description": "Foot-mobile machine guild long range recon and marksmen forces.",
+            "min": 1,
+            "max": 1,
+            "category": "core",
+            "rules": ["scout"],
+            "models": [
                 {
                     "name": "Ranger",
                     "courage": 5,
@@ -243,14 +285,59 @@
                     "defense": 6,
                     "reflexes": 6,
                     "weapons": ["ranger_rifle", "ccw"],
-                    "options": [{"replaceWeapon": "ranger_rifle", "withWeapon": ["flamethrower", "emp_rifle", "plasma_burst_carbine", "uranium_rifle"], "modelLimit": "1/5"}],
-                    "min": 4,
-                    "max": 9
+                    "min": 1,
+                    "max": 1
                 }
             ]
         },
-        "shock_priests": {
-            "name": "Shock Priests",
+        "ranger_specialist": {
+            "name": "Ranger Specialist",
+            "description": "Foot-mobile machine guild long range recon and marksmen forces.",
+            "min": 1,
+            "max": 1,
+            "category": "specialist",
+            "rules": ["scout"],
+            "models": [
+                {
+                    "name": "Ranger Specialist",
+                    "courage": 5,
+                    "movement": 6,
+                    "shoot": 6,
+                    "fight": 5,
+                    "defense": 6,
+                    "reflexes": 6,
+                    "weapons": ["ranger_rifle", "ccw"],
+                    "options": [{"replaceWeapon": "ranger_rifle", "withWeapon": ["flamethrower", "emp_rifle", "plasma_burst_carbine", "uranium_rifle"]}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "shock_priest_leader": {
+            "name": "Shock Priest Leader",
+            "description": "Crazed fighters coursing with electric energy.",
+            "min": 1,
+            "max": 1,
+            "category": "leader",
+            "rules": [{"id": "resilient", "x": 3}, "leader"],
+            "models": [
+                {
+                    "name": "Shock Priest",
+                    "courage": 6,
+                    "movement": 6,
+                    "shoot": 5,
+                    "fight": 6,
+                    "defense": 5,
+                    "reflexes": 6,
+                    "weapons": [{"id": "shock_staff", "count": 2}],
+                    "options": [{"replaceWeapon": {"id": "shock_staff", "count": 2}, "withWeapon": [["taser_gauntlets_zap", {"id": "taser_gauntlets_strike", "count": 2}]]}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "shock_priest": {
+            "name": "Shock Priest",
             "description": "Crazed fighters coursing with electric energy.",
             "min": 1,
             "max": 1,
@@ -267,13 +354,13 @@
                     "reflexes": 6,
                     "weapons": [{"id": "shock_staff", "count": 2}],
                     "options": [{"replaceWeapon": {"id": "shock_staff", "count": 2}, "withWeapon": [["taser_gauntlets_zap", {"id": "taser_gauntlets_strike", "count": 2}]]}],
-                    "min": 5,
-                    "max": 20
+                    "min": 1,
+                    "max": 1
                 }
             ]
         },
-        "stalkers": {
-            "name": "Stalkers",
+        "stalker": {
+            "name": "Stalker",
             "description": "Metallic stalking cyborgs for hunting and killing targets.",
             "min": 1,
             "max": 1,
@@ -281,23 +368,11 @@
             "rules": ["agile"],
             "options": [{"replaceWeapon": ["sonic_razor", {"id": "claws", "count": 2}], "withWeapon": {"id": "sonic_blade", "count": 2}}],
             "models": [
-                {
-                    "name": "Stalker Leader",
-                    "courage": 5,
-                    "movement": 6,
-                    "shoot": 6,
-                    "fight": 6,
-                    "defense": 7,
-                    "reflexes": 5,
-                    "weapons": ["sonic_razor", {"id": "claws", "count": 2}],
-                    "min": 1,
-                    "max": 1
-                },
-                {"name": "Stalker", "courage": 5, "movement": 6, "shoot": 6, "fight": 6, "defense": 7, "reflexes": 5, "weapons": ["sonic_razor", {"id": "claws", "count": 2}], "min": 4, "max": 9}
+                {"name": "Stalker", "courage": 5, "movement": 6, "shoot": 6, "fight": 6, "defense": 7, "reflexes": 5, "weapons": ["sonic_razor", {"id": "claws", "count": 2}], "min": 1, "max": 1}
             ]
         },
-        "sky_stalkers": {
-            "name": "Sky Stalkers",
+        "sky_stalker": {
+            "name": "Sky Stalker",
             "description": "Metallic stalking cyborgs for hunting and killing targets.",
             "min": 1,
             "max": 1,
@@ -305,7 +380,6 @@
             "rules": ["fly"],
             "options": [{"replaceWeapon": "phosphor_pistol", "withWeapon": {"id": "blaster_smg"}}, {"addRule": {"id": "impact", "x": 1, "name": "Cluster Grenades"}, "modelLimit": "all"}],
             "models": [
-                {"name": "Sky Stalker Leader", "courage": 5, "movement": 8, "shoot": 6, "fight": 6, "defense": 7, "reflexes": 6, "weapons": ["taser_sword", "phosphor_pistol"], "min": 1, "max": 1},
                 {
                     "name": "Sky Stalker",
                     "courage": 5,
@@ -315,13 +389,13 @@
                     "defense": 7,
                     "reflexes": 6,
                     "weapons": ["phosphor_carbine", {"id": "ccw", "count": 2}],
-                    "min": 4,
-                    "max": 9
+                    "min": 1,
+                    "max": 1
                 }
             ]
         },
-        "infiltrators": {
-            "name": "Infiltrators",
+        "infiltrator": {
+            "name": "Infiltrator",
             "description": "Metal infiltration cyborgs for covert operations.",
             "min": 1,
             "max": 1,
@@ -329,12 +403,11 @@
             "rules": ["scout", "stealth"],
             "options": [{"replaceWeapon": ["blaster_smg", "taser_sword"], "withWeapon": [["burst_carbine", {"id": "energy_sword"}]]}],
             "models": [
-                {"name": "Infiltrator Leader", "courage": 5, "movement": 6, "shoot": 6, "fight": 6, "defense": 7, "reflexes": 5, "weapons": ["blaster_smg", "taser_sword"], "min": 1, "max": 1},
-                {"name": "Infiltrator", "courage": 5, "movement": 6, "shoot": 6, "fight": 6, "defense": 7, "reflexes": 5, "weapons": ["blaster_smg", "taser_sword"], "min": 4, "max": 9}
+                {"name": "Infiltrator", "courage": 5, "movement": 6, "shoot": 6, "fight": 6, "defense": 7, "reflexes": 5, "weapons": ["blaster_smg", "taser_sword"], "min": 1, "max": 1}
             ]
         },
         "raiders": {
-            "name": "Raiders",
+            "name": "Raider",
             "description": "Cyborgs mounted on fast-moving robotic dog machines.",
             "min": 1,
             "max": 1,
@@ -342,22 +415,6 @@
             "rules": ["scout", "agile", {"id": "wounds", "x": 2}],
             "options": [{"addWeapon": ["phosphor_breath"], "modelLimit": "all"}, {"replaceWeapon": {"id": "phosphor_pistol", "count": 2}, "withWeapon": "phosphor_carbine", "limit": "all"}],
             "models": [
-                {
-                    "name": "Raider Leader",
-                    "courage": 5,
-                    "movement": 8,
-                    "shoot": 6,
-                    "fight": 5,
-                    "defense": 6,
-                    "reflexes": 6,
-                    "weapons": [{"id": "phosphor_pistol", "count": 2}, {"id": "ccw", "count": 1}],
-                    "options": [
-                        {"replaceWeapon": {"id": "ccw", "count": 1}, "withWeapon": ["raider_sabre", "energy_sword"]},
-                        {"replaceWeapon": {"id": "phosphor_pistol", "count": 2}, "withWeapon": ["revolver_pistol"]}
-                    ],
-                    "min": 1,
-                    "max": 1
-                },
                 {
                     "name": "Raider",
                     "courage": 5,
@@ -367,13 +424,13 @@
                     "defense": 6,
                     "reflexes": 6,
                     "weapons": [{"id": "phosphor_pistol", "count": 2}, {"id": "ccw", "count": 1}],
-                    "min": 2,
-                    "max": 8
+                    "min": 1,
+                    "max": 1
                 }
             ]
         },
-        "breachers": {
-            "name": "Breachers",
+        "breacher": {
+            "name": "Breacher",
             "description": "Metallic cyborgs with tracks specialized in breaching defenses and fighting armored targets.",
             "min": 1,
             "max": 1,
@@ -381,11 +438,11 @@
             "rules": [{"id": "wounds", "x": 2}],
             "options": [{"replaceWeapon": "emp_cannon", "withWeapon": ["contortion_cannon"]}, {"replaceWeapon": {"id": "claws", "count": 3}, "withWeapon": {"id": "iron_claws", "count": 3}}],
             "models": [
-                {"name": "Breacher", "courage": 5, "movement": 6, "shoot": 5, "fight": 5, "defense": 9, "reflexes": 5, "weapons": ["emp_cannon", {"id": "claws", "count": 3}], "min": 3, "max": 6}
+                {"name": "Breacher", "courage": 5, "movement": 6, "shoot": 5, "fight": 5, "defense": 9, "reflexes": 5, "weapons": ["emp_cannon", {"id": "claws", "count": 3}], "min": 1, "max": 1}
             ]
         },
-        "destroyers": {
-            "name": "Destroyers",
+        "destroyer": {
+            "name": "Destroyer",
             "description": "Metallic cyborgs with tracks specialized in fighting armored targets at long range.",
             "min": 1,
             "max": 1,
@@ -398,7 +455,7 @@
             ],
             "models": [
                 {
-                    "name": "Destroyers",
+                    "name": "Destroyer",
                     "courage": 5,
                     "movement": 6,
                     "shoot": 5,
@@ -406,189 +463,6 @@
                     "defense": 8,
                     "reflexes": 6,
                     "weapons": ["mini_plasma_cannon", {"id": "claws", "count": 3}],
-                    "min": 3,
-                    "max": 6
-                }
-            ]
-        },
-        "landing_craft": {
-            "name": "Landing Craft",
-            "description": "A hovering landing craft for transporting troops.",
-            "rules": [{"id": "impact", "x": 3}, {"id": "transport", "x": 12}, "vulnerable_side_rear", "hover", "damage_table_vehicle"],
-            "category": "transport",
-            "keywords": ["Vehicle"],
-            "min": 1,
-            "max": 1,
-            "models": [
-                {
-                    "name": "Landing Craft",
-                    "movement": 10,
-                    "courage": 5,
-                    "shoot": 6,
-                    "fight": 3,
-                    "defense": 11,
-                    "reflexes": 6,
-                    "weapons": [{"id": "light_machinegun", "mount": ["Left"]}, {"id": "light_machinegun", "mount": ["Right"]}],
-                    "options": [{"addWeapon": ["twin_aa_light_machinegun"]}, {"addRule": {"id": "data_link"}}],
-                    "min": 1,
-                    "max": 1
-                }
-            ]
-        },
-        "assault_craft": {
-            "name": "Assault Craft",
-            "description": "A hovering tank for supporting landing assaults.",
-            "rules": [{"id": "impact", "x": 6}, "vulnerable_side_rear", "hover", "damage_table_vehicle"],
-            "category": "heavy",
-            "keywords": ["Vehicle"],
-            "min": 1,
-            "max": 1,
-            "models": [
-                {
-                    "name": "Assault Craft",
-                    "movement": 10,
-                    "courage": 5,
-                    "shoot": 6,
-                    "fight": 3,
-                    "defense": 12,
-                    "reflexes": 6,
-                    "weapons": [{"id": "light_machinegun", "mount": ["Left"]}, {"id": "light_machinegun", "mount": ["Right"]}, "light_machinegun", "iron_cannon"],
-                    "options": [{"replaceWeapon": "iron_cannon", "withWeapon": "energy_cannon"}, {"addWeapon": "disruption_missiles"}, {"addRule": {"id": "data_link"}}],
-                    "min": 1,
-                    "max": 1
-                }
-            ]
-        },
-        "crawler_tank": {
-            "name": "Crawler Tank",
-            "description": "A tank walking on large robotic legs.",
-            "rules": [{"id": "impact", "x": 6}, "vulnerable_side_rear", "walker", "damage_table_vehicle"],
-            "category": "heavy",
-            "keywords": ["Vehicle"],
-            "min": 1,
-            "max": 1,
-            "models": [
-                {
-                    "name": "Crawler Tank",
-                    "movement": 10,
-                    "courage": 5,
-                    "shoot": 6,
-                    "fight": 5,
-                    "defense": 12,
-                    "reflexes": 6,
-                    "weapons": ["twin_phosphor_cannon"],
-                    "options": [
-                        {"addWeapon": ["light_machinegun", "taser_arm"]},
-                        {"replaceWeapon": "twin_phosphor_cannon", "withWeapon": ["eradication_beam", ["aa_missiles", "twin_aa_autocannon"], ["neutron_laser", "light_machinegun"]]},
-                        {"addRule": [{"id": "data_link"}]}
-                    ],
-                    "min": 1,
-                    "max": 1
-                }
-            ]
-        },
-        "combat_robot": {
-            "name": "Combat Robot",
-            "description": "A robot built to smash with its fists or blast with deadly phosphor blasters.",
-            "rules": ["vulnerable_rear", "walker", "damage_table_vehicle"],
-            "category": "heavy",
-            "keywords": ["Vehicle"],
-            "min": 1,
-            "max": 1,
-            "models": [
-                {
-                    "name": "Combat Robot",
-                    "movement": 8,
-                    "courage": 7,
-                    "shoot": 5,
-                    "fight": 5,
-                    "defense": 10,
-                    "reflexes": 6,
-                    "weapons": [{"id": "robot_fist", "count": 2}, "heavy_flamethrower"],
-                    "options": [
-                        {"replaceWeapon": {"id": "robot_fist", "count": 2}, "withWeapon": [{"id": "phosphor_cannon", "count": 2}]},
-                        {"replaceWeapon": "heavy_flamethrower", "withWeapon": ["phosphor_cannon"]}
-                    ],
-                    "min": 1,
-                    "max": 3
-                }
-            ]
-        },
-        "dragoon_walker": {
-            "name": "Dragoon Walker",
-            "description": "A light walker with a long taser lance.",
-            "rules": ["vulnerable_rear", "walker", "damage_table_vehicle"],
-            "category": "heavy",
-            "keywords": ["Vehicle"],
-            "min": 1,
-            "max": 1,
-            "models": [
-                {
-                    "name": "Dragoon Walker",
-                    "movement": 10,
-                    "courage": 5,
-                    "shoot": 6,
-                    "fight": 6,
-                    "defense": 9,
-                    "reflexes": 6,
-                    "weapons": ["taser_lance"],
-                    "options": [{"addWeapon": ["radiation_carbine"]}, {"replaceWeapon": "taser_lance", "withWeapon": ["radiation_sniper"]}],
-                    "min": 1,
-                    "max": 3
-                }
-            ]
-        },
-        "iron_walker": {
-            "name": "Iron Walker",
-            "description": "A light walker equipped with longer-range fire support weapons.",
-            "rules": ["vulnerable_rear", "walker", "damage_table_vehicle"],
-            "category": "heavy",
-            "keywords": ["Vehicle"],
-            "min": 1,
-            "max": 1,
-            "models": [
-                {
-                    "name": "Dragoon Walker",
-                    "movement": 10,
-                    "courage": 5,
-                    "shoot": 6,
-                    "fight": 6,
-                    "defense": 9,
-                    "reflexes": 6,
-                    "weapons": [{"id": "twin_autocannon"}],
-                    "options": [{"replaceWeapon": "twin_autocannon", "withWeapon": ["twin_laser_cannon"]}],
-                    "min": 1,
-                    "max": 3
-                }
-            ]
-        },
-        "gunship": {
-            "name": "Gunship",
-            "description": "A multi-role gunship.",
-            "rules": ["aircraft", "hover_mode", "damage_table_aircraft"],
-            "category": "heavy",
-            "keywords": ["Vehicle", "Aircraft"],
-            "min": 1,
-            "max": 1,
-            "models": [
-                {
-                    "name": "Gunship",
-                    "movement": 10,
-                    "courage": 5,
-                    "shoot": 6,
-                    "fight": 4,
-                    "defense": 11,
-                    "reflexes": 6,
-                    "weapons": [{"id": "twin_light_machinegun", "mount": ["Front"]}],
-                    "options": [
-                        {"replaceWeapon": {"id": "twin_light_machinegun", "mount": ["Front"]}, "withWeapon": {"id": "twin_phosphor_cannon", "mount": ["Front"]}},
-                        {
-                            "addWeapon": [{"id": "twin_light_machinegun", "mount": ["Front", "Left", "Right"]}, {"id": "twin_laser_cannon", "mount": ["Front", "Left", "Right"]}, "bomb_rack"],
-                            "limit": 1
-                        },
-                        {"addWeapon": [[{"id": "light_machinegun", "mount": ["Left"]}, {"id": "light_machinegun", "mount": ["Right"]}]]},
-                        {"addRule": [{"id": "transport", "x": 6, "name": "Transport Space"}, {"id": "data_link"}]}
-                    ],
                     "min": 1,
                     "max": 1
                 }
