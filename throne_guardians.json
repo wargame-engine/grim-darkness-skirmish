@@ -8,7 +8,7 @@
             "description": "A Witch Hunter leader adept at leading witch hunters into battle.",
             "min": 5,
             "max": 10,
-            "category": "command",
+            "category": "commander",
             "models": [
                 {
                     "name": "Witch Hunter Champion",
@@ -34,7 +34,7 @@
             "description": "Highly trained and elite fighters.",
             "min": 5,
             "max": 10,
-            "category": "command",
+            "category": "commander",
             "rules": [{"id": "wounds", "x": 4}, {"id": "battle_tactics", "x": 2}, {"id": "leader_x", "x": "Infantry"}],
             "models": [
                 {
@@ -68,7 +68,7 @@
             "description": "Highly trained and elite fighters.",
             "min": 5,
             "max": 10,
-            "category": "command",
+            "category": "commander",
             "rules": [{"id": "wounds", "x": 3},  {"id": "battle_tactics", "x": 1}, {"id": "leader_x", "x": "Infantry"}],
             "models": [
                 {
@@ -119,21 +119,13 @@
                 }
             ]
         },
-        "witch_hunters": {
-            "name": "Witch Hunters",
+        "witch_hunter_leader": {
+            "name": "Witch Hunter Leader",
             "description": "A group of Witch hunters adept at hunting Psychic individuals.",
             "min": 5,
             "max": 10,
-            "category": "core",
+            "category": "leader",
             "keywords": ["Infantry", "Witch Hunters"],
-            "options": [
-                {
-                    "replaceWeapon": ["marine_rifle", {"id": "ccw", "count": 2}],
-                    "withWeapon": [["flamethrower", {"id": "ccw", "count": 2}], {"id": "energy_greatblade", "count": 2}],
-                    "modelLimit": "all",
-                    "limit": 1
-                }
-            ],
             "models": [
                 {
                     "name": "Witch Hunter Leader",
@@ -145,9 +137,26 @@
                     "reflexes": 6,
                     "weapons": ["marine_rifle", "psychic_grenade", {"id": "ccw", "count": 2}],
                     "rules": [{"id": "ward", "x": 1}],
+                    "options": [
+                        {
+                            "replaceWeapon": ["marine_rifle", {"id": "ccw", "count": 2}],
+                            "withWeapon": [["flamethrower", {"id": "ccw", "count": 2}], {"id": "energy_greatblade", "count": 2}],
+                            "limit": 1
+                        }
+                    ],
                     "min": 1,
                     "max": 1
-                },
+                }
+            ]
+        },
+        "witch_hunter": {
+            "name": "Witch Hunter",
+            "description": "A group of Witch hunters adept at hunting Psychic individuals.",
+            "min": 5,
+            "max": 10,
+            "category": "core",
+            "keywords": ["Infantry", "Witch Hunters"],
+            "models": [
                 {
                     "name": "Witch Hunter",
                     "movement": 6,
@@ -156,9 +165,16 @@
                     "fight": 6,
                     "defense": 7,
                     "reflexes": 6,
+                    "options": [
+                        {
+                            "replaceWeapon": ["marine_rifle", {"id": "ccw", "count": 2}],
+                            "withWeapon": [["flamethrower", {"id": "ccw", "count": 2}], {"id": "energy_greatblade", "count": 2}],
+                            "limit": 1
+                        }
+                    ],
                     "weapons": ["marine_rifle", "psychic_grenade", {"id": "ccw", "count": 2}],
-                    "min": 4,
-                    "max": 9
+                    "min": 1,
+                    "max": 1
                 }
             ]
         },
@@ -167,8 +183,8 @@
             "description": "A banner carrier for the Throne Guardians.",
             "min": 5,
             "max": 10,
-            "category": "specialist",
-            "rules": [{"id": "wounds", "x": 3}, "banner_of_blindness"],
+            "category": "leader",
+            "rules": [{"id": "wounds", "x": 3}, "banner_of_blindness", {"id": "leader_x", "x": "Infantry"}],
             "models": [
                 {
                     "name": "Guardian Ancient",
@@ -200,8 +216,8 @@
         "throne_ancient_destroyer": {
             "name": "Guardian Ancient in Destroyer Armor",
             "description": "A banner carrier for the Throne Guardians in heavy armor.",
-            "category": "specialist",
-            "rules": [{"id": "wounds", "x": 3}, "banner_of_blindness"],
+            "category": "leader",
+            "rules": [{"id": "wounds", "x": 3}, "banner_of_blindness", {"id": "leader_x", "x": "Infantry"}],
             "models": [
                 {
                     "name": "Guardian Ancient in Destroyer Armor",
@@ -227,21 +243,13 @@
                 }
             ]
         },
-        "throne_guardians": {
-            "name": "Guardians",
+        "guardian_leader": {
+            "name": "Guardian Leader",
             "description": "Highly trained and elite fighters.",
             "min": 5,
             "max": 10,
-            "category": "core",
-            "rules": [{"id": "wounds", "x": 2}],
-            "options": [
-                {
-                    "replaceWeapon": [{"id": "guardian_sword_blade", "count": 2}, "guardian_sword_pistol"],
-                    "withWeapon": [[{"id": "guardian_spear_blade", "count": 2}, "guardian_spear_rifle"], [{"id": "guardian_spear_blade", "count": 2}, "guardian_spear_fusion"], [{"id": "guardian_spear_blade", "count": 2}, "guardian_spear_carbine"], ["guardian_rifle", {"id": "heavy_ccw", "count": 1}]]
-                },
-                {"addWeapon": "guardian_dagger"},
-                {"addRule": "guardian_shield"}
-            ],
+            "category": "leader",
+            "rules": [{"id": "wounds", "x": 2}, "leader"],
             "models": [
                 {
                     "name": "Guardian",
@@ -252,13 +260,83 @@
                     "defense": 9,
                     "reflexes": 7,
                     "weapons": [{"id": "guardian_sword_blade", "count": 2}, "guardian_sword_pistol", "at_grenade"],
-                    "min": 3,
-                    "max": 5
+                    "options": [
+                        {
+                            "replaceWeapon": [{"id": "guardian_sword_blade", "count": 2}, "guardian_sword_pistol"],
+                            "withWeapon": [[{"id": "guardian_spear_blade", "count": 2}, "guardian_spear_rifle"], [{"id": "guardian_spear_blade", "count": 2}, "guardian_spear_carbine"], ["guardian_rifle", {"id": "heavy_ccw", "count": 1}]]
+                        },
+                        {"addWeapon": "guardian_dagger"},
+                        {"addRule": "guardian_shield"}
+                    ],
+                    "min": 1,
+                    "max": 1
                 }
             ]
         },
-        "guardian_jetpack_squad": {
-            "name": "Guardian Jetpack Squad",
+        "guardian": {
+            "name": "Guardian",
+            "description": "Highly trained and elite fighters.",
+            "min": 5,
+            "max": 10,
+            "category": "core",
+            "rules": [{"id": "wounds", "x": 2}],
+
+            "models": [
+                {
+                    "name": "Guardian",
+                    "courage": 7,
+                    "shoot": 7,
+                    "fight": 7,
+                    "movement": 6,
+                    "defense": 9,
+                    "reflexes": 7,
+                    "weapons": [{"id": "guardian_sword_blade", "count": 2}, "guardian_sword_pistol", "at_grenade"],
+                    "options": [
+                        {
+                            "replaceWeapon": [{"id": "guardian_sword_blade", "count": 2}, "guardian_sword_pistol"],
+                            "withWeapon": [[{"id": "guardian_spear_blade", "count": 2}, "guardian_spear_rifle"], [{"id": "guardian_spear_blade", "count": 2}, "guardian_spear_carbine"], ["guardian_rifle", {"id": "heavy_ccw", "count": 1}]]
+                        },
+                        {"addWeapon": "guardian_dagger"},
+                        {"addRule": "guardian_shield"}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "guardian_heavy": {
+            "name": "Guardian Specialist",
+            "description": "Highly trained and elite fighters.",
+            "min": 5,
+            "max": 10,
+            "category": "specialist",
+            "rules": [{"id": "wounds", "x": 2}],
+
+            "models": [
+                {
+                    "name": "Guardian Specialist",
+                    "courage": 7,
+                    "shoot": 7,
+                    "fight": 7,
+                    "movement": 6,
+                    "defense": 9,
+                    "reflexes": 7,
+                    "weapons": [{"id": "guardian_sword_blade", "count": 2}, "guardian_sword_pistol", "at_grenade"],
+                    "options": [
+                        {
+                            "replaceWeapon": [{"id": "guardian_sword_blade", "count": 2}, "guardian_sword_pistol"],
+                            "withWeapon": [[{"id": "guardian_spear_blade", "count": 2}, "guardian_spear_fusion"]]
+                        },
+                        {"addWeapon": "guardian_dagger"},
+                        {"addRule": "guardian_shield"}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "guardian_jetpack": {
+            "name": "Guardian Jetpack",
             "description": "Highly trained and elite fighters.",
             "min": 5,
             "max": 10,
@@ -276,28 +354,18 @@
                     "reflexes": 7,
                     "weapons": ["guardian_combat_shield", "guardian_pistol", "at_grenade"],
                     "options": [{"replaceWeapon": ["guardian_combat_shield", "guardian_pistol"], "withWeapon": [["guardian_lance_rifle", {"id": "guardian_lance_blade", "count": 2}]]}],
-                    "min": 3,
-                    "max": 6
+                    "min": 1,
+                    "max": 1
                 }
             ]
         },
-        "throne_wardens": {
-            "name": "Wardens",
+        "warden_leader": {
+            "name": "Warden Leader",
             "description": "Watch masters and veteran throne guardians.",
             "min": 5,
             "max": 10,
-            "category": "core",
+            "category": "leader",
             "rules": [{"id": "resilient", "x": 3}, {"id": "wounds", "x": 2}],
-            "options": [
-                {
-                    "replaceWeapon": [{"id": "guardian_spear_blade", "count": 3}, "guardian_spear_rifle"],
-                    "withWeapon": [
-                        [{"id": "guardian_axe_blade", "count": 3}, "guardian_axe_rifle"],
-                        ["guardian_rifle", {"id": "heavy_ccw", "count": 2}]
-                    ]
-                },
-                {"addWeapon": "guardian_dagger"}
-            ],
             "models": [
                 {
                     "name": "Warden",
@@ -307,18 +375,59 @@
                     "defense": 9,
                     "movement": 6,
                     "reflexes": 7,
+                    "options": [
+                        {
+                            "replaceWeapon": [{"id": "guardian_spear_blade", "count": 3}, "guardian_spear_rifle"],
+                            "withWeapon": [
+                                [{"id": "guardian_axe_blade", "count": 3}, "guardian_axe_rifle"],
+                                ["guardian_rifle", {"id": "heavy_ccw", "count": 2}]
+                            ]
+                        },
+                        {"addWeapon": "guardian_dagger"}
+                    ],
                     "weapons": [{"id": "guardian_spear_blade", "count": 3}, "guardian_spear_rifle", "at_grenade"],
-                    "min": 3,
-                    "max": 5
+                    "min": 1,
+                    "max": 1
                 }
             ]
         },
-        "throne_jetbikes": {
-            "name": "Jetbikes",
+        "warden": {
+            "name": "Warden",
+            "description": "Watch masters and veteran throne guardians.",
+            "min": 5,
+            "max": 10,
+            "category": "core",
+            "rules": [{"id": "resilient", "x": 3}, {"id": "wounds", "x": 2}],
+            "models": [
+                {
+                    "name": "Warden",
+                    "courage": 7,
+                    "shoot": 7,
+                    "fight": 7,
+                    "defense": 9,
+                    "movement": 6,
+                    "reflexes": 7,
+                    "options": [
+                        {
+                            "replaceWeapon": [{"id": "guardian_spear_blade", "count": 3}, "guardian_spear_rifle"],
+                            "withWeapon": [
+                                [{"id": "guardian_axe_blade", "count": 3}, "guardian_axe_rifle"],
+                                ["guardian_rifle", {"id": "heavy_ccw", "count": 2}]
+                            ]
+                        },
+                        {"addWeapon": "guardian_dagger"}
+                    ],
+                    "weapons": [{"id": "guardian_spear_blade", "count": 3}, "guardian_spear_rifle", "at_grenade"],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "jetbike": {
+            "name": "Jetbike",
             "description": "Throne guardians on high speed jet bikes.",
             "category": "strike",
             "rules": [{"id": "wounds", "x": 2}, "hover"],
-            "options": [{"replaceWeapon": ["guardian_rifle_array"], "withWeapon": ["guardian_missiles"]}],
             "models": [
                 {
                     "name": "Jetbike",
@@ -328,14 +437,15 @@
                     "defense": 9,
                     "movement": 8,
                     "reflexes": 7,
+                    "options": [{"replaceWeapon": ["guardian_rifle_array"], "withWeapon": ["guardian_missiles"]}],
                     "weapons": ["guardian_rifle_array", {"id": "guardian_lance", "count": 3}],
-                    "min": 3,
-                    "max": 9
+                    "min": 1,
+                    "max": 1
                 }
             ]
         },
         "guardian_destoyers": {
-            "name": "Guardian Destroyers",
+            "name": "Guardian Destroyer",
             "description": "Guardians clad in very heavy armor.",
             "rules": ["ambush", {"id": "wounds", "x": 2}],
             "category": "specialist",
@@ -353,13 +463,13 @@
                         {"replaceWeapon": {"id": "energy_claws", "count": 3}, "withWeapon": [{"id": "energy_fist", "count": 3}]},
                         {"replaceWeapon": "twin_guardian_rifle", "withWeapon": ["twin_guardian_destructor", "guardian_flamethrower"]}
                     ],
-                    "min": 3,
-                    "max": 6
+                    "min": 1,
+                    "max": 1
                 }
             ]
         },
         "guardian_assault_destroyers": {
-            "name": "Guardian Assault Destroyers",
+            "name": "Guardian Assault Destroyer",
             "description": "Guardians in extra heavy armor.",
             "category": "specialist",
             "rules": ["ambush", {"id": "wounds", "x": 2}],
@@ -381,197 +491,6 @@
                             ]
                         },
                         {"addWeapon": "guardian_dagger"}
-                    ],
-                    "min": 3,
-                    "max": 9
-                }
-            ]
-        },
-        "guardian_heavy_tank": {
-            "name": "Relic Heavy Assault APC",
-            "description": "A heavily armored transport sporting an arsenal of weapons built by the loyal marines.",
-            "keywords": ["Vehicle"],
-            "min": 1,
-            "category": "heavy",
-            "max": 1,
-            "rules": [{"id": "impact", "x": 6}, {"id": "transport", "x": 11}, "vulnerable_rear", "damage_table_vehicle"],
-            "models": [
-                {
-                    "name": "Relic Heavy Assault APC",
-                    "movement": 10,
-                    "courage": 7,
-                    "shoot": 7,
-                    "fight": 7,
-                    "defense": 13,
-                    "reflexes": 7,
-                    "weapons": [{"id": "twin_heavy_machinegun", "mount": ["Front"]}, {"id": "twin_laser_cannon", "mount": ["Left", "Front"]}, {"id": "twin_laser_cannon", "mount": ["Right", "Front"]}],
-                    "options": [{"addWeapon": ["twin_marine_rifle", "heavy_fusion_rifle", "hunter_missiles"]}, {"addRule": ["spiked_ram", {"id": "dozer", "name": "Dozer Blade"}]}],
-                    "rules": [],
-                    "min": 1,
-                    "max": 1
-                }
-            ]
-        },
-        "light_attack_vehicle": {
-            "name": "Light Hover Tank",
-            "description": "A light attack vehicle with medium tank killing capability.",
-            "keywords": ["Vehicle"],
-            "min": 1,
-            "category": "strike",
-            "max": 1,
-            "rules": [{"id": "impact", "x": 3}, "vulnerable_side_rear", "damage_table_vehicle", "hover"],
-            "models": [
-                {"name": "Light Hover Tank", "movement": 10, "courage": 7, "shoot": 7, "fight": 7, "defense": 11, "reflexes": 7, "weapons": ["guardian_twin_light_laser_cannon"], "min": 1, "max": 1}
-            ]
-        },
-        "hover_tank": {
-            "name": "Hover Tank",
-            "description": "A hover tank with good tank killing capability.",
-            "keywords": ["Vehicle"],
-            "min": 1,
-            "category": "heavy",
-            "max": 1,
-            "rules": [{"id": "impact", "x": 6}, "vulnerable_side_rear", "damage_table_vehicle", "hover"],
-            "models": [
-                {
-                    "name": "Hover Tank",
-                    "movement": 10,
-                    "courage": 7,
-                    "shoot": 7,
-                    "fight": 7,
-                    "defense": 12,
-                    "reflexes": 7,
-                    "weapons": ["guardian_twin_light_laser_cannon", {"id": "guardian_twin_heavy_machinegun", "mount": ["Front"]}],
-                    "min": 1,
-                    "max": 1,
-                    "options": [{"replaceWeapon": "guardian_twin_light_laser_cannon", "withWeapon": "guardian_twin_laser_cannon"}]
-                }
-            ]
-        },
-        "hover_transport": {
-            "name": "Hover Transport",
-            "description": "A hover transport with decent supporting weaponry.",
-            "keywords": ["Vehicle"],
-            "min": 1,
-            "category": "transport",
-            "max": 1,
-            "rules": [{"id": "impact", "x": 6}, {"id": "transport", "x": 6}, "vulnerable_side_rear", "damage_table_vehicle", "hover"],
-            "models": [
-                {
-                    "name": "Hover Tank",
-                    "movement": 10,
-                    "courage": 7,
-                    "shoot": 7,
-                    "fight": 7,
-                    "defense": 12,
-                    "reflexes": 7,
-                    "weapons": ["guardian_twin_light_laser_cannon", {"id": "guardian_twin_heavy_machinegun", "mount": ["Front"]}],
-                    "min": 1,
-                    "max": 1
-                }
-            ]
-        },
-        "marine_apc": {
-            "name": "APC",
-            "description": "A durable transport built by the loyal marines.",
-            "rules": [{"id": "impact", "x": 3}, {"id": "transport", "x": 11}, "vulnerable_side_rear", "damage_table_vehicle"],
-            "category": "transport",
-            "keywords": ["Vehicle"],
-            "min": 1,
-            "max": 1,
-            "models": [
-                {
-                    "name": "APC",
-                    "movement": 10,
-                    "courage": 6,
-                    "shoot": 6,
-                    "fight": 6,
-                    "defense": 11,
-                    "reflexes": 6,
-                    "weapons": ["twin_marine_rifle"],
-                    "options": [{"addWeapon": ["twin_marine_rifle", "hunter_missiles"]}, {"addRule": ["spiked_ram", {"id": "dozer", "name": "Dozer Blade"}]}],
-                    "rules": [],
-                    "min": 1,
-                    "max": 1
-                }
-            ]
-        },
-        "combat_walker": {
-            "name": "Guardian Combat Walker",
-            "description": "An agile walker with melee weapons.",
-            "rules": ["vulnerable_rear", "damage_table_vehicle"],
-            "category": "heavy",
-            "keywords": ["Vehicle"],
-            "min": 1,
-            "max": 1,
-            "models": [
-                {
-                    "name": "Guardian Combat Walker",
-                    "movement": 8,
-                    "courage": 7,
-                    "shoot": 7,
-                    "fight": 7,
-                    "defense": 12,
-                    "reflexes": 7,
-                    "weapons": ["walker_sword_shoot", {"id": "walker_sword_blade", "count": 5}, {"id": "walker_combat_shield"}],
-                    "options": [
-                        {"replaceWeapon": ["walker_sword_shoot", {"id": "walker_sword_blade", "count": 5}, {"id": "walker_combat_shield"}], "withWeapon": [
-                            [{"id": "walker_spear_blade", "count": 5}, "walker_spear_rifle", {"id": "twin_guardian_rifle", "count": 2}]
-                        ]},
-                        {"replaceWeapon": {"id": "twin_guardian_rifle", "count": 2}, "withWeapon": [{"id": "twin_guardian_destructor", "count": 2}, {"id": "guardian_flamethrower", "count": 2}]}
-                    ],
-                    "min": 1,
-                    "max": 1
-                }
-            ]
-        },
-        "contemptor_assault_walker": {
-            "name": "Relic Contemptor Walker",
-            "description": "A heavily armed ancient walker.",
-            "rules": ["vulnerable_rear", "damage_table_vehicle"],
-            "category": "heavy",
-            "keywords": ["Vehicle"],
-            "min": 1,
-            "max": 1,
-            "models": [
-                {
-                    "name": "Relic Contemptor Walker",
-                    "movement": 8,
-                    "courage": 7,
-                    "shoot": 7,
-                    "fight": 7,
-                    "defense": 12,
-                    "reflexes": 7,
-                    "weapons": ["heavy_gatling_gun", {"id": "walker_fist", "count": 4}, {"id": "twin_marine_rifle"}],
-                    "options": [
-                        {"replaceWeapon": "heavy_gatling_gun", "withWeapon": ["heavy_fusion_rifle"]}
-                    ],
-                    "min": 1,
-                    "max": 1
-                }
-            ]
-        },
-        "heavy_assault_walker": {
-            "name": "Heavy Assault Walker",
-            "description": "A heavily armed prime walker.",
-            "rules": ["vulnerable_rear", "damage_table_vehicle"],
-            "category": "heavy",
-            "keywords": ["Vehicle"],
-            "min": 1,
-            "max": 1,
-            "models": [
-                {
-                    "name": "Heavy Assault Walker",
-                    "movement": 6,
-                    "courage": 7,
-                    "shoot": 7,
-                    "fight": 7,
-                    "defense": 13,
-                    "reflexes": 7,
-                    "weapons": [{"id": "heavy_walker_fist", "count": 8}, "guardian_missile_array"],
-                    "options": [
-                        {"replaceWeapon": {"id": "heavy_walker_fist", "count": 4}, "withWeapon": ["guardian_twin_light_laser_cannon", "guardian_twin_laser_cannon"]},
-                        {"replaceWeapon": {"id": "heavy_walker_fist", "count": 4}, "withWeapon": ["guardian_twin_light_laser_cannon", "guardian_twin_laser_cannon"]}
                     ],
                     "min": 1,
                     "max": 1
