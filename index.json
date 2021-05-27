@@ -4,6 +4,14 @@
     "author": "guitarninja#5707",
     "reportUrl": "https://github.com/wargame-engine/grim-darkness-skirmish/issues",
     "factions": {
+        "dark_elves": {
+            "name": "Dark Elf Raiders",
+            "id": "dark_elves",
+            "url": "dark_elves.json",
+            "color": "#0b474a",
+            "alliance": "elven_coaliation",
+            "description": "The Dark Elf Raiders are a group of elves who have an obsession with attacking a raiding settlements for plunder. Their tactics revolve around attacking quickly with highly agile ships and doing damage after which they quickly escape."
+        },
         "machine_guilds": {
             "name": "Machine Guilds",
             "id": "machine_guilds",
@@ -55,14 +63,6 @@
             "secondary_color": "#e8bb00",
             "alliance": "elven_coaliation",
             "description": "The High Elf Worlds are a group of large constructed fleet habitats. They focus on a mobile and deadly mix of advanced technology and unique fast tactics to achieve victory"
-        },
-        "dark_elves": {
-            "name": "Dark Elf Raiders",
-            "id": "dark_elves",
-            "url": "dark_elves.json",
-            "color": "#0b474a",
-            "alliance": "elven_coaliation",
-            "description": "The Dark Elf Raiders are a group of elves who have an obsession with attacking a raiding settlements for plunder. Their tactics revolve around attacking quickly with highly agile ships and doing damage after which they quickly escape."
         },
         "alien_swarm": {
             "name": "Alien Swarm",
