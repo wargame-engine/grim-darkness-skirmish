@@ -1,8 +1,8 @@
 {
-    "name": "Grim Darkness",
+    "name": "Grim Darkness Skirmish (Beta)",
     "id": "grim_darkness",
     "author": "guitarninja#5707",
-    "reportUrl": "https://github.com/wargame-engine/grim-darkness/issues",
+    "reportUrl": "https://github.com/wargame-engine/grim-darkness-skirmish/issues",
     "factions": {
         "high_elves": {
             "name": "High Elf Worlds",
