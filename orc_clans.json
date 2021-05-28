@@ -681,7 +681,7 @@
           "courage" : 5,
           "shoot" : 4,
           "fight" : 6,
-          "defense" : 5,
+          "defense" : 7,
           "reflexes" : 5,
           "movement" : 5,
           "weapons" : [
@@ -1272,7 +1272,7 @@
           "courage" : 5,
           "shoot" : 4,
           "fight" : 6,
-          "defense" : 5,
+          "defense" : 7,
           "reflexes" : 5,
           "movement" : 8,
           "rules" : [
@@ -1343,7 +1343,7 @@
           "courage" : 5,
           "shoot" : 4,
           "fight" : 6,
-          "defense" : 5,
+          "defense" : 7,
           "reflexes" : 5,
           "movement" : 5,
           "rules" : [
@@ -1412,7 +1412,7 @@
           "courage" : 5,
           "shoot" : 4,
           "fight" : 6,
-          "defense" : 5,
+          "defense" : 7,
           "reflexes" : 5,
           "movement" : 5,
           "rules" : [
