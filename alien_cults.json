@@ -224,7 +224,7 @@
         "neophyte_leader": {
             "name": "Neophyte Leader",
             "description": "A group of miners and other manual laborers who have revolted and turned to the cult.",
-            "category": "core",
+            "category": "leader",
             "options": [],
             "models": [
                 {
