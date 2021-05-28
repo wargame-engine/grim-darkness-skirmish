@@ -4,6 +4,21 @@
     "author": "guitarninja#5707",
     "reportUrl": "https://github.com/wargame-engine/grim-darkness-skirmish/issues",
     "factions": {
+        "alien_cults": {
+            "name": "Alien Cults",
+            "id": "alien_cults",
+            "url": "alien_cults.json",
+            "color": "#606060",
+            "secondary_color": "#7d0a15",
+            "alliance": "alien_swarm",
+            "version": "0.1",
+            "description": "The Alien Cults are a loose band of alien worshippers who have been infiltrated by an Alien Swarm. They form on unsuspecting planets and eventually grow strong enough to take control. Alien Cults use a mix of hybrid alien creatures and scavenged weapons along with guerilla tactics.",
+            "subfactions": {
+                "ambush_focus": {"name": "Ambush Focus", "id": "ambush_focus", "color": "#6a0001", "description": "An alien cult focused on ambushing and killing their foes."},
+                "survival_focus": {"name": "Survival Focus", "id": "survival_focus", "color": "#6a0001", "description": "An alien cult focused on surviving at any cost."},
+                "zeal_focus": {"name": "Zeal Focus", "id": "zeal_focus", "color": "#6a0001", "description": "An alien cult focused on zealous charges."}
+            }
+        },
         "dark_elves": {
             "name": "Dark Elf Raiders",
             "id": "dark_elves",
@@ -81,21 +96,6 @@
             "alliance": "alien_swarm",
             "version": "0.1",
             "description": "A swarm of aliens from far-away systems controlled by an ancient hive mind. They feast on other species, absorbing their biomass to turn into more of their kind. They have a combination of deadly creatures and swarms of agile aliens to defeat their foes."
-        },
-        "alien_cults": {
-            "name": "Alien Cults",
-            "id": "alien_cults",
-            "url": "alien_cults.json",
-            "color": "#606060",
-            "secondary_color": "#7d0a15",
-            "alliance": "alien_swarm",
-            "version": "0.1",
-            "description": "The Alien Cults are a loose band of alien worshippers who have been infiltrated by an Alien Swarm. They form on unsuspecting planets and eventually grow strong enough to take control. Alien Cults use a mix of hybrid alien creatures and scavenged weapons along with guerilla tactics.",
-            "subfactions": {
-                "ambush_focus": {"name": "Ambush Focus", "id": "ambush_focus", "color": "#6a0001", "description": "An alien cult focused on ambushing and killing their foes."},
-                "survival_focus": {"name": "Survival Focus", "id": "survival_focus", "color": "#6a0001", "description": "An alien cult focused on surviving at any cost."},
-                "zeal_focus": {"name": "Zeal Focus", "id": "zeal_focus", "color": "#6a0001", "description": "An alien cult focused on zealous charges."}
-            }
         },
         "traitor_marines": {
             "name": "Traitor Marines",
@@ -769,7 +769,7 @@
         "legend_expert_fighter": {"name": "Expert Fighter", "description": "This model may make one additional attack with any Melee weapon.", "points": 10},
         "wings": {"name": "Wings", "description": "Increases movement by 4\". This model may ignore models and terrain when moving.", "points": 10},
         "scrambler": {"name": "Scrambler", "description": "Enemy units arriving from reserves within 18\" of this model suffer -2 Initiative on reserve tests.", "points": 5},
-        "banner": {"name": "Banner", "description": "This unit may re-roll a single failed Courage test when removing Shock.", "points": 5},
+        "banner": {"name": "Banner", "description": "Friendly units within 3\" may re-roll a single failed Courage test when removing Shock.", "points": 5},
         "net": {
             "name": "Net",
             "description": "Units engaged in Melee with a model that has this weapon suffer -1 to Initiative tests when escaping combat for each weapon with this rule.",

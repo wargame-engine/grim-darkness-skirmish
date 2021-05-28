@@ -9,7 +9,7 @@
             "name": "Dirt-Bike Assassin",
             "description": "A highly mobile assassin mounted on a dirt bike.",
             "rules": [{"id": "wounds", "x": 3}, {"id": "leader_x", "x": "Infantry, Biker"}, "targeting_relay", "stealth"],
-            "category": "command",
+            "category": "commander",
             "models": [
                 {
                     "name": "Dirt-bike Assassin",
@@ -32,7 +32,7 @@
         "great_abomination": {
             "name": "Great Abomination",
             "description": "An extremely tough alpha-abomination.",
-            "category": "command",
+            "category": "commander",
             "models": [
                 {
                     "name": "Great Abomination",
@@ -67,7 +67,7 @@
             "description": "A mutated being carrying a cult icon.",
             "min": 1,
             "max": 1,
-            "category": "command",
+            "category": "commander",
             "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "wounds", "x": 3}, {"id": "cult_melee_tactics", "x": 1}],
             "models": [
                 {
@@ -91,7 +91,7 @@
             "min": 1,
             "max": 1,
             "keywords": ["Hive Mind"],
-            "category": "command",
+            "category": "commander",
             "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "wounds", "x": 3}, {"id": "swarm_melee_tactics", "x": 1}],
             "models": [
                 {
@@ -115,7 +115,7 @@
             "description": "An uplifted human with psychic powers.",
             "min": 1,
             "max": 1,
-            "category": "command",
+            "category": "commander",
             "models": [
                 {
                     "name": "Psychic",
@@ -139,7 +139,7 @@
             "description": "A mutated being carrying a cult icon.",
             "min": 1,
             "max": 1,
-            "category": "command",
+            "category": "commander",
             "rules": [{"id": "leader_x", "x": "Infantry"}, "cult_icon", {"id": "wounds", "x": 2}],
             "models": [
                 {
@@ -161,8 +161,8 @@
             "description": "A cult specialist who rallies the hordes of troops.",
             "min": 1,
             "max": 1,
-            "category": "specialist",
-            "rules": [{"id": "support_x", "x": "Infantry"}, {"id": "cult_tactics", "x": 1}, {"id": "wounds", "x": 2}],
+            "category": "leader",
+            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "cult_tactics", "x": 1}, {"id": "wounds", "x": 2}],
             "models": [
                 {
                     "name": "Cult Strategist",
@@ -184,8 +184,8 @@
             "description": "A cult specialist who rallies the hordes of troops.",
             "min": 1,
             "max": 1,
-            "category": "specialist",
-            "rules": [{"id": "support_x", "x": "Infantry"}, "cult_speaker", {"id": "wounds", "x": 2}, "scrambler"],
+            "category": "leader",
+            "rules": [{"id": "leader", "x": "Infantry"}, "cult_speaker", {"id": "wounds", "x": 2}, "scrambler"],
             "models": [
                 {
                     "name": "Cult Proclamator",
@@ -201,8 +201,8 @@
                 }
             ]
         },
-        "pure_soul_snatchers": {
-            "name": "Pure Soul Stealers",
+        "pure_soul_snatcher": {
+            "name": "Pure Soul Stealer",
             "description": "Barely recognizable mutants of other species",
             "min": 1,
             "max": 1,
@@ -210,7 +210,7 @@
             "rules": ["agile"],
             "models": [
                 {
-                    "name": "Soul Stealer",
+                    "name": "Pure Soul Stealer",
                     "courage": 6,
                     "shoot": 5,
                     "fight": 6,
@@ -220,16 +220,16 @@
                     "movement": 8,
                     "weapons": [{"id": "piercing_claws", "count": 3}],
                     "options": [{"addWeapon": ["razor_talons"]}, {"addWeapon": ["meat_hooks", "acidic_jaws"], "limit": 1, "modelLimit": "1/4"}],
-                    "min": 5,
-                    "max": 20
+                    "min": 1,
+                    "max": 1
                 }
             ]
         },
-        "neophytes": {
-            "name": "Neophytes",
+        "neophyte_leader": {
+            "name": "Neophyte Leader",
             "description": "A group of miners and other manual laborers who have revolted and turned to the cult.",
             "category": "core",
-            "options": [{"replaceWeapon": "defense_rifle", "withWeapon": "shotgun"}, {"addRule": "banner", "modelLimit": 1}],
+            "options": [],
             "models": [
                 {
                     "name": "Neophyte Leader",
@@ -239,15 +239,25 @@
                     "defense": 5,
                     "reflexes": 5,
                     "movement": 6,
+                    "rules": ["leader"],
                     "weapons": ["defense_rifle", "blasting_charges", "ccw"],
                     "options": [
                         {"replaceWeapon": ["defense_rifle", {"id": "ccw", "count": 1}], "withWeapon": [[{"id": "pistol"}, {"id": "ccw", "count": 2}]]},
                         {"replaceWeapon": "pistol", "withWeapon": ["heavy_pistol", "marine_pistol", "plasma_pistol"]},
-                        {"replaceWeapon": {"id": "ccw", "count": 2}, "withWeapon": [{"id": "energy_pick", "count": 2}, {"id": "energy_mace", "count": 2}]}
+                        {"replaceWeapon": {"id": "ccw", "count": 2}, "withWeapon": [{"id": "energy_pick", "count": 2}, {"id": "energy_mace", "count": 2}]},
+                        {"replaceWeapon": "defense_rifle", "withWeapon": "shotgun"}
                     ],
                     "min": 1,
                     "max": 1
-                },
+                }
+            ]
+        },
+        "neophyte": {
+            "name": "Neophyte",
+            "description": "A group of miners and other manual laborers who have revolted and turned to the cult.",
+            "category": "core",
+            "options": [],
+            "models": [
                 {
                     "name": "Neophyte",
                     "courage": 5,
@@ -258,18 +268,63 @@
                     "movement": 6,
                     "weapons": ["defense_rifle", "blasting_charges", "ccw"],
                     "options": [
-                        {"replaceWeapon": "defense_rifle", "withWeapon": ["flamethrower", "grenade_launcher", "web_gun"], "modelLimit": 2},
-                        {"replaceWeapon": "defense_rifle", "withWeapon": ["light_machinegun", "seismic_cannon", "mining_laser"], "modelLimit": 2}
+                        {"replaceWeapon": "defense_rifle", "withWeapon": "shotgun"}, {"addRule": "banner", "modelLimit": 1}
                     ],
-                    "min": 9,
-                    "max": 19
+                    "min": 1,
+                    "max": 1
                 }
             ]
         },
-        "acolytes": {
-            "name": "Acolytes",
+        "neophyte_specialist": {
+            "name": "Neophyte Specialist",
+            "description": "A group of miners and other manual laborers who have revolted and turned to the cult.",
+            "category": "specialist",
+            "options": [],
+            "models": [
+                {
+                    "name": "Neophyte Specialist",
+                    "courage": 5,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "movement": 6,
+                    "weapons": ["defense_rifle", "blasting_charges", "ccw"],
+                    "options": [
+                        {"replaceWeapon": "defense_rifle", "withWeapon": ["flamethrower", "grenade_launcher", "web_gun"], "modelLimit": 2}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "neophyte_heavy": {
+            "name": "Neophyte Heavy",
+            "description": "A group of miners and other manual laborers who have revolted and turned to the cult.",
+            "category": "heavy",
+            "options": [],
+            "models": [
+                {
+                    "name": "Neophyte Heavy",
+                    "courage": 5,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "movement": 6,
+                    "weapons": ["defense_rifle", "blasting_charges", "ccw"],
+                    "options": [
+                        {"replaceWeapon": "defense_rifle", "withWeapon": ["light_machinegun", "seismic_cannon", "mining_laser"], "modelLimit": 2}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "acolyte_leader": {
+            "name": "Acolyte Leader",
             "description": "A disfigured squad of humans turned to the cult.",
-            "category": "core",
+            "category": "leader",
             "options": [
                 {
                     "replaceWeapon": [{"id": "heavy_ccw", "count": 2}, {"id": "piercing_claws", "count": 1}],
@@ -287,6 +342,7 @@
                     "defense": 6,
                     "reflexes": 5,
                     "movement": 6,
+                    "rules": ["leader"],
                     "weapons": ["pistol", "blasting_charges", {"id": "heavy_ccw", "count": 2}, {"id": "piercing_claws", "count": 1}],
                     "options": [
                         {
@@ -296,7 +352,14 @@
                     ],
                     "min": 1,
                     "max": 1
-                },
+                }
+            ]
+        },
+        "acolyte": {
+            "name": "Acolyte",
+            "description": "A disfigured squad of humans turned to the cult.",
+            "category": "core",
+            "models": [
                 {
                     "name": "Acolyte",
                     "courage": 5,
@@ -306,23 +369,23 @@
                     "reflexes": 5,
                     "movement": 6,
                     "weapons": ["pistol", "blasting_charges", {"id": "heavy_ccw", "count": 2}, {"id": "piercing_claws", "count": 1}],
-                    "min": 4,
-                    "max": 19
+                    "options": [
+                        {
+                            "replaceWeapon": [{"id": "heavy_ccw", "count": 2}, {"id": "piercing_claws", "count": 1}],
+                            "withWeapon": [{"id": "rock_cutter", "count": 2}, {"id": "rock_drill", "count": 2}, {"id": "rock_saw", "count": 2}, {"id": "demolition_charges", "count": 1}]
+                        },
+                        {"replaceWeapon": "pistol", "withWeapon": "flamethrower_pistol"},
+                        {"addRule": "banner", "modelLimit": 1}
+                    ],
+                    "min": 1,
+                    "max": 1
                 }
             ]
         },
-        "metamorphs": {
-            "name": "Metamorphs",
+        "metamorph_leader": {
+            "name": "Metamorph Leader",
             "description": "Half alien and half human, these hybrids are the last step before becoming fully alien.",
-            "category": "specialist",
-            "options": [
-                {"replaceWeapon": "pistol", "withWeapon": "flamethrower_pistol"},
-                {
-                    "replaceWeapon": [{"id": "piercing_claws", "count": 3}, {"id": "razor_talons", "count": 1}],
-                    "withWeapon": [{"id": "metamorph_claws", "count": 3}, [{"id": "lashing_whip", "count": 2}, {"id": "piercing_claws", "count": 2}]]
-                },
-                {"addRule": "banner", "modelLimit": 1}
-            ],
+            "category": "leader",
             "models": [
                 {
                     "name": "Metamorph Leader",
@@ -332,11 +395,26 @@
                     "defense": 6,
                     "reflexes": 5,
                     "movement": 6,
+                    "rules": ["leader"],
                     "weapons": ["pistol", "blasting_charges", {"id": "piercing_claws", "count": 3}, {"id": "razor_talons", "count": 1}],
-                    "options": [{"addWeapon": [{"id": "bone_sword", "count": 2}]}],
+                    "options": [
+                        {"addWeapon": [{"id": "bone_sword", "count": 2}]},
+                        {"replaceWeapon": "pistol", "withWeapon": "flamethrower_pistol"},
+                        {
+                            "replaceWeapon": [{"id": "piercing_claws", "count": 3}, {"id": "razor_talons", "count": 1}],
+                            "withWeapon": [{"id": "metamorph_claws", "count": 3}, [{"id": "lashing_whip", "count": 2}, {"id": "piercing_claws", "count": 2}]]
+                        }
+                    ],
                     "min": 1,
                     "max": 1
-                },
+                }
+            ]
+        },
+        "metamorph": {
+            "name": "Metamorph",
+            "description": "Half alien and half human, these hybrids are the last step before becoming fully alien.",
+            "category": "specialist",
+            "models": [
                 {
                     "name": "Metamorph",
                     "courage": 6,
@@ -346,13 +424,21 @@
                     "reflexes": 5,
                     "movement": 6,
                     "weapons": ["pistol", "blasting_charges", {"id": "piercing_claws", "count": 3}, {"id": "razor_talons", "count": 1}],
-                    "min": 4,
-                    "max": 9
+                    "options": [
+                        {"replaceWeapon": "pistol", "withWeapon": "flamethrower_pistol"},
+                        {
+                            "replaceWeapon": [{"id": "piercing_claws", "count": 3}, {"id": "razor_talons", "count": 1}],
+                            "withWeapon": [{"id": "metamorph_claws", "count": 3}, [{"id": "lashing_whip", "count": 2}, {"id": "piercing_claws", "count": 2}]]
+                        },
+                        {"addRule": "banner", "modelLimit": 1}
+                    ],
+                    "min": 1,
+                    "max": 1
                 }
             ]
         },
-        "abominations": {
-            "name": "Abominations",
+        "abomination": {
+            "name": "Abomination",
             "description": "Mutated with super strength, these aliens will tear enemies to shreds.",
             "category": "specialist",
             "rules": [{"id": "resilient", "x": 3}],
@@ -367,18 +453,38 @@
                     "movement": 6,
                     "weapons": [{"id": "piercing_claws", "count": 1}, {"id": "energy_pick", "count": 3}],
                     "options": [
-                        {"replaceModel": "abomination_hypermorph", "modelLimit": "1/5"},
                         {"replaceWeapon": {"id": "energy_pick", "count": 3}, "withWeapon": [{"id": "energy_hammer", "count": 3}]}
                     ],
-                    "min": 5,
-                    "max": 10
+                    "min": 1,
+                    "max": 1
                 }
             ]
         },
-        "dirt_bikes": {
-            "name": "Dirt-Bikers",
+        "abomination_hypermorph": {
+            "name": "Abomination Hypermorph",
+            "description": "Mutated with super strength, these aliens will tear enemies to shreds.",
+            "category": "specialist",
+            "rules": [{"id": "resilient", "x": 3}],
+            "models": [
+                {
+                    "name": "Abomination Hypermorph",
+                    "courage": 6,
+                    "shoot": 5,
+                    "fight": 6,
+                    "defense": 7,
+                    "reflexes": 5,
+                    "movement": 6,
+                    "weapons": [{"id": "piercing_claws", "count": 1}, {"id": "hypermorph_tail", "count": 1}, {"id": "energy_pick", "count": 4}],
+                    "options": [{"replaceWeapon": {"id": "energy_pick", "count": 4}, "withWeapon": [{"id": "energy_hammer", "count": 4}]}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "dirt_bike_leader": {
+            "name": "Dirt-Biker Leader",
             "description": "Fast, agile motorbike fighters.",
-            "category": "strike",
+            "category": "leader",
             "keywords": ["Biker"],
             "rules": ["stealth"],
             "options": [
@@ -395,6 +501,7 @@
                     "defense": 7,
                     "reflexes": 5,
                     "movement": 8,
+                    "rules": ["leader"],
                     "weapons": ["defense_rifle", "blasting_charges", {"id": "ccw"}],
                     "options": [
                         {"replaceWeapon": "pistol", "withWeapon": ["heavy_pistol", "marine_pistol", "plasma_pistol"]},
@@ -402,9 +509,18 @@
                     ],
                     "min": 1,
                     "max": 1
-                },
+                }
+            ]
+        },
+        "dirt_biker": {
+            "name": "Dirt-Biker",
+            "description": "Fast, agile motorbike fighters.",
+            "category": "strike",
+            "keywords": ["Biker"],
+            "rules": ["stealth"],
+            "models": [
                 {
-                    "name": "Dirt-Bike",
+                    "name": "Dirt-Biker",
                     "courage": 5,
                     "shoot": 5,
                     "fight": 5,
@@ -413,28 +529,53 @@
                     "movement": 8,
                     "weapons": ["defense_rifle", "blasting_charges", {"id": "ccw"}],
                     "options": [
-                        {"replaceModel": "quad_biker", "modelLimit": "1/3"}
+                        {"replaceWeapon": "defense_rifle", "withWeapon": ["grenade_launcher"], "modelLimit": "1/3"},
+                        {"replaceWeapon": ["defense_rifle", {"id": "ccw", "count": 1}], "withWeapon": [[{"id": "pistol"}, {"id": "ccw", "count": 2}]]},
+                        {"replaceWeapon": "defense_rifle", "withWeapon": ["shotgun"]}
                     ],
-                    "min": 3,
-                    "max": 11
+                    "min": 1,
+                    "max": 1
                 }
             ]
         },
-        "defense_force_squad": {
-            "name": "Cult Defense Force Squad",
+        "quad_biker": {
+            "name": "Quad-Biker",
+            "description": "Fast, agile motorbike fighters.",
+            "category": "strike",
+            "keywords": ["Biker"],
+            "rules": ["stealth"],
+            "models": [
+                {
+                    "name": "Quad-Biker",
+                    "courage": 5,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 7,
+                    "reflexes": 5,
+                    "movement": 8,
+                    "weapons": ["light_machinegun", "defense_rifle", "blasting_charges", {"id": "ccw"}],
+                    "options": [{"replaceWeapon": "light_machinegun", "withWeapon": ["mining_laser", "light_incinerator"]}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "cult_trooper_sergeant": {
+            "name": "Cult Trooper Sergeant",
             "description": "A defense force squad turned to the cult.",
-            "category": "core",
+            "category": "leader",
             "min": 5,
             "max": 10,
             "models": [
                 {
-                    "name": "Cult Sergeant",
+                    "name": "Cult Trooper Sergeant",
                     "courage": 5,
                     "shoot": 5,
                     "fight": 5,
                     "defense": 5,
                     "reflexes": 5,
                     "movement": 6,
+                    "rules": ["leader"],
                     "weapons": ["defense_rifle", "frags", "ccw"],
                     "options": [
                         {"replaceWeapon": "defense_rifle", "withWeapon": ["marine_rifle"]},
@@ -447,7 +588,16 @@
                     ],
                     "min": 1,
                     "max": 1
-                },
+                }
+            ]
+        },
+        "cult_trooper": {
+            "name": "Cult Trooper",
+            "description": "A defense force squad turned to the cult.",
+            "category": "core",
+            "min": 5,
+            "max": 10,
+            "models": [
                 {
                     "name": "Cult Trooper",
                     "courage": 5,
@@ -457,41 +607,39 @@
                     "reflexes": 5,
                     "movement": 6,
                     "weapons": ["defense_rifle", "frags", "ccw"],
-                    "options": [{"replaceWeapon": "defense_rifle", "withWeapon": ["flamethrower", "grenade_launcher", "fusion_rifle", "plasma_rifle", "sniper_rifle"], "modelLimit": 1}],
                     "rules": [],
-                    "min": 9,
-                    "max": 9
-                },
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "cult_trooper_specialist": {
+            "name": "Cult Trooper Specialist",
+            "description": "A defense force squad turned to the cult.",
+            "category": "specialist",
+            "min": 5,
+            "max": 10,
+            "models": [
                 {
-                    "name": "Cult Weapon Team",
+                    "name": "Cult Trooper Specialist",
                     "courage": 5,
                     "shoot": 5,
                     "fight": 5,
                     "defense": 5,
                     "reflexes": 5,
                     "movement": 6,
-                    "weapons": [{"id": "heavy_machinegun", "count": 1, "mount": ["Front"]}, "frags", {"id": "ccw", "count": 2}],
-                    "rules": [{"id": "wounds", "x": 2}],
-                    "options": [
-                        {
-                            "replaceWeapon": {"id": "heavy_machinegun", "mount": ["Front"]},
-                            "withWeapon": [
-                                {"id": "missile_launcher", "mount": ["Front"]},
-                                {"id": "autocannon", "mount": ["Front"]},
-                                {"id": "laser_cannon", "mount": ["Front"]},
-                                {"id": "mortar", "mount": ["Front"]}
-                            ]
-                        }
-                    ],
-                    "min": 0,
+                    "weapons": ["defense_rifle", "frags", "ccw"],
+                    "options": [{"replaceWeapon": "defense_rifle", "withWeapon": ["flamethrower", "grenade_launcher", "fusion_rifle", "plasma_rifle", "sniper_rifle"], "modelLimit": 1}],
+                    "rules": [],
+                    "min": 1,
                     "max": 1
                 }
             ]
         },
-        "heavy_weapon_squad": {
-            "name": "Cult Heavy Weapons Squad",
+        "heavy_weapon_team": {
+            "name": "Cult Heavy Weapon Team",
             "description": "A squad of heavy weapons teams loaded out to deal with a variety of targets.",
-            "category": "specialist",
+            "category": "heavy",
             "min": 3,
             "max": 6,
             "rules": [{"id": "wounds", "x": 2}],
@@ -516,331 +664,10 @@
                             ]
                         }
                     ],
-                    "min": 3,
-                    "max": 6
-                }
-            ]
-        },
-        "battle_tank": {
-            "name": "Cult Battle Tank",
-            "description": "A main line battle tank stolen from the imperial defense force.",
-            "min": 1,
-            "max": 1,
-            "category": "heavy",
-            "keywords": ["Vehicle", "Battle Tank"],
-            "rules": ["vulnerable_side_rear", "damage_table_vehicle"],
-            "models": [
-                {
-                    "name": "Cult Battle Tank",
-                    "courage": 5,
-                    "shoot": 5,
-                    "fight": 5,
-                    "defense": 12,
-                    "movement": 10,
-                    "reflexes": 5,
-                    "weapons": ["nova_cannon", {"id": "heavy_flamethrower", "mount": ["Front"]}],
-                    "options": [
-                        {"addRule": [{"id": "dozer", "name": "Dozer Blade"}, "extra_armor"]},
-                        {"replaceWeapon": "nova_cannon", "withWeapon": ["battle_cannon", "siege_cannon", "twin_autocannon", "tank_hunter_cannon", "heavy_plasma_cannon", "gatling_cannon"]},
-                        {"replaceWeapon": {"id": "heavy_flamethrower", "mount": ["Front"]}, "withWeapon": [{"id": "heavy_machinegun", "mount": ["Front"]}, {"id": "laser_cannon", "mount": ["Front"]}]},
-                        {"addWeapon": [{"id": "light_machinegun", "count": 1}, {"id": "twin_marine_rifle", "count": 1}], "limit": 1},
-                        {"addWeapon": ["hunter_missiles"]},
-                        {
-                            "addWeapon": [
-                                [{"id": "heavy_machinegun", "mount": ["Left", "Front"]}, {"id": "heavy_machinegun", "mount": ["Right", "Front"]}],
-                                [{"id": "heavy_fusion_rifle", "mount": ["Left", "Front"]}, {"id": "heavy_fusion_rifle", "mount": ["Right", "Front"]}],
-                                [{"id": "heavy_flamethrower", "mount": ["Left", "Front"]}, {"id": "heavy_flamethrower", "mount": ["Right", "Front"]}],
-                                [{"id": "plasma_cannon", "mount": ["Left", "Front"]}, {"id": "plasma_cannon", "mount": ["Right", "Front"]}]
-                            ],
-                            "limit": 1
-                        }
-                    ],
-                    "rules": [{"id": "impact", "x": 6}],
                     "min": 1,
                     "max": 1
                 }
             ]
-        },
-        "support_vehicle": {
-            "name": "Cult Support Vehicle",
-            "description": "A support vehicle with multiple roles from artillery to anti-air.",
-            "rules": [{"id": "impact", "x": 3}, "vulnerable_side_rear", "damage_table_vehicle"],
-            "category": "heavy",
-            "keywords": ["Vehicle"],
-            "min": 1,
-            "max": 1,
-            "models": [
-                {
-                    "name": "Cult Support Vehicle",
-                    "movement": 10,
-                    "courage": 5,
-                    "shoot": 5,
-                    "fight": 5,
-                    "defense": 10,
-                    "reflexes": 5,
-                    "weapons": [{"id": "heavy_flamethrower", "mount": ["Front"]}, {"id": "twin_shard_mortar", "count": 2}],
-                    "options": [
-                        {"addRule": [{"id": "dozer", "name": "Dozer Blade"}, "extra_armor"]},
-                        {"addWeapon": [{"id": "light_machinegun", "count": 1}, {"id": "twin_marine_rifle", "count": 1}], "limit": 1},
-                        {"replaceWeapon": {"id": "twin_shard_mortar", "count": 2}, "withWeapon": ["artillery_cannon", {"id": "twin_aa_autocannon", "count": 2}, "eagle_rockets", "death_missile"]},
-                        {"replaceWeapon": {"id": "heavy_flamethrower", "mount": ["Front"]}, "withWeapon": [{"id": "heavy_machinegun", "mount": ["Front"]}]}
-                    ],
-                    "min": 1,
-                    "max": 1
-                }
-            ]
-        },
-        "assault_vehicle": {
-            "name": "Cult Assault Vehicle",
-            "description": "A light assault vehicle with multiple roles.",
-            "rules": [{"id": "impact", "x": 3}, "vulnerable_side_rear", "damage_table_vehicle"],
-            "category": "heavy",
-            "keywords": ["Vehicle"],
-            "min": 1,
-            "max": 1,
-            "models": [
-                {
-                    "name": "Cult Assault Vehicle",
-                    "movement": 10,
-                    "courage": 5,
-                    "shoot": 5,
-                    "fight": 5,
-                    "defense": 11,
-                    "reflexes": 5,
-                    "weapons": [{"id": "heavy_fusion_rifle", "mount": ["Front"]}, "fusion_cannon"],
-                    "options": [
-                        {"addRule": [{"id": "dozer", "name": "Dozer Blade"}, "extra_armor"]},
-                        {"addWeapon": [{"id": "light_machinegun", "count": 1}, {"id": "twin_marine_rifle", "count": 1}], "limit": 1},
-                        {"addWeapon": ["hunter_missiles"]},
-                        {"replaceWeapon": "fusion_cannon", "withWeapon": ["acid_cannon", "flamestorm_cannon"]},
-                        {
-                            "replaceWeapon": {"id": "heavy_fusion_rifle", "mount": ["Front"]},
-                            "withWeapon": [{"id": "heavy_machinegun", "mount": ["Front"]}, {"id": "heavy_flamethrower", "mount": ["Front"]}]
-                        }
-                    ],
-                    "min": 1,
-                    "max": 1
-                }
-            ]
-        },
-        "light_apc": {
-            "name": "Cult APC",
-            "description": "A light transport stolen from the imperial defense force.",
-            "rules": [{"id": "impact", "x": 3}, {"id": "transport", "x": 12}, "vulnerable_side_rear", "damage_table_vehicle"],
-            "category": "transport",
-            "keywords": ["Vehicle"],
-            "min": 1,
-            "max": 1,
-            "models": [
-                {
-                    "name": "Cult APC",
-                    "movement": 10,
-                    "courage": 5,
-                    "shoot": 5,
-                    "fight": 5,
-                    "defense": 11,
-                    "reflexes": 5,
-                    "weapons": [{"id": "heavy_flamethrower", "mount": ["Front"]}, "heavy_flamethrower"],
-                    "options": [
-                        {"addRule": [{"id": "dozer", "name": "Dozer Blade"}]},
-                        {"addWeapon": [{"id": "light_machinegun", "count": 1}, {"id": "twin_marine_rifle", "count": 1}], "limit": 1},
-                        {"addWeapon": ["hunter_missiles"]},
-                        {"addWeapon": [[{"id": "defense_rifle_array", "mount": ["Left"]}, {"id": "defense_rifle_array", "mount": ["Right"]}]]},
-                        {"replaceWeapon": "heavy_flamethrower", "withWeapon": ["laser_machinegun", "heavy_machinegun"]},
-                        {"replaceWeapon": {"id": "heavy_flamethrower", "mount": ["Front"]}, "withWeapon": [{"id": "heavy_machinegun", "mount": ["Front"]}]}
-                    ],
-                    "min": 1,
-                    "max": 1
-                }
-            ]
-        },
-        "scout_buggy": {
-            "name": "Scout Buggy",
-            "description": "A repurposed civilian or mining vehicle turned into a cult ambush wagon.",
-            "rules": [{"id": "impact", "x": 3}, "scout", "vulnerable_side_rear", "damage_table_vehicle", "marking_flares"],
-            "category": "strike",
-            "keywords": ["Vehicle"],
-            "min": 1,
-            "max": 1,
-            "models": [
-                {
-                    "name": "Scout Buggy",
-                    "movement": 12,
-                    "courage": 5,
-                    "shoot": 5,
-                    "fight": 4,
-                    "defense": 9,
-                    "reflexes": 6,
-                    "weapons": [{"id": "light_machinegun", "count": 2, "mount": ["Front"]}, {"id": "heavy_mining_laser", "mount": ["Front"]}],
-                    "options": [
-                        {"replaceWeapon": {"id": "heavy_mining_laser", "mount": ["Front"]}, "withWeapon": [{"id": "heavy_mortar", "mount": ["Front"]}, {"id": "missile_launcher", "mount": ["Front"]}]},
-                        {"replaceRule": "marking_flares", "withRule": ["spotting_device", "surveying_device"]}
-                    ],
-                    "min": 1,
-                    "max": 1
-                }
-            ]
-        },
-        "light_truck": {
-            "name": "Cult Truck",
-            "description": "A repurposed civilian or mining vehicle turned into a cult ambush wagon.",
-            "rules": [{"id": "impact", "x": 3}, {"id": "transport", "x": 12}, {"id": "open_topped", "x": 12}, "vulnerable_side_rear", "damage_table_vehicle"],
-            "category": "transport",
-            "keywords": ["Vehicle"],
-            "min": 1,
-            "max": 1,
-            "models": [
-                {
-                    "name": "Cult Truck",
-                    "movement": 10,
-                    "courage": 5,
-                    "shoot": 5,
-                    "fight": 5,
-                    "defense": 10,
-                    "reflexes": 5,
-                    "weapons": ["twin_autocannon"],
-                    "options": [{"addRule": [{"id": "dozer", "name": "Dozer Blade"}, "spiked_ram"]}, {"addWeapon": ["light_machinegun"]}],
-                    "min": 1,
-                    "max": 1
-                }
-            ]
-        },
-        "scout_walker": {
-            "name": "Cult Scout Walker",
-            "description": "A lightly equipped recon walker stolen from the imperial defense force.",
-            "rules": ["vulnerable_rear", "damage_table_vehicle", "scout"],
-            "keywords": ["Vehicle"],
-            "min": 1,
-            "max": 1,
-            "category": "strike",
-            "models": [
-                {
-                    "name": "Cult Scout Walker",
-                    "movement": 8,
-                    "courage": 5,
-                    "shoot": 5,
-                    "fight": 5,
-                    "defense": 8,
-                    "reflexes": 5,
-                    "weapons": ["heavy_flamethrower", {"id": "stomp", "count": 2}],
-                    "options": [
-                        {"addWeapon": ["hunter_missiles", "walker_chainsaw"]},
-                        {"replaceWeapon": "heavy_flamethrower", "withWeapon": ["missile_launcher", "laser_machinegun", "laser_cannon", "autocannon"]}
-                    ],
-                    "min": 1,
-                    "max": 3
-                }
-            ]
-        },
-        "armored_walker": {
-            "name": "Cult Armored Walker",
-            "description": "An armored light combat walker stolen from the imperial defense force.",
-            "rules": ["vulnerable_rear", "damage_table_vehicle"],
-            "keywords": ["Vehicle"],
-            "min": 1,
-            "max": 1,
-            "category": "strike",
-            "models": [
-                {
-                    "name": "Cult Armored Walker",
-                    "movement": 8,
-                    "courage": 5,
-                    "shoot": 5,
-                    "fight": 5,
-                    "defense": 9,
-                    "reflexes": 5,
-                    "weapons": ["heavy_flamethrower", {"id": "stomp", "count": 2}],
-                    "options": [
-                        {"addWeapon": ["hunter_missiles", "walker_chainsaw"]},
-                        {"replaceWeapon": "heavy_flamethrower", "withWeapon": ["missile_launcher", "laser_machinegun", "laser_cannon", "autocannon"]}
-                    ],
-                    "min": 1,
-                    "max": 3
-                }
-            ]
-        },
-        "light_gunship": {
-            "name": "Cult Light Transport Gunship",
-            "description": "A light gunship with sliding doors for troop transport stolen from the imperial defense force.",
-            "rules": [{"id": "transport", "x": 12}, "aircraft", "hover_mode", "damage_table_aircraft"],
-            "category": "transport",
-            "keywords": ["Vehicle"],
-            "min": 1,
-            "max": 1,
-            "models": [
-                {
-                    "name": "Cult Light Transport Gunship",
-                    "movement": 10,
-                    "courage": 5,
-                    "shoot": 5,
-                    "fight": 5,
-                    "defense": 11,
-                    "reflexes": 5,
-                    "weapons": [{"id": "laser_machinegun", "mount": ["Front"]}],
-                    "options": [
-                        {"replaceWeapon": {"id": "laser_machinegun", "mount": ["Front"]}, "withWeapon": {"id": "laser_cannon", "mount": ["Front"]}},
-                        {"addWeapon": [{"id": "strike_missiles", "mount": ["Front"]}, {"id": "rocket_pod", "count": 2, "mount": ["Front"]}]},
-                        {"addWeapon": [[{"id": "heavy_machinegun", "mount": ["Left"]}, {"id": "heavy_machinegun", "mount": ["Right"]}]]}
-                    ],
-                    "min": 1,
-                    "max": 1
-                }
-            ]
-        },
-        "mining_truck": {
-            "name": "Cult Mining Vehicle",
-            "description": "A repurposed heavy mining vehicle turned into a cult heavy vehicle.",
-            "rules": [{"id": "heavy_impact", "x": 3}, {"id": "transport", "x": 6}, "vulnerable_side_rear", "damage_table_vehicle"],
-            "category": "heavy",
-            "keywords": ["Vehicle"],
-            "min": 1,
-            "max": 1,
-            "models": [
-                {
-                    "name": "Cult Mining Vehicle",
-                    "movement": 10,
-                    "courage": 5,
-                    "shoot": 5,
-                    "fight": 5,
-                    "defense": 11,
-                    "reflexes": 5,
-                    "weapons": ["heavy_mining_laser", "light_machinegun"],
-                    "options": [
-                        {"replaceWeapon": "heavy_mining_laser", "withWeapon": ["heavy_seismic_cannon", "incinerator"]},
-                        {"addRule": [{"id": "dozer", "name": "Dozer Blade"}]}
-                    ],
-                    "min": 1,
-                    "max": 1
-                }
-            ]
-        }
-    },
-    "models": {
-        "abomination_hypermorph": {
-            "name": "Abomination Hypermorph",
-            "courage": 6,
-            "shoot": 5,
-            "fight": 6,
-            "defense": 7,
-            "reflexes": 5,
-            "movement": 6,
-            "weapons": [{"id": "piercing_claws", "count": 1}, {"id": "hypermorph_tail", "count": 1}, {"id": "energy_pick", "count": 4}],
-            "options": [{"replaceWeapon": {"id": "energy_pick", "count": 4}, "withWeapon": [{"id": "energy_hammer", "count": 4}]}],
-            "min": 1,
-            "max": 1
-        },
-        "quad_biker": {
-            "name": "Quad-Biker",
-            "courage": 5,
-            "shoot": 5,
-            "fight": 5,
-            "defense": 7,
-            "reflexes": 5,
-            "movement": 8,
-            "weapons": ["light_machinegun", "defense_rifle", "blasting_charges", {"id": "ccw"}],
-            "options": [{"replaceWeapon": "light_machinegun", "withWeapon": ["mining_laser", "light_incinerator"]}],
-            "min": 1,
-            "max": 1
         }
     },
     "weapons": {
