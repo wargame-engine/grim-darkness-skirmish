@@ -264,7 +264,7 @@
                     "movement": 6,
                     "weapons": ["defense_rifle", "blasting_charges", "ccw"],
                     "options": [
-                        {"replaceWeapon": "defense_rifle", "withWeapon": "shotgun"}, {"addRule": "banner", "modelLimit": 1}
+                        {"replaceWeapon": "defense_rifle", "withWeapon": "shotgun"}, {"addRule": "banner"}
                     ],
                     "min": 1,
                     "max": 1
@@ -287,7 +287,7 @@
                     "movement": 6,
                     "weapons": ["defense_rifle", "blasting_charges", "ccw"],
                     "options": [
-                        {"replaceWeapon": "defense_rifle", "withWeapon": ["flamethrower", "grenade_launcher", "web_gun"], "modelLimit": 2}
+                        {"replaceWeapon": "defense_rifle", "withWeapon": ["flamethrower", "grenade_launcher", "web_gun"]}
                     ],
                     "min": 1,
                     "max": 1
@@ -310,7 +310,7 @@
                     "movement": 6,
                     "weapons": ["defense_rifle", "blasting_charges", "ccw"],
                     "options": [
-                        {"replaceWeapon": "defense_rifle", "withWeapon": ["light_machinegun", "seismic_cannon", "mining_laser"], "modelLimit": 2}
+                        {"replaceWeapon": "defense_rifle", "withWeapon": ["light_machinegun", "seismic_cannon", "mining_laser"]}
                     ],
                     "min": 1,
                     "max": 1
@@ -327,7 +327,7 @@
                     "withWeapon": [{"id": "rock_cutter", "count": 2}, {"id": "rock_drill", "count": 2}, {"id": "rock_saw", "count": 2}, {"id": "demolition_charges", "count": 1}]
                 },
                 {"replaceWeapon": "pistol", "withWeapon": "flamethrower_pistol"},
-                {"addRule": "banner", "modelLimit": 1}
+                {"addRule": "banner"}
             ],
             "models": [
                 {
@@ -371,7 +371,7 @@
                             "withWeapon": [{"id": "rock_cutter", "count": 2}, {"id": "rock_drill", "count": 2}, {"id": "rock_saw", "count": 2}, {"id": "demolition_charges", "count": 1}]
                         },
                         {"replaceWeapon": "pistol", "withWeapon": "flamethrower_pistol"},
-                        {"addRule": "banner", "modelLimit": 1}
+                        {"addRule": "banner"}
                     ],
                     "min": 1,
                     "max": 1
@@ -426,7 +426,7 @@
                             "replaceWeapon": [{"id": "piercing_claws", "count": 3}, {"id": "razor_talons", "count": 1}],
                             "withWeapon": [{"id": "metamorph_claws", "count": 3}, [{"id": "lashing_whip", "count": 2}, {"id": "piercing_claws", "count": 2}]]
                         },
-                        {"addRule": "banner", "modelLimit": 1}
+                        {"addRule": "banner"}
                     ],
                     "min": 1,
                     "max": 1
@@ -484,7 +484,7 @@
             "keywords": ["Biker"],
             "rules": ["stealth"],
             "options": [
-                {"replaceWeapon": "defense_rifle", "withWeapon": ["grenade_launcher"], "modelLimit": "1/3"},
+                {"replaceWeapon": "defense_rifle", "withWeapon": ["grenade_launcher"]},
                 {"replaceWeapon": ["defense_rifle", {"id": "ccw", "count": 1}], "withWeapon": [[{"id": "pistol"}, {"id": "ccw", "count": 2}]]},
                 {"replaceWeapon": "defense_rifle", "withWeapon": ["shotgun"]}
             ],
@@ -525,7 +525,7 @@
                     "movement": 8,
                     "weapons": ["defense_rifle", "blasting_charges", {"id": "ccw"}],
                     "options": [
-                        {"replaceWeapon": "defense_rifle", "withWeapon": ["grenade_launcher"], "modelLimit": "1/3"},
+                        {"replaceWeapon": "defense_rifle", "withWeapon": ["grenade_launcher"]},
                         {"replaceWeapon": ["defense_rifle", {"id": "ccw", "count": 1}], "withWeapon": [[{"id": "pistol"}, {"id": "ccw", "count": 2}]]},
                         {"replaceWeapon": "defense_rifle", "withWeapon": ["shotgun"]}
                     ],
@@ -625,7 +625,7 @@
                     "reflexes": 5,
                     "movement": 6,
                     "weapons": ["defense_rifle", "frags", "ccw"],
-                    "options": [{"replaceWeapon": "defense_rifle", "withWeapon": ["flamethrower", "grenade_launcher", "fusion_rifle", "plasma_rifle", "sniper_rifle"], "modelLimit": 1}],
+                    "options": [{"replaceWeapon": "defense_rifle", "withWeapon": ["flamethrower", "grenade_launcher", "fusion_rifle", "plasma_rifle", "sniper_rifle"]}],
                     "rules": [],
                     "min": 1,
                     "max": 1
