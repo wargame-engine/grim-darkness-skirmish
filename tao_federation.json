@@ -155,6 +155,7 @@
                     "fight": 4,
                     "defense": 6,
                     "reflexes": 6,
+                    "rules": ["leader"],
                     "weapons": ["pulse_shotgun", {"id": "ccw", "count": 2}, "stun_grenades"],
                     "options": [{"addWeapon": "pulse_pistol"}, {"addRule": "spotting_laser"}],
                     "min": 1,
@@ -198,7 +199,7 @@
                 {"replaceWeapon": "pulse_carbine", "withWeapon": ["ion_rifle", "rail_rifle"], "modelLimit": 3},
                 {"addRule": "spotting_laser"}
             ],
-            "rules": ["scout"],
+            "rules": ["scout", "leader"],
             "models": [
                 {
                     "name": "Pathfinder Leader",
@@ -243,8 +244,8 @@
                 }
             ]
         },
-        "savage_leader": {
-            "name": "Savage Leader",
+        "savage_commander": {
+            "name": "Savage Commander",
             "description": "An intelligent savage commander with a rifle.",
             "min": 1,
             "max": 1,
@@ -252,7 +253,7 @@
             "category": "command",
             "models": [
                 {
-                    "name": "Savage Leader",
+                    "name": "Savage Commander",
                     "movement": 7,
                     "courage": 6,
                     "shoot": 5,
@@ -262,6 +263,30 @@
                     "rules": [{"id": "leader_x", "x": "Infantry"},  {"id": "wounds", "x": 2}, {"id": "savage_tactics", "x": 1}],
                     "weapons": ["savage_rifle", {"id": "heavy_ccw", "count": 3}],
                     "options": [{"replaceRule": {"id": "savage_tactics", "x": 1}, "withRule": {"id": "savage_tactics", "x": 2}}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "savage_leader": {
+            "name": "Savage Leader",
+            "description": "A squad of angry savages with rifles.",
+            "min": 1,
+            "max": 1,
+            "keywords": ["Infantry", "Savages"],
+            "category": "command",
+            "rules": ["leader"],
+            "options": [{"addRule": "scout", "modelLimit": "all"}],
+            "models": [
+                {
+                    "name": "Savage Leader",
+                    "movement": 7,
+                    "courage": 4,
+                    "shoot": 5,
+                    "fight": 6,
+                    "defense": 4,
+                    "reflexes": 5,
+                    "weapons": ["savage_rifle", {"id": "heavy_ccw", "count": 1}],
                     "min": 1,
                     "max": 1
                 }
@@ -326,7 +351,7 @@
                     "fight": 5,
                     "defense": 7,
                     "reflexes": 5,
-                    "rules": ["fly"],
+                    "rules": ["fly", "leader"],
                     "weapons": ["neutron_carbine", {"id": "ccw", "count": 1}],
                     "min": 5,
                     "max": 12
@@ -362,7 +387,7 @@
             "min": 1,
             "max": 1,
             "category": "command",
-            "rules": ["stealth", "fly"],
+            "rules": ["stealth", "fly", "leader"],
             "options": [{"addRule": ["homing_beacon"], "modelLimit": 1}],
             "models": [
                 {
@@ -421,6 +446,34 @@
                     "reflexes": 6,
                     "weapons": ["pulse_gatling", {"id": "ccw", "count": 1}, "stun_grenades"],
                     "options": [{"replaceModel": "stealth_suit_leader", "modelLimit": 1}, {"replaceWeapon": "pulse_gatling", "withWeapon": ["fusion_blaster"], "modelLimit": 1}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "battle_suit_leader": {
+            "name": "Battlesuit Leader",
+            "description": "Warriors in agile battlesuits.",
+            "min": 1,
+            "max": 1,
+            "keywords": ["Heavy Infantry"],
+            "category": "command",
+            "options": [{"addModel": ["spotter_drone", "gunner_drone", "shield_drone"], "modelLimit": 2}],
+            "models": [
+                {
+                    "name": "Battlesuit Leader",
+                    "movement": 8,
+                    "courage": 5,
+                    "shoot": 5,
+                    "fight": 4,
+                    "defense": 9,
+                    "reflexes": 6,
+                    "rules": ["fly", {"id": "wounds", "x": 2}, "leader"],
+                    "weapons": [{"id": "suit_fists", "count": 3}],
+                    "options": [
+                        {"limit": 3, "addWeapon": ["flak_launcher", "ion_gatling", "flamethrower", "pulse_gatling", "plasma_rifle", "fusion_blaster", "missile_pod"]},
+                        {"addRule": [{"id": "ambush", "name": "Sky Strike", "modelLimit": "all"}, {"id": "resilient", "x": 4, "name": "Shield Generator"}, "threat_detector_suit"]}
+                    ],
                     "min": 1,
                     "max": 1
                 }
