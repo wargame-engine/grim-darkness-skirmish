@@ -273,8 +273,7 @@
         "federation": {"name": "Federated Species"}
     },
     "categories": {
-        "commander": {"name": "Commander"},
-        "leader": {"name": "Leader"},
+        "command": {"name": "Command"},
         "core": {"name": "Core"},
         "specialist": {"name": "Specialist"},
         "strike": {"name": "Strike"},
@@ -287,8 +286,7 @@
             "cost": 0,
             "description": "A well-rounded force for taking on any mission.",
             "categories": {
-                "commander": {"min": 0, "max": 1},
-                "leader": {"min": 1, "max": 2},
+                "command": {"min": 1, "max": 2},
                 "core": {"min": 2, "max": 8},
                 "specialist": {"max": 5},
                 "strike": {"max": 5},
@@ -301,8 +299,7 @@
             "cost": 1,
             "description": "A strike force for outflanking or shock assaulting.",
             "categories": {
-                "commander": {"min": 0, "max": 1},
-                "leader": {"min": 1, "max": 2},
+                "command": {"min": 1, "max": 2},
                 "core": {"max": 5},
                 "specialist": {"max": 5},
                 "strike": {"min": 2, "max": 8},
@@ -315,8 +312,7 @@
             "cost": 1,
             "description": "An elite force to deal with specific targets.",
             "categories": {
-                "commander": {"min": 0, "max": 1},
-                "leader": {"min": 1, "max": 2},
+                "command": {"min": 1, "max": 2},
                 "core": {"max": 5},
                 "specialist": {"min": 2, "max": 8},
                 "strike": {"max": 5},
@@ -329,8 +325,7 @@
             "cost": 1,
             "description": "A heavy force to pack a punch on the field.",
             "categories": {
-                "commander": {"min": 0, "max": 1},
-                "leader": {"min": 1, "max": 2},
+                "command": {"min": 1, "max": 2},
                 "core": {"max": 5},
                 "specialist": {"max": 5},
                 "strike": {"max": 5},
@@ -343,8 +338,7 @@
             "cost": 1,
             "description": "A small supporting force.",
             "categories": {
-                "commander": {"min": 0, "max": 1},
-                "leader": {"max": 1},
+                "command": {"max": 1},
                 "core": {"max": 2},
                 "specialist": {"max": 2},
                 "strike": {"max": 2},

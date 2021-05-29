@@ -8,7 +8,7 @@
             "description": "A Witch Hunter leader adept at leading witch hunters into battle.",
             "min": 5,
             "max": 10,
-            "category": "commander",
+            "category": "command",
             "models": [
                 {
                     "name": "Witch Hunter Champion",
@@ -34,7 +34,7 @@
             "description": "Highly trained and elite fighters.",
             "min": 5,
             "max": 10,
-            "category": "commander",
+            "category": "command",
             "rules": [{"id": "wounds", "x": 4}, {"id": "battle_tactics", "x": 2}, {"id": "leader_x", "x": "Infantry"}],
             "models": [
                 {
@@ -68,7 +68,7 @@
             "description": "Highly trained and elite fighters.",
             "min": 5,
             "max": 10,
-            "category": "commander",
+            "category": "command",
             "rules": [{"id": "wounds", "x": 3},  {"id": "battle_tactics", "x": 1}, {"id": "leader_x", "x": "Infantry"}],
             "models": [
                 {
@@ -124,7 +124,7 @@
             "description": "A group of Witch hunters adept at hunting Psychic individuals.",
             "min": 5,
             "max": 10,
-            "category": "leader",
+            "category": "command",
             "keywords": ["Infantry", "Witch Hunters"],
             "models": [
                 {
@@ -183,7 +183,7 @@
             "description": "A banner carrier for the Throne Guardians.",
             "min": 5,
             "max": 10,
-            "category": "leader",
+            "category": "command",
             "rules": [{"id": "wounds", "x": 3}, "banner_of_blindness", {"id": "leader_x", "x": "Infantry"}],
             "models": [
                 {
@@ -216,7 +216,7 @@
         "throne_ancient_destroyer": {
             "name": "Guardian Ancient in Destroyer Armor",
             "description": "A banner carrier for the Throne Guardians in heavy armor.",
-            "category": "leader",
+            "category": "command",
             "rules": [{"id": "wounds", "x": 3}, "banner_of_blindness", {"id": "leader_x", "x": "Infantry"}],
             "models": [
                 {
@@ -248,7 +248,7 @@
             "description": "Highly trained and elite fighters.",
             "min": 5,
             "max": 10,
-            "category": "leader",
+            "category": "command",
             "rules": [{"id": "wounds", "x": 2}, {"id": "leader_x", "x": "Infantry"}],
             "models": [
                 {
@@ -363,7 +363,7 @@
             "description": "Watch masters and veteran throne guardians.",
             "min": 5,
             "max": 10,
-            "category": "leader",
+            "category": "command",
             "rules": [{"id": "resilient", "x": 3}, {"id": "wounds", "x": 2}, {"id": "leader_x", "x": "Infantry"}],
             "models": [
                 {

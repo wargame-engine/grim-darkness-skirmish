@@ -9,7 +9,7 @@
             "description": "The smartest and most intelligent machine guild leader.",
             "min": 1,
             "max": 1,
-            "category": "commander",
+            "category": "command",
             "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "repair", "x": 3}],
             "keywords": ["Infantry"],
             "models": [
@@ -39,7 +39,7 @@
             "description": "A master craftsman and leader of the machine guild.",
             "min": 1,
             "max": 1,
-            "category": "commander",
+            "category": "command",
             "rules": [{"id": "leader_x", "x": "Infantry"},  {"id": "wounds", "x": 3}, {"id": "canticles", "x": 2}],
             "models": [
                 {
@@ -73,7 +73,7 @@
             "description": "A machine tinkerer of the guild.",
             "min": 1,
             "max": 1,
-            "category": "commander",
+            "category": "command",
             "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "wounds", "x": 2}, "manipulator"],
             "models": [
                 {
@@ -96,7 +96,7 @@
             "description": "A master craftsman and leader of the machine guild.",
             "min": 1,
             "max": 1,
-            "category": "commander",
+            "category": "command",
             "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "wounds", "x": 2}, {"id": "canticles", "x": 1}],
             "models": [
                 {
@@ -123,7 +123,7 @@
             "description": "An expert in manipulating machine data.",
             "min": 1,
             "max": 1,
-            "category": "leader",
+            "category": "command",
             "rules": [{"id": "leader_x", "x": "Infantry"}],
             "models": [
                 {
@@ -146,7 +146,7 @@
             "description": "Commander of the foot-mobile machine guild protection forces.",
             "min": 1,
             "max": 1,
-            "category": "commander",
+            "category": "command",
             "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "wounds", "x": 2}, {"id": "vanguard_tactics", "x": 1}],
             "models": [
                 {
@@ -173,7 +173,7 @@
             "description": "Foot-mobile machine guild protection forces.",
             "min": 1,
             "max": 1,
-            "category": "leader",
+            "category": "command",
             "models": [
                 {
                     "name": "Vanguard Leader",
@@ -244,7 +244,7 @@
             "description": "Foot-mobile machine guild long range recon and marksmen forces.",
             "min": 1,
             "max": 1,
-            "category": "leader",
+            "category": "command",
             "rules": ["scout"],
             "models": [
                 {
@@ -318,7 +318,7 @@
             "description": "Crazed fighters coursing with electric energy.",
             "min": 1,
             "max": 1,
-            "category": "leader",
+            "category": "command",
             "rules": [{"id": "resilient", "x": 3}, "leader"],
             "models": [
                 {

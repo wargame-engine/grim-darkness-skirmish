@@ -9,7 +9,7 @@
             "name": "Dirt-Bike Assassin",
             "description": "A highly mobile assassin mounted on a dirt bike.",
             "rules": [{"id": "wounds", "x": 3}, {"id": "leader_x", "x": "Infantry, Biker"}, "targeting_relay", "stealth"],
-            "category": "commander",
+            "category": "command",
             "models": [
                 {
                     "name": "Dirt-bike Assassin",
@@ -28,7 +28,7 @@
         "great_abomination": {
             "name": "Great Abomination",
             "description": "An extremely tough alpha-abomination.",
-            "category": "commander",
+            "category": "command",
             "models": [
                 {
                     "name": "Great Abomination",
@@ -63,7 +63,7 @@
             "description": "A mutated being carrying a cult icon.",
             "min": 1,
             "max": 1,
-            "category": "commander",
+            "category": "command",
             "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "wounds", "x": 3}, {"id": "cult_melee_tactics", "x": 1}],
             "models": [
                 {
@@ -87,7 +87,7 @@
             "min": 1,
             "max": 1,
             "keywords": ["Hive Mind"],
-            "category": "commander",
+            "category": "command",
             "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "wounds", "x": 3}, {"id": "swarm_melee_tactics", "x": 1}],
             "models": [
                 {
@@ -111,7 +111,7 @@
             "description": "An uplifted human with psychic powers.",
             "min": 1,
             "max": 1,
-            "category": "commander",
+            "category": "command",
             "models": [
                 {
                     "name": "Psychic",
@@ -135,7 +135,7 @@
             "description": "A mutated being carrying a cult icon.",
             "min": 1,
             "max": 1,
-            "category": "commander",
+            "category": "command",
             "rules": [{"id": "leader_x", "x": "Infantry"}, "cult_icon", {"id": "wounds", "x": 2}],
             "models": [
                 {
@@ -157,7 +157,7 @@
             "description": "A cult specialist who rallies the hordes of troops.",
             "min": 1,
             "max": 1,
-            "category": "leader",
+            "category": "command",
             "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "cult_tactics", "x": 1}, {"id": "wounds", "x": 2}],
             "models": [
                 {
@@ -180,7 +180,7 @@
             "description": "A cult specialist who rallies the hordes of troops.",
             "min": 1,
             "max": 1,
-            "category": "leader",
+            "category": "command",
             "rules": [{"id": "leader", "x": "Infantry"}, "cult_speaker", {"id": "wounds", "x": 2}, "scrambler"],
             "models": [
                 {
@@ -224,7 +224,7 @@
         "neophyte_leader": {
             "name": "Neophyte Leader",
             "description": "A group of miners and other manual laborers who have revolted and turned to the cult.",
-            "category": "leader",
+            "category": "command",
             "options": [],
             "models": [
                 {
@@ -320,7 +320,7 @@
         "acolyte_leader": {
             "name": "Acolyte Leader",
             "description": "A disfigured squad of humans turned to the cult.",
-            "category": "leader",
+            "category": "command",
             "options": [
                 {
                     "replaceWeapon": [{"id": "heavy_ccw", "count": 2}, {"id": "piercing_claws", "count": 1}],
@@ -402,7 +402,7 @@
         "metamorph_leader": {
             "name": "Metamorph Leader",
             "description": "Half alien and half human, these hybrids are the last step before becoming fully alien.",
-            "category": "leader",
+            "category": "command",
             "models": [
                 {
                     "name": "Metamorph Leader",
@@ -501,7 +501,7 @@
         "dirt_bike_leader": {
             "name": "Dirt-Biker Leader",
             "description": "Fast, agile motorbike fighters.",
-            "category": "leader",
+            "category": "command",
             "keywords": ["Biker"],
             "rules": ["stealth"],
             "options": [
@@ -580,7 +580,7 @@
         "cult_trooper_sergeant": {
             "name": "Cult Trooper Sergeant",
             "description": "A defense force squad turned to the cult.",
-            "category": "leader",
+            "category": "command",
             "min": 5,
             "max": 10,
             "models": [

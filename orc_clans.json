@@ -8,7 +8,7 @@
         "warlord": {
             "name": "Warlord",
             "description": "The clan leader and toughest orc boss.",
-            "category": "commander",
+            "category": "command",
             "options": [{"addModel": "attack_beast"}],
             "models": [
                 {
@@ -38,7 +38,7 @@
         "shaman": {
             "name": "Shaman",
             "description": "A strange orc with psychic powers.",
-            "category": "commander",
+            "category": "command",
             "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "wounds", "x": 2}],
             "models": [
                 {
@@ -67,7 +67,7 @@
         "mechanic": {
             "name": "Mechanic",
             "description": "An orc with a knack for scrapping and fixing things.",
-            "category": "commander",
+            "category": "command",
             "rules": [{"id": "leader_x", "x": "Infantry"}],
             "models": [
                 {
@@ -102,7 +102,7 @@
         "warbanner_boss": {
             "name": "Warbanner Boss",
             "description": "An orc carrying a war banner to inspire the orcs.",
-            "category": "leader",
+            "category": "command",
             "rules": [{"id": "support_x", "x": "Infantry"}, "war_banner", {"id": "wounds", "x": 2}],
             "models": [
                 {
@@ -129,7 +129,7 @@
         "mad_doctor": {
             "name": "Mad Doctor",
             "description": "An orc with a knack for fixing up the wounded.",
-            "category": "leader",
+            "category": "command",
             "rules": [{"id": "support_x", "x": "Infantry"}, "mad_doctor", {"id": "wounds", "x": 2}],
             "models": [
                 {
@@ -157,7 +157,7 @@
             "name": "Goblin Leader",
             "subfactions": ["goblin_army"],
             "description": "A cunning goblin with a motivating presence.",
-            "category": "commander",
+            "category": "command",
             "keywords": ["Goblin", "Infantry"],
             "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "wounds", "x": 3}, {"id": "goblin_tactics", "x": 1}],
             "models": [
@@ -226,7 +226,7 @@
             "keywords": ["Goblin", "Infantry"],
             "description": "An orc herder, overseeing a rabble of lowly goblins.",
             "subfactions": ["none"],
-            "category": "leader",
+            "category": "command",
             "models": [
                 {
                     "name": "Goblin Herder",
@@ -472,7 +472,7 @@
             "name": "Boss Trike",
             "description": "A tough warboss mounted on a battle war trike.",
             "keywords": ["Biker"],
-            "category": "commander",
+            "category": "command",
             "rules": [{"id": "leader_x", "x": "Infantry, Vehicle, Biker"}, "relentless", "damage_table_vehicle"],
             "models": [
                 {
@@ -520,7 +520,7 @@
             "description": "A ravening horde of bouncing beasts with gnashing teeth.",
             "min": 1,
             "max": 1,
-            "category": "leader",
+            "category": "command",
             "subfactions": ["none", "goblin_army"],
             "models": [
                 {
@@ -541,7 +541,7 @@
         "storm_orc_boss": {
             "name": "Storm Orc Boss",
             "description": "An angry orc equipped with a jetpack.",
-            "category": "leader",
+            "category": "command",
             "rules": ["fly"],
             "models": [
                 {
@@ -570,7 +570,7 @@
         "commando_orc_boss": {
             "name": "Commando Orc Boss",
             "description": "A sneaky orc.",
-            "category": "leader",
+            "category": "command",
             "rules": ["stealth", "outflank"],
             "models": [
                 {
@@ -599,7 +599,7 @@
         "specialist_orc_boss": {
             "name": "Specialist Orc Boss",
             "description": "An orc boss who can be equipped to specialize in specific combat roles.",
-            "category": "leader",
+            "category": "command",
             "options": [],
             "models": [
                 {
@@ -625,7 +625,7 @@
         "pirate_orc_boss": {
             "name": "Pirate Orc Boss",
             "description": "An orc boss ready to pillage and plunder.",
-            "category": "leader",
+            "category": "command",
             "rules": ["relentless", "leader"],
             "models": [
                 {
@@ -649,7 +649,7 @@
         "ultra_boss_leader": {
             "name": "Ultra Boss Leader",
             "description": "An leader that is heavily armored and dangerous.",
-            "category": "leader",
+            "category": "command",
             "rules": [{"id": "wounds", "x": 2}, "leader"],
             "models": [
                 {
@@ -673,7 +673,7 @@
         "biker_boss": {
             "name": "Biker Boss",
             "description": "An angry leader on bike.",
-            "category": "leader",
+            "category": "command",
             "keywords": ["Biker"],
             "rules": [{"id": "impact", "x": 1}, "leader"],
             "models": [
@@ -702,7 +702,7 @@
         "boss_biker_leader": {
             "name": "Boss Biker Leader",
             "description": "A boss leader mounted on a bike.",
-            "category": "leader",
+            "category": "command",
             "keywords": ["Biker"],
             "rules": [{"id": "wounds", "x": 2}, "leader"],
             "models": [
@@ -778,7 +778,7 @@
         "orc_boss_leader": {
             "name": "Orc Boss Leader",
             "description": "A leader of a smaller orc gang.",
-            "category": "leader",
+            "category": "command",
             "models": [
                 {
                     "name": "Orc Boss Leader",

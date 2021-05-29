@@ -9,7 +9,7 @@
             "description": "A master of the Elven Keepers. Highly swift and deadly on foot.",
             "min": 1,
             "max": 1,
-            "category": "commander",
+            "category": "command",
             "rules": [{"id": "leader_x", "x": "Infantry"}, "agile", {"id": "keeper_tactics", "x": 1},  {"id": "wounds", "x": 3}],
             "keywords": ["Infantry"],
             "models": [
@@ -41,7 +41,7 @@
             "description": "A solo wandering player who has perfected the dance of war and occasionally joins the main troupe to deadly effect.",
             "min": 1,
             "max": 1,
-            "category": "leader",
+            "category": "command",
             "rules": [{"id": "support_x", "x": "Infantry"}, "agile",  {"id": "wounds", "x": 3}],
             "keywords": ["Infantry"],
             "models": [
@@ -66,7 +66,7 @@
             "description": "An elven keeper gifted with the power of minor foresight and energy manipulation.",
             "min": 1,
             "max": 1,
-            "category": "commander",
+            "category": "command",
             "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "power", "x": 1}, "agile",  {"id": "wounds", "x": 3}],
             "keywords": ["Infantry"],
             "models": [
@@ -119,7 +119,7 @@
             "description": "Elven jesters on foot.",
             "min": 1,
             "max": 1,
-            "category": "leader",
+            "category": "command",
             "rules": ["agile"],
             "keywords": ["Infantry"],
             "models": [
@@ -195,7 +195,7 @@
             "description": "Newly indicted troupe members doing their best to prove themselves on and off of the battlefield.",
             "min": 1,
             "max": 1,
-            "category": "leader",
+            "category": "command",
             "rules": ["agile"],
             "keywords": ["Infantry"],
             "models": [
