@@ -366,10 +366,6 @@
                     "movement": 6,
                     "weapons": ["pistol", "blasting_charges", {"id": "heavy_ccw", "count": 2}, {"id": "piercing_claws", "count": 1}],
                     "options": [
-                        {
-                            "replaceWeapon": [{"id": "heavy_ccw", "count": 2}, {"id": "piercing_claws", "count": 1}],
-                            "withWeapon": [{"id": "rock_cutter", "count": 2}, {"id": "rock_drill", "count": 2}, {"id": "rock_saw", "count": 2}, {"id": "demolition_charges", "count": 1}]
-                        },
                         {"replaceWeapon": "pistol", "withWeapon": "flamethrower_pistol"},
                         {"addRule": "banner"}
                     ],
