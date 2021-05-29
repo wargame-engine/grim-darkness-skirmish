@@ -4,43 +4,6 @@
     "author": "guitarninja#5707",
     "background": "The Undying Machines are a race of soul-less machines who are fixated on conquering and intergalactic war. They rule their domain with an iron fist and often exterminate all non-machine life. Their use of ancient and powerful war-waging technology is noted by other races as highly fearsome.",
     "units": {
-        "command_barge": {
-            "name": "Command Barge",
-            "description": "A floating command vehicle.",
-            "min": 1,
-            "max": 1,
-            "category": "command",
-            "rules": ["hover", {"id": "leader_x", "x": "Infantry"}, "flare_shielding", "damage_table_vehicle", {"id": "impact", "x": 3}, {"id": "machine_tactics", "x": 1}],
-            "keywords": ["Vehicle"],
-            "models": [
-                {
-                    "name": "Doom Barge",
-                    "courage": 7,
-                    "movement": 8,
-                    "shoot": 7,
-                    "fight": 7,
-                    "defense": 10,
-                    "reflexes": 6,
-                    "weapons": [{"id": "void_sword", "count": 3}, {"id": "gauss_cannon", "mount": ["Front"]}],
-                    "options": [
-                        {
-                            "replaceWeapon": {"id": "void_sword", "count": 3},
-                            "withWeapon": [
-                                [{"id": "energy_staff_melee", "count": 3}, "energy_staff_shoot"],
-                                {"id": "phase_sword", "count": 3},
-                                {"id": "void_scythe", "count": 3},
-                                {"id": "war_scythe", "count": 3}
-                            ]
-                        },
-                        {"addRule": "regeneration_orb"},
-                        {"replaceWeapon": {"id": "gauss_cannon", "mount": ["Front"]}, "withWeapon": {"id": "tesla_cannon", "mount": ["Front"]}},
-                        {"replaceRule": {"id": "machine_tactics", "x": 1}, "withRule": {"id": "machine_tactics", "x": 2}}
-                    ],
-                    "min": 1,
-                    "max": 1
-                }
-            ]
-        },
         "tri_scorpion_lord": {
             "name": "Tri-Scorpion Lord",
             "description": "A lord of the undying machines equipped with high tech tri-legs and a tough carapace.",
@@ -190,7 +153,7 @@
                     "reflexes": 6,
                     "weapons": [{"id": "energy_staff_melee", "count": 2}, "energy_staff_shoot"],
                     "options": [
-                        {"addWeapon": "tesla_field"}, {"addRule": ["flight_cloak", "dark_prism"]}, {"addRule": [{"id": "repair", "x": 5, "name": "Repair Orb"}, "control_orb", "phase_field", "time_orb"], "limit": 1}
+                        {"addWeapon": "tesla_field"}, {"addRule": ["flight_cloak", "dark_prism"]}, {"addRule": ["phase_field", "time_orb"], "limit": 1}
                     ],
                     "min": 1,
                     "max": 1
@@ -198,22 +161,12 @@
                 {"name": "Techno-thralls", "courage": 5, "movement": 5, "shoot": 6, "fight": 6, "defense": 7, "reflexes": 6, "weapons": ["techno_scythes", "techno_beam"], "min": 0, "max": 2}
             ]
         },
-        "machine_swarm": {
-            "name": "Machine Swarm",
-            "description": "A swarm of small machines with feeding teeth to eat away at flesh and metal.",
-            "min": 3,
-            "max": 6,
-            "category": "core",
-            "rules": ["hover", {"id": "swarm", "x": 3}],
-            "keywords": ["Swarm"],
-            "models": [{"name": "Machine Swarm", "courage": 5, "movement": 8, "shoot": 3, "fight": 5, "defense": 4, "reflexes": 4, "weapons": ["feeding_teeth"], "min": 3, "max": 6}]
-        },
         "warden": {
             "name": "Warden",
             "description": "A sworn guardian of the lords and one of the more elite machines.",
             "min": 1,
             "max": 1,
-            "category": "specialist",
+            "category": "command",
             "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "wounds", "x": 2}, "warden_tactics"],
             "keywords": ["Infantry"],
             "models": [
@@ -231,38 +184,22 @@
                 }
             ]
         },
-        "dimensional_shard": {
-            "name": "Dimensional Shard",
-            "description": "A dimensional being that can take many forms, often regarded as a god of the sky.",
-            "min": 1,
-            "max": 1,
-            "category": "specialist",
-            "rules": [{"id": "leader_x", "x": "Infantry"}, "fly", {"id": "power", "x": 1}, "damage_table_monster"],
-            "keywords": ["Infantry"],
-            "models": [
-                {
-                    "name": "Dimensional Shard",
-                    "courage": 7,
-                    "movement": 8,
-                    "shoot": 7,
-                    "fight": 7,
-                    "defense": 10,
-                    "reflexes": 6,
-                    "weapons": [{"id": "dimensional_strikes", "count": 5}],
-                    "options": [{"replaceRule": {"id": "power", "x": 1}, "withRule": [{"id": "power", "x": 2}, {"id": "power", "x": 3}]}],
-                    "rules": [],
-                    "min": 1,
-                    "max": 1
-                }
-            ]
+        "machine_swarm": {
+            "name": "Machine Swarm",
+            "description": "A swarm of small machines with feeding teeth to eat away at flesh and metal.",
+            "min": 3,
+            "max": 6,
+            "category": "core",
+            "rules": ["hover", {"id": "swarm", "x": 3}],
+            "keywords": ["Swarm"],
+            "models": [{"name": "Machine Swarm", "courage": 5, "movement": 8, "shoot": 3, "fight": 5, "defense": 4, "reflexes": 4, "weapons": ["feeding_teeth"], "min": 1, "max": 1}]
         },
-        "warriors": {
-            "name": "Warriors",
+        "warrior": {
+            "name": "Warrior",
             "description": "A group of machines, bent on reclaiming their land.",
             "min": 1,
             "max": 1,
             "category": "core",
-            "rules": [],
             "keywords": ["Infantry"],
             "models": [
                 {
@@ -276,18 +213,17 @@
                     "weapons": ["gauss_rifle", "heavy_ccw"],
                     "options": [{"replaceWeapon": "gauss_rifle", "withWeapon": ["reaper_rifle"]}],
                     "rules": [],
-                    "min": 10,
-                    "max": 20
+                    "min": 1,
+                    "max": 1
                 }
             ]
         },
-        "eternals": {
-            "name": "Eternals",
+        "eternal": {
+            "name": "Eternal",
             "description": "A group of veteran machines.",
             "min": 1,
             "max": 1,
             "category": "core",
-            "rules": [],
             "keywords": ["Infantry"],
             "options": [{"replaceWeapon": "heavy_gauss_rifle", "withWeapon": ["tesla_rifle"]}],
             "models": [
@@ -300,13 +236,13 @@
                     "defense": 8,
                     "reflexes": 5,
                     "weapons": ["heavy_gauss_rifle", {"id": "heavy_ccw", "count": 2}],
-                    "min": 5,
-                    "max": 10
+                    "min": 1,
+                    "max": 1
                 }
             ]
         },
-        "guardians": {
-            "name": "Guardians",
+        "guardian": {
+            "name": "Guardian",
             "description": "A group of machine guardians bound to defend their home.",
             "min": 1,
             "max": 1,
@@ -330,13 +266,13 @@
                     "defense": 9,
                     "reflexes": 5,
                     "weapons": [{"id": "war_scythe", "count": 3}],
-                    "min": 5,
-                    "max": 10
+                    "min": 1,
+                    "max": 1
                 }
             ]
         },
-        "praetorians": {
-            "name": "Praetorians",
+        "praetorian": {
+            "name": "Praetorian",
             "description": "A group of machine guardians with special anti-gravity generators.",
             "min": 1,
             "max": 1,
@@ -360,13 +296,13 @@
                     "defense": 9,
                     "reflexes": 5,
                     "weapons": ["antimatter_pistol", {"id": "void_sword", "count": 2}],
-                    "min": 5,
-                    "max": 10
+                    "min": 1,
+                    "max": 1
                 }
             ]
         },
-        "flayers": {
-            "name": "Flayers",
+        "flayer": {
+            "name": "Flayer",
             "description": "A group of machines obsessed with the flayed flesh of their enemies.",
             "min": 1,
             "max": 1,
@@ -374,21 +310,20 @@
             "rules": ["fear"],
             "keywords": ["Infantry"],
             "options": [{"addRule": "ambush", "modelLimit": "all"}],
-            "models": [{"name": "Flayer", "courage": 5, "movement": 5, "shoot": 4, "fight": 5, "defense": 7, "reflexes": 4, "weapons": [{"id": "flaying_claws", "count": 3}], "min": 5, "max": 20}]
+            "models": [{"name": "Flayer", "courage": 5, "movement": 5, "shoot": 4, "fight": 5, "defense": 7, "reflexes": 4, "weapons": [{"id": "flaying_claws", "count": 3}], "min": 1, "max": 1}]
         },
-        "hunters": {
-            "name": "Hunters",
+        "hunter": {
+            "name": "Hunter",
             "description": "A group of veteran machines adept at hunting and killing valuable targets.",
             "min": 1,
             "max": 1,
             "category": "specialist",
             "rules": ["ambush"],
             "keywords": ["Infantry"],
-            "models": [{"name": "Hunter", "courage": 6, "movement": 5, "shoot": 6, "fight": 6, "defense": 8, "reflexes": 6, "weapons": ["gauss_sniper"], "min": 5, "max": 10}],
-            "options": [{"addRule": {"id": "ambush", "name": "Dimenional Interception"}, "modelLimit": "all"}]
+            "models": [{"name": "Hunter", "courage": 6, "movement": 5, "shoot": 6, "fight": 6, "defense": 8, "reflexes": 6, "weapons": ["gauss_sniper"], "min": 1, "max": 1}]
         },
-        "gyro_bikes": {
-            "name": "Gyro-Bikes",
+        "gyro_bike": {
+            "name": "Gyro-Bike",
             "description": "A group of machines mounted on gyroscopic anti-gravity bikes.",
             "min": 1,
             "max": 1,
@@ -403,8 +338,8 @@
                 {"name": "Biker", "courage": 6, "movement": 8, "shoot": 6, "fight": 6, "defense": 8, "reflexes": 5, "weapons": [{"id": "twin_tesla_rifle", "mount": ["Front"]}], "min": 3, "max": 9}
             ]
         },
-        "shifters": {
-            "name": "Shifters",
+        "shifter": {
+            "name": "Shifter",
             "description": "A group of snake-like robots that shift between dimensions.",
             "min": 1,
             "max": 1,
@@ -412,10 +347,10 @@
             "rules": ["teleport", {"id": "wounds", "x": 2}],
             "keywords": ["Heavy Infantry"],
             "options": [{"addWeapon": ["antimatter_pistol", "dimensional_beam"], "limit": 1}, {"addWeapon": ["whip_coil"]}],
-            "models": [{"name": "Shifter", "courage": 6, "movement": 8, "shoot": 6, "fight": 6, "defense": 9, "reflexes": 6, "weapons": [{"id": "metal_fangs", "count": 3}], "min": 3, "max": 6}]
+            "models": [{"name": "Shifter", "courage": 6, "movement": 8, "shoot": 6, "fight": 6, "defense": 9, "reflexes": 6, "weapons": [{"id": "metal_fangs", "count": 3}], "min": 1, "max": 1}]
         },
-        "tri_scorpion_annihilators": {
-            "name": "Tri-Scorpion Annihilators",
+        "tri_scorpion_annihilator": {
+            "name": "Tri-Scorpion Annihilator",
             "description": "A melee-focused annihilator equipped with high tech tri-legs and a tough carapace.",
             "min": 1,
             "max": 1,
@@ -430,29 +365,19 @@
                     "fight": 6,
                     "defense": 9,
                     "reflexes": 5,
-                    "weapons": [{"id": "reaper_glaive", "count": 3}],
-                    "rules": [{"id": "wounds", "x": 2}],
-                    "min": 1,
-                    "max": 1
-                },
-                {
-                    "name": "Tri-Scorpion Annihilator",
-                    "courage": 6,
-                    "movement": 8,
-                    "shoot": 6,
-                    "fight": 6,
-                    "defense": 9,
-                    "reflexes": 5,
                     "weapons": [{"id": "reaper_swords", "count": 4}],
                     "rules": [{"id": "wounds", "x": 2}],
-                    "min": 2,
-                    "max": 5
+                    "options": [
+                        {"replaceWeapon": {"id": "reaper_swords", "count": 4}, "withWeapon": {"id": "reaper_glaive", "count": 3}}
+                    ],
+                    "min": 1,
+                    "max": 1
                 },
                 {"name": "Plasma-cell", "courage": "-", "movement": 8, "shoot": 5, "fight": 5, "defense": "-", "reflexes": "-", "weapons": ["plasma_spike"], "rules": ["plasma_injector"], "min": 0, "max": 1}
             ]
         },
-        "tunneling_annihilators": {
-            "name": "Tunneling Annihilators",
+        "tunneling_annihilator": {
+            "name": "Tunneling Annihilator",
             "description": "A melee-focused annihilator which tunnels under the ground.",
             "min": 1,
             "max": 1,
@@ -468,29 +393,19 @@
                     "fight": 6,
                     "defense": 9,
                     "reflexes": 5,
-                    "weapons": [{"id": "reaper_glaive", "count": 3}],
-                    "rules": [{"id": "wounds", "x": 2}],
-                    "min": 1,
-                    "max": 1
-                },
-                {
-                    "name": "Tunneling Annihilator",
-                    "courage": 6,
-                    "movement": 8,
-                    "shoot": 6,
-                    "fight": 6,
-                    "defense": 9,
-                    "reflexes": 5,
                     "weapons": [{"id": "reaper_swords", "count": 4}],
                     "rules": [{"id": "wounds", "x": 2}],
-                    "min": 2,
-                    "max": 5
+                    "options": [
+                        {"replaceWeapon": {"id": "reaper_swords", "count": 4}, "withWeapon": {"id": "reaper_glaive", "count": 3}}
+                    ],
+                    "min": 1,
+                    "max": 1
                 },
                 {"name": "Plasma-cell", "courage": "-", "movement": 8, "shoot": 5, "fight": 5, "defense": "-", "reflexes": "-", "weapons": ["plasma_spike"], "rules": ["plasma_injector"], "min": 0, "max": 1}
             ]
         },
-        "annihilators": {
-            "name": "Annihilators",
+        "annihilator": {
+            "name": "Annihilator",
             "description": "A ranged-focused annihilator which hovers across all terrain.",
             "min": 1,
             "max": 1,
@@ -498,10 +413,10 @@
             "rules": ["hover", {"id": "wounds", "x": 2}],
             "keywords": ["Heavy Infantry"],
             "options": [{"replaceWeapon": "gauss_cannon", "withWeapon": ["heavy_gauss_cannon"]}],
-            "models": [{"name": "Annihilator", "courage": 6, "movement": 8, "shoot": 6, "fight": 6, "defense": 9, "reflexes": 5, "weapons": ["gauss_cannon"], "min": 3, "max": 6}]
+            "models": [{"name": "Annihilator", "courage": 6, "movement": 8, "shoot": 6, "fight": 6, "defense": 9, "reflexes": 5, "weapons": ["gauss_cannon"], "min": 1, "max": 1}]
         },
-        "heavy_annihilators": {
-            "name": "Heavy Annihilators",
+        "heavy_annihilator": {
+            "name": "Heavy Annihilator",
             "description": "A ranged-focused heavy annihilator which hovers across all terrain.",
             "min": 1,
             "max": 1,
@@ -509,178 +424,7 @@
             "rules": ["hover", {"id": "wounds", "x": 2}],
             "keywords": ["Heavy Infantry"],
             "options": [{"replaceWeapon": "heavy_gauss_destructor", "withWeapon": ["heavy_gauss_exterminator"]}],
-            "models": [{"name": "Heavy Annihilator", "courage": 6, "movement": 8, "shoot": 6, "fight": 6, "defense": 9, "reflexes": 5, "weapons": ["heavy_gauss_destructor"], "min": 1, "max": 3}]
-        },
-        "transport_arc": {
-            "name": "Transport Arc",
-            "description": "A hovering transport craft with optional built-in repair-machines.",
-            "min": 1,
-            "max": 1,
-            "category": "transport",
-            "rules": ["hover", "flare_shielding", "vulnerable_side_rear", {"id": "impact", "x": 6}, {"id": "transport", "x": 11}, "damage_table_vehicle"],
-            "keywords": ["Vehicle"],
-            "models": [
-                {
-                    "name": "Transport Arc",
-                    "courage": 6,
-                    "movement": 8,
-                    "shoot": 6,
-                    "fight": 6,
-                    "defense": 10,
-                    "reflexes": 5,
-                    "weapons": [{"id": "gauss_rifle_array", "mount": ["Left"]}, {"id": "gauss_rifle_array", "mount": ["Right"]}],
-                    "options": [{"addRule": ["extra_space", "regeneration_pods"]}],
-                    "min": 1,
-                    "max": 1
-                }
-            ]
-        },
-        "doom_barge": {
-            "name": "Doom Barge",
-            "description": "A floating vehicle with large tesla cannons.",
-            "min": 1,
-            "max": 1,
-            "category": "heavy",
-            "rules": ["hover", "flare_shielding", "damage_table_vehicle", {"id": "impact", "x": 3}],
-            "keywords": ["Vehicle"],
-            "models": [
-                {
-                    "name": "Doom Barge",
-                    "courage": 6,
-                    "movement": 8,
-                    "shoot": 6,
-                    "fight": 5,
-                    "defense": 10,
-                    "reflexes": 5,
-                    "weapons": [{"id": "twin_tesla_cannon", "mount": ["Front"]}, {"id": "gauss_cannon", "mount": ["Front"]}],
-                    "options": [{"replaceWeapon": {"id": "gauss_cannon", "mount": ["Front"]}, "withWeapon": {"id": "tesla_cannon", "mount": ["Front"]}}],
-                    "min": 1,
-                    "max": 1
-                }
-            ]
-        },
-        "doom_walker": {
-            "name": "Doom Walker",
-            "description": "A tall walking machine tasked with a large cannon.",
-            "min": 1,
-            "max": 1,
-            "category": "heavy",
-            "rules": ["walker", "flare_shielding", "damage_table_vehicle", {"id": "impact", "x": 3}],
-            "keywords": ["Vehicle"],
-            "models": [
-                {
-                    "name": "Doom Walker",
-                    "courage": 6,
-                    "movement": 8,
-                    "shoot": 5,
-                    "fight": 5,
-                    "defense": 10,
-                    "reflexes": 5,
-                    "weapons": [{"id": "doom_cannon", "mount": ["Front"]}, {"id": "gauss_rifle", "count": 2, "mount": ["Front"]}],
-                    "min": 1,
-                    "max": 1
-                }
-            ]
-        },
-        "doom_arc": {
-            "name": "Doom Arc",
-            "description": "A hovering deadly weapon carrier.",
-            "min": 1,
-            "max": 1,
-            "category": "heavy",
-            "rules": ["hover", "flare_shielding", "vulnerable_side_rear", {"id": "impact", "x": 6}, "damage_table_vehicle"],
-            "keywords": ["Vehicle"],
-            "models": [
-                {
-                    "name": "Doom Arc",
-                    "courage": 6,
-                    "movement": 8,
-                    "shoot": 6,
-                    "fight": 6,
-                    "defense": 11,
-                    "reflexes": 5,
-                    "weapons": [{"id": "doom_cannon", "mount": ["Front"]}, {"id": "gauss_rifle_array", "mount": ["Left"]}, {"id": "gauss_rifle_array", "mount": ["Right"]}],
-                    "min": 1,
-                    "max": 1
-                }
-            ]
-        },
-        "transport_scythe": {
-            "name": "Scythe Transport",
-            "description": "A flying transport craft.",
-            "min": 1,
-            "max": 1,
-            "category": "transport",
-            "rules": ["aircraft", {"id": "transport", "x": 11}, "damage_table_vehicle"],
-            "keywords": ["Vehicle", "Aircraft"],
-            "models": [
-                {
-                    "name": "Scythe Transport",
-                    "courage": 6,
-                    "movement": 10,
-                    "shoot": 6,
-                    "fight": 6,
-                    "defense": 10,
-                    "reflexes": 5,
-                    "weapons": [{"id": "twin_tesla_cannon", "mount": ["Front"]}],
-                    "options": [{"addRule": ["extra_space"]}],
-                    "min": 1,
-                    "max": 1
-                }
-            ]
-        },
-        "fighter_scythe": {
-            "name": "Scythe Fighter",
-            "description": "A flying fighter craft.",
-            "min": 1,
-            "max": 1,
-            "category": "strike",
-            "rules": ["aircraft", "damage_table_aircraft"],
-            "keywords": ["Vehicle", "Aircraft"],
-            "models": [
-                {
-                    "name": "Scythe Transport",
-                    "courage": 6,
-                    "movement": 10,
-                    "shoot": 6,
-                    "fight": 6,
-                    "defense": 10,
-                    "reflexes": 5,
-                    "weapons": [{"id": "twin_tesla_cannon", "mount": ["Front"]}],
-                    "options": [{"addWeapon": {"id": "heavy_doom_ray", "mount": ["Front"]}}],
-                    "min": 1,
-                    "max": 1
-                }
-            ]
-        },
-        "stalker_tank": {
-            "name": "Machine Stalker",
-            "description": "A large walking vehicle with underslung mounted weapon and massive crushing legs.",
-            "min": 1,
-            "max": 1,
-            "category": "heavy",
-            "rules": ["walker", "flare_shielding", "vulnerable_side_rear", "damage_table_vehicle", "targeting_relay"],
-            "keywords": ["Vehicle"],
-            "models": [
-                {
-                    "name": "Machine Stalker",
-                    "courage": 6,
-                    "movement": 8,
-                    "shoot": 6,
-                    "fight": 6,
-                    "defense": 11,
-                    "reflexes": 5,
-                    "weapons": [{"id": "heat_ray", "mount": ["Front"]}, {"id": "heavy_stomp", "count": 2}],
-                    "options": [
-                        {
-                            "replaceWeapon": {"id": "heat_ray", "mount": ["Front"]},
-                            "withWeapon": [{"id": "twin_heavy_gauss_cannon", "mount": ["Front"]}, {"id": "antimatter_cannon", "mount": ["Front"]}]
-                        }
-                    ],
-                    "min": 1,
-                    "max": 1
-                }
-            ]
+            "models": [{"name": "Heavy Annihilator", "courage": 6, "movement": 8, "shoot": 6, "fight": 6, "defense": 9, "reflexes": 5, "weapons": ["heavy_gauss_destructor"], "min": 1, "max": 1}]
         },
         "spider_worker": {
             "name": "Spider Worker",
@@ -701,130 +445,6 @@
                     "reflexes": 5,
                     "weapons": [{"id": "metal_fangs", "count": 3}],
                     "options": [{"addWeapon": ["antimatter_rifle"]}, {"addRule": ["dark_prism", {"id": "repair", "x": 5, "name": "Repair Arm"}]}],
-                    "min": 1,
-                    "max": 1
-                }
-            ]
-        },
-        "reanimator": {
-            "name": "Reanimator",
-            "description": "A tall walking machine tasked with reanimating fallen units.",
-            "min": 1,
-            "max": 1,
-            "category": "specialist",
-            "rules": ["walker", "reanimation_beam", "damage_table_vehicle"],
-            "keywords": ["Vehicle"],
-            "models": [
-                {
-                    "name": "Reanimatior",
-                    "courage": 6,
-                    "movement": 8,
-                    "shoot": 5,
-                    "fight": 5,
-                    "defense": 9,
-                    "reflexes": 5,
-                    "weapons": [{"id": "gauss_rifle", "count": 2, "mount": ["Front"]}],
-                    "min": 1,
-                    "max": 1
-                }
-            ]
-        },
-        "invasion_arc": {
-            "name": "Heavy Invasion Arc",
-            "description": "A large hovering fortress with optional portal.",
-            "min": 1,
-            "max": 1,
-            "category": "super_heavy",
-            "rules": ["hover", "flare_shielding", "vulnerable_rear", "damage_table_titan"],
-            "keywords": ["Vehicle"],
-            "models": [
-                {
-                    "name": "Heavy Invasion Arc",
-                    "courage": 6,
-                    "movement": 8,
-                    "shoot": 6,
-                    "fight": 6,
-                    "defense": 13,
-                    "reflexes": 5,
-                    "weapons": [
-                        {"id": "heavy_antimatter_cannon"},
-                        {"id": "doom_ray", "mount": ["Left", "Front"]},
-                        {"id": "doom_ray", "mount": ["Right", "Front"]},
-                        {"id": "doom_ray", "mount": ["Right", "Rear"]},
-                        {"id": "doom_ray", "mount": ["Left", "Rear"]},
-                        "gravity_pulse"
-                    ],
-                    "options": [
-                        {"addRule": [{"id": "transport", "x": 20, "name": "Invasion Portal"}, {"id": "ambush_large", "name": "Orbital Drop"}]},
-                        {
-                            "replaceWeapon": [
-                                {"id": "doom_ray", "mount": ["Left", "Front"]},
-                                {"id": "doom_ray", "mount": ["Right", "Front"]},
-                                {"id": "doom_ray", "mount": ["Right", "Rear"]},
-                                {"id": "doom_ray", "mount": ["Left", "Rear"]}
-                            ],
-                            "withWeapon": [
-                                [
-                                    {"id": "tesla_field", "mount": ["Left", "Front"]},
-                                    {"id": "tesla_field", "mount": ["Right", "Front"]},
-                                    {"id": "tesla_field", "mount": ["Right", "Rear"]},
-                                    {"id": "tesla_field", "mount": ["Left", "Rear"]}
-                                ]
-                            ]
-                        }
-                    ],
-                    "min": 1,
-                    "max": 1
-                }
-            ]
-        },
-        "dimensional_shard": {
-            "name": "Dimensional Shard",
-            "description": "A dimensional being that can take many forms, often regarded as a god of the sky.",
-            "min": 1,
-            "max": 1,
-            "category": "specialist",
-            "rules": [{"id": "leader_x", "x": "Infantry"}, "fly", {"id": "power", "x": 1}, "damage_table_monster"],
-            "keywords": ["Infantry"],
-            "models": [
-                {
-                    "name": "Dimensional Shard",
-                    "courage": 7,
-                    "movement": 8,
-                    "shoot": 7,
-                    "fight": 7,
-                    "defense": 10,
-                    "reflexes": 6,
-                    "weapons": [{"id": "dimensional_strikes", "count": 5}],
-                    "options": [{"replaceRule": {"id": "power", "x": 1}, "withRule": [{"id": "power", "x": 2}, {"id": "power", "x": 3}]}],
-                    "rules": [],
-                    "min": 1,
-                    "max": 1
-                }
-            ]
-        },
-        "dimensional_shard_container": {
-            "name": "Dimensional Shard Vault",
-            "description": "A large hovering vault containing a dimensional shard.",
-            "category": "super_heavy",
-            "rules": ["hover", "flare_shielding", "vulnerable_rear", "damage_table_titan", {"id": "power", "x": 3}, {"id": "psychic_prowess", "x": 2}],
-            "keywords": ["Vehicle"],
-            "models": [
-                {
-                    "name": "Dimensional Shard Vault",
-                    "courage": 7,
-                    "movement": 8,
-                    "shoot": 6,
-                    "fight": 6,
-                    "defense": 13,
-                    "reflexes": 5,
-                    "weapons": [
-                        {"id": "tesla_field"},
-                        "gravity_pulse"
-                    ],
-                    "options": [
-                        {"addRule": [{"id": "ambush_large", "name": "Orbital Drop"}]}
-                    ],
                     "min": 1,
                     "max": 1
                 }
@@ -970,18 +590,13 @@
         "tesla": {"name": "Tesla", "description": "Each successful hit roll of 1 or 2 with this weapon causes 2 hits.", "points": ["weapon.attacks", {"multiply": 2}]},
         "regeneration_orb": {
             "name": "Regeneration Orb",
-            "description": "Once per round after taking Saves for an _Infantry_ unit. Roll a D10 for each model or Wound(x) lost. On a 3 or less, that model or Wound(x) is restored. Models must be restored to full Wounds(x) before restoring a new model.",
+            "description": "After taking Saves for an _Infantry_ unit within 3\", roll a D10 for each model or Wound(x) lost. On a 3 or less, that model or Wound(x) is restored. Models must be restored to full Wounds(x) before restoring a new model.",
             "points": 15
         },
         "eternal_orb": {
             "name": "Eternal Orb",
-            "description": "Once per round after taking Saves for an _Infantry_ unit. Roll a D10 for each model or Wound(x) lost. On a 5 or less, that model or Wound(x) is restored. Models must be restored to full Wounds(x) before restoring a new model.",
+            "description": "After taking Saves for an _Infantry_ unit within 3\", roll a D10 for each model or Wound(x) lost. On a 5 or less, that model or Wound(x) is restored. Models must be restored to full Wounds(x) before restoring a new model.",
             "points": 20
-        },
-        "regeneration_pods": {
-            "name": "Regeneration Pods",
-            "description": "Once per round after taking Saves for an _Infantry_ unit. Roll a D10 for each model or Wound(x) lost. On a 3 or less, that model or Wound(x) is restored. Models must be restored to full Wounds(x) before restoring a new model.",
-            "points": 15
         },
         "phase_field": {"name": "Phase Field", "description": "Once per round, a friendly _Infantry_ unit within 6\" may gain +1 Save.", "points": 10},
         "anti_gravity_generators": {
