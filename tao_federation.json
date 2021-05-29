@@ -423,8 +423,8 @@
                     "defense": 8,
                     "reflexes": 6,
                     "weapons": ["pulse_gatling", {"id": "ccw", "count": 1}, "stun_grenades"],
-                    "min": 3,
-                    "max": 6
+                    "min": 1,
+                    "max": 1
                 }
             ]
         },
