@@ -434,6 +434,7 @@
             "description": "Metallic cyborgs with tracks specialized in breaching defenses and fighting armored targets.",
             "min": 1,
             "max": 1,
+            "keywords": ["Infantry", "Robot"],
             "category": "specialist",
             "rules": [{"id": "wounds", "x": 2}],
             "options": [{"replaceWeapon": "emp_cannon", "withWeapon": ["contortion_cannon"]}, {"replaceWeapon": {"id": "claws", "count": 3}, "withWeapon": {"id": "iron_claws", "count": 3}}],
@@ -446,6 +447,7 @@
             "description": "Metallic cyborgs with tracks specialized in fighting armored targets at long range.",
             "min": 1,
             "max": 1,
+            "keywords": ["Infantry", "Robot"],
             "category": "specialist",
             "rules": [{"id": "wounds", "x": 2}],
             "options": [
@@ -541,12 +543,12 @@
         },
         "manipulator": {
             "name": "Manipulator",
-            "description": "Once per round, a friendly _Infantry_ unit within 3\" may receive one of the following bonuses: \n * +1 AP \n * +6\" Max Range",
+            "description": "Once per round, a friendly _Infantry_ unit within 3\" may receive one of the following bonuses: \n * +1 AP \n * +3\" of short and long range",
             "points": 10
         },
         "data_chips": {
             "name": "Data Chips",
-            "description": "At any point during this unit's activation, it may choose a friendly Combat Robots unit within 3\" to receive one of the following bonuses: \n * +1 Save \n * Hit rolls of 1 or 2 generate one additional attack \n\n\n The bonus is in effect until a new one is chosen.",
+            "description": "At any point during this unit's activation, it may choose a friendly _Robot_ unit within 3\" to receive one of the following bonuses: \n * +1 Save \n * Hit rolls of 1 or 2 generate one additional attack \n\n\n The bonus is in effect until a new one is chosen.",
             "points": 10
         },
         "canticles": {
@@ -556,7 +558,7 @@
             "points": ["rule.x", {"multiply": 10}]
         },
         "data_link": {"name": "Data-Link", "hidden": true, "description": "This model gains +1 Courage.", "description_short": "+1 Courage", "points": 5},
-        "heat_scanner": {"name": "Heat Scanner", "description": "This model and its unit gain +6\" max range when shooting.", "points": 5},
+        "heat_scanner": {"name": "Heat Scanner", "description": "This model and friendly _Infantry_ units within 3\" may ignore the benefit of cover with shooting attacks.", "points": 5},
         "phosphor": {"name": "Phosphor", "description": "This weapon ignores cover at Short range.", "points": ["weapon.attacks"]},
         "taser": {"name": "Taser", "description": "Each successful unmodified hit roll of 1 or 2 with this weapon causes 2 hits.", "points": ["weapon.attacks"]}
     },
