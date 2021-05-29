@@ -68,7 +68,7 @@
             "min": 1,
             "max": 1,
             "category": "command",
-            "rules": [{"id": "leader_x", "x": "Infantry"},  {"id": "wounds", "x": 3}, {"id": "machine_tactics", "x": 2}],
+            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "wounds", "x": 3}, {"id": "machine_tactics", "x": 2}],
             "keywords": ["Infantry"],
             "models": [
                 {
@@ -152,13 +152,10 @@
                     "defense": 7,
                     "reflexes": 6,
                     "weapons": [{"id": "energy_staff_melee", "count": 2}, "energy_staff_shoot"],
-                    "options": [
-                        {"addWeapon": "tesla_field"}, {"addRule": ["flight_cloak", "dark_prism"]}, {"addRule": ["phase_field", "time_orb"], "limit": 1}
-                    ],
+                    "options": [{"addWeapon": "tesla_field"}, {"addRule": ["flight_cloak", "dark_prism"]}, {"addRule": ["phase_field", "time_orb"], "limit": 1}],
                     "min": 1,
                     "max": 1
-                },
-                {"name": "Techno-thralls", "courage": 5, "movement": 5, "shoot": 6, "fight": 6, "defense": 7, "reflexes": 6, "weapons": ["techno_scythes", "techno_beam"], "min": 0, "max": 2}
+                }
             ]
         },
         "warden": {
@@ -241,6 +238,15 @@
                 }
             ]
         },
+        "techno_thrall": {
+            "name": "Techno-Thrall",
+            "description": "Techno-thralls are minions created to serve a Technomancer and are quite deadly.",
+            "min": 1,
+            "max": 1,
+            "category": "specialist",
+            "keywords": ["Infantry"],
+            "models": [{"name": "Techno-thrall", "courage": 5, "movement": 5, "shoot": 6, "fight": 6, "defense": 7, "reflexes": 6, "weapons": ["techno_scythes", "techno_beam"], "min": 1, "max": 1}]
+        },
         "guardian": {
             "name": "Guardian",
             "description": "A group of machine guardians bound to defend their home.",
@@ -249,27 +255,8 @@
             "category": "specialist",
             "rules": [],
             "keywords": ["Infantry"],
-            "options": [
-                {
-                    "replaceWeapon": [{"id": "war_scythe", "count": 3}],
-                    "withWeapon": [[{"id": "phase_sword", "count": 3}, "void_shield"]],
-                    "modelLimit": "all"
-                }
-            ],
-            "models": [
-                {
-                    "name": "Guardian",
-                    "courage": 6,
-                    "movement": 5,
-                    "shoot": 6,
-                    "fight": 6,
-                    "defense": 9,
-                    "reflexes": 5,
-                    "weapons": [{"id": "war_scythe", "count": 3}],
-                    "min": 1,
-                    "max": 1
-                }
-            ]
+            "options": [{"replaceWeapon": [{"id": "war_scythe", "count": 3}], "withWeapon": [[{"id": "phase_sword", "count": 3}, "void_shield"]], "modelLimit": "all"}],
+            "models": [{"name": "Guardian", "courage": 6, "movement": 5, "shoot": 6, "fight": 6, "defense": 9, "reflexes": 5, "weapons": [{"id": "war_scythe", "count": 3}], "min": 1, "max": 1}]
         },
         "praetorian": {
             "name": "Praetorian",
@@ -280,11 +267,7 @@
             "rules": ["fly"],
             "keywords": ["Infantry"],
             "options": [
-                {
-                    "replaceWeapon": ["antimatter_pistol", {"id": "void_sword", "count": 2}],
-                    "withWeapon": [["guardian_rod_shoot", {"id": "guardian_rod_melee", "count": 2}]],
-                    "modelLimit": "all"
-                }
+                {"replaceWeapon": ["antimatter_pistol", {"id": "void_sword", "count": 2}], "withWeapon": [["guardian_rod_shoot", {"id": "guardian_rod_melee", "count": 2}]], "modelLimit": "all"}
             ],
             "models": [
                 {
@@ -367,13 +350,23 @@
                     "reflexes": 5,
                     "weapons": [{"id": "reaper_swords", "count": 4}],
                     "rules": [{"id": "wounds", "x": 2}],
-                    "options": [
-                        {"replaceWeapon": {"id": "reaper_swords", "count": 4}, "withWeapon": {"id": "reaper_glaive", "count": 3}}
-                    ],
+                    "options": [{"replaceWeapon": {"id": "reaper_swords", "count": 4}, "withWeapon": {"id": "reaper_glaive", "count": 3}}],
                     "min": 1,
                     "max": 1
                 },
-                {"name": "Plasma-cell", "courage": "-", "movement": 8, "shoot": 5, "fight": 5, "defense": "-", "reflexes": "-", "weapons": ["plasma_spike"], "rules": ["plasma_injector"], "min": 0, "max": 1}
+                {
+                    "name": "Plasma-cell",
+                    "courage": "-",
+                    "movement": 8,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": "-",
+                    "reflexes": "-",
+                    "weapons": ["plasma_spike"],
+                    "rules": ["plasma_injector"],
+                    "min": 0,
+                    "max": 1
+                }
             ]
         },
         "tunneling_annihilator": {
@@ -395,13 +388,23 @@
                     "reflexes": 5,
                     "weapons": [{"id": "reaper_swords", "count": 4}],
                     "rules": [{"id": "wounds", "x": 2}],
-                    "options": [
-                        {"replaceWeapon": {"id": "reaper_swords", "count": 4}, "withWeapon": {"id": "reaper_glaive", "count": 3}}
-                    ],
+                    "options": [{"replaceWeapon": {"id": "reaper_swords", "count": 4}, "withWeapon": {"id": "reaper_glaive", "count": 3}}],
                     "min": 1,
                     "max": 1
                 },
-                {"name": "Plasma-cell", "courage": "-", "movement": 8, "shoot": 5, "fight": 5, "defense": "-", "reflexes": "-", "weapons": ["plasma_spike"], "rules": ["plasma_injector"], "min": 0, "max": 1}
+                {
+                    "name": "Plasma-cell",
+                    "courage": "-",
+                    "movement": 8,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": "-",
+                    "reflexes": "-",
+                    "weapons": ["plasma_spike"],
+                    "rules": ["plasma_injector"],
+                    "min": 0,
+                    "max": 1
+                }
             ]
         },
         "annihilator": {
@@ -452,10 +455,7 @@
         }
     },
     "weapons": {
-        "heat_ray": {
-            "name": "Heat Ray",
-            "profiles": [{"name": "Focused", "attacks": 2, "short": 12, "medium": 24, "ap": 6}, {"name": "Dispersed", "attacks": 6, "short": 6, "medium": 12, "ap": 2}]
-        },
+        "heat_ray": {"name": "Heat Ray", "profiles": [{"name": "Focused", "attacks": 2, "short": 12, "medium": 24, "ap": 6}, {"name": "Dispersed", "attacks": 6, "short": 6, "medium": 12, "ap": 2}]},
         "doom_cannon": {
             "name": "Doom Cannon",
             "profiles": [
@@ -548,11 +548,7 @@
         "prideful_leader": {"name": "Prideful Leader", "description": "When this model activates, friendly _Infantry_ units within 6\" may remove one Shock.", "points": 1},
         "legend_nanobot_cloak": {"name": "Nanorobot Cloak", "description": "When this model is hit by an attack, roll a D10. On a 3 or less, that attack is prevented.", "points": 1},
         "relentless_advance": {"name": "Relentless Advance", "description": "Friendly _Infantry_ units within 6\" add +1\" to their Movement characteristic.", "points": 5},
-        "plasma_injector": {
-            "name": "Plasma Injector",
-            "description": "Once per round, this unit may re-roll a single failed Strength test.",
-            "points": 5
-        },
+        "plasma_injector": {"name": "Plasma Injector", "description": "Once per round, this unit may re-roll a single failed Strength test.", "points": 5},
         "machine_tactics": {
             "name": "Machine Tactics",
             "inputs": ["x"],
