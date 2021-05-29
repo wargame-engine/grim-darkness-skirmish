@@ -778,19 +778,19 @@
         "web": {"name": "Web", "description": "Units hit by this weapon lose 2\" from their next move.", "points": 1},
         "assault_ramp": {"name": "Assault Ramp", "description": "Units may disembark from this model even after it has taken two Move actions.", "points": 5},
         "stun": {"name": "Stun", "description": "Instead of inflicting damage, if this weapon hits its target, that unit gets -1 Strength and -1 Accuracy for its next attack."},
-        "banner_of_justice": {"name": "Banner of Justice", "description": "Enemy units within 6\" get -1 courage.", "points": 10},
-        "banner_of_wrath": {"name": "Banner of Wrath", "description": "Once per round, a friendly _Infantry_ unit within 6\" may gain +1 AP on all Melee weapons.", "points": 10},
-        "banner_of_focus": {"name": "Banner of Focus", "description": "Once per round, a friendly _Infantry_ unit within 6\" may gain +1 AP on all Shooting weapons.", "points": 10},
+        "banner_of_justice": {"name": "Banner of Justice", "description": "Enemy units within 6\" suffer -1 Courage.", "points": 10},
+        "banner_of_wrath": {"name": "Banner of Wrath", "description": "Friendly _Infantry_ units within 6\" gain +1 AP on all Melee weapons.", "points": 10},
+        "banner_of_focus": {"name": "Banner of Focus", "description": "Friendly _Infantry_ units within 6\" gain +1 AP on all Shooting weapons.", "points": 10},
         "poison": {"name": "Poison", "description": "Each successful hit roll of 4 or less with this weapon gets +1 AP.", "points": ["weapon.attacks", {"multiply": 0.5}]},
         "deadly_poison": {"name": "Deadly Poison", "description": "Each successful hit roll of 4 or less with this weapon gets +2 AP.", "points": ["weapon.attacks", {"multiply": 1}]},
         "lance": {"name": "Lance", "description": "This weapon gets +1 AP when used during a Charge.", "points": ["weapon.attacks", {"multiply": 1}]},
         "dozer": {"name": "Dozer", "description": "This model may cross low obstacles without penalty.", "points": 5},
         "shielding": {"name": "Shielding", "description": "Whenever this model loses a wound, roll a D10. On a 3 or less that wound is not lost.", "points": 5},
         "shield": {"name": "Shield", "description": "Whenever this model loses a wound, roll a D10. On a 3 or less that wound is not lost.", "points": 5},
-        "psych_out": {"name": "Dangerous(Psychic)", "description": "This weapon has +1 AP against units with the Psychic special rule."},
+        "psych_out": {"name": "Dangerous(Psychic)", "description": "This weapon has +1 AP against units with the Power special rule."},
         "dark_prism": {
             "name": "Dark Prism",
-            "description": "Once per round, when a model with Psychic(x) casts a power within 24\", roll a D10. If the die roll is lower than or equal to the casting roll, the power is prevented.",
+            "description": "Once per round, when a model with Power(x) casts a power within 24\", roll a D10. If the die roll is lower than or equal to the casting roll, the power is prevented.",
             "points": 5
         },
         "medical_training": {
@@ -868,14 +868,7 @@
             "inputs": ["x"],
             "description": "All Power charge values are increased by X for this model. For example a power requiring a 6 or less now requires 6+X or less.",
             "points": [5]
-        },
-        "hover_mode": {
-            "name": "Hover Mode",
-            "description": "When this Aircraft is activated, it may choose to fly in Hover mode. If it does, units do not suffer -1 Accuracy when targeting this unit, but it is not required to make a move action when activated."
-        },
-        "marking_flares": {"name": "Marking Flares", "description": "Once per round, a friendly _Biker_ unit may gain +4\" of Movement.", "points": 5},
-        "surveying_device": {"name": "Surveying Device", "description": "Once per round, a friendly _Infantry_ unit within 12\" may ignore the benefit of cover while shooting.", "points": 10},
-        "spotting_device": {"name": "Spotting Device", "description": "Increase the short and long range of all ranged weapons equipped by this unit by 6\".", "points": 5}
+        }
     },
     "units": {
         "defense_line": {
