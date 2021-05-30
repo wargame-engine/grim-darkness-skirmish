@@ -612,33 +612,13 @@
             "name": "Machine Tactics",
             "inputs": ["x"],
             "description": "When this unit is activated, choose up to X friendly _Infantry_ units within 6\" to receive one of the following bonuses until the end of the round: \n * Re-roll failed Strength tests of 9+ \n * Re-roll failed Accuracy tests of 9+",
-            "points": ["rule.x", {"multiply": 10}]
+            "points": ["rule.x", {"multiply": 5}]
         },
         "warden_tactics": {"name": "Warden", "description": "Once per round, a friendly _Infantry_ unit within 6\" may gain +2 Initiative for a skill test.", "points": 5},
-        "reanimation_beam": {
-            "name": "Reanimation Beam",
-            "description": "Once per round after taking Saves for an _Infantry_ unit. Roll a D10 for each model or Wound(x) lost. On a 5 or less, that model or Wound(x) is restored. Models must be restored to full Wounds(x) before restoring a new model.",
-            "points": 20
-        },
-        "control_orb": {
-            "name": "Control Orb",
-            "description": "When this unit activates, choose one friendly _Vehicle_ unit to immediately activate. That unit gets +1 Accuracy and Strength.",
-            "points": 10
-        },
         "time_orb": {
             "name": "Time Orb",
             "description": "When this unit activates, choose one visible enemy unit within 18\". That unit subtracts 2\" from its Movement characteristic until the end of the round.",
-            "points": 10
-        },
-        "targeting_relay": {
-            "name": "Targeting Relay",
-            "description": "If this unit hits an enemy unit with a ranged attack, mark that unit. The next friendly unit to target that enemy unit may re-roll failed Accuracy rolls of 9+.",
-            "points": 10
-        },
-        "swarm_fabricator": {
-            "name": "Swarm Fabricator",
-            "description": "Once during this unit's activation, roll 3D10. For each roll of 5 or less, one Machine Swarm model equipped with (Feeding Teeth) and specials (Resilient(2), Hover) is created within 3\" of this unit. They may be added to a friendly Machine Swarm unit within 3\" or a new unit may be created.",
-            "points": 50
+            "points": 5
         },
         "extra_space": {"name": "Extra Space", "description_short": "Transport +10", "hidden": true, "description": "This model gains +10 Transport space.", "points": 10},
         "flare_shielding": {"name": "Flare Shields", "description": "Subtract 1 from all Damage Table(X) rolls for this model.", "points": 10},
@@ -653,7 +633,7 @@
             "description": "After taking Saves for an _Infantry_ unit within 3\", roll a D10 for each model or Wound(x) lost. On a 5 or less, that model or Wound(x) is restored. Models must be restored to full Wounds(x) before restoring a new model.",
             "points": 20
         },
-        "phase_field": {"name": "Phase Field", "description": "Once per round, a friendly _Infantry_ unit within 6\" may gain +1 Save.", "points": 10},
+        "phase_field": {"name": "Phase Field", "description": "Friendly _Infantry_ units within 6\" gain +1 Save.", "points": 10},
         "anti_gravity_generators": {
             "name": "Anti-Grav Generators",
             "hidden": true,

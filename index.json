@@ -97,6 +97,17 @@
             "color": "#008080",
             "version": "0.1",
             "description": "The Tao Federation is an alliance of several alien species to band together in the name of survival and prosperity. The Tao rely on a mix of advanced battle warsuits and deadly pulse weaponry to defeat their enemies."
+        },
+        "battle_sisters": {
+            "name": "Battle Sisters",
+            "id": "battle_sisters",
+            "url": "battle_sisters.json",
+            "color": "#010203",
+            "secondary_color": "#9a1115",
+            "alliance": "imperial_alliance",
+            "version": "0.1",
+            "description": "The Battle Sisters are a sect of the Human Empire which have a uniquely faithful and religious background. The Battle Sisters rely on prayer and faith in their holy symbols along with some good old fashioned holy fire to defeat their enemies.",
+            "subfactions": {"assault_focus": {"name": "Assault", "id": "assault_focus", "color": "#4272b8", "description": "Battle Sisters focused on all-out assaults and aggression."}}
         }
     },
     "unfinished_factions": {
@@ -182,17 +193,6 @@
                 "combat_masters": {"name": "Close Combat", "id": "combat_masters", "color": "#00401f", "description": "An Ascended Astro-Raptors trained and drilled in deadly close combat fighting."},
                 "marksmanship_focus": {"name": "Marksmanship", "id": "marksmanship_focus", "description": "An Ascended Astro-Raptors with the best shooting skill in the galaxy."}
             }
-        },
-        "battle_sisters": {
-            "name": "Battle Sisters",
-            "id": "battle_sisters",
-            "url": "battle_sisters.json",
-            "color": "#010203",
-            "secondary_color": "#9a1115",
-            "alliance": "imperial_alliance",
-            "version": "0.1",
-            "description": "The Battle Sisters are a sect of the Human Empire which have a uniquely faithful and religious background. The Battle Sisters rely on prayer and faith in their holy symbols along with some good old fashioned holy fire to defeat their enemies.",
-            "subfactions": {"assault_focus": {"name": "Assault", "id": "assault_focus", "color": "#4272b8", "description": "Battle Sisters focused on all-out assaults and aggression."}}
         },
         "imperial_defense_force": {
             "name": "Imperial Defence Force",
