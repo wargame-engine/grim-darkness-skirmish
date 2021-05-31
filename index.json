@@ -4,6 +4,15 @@
     "author": "guitarninja#5707",
     "reportUrl": "https://github.com/wargame-engine/grim-darkness-skirmish/issues",
     "factions": {
+        "alien_swarm": {
+            "name": "Alien Swarm",
+            "id": "alien_swarm",
+            "url": "alien_swarm.json",
+            "color": "#3d3354",
+            "alliance": "alien_swarm",
+            "version": "0.1",
+            "description": "A swarm of aliens from far-away systems controlled by an ancient hive mind. They feast on other species, absorbing their biomass to turn into more of their kind. They have a combination of deadly creatures and swarms of agile aliens to defeat their foes."
+        },
         "alien_cults": {
             "name": "Alien Cults",
             "id": "alien_cults",
@@ -119,15 +128,6 @@
             "secondary_color": "#e8bb00",
             "alliance": "elven_coaliation",
             "description": "The High Elf Worlds are a group of large constructed fleet habitats. They focus on a mobile and deadly mix of advanced technology and unique fast tactics to achieve victory"
-        },
-        "alien_swarm": {
-            "name": "Alien Swarm",
-            "id": "alien_swarm",
-            "url": "alien_swarm.json",
-            "color": "#3d3354",
-            "alliance": "alien_swarm",
-            "version": "0.1",
-            "description": "A swarm of aliens from far-away systems controlled by an ancient hive mind. They feast on other species, absorbing their biomass to turn into more of their kind. They have a combination of deadly creatures and swarms of agile aliens to defeat their foes."
         },
         "traitor_marines": {
             "name": "Traitor Marines",
