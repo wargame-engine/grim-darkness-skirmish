@@ -539,23 +539,23 @@
             "name": "Vanguard Tactics",
             "inputs": ["x"],
             "description": "When this unit is activated, choose up to X friendly _Infantry_ units within 6\" to receive one of the following bonuses until the end of the round: \n * Re-roll failed Accuracy tests of 9+ \n * Re-roll failed Strength tests of 9+",
-            "points": ["rule.x", {"multiply": 10}]
+            "points": ["rule.x", {"multiply": 5}]
         },
         "manipulator": {
             "name": "Manipulator",
-            "description": "Once per round, a friendly _Infantry_ unit within 3\" may receive one of the following bonuses: \n * +1 AP \n * +3\" of short and long range",
-            "points": 10
+            "description": "Friendly _Infantry_ unit within 3\" may receive one of the following bonuses: \n * +1 AP \n * +3\" of short and long range",
+            "points": 5
         },
         "data_chips": {
             "name": "Data Chips",
             "description": "At any point during this unit's activation, it may choose a friendly _Robot_ unit within 3\" to receive one of the following bonuses: \n * +1 Save \n * Hit rolls of 1 or 2 generate one additional attack \n\n\n The bonus is in effect until a new one is chosen.",
-            "points": 10
+            "points": 5
         },
         "canticles": {
             "name": "Canticles",
             "inputs": ["x"],
             "description": "When this unit is activated, choose up to X friendly _Infantry_ units within 6\" to receive one of the following bonuses until the end of the round: \n * Re-roll failed Accuracy tests of 9+ \n * Re-roll failed Strength tests of 9+ \n * +1 Save \n * +2\" Movement",
-            "points": ["rule.x", {"multiply": 10}]
+            "points": ["rule.x", {"multiply": 5}]
         },
         "data_link": {"name": "Data-Link", "hidden": true, "description": "This model gains +1 Courage.", "description_short": "+1 Courage", "points": 5},
         "heat_scanner": {"name": "Heat Scanner", "description": "This model and friendly _Infantry_ units within 3\" may ignore the benefit of cover with shooting attacks.", "points": 5},
