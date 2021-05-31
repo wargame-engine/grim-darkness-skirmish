@@ -26,7 +26,7 @@
                         {"replaceWeapon": "heavy_pistol", "withWeapon": ["carbine", "twin_carbine", "combi_heavy_flamer", "combi_rocket_launcher"]},
                         {
                             "replaceWeapon": {"id": "heavy_ccw", "count": 5},
-                            "withWeapon": [{"id": "ultra_drill", "count": 5}, {"id": "ultra_axe", "count": 5}, {"id": "ultra_saw", "count": 5}, {"id": "ultra_claw", "count": 5}]
+                            "withWeapon": [{"id": "ultra_axe", "count": 5}, {"id": "ultra_saw", "count": 5}, {"id": "ultra_claw", "count": 5}]
                         },
                         {"addRule": ["ultra_armor", {"id": "resilient", "x": 3, "name": "Cyborg Body"}], "limit": 1}
                     ],
@@ -54,7 +54,7 @@
                         {"replaceWeapon": "heavy_pistol", "withWeapon": ["carbine", "twin_carbine", "combi_heavy_flamer", "combi_rocket_launcher"]},
                         {
                             "replaceWeapon": {"id": "heavy_ccw", "count": 3},
-                            "withWeapon": [{"id": "ultra_drill", "count": 3}, {"id": "ultra_axe", "count": 3}, {"id": "ultra_saw", "count": 3}, {"id": "ultra_claw", "count": 3}]
+                            "withWeapon": [{"id": "ultra_axe", "count": 3}, {"id": "ultra_saw", "count": 3}, {"id": "ultra_claw", "count": 3}]
                         },
                         {"replaceRule": {"id": "power", "x": 1}, "withRule": {"id": "power", "x": 2}}
                     ],
@@ -86,7 +86,7 @@
                         },
                         {
                             "replaceWeapon": {"id": "heavy_ccw", "count": 3},
-                            "withWeapon": [{"id": "ultra_drill", "count": 3}, {"id": "ultra_axe", "count": 3}, {"id": "ultra_saw", "count": 3}, {"id": "ultra_claw", "count": 3}]
+                            "withWeapon": [{"id": "ultra_axe", "count": 3}, {"id": "ultra_saw", "count": 3}, {"id": "ultra_claw", "count": 3}]
                         },
                         {"addRule": ["heavy_armor", "ultra_armor", {"id": "resilient", "x": 3, "name": "Cyborg Body"}], "limit": 1},
                         {"replaceRule": {"id": "repair", "x": 3}, "withRule": {"id": "repair", "x": 5}},
@@ -118,7 +118,7 @@
                         {"replaceWeapon": "heavy_pistol", "withWeapon": ["carbine", "twin_carbine"]},
                         {
                             "replaceWeapon": {"id": "heavy_ccw", "count": 3},
-                            "withWeapon": [{"id": "ultra_drill", "count": 3}, {"id": "ultra_axe", "count": 3}, {"id": "ultra_saw", "count": 3}, {"id": "ultra_claw", "count": 3}]
+                            "withWeapon": [{"id": "ultra_axe", "count": 3}, {"id": "ultra_saw", "count": 3}, {"id": "ultra_claw", "count": 3}]
                         }
                     ],
                     "min": 1,
@@ -145,7 +145,7 @@
                         {"replaceWeapon": "heavy_pistol", "withWeapon": ["carbine", "twin_carbine", "combi_heavy_flamer", "combi_rocket_launcher", "plasma_pistol"]},
                         {
                             "replaceWeapon": {"id": "heavy_ccw", "count": 3},
-                            "withWeapon": [{"id": "ultra_drill", "count": 3}, {"id": "ultra_axe", "count": 3}, {"id": "ultra_saw", "count": 3}, {"id": "ultra_claw", "count": 3}]
+                            "withWeapon": [{"id": "ultra_axe", "count": 3}, {"id": "ultra_saw", "count": 3}, {"id": "ultra_claw", "count": 3}]
                         }
                     ],
                     "min": 1,
@@ -280,10 +280,10 @@
                     "movement": 5,
                     "weapons": ["heavy_pistol", "frags", {"id": "heavy_ccw", "count": 3}],
                     "options": [
-                        {"replaceWeapon": ["heavy_pistol", {"id": "heavy_ccw", "count": 1}], "withWeapon": ["carbine", "twin_carbine", "combi_heavy_flamer", "combi_rocket_launcher"]},
+                        {"replaceWeapon": ["heavy_pistol"], "withWeapon": [{"id": "heavy_ccw", "count": 1}, {"id": "ultra_axe", "count": 1}, {"id": "ultra_saw", "count": 1}, {"id": "ultra_claw", "count": 1}, "carbine", "twin_carbine", "combi_heavy_flamer", "combi_rocket_launcher"]},
                         {
                             "replaceWeapon": {"id": "heavy_ccw", "count": 3},
-                            "withWeapon": [{"id": "ultra_drill", "count": 3}, {"id": "ultra_axe", "count": 3}, {"id": "ultra_saw", "count": 3}, {"id": "ultra_claw", "count": 3}]
+                            "withWeapon": [{"id": "ultra_axe", "count": 3}, {"id": "ultra_saw", "count": 3}, {"id": "ultra_claw", "count": 3}]
                         },
                         {"addRule": [{"id": "heavy_armor"}]},
                         {"addWeapon": "fusion_bomb"}
@@ -451,7 +451,7 @@
                     "options": [
                         {
                             "replaceWeapon": {"id": "heavy_ccw", "count": 3},
-                            "withWeapon": [{"id": "ultra_drill", "count": 3}, {"id": "ultra_axe", "count": 3}, {"id": "ultra_saw", "count": 3}, {"id": "ultra_claw", "count": 3}]
+                            "withWeapon": [{"id": "ultra_axe", "count": 3}, {"id": "ultra_saw", "count": 3}, {"id": "ultra_claw", "count": 3}]
                         },
                         {"replaceWeapon": "heavy_pistol", "withWeapon": ["carbine", "twin_carbine", "combi_heavy_flamer", "combi_rocket_launcher"]}
                     ],
@@ -558,7 +558,7 @@
                         {"replaceWeapon": "heavy_pistol", "withWeapon": ["carbine", "twin_carbine", "combi_heavy_flamer", "combi_rocket_launcher"]},
                         {
                             "replaceWeapon": {"id": "heavy_ccw", "count": 3},
-                            "withWeapon": [{"id": "ultra_drill", "count": 3}, {"id": "ultra_axe", "count": 3}, {"id": "ultra_saw", "count": 3}, {"id": "ultra_claw", "count": 3}]
+                            "withWeapon": [{"id": "ultra_axe", "count": 3}, {"id": "ultra_saw", "count": 3}, {"id": "ultra_claw", "count": 3}]
                         },
                         {"addWeapon": "fusion_bomb"}
                     ],
@@ -587,7 +587,7 @@
                         {"replaceWeapon": "heavy_pistol", "withWeapon": ["shotgun", "carbine", "twin_carbine", "combi_heavy_flamer", "combi_rocket_launcher"]},
                         {
                             "replaceWeapon": {"id": "heavy_ccw", "count": 3},
-                            "withWeapon": [{"id": "ultra_drill", "count": 3}, {"id": "ultra_axe", "count": 3}, {"id": "ultra_saw", "count": 3}, {"id": "ultra_claw", "count": 3}]
+                            "withWeapon": [{"id": "ultra_axe", "count": 3}, {"id": "ultra_saw", "count": 3}, {"id": "ultra_claw", "count": 3}]
                         },
                         {"addWeapon": "fusion_bomb"}
                     ],
@@ -664,7 +664,7 @@
                     "min": 1,
                     "max": 1,
                     "options": [
-                        {"replaceWeapon": [{"id": "ultra_claw", "count": 3}, "twin_carbine"], "withWeapon": [{"id": "ultra_saw", "count": 6}]},
+                        {"replaceWeapon": [{"id": "ultra_claw", "count": 3}, "twin_carbine"], "withWeapon": [{"id": "ultra_saw", "count": 4}]},
                         {"replaceWeapon": "twin_carbine", "withWeapon": ["combi_heavy_flamer", "combi_rocket_launcher"]}
                     ]
                 }
@@ -691,7 +691,7 @@
                         {"replaceWeapon": "heavy_pistol", "withWeapon": ["carbine", "twin_carbine", "combi_heavy_flamer", "combi_rocket_launcher"]},
                         {
                             "replaceWeapon": {"id": "heavy_ccw", "count": 3},
-                            "withWeapon": [{"id": "ultra_drill", "count": 3}, {"id": "ultra_axe", "count": 3}, {"id": "ultra_saw", "count": 3}, {"id": "ultra_claw", "count": 3}]
+                            "withWeapon": [{"id": "ultra_axe", "count": 3}, {"id": "ultra_saw", "count": 3}, {"id": "ultra_claw", "count": 3}]
                         }
                     ],
                     "min": 1,
@@ -710,7 +710,7 @@
                     "options": [
                         {
                             "replaceWeapon": {"id": "heavy_ccw", "count": 3},
-                            "withWeapon": [{"id": "ultra_drill", "count": 3}, {"id": "ultra_axe", "count": 3}, {"id": "ultra_saw", "count": 3}, {"id": "ultra_claw", "count": 3}]
+                            "withWeapon": [{"id": "ultra_axe", "count": 3}, {"id": "ultra_saw", "count": 3}, {"id": "ultra_claw", "count": 3}]
                         },
                         {"replaceWeapon": "heavy_pistol", "withWeapon": ["carbine", "twin_carbine", "combi_heavy_flamer", "combi_rocket_launcher"]}
                     ],
@@ -793,7 +793,7 @@
                         {"replaceWeapon": ["heavy_pistol", {"id": "heavy_ccw", "count": 1}], "withWeapon": ["carbine", "twin_carbine", "combi_heavy_flamer", "combi_rocket_launcher"]},
                         {
                             "replaceWeapon": {"id": "heavy_ccw", "count": 3},
-                            "withWeapon": [{"id": "ultra_drill", "count": 3}, {"id": "ultra_axe", "count": 3}, {"id": "ultra_saw", "count": 3}, {"id": "ultra_claw", "count": 3}]
+                            "withWeapon": [{"id": "ultra_axe", "count": 3}, {"id": "ultra_saw", "count": 3}, {"id": "ultra_claw", "count": 3}]
                         },
                         {"addRule": [{"id": "heavy_armor"}]},
                         {"addWeapon": "fusion_bomb"}
@@ -822,7 +822,7 @@
                     "min": 1,
                     "max": 1,
                     "options": [
-                        {"replaceWeapon": [{"id": "ultra_claw", "count": 3}, "twin_carbine"], "withWeapon": [{"id": "ultra_saw", "count": 6}]},
+                        {"replaceWeapon": [{"id": "ultra_claw", "count": 3}, "twin_carbine"], "withWeapon": [{"id": "ultra_saw", "count": 4}]},
                         {"replaceWeapon": "twin_carbine", "withWeapon": ["combi_heavy_flamer", "combi_rocket_launcher"]}
                     ]
                 }
@@ -888,7 +888,6 @@
             ]
         },
         "cutlass": {"name": "Cutlass", "ap": 2, "attacks": 1, "short": "Melee"},
-        "ultra_drill": {"name": "Ultra Drill", "ap": 2, "attacks": 1, "short": "Melee"},
         "ultra_axe": {"name": "Ultra Axe", "attacks": 1, "ap": 3, "short": "Melee"},
         "ultra_saw": {"name": "Ultra Sawblade", "attacks": 1, "ap": 4, "short": "Melee"},
         "ultra_claw": {"name": "Ultra Claw", "attacks": 1, "ap": 5, "short": "Melee", "rules": ["cumbersome"]},
