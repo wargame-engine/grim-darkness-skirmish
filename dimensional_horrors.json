@@ -110,6 +110,22 @@
                 }
             ]
         },
+        "blue_warrior_leader": {
+            "name": "Blue Warrior Leader",
+            "description": "Twisting warriors of change known for shifting forms before the very eyes of their victims.",
+            "keywords": ["infantry"],
+            "category": "command",
+            "subfactions": ["none", "change"],
+            "options": [
+                {"modelLimit": 1, "addRule": ["banner"]},
+                {"modelLimit": 1, "addRule": ["musician"]},
+                {"modelLimit": 1, "addRule": ["champion"]},
+                {"modelLimit": 1, "addRule": [{"id": "power", "x": 1}]}
+            ],
+            "models": [
+                {"name": "Blue Warrior Leader", "movement": 6, "courage": 5, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 5, "rules": ["leader"], "weapons": ["twisting_flames", "ccw"], "min": 1, "max": 1}
+            ]
+        },
         "blue_warrior": {
             "name": "Blue Warrior",
             "description": "Twisting warriors of change known for shifting forms before the very eyes of their victims.",
@@ -126,7 +142,35 @@
                 {"name": "Blue Warrior", "movement": 6, "courage": 5, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 5, "weapons": ["twisting_flames", "ccw"], "min": 1, "max": 1}
             ]
         },
-        "chromatic_horrors": {
+        "pink_warrior_leader": {
+            "name": "Pink Warrior Leader",
+            "description": "Twisting warriors of change known for shifting forms before the very eyes of their victims.",
+            "keywords": ["infantry"],
+            "category": "command",
+            "subfactions": ["none", "change"],
+            "options": [
+                {"modelLimit": 1, "addRule": ["banner"]},
+                {"modelLimit": 1, "addRule": ["musician"]},
+                {"modelLimit": 1, "addRule": ["champion"]},
+                {"modelLimit": 1, "addRule": [{"id": "power", "x": 1}]}
+            ],
+            "models": [
+                {
+                    "name": "Pink Warrior Leader",
+                    "movement": 6,
+                    "courage": 5,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 6,
+                    "reflexes": 5,
+                    "rules": ["leader"],
+                    "weapons": ["twisting_flames", "ccw"],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "pink_warrior": {
             "name": "Pink Warrior",
             "description": "Twisting warriors of change known for shifting forms before the very eyes of their victims.",
             "keywords": ["infantry"],
@@ -370,7 +414,7 @@
             ]
         },
         "death_seeker": {
-            "name": "Death Seeker",
+            "name": "Excess Warrior Leader on Steed",
             "description": "A seductively mutated beast able to ferring forces of slaanesh into battle.",
             "keywords": ["cavalry"],
             "category": "command",
@@ -378,7 +422,7 @@
             "subfactions": ["none", "excess"],
             "models": [
                 {
-                    "name": "Death Seeker",
+                    "name": "Excess Warrior Leader on Steed",
                     "movement": 8,
                     "courage": 5,
                     "shoot": 6,
@@ -460,6 +504,28 @@
                     "max": 1,
                     "rules": [{"id": "ward", "x": 1}],
                     "weapons": [{"id": "hounds_teeth", "count": 4}]
+                }
+            ]
+        },
+        "wrath_warrior_leader": {
+            "name": "Wrath Warrior Leader",
+            "description": ["Minions of the war-god, these ferocious demons know no rest, only battle."],
+            "keywords": ["infantry"],
+            "category": "command",
+            "subfactions": ["none", "war"],
+            "options": [{"modelLimit": 1, "addRule": ["banner"]}, {"modelLimit": 1, "addRule": ["musician"]}, {"modelLimit": 1, "addRule": ["champion"]}],
+            "models": [                {
+                    "name": "Wrath Warrior Leader",
+                    "movement": 6,
+                    "courage": 6,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "min": 1,
+                    "max": 1,
+                    "rules": ["leader"],
+                    "weapons": [{"id": "war_sword", "count": 1}]
                 }
             ]
         },
