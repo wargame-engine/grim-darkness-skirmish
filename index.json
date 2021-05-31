@@ -28,6 +28,21 @@
                 "zeal_focus": {"name": "Zeal Focus", "id": "zeal_focus", "color": "#6a0001", "description": "An alien cult focused on zealous charges."}
             }
         },
+        "dimensional_horrors": {
+            "name": "Dimensional Horrors",
+            "id": "dimensional_horrors",
+            "url": "dimensional_horrors.json",
+            "color": "#90305d",
+            "alliance": "traitors",
+            "version": "0.1",
+            "description": "The dimensional horrors are a species of demon entities from an unknown dimension controlled by several demon lords. Their existence is largely not understood. They focus on rapid and unpredictable entry and deadly waves of infantry and beasts to surprise and overwhelm their foes.",
+            "subfactions": {
+                "change": {"name": "Magic", "id": "change", "color": "#90305d", "restricted": true, "description": "Horrors with an adept magical skill."},
+                "pestilence": {"name": "Pestilence", "id": "pestilence", "color": "#547588", "restricted": true, "description": "Horrors so disgusting and diseased they refuse to die."},
+                "war": {"name": "War", "id": "war", "color": "#547588", "restricted": true, "description": "Horrors focused on war and all out deadly combat."},
+                "excess": {"name": "Excess", "id": "excess", "color": "#547588", "restricted": true, "description": "Horrors focused on trickery and mind games."}
+            }
+        },
         "dark_elves": {
             "name": "Dark Elf Raiders",
             "id": "dark_elves",
@@ -165,21 +180,6 @@
             "alliance": "traitors",
             "version": "0.1",
             "description": "The corrupted defense force are a band of deserters and other folks out for their own interests. They have gathered much of what they can from the Imperial Defense Force and now fight with the traitors against those that stay loyal."
-        },
-        "dimensional_horrors": {
-            "name": "Dimensional Horrors",
-            "id": "dimensional_horrors",
-            "url": "dimensional_horrors.json",
-            "color": "#90305d",
-            "alliance": "traitors",
-            "version": "0.1",
-            "description": "The dimensional horrors are a species of demon entities from an unknown dimension controlled by several demon lords. Their existence is largely not understood. They focus on rapid and unpredictable entry and deadly waves of infantry and beasts to surprise and overwhelm their foes.",
-            "subfactions": {
-                "change": {"name": "Magic", "id": "change", "color": "#90305d", "restricted": true, "description": "Horrors with an adept magical skill."},
-                "pestilence": {"name": "Pestilence", "id": "pestilence", "color": "#547588", "restricted": true, "description": "Horrors so disgusting and diseased they refuse to die."},
-                "war": {"name": "War", "id": "war", "color": "#547588", "restricted": true, "description": "Horrors focused on war and all out deadly combat."},
-                "excess": {"name": "Excess", "id": "excess", "color": "#547588", "restricted": true, "description": "Horrors focused on trickery and mind games."}
-            }
         },
         "ascended_astroraptors": {
             "alliance": "federation",
