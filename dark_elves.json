@@ -1,2016 +1,784 @@
 {
-  "id" : "dark_elves",
-  "name" : "Dark Elf Raiders",
-  "author" : "guitarninja#5707",
-  "units" : {
-    "dark_elf_lord" : {
-      "category" : "commander",
-      "name" : "Lord",
-      "description" : "A Dark Elf Lord good at supporting troops and fighting.",
-      "min" : 1,
-      "max" : 1,
-      "keywords" : [
-        "Infantry"
-      ],
-      "models" : [
-        {
-          "name" : "Lord",
-          "courage" : 7,
-          "movement" : 7,
-          "shoot" : 7,
-          "fight" : 7,
-          "defense" : 6,
-          "reflexes" : 7,
-          "weapons" : [
-            "barb_pistol",
-            "plasma_grenade",
-            {
-              "id" : "barb_blade",
-              "count" : 5
-            }
-          ],
-          "min" : 1,
-          "max" : 1,
-          "rules" : [
-            {
-              "id" : "wounds",
-              "x" : 3
-            },
-            {
-              "id" : "lord_tactics",
-              "x" : 1
-            },
-            {
-              "id" : "tough",
-              "x" : 1
-            }
-          ],
-          "options" : [
-            {
-              "replaceRule" : {
-                "id" : "lord_tactics",
-                "x" : 1
-              },
-              "withRule" : {
-                "id" : "lord_tactics",
-                "x" : 2
-              }
-            },
-            {
-              "replaceWeapon" : "barb_pistol",
-              "withWeapon" : [
-                "blast_pistol"
-              ]
-            },
-            {
-              "replaceWeapon" : {
-                "id" : "barb_blade",
-                "count" : 5
-              },
-              "withWeapon" : [
+    "id": "dark_elves",
+    "name": "Dark Elf Raiders",
+    "author": "guitarninja#5707",
+    "units": {
+        "dark_elf_lord": {
+            "category": "commander",
+            "name": "Lord",
+            "description": "A Dark Elf Lord good at supporting troops and fighting.",
+            "min": 1,
+            "max": 1,
+            "keywords": ["Infantry"],
+            "models": [
                 {
-                  "id" : "melting_blade",
-                  "count" : 5
-                },
-                {
-                  "id" : "energy_sword",
-                  "count" : 5
-                },
-                {
-                  "id" : "barb_whip",
-                  "count" : 5
+                    "name": "Lord",
+                    "courage": 7,
+                    "movement": 7,
+                    "shoot": 7,
+                    "fight": 7,
+                    "defense": 6,
+                    "reflexes": 7,
+                    "weapons": ["barb_pistol", "plasma_grenade", {"id": "barb_blade", "count": 5}],
+                    "min": 1,
+                    "max": 1,
+                    "rules": [{"id": "wounds", "x": 3}, {"id": "lord_tactics", "x": 1}, {"id": "tough", "x": 1}],
+                    "options": [
+                        {"replaceRule": {"id": "lord_tactics", "x": 1}, "withRule": {"id": "lord_tactics", "x": 2}},
+                        {"replaceWeapon": "barb_pistol", "withWeapon": ["blast_pistol"]},
+                        {"replaceWeapon": {"id": "barb_blade", "count": 5}, "withWeapon": [{"id": "melting_blade", "count": 5}, {"id": "energy_sword", "count": 5}, {"id": "barb_whip", "count": 5}]},
+                        {"addRule": ["flayed_cape", "dark_prism"]}
+                    ]
                 }
-              ]
-            },
-            {
-              "addRule" : [
-                "flayed_cape",
-                "dark_prism"
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    "abomination_master" : {
-      "category" : "commander",
-      "name" : "Abomination Master",
-      "description" : "A Dark Elf Lord who experiments on Dark Elves to create abominations.",
-      "min" : 1,
-      "max" : 1,
-      "keywords" : [
-        "Infantry"
-      ],
-      "models" : [
-        {
-          "name" : "Abomination Master",
-          "courage" : 7,
-          "movement" : 6,
-          "shoot" : 7,
-          "fight" : 7,
-          "defense" : 7,
-          "reflexes" : 6,
-          "weapons" : [
-            "barb_pistol",
-            {
-              "id" : "barb_blade",
-              "count" : 5
-            }
-          ],
-          "min" : 1,
-          "max" : 1,
-          "rules" : [
-            {
-              "id" : "wounds",
-              "x" : 3
-            },
-            {
-              "id" : "abomination_tactics",
-              "x" : 1
-            }
-          ],
-          "options" : [
-            {
-              "replaceRule" : {
-                "id" : "abomination_tactics",
-                "x" : 1
-              },
-              "withRule" : {
-                "id" : "abomination_tactics",
-                "x" : 2
-              }
-            },
-            {
-              "replaceWeapon" : "barb_pistol",
-              "withWeapon" : [
-                "poison_sprayer",
-                "hexed_rifle"
-              ]
-            },
-            {
-              "replaceWeapon" : {
-                "id" : "barb_blade",
-                "count" : 5
-              },
-              "withWeapon" : [
-                {
-                  "id" : "barb_whip",
-                  "count" : 5
-                }
-              ]
-            },
-            {
-              "addWeapon" : "poison_injector"
-            },
-            {
-              "addRule" : "dark_prism"
-            }
-          ]
-        }
-      ]
-    },
-    "dark_mercenary_master" : {
-      "category" : "commander",
-      "name" : "Dark Mercenary Master",
-      "description" : "A Dark Elf mercenary blade master.",
-      "min" : 1,
-      "max" : 1,
-      "keywords" : [
-        "Infantry"
-      ],
-      "models" : [
-        {
-          "name" : "Dark Mercenary Master",
-          "courage" : 7,
-          "movement" : 7,
-          "shoot" : 7,
-          "fight" : 7,
-          "defense" : 9,
-          "reflexes" : 7,
-          "weapons" : [
-            "dual_dark_blades"
-          ],
-          "min" : 1,
-          "max" : 1,
-          "rules" : [
-            {
-              "id" : "wounds",
-              "x" : 3
-            },
-            {
-              "id" : "mercenary_tactics",
-              "x" : 1
-            }
-          ],
-          "options" : [
-            {
-              "replaceRule" : {
-                "id" : "mercenary_tactics",
-                "x" : 1
-              },
-              "withRule" : {
-                "id" : "mercenary_tactics",
-                "x" : 2
-              }
-            }
-          ]
-        }
-      ]
-    },
-    "succubus" : {
-      "category" : "commander",
-      "name" : "Succubus",
-      "description" : "A Dark Elf succubus adept at fighting in Melee.",
-      "min" : 1,
-      "max" : 1,
-      "keywords" : [
-        "Infantry"
-      ],
-      "models" : [
-        {
-          "name" : "Succubus",
-          "courage" : 7,
-          "movement" : 7,
-          "shoot" : 7,
-          "fight" : 7,
-          "defense" : 5,
-          "reflexes" : 7,
-          "weapons" : [
-            "barb_pistol",
-            "plasma_grenade",
-            {
-              "id" : "energy_glaive",
-              "count" : 3
-            }
-          ],
-          "min" : 1,
-          "max" : 1,
-          "rules" : [
-            {
-              "id" : "wounds",
-              "x" : 3
-            },
-            "dodge",
-            {
-              "id" : "succubus_tactics",
-              "x" : 1
-            }
-          ],
-          "options" : [
-            {
-              "replaceRule" : {
-                "id" : "succubus_tactics",
-                "x" : 1
-              },
-              "withRule" : {
-                "id" : "succubus_tactics",
-                "x" : 2
-              }
-            },
-            {
-              "replaceWeapon" : "barb_pistol",
-              "withWeapon" : [
-                "blast_pistol"
-              ]
-            },
-            {
-              "replaceWeapon" : {
-                "id" : "energy_glaive",
-                "count" : 3
-              },
-              "withWeapon" : [
-                {
-                  "id" : "razor_whips",
-                  "count" : 6
-                },
-                {
-                  "id" : "net_and_spear",
-                  "count" : 4
-                },
-                {
-                  "id" : "barb_gauntlets",
-                  "count" : 4
-                }
-              ]
-            },
-            {
-              "addRule" : "dark_prism"
-            }
-          ]
-        }
-      ]
-    },
-    "warrior" : {
-      "category" : "core",
-      "name" : "Warrior",
-      "description" : "A Dark Elf warrior with poisonous weaponry.",
-      "models" : [
-        {
-          "name" : "Warrior",
-          "courage" : 5,
-          "movement" : 7,
-          "shoot" : 6,
-          "fight" : 5,
-          "defense" : 6,
-          "reflexes" : 6,
-          "weapons" : [
-            "barb_rifle",
-            "plasma_grenade",
-            "ccw"
-          ],
-          "min" : 1,
-          "max" : 1
-        }
-      ]
-    },
-    "abomination_warrior" : {
-      "category" : "core",
-      "name" : "Abomination Warrior",
-      "description" : "A Dark Elf warrior subject to experiments.",
-      "models" : [
-        {
-          "options" : [
-            {
-              "addWeapon" : [
-                "poison_sprayer",
-                "poison_dart_rifle"
-              ]
-            }
-          ],
-          "name" : "Abomination Warrior",
-          "courage" : 5,
-          "movement" : 6,
-          "shoot" : 5,
-          "fight" : 6,
-          "defense" : 7,
-          "reflexes" : 5,
-          "weapons" : [
-            {
-              "id" : "barb_blade",
-              "count" : 2
-            }
-          ],
-          "min" : 1,
-          "max" : 1
-        }
-      ]
-    },
-    "veteran_warrior" : {
-      "category" : "core",
-      "name" : "Veteran Warrior",
-      "description" : "A Dark Elf warrior with poisonous weaponry.",
-      "models" : [
-        {
-          "name" : "Veteran Warrior",
-          "courage" : 6,
-          "movement" : 7,
-          "shoot" : 6,
-          "fight" : 6,
-          "defense" : 6,
-          "reflexes" : 6,
-          "weapons" : [
-            "barb_rifle",
-            "plasma_grenade",
-            {
-              "id" : "ccw",
-              "count" : 2
-            }
-          ],
-          "min" : 1,
-          "max" : 1
-        }
-      ]
-    },
-    "dark_mercenary" : {
-      "category" : "specialist",
-      "name" : "Dark Mercenary",
-      "description" : "A Dark Elf warrior with poisonous weaponry.",
-      "rules" : [
-        "fear"
-      ],
-      "models" : [
-        {
-          "name" : "Dark Mercenary",
-          "courage" : 6,
-          "movement" : 7,
-          "shoot" : 6,
-          "fight" : 6,
-          "defense" : 7,
-          "reflexes" : 6,
-          "weapons" : [
-            {
-              "id" : "dark_blade",
-              "count" : 2
-            }
-          ],
-          "min" : 1,
-          "max" : 1
-        }
-      ]
-    },
-    "harpie" : {
-      "category" : "strike",
-      "name" : "Harpie",
-      "description" : "A Dark Elf warrior with artifical wings.",
-      "rules" : [
-        "fly",
-        "ambush"
-      ],
-      "models" : [
-        {
-          "name" : "Harpie",
-          "courage" : 5,
-          "movement" : 8,
-          "shoot" : 6,
-          "fight" : 5,
-          "defense" : 6,
-          "reflexes" : 6,
-          "weapons" : [
-            "barb_carbine",
-            "plasma_grenade",
-            {
-              "id" : "ccw",
-              "count" : 1
-            }
-          ],
-          "min" : 1,
-          "max" : 1
-        }
-      ]
-    },
-    "bird_swarm" : {
-      "name" : "Bird Swarm",
-      "description" : "A swarm of small birds with sharp claws.",
-      "category" : "strike",
-      "rules" : [
-        "fly",
-        {
-          "id" : "swarm",
-          "x" : 3
-        }
-      ],
-      "keywords" : [
-        "Swarm"
-      ],
-      "models" : [
-        {
-          "name" : "Bird Swarm",
-          "courage" : 5,
-          "movement" : 8,
-          "shoot" : 3,
-          "fight" : 5,
-          "defense" : 4,
-          "reflexes" : 4,
-          "weapons" : [
-            {
-              "id" : "sharp_claws",
-              "count" : 3
-            }
-          ],
-          "min" : 1,
-          "max" : 1
-        }
-      ]
-    },
-    "witch" : {
-      "category" : "core",
-      "name" : "Witch",
-      "description" : "A Dark Elven witch with poisonous melee weaponry.",
-      "rules" : [
-        "dodge"
-      ],
-      "models" : [
-        {
-          "options" : [
-            {
-              "addRule" : [
-                "combat_drugs"
-              ]
-            },
-            {
-              "replaceWeapon" : {
-                "id" : "barb_blade",
-                "count" : 2
-              },
-              "withWeapon" : [
-                {
-                  "id" : "razor_whips",
-                  "count" : 4
-                },
-                {
-                  "id" : "net_and_spear",
-                  "count" : 3
-                },
-                {
-                  "id" : "barb_gauntlets",
-                  "count" : 3
-                }
-              ]
-            }
-          ],
-          "name" : "Witch",
-          "courage" : 5,
-          "movement" : 7,
-          "shoot" : 5,
-          "fight" : 6,
-          "defense" : 5,
-          "reflexes" : 6,
-          "weapons" : [
-            "barb_pistol",
-            "plasma_grenade",
-            {
-              "id" : "barb_blade",
-              "count" : 2
-            }
-          ],
-          "min" : 1,
-          "max" : 1
-        }
-      ]
-    },
-    "veteran_witch" : {
-      "category" : "core",
-      "name" : "Veteran Witch",
-      "description" : "A Dark Elven witch with poisonous melee weaponry.",
-      "min" : 1,
-      "max" : 1,
-      "rules" : [
-        "dodge"
-      ],
-      "models" : [
-        {
-          "options" : [
-            {
-              "addRule" : [
-                "combat_drugs"
-              ]
-            },
-            {
-              "replaceWeapon" : {
-                "id" : "barb_blade",
-                "count" : 2
-              },
-              "withWeapon" : [
-                {
-                  "id" : "razor_whips",
-                  "count" : 4
-                },
-                {
-                  "id" : "net_and_spear",
-                  "count" : 3
-                },
-                {
-                  "id" : "barb_gauntlets",
-                  "count" : 3
-                }
-              ]
-            }
-          ],
-          "name" : "Veteran Witch",
-          "courage" : 6,
-          "movement" : 7,
-          "shoot" : 6,
-          "fight" : 6,
-          "defense" : 6,
-          "reflexes" : 6,
-          "weapons" : [
-            "barb_pistol",
-            "plasma_grenade",
-            {
-              "id" : "barb_blade",
-              "count" : 2
-            }
-          ],
-          "min" : 1,
-          "max" : 1
-        }
-      ]
-    },
-    "courtesan" : {
-      "category" : "specialist",
-      "name" : "Courtesan",
-      "description" : "",
-      "keywords" : [
-        "Infantry"
-      ],
-      "models" : [
-        {
-          "name" : "Courtesan",
-          "courage" : 6,
-          "movement" : 7,
-          "shoot" : 6,
-          "fight" : 6,
-          "defense" : 5,
-          "reflexes" : 6,
-          "weapons" : [
-            {
-              "id" : "toxic_blade",
-              "count" : 2
-            }
-          ],
-          "rules" : [
-            {
-              "id" : "wounds",
-              "x" : 2
-            }
-          ],
-          "options" : [],
-          "min" : 1,
-          "max" : 1
-        }
-      ]
-    },
-    "jetbike_witch" : {
-      "category" : "strike",
-      "name" : "Jetbike Witch",
-      "description" : "A Dark Elf witch with poisonous melee weaponry riding a jetbike.",
-      "min" : 1,
-      "max" : 1,
-      "keywords" : [
-        "Biker"
-      ],
-      "rules" : [
-        "hover"
-      ],
-      "models" : [
-        {
-          "options" : [
-            {
-              "addRule" : [
-                "combat_drugs"
-              ]
-            },
-            {
-              "replaceWeapon" : [
-                "barb_rifle",
-                "ccw"
-              ],
-              "withWeapon" : [
-                [
-                  "barb_pistol",
-                  {
-                    "id" : "barb_blade",
-                    "count" : 2
-                  }
-                ]
-              ]
-            },
-            {
-              "addWeapon" : [
-                "heat_cannon",
-                "blast_rifle"
-              ]
-            }
-          ],
-          "name" : "Jetbike Witch",
-          "courage" : 5,
-          "movement" : 8,
-          "shoot" : 5,
-          "fight" : 6,
-          "defense" : 8,
-          "reflexes" : 6,
-          "weapons" : [
-            "barb_rifle",
-            "plasma_grenade",
-            "ccw",
-            {
-              "id" : "cutting_blade",
-              "count" : 2
-            }
-          ],
-          "min" : 1,
-          "max" : 1
-        }
-      ]
-    },
-    "hoverboard_riders" : {
-      "category" : "strike",
-      "name" : "Hoverboard Rider",
-      "description" : "A Dark Elf warrior mounted on a fast hover board.",
-      "keywords" : [
-        "Biker"
-      ],
-      "rules" : [
-        "hover"
-      ],
-      "models" : [
-        {
-          "options" : [
-            {
-              "addRule" : [
-                "combat_drugs"
-              ]
-            }
-          ],
-          "name" : "Hoverboarder",
-          "courage" : 5,
-          "movement" : 8,
-          "shoot" : 5,
-          "fight" : 6,
-          "defense" : 6,
-          "reflexes" : 6,
-          "weapons" : [
-            "barb_launcher",
-            {
-              "id" : "glaive",
-              "count" : 2
-            }
-          ],
-          "min" : 1,
-          "max" : 1
-        }
-      ]
-    },
-    "warrior_leader" : {
-      "category" : "leader",
-      "name" : "Warrior Leader",
-      "description" : "A Dark Elf leader with poisonous weaponry.",
-      "models" : [
-        {
-          "name" : "Warrior Leader",
-          "courage" : 5,
-          "movement" : 7,
-          "shoot" : 6,
-          "fight" : 5,
-          "defense" : 6,
-          "reflexes" : 6,
-          "weapons" : [
-            "barb_rifle",
-            "plasma_grenade",
-            "ccw"
-          ],
-          "min" : 1,
-          "max" : 1,
-          "options" : [
-            {
-              "replaceWeapon" : [
-                "barb_rifle",
-                "ccw"
-              ],
-              "withWeapon" : [
-                [
-                  "barb_pistol",
-                  {
-                    "id" : "ccw",
-                    "count" : 2
-                  }
-                ]
-              ]
-            },
-            {
-              "replaceWeapon" : "barb_pistol",
-              "withWeapon" : [
-                "blast_pistol"
-              ]
-            },
-            {
-              "replaceWeapon" : {
-                "id" : "ccw",
-                "count" : 2
-              },
-              "withWeapon" : [
-                {
-                  "id" : "energy_sword",
-                  "count" : 2
-                },
-                {
-                  "id" : "barb_whip",
-                  "count" : 2
-                }
-              ]
-            },
-            {
-              "addWeapon" : "grenade_launcher_backpack"
-            }
-          ],
-          "rules" : [
-            "leader"
-          ]
-        }
-      ]
-    },
-    "abomination_warrior_leader" : {
-      "category" : "leader",
-      "name" : "Abomination Warrior Leader",
-      "description" : "A Dark Elf leader subject to experiments.",
-      "models" : [
-        {
-          "name" : "Abomination Warrior Leader",
-          "courage" : 5,
-          "movement" : 6,
-          "shoot" : 5,
-          "fight" : 6,
-          "defense" : 7,
-          "reflexes" : 5,
-          "weapons" : [
-            {
-              "id" : "barb_blade",
-              "count" : 2
-            }
-          ],
-          "min" : 1,
-          "max" : 1,
-          "rules" : [
-            "leader"
-          ]
-        }
-      ]
-    },
-    "veteran_warrior_leader" : {
-      "category" : "leader",
-      "name" : "Veteran Warrior Leader",
-      "description" : "A Dark Elf leader with poisonous weaponry.",
-      "models" : [
-        {
-          "name" : "Veteran Warrior Leader",
-          "courage" : 6,
-          "movement" : 7,
-          "shoot" : 6,
-          "fight" : 6,
-          "defense" : 6,
-          "reflexes" : 6,
-          "weapons" : [
-            "barb_rifle",
-            "plasma_grenade",
-            {
-              "id" : "ccw",
-              "count" : 2
-            }
-          ],
-          "min" : 1,
-          "max" : 1,
-          "options" : [
-            {
-              "replaceWeapon" : [
-                "barb_rifle",
-                {
-                  "id" : "ccw",
-                  "count" : 2
-                }
-              ],
-              "withWeapon" : [
-                [
-                  "barb_pistol",
-                  {
-                    "id" : "ccw",
-                    "count" : 3
-                  }
-                ]
-              ]
-            },
-            {
-              "replaceWeapon" : "barb_pistol",
-              "withWeapon" : [
-                "blast_pistol"
-              ]
-            },
-            {
-              "replaceWeapon" : {
-                "id" : "ccw",
-                "count" : 3
-              },
-              "withWeapon" : [
-                {
-                  "id" : "energy_sword",
-                  "count" : 3
-                },
-                {
-                  "id" : "barb_whip",
-                  "count" : 3
-                }
-              ]
-            },
-            {
-              "addWeapon" : "grenade_launcher_backpack"
-            }
-          ],
-          "rules" : [
-            "leader"
-          ]
-        }
-      ]
-    },
-    "dark_mercenary_leader" : {
-      "category" : "specialist",
-      "name" : "Dark Mercenary Leader",
-      "description" : "A Dark Elf leader with poisonous weaponry.",
-      "rules" : [
-        "fear",
-        "leader"
-      ],
-      "models" : [
-        {
-          "name" : "Dark Mercenary Leader",
-          "courage" : 6,
-          "movement" : 7,
-          "shoot" : 6,
-          "fight" : 6,
-          "defense" : 7,
-          "reflexes" : 6,
-          "weapons" : [
-            {
-              "id" : "dark_blade",
-              "count" : 2
-            }
-          ],
-          "min" : 1,
-          "max" : 1
-        }
-      ]
-    },
-    "harpie_leader" : {
-      "category" : "leader",
-      "name" : "Harpie Leader",
-      "description" : "A Dark Elf leader with artifical wings.",
-      "min" : 1,
-      "max" : 1,
-      "rules" : [
-        "fly",
-        "ambush",
-        "leader"
-      ],
-      "models" : [
-        {
-          "name" : "Harpie Leader",
-          "courage" : 5,
-          "movement" : 8,
-          "shoot" : 6,
-          "fight" : 5,
-          "defense" : 6,
-          "reflexes" : 6,
-          "weapons" : [
-            "barb_carbine",
-            "plasma_grenade",
-            {
-              "id" : "ccw",
-              "count" : 1
-            }
-          ],
-          "min" : 1,
-          "max" : 1,
-          "options" : [
-            {
-              "replaceWeapon" : [
-                "barb_rifle",
-                "ccw"
-              ],
-              "withWeapon" : [
-                [
-                  "barb_pistol",
-                  {
-                    "id" : "ccw",
-                    "count" : 2
-                  }
-                ]
-              ]
-            },
-            {
-              "replaceWeapon" : "barb_pistol",
-              "withWeapon" : [
-                "blast_pistol"
-              ]
-            },
-            {
-              "replaceWeapon" : {
-                "id" : "ccw",
-                "count" : 2
-              },
-              "withWeapon" : [
-                {
-                  "id" : "energy_sword",
-                  "count" : 2
-                },
-                {
-                  "id" : "barb_whip",
-                  "count" : 2
-                },
-                {
-                  "id" : "energy_lance",
-                  "count" : 2
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    "witch_leader" : {
-      "category" : "leader",
-      "name" : "Witch Leader",
-      "description" : "A Dark Elf leader with poisonous melee weaponry.",
-      "rules" : [
-        "dodge",
-        "leader"
-      ],
-      "models" : [
-        {
-          "name" : "Witch Leader",
-          "courage" : 5,
-          "movement" : 7,
-          "shoot" : 5,
-          "fight" : 6,
-          "defense" : 5,
-          "reflexes" : 6,
-          "weapons" : [
-            "barb_pistol",
-            "plasma_grenade",
-            {
-              "id" : "barb_blade",
-              "count" : 2
-            }
-          ],
-          "min" : 1,
-          "max" : 1,
-          "options" : [
-            {
-              "addRule" : [
-                "combat_drugs"
-              ],
-              "modelLimit" : "all",
-              "limit" : 1
-            },
-            {
-              "replaceWeapon" : "barb_pistol",
-              "withWeapon" : [
-                "blast_pistol"
-              ]
-            },
-            {
-              "replaceWeapon" : {
-                "id" : "barb_blade",
-                "count" : 2
-              },
-              "withWeapon" : [
-                {
-                  "id" : "energy_sword",
-                  "count" : 2
-                },
-                {
-                  "id" : "barb_whip",
-                  "count" : 2
-                }
-              ]
-            },
-            {
-              "addWeapon" : "grenade_launcher_backpack"
-            }
-          ]
-        }
-      ]
-    },
-    "jetbike_witch_leader" : {
-      "category" : "leader",
-      "name" : "Jetbike Witch Leader",
-      "description" : "A Dark Elf leader with poisonous melee weaponry riding a jetbike.",
-      "min" : 1,
-      "max" : 1,
-      "keywords" : [
-        "Biker"
-      ],
-      "rules" : [
-        "hover",
-        "leader"
-      ],
-      "models" : [
-        {
-          "name" : "Jetbike Witch Leader",
-          "courage" : 5,
-          "movement" : 8,
-          "shoot" : 5,
-          "fight" : 6,
-          "defense" : 8,
-          "reflexes" : 6,
-          "weapons" : [
-            "barb_rifle",
-            "plasma_grenade",
-            "ccw",
-            {
-              "id" : "cutting_blade",
-              "count" : 2
-            }
-          ],
-          "min" : 1,
-          "max" : 1,
-          "options" : [
-            {
-              "addRule" : [
-                "combat_drugs"
-              ]
-            },
-            {
-              "replaceWeapon" : [
-                "barb_rifle",
-                "ccw"
-              ],
-              "withWeapon" : [
-                [
-                  "barb_pistol",
-                  {
-                    "id" : "barb_blade",
-                    "count" : 2
-                  }
-                ]
-              ]
-            },
-            {
-              "replaceWeapon" : "barb_pistol",
-              "withWeapon" : [
-                "blast_pistol"
-              ]
-            },
-            {
-              "replaceWeapon" : {
-                "id" : "barb_blade",
-                "count" : 2
-              },
-              "withWeapon" : [
-                {
-                  "id" : "energy_sword",
-                  "count" : 2
-                },
-                {
-                  "id" : "barb_whip",
-                  "count" : 2
-                }
-              ]
-            },
-            {
-              "addWeapon" : [
-                "heat_cannon",
-                "blast_rifle"
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    "hoverboard_rider_leader" : {
-      "category" : "leader",
-      "name" : "Hoverboard Rider Leader",
-      "description" : "A Dark Elf leader mounted on a fast hover board.",
-      "keywords" : [
-        "Biker"
-      ],
-      "rules" : [
-        "hover",
-        "leader"
-      ],
-      "models" : [
-        {
-          "name" : "Hoverboard Leader",
-          "courage" : 5,
-          "movement" : 8,
-          "shoot" : 5,
-          "fight" : 6,
-          "defense" : 6,
-          "reflexes" : 6,
-          "weapons" : [
-            "barb_launcher",
-            {
-              "id" : "glaive",
-              "count" : 2
-            }
-          ],
-          "min" : 1,
-          "max" : 1,
-          "options" : [
-            {
-              "addRule" : [
-                "combat_drugs"
-              ]
-            },
-            {
-              "replaceWeapon" : [
-                {
-                  "id" : "glaive",
-                  "count" : 2
-                }
-              ],
-              "withWeapon" : [
-                [
-                  "barb_pistol",
-                  {
-                    "id" : "barb_blade",
-                    "count" : 3
-                  }
-                ],
-                [
-                  "barb_pistol",
-                  {
-                    "id" : "energy_sword",
-                    "count" : 3
-                  }
-                ],
-                [
-                  "barb_pistol",
-                  {
-                    "id" : "barb_whip",
-                    "count" : 3
-                  }
-                ]
-              ]
-            },
-            {
-              "addWeapon" : "grenade_launcher_backpack"
-            }
-          ]
-        }
-      ]
-    },
-    "psychic_being" : {
-      "category" : "specialist",
-      "name" : "Psychic Being",
-      "description" : "",
-      "models" : [
-        {
-          "name" : "Psychic Being",
-          "movement" : 7,
-          "courage" : 6,
-          "shoot" : 6,
-          "fight" : 6,
-          "defense" : 5,
-          "reflexes" : 6,
-          "rules" : [
-            {
-              "id" : "wounds",
-              "x" : 2
-            }
-          ],
-          "weapons" : [
-            "soul_drain"
-          ],
-          "min" : 1,
-          "max" : 1
-        }
-      ]
-    },
-    "ghoul" : {
-      "category" : "specialist",
-      "name" : "Ghoul",
-      "description" : "",
-      "models" : [
-        {
-          "name" : "Ghoul",
-          "movement" : 7,
-          "courage" : 4,
-          "shoot" : 6,
-          "fight" : 6,
-          "defense" : 5,
-          "reflexes" : 5,
-          "rules" : [
-            {
-              "id" : "wounds",
-              "x" : 2
-            },
-            "furious",
-            {
-              "id" : "resilient",
-              "x" : 2
-            }
-          ],
-          "weapons" : [
-            {
-              "id" : "piercing_claws",
-              "count" : 3
-            }
-          ],
-          "min" : 1,
-          "max" : 1
-        }
-      ]
-    },
-    "serpent" : {
-      "category" : "specialist",
-      "name" : "Serpent",
-      "description" : "",
-      "models" : [
-        {
-          "name" : "Serpent",
-          "movement" : 7,
-          "courage" : 6,
-          "shoot" : 6,
-          "fight" : 6,
-          "defense" : 5,
-          "reflexes" : 5,
-          "rules" : [
-            {
-              "id" : "wounds",
-              "x" : 2
-            }
-          ],
-          "weapons" : [
-            {
-              "id" : "serpent_blade",
-              "count" : 3
-            }
-          ],
-          "min" : 1,
-          "max" : 1
-        }
-      ]
-    },
-    "warrior_heavy" : {
-      "category" : "heavy",
-      "name" : "Warrior Heavy",
-      "description" : "A Dark Elf warriors with heavy weaponry.",
-      "models" : [
-        {
-          "options" : [
-            {
-              "replaceWeapon" : "barb_rifle",
-              "withWeapon" : [
-                "barb_cannon",
-                "fusion_cannon",
-                "blast_rifle",
-                "shred_rifle"
-              ]
-            }
-          ],
-          "name" : "Warrior Heavy",
-          "courage" : 5,
-          "movement" : 7,
-          "shoot" : 6,
-          "fight" : 5,
-          "defense" : 6,
-          "reflexes" : 6,
-          "weapons" : [
-            "barb_rifle",
-            "plasma_grenade",
-            "ccw"
-          ],
-          "min" : 1,
-          "max" : 1
-        }
-      ]
-    },
-    "veteran_warrior_heavy" : {
-      "category" : "heavy",
-      "name" : "Veteran Warrior Heavy",
-      "description" : "A Dark Elf warrior with heavy weaponry.",
-      "models" : [
-        {
-          "options" : [
-            {
-              "replaceWeapon" : "barb_rifle",
-              "withWeapon" : [
-                "barb_cannon",
-                "fusion_cannon",
-                "blast_rifle",
-                "shred_rifle"
-              ]
-            }
-          ],
-          "name" : "Veteran Warrior",
-          "courage" : 6,
-          "movement" : 7,
-          "shoot" : 6,
-          "fight" : 6,
-          "defense" : 6,
-          "reflexes" : 6,
-          "weapons" : [
-            "barb_rifle",
-            "plasma_grenade",
-            {
-              "id" : "ccw",
-              "count" : 2
-            }
-          ],
-          "min" : 1,
-          "max" : 1
-        }
-      ]
-    },
-    "harpie_heavy" : {
-      "category" : "heavy",
-      "name" : "Harpie Heavy",
-      "description" : "A Dark Elf warrior with artifical wings.",
-      "keywords" : [
-        "Infantry"
-      ],
-      "rules" : [
-        "fly",
-        "ambush"
-      ],
-      "models" : [
-        {
-          "options" : [
-            {
-              "replaceWeapon" : "barb_rifle",
-              "withWeapon" : [
-                "barb_cannon",
-                "fusion_cannon",
-                "blast_rifle",
-                "shred_rifle",
-                "heat_cannon",
-                "emp_rifle"
-              ]
-            }
-          ],
-          "name" : "Harpie",
-          "courage" : 5,
-          "movement" : 8,
-          "shoot" : 6,
-          "fight" : 5,
-          "defense" : 6,
-          "reflexes" : 6,
-          "weapons" : [
-            "barb_carbine",
-            "plasma_grenade",
-            {
-              "id" : "ccw",
-              "count" : 1
-            }
-          ],
-          "min" : 1,
-          "max" : 1
-        }
-      ]
-    },
-    "veteran_witch_leader" : {
-      "category" : "leader",
-      "name" : "Veteran Witch Leader",
-      "description" : "A Dark Elven leader with poisonous melee weaponry.",
-      "rules" : [
-        "dodge",
-        "leader"
-      ],
-      "models" : [
-        {
-          "name" : "Veteran Witch Leader",
-          "courage" : 6,
-          "movement" : 7,
-          "shoot" : 6,
-          "fight" : 6,
-          "defense" : 6,
-          "reflexes" : 6,
-          "weapons" : [
-            "barb_pistol",
-            "plasma_grenade",
-            {
-              "id" : "barb_blade",
-              "count" : 2
-            }
-          ],
-          "min" : 1,
-          "max" : 1,
-          "options" : [
-            {
-              "addRule" : [
-                "combat_drugs"
-              ]
-            },
-            {
-              "replaceWeapon" : "barb_pistol",
-              "withWeapon" : [
-                "blast_pistol"
-              ]
-            },
-            {
-              "replaceWeapon" : {
-                "id" : "barb_blade",
-                "count" : 2
-              },
-              "withWeapon" : [
-                {
-                  "id" : "energy_sword",
-                  "count" : 2
-                },
-                {
-                  "id" : "barb_whip",
-                  "count" : 2
-                }
-              ]
-            },
-            {
-              "addWeapon" : "grenade_launcher_backpack"
-            }
-          ]
-        }
-      ]
-    }
-  },
-  "weapons" : {
-    "glaive" : {
-      "name" : "Glaive",
-      "attacks" : 1,
-      "short" : "Melee",
-      "ap" : 1,
-      "rules" : [
-        "rending"
-      ]
-    },
-    "soul_drain" : {
-      "name" : "Soul Drain",
-      "attacks" : 3,
-      "short" : 6,
-      "medium" : 12,
-      "ap" : 1,
-      "rules" : [
-        "pistol",
-        "homing"
-      ]
-    },
-    "hexed_rifle" : {
-      "name" : "Hexed Rifle",
-      "attacks" : 1,
-      "short" : 18,
-      "medium" : 36,
-      "ap" : 1,
-      "rules" : [
-        "sniper"
-      ]
-    },
-    "poison_dart_rifle" : {
-      "name" : "Poison Dart Rifle",
-      "attacks" : 1,
-      "short" : 12,
-      "medium" : 24,
-      "ap" : 1,
-      "rules" : [
-        "assault",
-        "poison"
-      ]
-    },
-    "poison_sprayer" : {
-      "name" : "Poison Sprayer",
-      "attacks" : 3,
-      "short" : 6,
-      "medium" : 12,
-      "ap" : 1,
-      "rules" : [
-        "poison"
-      ]
-    },
-    "twin_poison_sprayer" : {
-      "name" : "Twin Poison Sprayer",
-      "attacks" : 6,
-      "short" : 6,
-      "medium" : 12,
-      "ap" : 1,
-      "rules" : [
-        "poison"
-      ]
-    },
-    "poison_injector" : {
-      "name" : "Poison Injector",
-      "attacks" : 1,
-      "short" : "Melee",
-      "ap" : 4,
-      "rules" : [
-        "poison"
-      ]
-    },
-    "pain_gauntlet" : {
-      "name" : "Pain Gauntlet",
-      "attacks" : 1,
-      "short" : "Melee",
-      "ap" : 6,
-      "rules" : [
-        "cumbersome"
-      ]
-    },
-    "barb_stinger" : {
-      "name" : "Poison Stinger",
-      "attacks" : 1,
-      "short" : "Melee",
-      "ap" : 2
-    },
-    "chain_whips" : {
-      "name" : "Chain Whips",
-      "attacks" : 1,
-      "short" : "Melee",
-      "ap" : 2
-    },
-    "claw_blade" : {
-      "name" : "Claw Blade",
-      "attacks" : 1,
-      "short" : "Melee",
-      "ap" : 3
-    },
-    "soul_vortex" : {
-      "name" : "Soul Vortex",
-      "attacks" : 1,
-      "short" : 9,
-      "medium" : 18,
-      "ap" : 1,
-      "rules" : [
-        {
-          "id" : "blast",
-          "x" : 3
-        }
-      ]
-    },
-    "soul_stealer" : {
-      "name" : "Soul Stealer",
-      "attacks" : 3,
-      "short" : 8,
-      "ap" : 1
-    },
-    "leeching_tentacles" : {
-      "name" : "Leeching Tentacles",
-      "attacks" : 1,
-      "short" : "Melee",
-      "ap" : 2,
-      "rules" : [
-        "rending"
-      ]
-    },
-    "serpent_blade" : {
-      "name" : "Serpent Blade",
-      "attacks" : 1,
-      "short" : "Melee",
-      "ap" : 3
-    },
-    "dark_blade" : {
-      "name" : "Dark Blade",
-      "attacks" : 1,
-      "short" : "Melee",
-      "ap" : 3
-    },
-    "dual_dark_blades" : {
-      "name" : "Dual Dark Blades",
-      "profiles" : [
-        {
-          "name" : "Whirl",
-          "attacks" : 6,
-          "ap" : 2,
-          "short" : "Melee"
+            ]
         },
-        {
-          "name" : "Strike",
-          "attacks" : 4,
-          "ap" : 3,
-          "short" : "Melee"
-        }
-      ]
-    },
-    "sharp_claws" : {
-      "name" : "Sharp Claws",
-      "attacks" : 1,
-      "short" : "Melee"
-    },
-    "melting_blade" : {
-      "name" : "Melting Blade",
-      "attacks" : 1,
-      "short" : "Melee",
-      "ap" : 1
-    },
-    "cutting_blade" : {
-      "name" : "Cutting Blade",
-      "attacks" : 1,
-      "short" : "Melee",
-      "ap" : 1
-    },
-    "barb_gauntlets" : {
-      "name" : "Poison Gauntlets",
-      "attacks" : 1,
-      "short" : "Melee",
-      "ap" : 1,
-      "rules" : [
-        "poison"
-      ]
-    },
-    "razor_whips" : {
-      "name" : "Razor Whips",
-      "attacks" : 1,
-      "short" : "Melee",
-      "ap" : 1
-    },
-    "net_and_spear" : {
-      "name" : "Combat Spear and Net",
-      "attacks" : 1,
-      "short" : "Melee",
-      "ap" : 1,
-      "rules" : [
-        "net"
-      ]
-    },
-    "barb_whip" : {
-      "name" : "Poison Whip",
-      "attacks" : 1,
-      "short" : "Melee",
-      "ap" : 2,
-      "rules" : [
-        "poison"
-      ]
-    },
-    "barb_launcher" : {
-      "name" : "Poison Launcher",
-      "attacks" : 1,
-      "short" : 9,
-      "medium" : 18,
-      "rules" : [
-        "assault",
-        "poison"
-      ]
-    },
-    "barb_rifle" : {
-      "name" : "Poison Rifle",
-      "attacks" : 1,
-      "short" : 12,
-      "medium" : 24,
-      "rules" : [
-        "rapid_fire",
-        "poison"
-      ]
-    },
-    "twin_barb_rifle" : {
-      "name" : "Twin Poison Rifle",
-      "attacks" : 2,
-      "short" : 12,
-      "medium" : 24,
-      "rules" : [
-        "rapid_fire",
-        "poison"
-      ]
-    },
-    "barb_carbine" : {
-      "name" : "Poison Carbine",
-      "attacks" : 1,
-      "short" : 9,
-      "medium" : 18,
-      "rules" : [
-        "assault",
-        "poison"
-      ]
-    },
-    "barb_pistol" : {
-      "name" : "Poison Pistol",
-      "attacks" : 1,
-      "short" : 6,
-      "medium" : 12,
-      "rules" : [
-        "poison"
-      ]
-    },
-    "barb_cannon" : {
-      "name" : "Poison Cannon",
-      "attacks" : 3,
-      "short" : 18,
-      "medium" : 36,
-      "ap" : 1,
-      "rules" : [
-        "poison"
-      ]
-    },
-    "barb_blade" : {
-      "name" : "Poison Blade",
-      "attacks" : 1,
-      "short" : "Melee",
-      "rules" : [
-        "poison"
-      ]
-    },
-    "toxic_blade" : {
-      "name" : "Toxic Blade",
-      "attacks" : 1,
-      "short" : "Melee",
-      "rules" : [
-        "deadly_poison"
-      ]
-    },
-    "fusion_burst_cannon" : {
-      "name" : "Fusion Burst Cannon",
-      "ap" : 7,
-      "attacks" : 2,
-      "short" : 12,
-      "medium" : 24,
-      "rules" : [
-        {
-          "id" : "critical",
-          "x" : 1
-        }
-      ]
-    },
-    "heavy_wave_cannon" : {
-      "name" : "Heavy Wave Cannon",
-      "profiles" : [
-        {
-          "name" : "Beam",
-          "ap" : 7,
-          "attacks" : 1,
-          "short" : 18,
-          "medium" : 36,
-          "rules" : [
-            {
-              "id" : "critical",
-              "x" : 1
-            },
-            {
-              "id" : "blast",
-              "x" : 3
-            }
-          ]
+        "abomination_master": {
+            "category": "commander",
+            "name": "Abomination Master",
+            "description": "A Dark Elf Lord who experiments on Dark Elves to create abominations.",
+            "min": 1,
+            "max": 1,
+            "keywords": ["Infantry"],
+            "models": [
+                {
+                    "name": "Abomination Master",
+                    "courage": 7,
+                    "movement": 6,
+                    "shoot": 7,
+                    "fight": 7,
+                    "defense": 7,
+                    "reflexes": 6,
+                    "weapons": ["barb_pistol", {"id": "barb_blade", "count": 5}],
+                    "min": 1,
+                    "max": 1,
+                    "rules": [{"id": "wounds", "x": 3}, {"id": "abomination_tactics", "x": 1}],
+                    "options": [
+                        {"replaceRule": {"id": "abomination_tactics", "x": 1}, "withRule": {"id": "abomination_tactics", "x": 2}},
+                        {"replaceWeapon": "barb_pistol", "withWeapon": ["poison_sprayer", "hexed_rifle"]},
+                        {"replaceWeapon": {"id": "barb_blade", "count": 5}, "withWeapon": [{"id": "barb_whip", "count": 5}]},
+                        {"addWeapon": "poison_injector"},
+                        {"addRule": "dark_prism"}
+                    ]
+                }
+            ]
         },
-        {
-          "name" : "Blast",
-          "ap" : 3,
-          "attacks" : 2,
-          "short" : 12,
-          "medium" : 24,
-          "rules" : [
-            {
-              "id" : "blast",
-              "x" : 3
-            }
-          ]
+        "dark_mercenary_master": {
+            "category": "commander",
+            "name": "Dark Mercenary Master",
+            "description": "A Dark Elf mercenary blade master.",
+            "min": 1,
+            "max": 1,
+            "keywords": ["Infantry"],
+            "models": [
+                {
+                    "name": "Dark Mercenary Master",
+                    "courage": 7,
+                    "movement": 7,
+                    "shoot": 7,
+                    "fight": 7,
+                    "defense": 9,
+                    "reflexes": 7,
+                    "weapons": ["dual_dark_blades"],
+                    "min": 1,
+                    "max": 1,
+                    "rules": [{"id": "wounds", "x": 3}, {"id": "mercenary_tactics", "x": 1}],
+                    "options": [{"replaceRule": {"id": "mercenary_tactics", "x": 1}, "withRule": {"id": "mercenary_tactics", "x": 2}}]
+                }
+            ]
+        },
+        "succubus": {
+            "category": "commander",
+            "name": "Succubus",
+            "description": "A Dark Elf succubus adept at fighting in Melee.",
+            "min": 1,
+            "max": 1,
+            "keywords": ["Infantry"],
+            "models": [
+                {
+                    "name": "Succubus",
+                    "courage": 7,
+                    "movement": 7,
+                    "shoot": 7,
+                    "fight": 7,
+                    "defense": 5,
+                    "reflexes": 7,
+                    "weapons": ["barb_pistol", "plasma_grenade", {"id": "energy_glaive", "count": 3}],
+                    "min": 1,
+                    "max": 1,
+                    "rules": [{"id": "wounds", "x": 3}, "dodge", {"id": "succubus_tactics", "x": 1}],
+                    "options": [
+                        {"replaceRule": {"id": "succubus_tactics", "x": 1}, "withRule": {"id": "succubus_tactics", "x": 2}},
+                        {"replaceWeapon": "barb_pistol", "withWeapon": ["blast_pistol"]},
+                        {
+                            "replaceWeapon": {"id": "energy_glaive", "count": 3},
+                            "withWeapon": [{"id": "razor_whips", "count": 6}, {"id": "net_and_spear", "count": 4}, {"id": "barb_gauntlets", "count": 4}]
+                        },
+                        {"addRule": "dark_prism"}
+                    ]
+                }
+            ]
+        },
+        "warrior": {
+            "category": "core",
+            "name": "Warrior",
+            "description": "A Dark Elf warrior with poisonous weaponry.",
+            "models": [{"name": "Warrior", "courage": 5, "movement": 7, "shoot": 6, "fight": 5, "defense": 6, "reflexes": 6, "weapons": ["barb_rifle", "plasma_grenade", "ccw"], "min": 1, "max": 1}]
+        },
+        "abomination_warrior": {
+            "category": "core",
+            "name": "Abomination Warrior",
+            "description": "A Dark Elf warrior subject to experiments.",
+            "models": [
+                {
+                    "options": [{"addWeapon": ["poison_sprayer", "poison_dart_rifle"]}],
+                    "name": "Abomination Warrior",
+                    "courage": 5,
+                    "movement": 6,
+                    "shoot": 5,
+                    "fight": 6,
+                    "defense": 7,
+                    "reflexes": 5,
+                    "weapons": [{"id": "barb_blade", "count": 2}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "veteran_warrior": {
+            "category": "core",
+            "name": "Veteran Warrior",
+            "description": "A Dark Elf warrior with poisonous weaponry.",
+            "models": [
+                {
+                    "name": "Veteran Warrior",
+                    "courage": 6,
+                    "movement": 7,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 6,
+                    "reflexes": 6,
+                    "weapons": ["barb_rifle", "plasma_grenade", {"id": "ccw", "count": 2}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "dark_mercenary": {
+            "category": "specialist",
+            "name": "Dark Mercenary",
+            "description": "A Dark Elf warrior with poisonous weaponry.",
+            "rules": ["fear"],
+            "models": [{"name": "Dark Mercenary", "courage": 6, "movement": 7, "shoot": 6, "fight": 6, "defense": 7, "reflexes": 6, "weapons": [{"id": "dark_blade", "count": 2}], "min": 1, "max": 1}]
+        },
+        "harpie": {
+            "category": "strike",
+            "name": "Harpie",
+            "description": "A Dark Elf warrior with artifical wings.",
+            "rules": ["fly", "ambush"],
+            "models": [
+                {
+                    "name": "Harpie",
+                    "courage": 5,
+                    "movement": 8,
+                    "shoot": 6,
+                    "fight": 5,
+                    "defense": 6,
+                    "reflexes": 6,
+                    "weapons": ["barb_carbine", "plasma_grenade", {"id": "ccw", "count": 1}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "bird_swarm": {
+            "name": "Bird Swarm",
+            "description": "A swarm of small birds with sharp claws.",
+            "category": "strike",
+            "rules": ["fly", {"id": "swarm", "x": 3}],
+            "keywords": ["Swarm"],
+            "models": [{"name": "Bird Swarm", "courage": 5, "movement": 8, "shoot": 3, "fight": 5, "defense": 4, "reflexes": 4, "weapons": [{"id": "sharp_claws", "count": 3}], "min": 1, "max": 1}]
+        },
+        "witch": {
+            "category": "core",
+            "name": "Witch",
+            "description": "A Dark Elven witch with poisonous melee weaponry.",
+            "rules": ["dodge"],
+            "models": [
+                {
+                    "options": [
+                        {"addRule": ["combat_drugs"]},
+                        {
+                            "replaceWeapon": {"id": "barb_blade", "count": 2},
+                            "withWeapon": [{"id": "razor_whips", "count": 4}, {"id": "net_and_spear", "count": 3}, {"id": "barb_gauntlets", "count": 3}]
+                        }
+                    ],
+                    "name": "Witch",
+                    "courage": 5,
+                    "movement": 7,
+                    "shoot": 5,
+                    "fight": 6,
+                    "defense": 5,
+                    "reflexes": 6,
+                    "weapons": ["barb_pistol", "plasma_grenade", {"id": "barb_blade", "count": 2}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "veteran_witch": {
+            "category": "core",
+            "name": "Veteran Witch",
+            "description": "A Dark Elven witch with poisonous melee weaponry.",
+            "min": 1,
+            "max": 1,
+            "rules": ["dodge"],
+            "models": [
+                {
+                    "options": [
+                        {"addRule": ["combat_drugs"]},
+                        {
+                            "replaceWeapon": {"id": "barb_blade", "count": 2},
+                            "withWeapon": [{"id": "razor_whips", "count": 4}, {"id": "net_and_spear", "count": 3}, {"id": "barb_gauntlets", "count": 3}]
+                        }
+                    ],
+                    "name": "Veteran Witch",
+                    "courage": 6,
+                    "movement": 7,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 6,
+                    "reflexes": 6,
+                    "weapons": ["barb_pistol", "plasma_grenade", {"id": "barb_blade", "count": 2}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "courtesan": {
+            "category": "specialist",
+            "name": "Courtesan",
+            "description": "",
+            "keywords": ["Infantry"],
+            "models": [
+                {
+                    "name": "Courtesan",
+                    "courage": 6,
+                    "movement": 7,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 5,
+                    "reflexes": 6,
+                    "weapons": [{"id": "toxic_blade", "count": 2}],
+                    "rules": [{"id": "wounds", "x": 2}],
+                    "options": [],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "jetbike_witch": {
+            "category": "strike",
+            "name": "Jetbike Witch",
+            "description": "A Dark Elf witch with poisonous melee weaponry riding a jetbike.",
+            "min": 1,
+            "max": 1,
+            "keywords": ["Biker"],
+            "rules": ["hover"],
+            "models": [
+                {
+                    "options": [
+                        {"addRule": ["combat_drugs"]},
+                        {"replaceWeapon": ["barb_rifle", "ccw"], "withWeapon": [["barb_pistol", {"id": "barb_blade", "count": 2}]]},
+                        {"addWeapon": ["heat_cannon", "blast_rifle"]}
+                    ],
+                    "name": "Jetbike Witch",
+                    "courage": 5,
+                    "movement": 8,
+                    "shoot": 5,
+                    "fight": 6,
+                    "defense": 8,
+                    "reflexes": 6,
+                    "weapons": ["barb_rifle", "plasma_grenade", "ccw", {"id": "cutting_blade", "count": 2}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "hoverboard_riders": {
+            "category": "strike",
+            "name": "Hoverboard Rider",
+            "description": "A Dark Elf warrior mounted on a fast hover board.",
+            "keywords": ["Biker"],
+            "rules": ["hover"],
+            "models": [
+                {
+                    "options": [{"addRule": ["combat_drugs"]}],
+                    "name": "Hoverboarder",
+                    "courage": 5,
+                    "movement": 8,
+                    "shoot": 5,
+                    "fight": 6,
+                    "defense": 6,
+                    "reflexes": 6,
+                    "weapons": ["barb_launcher", {"id": "glaive", "count": 2}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "warrior_leader": {
+            "category": "command",
+            "name": "Warrior Leader",
+            "description": "A Dark Elf leader with poisonous weaponry.",
+            "models": [
+                {
+                    "name": "Warrior Leader",
+                    "courage": 5,
+                    "movement": 7,
+                    "shoot": 6,
+                    "fight": 5,
+                    "defense": 6,
+                    "reflexes": 6,
+                    "weapons": ["barb_rifle", "plasma_grenade", "ccw"],
+                    "min": 1,
+                    "max": 1,
+                    "options": [
+                        {"replaceWeapon": ["barb_rifle", "ccw"], "withWeapon": [["barb_pistol", {"id": "ccw", "count": 2}]]},
+                        {"replaceWeapon": "barb_pistol", "withWeapon": ["blast_pistol"]},
+                        {"replaceWeapon": {"id": "ccw", "count": 2}, "withWeapon": [{"id": "energy_sword", "count": 2}, {"id": "barb_whip", "count": 2}]},
+                        {"addWeapon": "grenade_launcher_backpack"}
+                    ],
+                    "rules": ["leader"]
+                }
+            ]
+        },
+        "abomination_warrior_leader": {
+            "category": "command",
+            "name": "Abomination Warrior Leader",
+            "description": "A Dark Elf leader subject to experiments.",
+            "models": [
+                {
+                    "name": "Abomination Warrior Leader",
+                    "courage": 5,
+                    "movement": 6,
+                    "shoot": 5,
+                    "fight": 6,
+                    "defense": 7,
+                    "reflexes": 5,
+                    "weapons": [{"id": "barb_blade", "count": 2}],
+                    "min": 1,
+                    "max": 1,
+                    "rules": ["leader"]
+                }
+            ]
+        },
+        "veteran_warrior_leader": {
+            "category": "command",
+            "name": "Veteran Warrior Leader",
+            "description": "A Dark Elf leader with poisonous weaponry.",
+            "models": [
+                {
+                    "name": "Veteran Warrior Leader",
+                    "courage": 6,
+                    "movement": 7,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 6,
+                    "reflexes": 6,
+                    "weapons": ["barb_rifle", "plasma_grenade", {"id": "ccw", "count": 2}],
+                    "min": 1,
+                    "max": 1,
+                    "options": [
+                        {"replaceWeapon": ["barb_rifle", {"id": "ccw", "count": 2}], "withWeapon": [["barb_pistol", {"id": "ccw", "count": 3}]]},
+                        {"replaceWeapon": "barb_pistol", "withWeapon": ["blast_pistol"]},
+                        {"replaceWeapon": {"id": "ccw", "count": 3}, "withWeapon": [{"id": "energy_sword", "count": 3}, {"id": "barb_whip", "count": 3}]},
+                        {"addWeapon": "grenade_launcher_backpack"}
+                    ],
+                    "rules": ["leader"]
+                }
+            ]
+        },
+        "dark_mercenary_leader": {
+            "category": "specialist",
+            "name": "Dark Mercenary Leader",
+            "description": "A Dark Elf leader with poisonous weaponry.",
+            "rules": ["fear", "leader"],
+            "models": [
+                {"name": "Dark Mercenary Leader", "courage": 6, "movement": 7, "shoot": 6, "fight": 6, "defense": 7, "reflexes": 6, "weapons": [{"id": "dark_blade", "count": 2}], "min": 1, "max": 1}
+            ]
+        },
+        "harpie_leader": {
+            "category": "command",
+            "name": "Harpie Leader",
+            "description": "A Dark Elf leader with artifical wings.",
+            "min": 1,
+            "max": 1,
+            "rules": ["fly", "ambush", "leader"],
+            "models": [
+                {
+                    "name": "Harpie Leader",
+                    "courage": 5,
+                    "movement": 8,
+                    "shoot": 6,
+                    "fight": 5,
+                    "defense": 6,
+                    "reflexes": 6,
+                    "weapons": ["barb_carbine", "plasma_grenade", {"id": "ccw", "count": 1}],
+                    "min": 1,
+                    "max": 1,
+                    "options": [
+                        {"replaceWeapon": ["barb_rifle", "ccw"], "withWeapon": [["barb_pistol", {"id": "ccw", "count": 2}]]},
+                        {"replaceWeapon": "barb_pistol", "withWeapon": ["blast_pistol"]},
+                        {"replaceWeapon": {"id": "ccw", "count": 2}, "withWeapon": [{"id": "energy_sword", "count": 2}, {"id": "barb_whip", "count": 2}, {"id": "energy_lance", "count": 2}]}
+                    ]
+                }
+            ]
+        },
+        "witch_leader": {
+            "category": "command",
+            "name": "Witch Leader",
+            "description": "A Dark Elf leader with poisonous melee weaponry.",
+            "rules": ["dodge", "leader"],
+            "models": [
+                {
+                    "name": "Witch Leader",
+                    "courage": 5,
+                    "movement": 7,
+                    "shoot": 5,
+                    "fight": 6,
+                    "defense": 5,
+                    "reflexes": 6,
+                    "weapons": ["barb_pistol", "plasma_grenade", {"id": "barb_blade", "count": 2}],
+                    "min": 1,
+                    "max": 1,
+                    "options": [
+                        {"addRule": ["combat_drugs"], "modelLimit": "all", "limit": 1},
+                        {"replaceWeapon": "barb_pistol", "withWeapon": ["blast_pistol"]},
+                        {"replaceWeapon": {"id": "barb_blade", "count": 2}, "withWeapon": [{"id": "energy_sword", "count": 2}, {"id": "barb_whip", "count": 2}]},
+                        {"addWeapon": "grenade_launcher_backpack"}
+                    ]
+                }
+            ]
+        },
+        "jetbike_witch_leader": {
+            "category": "command",
+            "name": "Jetbike Witch Leader",
+            "description": "A Dark Elf leader with poisonous melee weaponry riding a jetbike.",
+            "min": 1,
+            "max": 1,
+            "keywords": ["Biker"],
+            "rules": ["hover", "leader"],
+            "models": [
+                {
+                    "name": "Jetbike Witch Leader",
+                    "courage": 5,
+                    "movement": 8,
+                    "shoot": 5,
+                    "fight": 6,
+                    "defense": 8,
+                    "reflexes": 6,
+                    "weapons": ["barb_rifle", "plasma_grenade", "ccw", {"id": "cutting_blade", "count": 2}],
+                    "min": 1,
+                    "max": 1,
+                    "options": [
+                        {"addRule": ["combat_drugs"]},
+                        {"replaceWeapon": ["barb_rifle", "ccw"], "withWeapon": [["barb_pistol", {"id": "barb_blade", "count": 2}]]},
+                        {"replaceWeapon": "barb_pistol", "withWeapon": ["blast_pistol"]},
+                        {"replaceWeapon": {"id": "barb_blade", "count": 2}, "withWeapon": [{"id": "energy_sword", "count": 2}, {"id": "barb_whip", "count": 2}]},
+                        {"addWeapon": ["heat_cannon", "blast_rifle"]}
+                    ]
+                }
+            ]
+        },
+        "hoverboard_rider_leader": {
+            "category": "command",
+            "name": "Hoverboard Rider Leader",
+            "description": "A Dark Elf leader mounted on a fast hover board.",
+            "keywords": ["Biker"],
+            "rules": ["hover", "leader"],
+            "models": [
+                {
+                    "name": "Hoverboard Leader",
+                    "courage": 5,
+                    "movement": 8,
+                    "shoot": 5,
+                    "fight": 6,
+                    "defense": 6,
+                    "reflexes": 6,
+                    "weapons": ["barb_launcher", {"id": "glaive", "count": 2}],
+                    "min": 1,
+                    "max": 1,
+                    "options": [
+                        {"addRule": ["combat_drugs"]},
+                        {
+                            "replaceWeapon": [{"id": "glaive", "count": 2}],
+                            "withWeapon": [["barb_pistol", {"id": "barb_blade", "count": 3}], ["barb_pistol", {"id": "energy_sword", "count": 3}], ["barb_pistol", {"id": "barb_whip", "count": 3}]]
+                        },
+                        {"addWeapon": "grenade_launcher_backpack"}
+                    ]
+                }
+            ]
+        },
+        "psychic_being": {
+            "category": "specialist",
+            "name": "Psychic Being",
+            "description": "",
+            "models": [
+                {
+                    "name": "Psychic Being",
+                    "movement": 7,
+                    "courage": 6,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 5,
+                    "reflexes": 6,
+                    "rules": [{"id": "wounds", "x": 2}],
+                    "weapons": ["soul_drain"],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "ghoul": {
+            "category": "specialist",
+            "name": "Ghoul",
+            "description": "",
+            "models": [
+                {
+                    "name": "Ghoul",
+                    "movement": 7,
+                    "courage": 4,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "rules": [{"id": "wounds", "x": 2}, "furious", {"id": "resilient", "x": 2}],
+                    "weapons": [{"id": "piercing_claws", "count": 3}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "serpent": {
+            "category": "specialist",
+            "name": "Serpent",
+            "description": "",
+            "models": [
+                {
+                    "name": "Serpent",
+                    "movement": 7,
+                    "courage": 6,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "rules": [{"id": "wounds", "x": 2}],
+                    "weapons": [{"id": "serpent_blade", "count": 3}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "warrior_heavy": {
+            "category": "heavy",
+            "name": "Warrior Heavy",
+            "description": "A Dark Elf warriors with heavy weaponry.",
+            "models": [
+                {
+                    "options": [{"replaceWeapon": "barb_rifle", "withWeapon": ["barb_cannon", "fusion_cannon", "blast_rifle", "shred_rifle"]}],
+                    "name": "Warrior Heavy",
+                    "courage": 5,
+                    "movement": 7,
+                    "shoot": 6,
+                    "fight": 5,
+                    "defense": 6,
+                    "reflexes": 6,
+                    "weapons": ["barb_rifle", "plasma_grenade", "ccw"],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "veteran_warrior_heavy": {
+            "category": "heavy",
+            "name": "Veteran Warrior Heavy",
+            "description": "A Dark Elf warrior with heavy weaponry.",
+            "models": [
+                {
+                    "options": [{"replaceWeapon": "barb_rifle", "withWeapon": ["barb_cannon", "fusion_cannon", "blast_rifle", "shred_rifle"]}],
+                    "name": "Veteran Warrior",
+                    "courage": 6,
+                    "movement": 7,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 6,
+                    "reflexes": 6,
+                    "weapons": ["barb_rifle", "plasma_grenade", {"id": "ccw", "count": 2}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "harpie_heavy": {
+            "category": "heavy",
+            "name": "Harpie Heavy",
+            "description": "A Dark Elf warrior with artifical wings.",
+            "keywords": ["Infantry"],
+            "rules": ["fly", "ambush"],
+            "models": [
+                {
+                    "options": [{"replaceWeapon": "barb_rifle", "withWeapon": ["barb_cannon", "fusion_cannon", "blast_rifle", "shred_rifle", "heat_cannon", "emp_rifle"]}],
+                    "name": "Harpie",
+                    "courage": 5,
+                    "movement": 8,
+                    "shoot": 6,
+                    "fight": 5,
+                    "defense": 6,
+                    "reflexes": 6,
+                    "weapons": ["barb_carbine", "plasma_grenade", {"id": "ccw", "count": 1}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "veteran_witch_leader": {
+            "category": "command",
+            "name": "Veteran Witch Leader",
+            "description": "A Dark Elven leader with poisonous melee weaponry.",
+            "rules": ["dodge", "leader"],
+            "models": [
+                {
+                    "name": "Veteran Witch Leader",
+                    "courage": 6,
+                    "movement": 7,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 6,
+                    "reflexes": 6,
+                    "weapons": ["barb_pistol", "plasma_grenade", {"id": "barb_blade", "count": 2}],
+                    "min": 1,
+                    "max": 1,
+                    "options": [
+                        {"addRule": ["combat_drugs"]},
+                        {"replaceWeapon": "barb_pistol", "withWeapon": ["blast_pistol"]},
+                        {"replaceWeapon": {"id": "barb_blade", "count": 2}, "withWeapon": [{"id": "energy_sword", "count": 2}, {"id": "barb_whip", "count": 2}]},
+                        {"addWeapon": "grenade_launcher_backpack"}
+                    ]
+                }
+            ]
         }
-      ]
     },
-    "heat_cannon" : {
-      "name" : "Heat Cannon",
-      "ap" : 5,
-      "attacks" : 1,
-      "short" : 9,
-      "medium" : 18,
-      "rules" : [
-        "assault",
-        {
-          "id" : "critical",
-          "x" : 1
+    "weapons": {
+        "glaive": {"name": "Glaive", "attacks": 1, "short": "Melee", "ap": 1, "rules": ["rending"]},
+        "soul_drain": {"name": "Soul Drain", "attacks": 3, "short": 6, "medium": 12, "ap": 1, "rules": ["pistol", "homing"]},
+        "hexed_rifle": {"name": "Hexed Rifle", "attacks": 1, "short": 18, "medium": 36, "ap": 1, "rules": ["sniper"]},
+        "poison_dart_rifle": {"name": "Poison Dart Rifle", "attacks": 1, "short": 12, "medium": 24, "ap": 1, "rules": ["assault", "poison"]},
+        "poison_sprayer": {"name": "Poison Sprayer", "attacks": 3, "short": 6, "medium": 12, "ap": 1, "rules": ["poison"]},
+        "twin_poison_sprayer": {"name": "Twin Poison Sprayer", "attacks": 6, "short": 6, "medium": 12, "ap": 1, "rules": ["poison"]},
+        "poison_injector": {"name": "Poison Injector", "attacks": 1, "short": "Melee", "ap": 4, "rules": ["poison"]},
+        "pain_gauntlet": {"name": "Pain Gauntlet", "attacks": 1, "short": "Melee", "ap": 6, "rules": ["cumbersome"]},
+        "barb_stinger": {"name": "Poison Stinger", "attacks": 1, "short": "Melee", "ap": 2},
+        "chain_whips": {"name": "Chain Whips", "attacks": 1, "short": "Melee", "ap": 2},
+        "claw_blade": {"name": "Claw Blade", "attacks": 1, "short": "Melee", "ap": 3},
+        "soul_vortex": {"name": "Soul Vortex", "attacks": 1, "short": 9, "medium": 18, "ap": 1, "rules": [{"id": "blast", "x": 3}]},
+        "soul_stealer": {"name": "Soul Stealer", "attacks": 3, "short": 8, "ap": 1},
+        "leeching_tentacles": {"name": "Leeching Tentacles", "attacks": 1, "short": "Melee", "ap": 2, "rules": ["rending"]},
+        "serpent_blade": {"name": "Serpent Blade", "attacks": 1, "short": "Melee", "ap": 3},
+        "dark_blade": {"name": "Dark Blade", "attacks": 1, "short": "Melee", "ap": 3},
+        "dual_dark_blades": {"name": "Dual Dark Blades", "profiles": [{"name": "Whirl", "attacks": 6, "ap": 2, "short": "Melee"}, {"name": "Strike", "attacks": 4, "ap": 3, "short": "Melee"}]},
+        "sharp_claws": {"name": "Sharp Claws", "attacks": 1, "short": "Melee"},
+        "melting_blade": {"name": "Melting Blade", "attacks": 1, "short": "Melee", "ap": 1},
+        "cutting_blade": {"name": "Cutting Blade", "attacks": 1, "short": "Melee", "ap": 1},
+        "barb_gauntlets": {"name": "Poison Gauntlets", "attacks": 1, "short": "Melee", "ap": 1, "rules": ["poison"]},
+        "razor_whips": {"name": "Razor Whips", "attacks": 1, "short": "Melee", "ap": 1},
+        "net_and_spear": {"name": "Combat Spear and Net", "attacks": 1, "short": "Melee", "ap": 1, "rules": ["net"]},
+        "barb_whip": {"name": "Poison Whip", "attacks": 1, "short": "Melee", "ap": 2, "rules": ["poison"]},
+        "barb_launcher": {"name": "Poison Launcher", "attacks": 1, "short": 9, "medium": 18, "rules": ["assault", "poison"]},
+        "barb_rifle": {"name": "Poison Rifle", "attacks": 1, "short": 12, "medium": 24, "rules": ["rapid_fire", "poison"]},
+        "twin_barb_rifle": {"name": "Twin Poison Rifle", "attacks": 2, "short": 12, "medium": 24, "rules": ["rapid_fire", "poison"]},
+        "barb_carbine": {"name": "Poison Carbine", "attacks": 1, "short": 9, "medium": 18, "rules": ["assault", "poison"]},
+        "barb_pistol": {"name": "Poison Pistol", "attacks": 1, "short": 6, "medium": 12, "rules": ["poison"]},
+        "barb_cannon": {"name": "Poison Cannon", "attacks": 3, "short": 18, "medium": 36, "ap": 1, "rules": ["poison"]},
+        "barb_blade": {"name": "Poison Blade", "attacks": 1, "short": "Melee", "rules": ["poison"]},
+        "toxic_blade": {"name": "Toxic Blade", "attacks": 1, "short": "Melee", "rules": ["deadly_poison"]},
+        "fusion_burst_cannon": {"name": "Fusion Burst Cannon", "ap": 7, "attacks": 2, "short": 12, "medium": 24, "rules": [{"id": "critical", "x": 1}]},
+        "heavy_wave_cannon": {
+            "name": "Heavy Wave Cannon",
+            "profiles": [
+                {"name": "Beam", "ap": 7, "attacks": 1, "short": 18, "medium": 36, "rules": [{"id": "critical", "x": 1}, {"id": "blast", "x": 3}]},
+                {"name": "Blast", "ap": 3, "attacks": 2, "short": 12, "medium": 24, "rules": [{"id": "blast", "x": 3}]}
+            ]
+        },
+        "heat_cannon": {"name": "Heat Cannon", "ap": 5, "attacks": 1, "short": 9, "medium": 18, "rules": ["assault", {"id": "critical", "x": 1}]},
+        "destroyer_cannon": {"name": "Destroyer Cannon", "ap": 3, "attacks": 3, "short": 18, "medium": 36},
+        "blast_rifle": {"name": "Blast Rifle", "ap": 6, "attacks": 1, "short": 9, "medium": 18, "rules": ["assault"]},
+        "blast_pistol": {"name": "Blast Pistol", "ap": 6, "attacks": 1, "short": 6, "medium": 12, "rules": ["pistol"]},
+        "shred_rifle": {"name": "Shred Rifle", "ap": 3, "attacks": 1, "short": 6, "medium": 12, "rules": ["assault", {"id": "blast", "x": 3}]},
+        "void_missiles": {"name": "Void Missiles", "attacks": 1, "short": 24, "medium": 48, "ap": 4, "rules": [{"id": "blast", "x": 3}]},
+        "void_bombs": {"name": "Void Bombs", "attacks": 2, "short": 3, "ap": 4, "rules": ["bomb", {"id": "blast", "x": 3}]}
+    },
+    "rules": {
+        "mercenary_tactics": {
+            "name": "Mercenary Tactics",
+            "inputs": ["x"],
+            "description": "When this unit is activated, choose up to X friendly _Infantry_ units within 6\" to receive +1 AP with Melee weapons until the end of the round.",
+            "points": ["rule.x", {"multiply": 5}]
+        },
+        "abomination_tactics": {
+            "name": "Abomination Tactics",
+            "inputs": ["x"],
+            "description": "When this unit is activated, choose up to X friendly _Infantry_ units within 6\" to receive +1 Save until the end of the round.",
+            "points": ["rule.x", {"multiply": 5}]
+        },
+        "leech_tactics": {
+            "name": "Leech Tactics",
+            "description": "When this unit is activated, choose one friendly _Infantry_ unit within 6\" to re-roll failed Strength tests of 9+ until the end of the round.",
+            "points": 10
+        },
+        "lord_tactics": {
+            "name": "Lord Tactics",
+            "inputs": ["x"],
+            "description": "When this unit is activated, choose up to X friendly _Infantry_ units within 6\" to receive one of the following bonuses until the end of the round: \n * Re-roll failed Accuracy tests of 9+ \n * +3\" Movement",
+            "points": ["rule.x", {"multiply": 5}]
+        },
+        "succubus_tactics": {
+            "name": "Succubus Tactics",
+            "inputs": ["x"],
+            "description": "When this unit is activated, choose up to X friendly _Infantry_ units within 6\" to receive one of the following bonuses until the end of the round: \n * Re-roll failed Strength tests of 9+ \n * +3\" Movement",
+            "points": ["rule.x", {"multiply": 5}]
+        },
+        "flayed_cape": {"name": "Flayed Flesh Cape", "description": "Enemy units within 6\" of this model suffer -1 Courage.", "points": 5},
+        "weapon_racks": {"name": "Weapon Racks", "description": "Models shooting while embarked in this transport may re-roll failed Accuracy tests of 9+.", "points": 10},
+        "trophy_racks": {"name": "Trophy Racks", "description": "Enemy units within 6\" of this model suffer -1 Courage.", "points": 5},
+        "reinforced_ram": {"name": "Reinforced Ram", "hidden": true, "description_short": "Impact(+3)", "description": "This model gains Impact(+3).", "points": 6},
+        "dodge": {"name": "Dodge", "description": "This model gets +2 Save when hit by a melee attack.", "points": 2},
+        "combat_drugs": {
+            "name": "Combat Drugs",
+            "description": "At the beginning of the game, choose one of the following bonuses for the unit to receive until the end of the game: \n * +1 Strength \n * +1\" Movement \n * +1 Courage \n * +1 Save",
+            "points": 2
         }
-      ]
     },
-    "destroyer_cannon" : {
-      "name" : "Destroyer Cannon",
-      "ap" : 3,
-      "attacks" : 3,
-      "short" : 18,
-      "medium" : 36
-    },
-    "blast_rifle" : {
-      "name" : "Blast Rifle",
-      "ap" : 6,
-      "attacks" : 1,
-      "short" : 9,
-      "medium" : 18,
-      "rules" : [
-        "assault"
-      ]
-    },
-    "blast_pistol" : {
-      "name" : "Blast Pistol",
-      "ap" : 6,
-      "attacks" : 1,
-      "short" : 6,
-      "medium" : 12,
-      "rules" : [
-        "pistol"
-      ]
-    },
-    "shred_rifle" : {
-      "name" : "Shred Rifle",
-      "ap" : 3,
-      "attacks" : 1,
-      "short" : 6,
-      "medium" : 12,
-      "rules" : [
-        "assault",
-        {
-          "id" : "blast",
-          "x" : 3
+    "strategies": {
+        "pain_embrace": {
+            "name": "Pain's Embrace",
+            "phase": "activation",
+            "flavor": "Dark Elves revel in pain as it only makes them stronger.",
+            "description": "Use this strategy when one of your units is targeted by an attack. Roll a die for each hit, on a 3 or less that hit is prevented.",
+            "cost": 2
+        },
+        "eager_to_fight": {
+            "name": "Eager to Fight",
+            "phase": "activation",
+            "flavor": "Dark Elves long for the next raid to fight again.",
+            "description": "Use when an Infantry unit declares a Charge action. That unit gets +3\" of Movement for that action.",
+            "cost": 1
+        },
+        "defiance": {
+            "name": "Fearless",
+            "phase": "activation",
+            "description": "Use before activating a unit. That unit may immediately remove up to 2 Shock.",
+            "flavor": "Defiant in the face of death, Dark Elves fight on.",
+            "cost": 1
         }
-      ]
-    },
-    "void_missiles" : {
-      "name" : "Void Missiles",
-      "attacks" : 1,
-      "short" : 24,
-      "medium" : 48,
-      "ap" : 4,
-      "rules" : [
-        {
-          "id" : "blast",
-          "x" : 3
-        }
-      ]
-    },
-    "void_bombs" : {
-      "name" : "Void Bombs",
-      "attacks" : 2,
-      "short" : 3,
-      "ap" : 4,
-      "rules" : [
-        "bomb",
-        {
-          "id" : "blast",
-          "x" : 3
-        }
-      ]
     }
-  },
-  "rules" : {
-    "mercenary_tactics" : {
-      "name" : "Mercenary Tactics",
-      "inputs" : [
-        "x"
-      ],
-      "description" : "When this unit is activated, choose up to X friendly Infantry units within 6\" to receive +1 AP with Melee weapons until the end of the round.",
-      "points" : [
-        "rule.x",
-        {
-          "multiply" : 10
-        }
-      ]
-    },
-    "abomination_tactics" : {
-      "name" : "Abomination Tactics",
-      "inputs" : [
-        "x"
-      ],
-      "description" : "When this unit is activated, choose up to X friendly Infantry units within 6\" to receive +1 Save until the end of the round.",
-      "points" : [
-        "rule.x",
-        {
-          "multiply" : 10
-        }
-      ]
-    },
-    "leech_tactics" : {
-      "name" : "Leech Tactics",
-      "description" : "When this unit is activated, choose one friendly Infantry unit within 6\" to re-roll failed Strength tests of 9+ until the end of the round.",
-      "points" : 10
-    },
-    "lord_tactics" : {
-      "name" : "Lord Tactics",
-      "inputs" : [
-        "x"
-      ],
-      "description" : "When this unit is activated, choose up to X friendly Infantry units within 6\" to receive one of the following bonuses until the end of the round: \n * Re-roll failed Accuracy tests of 9+ \n * +3\" Movement",
-      "points" : [
-        "rule.x",
-        {
-          "multiply" : 10
-        }
-      ]
-    },
-    "succubus_tactics" : {
-      "name" : "Succubus Tactics",
-      "inputs" : [
-        "x"
-      ],
-      "description" : "When this unit is activated, choose up to X friendly Infantry units within 6\" to receive one of the following bonuses until the end of the round: \n * Re-roll failed Strength tests of 9+ \n * +3\" Movement",
-      "points" : [
-        "rule.x",
-        {
-          "multiply" : 10
-        }
-      ]
-    },
-    "flayed_cape" : {
-      "name" : "Flayed Flesh Cape",
-      "description" : "Enemy units within 6\" of this model suffer -1 Courage.",
-      "points" : 5
-    },
-    "weapon_racks" : {
-      "name" : "Weapon Racks",
-      "description" : "Models shooting while embarked in this transport may re-roll failed Accuracy tests of 9+.",
-      "points" : 10
-    },
-    "trophy_racks" : {
-      "name" : "Trophy Racks",
-      "description" : "Enemy units within 6\" of this model suffer -1 Courage.",
-      "points" : 5
-    },
-    "reinforced_ram" : {
-      "name" : "Reinforced Ram",
-      "hidden" : true,
-      "description_short" : "Impact(+3)",
-      "description" : "This model gains Impact(+3).",
-      "points" : 6
-    },
-    "dodge" : {
-      "name" : "Dodge",
-      "description" : "This model gets +2 Save when hit by a melee attack.",
-      "points" : 2
-    },
-    "combat_drugs" : {
-      "name" : "Combat Drugs",
-      "description" : "At the beginning of the game, choose one of the following bonuses for the unit to receive until the end of the game: \n * +1 Strength \n * +1\" Movement \n * +1 Courage \n * +1 Save",
-      "points" : 2
-    }
-  },
-  "strategies" : {
-    "pain_embrace" : {
-      "name" : "Pain's Embrace",
-      "phase" : "activation",
-      "flavor" : "Dark Elves revel in pain as it only makes them stronger.",
-      "description" : "Use this strategy when one of your units is targeted by an attack. Roll a die for each hit, on a 3 or less that hit is prevented.",
-      "cost" : 2
-    },
-    "eager_to_fight" : {
-      "name" : "Eager to Fight",
-      "phase" : "activation",
-      "flavor" : "Dark Elves long for the next raid to fight again.",
-      "description" : "Use when an Infantry unit declares a Charge action. That unit gets +3\" of Movement for that action.",
-      "cost" : 1
-    },
-    "defiance" : {
-      "name" : "Fearless",
-      "phase" : "activation",
-      "description" : "Use before activating a unit. That unit may immediately remove up to 2 Shock.",
-      "flavor" : "Defiant in the face of death, Dark Elves fight on.",
-      "cost" : 1
-    }
-  }
 }
