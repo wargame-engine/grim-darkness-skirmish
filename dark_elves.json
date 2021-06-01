@@ -4,7 +4,7 @@
     "author": "guitarninja#5707",
     "units": {
         "dark_elf_lord": {
-            "category": "commander",
+            "category": "command",
             "name": "Lord",
             "description": "A Dark Elf Lord good at supporting troops and fighting.",
             "min": 1,
@@ -33,7 +33,7 @@
             ]
         },
         "abomination_master": {
-            "category": "commander",
+            "category": "command",
             "name": "Abomination Master",
             "description": "A Dark Elf Lord who experiments on Dark Elves to create abominations.",
             "min": 1,
@@ -63,7 +63,7 @@
             ]
         },
         "dark_mercenary_master": {
-            "category": "commander",
+            "category": "command",
             "name": "Dark Mercenary Master",
             "description": "A Dark Elf mercenary blade master.",
             "min": 1,
@@ -87,7 +87,7 @@
             ]
         },
         "succubus": {
-            "category": "commander",
+            "category": "command",
             "name": "Succubus",
             "description": "A Dark Elf succubus adept at fighting in Melee.",
             "min": 1,
@@ -399,7 +399,7 @@
             ]
         },
         "dark_mercenary_leader": {
-            "category": "specialist",
+            "category": "command",
             "name": "Dark Mercenary Leader",
             "description": "A Dark Elf leader with poisonous weaponry.",
             "rules": ["fear", "leader"],
