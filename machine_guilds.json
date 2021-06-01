@@ -564,10 +564,10 @@
     },
     "strategies": [
         {
-            "name": "Mechanically Adept",
+            "name": "Flesh is Weak",
             "phase": "activation",
-            "description": "Use before making a repair roll. That unit gets +2 to Repair rolls.",
-            "flavor": "The Machine Guilds are masters of building and maintaining machines, rarely failing to find the root of the problem.",
+            "description": "Use when activating an _Infantry_ unit. That unit may ignore any critical injuries it has sustained for this activation.",
+            "flavor": "The Machine Guilds have a tendency to push through difficult situations with technological supremacy.",
             "cost": 1
         },
         {

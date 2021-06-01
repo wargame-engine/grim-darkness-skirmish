@@ -1004,13 +1004,13 @@
     },
     "strategies": {
         "here_we_go": {"name": "Here We Go!", "phase": "activation", "description": "Use when a unit declares a Charge action. That unit gets +3\" of Movement for that action.", "cost": 1},
-        "ramshackle": {
+        "just_a_scratch": {
             "subfactions": ["none", "goblin_army"],
             "phase": "activation",
-            "name": "Ramshackle",
-            "flavor": "Many parts of Orc vehicles end up being less important than they seem, falling off without causing damage.",
-            "description": "Use when a _Vehicle_ unit is targeted by an attack. For that attack, roll a D10 each time that unit is hit. On a 3 or less the hit is ignored.",
-            "cost": 2
+            "name": "Just a Scratch",
+            "flavor": "Orcs are tougher than most other fighters and fight to the bitter end.",
+            "description": "Use when activating an _Infantry_ unit. That unit may ignore any critical injuries it has sustained for this activation.",
+            "cost": 1
         },
         "shoot_them": {
             "subfactions": ["goblin_army"],
