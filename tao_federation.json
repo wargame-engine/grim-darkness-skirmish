@@ -784,7 +784,7 @@
         "accelerator": {"name": "Accelerator", "description": "Friendly models within 3\" add +3\" to the short and long ranges of all weapons.", "points": 5},
         "threat_detector_suit": {"name": "Threat Detector", "description_short": "+1 Initiative", "description": "This model gets +1 Initiative.", "points": 5},
         "hover_drone": {"name": "Hover Drone", "hidden": "true", "description": "This model gets +2\" Move and Fly.", "description_short": "+4\" Move, Fly", "points": 5},
-        "protection": {"name": "Protection", "description": "Friendly units within 3\" get +1 Save.", "points": 5}
+        "protection": {"name": "Protection", "description": "Friendly _Infantry_ units within 3\" get +1 Save.", "points": 5}
     },
     "strategies": {
         "covering_fire": {
