@@ -89,26 +89,7 @@
             "keywords": ["infantry"],
             "category": "core",
             "subfactions": ["none", "change"],
-            "options": [
-                {"modelLimit": 1, "addRule": ["banner"]},
-                {"modelLimit": 1, "addRule": ["musician"]},
-                {"modelLimit": 1, "addRule": ["champion"]},
-                {"modelLimit": 1, "addRule": [{"id": "power", "x": 1}]}
-            ],
-            "models": [
-                {
-                    "name": "Flame Warrior",
-                    "movement": 6,
-                    "courage": 5,
-                    "shoot": 4,
-                    "fight": 4,
-                    "defense": 5,
-                    "reflexes": 4,
-                    "weapons": [{"id": "ccw", "count": 2}],
-                    "min": 1,
-                    "max": 1
-                }
-            ]
+            "models": [{"name": "Flame Warrior", "movement": 6, "courage": 5, "shoot": 4, "fight": 4, "defense": 5, "reflexes": 4, "weapons": [{"id": "ccw", "count": 2}], "min": 1, "max": 1}]
         },
         "blue_warrior_leader": {
             "name": "Blue Warrior Leader",
@@ -116,14 +97,21 @@
             "keywords": ["infantry"],
             "category": "command",
             "subfactions": ["none", "change"],
-            "options": [
-                {"modelLimit": 1, "addRule": ["banner"]},
-                {"modelLimit": 1, "addRule": ["musician"]},
-                {"modelLimit": 1, "addRule": ["champion"]},
-                {"modelLimit": 1, "addRule": [{"id": "power", "x": 1}]}
-            ],
             "models": [
-                {"name": "Blue Warrior Leader", "movement": 6, "courage": 5, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 5, "rules": ["leader"], "weapons": ["twisting_flames", "ccw"], "min": 1, "max": 1}
+                {
+                    "name": "Blue Warrior Leader",
+                    "movement": 6,
+                    "courage": 5,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "options": [{"addRule": ["champion"]}],
+                    "rules": ["leader"],
+                    "weapons": ["twisting_flames", "ccw"],
+                    "min": 1,
+                    "max": 1
+                }
             ]
         },
         "blue_warrior": {
@@ -132,14 +120,20 @@
             "keywords": ["infantry"],
             "category": "core",
             "subfactions": ["none", "change"],
-            "options": [
-                {"modelLimit": 1, "addRule": ["banner"]},
-                {"modelLimit": 1, "addRule": ["musician"]},
-                {"modelLimit": 1, "addRule": ["champion"]},
-                {"modelLimit": 1, "addRule": [{"id": "power", "x": 1}]}
-            ],
             "models": [
-                {"name": "Blue Warrior", "movement": 6, "courage": 5, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 5, "weapons": ["twisting_flames", "ccw"], "min": 1, "max": 1}
+                {
+                    "name": "Blue Warrior",
+                    "movement": 6,
+                    "courage": 5,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "options": [{"limit": 1, "addRule": ["banner", "musician"]}],
+                    "weapons": ["twisting_flames", "ccw"],
+                    "min": 1,
+                    "max": 1
+                }
             ]
         },
         "pink_warrior_leader": {
@@ -148,12 +142,6 @@
             "keywords": ["infantry"],
             "category": "command",
             "subfactions": ["none", "change"],
-            "options": [
-                {"modelLimit": 1, "addRule": ["banner"]},
-                {"modelLimit": 1, "addRule": ["musician"]},
-                {"modelLimit": 1, "addRule": ["champion"]},
-                {"modelLimit": 1, "addRule": [{"id": "power", "x": 1}]}
-            ],
             "models": [
                 {
                     "name": "Pink Warrior Leader",
@@ -163,6 +151,7 @@
                     "fight": 6,
                     "defense": 6,
                     "reflexes": 5,
+                    "options": [{"addRule": ["champion", {"id": "power", "x": 1}]}],
                     "rules": ["leader"],
                     "weapons": ["twisting_flames", "ccw"],
                     "min": 1,
@@ -176,12 +165,6 @@
             "keywords": ["infantry"],
             "category": "core",
             "subfactions": ["none", "change"],
-            "options": [
-                {"modelLimit": 1, "addRule": ["banner"]},
-                {"modelLimit": 1, "addRule": ["musician"]},
-                {"modelLimit": 1, "addRule": ["champion"]},
-                {"modelLimit": 1, "addRule": [{"id": "power", "x": 1}]}
-            ],
             "models": [
                 {
                     "name": "Pink Warrior",
@@ -191,6 +174,7 @@
                     "fight": 6,
                     "defense": 6,
                     "reflexes": 5,
+                    "options": [{"limit": 1, "addRule": ["banner", "musician"]}],
                     "weapons": ["twisting_flames", "ccw"],
                     "min": 1,
                     "max": 1
@@ -360,7 +344,7 @@
             "min": 1,
             "max": 1,
             "rules": ["leader"],
-            "options": [{"modelLimit": 1, "addRule": ["banner"]}, {"modelLimit": 1, "addRule": ["musician"]}, {"modelLimit": 1, "addRule": ["champion"]}],
+            "options": [{"addRule": ["champion"]}],
             "models": [
                 {"name": "Excess Warrior", "movement": 7, "courage": 5, "shoot": 6, "fight": 6, "defense": 5, "reflexes": 5, "weapons": [{"id": "sweeping_claws", "count": 2}], "min": 1, "max": 1}
             ]
@@ -373,7 +357,7 @@
             "category": "core",
             "min": 1,
             "max": 1,
-            "options": [{"modelLimit": 1, "addRule": ["banner"]}, {"modelLimit": 1, "addRule": ["musician"]}, {"modelLimit": 1, "addRule": ["champion"]}],
+            "options": [{"addRule": ["champion"]}],
             "models": [
                 {"name": "Excess Warrior", "movement": 7, "courage": 5, "shoot": 6, "fight": 6, "defense": 5, "reflexes": 5, "weapons": [{"id": "sweeping_claws", "count": 2}], "min": 1, "max": 1}
             ]
@@ -409,9 +393,7 @@
             "subfactions": ["none", "change", "war", "pestilence", "excess"],
             "category": "strike",
             "rules": ["fly", "fear"],
-            "models": [
-                {"name": "Gargoyle", "movement": 10, "courage": 4, "shoot": 4, "fight": 5, "defense": 5, "reflexes": 5, "weapons": [{"id": "ccw", "count": 2}], "min": 1, "max": 1}
-            ]
+            "models": [{"name": "Gargoyle", "movement": 10, "courage": 4, "shoot": 4, "fight": 5, "defense": 5, "reflexes": 5, "weapons": [{"id": "ccw", "count": 2}], "min": 1, "max": 1}]
         },
         "death_seeker": {
             "name": "Excess Warrior Leader on Steed",
@@ -442,7 +424,6 @@
             "category": "strike",
             "rules": ["agile"],
             "subfactions": ["none", "excess"],
-            "options": [{"limit": 1, "addRule": [ "musician", "banner"]}],
             "models": [
                 {
                     "name": "Excess Steed",
@@ -452,6 +433,7 @@
                     "fight": 6,
                     "defense": 5,
                     "reflexes": 5,
+                    "options": [{"limit": 1, "addRule": ["musician", "banner"]}],
                     "weapons": [{"id": "sweeping_claws", "count": 2}, {"id": "lashing_tentacles"}],
                     "min": 1,
                     "max": 1
@@ -513,8 +495,8 @@
             "keywords": ["infantry"],
             "category": "command",
             "subfactions": ["none", "war"],
-            "options": [{"modelLimit": 1, "addRule": ["banner"]}, {"modelLimit": 1, "addRule": ["musician"]}, {"modelLimit": 1, "addRule": ["champion"]}],
-            "models": [                {
+            "models": [
+                {
                     "name": "Wrath Warrior Leader",
                     "movement": 6,
                     "courage": 6,
@@ -525,6 +507,7 @@
                     "min": 1,
                     "max": 1,
                     "rules": ["leader"],
+                    "options": [{"addRule": ["champion"]}],
                     "weapons": [{"id": "war_sword", "count": 1}]
                 }
             ]
@@ -535,8 +518,8 @@
             "keywords": ["infantry"],
             "category": "core",
             "subfactions": ["none", "war"],
-            "options": [{"modelLimit": 1, "addRule": ["banner"]}, {"modelLimit": 1, "addRule": ["musician"]}, {"modelLimit": 1, "addRule": ["champion"]}],
-            "models": [                {
+            "models": [
+                {
                     "name": "Wrath Warrior",
                     "movement": 6,
                     "courage": 6,
@@ -546,6 +529,7 @@
                     "reflexes": 5,
                     "min": 1,
                     "max": 1,
+                    "options": [{"limit": 1, "addRule": ["banner", "musician"]}],
                     "weapons": [{"id": "war_sword", "count": 1}]
                 }
             ]
