@@ -316,7 +316,7 @@
         },
         "orc": {
             "name": "Orc",
-            "description": "",
+            "description": "An orc, ready for a good fight.",
             "category": "core",
             "models": [
                 {
