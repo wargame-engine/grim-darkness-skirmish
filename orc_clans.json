@@ -295,7 +295,7 @@
         },
         "orc_leader": {
             "name": "Orc Leader",
-            "description": "",
+            "description": "An orc, ready for a good fight.",
             "category": "command",
             "models": [
                 {
