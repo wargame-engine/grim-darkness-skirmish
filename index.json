@@ -753,7 +753,6 @@
         "legend_expert_fighter": {"name": "Expert Fighter", "description": "This model may make one additional attack with any Melee weapon.", "points": 10},
         "wings": {"name": "Wings", "description": "Increases movement by 4\". This model may ignore models and terrain when moving.", "points": 10},
         "scrambler": {"name": "Scrambler", "description": "Enemy units arriving from reserves within 18\" of this model suffer -2 Initiative on reserve tests.", "points": 5},
-        "banner": {"name": "Banner", "description": "Friendly units within 3\" may re-roll a single failed Courage test when removing Shock.", "points": 5},
         "net": {
             "name": "Net",
             "description": "Units engaged in Melee with a model that has this weapon suffer -1 to Initiative tests when escaping combat for each weapon with this rule.",
