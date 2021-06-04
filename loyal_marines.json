@@ -1700,7 +1700,7 @@
                     "options": [
                         {"replaceWeapon": {"id": "energy_sword", "count": 2}, "withWeapon": [{"id": "energy_fist", "count": 2}, {"id": "energy_hammer", "count": 2}]},
                         {"replaceWeapon": ["twin_marine_rifle", {"id": "energy_sword", "count": 2}], "withWeapon": [{"id": "energy_claws", "count": 4}]},
-                        {"replaceWeapon": "twin_marine_rifle", "withWeapon": ["heavy_flamethrower", "missile_launcher", "minigun"]}
+                        {"replaceWeapon": "twin_marine_rifle", "withWeapon": ["heavy_flamethrower", "missile_launcher", "minigun"]},
                         {"addRule": "shield"}
                     ],
                     "min": 1,
@@ -1996,7 +1996,7 @@
                     "options": [
                         {
                             "replaceWeapon": ["storm_rifle", {"id": "psychic_sword", "count": 2}],
-                            "withWeapon": [["heavy_ccw", "incinerator"], ["heavy_ccw", "psychic_silencer"], ["heavy_ccw", "psychic_cannon"]],
+                            "withWeapon": [["heavy_ccw", "incinerator"], ["heavy_ccw", "psychic_silencer"], ["heavy_ccw", "psychic_cannon"]]
                         },
                         {"addRule": [{"id": "ambush", "name": "Strike"}], "limit": 1}
                     ],
