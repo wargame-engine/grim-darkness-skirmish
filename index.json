@@ -132,17 +132,6 @@
             "version": "0.1",
             "description": "The Battle Sisters are a sect of the Human Empire which have a uniquely faithful and religious background. The Battle Sisters rely on prayer and faith in their holy symbols along with some good old fashioned holy fire to defeat their enemies.",
             "subfactions": {"assault_focus": {"name": "Assault", "id": "assault_focus", "color": "#4272b8", "description": "Battle Sisters focused on all-out assaults and aggression."}}
-        }
-    },
-    "unfinished_factions": {
-        "high_elves": {
-            "name": "High Elf Worlds",
-            "id": "high_elves",
-            "url": "high_elves.json",
-            "color": "#295788",
-            "secondary_color": "#e8bb00",
-            "alliance": "elven_coaliation",
-            "description": "The High Elf Worlds are a group of large constructed fleet habitats. They focus on a mobile and deadly mix of advanced technology and unique fast tactics to achieve victory"
         },
         "traitor_marines": {
             "name": "Traitor Marines",
@@ -170,6 +159,17 @@
                     "description": "Traitor marines focused on using powerful magic to defeat their foes."
                 }
             }
+        }
+    },
+    "unfinished_factions": {
+        "high_elves": {
+            "name": "High Elf Worlds",
+            "id": "high_elves",
+            "url": "high_elves.json",
+            "color": "#295788",
+            "secondary_color": "#e8bb00",
+            "alliance": "elven_coaliation",
+            "description": "The High Elf Worlds are a group of large constructed fleet habitats. They focus on a mobile and deadly mix of advanced technology and unique fast tactics to achieve victory"
         },
         "corrupted_defense_force": {
             "name": "Corrupted Defense Force",
