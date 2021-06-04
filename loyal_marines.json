@@ -1288,7 +1288,7 @@
             ]
         },
         "prime_interceptor": {
-            "name": "Prime Interception Squad",
+            "name": "Prime Interceptor",
             "description": "Heavily armored marines with carbines and jetpacks.",
             "category": "strike",
             "keywords": ["Infantry"],
@@ -1296,7 +1296,7 @@
             "rules": ["fly", {"id": "wounds", "x": 2}],
             "models": [
                 {
-                    "name": "Prime Interception Marine",
+                    "name": "Prime Interceptor",
                     "courage": 6,
                     "movement": 8,
                     "shoot": 6,
@@ -1306,8 +1306,8 @@
                     "agility": 6,
                     "weapons": ["twin_assault_carbine", "at_grenade", {"id": "heavy_ccw", "count": 2}],
                     "options": [{"replaceWeapon": "twin_assault_carbine", "withWeapon": "twin_plasma_carbine"}, {"addRule": [{"id": "ambush", "name": "Orbital Deployment"}]}],
-                    "min": 2,
-                    "max": 5
+                    "min": 1,
+                    "max": 1
                 }
             ]
         },
