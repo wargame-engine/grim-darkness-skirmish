@@ -185,6 +185,57 @@
                 }
             ]
         },
+        "veteran_warrior_leader": {
+            "name": "Veteran Warrior Leader",
+            "description": "A squad of infantry who excel at ranged shooting.",
+            "min": 1,
+            "max": 1,
+            "category": "command",
+            "models": [
+                {
+                    "name": "Warrior Leader",
+                    "movement": 6,
+                    "courage": 6,
+                    "shoot": 6,
+                    "fight": 5,
+                    "defense": 6,
+                    "reflexes": 6,
+                    "rules": ["leader"],
+                    "weapons": ["pulse_shotgun", {"id": "ccw", "count": 2}, "stun_grenades"],
+                    "options": [{"replaceWeapon": "pulse_shotgun", "withWeapon": ["pulse_carbine", "pulse_rifle"]}, {"addWeapon": "pulse_pistol"}, {"addRule": "spotting_laser"}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "veteran_warrior": {
+            "name": "Veteran Warrior",
+            "description": "A squad of infantry who excel at ranged shooting.",
+            "min": 1,
+            "max": 1,
+            "category": "core",
+            "options": [
+                {"addModel": "support_turret", "modelLimit": 1},
+                {"addModel": ["spotter_drone", "gunner_drone", "shield_drone", "guardian_drone"], "modelLimit": 1}
+            ],
+            "models": [
+                {
+                    "name": "Veteran Warrior",
+                    "movement": 6,
+                    "courage": 5,
+                    "shoot": 6,
+                    "fight": 5,
+                    "defense": 6,
+                    "reflexes": 6,
+                    "weapons": ["pulse_shotgun", {"id": "ccw", "count": 1}, "stun_grenades"],
+                    "options": [
+                        {"replaceWeapon": "pulse_shotgun", "withWeapon": ["pulse_carbine", "pulse_rifle"]}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
         "pathfinder_leader": {
             "name": "Pathfinder Leader",
             "description": "A squad of infantry who excel at forward scouting and spotting.",
