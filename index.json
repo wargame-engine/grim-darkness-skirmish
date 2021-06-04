@@ -188,6 +188,16 @@
                 "psychic_marines": {"name": "Psychic", "id": "psychic_marines", "color": "#C0C0C0", "description": "Loyal Marines focused on psychic tactics and hunting demons.", "restricted": true},
                 "alien_hunters": {"name": "Alien Hunters", "id": "alien_hunters", "color": "#231f20", "description": "Loyal Marines focused on hunting aliens.", "restricted": true}
             }
+        },
+        "imperial_inquisition": {
+            "name": "Imperial Inquisition",
+            "id": "imperial_inquisition",
+            "url": "imperial_inquisition.json",
+            "color": "#7d0a15",
+            "secondary_color": "#010203",
+            "alliance": "imperial_alliance",
+            "version": "0.1",
+            "description": "The Imperial Inquisition is the order dedicated to hunting dangerous demons and other Psychic entities which cannot be trusted in the Human Empire. Their tactics rely on using skilled demon hunting individuals along with advanced assassins to hunt and destroy those who most dangerous."
         }
     },
     "unfinished_factions": {
@@ -243,16 +253,6 @@
                 "combat_masters": {"name": "Close Combat", "id": "combat_masters", "color": "#00401f", "description": "An Imperial Defense force trained and drilled in deadly close combat fighting."},
                 "marksmanship_focus": {"name": "Marksmanship", "id": "marksmanship_focus", "description": "An Imperial Defense force with the best shooting skill in the galaxy."}
             }
-        },
-        "imperial_inquisition": {
-            "name": "Imperial Inquisition",
-            "id": "imperial_inquisition",
-            "url": "imperial_inquisition.json",
-            "color": "#7d0a15",
-            "secondary_color": "#010203",
-            "alliance": "imperial_alliance",
-            "version": "0.1",
-            "description": "The Imperial Inquisition is the order dedicated to hunting dangerous demons and other Psychic entities which cannot be trusted in the Human Empire. Their tactics rely on using skilled demon hunting individuals along with advanced assassins to hunt and destroy those who most dangerous."
         }
     },
     "alliances": {
