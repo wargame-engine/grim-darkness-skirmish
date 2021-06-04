@@ -280,8 +280,35 @@
                 }
             ]
         },
-        "banshees": {
-            "name": "Banshee Squad",
+        "banshee_leader": {
+            "name": "Banshee Leader",
+            "description": "A group of swift and brutal melee warriors.",
+            "min": 1,
+            "max": 1,
+            "category": "command",
+            "keywords": ["Infantry"],
+            "models": [
+                {
+                    "name": "Banshee Leader",
+                    "courage": 6,
+                    "movement": 8,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 6,
+                    "reflexes": 6,
+                    "rules": ["champion", "leader"],
+                    "weapons": [{"id": "energy_sword", "count": 3}, "shard_pistol"],
+                    "options": [
+                        {"replaceWeapon": {"id": "energy_sword", "count": 3}, "withWeapon": ["shuriken", {"id": "fusion_glaive", "count": 3}]},
+                        {"replaceWeapon": [{"id": "energy_sword", "count": 3}, "shard_pistol"], "withWeapon": [{"id": "mirror_blades", "count": 3}]}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "banshee": {
+            "name": "Banshee",
             "description": "A group of swift and brutal melee warriors.",
             "min": 1,
             "max": 1,
@@ -297,22 +324,41 @@
                     "defense": 6,
                     "reflexes": 6,
                     "weapons": [{"id": "energy_sword", "count": 2}, "shard_pistol"],
-                    "options": [{"replaceModel": "banshee_leader", "modelLimit": 1}],
-                    "min": 5,
-                    "max": 10
+                    "min": 1,
+                    "max": 1
                 }
             ]
         },
-        "spectres": {
-            "name": "Spectre Warriors",
+        "spectre_leader": {
+            "name": "Spectre Leader",
             "description": "A squad of ghostly warriors adept at remaining unseen until they make their attack.",
-            "min": 1,
-            "max": 1,
+            "category": "command",
+            "keywords": ["Infantry"],
+            "models": [
+                {
+                    "name": "Spectre Leader",
+                    "courage": 6,
+                    "movement": 10,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 7,
+                    "reflexes": 6,
+                    "rules": ["champion", "leader"],
+                    "weapons": ["spectre_rifle", "frags"],
+                    "options": [{"replaceWeapon": "spectre_rifle", "withWeapon": ["elven_blaster", "emp_cannon"]}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "spectre": {
+            "name": "Spectre",
+            "description": "A squad of ghostly warriors adept at remaining unseen until they make their attack.",
             "category": "specialist",
             "keywords": ["Infantry"],
             "models": [
                 {
-                    "name": "Spectre Squad",
+                    "name": "Spectre",
                     "courage": 6,
                     "movement": 10,
                     "shoot": 6,
@@ -320,9 +366,8 @@
                     "defense": 7,
                     "reflexes": 6,
                     "weapons": ["spectre_rifle", "frags"],
-                    "options": [{"replaceModel": "spectre_leader", "modelLimit": 1}],
-                    "min": 3,
-                    "max": 10
+                    "min": 1,
+                    "max": 1
                 }
             ]
         },
@@ -445,118 +490,6 @@
                     "max": 10
                 }
             ]
-        },
-        "hover_tank": {
-            "name": "Hover Tank",
-            "description": "A heavy hover tank that can be outfitted with heavier weaponry to eliminate vehicle threats.",
-            "min": 1,
-            "max": 1,
-            "category": "heavy",
-            "rules": ["hover", {"id": "impact", "x": 6}, "damage_table_vehicle"],
-            "keywords": ["Vehicle"],
-            "models": [
-                {
-                    "name": "Hover Tank",
-                    "courage": 5,
-                    "movement": 10,
-                    "shoot": 6,
-                    "fight": 6,
-                    "defense": 12,
-                    "reflexes": 6,
-                    "weapons": [{"id": "twin_shard_rifle", "mount": ["Front"]}, "heavy_fusion_cannon"],
-                    "options": [
-                        {"replaceWeapon": {"id": "twin_shard_rifle", "mount": ["Front"]}, "withWeapon": {"id": "shard_cannon", "mount": ["Front"]}},
-                        {"addRule": ["sky_engine", "gravity_thrusters"]}
-                    ],
-                    "min": 1,
-                    "max": 1
-                }
-            ]
-        },
-        "hover_artillery_tank": {
-            "name": "Hover Artillery Tank",
-            "description": "A hover tank with indirect fire artillery.",
-            "min": 1,
-            "max": 1,
-            "category": "heavy",
-            "rules": ["hover", {"id": "impact", "x": 3}, "damage_table_vehicle"],
-            "keywords": ["Vehicle"],
-            "models": [
-                {
-                    "name": "Hover Artillery Tank",
-                    "courage": 5,
-                    "movement": 10,
-                    "shoot": 6,
-                    "fight": 6,
-                    "defense": 11,
-                    "reflexes": 6,
-                    "weapons": [{"id": "twin_shard_rifle", "mount": ["Front"]}, "doom_artillery_cannon"],
-                    "options": [
-                        {"replaceWeapon": {"id": "twin_shard_rifle", "mount": ["Front"]}, "withWeapon": {"id": "shard_cannon", "mount": ["Front"]}},
-                        {"addRule": ["sky_engine", "gravity_thrusters"]}
-                    ],
-                    "min": 1,
-                    "max": 1
-                }
-            ]
-        },
-        "hover_apc": {
-            "name": "Hover APC",
-            "description": "A hover tank with indirect fire artillery.",
-            "min": 1,
-            "max": 1,
-            "category": "transport",
-            "rules": ["hover", {"id": "impact", "x": 3}, "damage_table_vehicle", {"id": "transport", "x": 12}],
-            "keywords": ["Vehicle"],
-            "models": [
-                {
-                    "name": "Hover APC",
-                    "courage": 5,
-                    "movement": 10,
-                    "shoot": 6,
-                    "fight": 6,
-                    "defense": 11,
-                    "reflexes": 6,
-                    "weapons": [{"id": "twin_shard_rifle", "mount": ["Front"]}, "twin_fusion_cannon"],
-                    "options": [
-                        {"replaceWeapon": {"id": "twin_shard_rifle", "mount": ["Front"]}, "withWeapon": {"id": "shard_cannon", "mount": ["Front"]}},
-                        {"replaceWeapon": "twin_fusion_cannon", "withWeapon": ["twin_shard_cannon", "twin_elven_missile_launcher", "twin_sky_cannon", "twin_laser_machinegun"]},
-                        {"addRule": ["sky_engine", "gravity_thrusters"]}
-                    ],
-                    "min": 1,
-                    "max": 1
-                }
-            ]
-        },
-        "wraith_titan": {
-            "name": "Wraith Titan",
-            "description": "A wraith lord with a variety of loadouts to punish enemies of the high elves on the bloodiest of battlefields.",
-            "min": 1,
-            "max": 1,
-            "category": "super_heavy",
-            "rules": ["damage_table_titan"],
-            "keywords": ["Vehicle"],
-            "models": [
-                {
-                    "name": "Wraith Titan",
-                    "movement": 8,
-                    "courage": 6,
-                    "shoot": 6,
-                    "fight": 6,
-                    "defense": 13,
-                    "reflexes": 6,
-                    "weapons": ["titan_shield", "titan_glaive", {"id": "heavy_stomp", "count": 5}],
-                    "options": [
-                        {"replaceWeapon": ["titan_shield", "titan_glaive"], "withWeapon": {"id": "titan_fusion_cannon", "count": 2}},
-                        {"replaceWeapon": "titan_glaive", "withWeapon": "shining_cannon"},
-                        {"limit": 1, "addWeapon": ["laser_machinegun", "shard_cannon", "sky_cannon"]},
-                        {"limit": 1, "addWeapon": ["laser_machinegun", "shard_cannon", "sky_cannon"]}
-                    ],
-                    "min": 1,
-                    "max": 1,
-                    "rules": []
-                }
-            ]
         }
     },
     "models": {
@@ -594,37 +527,6 @@
             "weapons": ["fusion_rifle", "fusion_bomb"],
             "rules": ["champion"],
             "options": [{"replaceWeapon": "fusion_rifle", "withWeapon": ["dragon_flamethrower"]}],
-            "min": 1,
-            "max": 1
-        },
-        "banshee_leader": {
-            "name": "Banshee Leader",
-            "courage": 6,
-            "movement": 8,
-            "shoot": 6,
-            "fight": 6,
-            "defense": 6,
-            "reflexes": 6,
-            "rules": ["champion"],
-            "weapons": [{"id": "energy_sword", "count": 3}, "shard_pistol"],
-            "options": [
-                {"replaceWeapon": {"id": "energy_sword", "count": 3}, "withWeapon": ["shuriken", {"id": "fusion_glaive", "count": 3}]},
-                {"replaceWeapon": [{"id": "energy_sword", "count": 3}, "shard_pistol"], "withWeapon": [{"id": "mirror_blades", "count": 3}]}
-            ],
-            "min": 1,
-            "max": 1
-        },
-        "spectre_leader": {
-            "name": "Spectre Leader",
-            "courage": 6,
-            "movement": 10,
-            "shoot": 6,
-            "fight": 6,
-            "defense": 7,
-            "reflexes": 6,
-            "rules": ["champion"],
-            "weapons": ["spectre_rifle", "frags"],
-            "options": [{"replaceWeapon": "spectre_rifle", "withWeapon": ["elven_blaster", "emp_cannon"]}],
             "min": 1,
             "max": 1
         },

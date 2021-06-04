@@ -806,7 +806,7 @@
                     "courage": 5,
                     "shoot": 4,
                     "fight": 6,
-                    "defense": 5,
+                    "defense": 7,
                     "reflexes": 5,
                     "movement": 5,
                     "weapons": ["heavy_pistol", "frags", {"id": "heavy_ccw", "count": 3}],

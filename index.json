@@ -198,9 +198,7 @@
             "alliance": "imperial_alliance",
             "version": "0.1",
             "description": "The Imperial Inquisition is the order dedicated to hunting dangerous demons and other Psychic entities which cannot be trusted in the Human Empire. Their tactics rely on using skilled demon hunting individuals along with advanced assassins to hunt and destroy those who most dangerous."
-        }
-    },
-    "unfinished_factions": {
+        },
         "high_elves": {
             "name": "High Elf Worlds",
             "id": "high_elves",
@@ -209,7 +207,9 @@
             "secondary_color": "#e8bb00",
             "alliance": "elven_coaliation",
             "description": "The High Elf Worlds are a group of large constructed fleet habitats. They focus on a mobile and deadly mix of advanced technology and unique fast tactics to achieve victory"
-        },
+        }
+    },
+    "unfinished_factions": {
         "corrupted_defense_force": {
             "name": "Corrupted Defense Force",
             "id": "corrupted_defense_force",
