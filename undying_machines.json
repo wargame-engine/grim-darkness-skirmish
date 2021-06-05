@@ -303,7 +303,7 @@
             "category": "command",
             "rules": ["leader"],
             "keywords": ["Infantry"],
-            "options": [{"replaceWeapon": [{"id": "war_scythe", "count": 3}], "withWeapon": [[{"id": "phase_sword", "count": 3}, "void_shield"]], "modelLimit": "all"}],
+            "options": [{"replaceWeapon": [{"id": "war_scythe", "count": 3}], "withWeapon": [[{"id": "phase_sword", "count": 3}, "void_shield"]]}],
             "models": [{"name": "Guardian Leader", "courage": 6, "movement": 5, "shoot": 6, "fight": 6, "defense": 9, "reflexes": 5, "weapons": [{"id": "war_scythe", "count": 3}], "min": 1, "max": 1}]
         },
         "guardian": {
@@ -314,7 +314,7 @@
             "category": "specialist",
             "rules": [],
             "keywords": ["Infantry"],
-            "options": [{"replaceWeapon": [{"id": "war_scythe", "count": 3}], "withWeapon": [[{"id": "phase_sword", "count": 3}, "void_shield"]], "modelLimit": "all"}],
+            "options": [{"replaceWeapon": [{"id": "war_scythe", "count": 3}], "withWeapon": [[{"id": "phase_sword", "count": 3}, "void_shield"]]}],
             "models": [{"name": "Guardian", "courage": 6, "movement": 5, "shoot": 6, "fight": 6, "defense": 9, "reflexes": 5, "weapons": [{"id": "war_scythe", "count": 3}], "min": 1, "max": 1}]
         },
         "praetorian": {
@@ -325,9 +325,7 @@
             "category": "strike",
             "rules": ["fly"],
             "keywords": ["Infantry"],
-            "options": [
-                {"replaceWeapon": ["antimatter_pistol", {"id": "void_sword", "count": 2}], "withWeapon": [["guardian_rod_shoot", {"id": "guardian_rod_melee", "count": 2}]], "modelLimit": "all"}
-            ],
+            "options": [{"replaceWeapon": ["antimatter_pistol", {"id": "void_sword", "count": 2}], "withWeapon": [["guardian_rod_shoot", {"id": "guardian_rod_melee", "count": 2}]]}],
             "models": [
                 {
                     "name": "Guardian",
@@ -351,8 +349,21 @@
             "category": "core",
             "rules": ["fear"],
             "keywords": ["Infantry"],
-            "options": [{"addRule": "ambush", "modelLimit": "all"}],
-            "models": [{"name": "Flayer", "courage": 5, "movement": 5, "shoot": 4, "fight": 5, "defense": 7, "reflexes": 4, "weapons": [{"id": "flaying_claws", "count": 3}], "min": 1, "max": 1}]
+            "models": [
+                {
+                    "name": "Flayer",
+                    "courage": 5,
+                    "movement": 5,
+                    "shoot": 4,
+                    "fight": 5,
+                    "defense": 7,
+                    "reflexes": 4,
+                    "weapons": [{"id": "flaying_claws", "count": 3}],
+                    "options": [{"addRule": "ambush"}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
         },
         "hunter": {
             "name": "Hunter",
@@ -372,12 +383,26 @@
             "category": "strike",
             "rules": ["hover"],
             "keywords": ["Biker"],
-            "options": [
-                {"replaceWeapon": {"id": "twin_tesla_rifle", "mount": ["Front"]}, "withWeapon": [{"id": "twin_heavy_gauss_rifle", "mount": ["Front"]}, {"id": "antimatter_rifle", "mount": ["Front"]}]},
-                {"addRule": "vision_scope", "modelLimit": "all"}
-            ],
             "models": [
-                {"name": "Biker", "courage": 6, "movement": 8, "shoot": 6, "fight": 6, "defense": 8, "reflexes": 5, "weapons": [{"id": "twin_tesla_rifle", "mount": ["Front"]}], "min": 3, "max": 9}
+                {
+                    "name": "Biker",
+                    "courage": 6,
+                    "movement": 8,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 8,
+                    "reflexes": 5,
+                    "weapons": [{"id": "twin_tesla_rifle", "mount": ["Front"]}],
+                    "options": [
+                        {
+                            "replaceWeapon": {"id": "twin_tesla_rifle", "mount": ["Front"]},
+                            "withWeapon": [{"id": "twin_heavy_gauss_rifle", "mount": ["Front"]}, {"id": "antimatter_rifle", "mount": ["Front"]}]
+                        },
+                        {"addRule": "vision_scope"}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
             ]
         },
         "shifter": {
