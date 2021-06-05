@@ -10,8 +10,6 @@
         "snatcher_lord": {
             "name": "Soul Stealer Lord",
             "description": "A massive mutant with psychic powers",
-            "min": 1,
-            "max": 1,
             "keywords": ["Hive Mind"],
             "category": "command",
             "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "wounds", "x": 3}, {"id": "swarm_melee_tactics", "x": 1}],
@@ -117,6 +115,7 @@
             "name": "Hive Warrior Champion",
             "description": "Large bugs which can extend the hive mind",
             "category": "command",
+            "keywords": ["Hive Mind"],
             "rules": [{"id": "wounds", "x": 2}],
             "models": [
                 {
@@ -143,6 +142,7 @@
         "hive_warrior": {
             "name": "Hive Warrior",
             "description": "Large bugs which can extend the hive mind",
+            "keywords": ["Hive Mind"],
             "category": "core",
             "rules": [{"id": "wounds", "x": 2}],
             "models": [
@@ -170,6 +170,7 @@
             "name": "Hive Warrior Heavy",
             "description": "Large bugs which can extend the hive mind",
             "category": "heavy",
+            "keywords": ["Hive Mind"],
             "rules": [{"id": "wounds", "x": 2}],
             "models": [
                 {
