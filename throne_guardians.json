@@ -590,11 +590,11 @@
             "cost": 1
         },
         {
+            "name": "Unyielding",
             "phase": "activation",
-            "name": "Relic Deflectors",
-            "description": "Use before a _Vehicle_ unit makes a Save roll. Until the end of the round, roll a D10 for each hit and for each 3 or less, a hit is prevented.",
-            "flavor": "With ancient defense fields, Throne Guardian vehicles can deflect even the heaviest attacks.",
-            "cost": 2
+            "description": "Use when activating an _Infantry_ unit. That unit may ignore any critical injuries it has sustained for this activation.",
+            "flavor": "Throne Guardians fight to the bitter end to defend the throne.",
+            "cost": 1
         },
         {
             "phase": "activation",
