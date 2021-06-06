@@ -207,6 +207,20 @@
             "secondary_color": "#e8bb00",
             "alliance": "elven_coaliation",
             "description": "The High Elf Worlds are a group of large constructed fleet habitats. They focus on a mobile and deadly mix of advanced technology and unique fast tactics to achieve victory"
+        },
+        "imperial_defense_force": {
+            "name": "Imperial Defence Force",
+            "id": "imperial_defense_force",
+            "url": "imperial_defense_force.json",
+            "color": "#314821",
+            "alliance": "imperial_alliance",
+            "version": "0.1",
+            "description": "The Imperial Defense Force is the backbone defense force of the many civilian planets of the empire. They are the first to respond to any miliary threats. They rely on hardy battle tanks and good old artillery shells along with waves of human soldiers to defend the Empire.",
+            "subfactions": {
+                "mechanized_focus": {"name": "Mechanized Focus", "id": "mechanized_focus", "color": "#00401f", "description": "An Imperial Defense force focused on mechanized warfare."},
+                "combat_masters": {"name": "Close Combat", "id": "combat_masters", "color": "#00401f", "description": "An Imperial Defense force trained and drilled in deadly close combat fighting."},
+                "marksmanship_focus": {"name": "Marksmanship", "id": "marksmanship_focus", "description": "An Imperial Defense force with the best shooting skill in the galaxy."}
+            }
         }
     },
     "unfinished_factions": {
@@ -231,27 +245,6 @@
             "hidden_subfactions": {
                 "combat_masters": {"name": "Close Combat", "id": "combat_masters", "color": "#00401f", "description": "An Ascended Astro-Raptors trained and drilled in deadly close combat fighting."},
                 "marksmanship_focus": {"name": "Marksmanship", "id": "marksmanship_focus", "description": "An Ascended Astro-Raptors with the best shooting skill in the galaxy."}
-            }
-        },
-        "imperial_defense_force": {
-            "name": "Imperial Defence Force",
-            "id": "imperial_defense_force",
-            "url": "imperial_defense_force.json",
-            "color": "#314821",
-            "alliance": "imperial_alliance",
-            "version": "0.1",
-            "description": "The Imperial Defense Force is the backbone defense force of the many civilian planets of the empire. They are the first to respond to any miliary threats. They rely on hardy battle tanks and good old artillery shells along with waves of human soldiers to defend the Empire.",
-            "hidden_subfactions": {
-                "neon_hive": {
-                    "name": "Urban",
-                    "id": "neon_hive",
-                    "description": "This section of the Imperial Defense Force recruits the elite, drafts the reasonable, and drags the hivescum from a large, heavily overpopulated neon-lit world of Megacities and gang-warfare."
-                }
-            },
-            "subfactions": {
-                "mechanized_focus": {"name": "Mechanized Focus", "id": "mechanized_focus", "color": "#00401f", "description": "An Imperial Defense force focused on mechanized warfare."},
-                "combat_masters": {"name": "Close Combat", "id": "combat_masters", "color": "#00401f", "description": "An Imperial Defense force trained and drilled in deadly close combat fighting."},
-                "marksmanship_focus": {"name": "Marksmanship", "id": "marksmanship_focus", "description": "An Imperial Defense force with the best shooting skill in the galaxy."}
             }
         }
     },
@@ -824,12 +817,12 @@
         },
         "field_radio": {
             "name": "Field Radio",
-            "description": "If a friendly unit within 3\" uses the _Defense Force Tactics_ special rule, you may extend the range of that ability to 24\" as long as the target unit also has a Field Radio.",
+            "description": "If a friendly unit within 3\" uses the _Defense Force Tactics_ special rule, you may extend the range of that ability to 24\" as long as the target is within 3\" of a unit with a Field Radio.",
             "points": 5
         },
         "field_radio_stormtrooper": {
             "name": "Field Radio",
-            "description": "If a friendly unit within 3\" uses the _Stormtrooper Tactics_ special rule, you may extend the range of that ability to 24\" as long as the target unit also has a Field Radio.",
+            "description": "If a friendly unit within 3\" uses the _Storm Trooper Tactics_ special rule, you may extend the range of that ability to 24\" as long as the target is within 3\" of a unit with a Field Radio.",
             "points": 5
         },
         "field_radio_battle_tank": {
