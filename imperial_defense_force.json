@@ -526,14 +526,11 @@
                 }
             ]
         },
-        "rider_squad": {
-            "name": "Rider Squad",
+        "rider_sergeant": {
+            "name": "Rider Sergeant",
             "description": "A squad of infantry mounted on either horseback or motorcycle for more mobility.",
-            "category": "strike",
-            "min": 5,
-            "max": 10,
+            "category": "command",
             "rules": [{"id": "impact", "x": 1}, {"id": "wounds", "x": 2}],
-            "options": [{"replaceWeapon": {"id": "ccw", "count": 2}, "withWeapon": ["rider_lance"]}],
             "models": [
                 {
                     "name": "Rider Sergeant",
@@ -543,14 +540,25 @@
                     "defense": 5,
                     "movement": 8,
                     "reflexes": 5,
+                    "rules": ["leader"],
                     "weapons": ["pistol", "frags", {"id": "ccw", "count": 2}],
                     "options": [
                         {"replaceWeapon": {"id": "ccw", "count": 2}, "withWeapon": ["chainsword", "energy_sword", "energy_axe", "energy_mace", "energy_fist"]},
-                        {"replaceWeapon": "pistol", "withWeapon": ["heavy_pistol", "plasma_pistol"]}
+                        {"replaceWeapon": "pistol", "withWeapon": ["heavy_pistol", "plasma_pistol"]},
+                        {"replaceWeapon": {"id": "ccw", "count": 2}, "withWeapon": ["rider_lance"]}
                     ],
                     "min": 1,
                     "max": 1
-                },
+                }
+            ]
+        },
+        "rider": {
+            "name": "Rider",
+            "description": "A squad of infantry mounted on either horseback or motorcycle for more mobility.",
+            "category": "strike",
+            "rules": [{"id": "impact", "x": 1}, {"id": "wounds", "x": 2}],
+            "options": [{"replaceWeapon": {"id": "ccw", "count": 2}, "withWeapon": ["rider_lance"]}],
+            "models": [
                 {
                     "name": "Rider",
                     "courage": 5,
@@ -562,24 +570,18 @@
                     "weapons": ["pistol", "frags", {"id": "ccw", "count": 2}],
                     "options": [
                         {"addRule": "field_radio", "modelLimit": 1},
-                        {"replaceWeapon": "defense_rifle", "withWeapon": ["flamethrower", "grenade_launcher", "fusion_rifle", "plasma_rifle"], "modelLimit": 4}
+                        {"replaceWeapon": "defense_rifle", "withWeapon": ["flamethrower", "grenade_launcher", "fusion_rifle", "plasma_rifle"]},
+                        {"replaceWeapon": {"id": "ccw", "count": 2}, "withWeapon": ["rider_lance"]}
                     ],
-                    "min": 4,
-                    "max": 9
+                    "min": 1,
+                    "max": 1
                 }
             ]
         },
-        "ogres": {
-            "name": "Ogres",
+        "ogres_leader": {
+            "name": "Ogre Leader",
             "description": "A squad of super-strong large human-like creatures.",
-            "category": "specialist",
-            "min": 5,
-            "max": 10,
-            "options": [
-                {"addRule": ["ogre_shield"]},
-                {"replaceWeapon": "heavy_shotgun", "withWeapon": ["wrist_grenades"]},
-                {"replaceWeapon": {"id": "heavy_ccw", "count": 2}, "withWeapon": ["ogre_maul"]}
-            ],
+            "category": "command",
             "rules": [{"id": "wounds", "x": 2}],
             "models": [
                 {
@@ -590,10 +592,24 @@
                     "defense": 7,
                     "movement": 6,
                     "reflexes": 5,
+                    "rules": ["leader"],
                     "weapons": ["heavy_shotgun", "frags", {"id": "heavy_ccw", "count": 2}],
+                    "options": [
+                        {"addRule": ["ogre_shield"]},
+                        {"replaceWeapon": "heavy_shotgun", "withWeapon": ["wrist_grenades"]},
+                        {"replaceWeapon": {"id": "heavy_ccw", "count": 2}, "withWeapon": ["ogre_maul"]}
+                    ],
                     "min": 1,
                     "max": 1
-                },
+                }
+            ]
+        },
+        "ogre": {
+            "name": "Ogre",
+            "description": "A squad of super-strong large human-like creatures.",
+            "category": "specialist",
+            "rules": [{"id": "wounds", "x": 2}],
+            "models": [
                 {
                     "name": "Ogre",
                     "courage": 6,
@@ -603,8 +619,13 @@
                     "defense": 7,
                     "reflexes": 5,
                     "weapons": ["heavy_shotgun", "frags", {"id": "heavy_ccw", "count": 2}],
-                    "min": 2,
-                    "max": 8
+                    "options": [
+                        {"addRule": ["ogre_shield"]},
+                        {"replaceWeapon": "heavy_shotgun", "withWeapon": ["wrist_grenades"]},
+                        {"replaceWeapon": {"id": "heavy_ccw", "count": 2}, "withWeapon": ["ogre_maul"]}
+                    ],
+                    "min": 1,
+                    "max": 1
                 }
             ]
         }
