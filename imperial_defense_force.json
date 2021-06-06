@@ -557,7 +557,6 @@
             "description": "A squad of infantry mounted on either horseback or motorcycle for more mobility.",
             "category": "strike",
             "rules": [{"id": "impact", "x": 1}, {"id": "wounds", "x": 2}],
-            "options": [{"replaceWeapon": {"id": "ccw", "count": 2}, "withWeapon": ["rider_lance"]}],
             "models": [
                 {
                     "name": "Rider",
