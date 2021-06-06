@@ -771,13 +771,6 @@
             "description": "Upgrade one Leader model with Defense Force Tactics with High Command.",
             "flavor": "This model has been promoted to a higher position in the defense force ranks.",
             "points": 10
-        },
-        "hammer_cannon": {
-            "name": "The Hammer",
-            "weapon": "hammer_cannon",
-            "description": "Replace one model's Battle Cannon with The Hammer.",
-            "flavor": "A battle cannon with extra deadly force.",
-            "points": 20
         }
     }
 }
