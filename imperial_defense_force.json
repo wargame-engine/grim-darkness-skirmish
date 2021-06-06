@@ -183,7 +183,7 @@
                     "movement": 6,
                     "reflexes": 5,
                     "weapons": ["defense_rifle", "frags", "ccw"],
-                    "options": [{"addRule": "field_radio", "modelLimit": 1}],
+                    "options": [{"addRule": "field_radio"}],
                     "min": 1,
                     "max": 1
                 }
@@ -233,7 +233,7 @@
                     "movement": 6,
                     "weapons": ["defense_rifle", "frags", "ccw"],
                     "options": [
-                        {"addRule": "field_radio", "modelLimit": 1}                    ],
+                        {"addRule": "field_radio"}                    ],
                     "min": 1,
                     "max": 1
                 }
@@ -285,7 +285,7 @@
                     "movement": 6,
                     "weapons": ["defense_rifle", "frags", "ccw"],
                     "options": [
-                        {"addRule": "field_radio", "modelLimit": 1},
+                        {"addRule": "field_radio"},
                         {"replaceWeapon": "defense_rifle", "withWeapon": "shotgun"}, {"addRule": ["heavy_armor"]}
                     ],
                     "min": 1,
@@ -308,7 +308,7 @@
                     "movement": 6,
                     "weapons": ["defense_rifle", "frags", "ccw"],
                     "options": [
-                        {"addRule": "field_radio", "modelLimit": 1},
+                        {"addRule": "field_radio"},
                         {"addRule": ["heavy_armor"]},
                         {"replaceWeapon": "defense_rifle", "withWeapon": ["flamethrower", "grenade_launcher", "fusion_rifle", "plasma_rifle", "sniper_rifle"]}
                     ],
@@ -467,8 +467,8 @@
                     "movement": 6,
                     "weapons": ["defense_rifle", "frags", "ccw"],
                     "options": [
-                        {"addRule": "field_radio", "modelLimit": 1},
-                        {"replaceWeapon": "defense_rifle", "withWeapon": ["flamethrower", "grenade_launcher", "fusion_rifle", "plasma_rifle", "sniper_rifle"], "modelLimit": 3}
+                        {"addRule": "field_radio"},
+                        {"replaceWeapon": "defense_rifle", "withWeapon": ["flamethrower", "grenade_launcher", "fusion_rifle", "plasma_rifle", "sniper_rifle"]}
                     ],
                     "min": 1,
                     "max": 1
@@ -482,15 +482,11 @@
             "rules": ["stealth", "scout"],
             "models": [{"name": "Sniper", "courage": 5, "shoot": 5, "fight": 5, "defense": 5, "movement": 6, "reflexes": 5, "weapons": ["sniper_rifle", "frags", "ccw"], "min": 1, "max": 1}]
         },
-        "stormtroopers": {
-            "name": "Stormtroopers",
+        "stormtrooper_sergeant": {
+            "name": "Stormtrooper Sergeant",
             "description": "Specially equipped and elite trained stormtrooper infantry.",
-            "category": "core",
+            "category": "command",
             "keywords": ["Storm Trooper", "Infantry"],
-            "options": [
-                {"addRule": {"id": "ambush", "name": "Orbital Insertion", "modelLimit": "all"}},
-                {"replaceWeapon": "heavy_defense_rifle", "withWeapon": ["flamethrower", "volley_gun", "plasma_rifle", "grenade_launcher", "fusion_rifle", "sniper_rifle"], "modelLimit": "2/5"}
-            ],
             "models": [
                 {
                     "name": "Stormtrooper Sergeant",
@@ -500,15 +496,29 @@
                     "defense": 6,
                     "reflexes": 6,
                     "movement": 6,
+                    "rules": ["leader"],
                     "weapons": ["heavy_defense_rifle", "frags", "ccw"],
                     "options": [
+                        {"addRule": {"id": "ambush", "name": "Orbital Insertion"}},
                         {"replaceWeapon": ["heavy_defense_rifle", "ccw"], "withWeapon": [["heavy_pistol", {"id": "ccw", "count": 2}]]},
                         {"replaceWeapon": "heavy_pistol", "withWeapon": ["plasma_pistol"]},
                         {"replaceWeapon": {"id": "ccw", "count": 2}, "withWeapon": [{"id": "chainsword", "count": 2}, {"id": "energy_sword", "count": 2}, {"id": "energy_fist", "count": 2}]}
                     ],
                     "min": 1,
                     "max": 1
-                },
+                }
+            ]
+        },
+        "stormtroopers": {
+            "name": "Stormtrooper",
+            "description": "Specially equipped and elite trained stormtrooper infantry.",
+            "category": "core",
+            "keywords": ["Storm Trooper", "Infantry"],
+            "options": [
+                {"addRule": {"id": "ambush", "name": "Orbital Insertion"}},
+                {"replaceWeapon": "heavy_defense_rifle", "withWeapon": ["flamethrower", "volley_gun", "plasma_rifle", "grenade_launcher", "fusion_rifle", "sniper_rifle"], "modelLimit": "2/5"}
+            ],
+            "models": [
                 {
                     "name": "Stormtrooper",
                     "courage": 5,
@@ -521,8 +531,33 @@
                     "options": [
                         {"addRule": {"id": "field_radio"}, "modelLimit": 1}
                     ],
-                    "min": 4,
-                    "max": 9
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "stormtrooper_specialist": {
+            "name": "Stormtrooper Specialist",
+            "description": "Specially equipped and elite trained stormtrooper infantry.",
+            "category": "specialist",
+            "keywords": ["Storm Trooper", "Infantry"],
+            "models": [
+                {
+                    "name": "Stormtrooper Specialist",
+                    "courage": 5,
+                    "shoot": 6,
+                    "fight": 5,
+                    "defense": 6,
+                    "reflexes": 6,
+                    "movement": 6,
+                    "weapons": ["heavy_defense_rifle", "frags", "ccw"],
+                    "options": [
+                        {"addRule": {"id": "field_radio"}, "modelLimit": 1},
+                        {"addRule": {"id": "ambush", "name": "Orbital Insertion"}},
+                        {"replaceWeapon": "heavy_defense_rifle", "withWeapon": ["flamethrower", "volley_gun", "plasma_rifle", "grenade_launcher", "fusion_rifle", "sniper_rifle"]}
+                    ],
+                    "min": 1,
+                    "max": 1
                 }
             ]
         },
