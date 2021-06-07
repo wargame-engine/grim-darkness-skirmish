@@ -139,7 +139,44 @@
             "url": "undercity_gangs.json",
             "color": "#8a552c",
             "version": "0.1",
-            "description": "The Undercity on many manufacturing worlds is filled with criminal gangs vying for power. Occasionally they will ally together to defeat a common enemy and maintain the status quo."
+            "description": "The Undercity on many manufacturing worlds is filled with criminal gangs vying for power. Occasionally they will ally together to defeat a common enemy and maintain the status quo.",
+            "subfactions": {
+                "finesse_focus": {
+                    "name": "Finesse",
+                    "id": "finesse_focus",
+                    "description": "An Undercity gang focused on finesse and blade mastery."
+                },
+                "brute_focus": {
+                    "name": "Brutes",
+                    "id": "brute_focus",
+                    "color": "#18abcc",
+                    "description": "An Undercity gang focused on raw strength and brutality."
+                },
+                "assault_focus": {
+                    "name": "Assault",
+                    "id": "assault_focus",
+                    "color": "#18abcc",
+                    "description": "An Undercity gang focused on getting close and deadly with firepower."
+                },
+                "tech_focus": {
+                    "name": "Tech",
+                    "id": "tech_focus",
+                    "color": "#18abcc",
+                    "description": "An Undercity gang focused on high tech weaponry and tactical supremacy."
+                },
+                "trickery_focus": {
+                    "name": "Trickery",
+                    "id": "trickery_focus",
+                    "color": "#18abcc",
+                    "description": "An Undercity gang focused on trickery and underhanded tactics."
+                },
+                "zealot_focus": {
+                    "name": "Zealot",
+                    "id": "zealot_focus",
+                    "color": "#18abcc",
+                    "description": "An Undercity gang focused on zealous fighting."
+                }
+            }
         },
         "traitor_marines": {
             "name": "Traitor Marines",
@@ -447,6 +484,7 @@
         },
         "light_laser_cannon": {"name": "Light Laser Cannon", "attacks": 1, "short": 18, "medium": 36, "ap": 7},
         "marine_shotgun": {"name": "Marine Shotgun", "attacks": 1, "short": 6, "medium": 12, "ap": 1, "rules": ["assault", "brutal"]},
+        "combat_shotgun": {"name": "Combat Shotgun", "attacks": 1, "short": 6, "medium": 12, "ap": 1, "rules": ["assault", "brutal"]},
         "shotgun": {"name": "Shotgun", "attacks": 1, "short": 6, "medium": 12, "rules": ["assault", "brutal"]},
         "energy_claws": {"name": "Energy Claws", "attacks": 1, "short": "Melee", "ap": 2, "rules": ["rending"]},
         "plasma_pistol": {
@@ -523,6 +561,7 @@
         "heavy_autocannon": {"name": "Heavy Autocannon", "attacks": 4, "short": 24, "medium": 48, "ap": 4},
         "battle_cannon": {"name": "Battle Cannon", "attacks": 1, "ap": 6, "short": 24, "medium": 48, "rules": [{"id": "blast", "x": 3}]},
         "crab_cannon": {"name": "Crab Cannon", "attacks": 1, "ap": 5, "short": 18, "medium": 36, "rules": [{"id": "blast", "x": 3}]},
+        "rifle": {"name": "Rifle", "attacks": 1, "short": 12, "medium": 24},
         "defense_rifle": {"name": "Defense Rifle", "attacks": 1, "short": 12, "medium": 24, "rules": ["rapid_fire"]},
         "defense_rifle_array": {"name": "Defense Rifle Array", "attacks": 3, "short": 12, "medium": 24, "rules": ["rapid_fire"]},
         "assault_rifle": {"name": "Assault Rifle", "attacks": 1, "short": 12, "medium": 24, "rules": ["assault"]},

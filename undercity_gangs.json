@@ -4,11 +4,157 @@
     "background": "Uplifted millenia ago by an unknown precursor race, the Ascended Astro-Raptors advanced from feral beasts to exploring the stars with high-tech lasers and armor.",
     "author": "guitarninja#5707",
     "units": {
+        "gang_leader": {
+            "name": "Gang Leader",
+            "description": "The gang leader and current highest ranking member.",
+            "category": "command",
+            "keywords": ["Infantry"],
+            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "gang_tactics", "x": 2},  {"id": "wounds", "x": 2}],
+            "models": [
+                {
+                    "name": "Gang Leader",
+                    "courage": 7,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 5,
+                    "reflexes": 6,
+                    "movement": 6,
+                    "weapons": ["rifle", "frags", {"id": "ccw", "count": 2}],
+                    "options": [
+                        {"addRule": ["flak_armor_leader", "mesh_armor_leader"], "limit": 1},
+                        {"replaceWeapon": "rifle", "withWeapon": ["shotgun"]},
+                        {"replaceWeapon": ["rifle", "ccw"], "withWeapon": [["pistol", {"id": "ccw", "count": 2}], {"id": "pistol", "count": 2}, {"id": "ccw", "count": 3}]},
+                        {"replaceWeapon": "pistol", "withWeapon": ["heavy_pistol"]},
+                        {"replaceWeapon": {"id": "ccw", "count": 2}, "withWeapon": [{"id": "heavy_ccw", "count": 2}]}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "recruit": {
+            "name": "Recruit",
+            "description": "A new member with very little experience.",
+            "category": "core",
+            "keywords": ["Infantry"],
+            "models": [
+                {
+                    "name": "Recruit",
+                    "courage": 5,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 4,
+                    "reflexes": 4,
+                    "movement": 6,
+                    "weapons": ["rifle", "frags", "ccw"],
+                    "options": [
+                        {"addRule": ["flak_armor", "mesh_armor"], "limit": 1},
+                        {"replaceWeapon": "rifle", "withWeapon": ["shotgun"]},
+                        {"replaceWeapon": ["rifle", "ccw"], "withWeapon": [["pistol", {"id": "ccw", "count": 2}], {"id": "pistol", "count": 2}, {"id": "ccw", "count": 3}]},
+                        {"replaceWeapon": "pistol", "withWeapon": ["heavy_pistol"]},
+                        {"replaceWeapon": {"id": "ccw", "count": 2}, "withWeapon": [{"id": "heavy_ccw", "count": 2}]}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "ganger": {
+            "name": "Ganger",
+            "description": "A hardened gang member who has finished initiation.",
+            "category": "core",
+            "keywords": ["Infantry"],
+            "models": [
+                {
+                    "name": "Ganger",
+                    "courage": 5,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "movement": 6,
+                    "weapons": ["rifle", "frags", "ccw"],
+                    "options": [
+                        {"addRule": ["flak_armor", "mesh_armor"], "limit": 1},
+                        {"replaceWeapon": "rifle", "withWeapon": ["shotgun"]},
+                        {"replaceWeapon": ["rifle", "ccw"], "withWeapon": [["pistol", {"id": "ccw", "count": 2}], {"id": "pistol", "count": 2}, {"id": "ccw", "count": 3}]},
+                        {"replaceWeapon": "pistol", "withWeapon": ["heavy_pistol"]},
+                        {"replaceWeapon": {"id": "ccw", "count": 2}, "withWeapon": [{"id": "heavy_ccw", "count": 2}]}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "ganger_specialist": {
+            "name": "Ganger Specialist",
+            "description": "A hardened gang member who has finished initiation.",
+            "category": "specialist",
+            "keywords": ["Infantry"],
+            "models": [
+                {
+                    "name": "Ganger Specialist",
+                    "courage": 5,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "movement": 6,
+                    "weapons": ["rifle", "frags", "ccw"],
+                    "options": [
+                        {"addRule": ["flak_armor", "mesh_armor"], "limit": 1},
+                        {"replaceWeapon": "rifle", "withWeapon": ["flamethrower"]},
+                        {"replaceWeapon": ["rifle", "ccw"], "withWeapon": [["pistol", {"id": "ccw", "count": 2}], {"id": "pistol", "count": 2}, {"id": "ccw", "count": 3}]},
+                        {"replaceWeapon": "pistol", "withWeapon": ["heavy_pistol"]},
+                        {"replaceWeapon": {"id": "ccw", "count": 2}, "withWeapon": [{"id": "heavy_ccw", "count": 2}]}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "ganger_heavy": {
+            "name": "Ganger Heavy",
+            "description": "A hardened gang member who has finished initiation.",
+            "category": "heavy",
+            "keywords": ["Infantry"],
+            "models": [
+                {
+                    "name": "Ganger Heavy",
+                    "courage": 5,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "movement": 6,
+                    "weapons": ["rifle", "frags", "ccw"],
+                    "options": [
+                        {"addRule": ["flak_armor", "mesh_armor"], "limit": 1},
+                        {"replaceWeapon": "rifle", "withWeapon": ["light_machinegun"]},
+                        {"replaceWeapon": ["rifle", "ccw"], "withWeapon": [["pistol", {"id": "ccw", "count": 2}], {"id": "pistol", "count": 2}, {"id": "ccw", "count": 3}]},
+                        {"replaceWeapon": "pistol", "withWeapon": ["heavy_pistol"]},
+                        {"replaceWeapon": {"id": "ccw", "count": 2}, "withWeapon": [{"id": "heavy_ccw", "count": 2}]}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        }
     },
     "weapons": {
         
     },
     "rules": {
+        "gang_tactics": {
+            "name": "Gang Tactics",
+            "inputs": ["x"],
+            "description": "When this unit is activated, choose up to X friendly _Infantry_ units within 6\" to receive one of the following bonuses until the end of the round: \n * Re-roll failed Accuracy tests of 9+ \n * Re-roll failed Strength tests of 9+ \n * +3\" of Movement",
+            "points": ["rule.x", {"multiply": 5}]
+        },
+        "flak_armor_leader": {"name": "Flak Armor", "hidden": true, "description": "This model gets +1 Save.", "description_short": "Save +1", "points": 4},
+        "mesh_armor_leader": {"name": "Mesh Armor", "hidden": true, "description": "This model gets +2 Save.", "description_short": "Save +2", "points": 8},
+        "flak_armor": {"name": "Flak Armor", "hidden": true, "description": "This model gets +1 Save.", "description_short": "Save +1", "points": 2},
+        "mesh_armor": {"name": "Mesh Armor", "hidden": true, "description": "This model gets +2 Save.", "description_short": "Save +2", "points": 4}
     },
     "powers": {
     },

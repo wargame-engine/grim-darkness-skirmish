@@ -676,7 +676,7 @@
             "name": "Defense Force Tactics",
             "inputs": ["x"],
             "description": "When this unit is activated, choose up to X friendly _Infantry_ units within 6\" to receive one of the following bonuses until the end of the round: \n * Re-roll failed Accuracy tests of 9+ \n * Re-roll failed Strength tests of 9+ \n * +3\" of Movement",
-            "points": ["rule.x", {"multiply": 10}]
+            "points": ["rule.x", {"multiply": 5}]
         },
         "ogre_shield": {"name": "Ogre Shield", "description_short": "+1 Save", "description": "This model gets +1 Save.", "points": 2},
         "no_retreat": {
@@ -686,12 +686,6 @@
         },
         "extra_armor": {"name": "Reinforced Hull", "description": "Subtract 1 from all Damage Table(X) rolls for this model.", "points": 10},
         "heavy_armor": {"name": "Heavy Armor", "hidden": true, "description": "This model gets +1 Save.", "description_short": "Save +1", "points": 2},
-        "battle_tank_tactics": {
-            "name": "Battle Tank Tactics",
-            "inputs": ["x"],
-            "description": "When this unit is activated, choose up to X friendly _Battle Tank_ units within 6\" to receive one of the following bonuses until the end of the round: \n * Re-roll failed Accuracy tests of 9+ \n * +3\" Movement \n * Impact(+3).",
-            "points": ["rule.x", {"multiply": 15}]
-        },
         "banner": {"name": "Inspiring Banner", "description": "Friendly _Infantry_ units within 6\" get +1 Courage.", "points": 10}
     },
     "powers": {
