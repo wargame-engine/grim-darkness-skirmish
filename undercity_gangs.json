@@ -24,9 +24,7 @@
                         {"addRule": [{"id": "gang_tactics", "x": 1}, {"id": "gang_tactics", "x": 2}], "limit": 1},
                         {"addRule": ["flak_armor_leader", "mesh_armor_leader"], "limit": 1},
                         {"replaceWeapon": "rifle", "withWeapon": ["shotgun"]},
-                        {"replaceWeapon": ["rifle", "ccw"], "withWeapon": [["pistol", {"id": "ccw", "count": 2}], {"id": "pistol", "count": 2}, {"id": "ccw", "count": 3}]},
-                        {"replaceWeapon": "pistol", "withWeapon": ["heavy_pistol"]},
-                        {"replaceWeapon": {"id": "ccw", "count": 2}, "withWeapon": [{"id": "heavy_ccw", "count": 2}]}
+                        {"replaceWeapon": ["rifle", "ccw"], "withWeapon": [["pistol", {"id": "ccw", "count": 2}], {"id": "pistol", "count": 2}, {"id": "ccw", "count": 3}]}
                     ],
                     "min": 1,
                     "max": 1
@@ -53,9 +51,7 @@
                         {"addRule": ["champion"]},
                         {"addRule": ["flak_armor", "mesh_armor"], "limit": 1},
                         {"replaceWeapon": "rifle", "withWeapon": ["shotgun"]},
-                        {"replaceWeapon": ["rifle", "ccw"], "withWeapon": [["pistol", {"id": "ccw", "count": 2}], {"id": "pistol", "count": 2}, {"id": "ccw", "count": 3}]},
-                        {"replaceWeapon": "pistol", "withWeapon": ["heavy_pistol"]},
-                        {"replaceWeapon": {"id": "ccw", "count": 2}, "withWeapon": [{"id": "heavy_ccw", "count": 2}]}
+                        {"replaceWeapon": ["rifle", "ccw"], "withWeapon": [["pistol", {"id": "ccw", "count": 2}], {"id": "pistol", "count": 2}, {"id": "ccw", "count": 3}]}
                     ],
                     "min": 1,
                     "max": 1
@@ -80,9 +76,7 @@
                     "options": [
                         {"addRule": ["flak_armor", "mesh_armor"], "limit": 1},
                         {"replaceWeapon": "rifle", "withWeapon": ["shotgun"]},
-                        {"replaceWeapon": ["rifle", "ccw"], "withWeapon": [["pistol", {"id": "ccw", "count": 2}], {"id": "pistol", "count": 2}, {"id": "ccw", "count": 3}]},
-                        {"replaceWeapon": "pistol", "withWeapon": ["heavy_pistol"]},
-                        {"replaceWeapon": {"id": "ccw", "count": 2}, "withWeapon": [{"id": "heavy_ccw", "count": 2}]}
+                        {"replaceWeapon": ["rifle", "ccw"], "withWeapon": [["pistol", {"id": "ccw", "count": 2}], {"id": "pistol", "count": 2}, {"id": "ccw", "count": 3}]}
                     ],
                     "min": 1,
                     "max": 1
@@ -107,9 +101,7 @@
                     "options": [
                         {"addRule": ["flak_armor", "mesh_armor"], "limit": 1},
                         {"replaceWeapon": "rifle", "withWeapon": ["shotgun"]},
-                        {"replaceWeapon": ["rifle", "ccw"], "withWeapon": [["pistol", {"id": "ccw", "count": 2}], {"id": "pistol", "count": 2}, {"id": "ccw", "count": 3}]},
-                        {"replaceWeapon": "pistol", "withWeapon": ["heavy_pistol"]},
-                        {"replaceWeapon": {"id": "ccw", "count": 2}, "withWeapon": [{"id": "heavy_ccw", "count": 2}]}
+                        {"replaceWeapon": ["rifle", "ccw"], "withWeapon": [["pistol", {"id": "ccw", "count": 2}], {"id": "pistol", "count": 2}, {"id": "ccw", "count": 3}]}
                     ],
                     "min": 1,
                     "max": 1
@@ -134,9 +126,7 @@
                     "options": [
                         {"addRule": ["flak_armor", "mesh_armor"], "limit": 1},
                         {"replaceWeapon": "rifle", "withWeapon": ["flamethrower"]},
-                        {"replaceWeapon": ["rifle", "ccw"], "withWeapon": [["pistol", {"id": "ccw", "count": 2}], {"id": "pistol", "count": 2}, {"id": "ccw", "count": 3}]},
-                        {"replaceWeapon": "pistol", "withWeapon": ["heavy_pistol"]},
-                        {"replaceWeapon": {"id": "ccw", "count": 2}, "withWeapon": [{"id": "heavy_ccw", "count": 2}]}
+                        {"replaceWeapon": ["rifle", "ccw"], "withWeapon": [["pistol", {"id": "ccw", "count": 2}], {"id": "pistol", "count": 2}, {"id": "ccw", "count": 3}]}
                     ],
                     "min": 1,
                     "max": 1
@@ -161,9 +151,7 @@
                     "options": [
                         {"addRule": ["flak_armor", "mesh_armor"], "limit": 1},
                         {"replaceWeapon": "rifle", "withWeapon": ["light_machinegun"]},
-                        {"replaceWeapon": ["rifle", "ccw"], "withWeapon": [["pistol", {"id": "ccw", "count": 2}], {"id": "pistol", "count": 2}, {"id": "ccw", "count": 3}]},
-                        {"replaceWeapon": "pistol", "withWeapon": ["heavy_pistol"]},
-                        {"replaceWeapon": {"id": "ccw", "count": 2}, "withWeapon": [{"id": "heavy_ccw", "count": 2}]}
+                        {"replaceWeapon": ["rifle", "ccw"], "withWeapon": [["pistol", {"id": "ccw", "count": 2}], {"id": "pistol", "count": 2}, {"id": "ccw", "count": 3}]}
                     ],
                     "min": 1,
                     "max": 1
