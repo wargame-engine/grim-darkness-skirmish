@@ -74,8 +74,8 @@
                 }
             ]
         },
-        "defenders": {
-            "name": "Defender Squad",
+        "defender_leader": {
+            "name": "Defender Leader",
             "description": "A group of high elf warriors.",
             "category": "core",
             "keywords": ["Infantry"],
@@ -88,10 +88,19 @@
                     "fight": 5,
                     "defense": 5,
                     "reflexes": 6,
+                    "rules": ["leader"],
                     "weapons": ["shard_carbine", "plasma_grenade", {"id": "ccw", "count": 1}],
                     "min": 1,
                     "max": 1
-                },
+                }
+            ]
+        },
+        "defender": {
+            "name": "Defender",
+            "description": "A group of high elf warriors.",
+            "category": "core",
+            "keywords": ["Infantry"],
+            "models": [
                 {
                     "name": "Defender",
                     "courage": 5,
@@ -101,11 +110,19 @@
                     "defense": 5,
                     "reflexes": 6,
                     "weapons": ["shard_carbine", "plasma_grenade", {"id": "ccw", "count": 1}],
-                    "min": 4,
-                    "max": 19
-                },
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "defender_weapon_platform": {
+            "name": "Defender Weapon Platform",
+            "description": "A group of high elf warriors.",
+            "category": "heavy",
+            "keywords": ["Infantry"],
+            "models": [
                 {
-                    "name": "Weapon Platform",
+                    "name": "Defender Weapon Platform",
                     "courage": 5,
                     "shoot": 6,
                     "fight": 5,
@@ -124,7 +141,7 @@
                             ]
                         }
                     ],
-                    "min": 0,
+                    "min": 1,
                     "max": 1
                 }
             ]
