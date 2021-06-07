@@ -22,9 +22,10 @@
                     "weapons": ["rifle", "frags", {"id": "ccw", "count": 2}],
                     "options": [
                         {"addRule": [{"id": "gang_tactics", "x": 1}, {"id": "gang_tactics", "x": 2}], "limit": 1},
-                        {"addRule": ["flak_armor_leader", "mesh_armor_leader"], "limit": 1},
-                        {"replaceWeapon": "rifle", "withWeapon": ["shotgun"]},
-                        {"replaceWeapon": ["rifle", "ccw"], "withWeapon": [["pistol", {"id": "ccw", "count": 2}], {"id": "pistol", "count": 2}, {"id": "ccw", "count": 3}]}
+                        {"addRule": ["light_armor_leader", "medium_armor_leader", "heavy_armor_leader"], "limit": 1},
+                        {"replaceWeapon": "rifle", "withWeapon": ["shotgun", "defense_rifle"]},
+                        {"replaceWeapon": ["rifle", "ccw"], "withWeapon": [["pistol", {"id": "ccw", "count": 2}], {"id": "pistol", "count": 2}, {"id": "ccw", "count": 3}]},
+                        {"replaceWeapon": "pistol", "withWeapon": ["assault_pistol", "burst_pistol"], "count": 2}
                     ],
                     "min": 1,
                     "max": 1
@@ -49,9 +50,10 @@
                     "rules": ["leader"],
                     "options": [
                         {"addRule": ["champion"]},
-                        {"addRule": ["flak_armor", "mesh_armor"], "limit": 1},
-                        {"replaceWeapon": "rifle", "withWeapon": ["shotgun"]},
-                        {"replaceWeapon": ["rifle", "ccw"], "withWeapon": [["pistol", {"id": "ccw", "count": 2}], {"id": "pistol", "count": 2}, {"id": "ccw", "count": 3}]}
+                        {"addRule": ["light_armor", "medium_armor", "heavy_armor"], "limit": 1},
+                        {"replaceWeapon": "rifle", "withWeapon": ["shotgun", "defense_rifle"]},
+                        {"replaceWeapon": ["rifle", "ccw"], "withWeapon": [["pistol", {"id": "ccw", "count": 2}], {"id": "pistol", "count": 2}, {"id": "ccw", "count": 3}]},
+                        {"replaceWeapon": "pistol", "withWeapon": ["assault_pistol", "burst_pistol"], "count": 2}
                     ],
                     "min": 1,
                     "max": 1
@@ -74,9 +76,10 @@
                     "movement": 6,
                     "weapons": ["rifle", "frags", "ccw"],
                     "options": [
-                        {"addRule": ["flak_armor", "mesh_armor"], "limit": 1},
-                        {"replaceWeapon": "rifle", "withWeapon": ["shotgun"]},
-                        {"replaceWeapon": ["rifle", "ccw"], "withWeapon": [["pistol", {"id": "ccw", "count": 2}], {"id": "pistol", "count": 2}, {"id": "ccw", "count": 3}]}
+                        {"addRule": ["light_armor", "medium_armor"], "limit": 1},
+                        {"replaceWeapon": "rifle", "withWeapon": ["shotgun", "defense_rifle"]},
+                        {"replaceWeapon": ["rifle", "ccw"], "withWeapon": [["pistol", {"id": "ccw", "count": 2}], {"id": "pistol", "count": 2}, {"id": "ccw", "count": 3}]},
+                        {"replaceWeapon": "pistol", "withWeapon": ["assault_pistol", "burst_pistol"], "count": 2}
                     ],
                     "min": 1,
                     "max": 1
@@ -99,9 +102,10 @@
                     "movement": 6,
                     "weapons": ["rifle", "frags", "ccw"],
                     "options": [
-                        {"addRule": ["flak_armor", "mesh_armor"], "limit": 1},
-                        {"replaceWeapon": "rifle", "withWeapon": ["shotgun"]},
-                        {"replaceWeapon": ["rifle", "ccw"], "withWeapon": [["pistol", {"id": "ccw", "count": 2}], {"id": "pistol", "count": 2}, {"id": "ccw", "count": 3}]}
+                        {"addRule": ["light_armor", "medium_armor"], "limit": 1},
+                        {"replaceWeapon": "rifle", "withWeapon": ["shotgun", "defense_rifle"]},
+                        {"replaceWeapon": ["rifle", "ccw"], "withWeapon": [["pistol", {"id": "ccw", "count": 2}], {"id": "pistol", "count": 2}, {"id": "ccw", "count": 3}]},
+                        {"replaceWeapon": "pistol", "withWeapon": ["assault_pistol", "burst_pistol"], "count": 2}
                     ],
                     "min": 1,
                     "max": 1
@@ -124,7 +128,7 @@
                     "movement": 6,
                     "weapons": ["rifle", "frags", "ccw"],
                     "options": [
-                        {"addRule": ["flak_armor", "mesh_armor"], "limit": 1},
+                        {"addRule": ["light_armor", "medium_armor"], "limit": 1},
                         {"replaceWeapon": "rifle", "withWeapon": ["flamethrower"]},
                         {"replaceWeapon": ["rifle", "ccw"], "withWeapon": [["pistol", {"id": "ccw", "count": 2}], {"id": "pistol", "count": 2}, {"id": "ccw", "count": 3}]}
                     ],
@@ -149,7 +153,7 @@
                     "movement": 6,
                     "weapons": ["rifle", "frags", "ccw"],
                     "options": [
-                        {"addRule": ["flak_armor", "mesh_armor"], "limit": 1},
+                        {"addRule": ["light_armor", "medium_armor"], "limit": 1},
                         {"replaceWeapon": "rifle", "withWeapon": ["light_machinegun"]},
                         {"replaceWeapon": ["rifle", "ccw"], "withWeapon": [["pistol", {"id": "ccw", "count": 2}], {"id": "pistol", "count": 2}, {"id": "ccw", "count": 3}]}
                     ],
@@ -169,10 +173,12 @@
             "description": "When this unit is activated, choose up to X friendly _Infantry_ units within 6\" to receive one of the following bonuses until the end of the round: \n * Re-roll failed Accuracy tests of 9+ \n * Re-roll failed Strength tests of 9+ \n * +3\" of Movement",
             "points": ["rule.x", {"multiply": 5}]
         },
-        "flak_armor_leader": {"name": "Flak Armor", "hidden": true, "description": "This model gets +1 Save.", "description_short": "Save +1", "points": 4},
-        "mesh_armor_leader": {"name": "Mesh Armor", "hidden": true, "description": "This model gets +2 Save.", "description_short": "Save +2", "points": 8},
-        "flak_armor": {"name": "Flak Armor", "hidden": true, "description": "This model gets +1 Save.", "description_short": "Save +1", "points": 2},
-        "mesh_armor": {"name": "Mesh Armor", "hidden": true, "description": "This model gets +2 Save.", "description_short": "Save +2", "points": 4}
+        "light_armor_leader": {"name": "Light Armor", "hidden": true, "description": "This model gets +1 Save.", "description_short": "Save +1", "points": 4},
+        "medium_armor_leader": {"name": "Medium Armor", "hidden": true, "description": "This model gets +2 Save.", "description_short": "Save +2", "points": 8},
+        "heavy_armor_leader": {"name": "Heavy Armor", "hidden": true, "description": "This model gets +3 Save.", "description_short": "Save +3", "points": 12},
+        "light_armor": {"name": "Light Armor", "hidden": true, "description": "This model gets +1 Save.", "description_short": "Save +1", "points": 2},
+        "medium_armor": {"name": "Medium Armor", "hidden": true, "description": "This model gets +2 Save.", "description_short": "Save +2", "points": 4},
+        "heavy_armor": {"name": "Heavy Armor", "hidden": true, "description": "This model gets +3 Save.", "description_short": "Save +3", "points": 6}
     },
     "powers": {
     },
