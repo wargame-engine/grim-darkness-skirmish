@@ -9,7 +9,7 @@
             "description": "The gang leader and current highest ranking member.",
             "category": "command",
             "keywords": ["Infantry"],
-            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "gang_tactics", "x": 2},  {"id": "wounds", "x": 2}],
+            "rules": [{"id": "leader_x", "x": "Infantry"},  {"id": "wounds", "x": 3}],
             "models": [
                 {
                     "name": "Gang Leader",
@@ -21,7 +21,37 @@
                     "movement": 6,
                     "weapons": ["rifle", "frags", {"id": "ccw", "count": 2}],
                     "options": [
+                        {"addRule": [{"id": "gang_tactics", "x": 1}, {"id": "gang_tactics", "x": 2}], "limit": 1},
                         {"addRule": ["flak_armor_leader", "mesh_armor_leader"], "limit": 1},
+                        {"replaceWeapon": "rifle", "withWeapon": ["shotgun"]},
+                        {"replaceWeapon": ["rifle", "ccw"], "withWeapon": [["pistol", {"id": "ccw", "count": 2}], {"id": "pistol", "count": 2}, {"id": "ccw", "count": 3}]},
+                        {"replaceWeapon": "pistol", "withWeapon": ["heavy_pistol"]},
+                        {"replaceWeapon": {"id": "ccw", "count": 2}, "withWeapon": [{"id": "heavy_ccw", "count": 2}]}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "ganger_champion": {
+            "name": "Gang Champion",
+            "description": "A ganger who has risen through the ranks.",
+            "category": "command",
+            "keywords": ["Infantry"],
+            "models": [
+                {
+                    "name": "Ganger Champion",
+                    "courage": 6,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "movement": 6,
+                    "weapons": ["rifle", "frags", "ccw"],
+                    "rules": ["leader"],
+                    "options": [
+                        {"addRule": ["champion"]},
+                        {"addRule": ["flak_armor", "mesh_armor"], "limit": 1},
                         {"replaceWeapon": "rifle", "withWeapon": ["shotgun"]},
                         {"replaceWeapon": ["rifle", "ccw"], "withWeapon": [["pistol", {"id": "ccw", "count": 2}], {"id": "pistol", "count": 2}, {"id": "ccw", "count": 3}]},
                         {"replaceWeapon": "pistol", "withWeapon": ["heavy_pistol"]},
