@@ -74,27 +74,6 @@
                 }
             ]
         },
-        "war_god_avatar": {
-            "name": "War God Avatar",
-            "description": "A recently risen avatar of an ancient elven god of war.",
-            "category": "command",
-            "keywords": [],
-            "rules": [{"id": "resilient", "x": 3}, {"id": "wounds", "x": 4}, {"id": "leader_x", "x": "Infantry"}],
-            "models": [
-                {
-                    "name": "War God Avatar",
-                    "courage": 8,
-                    "movement": 7,
-                    "shoot": 7,
-                    "fight": 7,
-                    "defense": 10,
-                    "reflexes": 6,
-                    "weapons": [{"id": "shreiking_spear_melee", "count": 5}, "shreiking_spear_shoot"],
-                    "min": 1,
-                    "max": 1
-                }
-            ]
-        },
         "defenders": {
             "name": "Defender Squad",
             "description": "A group of high elf warriors.",
@@ -150,8 +129,42 @@
                 }
             ]
         },
-        "avengers": {
-            "name": "Avenger Squad",
+        "avenger_leader": {
+            "name": "Avenger Leader",
+            "description": "A group of elite high elf warriors.",
+            "min": 1,
+            "max": 1,
+            "category": "command",
+            "keywords": ["Infantry"],
+            "models": [
+                {
+                    "name": "Avenger Leader",
+                    "courage": 6,
+                    "movement": 7,
+                    "shoot": 6,
+                    "fight": 5,
+                    "defense": 6,
+                    "reflexes": 7,
+                    "rules": ["leader"],
+                    "weapons": ["shard_carbine", "plasma_grenade", {"id": "ccw", "count": 1}],
+                    "options": [
+                        {
+                            "replaceWeapon": ["shard_carbine", {"id": "ccw", "count": 1}],
+                            "withWeapon": [
+                                [{"id": "shard_carbine", "count": 2}, {"id": "ccw", "count": 1}],
+                                [{"id": "energy_glaive", "count": 2}, "shining_shield"],
+                                ["shard_pistol", {"id": "energy_sword", "count": 2}],
+                                ["shard_pistol", {"id": "energy_glaive", "count": 2}]
+                            ]
+                        }
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "avenger": {
+            "name": "Avenger",
             "description": "A group of elite high elf warriors.",
             "min": 1,
             "max": 1,
@@ -167,23 +180,42 @@
                     "defense": 6,
                     "reflexes": 7,
                     "weapons": ["shard_carbine", "plasma_grenade", {"id": "ccw", "count": 1}],
-                    "options": [{"replaceModel": "avenger_leader", "modelLimit": 1}],
-                    "min": 5,
-                    "max": 10
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "ranger_leader": {
+            "name": "Ranger Leader",
+            "description": "A group of high elf warriors.",
+            "category": "command",
+            "keywords": ["Infantry"],
+            "rules": ["stealth", "ambush"],
+            "models": [
+                {
+                    "name": "Ranger Leader",
+                    "courage": 5,
+                    "movement": 7,
+                    "shoot": 6,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 6,
+                    "rules": ["leader"],
+                    "weapons": ["shard_sniper", "plasma_grenade", {"id": "ccw", "count": 1}],
+                    "min": 1,
+                    "max": 1
                 }
             ]
         },
         "rangers": {
-            "name": "Ranger Squad",
+            "name": "Ranger",
             "description": "A group of high elf warriors.",
-            "min": 1,
-            "max": 1,
             "category": "core",
             "keywords": ["Infantry"],
             "rules": ["stealth", "ambush"],
             "models": [
                 {
-                    "name": "Rangers",
+                    "name": "Ranger",
                     "courage": 5,
                     "movement": 7,
                     "shoot": 6,
@@ -191,16 +223,40 @@
                     "defense": 5,
                     "reflexes": 6,
                     "weapons": ["shard_sniper", "plasma_grenade", {"id": "ccw", "count": 1}],
-                    "min": 5,
-                    "max": 10
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "storm_leader": {
+            "name": "Storm Troop Leader",
+            "description": "A group of high elf assault troops.",
+            "category": "command",
+            "keywords": ["Infantry"],
+            "models": [
+                {
+                    "name": "Storm Troop Leader",
+                    "courage": 5,
+                    "movement": 7,
+                    "shoot": 5,
+                    "fight": 6,
+                    "defense": 5,
+                    "reflexes": 6,
+                    "rules": ["leader"],
+                    "weapons": ["shard_pistol", "plasma_grenade", {"id": "elven_blade", "count": 2}],
+                    "options": [
+                        {"replaceWeapon": {"id": "elven_blade", "count": 2}, "withWeapon": [{"id": "chainsword", "count": 2}]},
+                        {"replaceWeapon": {"id": "elven_blade", "count": 2}, "withWeapon": {"id": "energy_sword", "count": 2}, "modelLimit": 2},
+                        {"replaceWeapon": [{"id": "elven_blade", "count": 1}, "shard_pistol"], "withWeapon": ["flamethrower", "fusion_rifle"], "modelLimit": 2}
+                    ],
+                    "min": 1,
+                    "max": 1
                 }
             ]
         },
         "storm_squad": {
-            "name": "Storm Squad",
+            "name": "Storm Troop",
             "description": "A group of high elf assault troops.",
-            "min": 1,
-            "max": 1,
             "category": "core",
             "keywords": ["Infantry"],
             "models": [
@@ -218,16 +274,36 @@
                         {"replaceWeapon": {"id": "elven_blade", "count": 2}, "withWeapon": {"id": "energy_sword", "count": 2}, "modelLimit": 2},
                         {"replaceWeapon": [{"id": "elven_blade", "count": 1}, "shard_pistol"], "withWeapon": ["flamethrower", "fusion_rifle"], "modelLimit": 2}
                     ],
-                    "min": 5,
-                    "max": 24
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "dragon_fire_leader": {
+            "name": "Dragon Fire Leader",
+            "description": "A group of highly trained soldiers weilding powerful guns designed to melt through even the thickest of armor.",
+            "category": "command",
+            "keywords": ["Infantry"],
+            "models": [
+                {
+                    "name": "Dragon Fire Leader",
+                    "courage": 6,
+                    "movement": 7,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 7,
+                    "reflexes": 6,
+                    "weapons": ["fusion_rifle", "fusion_bomb"],
+                    "rules": ["champion", "leader"],
+                    "options": [{"replaceWeapon": "fusion_rifle", "withWeapon": ["dragon_flamethrower"]}],
+                    "min": 1,
+                    "max": 1
                 }
             ]
         },
         "dragon_fire": {
-            "name": "Dragon Fire Squad",
+            "name": "Dragon Fire Warrior",
             "description": "A group of highly trained soldiers weilding powerful guns designed to melt through even the thickest of armor.",
-            "min": 1,
-            "max": 1,
             "category": "specialist",
             "keywords": ["Infantry"],
             "models": [
@@ -240,17 +316,45 @@
                     "defense": 7,
                     "reflexes": 6,
                     "weapons": ["fusion_rifle", "fusion_bomb"],
-                    "options": [{"replaceModel": "dragon_leader", "modelLimit": 1}],
-                    "min": 5,
-                    "max": 10
+                    "min": 1,
+                    "max": 1
                 }
             ]
         },
-        "wraith_squad": {
-            "name": "Wraith Squad",
+        "wraith_leader": {
+            "name": "Wraith Leader",
             "description": "A group of heavily armored constructs.",
-            "min": 1,
-            "max": 1,
+            "category": "command",
+            "keywords": ["Infantry"],
+            "models": [
+                {
+                    "name": "Wraith Leader",
+                    "courage": 6,
+                    "movement": 5,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 9,
+                    "reflexes": 6,
+                    "rules": ["leader", {"id": "wounds", "x": 2}],
+                    "weapons": [{"id": "wraith_sword", "count": 2}],
+                    "options": [
+                        {
+                            "replaceWeapon": [{"id": "wraith_sword", "count": 2}],
+                            "withWeapon": [
+                                [{"id": "wraith_axe", "count": 2}, "forcefield_shield"],
+                                ["wraith_cannon", {"id": "wraith_fists", "count": 1}],
+                                ["distortion_rifle", {"id": "wraith_fists", "count": 1}]
+                            ]
+                        }
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "wraith": {
+            "name": "Wraith",
+            "description": "A group of heavily armored constructs.",
             "category": "specialist",
             "keywords": ["Infantry"],
             "models": [
@@ -271,12 +375,11 @@
                                 [{"id": "wraith_axe", "count": 2}, "forcefield_shield"],
                                 ["wraith_cannon", {"id": "wraith_fists", "count": 1}],
                                 ["distortion_rifle", {"id": "wraith_fists", "count": 1}]
-                            ],
-                            "modelLimit": "all"
+                            ]
                         }
                     ],
-                    "min": 5,
-                    "max": 10
+                    "min": 1,
+                    "max": 1
                 }
             ]
         },
@@ -371,11 +474,32 @@
                 }
             ]
         },
-        "scorpions": {
-            "name": "Scorpion Squad",
+        "scorpion_leader": {
+            "name": "Scorpion Leader",
             "description": "A squad of warriors trained to weild chainswords and pistols to a deadly result.",
-            "min": 1,
-            "max": 1,
+            "category": "command",
+            "keywords": ["Infantry"],
+            "rules": ["ambush", "stealth"],
+            "models": [
+                {
+                    "name": "Scorpion Leader",
+                    "courage": 6,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 7,
+                    "reflexes": 6,
+                    "movement": 7,
+                    "rules": ["champion", "leader"],
+                    "weapons": [{"id": "chainsword", "count": 3}, "shard_pistol", "frags"],
+                    "options": [{"replaceWeapon": {"id": "chainsword", "count": 3}, "withWeapon": [{"id": "slicing_sword", "count": 3}]}, {"replaceWeapon": "shard_pistol", "withWeapon": ["scorpion_claw"]}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "scorpion": {
+            "name": "Scorpion Warrior",
+            "description": "A squad of warriors trained to weild chainswords and pistols to a deadly result.",
             "category": "specialist",
             "keywords": ["Infantry"],
             "rules": ["ambush", "stealth"],
@@ -389,9 +513,8 @@
                     "reflexes": 6,
                     "movement": 7,
                     "weapons": [{"id": "chainsword", "count": 2}, "shard_pistol", "frags"],
-                    "options": [{"replaceModel": "scorpion_leader", "modelLimit": 1}],
-                    "min": 5,
-                    "max": 10
+                    "min": 1,
+                    "max": 1
                 }
             ]
         },
@@ -493,57 +616,6 @@
         }
     },
     "models": {
-        "avenger_leader": {
-            "name": "Avenger Leader",
-            "courage": 6,
-            "movement": 7,
-            "shoot": 6,
-            "fight": 5,
-            "defense": 6,
-            "reflexes": 7,
-            "weapons": ["shard_carbine", "plasma_grenade", {"id": "ccw", "count": 1}],
-            "options": [
-                {
-                    "replaceWeapon": ["shard_carbine", {"id": "ccw", "count": 1}],
-                    "withWeapon": [
-                        [{"id": "shard_carbine", "count": 2}, {"id": "ccw", "count": 1}],
-                        [{"id": "energy_glaive", "count": 2}, "shining_shield"],
-                        ["shard_pistol", {"id": "energy_sword", "count": 2}],
-                        ["shard_pistol", {"id": "energy_glaive", "count": 2}]
-                    ]
-                }
-            ],
-            "min": 1,
-            "max": 1
-        },
-        "dragon_leader": {
-            "name": "Dragon Leader",
-            "courage": 6,
-            "movement": 7,
-            "shoot": 6,
-            "fight": 6,
-            "defense": 7,
-            "reflexes": 6,
-            "weapons": ["fusion_rifle", "fusion_bomb"],
-            "rules": ["champion"],
-            "options": [{"replaceWeapon": "fusion_rifle", "withWeapon": ["dragon_flamethrower"]}],
-            "min": 1,
-            "max": 1
-        },
-        "scorpion_leader": {
-            "name": "Scorpion Leader",
-            "courage": 6,
-            "shoot": 6,
-            "fight": 6,
-            "defense": 7,
-            "reflexes": 6,
-            "movement": 7,
-            "rules": ["champion"],
-            "weapons": [{"id": "chainsword", "count": 3}, "shard_pistol", "frags"],
-            "options": [{"replaceWeapon": {"id": "chainsword", "count": 3}, "withWeapon": [{"id": "slicing_sword", "count": 3}]}, {"replaceWeapon": "shard_pistol", "withWeapon": ["scorpion_claw"]}],
-            "min": 1,
-            "max": 1
-        },
         "spear_leader": {
             "name": "Glittering Spear Leader",
             "courage": 6,
