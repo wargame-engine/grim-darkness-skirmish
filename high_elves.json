@@ -77,7 +77,7 @@
         "defender_leader": {
             "name": "Defender Leader",
             "description": "A group of high elf warriors.",
-            "category": "core",
+            "category": "command",
             "keywords": ["Infantry"],
             "models": [
                 {
