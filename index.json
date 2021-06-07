@@ -133,6 +133,14 @@
             "description": "The Battle Sisters are a sect of the Human Empire which have a uniquely faithful and religious background. The Battle Sisters rely on prayer and faith in their holy symbols along with some good old fashioned holy fire to defeat their enemies.",
             "subfactions": {"assault_focus": {"name": "Assault", "id": "assault_focus", "color": "#4272b8", "description": "Battle Sisters focused on all-out assaults and aggression."}}
         },
+        "undercity_gangs": {
+            "name": "Undercity Gangs",
+            "id": "undercity_gangs",
+            "url": "undercity_gangs.json",
+            "color": "#8a552c",
+            "version": "0.1",
+            "description": "The Undercity on many manufacturing worlds is filled with criminal gangs vying for power. Occasionally they will ally together to defeat a common enemy and maintain the status quo."
+        },
         "traitor_marines": {
             "name": "Traitor Marines",
             "id": "traitor_marines",
