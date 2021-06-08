@@ -9,7 +9,7 @@
             "description": "The gang leader and current highest ranking member.",
             "category": "command",
             "keywords": ["Infantry"],
-            "rules": [{"id": "leader_x", "x": "Infantry"},  {"id": "wounds", "x": 3}],
+            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "wounds", "x": 3}],
             "models": [
                 {
                     "name": "Gang Leader",
@@ -129,8 +129,16 @@
                     "weapons": ["rifle", "frags", "ccw"],
                     "options": [
                         {"addRule": ["light_armor", "medium_armor"], "limit": 1},
-                        {"replaceWeapon": "rifle", "withWeapon": ["flamethrower"]},
-                        {"replaceWeapon": ["rifle", "ccw"], "withWeapon": [["pistol", {"id": "ccw", "count": 2}], {"id": "pistol", "count": 2}, {"id": "ccw", "count": 3}]}
+                        {"subfactions": ["finesse_focus"], "replaceWeapon": "rifle", "withWeapon": ["combi_barb_rifle", "barb_rifle", "barb_pistol", "fusion_rifle", "plasma_rifle"]},
+                        {"subfactions": ["none"], "replaceWeapon": "rifle", "withWeapon": ["shotgun", "defense_rifle"]},
+                        {"replaceWeapon": ["rifle", "ccw"], "withWeapon": [["pistol", {"id": "ccw", "count": 2}], {"id": "pistol", "count": 2}, {"id": "ccw", "count": 3}]},
+                        {"replaceWeapon": "pistol", "withWeapon": ["assault_pistol", "burst_pistol", "marine_pistol", "plasma_pistol", "flamethrower_pistol"], "count": 2},
+                        {
+                            "subfactions": ["finesse_focus"],
+                            "replaceWeapon": "ccw",
+                            "withWeapon": ["energy_knife", "energy_sword", "barb_knife", "barb_sword"],
+                            "count": 3
+                        }
                     ],
                     "min": 1,
                     "max": 1
@@ -163,9 +171,7 @@
             ]
         }
     },
-    "weapons": {
-        
-    },
+    "weapons": {},
     "rules": {
         "gang_tactics": {
             "name": "Gang Tactics",
@@ -180,8 +186,6 @@
         "medium_armor": {"name": "Medium Armor", "hidden": true, "description": "This model gets +2 Save.", "description_short": "Save +2", "points": 4},
         "heavy_armor": {"name": "Heavy Armor", "hidden": true, "description": "This model gets +3 Save.", "description_short": "Save +3", "points": 6}
     },
-    "powers": {
-    },
-    "strategies": {
-    }
+    "powers": {},
+    "strategies": {}
 }
