@@ -540,6 +540,7 @@
             "name": "Scout Marine Leader",
             "description": "Elite trained marines sworn to protect the Empire.",
             "category": "command",
+            "subfactions": ["none", "assault_focus"],
             "rules": ["scout"],
             "models": [
                 {
@@ -569,6 +570,7 @@
             "name": "Scout Marine",
             "description": "Elite trained marines sworn to protect the Empire.",
             "category": "specialist",
+            "subfactions": ["none", "assault_focus"],
             "rules": ["scout"],
             "models": [
                 {
@@ -598,6 +600,7 @@
             "name": "Scout Marine Heavy",
             "description": "Elite trained marines sworn to protect the Empire.",
             "category": "heavy",
+            "subfactions": ["none", "assault_focus"],
             "rules": ["scout"],
             "models": [
                 {
