@@ -2080,10 +2080,10 @@
                 }
             ]
         },
-        "purge_squad": {
+        "purge_marine": {
             "name": "Purge Marine",
             "description": "Marines trained to hunt demons with heavy psychic weapons.",
-            "category": "specialist",
+            "category": "heavy",
             "subfactions": ["psychic_marines"],
             "models": [
                 {
