@@ -448,6 +448,7 @@
             "name": "Marine Leader",
             "description": "Elite trained marines sworn to protect the Empire.",
             "category": "command",
+            "subfactions": ["none", "assault_focus", "wolf_marines"],
             "models": [
                 {
                     "name": "Marine Leader",
@@ -475,6 +476,7 @@
             "name": "Marine",
             "description": "Elite trained marines sworn to protect the Empire.",
             "category": "core",
+            "subfactions": ["none", "assault_focus", "wolf_marines"],
             "models": [
                 {
                     "name": "Marine",
@@ -494,6 +496,7 @@
             "name": "Marine Specialist",
             "description": "Elite trained marines sworn to protect the Empire.",
             "category": "specialist",
+            "subfactions": ["none", "assault_focus", "wolf_marines"],
             "models": [
                 {
                     "name": "Marine Specialist",
@@ -516,6 +519,7 @@
             "name": "Marine Heavy",
             "description": "Elite trained marines sworn to protect the Empire.",
             "category": "heavy",
+            "subfactions": ["none", "assault_focus", "wolf_marines"],
             "models": [
                 {
                     "name": "Marine Heavy",
@@ -1459,6 +1463,7 @@
             "name": "Assault Marine Leader",
             "description": "A squad of elite marines trained to fight in close combat.",
             "category": "command",
+            "subfactions": ["none", "assault_focus", "wolf_marines"],
             "models": [
                 {
                     "name": "Assault Marine Leader",
@@ -1494,6 +1499,7 @@
             "name": "Assault Marine",
             "description": "A squad of elite marines trained to fight in close combat.",
             "category": "strike",
+            "subfactions": ["none", "assault_focus", "wolf_marines"],
             "options": [],
             "models": [
                 {
@@ -1590,6 +1596,7 @@
             "name": "Veteran Assault Marine Leader",
             "description": "A squad of veteran marines trained to fight in close combat.",
             "category": "command",
+            "subfactions": ["none", "assault_focus", "wolf_marines"],
             "models": [
                 {
                     "name": "Veteran Assault Marine Leader",
@@ -1625,6 +1632,7 @@
             "name": "Veteran Assault Marine",
             "description": "A squad of veteran marines trained to fight in close combat.",
             "category": "specialist",
+            "subfactions": ["none", "assault_focus", "wolf_marines"],
             "models": [
                 {
                     "name": "Veteran Assault Marine",
@@ -1661,6 +1669,7 @@
             "description": "Marines clad in very heavy armor and highly trained.",
             "rules": ["ambush"],
             "category": "command",
+            "subfactions": ["none", "assault_focus", "wolf_marines"],
             "models": [
                 {
                     "name": "Destroyer Leader",
@@ -1712,6 +1721,7 @@
             "name": "Devastator Leader",
             "description": "A squad of highly trained marines armed to the teeth with advanced weaponry.",
             "category": "command",
+            "subfactions": ["none", "assault_focus", "wolf_marines"],
             "models": [
                 {
                     "name": "Devastator Leader",
@@ -1748,6 +1758,7 @@
             "name": "Devastator",
             "description": "A squad of highly trained marines armed to the teeth with advanced weaponry.",
             "category": "heavy",
+            "subfactions": ["none", "assault_focus", "wolf_marines"],
             "models": [
                 {
                     "name": "Devastator",
@@ -1935,8 +1946,7 @@
                                 {"id": "psychic_falchion", "count": 3},
                                 {"id": "psychic_hammer", "count": 2}
                             ]
-                        },
-                        {"addRule": [{"id": "ambush", "name": "Strike"}], "limit": 1}
+                        }
                     ],
                     "rules": [{"id": "ward", "x": 1}, "leader"],
                     "min": 1,
@@ -1968,8 +1978,7 @@
                                 {"id": "psychic_falchion", "count": 3},
                                 {"id": "psychic_hammer", "count": 2}
                             ]
-                        },
-                        {"addRule": [{"id": "ambush", "name": "Strike"}], "limit": 1}
+                        }
                     ],
                     "min": 1,
                     "max": 1
@@ -1997,8 +2006,7 @@
                         {
                             "replaceWeapon": ["storm_rifle", {"id": "psychic_sword", "count": 2}],
                             "withWeapon": [["heavy_ccw", "incinerator"], ["heavy_ccw", "psychic_silencer"], ["heavy_ccw", "psychic_cannon"]]
-                        },
-                        {"addRule": [{"id": "ambush", "name": "Strike"}], "limit": 1}
+                        }
                     ],
                     "min": 1,
                     "max": 1
