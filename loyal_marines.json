@@ -1699,6 +1699,7 @@
             "description": "Marines clad in very heavy armor and highly trained.",
             "rules": ["ambush"],
             "category": "specialist",
+            "subfactions": ["none", "assault_focus"],
             "models": [
                 {
                     "name": "Destroyer",
