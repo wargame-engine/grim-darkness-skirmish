@@ -254,7 +254,7 @@
                     "name": "Goblin",
                     "courage": 4,
                     "shoot": 5,
-                    "fight": 4,
+                    "fight": 5,
                     "defense": 4,
                     "reflexes": 5,
                     "movement": 6,
