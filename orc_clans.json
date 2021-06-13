@@ -100,13 +100,13 @@
             ]
         },
         "warbanner_boss": {
-            "name": "Warbanner Boss",
+            "name": "Warbanner Noble",
             "description": "An orc carrying a war banner to inspire the orcs.",
             "category": "command",
             "rules": [{"id": "support_x", "x": "Infantry"}, "war_banner", {"id": "wounds", "x": 2}],
             "models": [
                 {
-                    "name": "Warbanner Boss",
+                    "name": "Warbanner Noble",
                     "movement": 5,
                     "courage": 6,
                     "shoot": 4,
@@ -266,13 +266,13 @@
             ]
         },
         "orc_boss": {
-            "name": "Orc Boss",
+            "name": "Orc Noble",
             "description": "A boss of a smaller orc gang.",
             "category": "core",
             "models": [
                 {
-                    "name": "Orc Boss",
-                    "courage": 5,
+                    "name": "Orc Noble",
+                    "courage": 6,
                     "shoot": 4,
                     "fight": 6,
                     "defense": 7,
@@ -416,7 +416,7 @@
             ]
         },
         "pirate_orc": {
-            "name": "Pirat Orc",
+            "name": "Pirate Orc",
             "description": "An orc ready to pillage and plunder.",
             "category": "specialist",
             "rules": ["relentless"],
@@ -462,7 +462,7 @@
             ]
         },
         "boss_bikers": {
-            "name": "Boss Biker",
+            "name": "Noble Biker",
             "description": "An orcs boss mounted on a bike.",
             "category": "strike",
             "keywords": ["Biker"],
@@ -476,7 +476,7 @@
                         },
                         {"replaceWeapon": "heavy_pistol", "withWeapon": ["carbine", "twin_carbine", "combi_heavy_flamer", "combi_rocket_launcher"]}
                     ],
-                    "name": "Boss Biker",
+                    "name": "Noble Biker",
                     "courage": 5,
                     "shoot": 4,
                     "fight": 6,
@@ -490,14 +490,14 @@
             ]
         },
         "boss_trike": {
-            "name": "Boss Trike",
-            "description": "A tough warboss mounted on a battle war trike.",
+            "name": "Warlord Trike",
+            "description": "A tough warlord mounted on a battle war trike.",
             "keywords": ["Biker"],
             "category": "command",
             "rules": [{"id": "leader_x", "x": "Infantry, Vehicle, Biker"}, "relentless", "damage_table_vehicle"],
             "models": [
                 {
-                    "name": "Boss Trike",
+                    "name": "Warlord Trike",
                     "courage": 7,
                     "shoot": 4,
                     "fight": 7,
@@ -651,7 +651,7 @@
             "models": [
                 {
                     "name": "Pirate Orc Boss",
-                    "courage": 6,
+                    "courage": 5,
                     "shoot": 5,
                     "fight": 6,
                     "defense": 7,
@@ -668,14 +668,14 @@
             ]
         },
         "ultra_boss_leader": {
-            "name": "Ultra Boss Leader",
+            "name": "Ultra Noble Boss",
             "description": "An leader that is heavily armored and dangerous.",
             "category": "command",
             "rules": [{"id": "wounds", "x": 2}, "leader"],
             "models": [
                 {
-                    "name": "Ultra Boss Leader",
-                    "courage": 5,
+                    "name": "Ultra Noble Boss",
+                    "courage": 6,
                     "shoot": 4,
                     "fight": 6,
                     "defense": 9,
@@ -692,15 +692,15 @@
             ]
         },
         "biker_boss": {
-            "name": "Biker Boss",
+            "name": "Biker Noble",
             "description": "An angry leader on bike.",
             "category": "command",
             "keywords": ["Biker"],
             "rules": [{"id": "impact", "x": 1}, "leader"],
             "models": [
                 {
-                    "name": "Biker Boss",
-                    "courage": 5,
+                    "name": "Biker Noble",
+                    "courage": 6,
                     "shoot": 4,
                     "fight": 6,
                     "defense": 7,
@@ -721,7 +721,7 @@
             ]
         },
         "boss_biker_leader": {
-            "name": "Boss Biker Leader",
+            "name": "Noble Biker Boss",
             "description": "A boss leader mounted on a bike.",
             "category": "command",
             "keywords": ["Biker"],
@@ -735,8 +735,8 @@
                         },
                         {"replaceWeapon": "heavy_pistol", "withWeapon": ["carbine", "twin_carbine", "combi_heavy_flamer", "combi_rocket_launcher"]}
                     ],
-                    "name": "Boss Biker Leader",
-                    "courage": 5,
+                    "name": "Noble Biker Boss",
+                    "courage": 6,
                     "shoot": 4,
                     "fight": 6,
                     "defense": 7,
@@ -797,13 +797,13 @@
             ]
         },
         "orc_boss_leader": {
-            "name": "Orc Boss Leader",
+            "name": "Orc Noble Boss",
             "description": "A leader of a smaller orc gang.",
             "category": "command",
             "models": [
                 {
-                    "name": "Orc Boss Leader",
-                    "courage": 5,
+                    "name": "Orc Noble Boss",
+                    "courage": 6,
                     "shoot": 4,
                     "fight": 6,
                     "defense": 7,
@@ -826,14 +826,14 @@
             ]
         },
         "ultra_boss": {
-            "name": "Ultra Boss",
+            "name": "Ultra Noble",
             "description": "An orc boss that is heavily armored and dangerous.",
             "category": "specialist",
             "rules": [{"id": "wounds", "x": 2}],
             "models": [
                 {
-                    "name": "Ultra Boss",
-                    "courage": 5,
+                    "name": "Ultra Noble",
+                    "courage": 6,
                     "shoot": 4,
                     "fight": 6,
                     "defense": 9,
@@ -939,7 +939,7 @@
             "description": "When this unit is activated, choose up to X friendly _Infantry_ units within 6\" to receive one of the following bonuses until the end of the round: \n * Re-roll all failed Accuracy tests \n * Re-roll all failed Strength tests",
             "points": ["rule.x", {"multiply": 20}]
         },
-        "speed_pole": {"name": "Big Boss Pole", "description": "Friendly _Infantry_ units within 6\" add +1\" to their Movement characteristic.", "points": 5},
+        "speed_pole": {"name": "Big Noble Pole", "description": "Friendly _Infantry_ units within 6\" add +1\" to their Movement characteristic.", "points": 5},
         "goblin_tactics": {
             "name": "Goblin Tactics",
             "inputs": ["x"],
@@ -980,9 +980,9 @@
             "points": 10
         },
         "speed_pole": {
-            "name": "Big Boss Pole",
+            "name": "Big Noble Pole",
             "rule": "speed_pole",
-            "description": "Upgrade one Warlord model with The Big Boss Pole.",
+            "description": "Upgrade one Warlord model with The Big Noble Pole.",
             "flavor": "Nearby Orcs are filled with a zeal to charge forward and attack.",
             "points": 10
         },
