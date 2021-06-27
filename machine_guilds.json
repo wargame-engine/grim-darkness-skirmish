@@ -40,7 +40,7 @@
             "min": 1,
             "max": 1,
             "category": "command",
-            "rules": [{"id": "leader_x", "x": "Infantry"},  {"id": "wounds", "x": 3}, {"id": "canticles", "x": 2}],
+            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "wounds", "x": 3}, {"id": "canticles", "x": 2}],
             "models": [
                 {
                     "name": "Machine Master",
@@ -202,20 +202,7 @@
             "min": 1,
             "max": 1,
             "category": "core",
-            "models": [
-                {
-                    "name": "Vanguard",
-                    "courage": 5,
-                    "movement": 6,
-                    "shoot": 6,
-                    "fight": 5,
-                    "defense": 6,
-                    "reflexes": 6,
-                    "weapons": ["radiation_carbine", "ccw"],
-                    "min": 1,
-                    "max": 1
-                }
-            ]
+            "models": [{"name": "Vanguard", "courage": 5, "movement": 6, "shoot": 6, "fight": 5, "defense": 6, "reflexes": 6, "weapons": ["radiation_carbine", "ccw"], "min": 1, "max": 1}]
         },
         "vanguard_specialist": {
             "name": "Vanguard Specialist",
@@ -275,20 +262,7 @@
             "max": 1,
             "category": "core",
             "rules": ["scout"],
-            "models": [
-                {
-                    "name": "Ranger",
-                    "courage": 5,
-                    "movement": 6,
-                    "shoot": 6,
-                    "fight": 5,
-                    "defense": 6,
-                    "reflexes": 6,
-                    "weapons": ["ranger_rifle", "ccw"],
-                    "min": 1,
-                    "max": 1
-                }
-            ]
+            "models": [{"name": "Ranger", "courage": 5, "movement": 6, "shoot": 6, "fight": 5, "defense": 6, "reflexes": 6, "weapons": ["ranger_rifle", "ccw"], "min": 1, "max": 1}]
         },
         "ranger_specialist": {
             "name": "Ranger Specialist",
@@ -402,9 +376,7 @@
             "category": "specialist",
             "rules": ["scout", "stealth"],
             "options": [{"replaceWeapon": ["blaster_smg", "taser_sword"], "withWeapon": [["burst_carbine", {"id": "energy_sword"}]]}],
-            "models": [
-                {"name": "Infiltrator", "courage": 5, "movement": 6, "shoot": 6, "fight": 6, "defense": 7, "reflexes": 5, "weapons": ["blaster_smg", "taser_sword"], "min": 1, "max": 1}
-            ]
+            "models": [{"name": "Infiltrator", "courage": 5, "movement": 6, "shoot": 6, "fight": 6, "defense": 7, "reflexes": 5, "weapons": ["blaster_smg", "taser_sword"], "min": 1, "max": 1}]
         },
         "raiders": {
             "name": "Raider",
@@ -472,13 +444,7 @@
         }
     },
     "weapons": {
-        "mini_plasma_cannon": {
-            "name": "Mini Plasma Cannon",
-            "profiles": [
-                {"name": "Standard", "attacks": 1, "short": 12, "medium": 24, "ap": 5, "rules": [{"id": "blast", "x": 2}]},
-                {"name": "Overcharge", "attacks": 1, "short": 12, "medium": 24, "ap": 6, "rules": [{"id": "blast", "x": 2}, {"id": "overheat"}]}
-            ]
-        },
+        "mini_plasma_cannon": {"name": "Mini Plasma Cannon", "attacks": 1, "short": 12, "medium": 24, "ap": 5, "rules": ["overcharge", {"id": "blast", "x": 2}]},
         "energy_cannon": {"name": "Energy Cannon", "attacks": 3, "short": 18, "medium": 36, "ap": 4, "rules": [{"id": "blast", "x": 2}, "indirect"]},
         "iron_cannon": {"name": "Iron Cannon", "attacks": 2, "short": 24, "medium": 48, "ap": 6},
         "emp_cannon": {"name": "EMP Cannon", "attacks": 2, "short": 18, "medium": 36, "ap": 4, "rules": ["emp"]},
@@ -508,13 +474,7 @@
         "ranger_rifle": {"name": "Ranger Rifle", "attacks": 1, "short": 15, "medium": 30, "ap": 1, "rules": ["rending"]},
         "emp_rifle": {"name": "EMP Rifle", "attacks": 2, "short": 12, "medium": 24, "ap": 3, "rules": ["emp"]},
         "burst_carbine": {"name": "Burst Carbine", "attacks": 2, "ap": 1, "short": 9, "medium": 18, "rules": ["pistol"]},
-        "plasma_burst_carbine": {
-            "name": "Plasma Burst Carbine",
-            "profiles": [
-                {"name": "Standard", "attacks": 2, "short": 9, "medium": 18, "ap": 5, "rules": ["assault"]},
-                {"name": "Overcharge", "attacks": 2, "short": 9, "medium": 18, "ap": 6, "rules": ["assault", "overheat"]}
-            ]
-        },
+        "plasma_burst_carbine": {"name": "Plasma Burst Carbine", "attacks": 2, "short": 9, "medium": 18, "ap": 5, "rules": ["overcharge", "assault"]},
         "magnetic_lancer": {"name": "Magnetic Lancer", "attacks": 1, "short": 9, "medium": 18, "ap": 5},
         "sonic_cannon": {"name": "Sonic Cannon", "attacks": 3, "short": 6, "medium": 12, "ap": 1, "rules": []},
         "eradication_beam": {"name": "Eradication Beam", "attacks": 1, "short": 18, "medium": 36, "ap": 4, "rules": [{"id": "blast", "x": 6}]},
