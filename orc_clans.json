@@ -953,7 +953,7 @@
         "heavy_armor": {"name": "Heavy Armor", "hidden": "true", "description": "This model gets +1 Save.", "description_short": "+1 Save", "points": [1, {"multiply": "constants.defenseCost"}]},
         "ultra_armor": {"name": "Ultra Armor", "hidden": "true", "description": "This model gets +1 Save and -1\" of movement.", "description_short": "+1 Save, -1\" Movement", "points": 10},
         "precision_monicle": {"name": "Precision Monicle", "hidden": "true", "description": "This model gets +1 Shoot.", "description_short": "+1 Accuracy", "points": 5},
-        "energy_field": {"name": "Energy Field", "description": "Once per round, a friendly _Infantry_ unit within 6\" may gain +1 Save.", "points": 10},
+        "energy_field": {"name": "Energy Field", "description": "Friendly _Infantry_ units within 6\" gain +1 Save.", "points": 10},
         "force_field": {"name": "Force Field", "description": "Roll a die for each hit this model takes, on a 3 or less that hit is prevented.", "points": 10},
         "mad_doctor": {
             "name": "Mad Doctor",
