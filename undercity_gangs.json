@@ -302,5 +302,20 @@
         "heavy_armor": {"name": "Heavy Armor", "hidden": true, "description": "This model gets +3 Save.", "description_short": "Save +3", "points": 6}
     },
     "powers": {},
-    "strategies": {}
+    "strategies": {
+        "blind_fire": {
+            "name": "Blind Fire",
+            "phase": "activation",
+            "flavor": "It is common for gangers to fire around corners blindly to allow other members to push up aggressively.",
+            "description": "Use when shooting with an _Infantry_ unit. That unit may target enemies it cannot see at -1 Accuracy.",
+            "cost": 1
+        },
+        "takedown": {
+            "name": "Takedown",
+            "phase": "activation",
+            "flavor": "Gangers often go for a total takedown when charging enemy units.",
+            "description": "Use after an _Infantry_ unit successfully Charges an enemy unit. The enemy unit gains 2 Shock.",
+            "cost": 1
+        }
+    }
 }

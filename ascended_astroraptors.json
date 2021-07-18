@@ -904,7 +904,7 @@
             "name": "Spectral Visors",
             "phase": "activation",
             "flavor": "Raptor unit leaders are typically equipped with a spectral visor which allows them to see enemies they may not normally be able to see.",
-            "description": "Use when shooting with an _Infantry_ unit. That unit may target enemies it cannot see.",
+            "description": "Use when shooting with an _Infantry_ unit. That unit may target enemies it cannot see at -1 Accuracy.",
             "cost": 1
         },
         "vigilance": {

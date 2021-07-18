@@ -2735,7 +2735,7 @@
             "subfactions": ["psychic_marines"],
             "name": "Psychic Aim",
             "phase": "activation",
-            "description": "Use when shooting with an _Infantry_ unit. That unit may target enemies it cannot see.",
+            "description": "Use when shooting with an _Infantry_ unit. That unit may target enemies it cannot see at -1 Accuracy.",
             "flavor": "Psychic marines are trained to use their psychic vision to guide their shots.",
             "cost": 1
         },
