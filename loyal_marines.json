@@ -491,7 +491,7 @@
             "description": "A fearless next-generation surgeon trained in saving lives.",
             "category": "specialist",
             "keywords": ["Infantry"],
-            "rules": [{"id": "leader_x", "x": "Infantry"}, "medical_training", {"id": "wounds", "x": 3}],
+            "rules": [{"id": "leader_x", "x": "Infantry"}, "medic", {"id": "wounds", "x": 3}],
             "subfactions": ["none", "wolf_marines", "assault_focus", "alien_hunters"],
             "models": [
                 {

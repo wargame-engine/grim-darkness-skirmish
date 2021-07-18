@@ -5,14 +5,14 @@
     "author": "guitarninja#5707",
     "units": {
         "gang_leader": {
-            "name": "Gang Leader",
+            "name": "Ganger Leader",
             "description": "The gang leader and current highest ranking member.",
             "category": "command",
             "keywords": ["Infantry"],
             "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "wounds", "x": 3}],
             "models": [
                 {
-                    "name": "Gang Leader",
+                    "name": "Ganger Leader",
                     "courage": 7,
                     "shoot": 6,
                     "fight": 6,
@@ -24,8 +24,8 @@
                         {"addRule": [{"id": "gang_tactics", "x": 1}, {"id": "gang_tactics", "x": 2}], "limit": 1},
                         {"addRule": ["light_armor_leader", "medium_armor_leader", "heavy_armor_leader"], "limit": 1},
                         {"replaceWeapon": "rifle", "withWeapon": ["shotgun", "defense_rifle"]},
-                        {"replaceWeapon": ["rifle", "ccw"], "withWeapon": [["pistol", {"id": "ccw", "count": 2}], {"id": "pistol", "count": 2}, {"id": "ccw", "count": 3}]},
-                        {"replaceWeapon": "pistol", "withWeapon": ["assault_pistol", "burst_pistol"], "count": 2}
+                        {"replaceWeapon": ["rifle", "ccw"], "withWeapon": [["pistol", {"id": "ccw", "count": 2}]]},
+                        {"replaceWeapon": "pistol", "withWeapon": ["assault_pistol", "burst_pistol"]}
                     ],
                     "min": 1,
                     "max": 1
@@ -33,7 +33,7 @@
             ]
         },
         "ganger_champion": {
-            "name": "Gang Champion",
+            "name": "Ganger Champion",
             "description": "A ganger who has risen through the ranks.",
             "category": "command",
             "keywords": ["Infantry"],
@@ -52,8 +52,8 @@
                         {"addRule": ["champion"]},
                         {"addRule": ["light_armor", "medium_armor", "heavy_armor"], "limit": 1},
                         {"replaceWeapon": "rifle", "withWeapon": ["shotgun", "defense_rifle"]},
-                        {"replaceWeapon": ["rifle", "ccw"], "withWeapon": [["pistol", {"id": "ccw", "count": 2}], {"id": "pistol", "count": 2}, {"id": "ccw", "count": 3}]},
-                        {"replaceWeapon": "pistol", "withWeapon": ["assault_pistol", "burst_pistol"], "count": 2}
+                        {"replaceWeapon": ["rifle", "ccw"], "withWeapon": [["pistol", {"id": "ccw", "count": 2}]]},
+                        {"replaceWeapon": "pistol", "withWeapon": ["assault_pistol", "burst_pistol"]}
                     ],
                     "min": 1,
                     "max": 1
@@ -78,7 +78,7 @@
                     "options": [
                         {"addRule": ["light_armor", "medium_armor"], "limit": 1},
                         {"replaceWeapon": "rifle", "withWeapon": ["shotgun", "defense_rifle"]},
-                        {"replaceWeapon": ["rifle", "ccw"], "withWeapon": [["pistol", {"id": "ccw", "count": 2}], {"id": "pistol", "count": 2}, {"id": "ccw", "count": 3}]},
+                        {"replaceWeapon": ["rifle", "ccw"], "withWeapon": [["pistol", {"id": "ccw", "count": 2}]]},
                         {"replaceWeapon": "pistol", "withWeapon": ["assault_pistol", "burst_pistol"], "count": 2}
                     ],
                     "min": 1,
@@ -104,8 +104,125 @@
                     "options": [
                         {"addRule": ["light_armor", "medium_armor"], "limit": 1},
                         {"replaceWeapon": "rifle", "withWeapon": ["shotgun", "defense_rifle"]},
-                        {"replaceWeapon": ["rifle", "ccw"], "withWeapon": [["pistol", {"id": "ccw", "count": 2}], {"id": "pistol", "count": 2}, {"id": "ccw", "count": 3}]},
-                        {"replaceWeapon": "pistol", "withWeapon": ["assault_pistol", "burst_pistol"], "count": 2}
+                        {"replaceWeapon": ["rifle", "ccw"], "withWeapon": [["pistol", {"id": "ccw", "count": 2}]]},
+                        {"replaceWeapon": "pistol", "withWeapon": ["assault_pistol", "burst_pistol"]}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "ganger_gunslinger": {
+            "name": "Ganger Gunslinger",
+            "description": "A hardened gang member who has finished initiation. Equipped with dual pistols to blast away at close range.",
+            "category": "specialist",
+            "keywords": ["Infantry"],
+            "models": [
+                {
+                    "name": "Ganger Gunslinger",
+                    "courage": 5,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "movement": 6,
+                    "weapons": [{"id": "pistol", "count": 2}, "frags"],
+                    "options": [
+                        {"addRule": ["light_armor", "medium_armor"], "limit": 1},
+                        {
+                            "subfactions": ["finesse_focus"],
+                            "replaceWeapon": {"id": "pistol", "count": 2},
+                            "withWeapon": [{"id": "assault_pistol", "count": 2}, {"id": "burst_pistol", "count": 2}, {"id": "marine_pistol", "count": 2}, {"id": "plasma_pistol", "count": 2}, {"id": "flamethrower_pistol", "count": 2}]
+                        }
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "ganger_fighter": {
+            "name": "Ganger Brawler",
+            "description": "A hardened gang member who has finished initiation. Equipped with dual melee weapons to get up close and deadly.",
+            "category": "specialist",
+            "keywords": ["Infantry"],
+            "models": [
+                {
+                    "name": "Ganger Brawler",
+                    "courage": 5,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "movement": 6,
+                    "weapons": [{"id": "ccw", "count": 3}, "frags"],
+                    "options": [
+                        {"addRule": ["light_armor", "medium_armor"], "limit": 1},
+                        {
+                            "subfactions": ["finesse_focus"],
+                            "replaceWeapon": {"id": "ccw", "count": 3},
+                            "withWeapon": [{"id": "energy_knife", "count": 3}, {"id": "energy_sword", "count": 3}, {"id": "barb_knife", "count": 3}, {"id": "barb_sword", "count": 3}]
+                        }
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "ganger_doc": {
+            "name": "Ganger Doctor",
+            "description": "A ganger with some medical training.",
+            "category": "specialist",
+            "keywords": ["Infantry"],
+            "models": [
+                {
+                    "name": "Ganger Doctor",
+                    "courage": 6,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "movement": 6,
+                    "weapons": ["pistol", "frags", {"id": "ccw", "x": 2}],
+                    "rules": ["medic"],
+                    "options": [
+                        {"addRule": ["light_armor", "medium_armor"], "limit": 1},
+                        {"replaceWeapon": "pistol", "withWeapon": ["assault_pistol", "burst_pistol", "marine_pistol", "plasma_pistol", "flamethrower_pistol"]},
+                        {
+                            "subfactions": ["finesse_focus"],
+                            "replaceWeapon": {"id": "ccw", "count": 2},
+                            "withWeapon": [{"id": "energy_knife", "count": 2}, {"id": "energy_sword", "count": 2}, {"id": "barb_knife", "count": 2}, {"id": "barb_sword", "count": 2}]
+                        }
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "ganger_psychic": {
+            "name": "Ganger Psychic",
+            "description": "A ganger with a particular aptitude for psychic powers.",
+            "category": "specialist",
+            "keywords": ["Infantry"],
+            "models": [
+                {
+                    "name": "Ganger Psychic",
+                    "courage": 6,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "movement": 6,
+                    "weapons": ["pistol", "frags", {"id": "ccw", "x": 2}],
+                    "rules": [{"id": "power", "x": 1}],
+                    "options": [
+                        {"replaceRule": [{"id": "power", "x": 1}], "withRule": {"id": "power", "x": 2}},
+                        {"addRule": ["light_armor", "medium_armor"], "limit": 1},
+                        {"replaceWeapon": "pistol", "withWeapon": ["assault_pistol", "burst_pistol", "marine_pistol", "plasma_pistol", "flamethrower_pistol"]},
+                        {
+                            "subfactions": ["finesse_focus"],
+                            "replaceWeapon": {"id": "ccw", "count": 2},
+                            "withWeapon": [{"id": "energy_knife", "count": 2}, {"id": "energy_sword", "count": 2}, {"id": "barb_knife", "count": 2}, {"id": "barb_sword", "count": 2}]
+                        }
                     ],
                     "min": 1,
                     "max": 1
@@ -114,7 +231,7 @@
         },
         "ganger_specialist": {
             "name": "Ganger Specialist",
-            "description": "A hardened gang member who has finished initiation.",
+            "description": "A hardened gang member who has finished initiation. May be equipped with various special weaponry.",
             "category": "specialist",
             "keywords": ["Infantry"],
             "models": [
@@ -131,13 +248,12 @@
                         {"addRule": ["light_armor", "medium_armor"], "limit": 1},
                         {"subfactions": ["finesse_focus"], "replaceWeapon": "rifle", "withWeapon": ["combi_barb_rifle", "barb_rifle", "barb_pistol", "fusion_rifle", "plasma_rifle"]},
                         {"subfactions": ["none"], "replaceWeapon": "rifle", "withWeapon": ["shotgun", "defense_rifle"]},
-                        {"replaceWeapon": ["rifle", "ccw"], "withWeapon": [["pistol", {"id": "ccw", "count": 2}], {"id": "pistol", "count": 2}, {"id": "ccw", "count": 3}]},
-                        {"replaceWeapon": "pistol", "withWeapon": ["assault_pistol", "burst_pistol", "marine_pistol", "plasma_pistol", "flamethrower_pistol"], "count": 2},
+                        {"replaceWeapon": ["rifle", "ccw"], "withWeapon": [["pistol", {"id": "ccw", "count": 2}]]},
+                        {"replaceWeapon": "pistol", "withWeapon": ["assault_pistol", "burst_pistol", "marine_pistol", "plasma_pistol", "flamethrower_pistol"]},
                         {
                             "subfactions": ["finesse_focus"],
-                            "replaceWeapon": "ccw",
-                            "withWeapon": ["energy_knife", "energy_sword", "barb_knife", "barb_sword"],
-                            "count": 3
+                            "replaceWeapon": {"id": "ccw", "count": 2},
+                            "withWeapon": [{"id": "energy_knife", "count": 2}, {"id": "energy_sword", "count": 2}, {"id": "barb_knife", "count": 2}, {"id": "barb_sword", "count": 2}]
                         }
                     ],
                     "min": 1,
@@ -162,8 +278,7 @@
                     "weapons": ["rifle", "frags", "ccw"],
                     "options": [
                         {"addRule": ["light_armor", "medium_armor"], "limit": 1},
-                        {"replaceWeapon": "rifle", "withWeapon": ["light_machinegun"]},
-                        {"replaceWeapon": ["rifle", "ccw"], "withWeapon": [["pistol", {"id": "ccw", "count": 2}], {"id": "pistol", "count": 2}, {"id": "ccw", "count": 3}]}
+                        {"replaceWeapon": "rifle", "withWeapon": ["light_machinegun"]}
                     ],
                     "min": 1,
                     "max": 1

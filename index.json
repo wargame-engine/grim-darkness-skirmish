@@ -703,7 +703,7 @@
             "description": "Once per round, when a model with Power(x) casts a power within 24\", roll a D10. If the die roll is lower than or equal to the casting roll, the power is prevented.",
             "points": 5
         },
-        "medical_training": {
+        "medic": {
             "name": "Medical Training",
             "description": "Whenever this model, or a friendly _Infantry_ model within 6\" takes a critical wound, roll a D10. On a 3 or less, that critical wound’s effect is prevented.",
             "points": 10

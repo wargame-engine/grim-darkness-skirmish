@@ -91,7 +91,7 @@
             "min": 5,
             "max": 10,
             "category": "command",
-            "rules": ["leader", "medical_training", {"id": "wounds", "x": 2}],
+            "rules": ["leader", "medic", {"id": "wounds", "x": 2}],
             "models": [
                 {
                     "name": "Nurse Sister",
