@@ -246,13 +246,13 @@
             ]
         },
         "storm_leader": {
-            "name": "Storm Troop Leader",
+            "name": "Storm Warrior Leader",
             "description": "A group of high elf assault troops.",
             "category": "command",
             "keywords": ["Infantry"],
             "models": [
                 {
-                    "name": "Storm Troop Leader",
+                    "name": "Storm Warrior Leader",
                     "courage": 5,
                     "movement": 7,
                     "shoot": 5,
@@ -271,14 +271,14 @@
                 }
             ]
         },
-        "storm_squad": {
-            "name": "Storm Troop",
+        "storm_warrior": {
+            "name": "Storm Warrior",
             "description": "A group of high elf assault troops.",
             "category": "core",
             "keywords": ["Infantry"],
             "models": [
                 {
-                    "name": "Storm Troop",
+                    "name": "Storm Warrior",
                     "courage": 5,
                     "movement": 7,
                     "shoot": 5,
@@ -472,13 +472,13 @@
             ]
         },
         "spectre": {
-            "name": "Spectre",
+            "name": "Spectre Warrior",
             "description": "A squad of ghostly warriors adept at remaining unseen until they make their attack.",
             "category": "specialist",
             "keywords": ["Infantry"],
             "models": [
                 {
-                    "name": "Spectre",
+                    "name": "Spectre Warrior",
                     "courage": 6,
                     "movement": 10,
                     "shoot": 6,
@@ -535,8 +535,31 @@
                 }
             ]
         },
+        "glittering_spear_leader": {
+            "name": "Glittering Spear Leader",
+            "description": "A squad of highly trained bikers that are adept at both melee and short range combat.",
+            "category": "command",
+            "keywords": ["Biker"],
+            "rules": ["hover"],
+            "models": [
+                {
+                    "name": "Glittering Spear Leader",
+                    "courage": 6,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 8,
+                    "reflexes": 6,
+                    "movement": 10,
+                    "rules": ["champion"],
+                    "weapons": ["laser_lance_shoot", {"id": "laser_lance_melee", "count": 3}, "twin_shard_rifle"],
+                    "options": [{"replaceWeapon": ["laser_lance_shoot", {"id": "laser_lance_melee", "count": 3}], "withWeapon": [{"id": "exemplar_blade", "count": 3}, "space_lance"]}],
+                    "min": 3,
+                    "max": 9
+                }
+            ]
+        },
         "glittering_spears": {
-            "name": "Glittering Spear Squad",
+            "name": "Glittering Spear",
             "description": "A squad of highly trained bikers that are adept at both melee and short range combat.",
             "min": 1,
             "max": 1,
@@ -545,7 +568,7 @@
             "rules": ["hover"],
             "models": [
                 {
-                    "name": "Glittering Spear Biker",
+                    "name": "Glittering Spear",
                     "courage": 6,
                     "shoot": 6,
                     "fight": 6,
@@ -553,23 +576,20 @@
                     "reflexes": 6,
                     "movement": 10,
                     "weapons": ["laser_lance_shoot", {"id": "laser_lance_melee", "count": 2}, "twin_shard_rifle"],
-                    "options": [{"replaceModel": "spear_leader", "modelLimit": 1}],
-                    "min": 3,
-                    "max": 9
+                    "min": 1,
+                    "max": 1
                 }
             ]
         },
-        "wind_rifles": {
-            "name": "Wind Rifle Squad",
+        "wind_rifle": {
+            "name": "Wind Rifle",
             "description": "A squad of highly trained bikers that are adept at long range, high-speed combat.",
-            "min": 1,
-            "max": 1,
             "category": "strike",
             "keywords": ["Biker"],
             "rules": ["hover"],
             "models": [
                 {
-                    "name": "Wind Rifle Biker",
+                    "name": "Wind Rifle",
                     "courage": 6,
                     "shoot": 6,
                     "fight": 6,
@@ -578,16 +598,37 @@
                     "movement": 10,
                     "weapons": ["twin_shard_rifle"],
                     "options": [{"replaceWeapon": "twin_shard_rifle", "withWeapon": ["twin_shard_cannon", "laser_machinegun"]}],
-                    "min": 3,
-                    "max": 9
+                    "min": 1,
+                    "max": 1
                 }
             ]
         },
-        "hawks": {
-            "name": "Hawk Squad",
+        "hawk_warrior_leader": {
+            "name": "Hawk Warrior Leader",
             "description": "A group of winged warriors trained to use the element of suprise and strike from above.",
-            "min": 1,
-            "max": 1,
+            "category": "command",
+            "keyowrds": ["Infantry"],
+            "rules": ["ambush", "fly"],
+            "models": [
+                {
+                    "name": "Hawk Leader",
+                    "courage": 6,
+                    "movement": 8,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 6,
+                    "reflexes": 6,
+                    "rules": ["champion"],
+                    "weapons": ["elven_blaster", "frags"],
+                    "options": [{"replaceWeapon": "elven_blaster", "withWeapon": ["hawk_talon", "sunlight_rifle"]}, {"addWeapon": ["energy_sword"], "limit": 1}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "hawk_warrior": {
+            "name": "Hawk Warrior",
+            "description": "A group of winged warriors trained to use the element of suprise and strike from above.",
             "category": "strike",
             "keyowrds": ["Infantry"],
             "rules": ["ambush", "fly"],
@@ -602,16 +643,37 @@
                     "reflexes": 6,
                     "weapons": ["elven_blaster", "frags"],
                     "options": [{"replaceModel": "hawk_leader", "modelLimit": 1}],
-                    "min": 5,
-                    "max": 10
+                    "min": 1,
+                    "max": 1
                 }
             ]
         },
-        "spiders": {
-            "name": "Spider Squad",
+        "spider_leader": {
+            "name": "Spider Warrior Leader",
             "description": "A group of stealthy warriors able to harness the power of magic to transport themselves quickly across the battlefield.",
-            "min": 1,
-            "max": 1,
+            "category": "command",
+            "keywords": ["Infantry"],
+            "rules": ["stealth", "ambush"],
+            "models": [
+                {
+                    "name": "Spider Warrior Leader",
+                    "courage": 6,
+                    "movement": 7,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 7,
+                    "reflexes": 6,
+                    "rules": ["champion"],
+                    "weapons": ["spinnerette_rifle"],
+                    "options": [{"replaceWeapon": "spinnerette_rifle", "withWeapon": ["web_rifle", {"id": "spinnerette_rifle", "count": 2}]}, {"addWeapon": [{"id": "energy_sword", "count": 3}], "limit": 1}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "spider": {
+            "name": "Spider Warrior",
+            "description": "A group of stealthy warriors able to harness the power of magic to transport themselves quickly across the battlefield.",
             "category": "strike",
             "keywords": ["Infantry"],
             "rules": ["stealth", "ambush"],
@@ -626,82 +688,25 @@
                     "reflexes": 6,
                     "weapons": ["spinnerette_rifle"],
                     "options": [{"replaceModel": "spider_leader", "modelLimit": 1}],
-                    "min": 5,
-                    "max": 10
+                    "min": 1,
+                    "max": 1
                 }
             ]
         }
     },
-    "models": {
-        "spear_leader": {
-            "name": "Glittering Spear Leader",
-            "courage": 6,
-            "shoot": 6,
-            "fight": 6,
-            "defense": 8,
-            "reflexes": 6,
-            "movement": 10,
-            "rules": ["champion"],
-            "weapons": ["laser_lance_shoot", {"id": "laser_lance_melee", "count": 3}, "twin_shard_rifle"],
-            "options": [{"replaceWeapon": ["laser_lance_shoot", {"id": "laser_lance_melee", "count": 3}], "withWeapon": [{"id": "exemplar_blade", "count": 3}, "space_lance"]}],
-            "min": 3,
-            "max": 9
-        },
-        "hawk_leader": {
-            "name": "Hawk Leader",
-            "courage": 6,
-            "movement": 8,
-            "shoot": 6,
-            "fight": 6,
-            "defense": 6,
-            "reflexes": 6,
-            "rules": ["champion"],
-            "weapons": ["elven_blaster", "frags"],
-            "options": [{"replaceWeapon": "elven_blaster", "withWeapon": ["hawk_talon", "sunlight_rifle"]}, {"addWeapon": ["energy_sword"], "limit": 1}],
-            "min": 1,
-            "max": 1
-        },
-        "spider_leader": {
-            "name": "Spider Leader",
-            "courage": 6,
-            "movement": 7,
-            "shoot": 6,
-            "fight": 6,
-            "defense": 7,
-            "reflexes": 6,
-            "rules": ["champion"],
-            "weapons": ["spinnerette_rifle"],
-            "options": [{"replaceWeapon": "spinnerette_rifle", "withWeapon": ["web_rifle", {"id": "spinnerette_rifle", "count": 2}]}, {"addWeapon": [{"id": "energy_sword", "count": 3}], "limit": 1}],
-            "min": 1,
-            "max": 1
-        }
-    },
     "rules": {
-        "sky_engine": {
-            "name": "Sky Engine",
-            "hidden": true,
-            "description": "This model may ignore terrain and other models without the Fly special rule when moving and gains an extra 4\" movement.",
-            "description_short": "+2\" Move",
-            "points": 5
-        },
-        "gravity_thrusters": {
-            "name": "Gravity Thrusters",
-            "description": "If this model performs two move actions on its turn, enemy units suffer -1 Accuracy when targeting this model.",
-            "points": 10
-        },
         "rifle_tactics": {
             "name": "Rifle Tactics",
             "inputs": ["x"],
             "description": "When this unit is activated, choose up to X friendly _Infantry_ units within 6\". Those units may re-roll failed Accuracy tests of 9+ until the end of the round.",
-            "points": 10
+            "points": ["rule.x", {"multiply": 5}]
         },
         "melee_tactics": {
             "name": "Melee Tactics",
             "inputs": ["x"],
             "description": "When this unit is activated, choose up to X friendly _Infantry_ units within 6\". Those units may re-roll failed Strength tests of 9+ until the end of the round.",
-            "points": 10
-        },
-        "titan_shield": {"name": "Titan Shield", "description": "Roll a die for each hit this model takes. On a 3 or less that hit is prevented.", "points": 10}
+            "points": ["rule.x", {"multiply": 5}]
+        }
     },
     "weapons": {
         "wraith_sword": {"name": "Wraith Sword", "attacks": 1, "short": "Melee", "ap": 4},
