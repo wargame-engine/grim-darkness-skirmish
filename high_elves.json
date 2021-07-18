@@ -163,12 +163,12 @@
                     "defense": 6,
                     "reflexes": 7,
                     "rules": ["leader"],
-                    "weapons": ["shard_carbine", "plasma_grenade", {"id": "ccw", "count": 1}],
+                    "weapons": ["avenger_shard_carbine", "plasma_grenade", {"id": "ccw", "count": 1}],
                     "options": [
                         {
-                            "replaceWeapon": ["shard_carbine", {"id": "ccw", "count": 1}],
+                            "replaceWeapon": ["avenger_shard_carbine", {"id": "ccw", "count": 1}],
                             "withWeapon": [
-                                [{"id": "shard_carbine", "count": 2}, {"id": "ccw", "count": 1}],
+                                [{"id": "avenger_shard_carbine", "count": 2}, {"id": "ccw", "count": 1}],
                                 [{"id": "energy_glaive", "count": 2}, "shining_shield"],
                                 ["shard_pistol", {"id": "energy_sword", "count": 2}],
                                 ["shard_pistol", {"id": "energy_glaive", "count": 2}]
@@ -196,7 +196,7 @@
                     "fight": 5,
                     "defense": 6,
                     "reflexes": 7,
-                    "weapons": ["shard_carbine", "plasma_grenade", {"id": "ccw", "count": 1}],
+                    "weapons": ["avenger_shard_carbine", "plasma_grenade", {"id": "ccw", "count": 1}],
                     "min": 1,
                     "max": 1
                 }
@@ -324,18 +324,7 @@
             "category": "specialist",
             "keywords": ["Infantry"],
             "models": [
-                {
-                    "name": "Dragon Fire Warrior",
-                    "courage": 6,
-                    "movement": 7,
-                    "shoot": 6,
-                    "fight": 6,
-                    "defense": 7,
-                    "reflexes": 6,
-                    "weapons": ["fusion_rifle", "fusion_bomb"],
-                    "min": 1,
-                    "max": 1
-                }
+                {"name": "Dragon Fire Warrior", "courage": 6, "movement": 7, "shoot": 6, "fight": 6, "defense": 7, "reflexes": 6, "weapons": ["fusion_rifle", "fusion_bomb"], "min": 1, "max": 1}
             ]
         },
         "wraith_leader": {
@@ -476,20 +465,7 @@
             "description": "A squad of ghostly warriors adept at remaining unseen until they make their attack.",
             "category": "specialist",
             "keywords": ["Infantry"],
-            "models": [
-                {
-                    "name": "Spectre Warrior",
-                    "courage": 6,
-                    "movement": 10,
-                    "shoot": 6,
-                    "fight": 6,
-                    "defense": 7,
-                    "reflexes": 6,
-                    "weapons": ["spectre_rifle", "frags"],
-                    "min": 1,
-                    "max": 1
-                }
-            ]
+            "models": [{"name": "Spectre Warrior", "courage": 6, "movement": 10, "shoot": 6, "fight": 6, "defense": 7, "reflexes": 6, "weapons": ["spectre_rifle", "frags"], "min": 1, "max": 1}]
         },
         "scorpion_leader": {
             "name": "Scorpion Leader",
@@ -508,7 +484,10 @@
                     "movement": 7,
                     "rules": ["champion", "leader"],
                     "weapons": [{"id": "chainsword", "count": 3}, "shard_pistol", "frags"],
-                    "options": [{"replaceWeapon": {"id": "chainsword", "count": 3}, "withWeapon": [{"id": "slicing_sword", "count": 3}]}, {"replaceWeapon": "shard_pistol", "withWeapon": ["scorpion_claw"]}],
+                    "options": [
+                        {"replaceWeapon": {"id": "chainsword", "count": 3}, "withWeapon": [{"id": "slicing_sword", "count": 3}]},
+                        {"replaceWeapon": "shard_pistol", "withWeapon": ["scorpion_claw"]}
+                    ],
                     "min": 1,
                     "max": 1
                 }
@@ -665,7 +644,10 @@
                     "reflexes": 6,
                     "rules": ["champion"],
                     "weapons": ["spinnerette_rifle"],
-                    "options": [{"replaceWeapon": "spinnerette_rifle", "withWeapon": ["web_rifle", {"id": "spinnerette_rifle", "count": 2}]}, {"addWeapon": [{"id": "energy_sword", "count": 3}], "limit": 1}],
+                    "options": [
+                        {"replaceWeapon": "spinnerette_rifle", "withWeapon": ["web_rifle", {"id": "spinnerette_rifle", "count": 2}]},
+                        {"addWeapon": [{"id": "energy_sword", "count": 3}], "limit": 1}
+                    ],
                     "min": 1,
                     "max": 1
                 }
