@@ -163,12 +163,12 @@
                     "defense": 6,
                     "reflexes": 7,
                     "rules": ["leader"],
-                    "weapons": ["avenger_shard_carbine", "plasma_grenade", {"id": "ccw", "count": 1}],
+                    "weapons": ["shard_rifle", "plasma_grenade", {"id": "ccw", "count": 1}],
                     "options": [
                         {
-                            "replaceWeapon": ["avenger_shard_carbine", {"id": "ccw", "count": 1}],
+                            "replaceWeapon": ["shard_rifle", {"id": "ccw", "count": 1}],
                             "withWeapon": [
-                                [{"id": "avenger_shard_carbine", "count": 2}, {"id": "ccw", "count": 1}],
+                                [{"id": "shard_rifle", "count": 2}, {"id": "ccw", "count": 1}],
                                 [{"id": "energy_glaive", "count": 2}, "shining_shield"],
                                 ["shard_pistol", {"id": "energy_sword", "count": 2}],
                                 ["shard_pistol", {"id": "energy_glaive", "count": 2}]
@@ -196,7 +196,7 @@
                     "fight": 5,
                     "defense": 6,
                     "reflexes": 7,
-                    "weapons": ["avenger_shard_carbine", "plasma_grenade", {"id": "ccw", "count": 1}],
+                    "weapons": ["shard_rifle", "plasma_grenade", {"id": "ccw", "count": 1}],
                     "min": 1,
                     "max": 1
                 }
