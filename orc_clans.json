@@ -9,7 +9,6 @@
             "name": "Warlord",
             "description": "The clan leader and toughest orc boss.",
             "category": "command",
-            "options": [{"addModel": "attack_beast"}],
             "models": [
                 {
                     "name": "Warlord",
@@ -28,7 +27,7 @@
                             "replaceWeapon": {"id": "heavy_ccw", "count": 5},
                             "withWeapon": [{"id": "ultra_axe", "count": 5}, {"id": "ultra_saw", "count": 5}, {"id": "ultra_claw", "count": 5}]
                         },
-                        {"addRule": ["ultra_armor", {"id": "resilient", "x": 3, "name": "Cyborg Body"}], "limit": 1}
+                        {"addRule": ["ultra_armor", "cyborg_body_3"], "limit": 1}
                     ],
                     "min": 1,
                     "max": 1
@@ -88,7 +87,7 @@
                             "replaceWeapon": {"id": "heavy_ccw", "count": 3},
                             "withWeapon": [{"id": "ultra_axe", "count": 3}, {"id": "ultra_saw", "count": 3}, {"id": "ultra_claw", "count": 3}]
                         },
-                        {"addRule": ["heavy_armor", "ultra_armor", {"id": "resilient", "x": 3, "name": "Cyborg Body"}], "limit": 1},
+                        {"addRule": ["heavy_armor", "ultra_armor", "cyborg_body_3"], "limit": 1},
                         {"replaceRule": {"id": "repair", "x": 3}, "withRule": {"id": "repair", "x": 5}},
                         {"addRule": ["precision_monicle"]},
                         {"addRule": ["energy_field"]}
@@ -285,7 +284,7 @@
                             "replaceWeapon": {"id": "heavy_ccw", "count": 3},
                             "withWeapon": [{"id": "ultra_axe", "count": 3}, {"id": "ultra_saw", "count": 3}, {"id": "ultra_claw", "count": 3}]
                         },
-                        {"addRule": [{"id": "heavy_armor"}]},
+                        {"addRule": [{"id": "heavy_armor"}, "cyborg_body"], "limit": 1},
                         {"addWeapon": "fusion_bomb"}
                     ],
                     "min": 1,
@@ -339,7 +338,7 @@
             "description": "A bouncing beast with gnashing teeth.",
             "category": "strike",
             "subfactions": ["none", "goblin_army"],
-            "models": [{"name": "Attack Beast", "courage": 4, "shoot": 4, "movement": 8, "fight": 5, "defense": 4, "reflexes": 5, "weapons": [{"id": "beasts_bite", "count": 2}], "min": 1, "max": 1}]
+            "models": [{"name": "Attack Beast", "courage": 4, "shoot": 4, "movement": 8, "fight": 5, "defense": 4, "reflexes": 5, "weapons": [{"id": "beasts_bite", "count": 2}], "options": [{"addRule": "cyborg_body"}], "min": 1, "max": 1}]
         },
         "storm_orc": {
             "name": "Storm Orc",
@@ -610,7 +609,8 @@
                             "replaceWeapon": {"id": "heavy_ccw", "count": 3},
                             "withWeapon": [{"id": "ultra_axe", "count": 3}, {"id": "ultra_saw", "count": 3}, {"id": "ultra_claw", "count": 3}]
                         },
-                        {"addWeapon": "fusion_bomb"}
+                        {"addWeapon": "fusion_bomb"},
+                        {"addRule": ["cyborg_body"], "limit": 1}
                     ],
                     "min": 1,
                     "max": 1
@@ -636,7 +636,8 @@
                     "options": [
                         {"replaceWeapon": "orc_flamethrower", "withWeapon": ["combi_heavy_flamer", "combi_rocket_launcher", "rocket_launcher", "railgun", "heavy_machinegun"]},
                         {"replaceWeapon": "rocket_launcher", "withWeapon": ["bomb_hammer", "rocket_pistol"]},
-                        {"addWeapon": "fusion_bomb"}
+                        {"addWeapon": "fusion_bomb"},
+                        {"addRule": ["cyborg_body"], "limit": 1}
                     ],
                     "min": 1,
                     "max": 1
@@ -850,7 +851,6 @@
             ]
         }
     },
-    "models": {"attack_beast": {"name": "Attack Beast", "courage": 5, "shoot": 4, "movement": 6, "fight": 6, "defense": 4, "reflexes": 5, "weapons": ["beast_bite"], "min": 0, "max": 1}},
     "weapons": {
         "goblin_rifle": {"name": "Goblin Gun", "attacks": 1, "short": 9, "medium": 18, "ap": 1},
         "smasher_cannon": {"name": "Smasher Cannon", "attacks": 1, "short": 24, "medium": 48, "ap": 7},
@@ -952,6 +952,8 @@
         "orc_idol": {"name": "Orc Idol", "description": "This model and friendly _Infantry_ units within 6\" gain +1 Courage.", "points": 10},
         "heavy_armor": {"name": "Heavy Armor", "hidden": "true", "description": "This model gets +1 Save.", "description_short": "+1 Save", "points": [1, {"multiply": "constants.defenseCost"}]},
         "ultra_armor": {"name": "Ultra Armor", "hidden": "true", "description": "This model gets +1 Save and -1\" of movement.", "description_short": "+1 Save, -1\" Movement", "points": 10},
+        "cyborg_body_3": {"name": "Cyborg Body", "description": "Whenever this model loses a wound, roll a D10. On a 3 or less that wound is not lost.", "points": 5},
+        "cyborg_body": {"name": "Cyborg Body", "description": "Whenever this model loses a wound, roll a D10. On a 3 or less that wound is not lost.", "points": 2},
         "precision_monicle": {"name": "Precision Monicle", "hidden": "true", "description": "This model gets +1 Shoot.", "description_short": "+1 Accuracy", "points": 5},
         "energy_field": {"name": "Energy Field", "description": "Friendly _Infantry_ units within 6\" gain +1 Save.", "points": 10},
         "force_field": {"name": "Force Field", "description": "Roll a die for each hit this model takes, on a 3 or less that hit is prevented.", "points": 10},
