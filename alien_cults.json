@@ -470,7 +470,7 @@
                     "movement": 6,
                     "weapons": [{"id": "piercing_claws", "count": 1}, {"id": "energy_pick", "count": 3}],
                     "options": [
-                        {"replaceWeapon": {"id": "energy_pick", "count": 3}, "withWeapon": [{"id": "energy_hammer", "count": 3}]}
+                        {"replaceWeapon": {"id": "energy_pick", "count": 3}, "withWeapon": [{"id": "energy_hammer", "count": 2}]}
                     ],
                     "min": 1,
                     "max": 1
@@ -492,7 +492,7 @@
                     "reflexes": 5,
                     "movement": 6,
                     "weapons": [{"id": "piercing_claws", "count": 1}, {"id": "hypermorph_tail", "count": 1}, {"id": "energy_pick", "count": 4}],
-                    "options": [{"replaceWeapon": {"id": "energy_pick", "count": 4}, "withWeapon": [{"id": "energy_hammer", "count": 4}]}],
+                    "options": [{"replaceWeapon": {"id": "energy_pick", "count": 4}, "withWeapon": [{"id": "energy_hammer", "count": 3}]}],
                     "min": 1,
                     "max": 1
                 }
