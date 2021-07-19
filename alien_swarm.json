@@ -100,7 +100,7 @@
                     "options": [
                         {
                             "replaceWeapon": "consumer",
-                            "withWeapon": [{"id": "razor_talons", "count": 1}, "spikefists", "acid_spitter", {"id": "piercing_claws", "count": 1}, {"id": "boneswords", "count": 2}]
+                            "withWeapon": [{"id": "razor_talons", "count": 2}, "spikefists", "acid_spitter", {"id": "piercing_claws", "count": 2}, {"id": "boneswords", "count": 2}]
                         },
                         {"replaceWeapon": {"id": "razor_talons", "count": 3}, "withWeapon": [{"id": "piercing_claws", "count": 3}, {"id": "boneswords", "count": 4}]},
                         {"addWeapon": ["meat_hooks"]},
