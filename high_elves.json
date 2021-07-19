@@ -161,7 +161,7 @@
                     "shoot": 6,
                     "fight": 5,
                     "defense": 6,
-                    "reflexes": 7,
+                    "reflexes": 6,
                     "rules": ["leader"],
                     "weapons": ["shard_rifle", "plasma_grenade", {"id": "ccw", "count": 1}],
                     "options": [
@@ -195,7 +195,7 @@
                     "shoot": 6,
                     "fight": 5,
                     "defense": 6,
-                    "reflexes": 7,
+                    "reflexes": 6,
                     "weapons": ["shard_rifle", "plasma_grenade", {"id": "ccw", "count": 1}],
                     "min": 1,
                     "max": 1
