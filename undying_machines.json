@@ -688,11 +688,11 @@
             "cost": 2
         },
         {
-            "name": "Repair Overdrive",
+            "name": "Undying",
             "phase": "activation",
-            "description": "Use when activating a _Vehicle_ unit. It may immediately fix a critical damage it has sustained.",
-            "flavor": "With self-repairing nano-machines this vehicle can recover from nearly anything.",
-            "cost": 2
+            "description": "Use when activating an _Infantry_ unit. That unit may ignore any critical injuries it has sustained for this activation.",
+            "flavor": "With self-repairing nano-machines Undying Machines can recover from nearly anything.",
+            "cost": 1
         },
         {
             "subfactions": ["solar_fire"],
