@@ -507,7 +507,6 @@
         "swarm_claws": {"name": "Swarm Claws", "attacks": 1, "short": "Melee", "rules": ["rending"]},
         "medium_piercing_claws": {"name": "Medium Piercing Claws", "attacks": 1, "short": "Melee", "ap": 2, "rules": ["rending"]},
         "large_piercing_claws": {"name": "Large Piercing Claws", "attacks": 1, "short": "Melee", "ap": 4, "rules": ["rending"]},
-        "razor_talons": {"name": "Razor Talons", "attacks": 1, "short": "Melee", "ap": 1},
         "medium_razor_talons": {"name": "Medium Razor Talons", "attacks": 1, "short": "Melee", "ap": 2},
         "crushing_claws": {"name": "Crushing Claws", "attacks": 1, "short": "Melee", "ap": 7},
         "acidic_jaws": {"name": "Acidic Jaws", "attacks": 1, "short": "Melee", "ap": 2},
