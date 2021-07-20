@@ -56,7 +56,7 @@
                             ]
                         },
                         {"addWeapon": {"id": "guardian_dagger"}},
-                        {"addRule": "guardian_shield"}
+                        {"addWeapon": "combat_shield"}
                     ],
                     "min": 1,
                     "max": 1
@@ -90,7 +90,7 @@
                             ]
                         },
                         {"addWeapon": {"id": "guardian_dagger"}},
-                        {"addRule": "guardian_shield"}
+                        {"addWeapon": "combat_shield"}
                     ],
                     "min": 1,
                     "max": 1
@@ -205,7 +205,7 @@
                             ]
                         },
                         {"addWeapon": {"id": "guardian_dagger"}},
-                        {"addRule": "guardian_shield"},
+                        {"addWeapon": "combat_shield"},
                         {"replaceRule": "banner_of_blindness", "withRule": ["banner_of_justice", "banner_of_focus", "banner_of_wrath"]}
                     ],
                     "min": 1,
@@ -266,7 +266,7 @@
                             "withWeapon": [[{"id": "guardian_spear_blade", "count": 2}, "guardian_spear_rifle"], [{"id": "guardian_spear_blade", "count": 2}, "guardian_spear_carbine"], ["guardian_rifle", {"id": "heavy_ccw", "count": 1}]]
                         },
                         {"addWeapon": "guardian_dagger"},
-                        {"addRule": "guardian_shield"}
+                        {"addWeapon": "combat_shield"}
                     ],
                     "min": 1,
                     "max": 1
@@ -296,7 +296,7 @@
                             "withWeapon": [[{"id": "guardian_spear_blade", "count": 2}, "guardian_spear_rifle"], [{"id": "guardian_spear_blade", "count": 2}, "guardian_spear_carbine"], ["guardian_rifle", {"id": "heavy_ccw", "count": 1}]]
                         },
                         {"addWeapon": "guardian_dagger"},
-                        {"addRule": "guardian_shield"}
+                        {"addWeapon": "combat_shield"}
                     ],
                     "min": 1,
                     "max": 1
@@ -327,7 +327,7 @@
                             "withWeapon": [[{"id": "guardian_spear_blade", "count": 2}, "guardian_spear_fusion"]]
                         },
                         {"addWeapon": "guardian_dagger"},
-                        {"addRule": "guardian_shield"}
+                        {"addWeapon": "combat_shield"}
                     ],
                     "min": 1,
                     "max": 1
@@ -576,8 +576,7 @@
             "inputs": ["x"],
             "description": "When this unit is activated, choose up to X friendly _Witch Hunters Infantry_ units within 6\" to receive one of the following bonuses until the end of the round: \n * Re-roll failed Accuracy tests of 9+ \n * Re-roll failed Strength tests of 9+",
             "points": ["rule.x", {"multiply": 10}]
-        },
-        "guardian_shield": {"name": "Guardian Shield", "description": "Whenever this model loses a wound, roll a D10. On a 3 or less that wound is not lost.", "points": 5}
+        }
     },
     "strategies": [
         {
