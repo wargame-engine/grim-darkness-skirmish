@@ -66,7 +66,7 @@
                         },
                         {"replaceWeapon": "marine_pistol", "withWeapon": ["plasma_pistol", "gravity_pistol"]},
                         {"addRule": ["jetpack_character", "destroyer_armor"], "limit": 1},
-                        {"addRule": ["combat_shield"]}
+                        {"addWeapon": ["combat_shield"]}
                     ],
                     "min": 1,
                     "max": 1
@@ -108,7 +108,7 @@
                         },
                         {"replaceWeapon": "marine_pistol", "withWeapon": ["plasma_pistol", "gravity_pistol"]},
                         {"addRule": ["jetpack_character", "destroyer_armor"], "limit": 1},
-                        {"addRule": ["combat_shield"]}
+                        {"addWeapon": ["combat_shield"]}
                     ],
                     "min": 1,
                     "max": 1
@@ -151,7 +151,7 @@
                         },
                         {"replaceWeapon": "marine_pistol", "withWeapon": ["plasma_pistol", "gravity_pistol"]},
                         {"addRule": ["jetpack_character", "destroyer_armor"], "limit": 1},
-                        {"addRule": ["combat_shield"]}
+                        {"addWeapon": ["combat_shield"]}
                     ],
                     "min": 1,
                     "max": 1
@@ -249,7 +249,7 @@
                             "replaceWeapon": {"id": "prime_chainsword", "count": 5},
                             "withWeapon": [{"id": "prime_energy_sword", "count": 5}, {"id": "energy_fist", "count": 5}, {"id": "energy_hammer", "count": 5}]
                         },
-                        {"addRule": ["combat_shield"]}
+                        {"addWeapon": ["combat_shield"]}
                     ],
                     "min": 1,
                     "max": 1
@@ -308,7 +308,7 @@
                             "replaceWeapon": {"id": "prime_chainsword", "count": 3},
                             "withWeapon": [{"id": "prime_energy_sword", "count": 3}, {"id": "energy_fist", "count": 3}, {"id": "energy_hammer", "count": 3}]
                         },
-                        {"addRule": ["combat_shield"]}
+                        {"addWeapon": ["combat_shield"]}
                     ],
                     "min": 1,
                     "max": 1
@@ -1041,7 +1041,7 @@
                     "rules": ["leader"],
                     "weapons": [{"id": "energy_claws", "count": 3}],
                     "options": [
-                        {"replaceWeapon": {"id": "energy_claws", "count": 3}, "withWeapon": [[{"id": "energy_hammer", "count": 2}, "wolf_shield"], {"id": "energy_greataxe", "count": 2}]},
+                        {"replaceWeapon": {"id": "energy_claws", "count": 3}, "withWeapon": [[{"id": "energy_hammer", "count": 2}, "combat_shield"], {"id": "energy_greataxe", "count": 2}]},
                         {"addWeapon": "wolf_grenade_launcher"}
                     ],
                     "min": 1,
@@ -1068,7 +1068,7 @@
                     "min": 1,
                     "max": 1,
                     "options": [
-                        {"replaceWeapon": {"id": "energy_claws", "count": 3}, "withWeapon": [[{"id": "energy_hammer", "count": 2}, "wolf_shield"], {"id": "energy_greataxe", "count": 2}]},
+                        {"replaceWeapon": {"id": "energy_claws", "count": 3}, "withWeapon": [[{"id": "energy_hammer", "count": 2}, "combat_shield"], {"id": "energy_greataxe", "count": 2}]},
                         {"addWeapon": "wolf_grenade_launcher"}
                     ]
                 }
@@ -1178,7 +1178,7 @@
             "category": "command",
             "keywords": ["Infantry"],
             "subfactions": ["none", "wolf_marines", "assault_focus", "alien_hunters"],
-            "rules": ["combat_shield", {"id": "wounds", "x": 2}],
+            "rules": [{"id": "wounds", "x": 2}],
             "models": [
                 {
                     "name": "Blade Guardian Leader",
@@ -1189,7 +1189,7 @@
                     "movement": 6,
                     "reflexes": 6,
                     "rules": ["leader"],
-                    "weapons": [{"id": "prime_energy_sword", "count": 3}, "prime_pistol", "at_grenade"],
+                    "weapons": [{"id": "prime_energy_sword", "count": 3}, "combat_shield", "prime_pistol", "at_grenade"],
                     "min": 1,
                     "max": 1
                 }
@@ -1203,7 +1203,7 @@
             "category": "specialist",
             "keywords": ["Infantry"],
             "subfactions": ["none", "wolf_marines", "assault_focus", "alien_hunters"],
-            "rules": ["combat_shield", {"id": "wounds", "x": 2}],
+            "rules": [{"id": "wounds", "x": 2}],
             "models": [
                 {
                     "name": "Blade Guardian",
@@ -1213,7 +1213,7 @@
                     "defense": 8,
                     "movement": 6,
                     "reflexes": 6,
-                    "weapons": [{"id": "prime_energy_sword", "count": 3}, "prime_pistol", "at_grenade"],
+                    "weapons": [{"id": "prime_energy_sword", "count": 3}, "combat_shield", "prime_pistol", "at_grenade"],
                     "min": 1,
                     "max": 1
                 }
@@ -1641,7 +1641,7 @@
                                 {"id": "energy_claws", "count": 4}
                             ]
                         },
-                        {"addRule": "combat_shield"}
+                        {"addWeapon": "combat_shield"}
                     ],
                     "min": 1,
                     "max": 1
@@ -1677,7 +1677,7 @@
                                 {"id": "energy_claws", "count": 4}
                             ]
                         },
-                        {"addRule": "combat_shield"}
+                        {"addWeapon": "combat_shield"}
                     ],
                     "min": 1,
                     "max": 1
@@ -1701,9 +1701,8 @@
                     "reflexes": 6,
                     "weapons": ["twin_marine_rifle", {"id": "energy_sword", "count": 2}],
                     "options": [
-                        {"replaceWeapon": {"id": "energy_sword", "count": 2}, "withWeapon": [{"id": "energy_fist", "count": 2}, {"id": "energy_hammer", "count": 2}]},
-                        {"replaceWeapon": ["twin_marine_rifle", {"id": "energy_sword", "count": 2}], "withWeapon": [{"id": "energy_claws", "count": 4}]},
-                        {"addRule": "shield"}
+                        {"replaceWeapon": {"id": "energy_sword", "count": 2}, "withWeapon": [{"id": "energy_fist", "count": 2}, {"id": "energy_hammer", "count": 2}, {"id": "energy_claws", "count": 2}]},
+                        {"replaceWeapon": ["twin_marine_rifle"], "withWeapon": [{"id": "energy_sword", "count": 2}, {"id": "energy_claws", "count": 2}, "combat_shield"]}
                     ],
                     "rules": ["leader"],
                     "min": 1,
@@ -1728,10 +1727,8 @@
                     "reflexes": 6,
                     "weapons": ["twin_marine_rifle", {"id": "energy_sword", "count": 2}],
                     "options": [
-                        {"replaceWeapon": {"id": "energy_sword", "count": 2}, "withWeapon": [{"id": "energy_fist", "count": 2}, {"id": "energy_hammer", "count": 2}]},
-                        {"replaceWeapon": ["twin_marine_rifle", {"id": "energy_sword", "count": 2}], "withWeapon": [{"id": "energy_claws", "count": 4}]},
-                        {"replaceWeapon": "twin_marine_rifle", "withWeapon": ["heavy_flamethrower", "missile_launcher", "minigun"]},
-                        {"addRule": "shield"}
+                        {"replaceWeapon": {"id": "energy_sword", "count": 2}, "withWeapon": [{"id": "energy_fist", "count": 2}, {"id": "energy_hammer", "count": 2}, {"id": "energy_claws", "count": 2}]},
+                        {"replaceWeapon": ["twin_marine_rifle"], "withWeapon": [{"id": "energy_sword", "count": 2}, {"id": "energy_claws", "count": 2}, "combat_shield", "heavy_flamethrower", "missile_launcher", "minigun"]}
                     ],
                     "min": 1,
                     "max": 1
@@ -2553,8 +2550,6 @@
             ]
         },
         "wolf_grenade_launcher": {"name": "Wolf Grenade Launcher", "attacks": 1, "ap": 1, "short": 6, "medium": 12, "rules": ["assault"]},
-        "wolf_shield": {"name": "Wolf Shield", "attacks": 0, "short": "Melee", "rules": ["shield"]},
-        "combat_shield": {"name": "Combat Shield", "attacks": 0, "short": "Melee", "rules": ["shield"]},
         "ancient_chainsword": {"name": "Ancient Chainsword", "attacks": 3, "ap": 2, "short": "Melee"},
         "arch_fist_shoot": {"name": "Arch-Marine Fist (Ranged)", "attacks": 3, "short": 12, "medium": 24, "ap": 3, "rules": ["rapid_fire"]},
         "arch_fist_fight": {"name": "Arch-Marine Fist (Melee)", "short": "Melee", "attacks": 1, "ap": 7, "rules": ["rending"]},
