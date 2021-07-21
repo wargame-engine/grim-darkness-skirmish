@@ -21,7 +21,6 @@
                     "fight": 7,
                     "defense": 8,
                     "reflexes": 7,
-                    "wounds": 6,
                     "movement": 8,
                     "weapons": [{"id": "large_piercing_claws", "count": 6}],
                     "options": [{"replaceRule": {"id": "swarm_melee_tactics", "x": 1}, "withRule": {"id": "swarm_melee_tactics", "x": 2}}],
@@ -45,7 +44,6 @@
                     "fight": 6,
                     "defense": 6,
                     "reflexes": 6,
-                    "wounds": 1,
                     "movement": 8,
                     "weapons": [{"id": "piercing_claws", "count": 3}],
                     "options": [{"addWeapon": ["razor_talons"]}, {"addWeapon": ["meat_hooks", "acidic_jaws"], "limit": 1}],
@@ -69,7 +67,6 @@
                     "fight": 6,
                     "defense": 6,
                     "reflexes": 6,
-                    "wounds": 1,
                     "movement": 8,
                     "weapons": [{"id": "piercing_claws", "count": 3}],
                     "options": [{"addWeapon": ["razor_talons"]}, {"addWeapon": ["meat_hooks", "acidic_jaws"], "limit": 1}],
@@ -94,7 +91,6 @@
                     "fight": 7,
                     "defense": 9,
                     "reflexes": 7,
-                    "wounds": 1,
                     "movement": 6,
                     "weapons": ["consumer", {"id": "razor_talons", "count": 4}],
                     "options": [
@@ -125,12 +121,14 @@
                     "fight": 6,
                     "defense": 7,
                     "reflexes": 6,
-                    "wounds": 1,
                     "movement": 6,
                     "rules": ["leader"],
                     "weapons": ["consumer", {"id": "razor_talons", "count": 3}],
                     "options": [
-                        {"replaceWeapon": "consumer", "withWeapon": [{"id": "razor_talons", "count": 2}, "spikefists", "acid_spitter", {"id": "piercing_claws", "count": 2}, {"id": "boneswords", "count": 2}]},
+                        {
+                            "replaceWeapon": "consumer",
+                            "withWeapon": [{"id": "razor_talons", "count": 2}, "spikefists", "acid_spitter", {"id": "piercing_claws", "count": 2}, {"id": "boneswords", "count": 2}]
+                        },
                         {"replaceWeapon": {"id": "razor_talons", "count": 3}, "withWeapon": [{"id": "piercing_claws", "count": 3}, {"id": "boneswords", "count": 4}]},
                         {"addWeapon": ["meat_hooks"]}
                     ],
@@ -153,11 +151,13 @@
                     "fight": 6,
                     "defense": 7,
                     "reflexes": 6,
-                    "wounds": 1,
                     "movement": 6,
                     "weapons": ["consumer", {"id": "razor_talons", "count": 3}],
                     "options": [
-                        {"replaceWeapon": "consumer", "withWeapon": [{"id": "razor_talons", "count": 2}, "spikefists", "acid_spitter", {"id": "piercing_claws", "count": 2}, {"id": "boneswords", "count": 2}]},
+                        {
+                            "replaceWeapon": "consumer",
+                            "withWeapon": [{"id": "razor_talons", "count": 2}, "spikefists", "acid_spitter", {"id": "piercing_claws", "count": 2}, {"id": "boneswords", "count": 2}]
+                        },
                         {"replaceWeapon": {"id": "razor_talons", "count": 3}, "withWeapon": [{"id": "piercing_claws", "count": 3}, {"id": "boneswords", "count": 4}]},
                         {"addWeapon": ["meat_hooks"]}
                     ],
@@ -180,15 +180,38 @@
                     "fight": 6,
                     "defense": 7,
                     "reflexes": 6,
-                    "wounds": 1,
                     "movement": 6,
                     "weapons": ["consumer", {"id": "razor_talons", "count": 3}],
                     "options": [
                         {"replaceWeapon": "consumer", "withWeapon": ["spiked_strangler", "acid_cannon"]},
-                        {"replaceWeapon": "consumer", "withWeapon": [{"id": "razor_talons", "count": 2}, "spikefists", "acid_spitter", {"id": "piercing_claws", "count": 2}, {"id": "boneswords", "count": 2}]},
+                        {
+                            "replaceWeapon": "consumer",
+                            "withWeapon": [{"id": "razor_talons", "count": 2}, "spikefists", "acid_spitter", {"id": "piercing_claws", "count": 2}, {"id": "boneswords", "count": 2}]
+                        },
                         {"replaceWeapon": {"id": "razor_talons", "count": 3}, "withWeapon": [{"id": "piercing_claws", "count": 3}, {"id": "boneswords", "count": 4}]},
                         {"addWeapon": ["meat_hooks"]}
                     ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "burrower": {
+            "name": "Hive Burrower",
+            "description": "Large bugs which burrow underground to surprise their targets.",
+            "category": "strike",
+            "rules": [{"id": "wounds", "x": 2}, "ambush"],
+            "models": [
+                {
+                    "name": "Hive Burrower",
+                    "courage": 4,
+                    "shoot": 5,
+                    "fight": 6,
+                    "defense": 6,
+                    "reflexes": 4,
+                    "movement": 7,
+                    "weapons": [{"id": "razor_talons", "count": 4}],
+                    "options": [{"replaceWeapon:": {"id": "razor_talons", "count": 2}, "withWeapon": {"id": "piercing_claws", "count": 2}}, {"addWeapon": ["spikefists", "consumer", "acid_spitter"]}],
                     "min": 1,
                     "max": 1
                 }
@@ -207,7 +230,6 @@
                     "fight": 5,
                     "defense": 4,
                     "reflexes": 4,
-                    "wounds": 1,
                     "movement": 7,
                     "rules": ["leader"],
                     "weapons": ["meat_borer", "ccw"],
@@ -230,7 +252,6 @@
                     "fight": 5,
                     "defense": 4,
                     "reflexes": 4,
-                    "wounds": 1,
                     "movement": 7,
                     "weapons": ["meat_borer", "ccw"],
                     "options": [{"replaceWeapon": "meat_borer", "withWeapon": ["consumer"]}, {"addRule": ["toxic_sacks", "adrenaline_glands"]}],
@@ -254,7 +275,6 @@
                     "fight": 6,
                     "defense": 4,
                     "reflexes": 4,
-                    "wounds": 1,
                     "movement": 7,
                     "rules": ["leader"],
                     "weapons": [{"id": "light_razor_talons", "count": 2}],
@@ -279,7 +299,6 @@
                     "fight": 6,
                     "defense": 4,
                     "reflexes": 4,
-                    "wounds": 1,
                     "movement": 7,
                     "weapons": [{"id": "light_razor_talons", "count": 2}],
                     "options": [{"addRule": ["toxic_sacks", "adrenaline_glands"]}],
@@ -489,9 +508,7 @@
             "category": "specialist",
             "keywords": ["Monster"],
             "rules": [{"id": "wounds", "x": 2}, {"id": "power", "x": 1}],
-            "models": [
-                {"name": "Psychic Beast", "courage": 7, "reflexes": 6, "fight": 5, "shoot": 0, "defense": 6, "movement": 5, "weapons": ["heavy_ccw"], "min": 1, "max": 1}
-            ]
+            "models": [{"name": "Psychic Beast", "courage": 7, "reflexes": 6, "fight": 5, "shoot": 0, "defense": 6, "movement": 5, "weapons": ["heavy_ccw"], "min": 1, "max": 1}]
         }
     },
     "weapons": {
@@ -535,37 +552,11 @@
     },
     "rules": {
         "tusks": {"name": "Tusks", "hidden": true, "description_short": "Impact +3", "description": "This model gains +3 impact.", "points": 6},
-        "adrenaline_glands": {
-            "name": "Adrenaline Glands",
-            "hidden": true,
-            "description_short": "+1\" Movement",
-            "description": "This model gets +1\" Movement",
-            "points": 1
-        },
-        "adrenaline_glands_large": {
-            "name": "Adrenaline Glands",
-            "hidden": true,
-            "description_short": "+1\" Movement",
-            "description": "This model gets +1\" Movement",
-            "points": 5
-        },
-        "toxic_sacks": {
-            "name": "Toxic Sacks",
-            "description": "Hit rolls of 1 or 2 gain +1 AP.",
-            "points": 1
-        },
-        "toxic_sacks_large": {
-            "name": "Toxic Sacks",
-            "description": "Hit rolls of 1 or 2 gain +1 AP.",
-            "points": 5
-        },
-        "enhanced_senses": {
-            "name": "Enhanced Senses",
-            "hidden": true,
-            "description_short": "+1 Accuracy",
-            "description": "This model gets +1 Accuracy",
-            "points": 10
-        },
+        "adrenaline_glands": {"name": "Adrenaline Glands", "hidden": true, "description_short": "+1\" Movement", "description": "This model gets +1\" Movement", "points": 1},
+        "adrenaline_glands_large": {"name": "Adrenaline Glands", "hidden": true, "description_short": "+1\" Movement", "description": "This model gets +1\" Movement", "points": 5},
+        "toxic_sacks": {"name": "Toxic Sacks", "description": "Hit rolls of 1 or 2 gain +1 AP.", "points": 1},
+        "toxic_sacks_large": {"name": "Toxic Sacks", "description": "Hit rolls of 1 or 2 gain +1 AP.", "points": 5},
+        "enhanced_senses": {"name": "Enhanced Senses", "hidden": true, "description_short": "+1 Accuracy", "description": "This model gets +1 Accuracy", "points": 10},
         "swarm_melee_tactics": {
             "name": "Swarm Melee Tactics",
             "inputs": ["x"],
