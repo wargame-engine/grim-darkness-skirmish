@@ -10,7 +10,7 @@
         "snatcher_lord": {
             "name": "Soul Stealer Lord",
             "description": "A massive mutant with psychic powers",
-            "keywords": ["Hive Mind"],
+            "keywords": ["Monster"],
             "category": "command",
             "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "wounds", "x": 3}, {"id": "swarm_melee_tactics", "x": 1}],
             "models": [
@@ -84,7 +84,7 @@
             "min": 1,
             "max": 1,
             "category": "command",
-            "keywords": ["Heavy Infantry", "Hive Mind"],
+            "keywords": ["Heavy Infantry"],
             "rules": [{"id": "leader_x", "x": "Infantry, Heavy Infantry"}, {"id": "wounds", "x": 3}, {"id": "swarm_melee_tactics", "x": 1}],
             "models": [
                 {
@@ -115,7 +115,7 @@
             "name": "Hive Warrior Champion",
             "description": "Large bugs which can extend the hive mind",
             "category": "command",
-            "keywords": ["Hive Mind"],
+            "keywords": ["Infantry"],
             "rules": [{"id": "wounds", "x": 2}],
             "models": [
                 {
@@ -142,7 +142,7 @@
         "hive_warrior": {
             "name": "Hive Warrior",
             "description": "Large bugs which can extend the hive mind",
-            "keywords": ["Hive Mind"],
+            "keywords": ["Infantry"],
             "category": "core",
             "rules": [{"id": "wounds", "x": 2}],
             "models": [
@@ -170,7 +170,7 @@
             "name": "Hive Warrior Heavy",
             "description": "Large bugs which can extend the hive mind",
             "category": "heavy",
-            "keywords": ["Hive Mind"],
+            "keywords": ["Infantry"],
             "rules": [{"id": "wounds", "x": 2}],
             "models": [
                 {
@@ -465,7 +465,7 @@
             "name": "Psychic Beast Leader",
             "description": "",
             "category": "command",
-            "keywords": ["Hive Mind"],
+            "keywords": ["Monster"],
             "rules": [{"id": "wounds", "x": 2}],
             "models": [
                 {
@@ -474,9 +474,9 @@
                     "reflexes": 6,
                     "fight": 5,
                     "shoot": 0,
-                    "defense": 8,
+                    "defense": 6,
                     "movement": 5,
-                    "weapons": ["ccw"],
+                    "weapons": ["heavy_ccw"],
                     "rules": [{"id": "power", "x": 1}, "leader"],
                     "min": 1,
                     "max": 1
@@ -487,10 +487,10 @@
             "name": "Psychic Beast",
             "description": "",
             "category": "specialist",
-            "keywords": ["Hive Mind"],
+            "keywords": ["Monster"],
             "rules": [{"id": "wounds", "x": 2}, {"id": "power", "x": 1}],
             "models": [
-                {"name": "Psychic Beast", "courage": 7, "reflexes": 6, "fight": 5, "shoot": 0, "defense": 8, "movement": 5, "weapons": ["ccw"], "min": 1, "max": 1}
+                {"name": "Psychic Beast", "courage": 7, "reflexes": 6, "fight": 5, "shoot": 0, "defense": 6, "movement": 5, "weapons": ["heavy_ccw"], "min": 1, "max": 1}
             ]
         }
     },
