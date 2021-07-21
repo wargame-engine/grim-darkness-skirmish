@@ -773,7 +773,7 @@
             "rule": "legend_strategist",
             "description": "Upgrade one Leader model with Brilliant Strategist.",
             "flavor": "This model has an adept strategic mind.",
-            "points": 25
+            "points": 15
         }
     },
     "strategies": [

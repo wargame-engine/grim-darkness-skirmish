@@ -603,28 +603,28 @@
             "rule": "relentless_advance",
             "description": "Upgrade one Leader model with Relentless Advance.",
             "flavor": "With a steady marching pace, nearby infantry march towards impending doom.",
-            "points": 10
+            "points": 5
         },
         "eternal_orb": {
             "name": "The Eternal Orb",
             "rule": "eternal_orb",
             "description": "Replace one Leader Model's Regeneration Orb with The Eternal Orb.",
             "flavor": "A significantly more powerful orb known to reanimate entire armies in masses.",
-            "points": 20
+            "points": 5
         },
         "nanorobot_cloak": {
             "name": "Nanorobot Cloak",
             "rule": "legend_nanobot_cloak",
             "description": "Upgrade one Leader model with Nanorobot Cloak.",
             "flavor": "A cloak filled with repair nanorobots which repairs the bearer of damage.",
-            "points": 10
+            "points": 5
         },
         "Prideful Leader": {
             "name": "Prideful Leader",
             "rule": "prideful_leader",
             "description": "Upgrade one Leader model with Prideful Leader.",
             "flavor": "A prideful machine inspiring others to continue to fight.",
-            "points": 15
+            "points": 5
         }
     },
     "rules": {

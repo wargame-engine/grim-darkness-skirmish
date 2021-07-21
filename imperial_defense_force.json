@@ -789,14 +789,14 @@
             "rule": "legend_strategist",
             "description": "Upgrade one Leader model with Brilliant Strategist.",
             "flavor": "This model has an adept strategic mind.",
-            "points": 25
+            "points": 15
         },
         "high_command": {
             "name": "High Command",
             "rule": "high_command",
             "description": "Upgrade one Leader model with Defense Force Tactics with High Command.",
             "flavor": "This model has been promoted to a higher position in the defense force ranks.",
-            "points": 10
+            "points": 5
         }
     }
 }

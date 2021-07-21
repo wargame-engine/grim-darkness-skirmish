@@ -974,21 +974,21 @@
             "weapon": "relic_ultra_claw",
             "description": "Replace one model's Ultra Claw with The Killer Claw.",
             "flavor": "This Claw is the most killy claw you've ever seen.",
-            "points": 10
+            "points": 5
         },
         "speed_pole": {
-            "name": "Big Noble Pole",
+            "name": "Big Boss Pole",
             "rule": "speed_pole",
-            "description": "Upgrade one Warlord model with The Big Noble Pole.",
+            "description": "Upgrade one Warlord model with The Big Boss Pole.",
             "flavor": "Nearby Orcs are filled with a zeal to charge forward and attack.",
-            "points": 10
+            "points": 5
         },
         "boom_cannon": {
             "name": "The Boom Cannon",
             "weapon": "boom_cannon",
             "description": "Replace one model's Heavy Cannon with The Boom Cannon.",
             "flavor": "A very scary cannon for pure destruction.",
-            "points": 20
+            "points": 10
         }
     },
     "powers": {

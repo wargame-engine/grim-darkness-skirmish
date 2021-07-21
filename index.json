@@ -350,21 +350,21 @@
             "rule": "legend_courage",
             "description": "Upgrade one Leader model with Inspired.",
             "flavor": "This model inspires the best in those who serve them.",
-            "points": 10
+            "points": 5
         },
         "expert_fighter": {
             "name": "Expert Fighter",
             "rule": "legend_expert_fighter",
             "description": "Upgrade one Leader model with Expert Fighter.",
             "flavor": "This model has fought in many close quarters fights and survived.",
-            "points": 10
+            "points": 5
         },
         "quick_reflexes": {
             "name": "Quick Reflexes",
             "rule": "legend_quick_reflexes",
             "description": "Upgrade one Leader model with Quick Reflexes.",
             "flavor": "This model has expert awareness and can react quickly.",
-            "points": 10
+            "points": 5
         }
     },
     "powers": {"shock_wave": {"name": "Shock Wave", "description": "Target enemy unit within 12\" takes 3 hits with AP 1. This power may be cast unlimited times.", "charge": 8}},

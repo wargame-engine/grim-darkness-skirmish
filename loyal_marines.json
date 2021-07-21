@@ -2625,7 +2625,7 @@
             "rule": {"id": "tough", "x": 1},
             "description": "Upgrade one model with Tough(1).",
             "flavor": "This gravity field generator can be overcharged to bounce even the toughest attacks for a moment.",
-            "points": 15
+            "points": 10
         },
         "legend_remembrance": {
             "subfactions": ["psychic_marines"],
@@ -2633,7 +2633,7 @@
             "rule": "legend_remembrance",
             "description": "Upgrade one model with Armor of Remembrance.",
             "flavor": "This armor serves as a reminder to those who have fallen before them.",
-            "points": 15
+            "points": 10
         },
         "legend_shard": {
             "subfactions": ["psychic_marines"],
@@ -2641,7 +2641,7 @@
             "rule": "legend_shard",
             "description": "Upgrade one model with Demonic Shard.",
             "flavor": "This demonic crystal is imbued with psychic energy.",
-            "points": 10
+            "points": 5
         },
         "legend_staff": {
             "subfactions": ["psychic_marines"],
@@ -2657,7 +2657,7 @@
             "rule": "legend_hammer",
             "description": "Upgrade one Leader model with Righteousness.",
             "flavor": "This model's purpose is pure and aim is righteous.",
-            "points": 10
+            "points": 5
         },
         "legend_charge": {
             "subfactions": ["psychic_marines"],
@@ -2665,7 +2665,7 @@
             "rule": "legend_charge",
             "description": "Upgrade one Leader model with Charge Leader.",
             "flavor": "This model is known to be on the front line leading the first charge against the enemy.",
-            "points": 10
+            "points": 5
         },
         "the_black_blade": {
             "subfactions": ["psychic_marines"],
@@ -2673,7 +2673,7 @@
             "weapon": "the_black_blade",
             "description": "Replace one Leader model's Psychic Sword with The Black Blade.",
             "flavor": "This blade is bound with the soul of a powerful demon, giving incredible strength.",
-            "points": 10
+            "points": 5
         }
     },
     "strategies": [
