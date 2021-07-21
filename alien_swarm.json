@@ -619,7 +619,7 @@
         "hive_mind": {
             "name": "Hive Mind",
             "phase": "activation",
-            "description": "Use at the beginning of the activation phase on a _Monster_ or _Infantry_ unit. Until the end of the activation phase, units within 12\" of that unit may use its Courage and Initative value instead of their own.",
+            "description": "Use when activating an _Infantry_ or _Monster_ unit. Choose another friendly _Infantry_ or _Monster_ unit within 6\" and use its Courage and Initative values for this activation.",
             "flavor": "The hive mind controls those who may be unwilling in order to maintain battle order.",
             "cost": 1
         }
