@@ -753,7 +753,7 @@
         },
         "spotting_laser": {
             "name": "Spotting Laser",
-            "description": "Any time during this model's activation, pick an enemy unit within 36\" to gain 1 spotting marker. When a friendly unit shoots at that target they may spend spotting markers to do the following: \n * One Marker: Re-roll hit rolls of 9+ \n * Two Markers: +1 to hit \n\n\n These effects are cumulative and may be activated multiple times. At the end of the round, remove all spotting markers.",
+            "description": "Any time during this model's activation, pick an enemy unit within 36\" to gain 1 spotting marker. When a friendly unit shoots at that target they may spend spotting markers to gain the following for that attack: \n * One Marker: Re-roll Accuracy rolls of 9+ \n * Two Markers: +1 Accuracy \n\n\n These effects are cumulative and may be activated multiple times. At the end of the round, remove all spotting markers.",
             "points": 5
         },
         "homing_beacon": {
