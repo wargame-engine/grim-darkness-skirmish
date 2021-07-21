@@ -5,6 +5,7 @@
     "reportUrl": "https://github.com/wargame-engine/grim-darkness-skirmish/issues",
     "factions": {
         "high_elves": {
+            "version": "1.0",
             "name": "High Elf Worlds",
             "id": "high_elves",
             "url": "high_elves.json",
@@ -14,6 +15,7 @@
             "description": "The High Elf Worlds are a group of large constructed fleet habitats. They focus on a mobile and deadly mix of advanced technology and unique fast tactics to achieve victory"
         },
         "dark_elves": {
+            "version": "1.0",
             "name": "Dark Elf Raiders",
             "id": "dark_elves",
             "url": "dark_elves.json",
@@ -22,22 +24,22 @@
             "description": "The Dark Elf Raiders are a group of elves who have an obsession with attacking a raiding settlements for plunder. Their tactics revolve around attacking quickly with highly agile ships and doing damage after which they quickly escape."
         },
         "alien_swarm": {
+            "version": "1.0",
             "name": "Alien Swarm",
             "id": "alien_swarm",
             "url": "alien_swarm.json",
             "color": "#3d3354",
             "alliance": "alien_swarm",
-            "version": "0.1",
             "description": "A swarm of aliens from far-away systems controlled by an ancient hive mind. They feast on other species, absorbing their biomass to turn into more of their kind. They have a combination of deadly creatures and swarms of agile aliens to defeat their foes."
         },
         "alien_cults": {
+            "version": "1.0",
             "name": "Alien Cults",
             "id": "alien_cults",
             "url": "alien_cults.json",
             "color": "#606060",
             "secondary_color": "#7d0a15",
             "alliance": "alien_swarm",
-            "version": "0.1",
             "description": "The Alien Cults are a loose band of alien worshippers who have been infiltrated by an Alien Swarm. They form on unsuspecting planets and eventually grow strong enough to take control. Alien Cults use a mix of hybrid alien creatures and scavenged weapons along with guerilla tactics.",
             "subfactions": {
                 "ambush_focus": {"name": "Ambush Focus", "id": "ambush_focus", "color": "#6a0001", "description": "An alien cult focused on ambushing and killing their foes."},
@@ -46,12 +48,12 @@
             }
         },
         "traitor_marines": {
+            "version": "1.0",
             "name": "Traitor Marines",
             "id": "traitor_marines",
             "url": "traitor_marines.json",
             "color": "#231f20",
             "alliance": "traitors",
-            "version": "0.1.1",
             "description": "The traitor marines are a band of marines that betrayed the Human Empire and now cooperate with demons and other heretics to pursue their own desires. They have a mix of deadly beasts, dangerous war machines and tough marine infantry.",
             "subfactions": {
                 "rage_focus": {"name": "Rage", "id": "rage_focus", "color": "#6a0001", "description": "Traitor marines focused on anger and brutal close assault to defeat their foes."},
@@ -74,12 +76,12 @@
             }
         },
         "dimensional_horrors": {
+            "version": "1.0",
             "name": "Dimensional Horrors",
             "id": "dimensional_horrors",
             "url": "dimensional_horrors.json",
             "color": "#90305d",
             "alliance": "traitors",
-            "version": "0.1",
             "description": "The dimensional horrors are a species of demon entities from an unknown dimension controlled by several demon lords. Their existence is largely not understood. They focus on rapid and unpredictable entry and deadly waves of infantry and beasts to surprise and overwhelm their foes.",
             "subfactions": {
                 "change": {"name": "Magic", "id": "change", "color": "#90305d", "restricted": true, "description": "Horrors with an adept magical skill."},
@@ -89,11 +91,11 @@
             }
         },
         "undying_machines": {
+            "version": "1.0",
             "name": "Undying Machines",
             "id": "undying_machines",
             "url": "undying_machines.json",
             "color": "#1e7331",
-            "version": "0.1.2",
             "description": "The Undying Machines are a race of once-people now turned into machine beings that are immortal. The Undying machines rely on waves of reanimating machines and advanced ancient battle technology to win their battles.",
             "subfactions": {
                 "solar_fire": {"name": "Solar Fire", "id": "solar_fire", "description": "Undying Machines focused on overwhelming firepower."},
@@ -101,41 +103,41 @@
             }
         },
         "elven_keepers": {
+            "version": "1.0",
             "name": "Elven Keepers",
             "id": "elven_keepers",
             "url": "elven_keepers.json",
             "color": "#7761ab",
             "alliance": "elven_coaliation",
-            "version": "0.1",
             "description": "The Elven Keepers are a race of elves who are tasked with keeping the grand elf library. They have a unique close combat and fast oriented style with deadly weaponry and quick jetbike and hovercraft vehicles."
         },
         "tao_federation": {
+            "version": "1.0",
             "alliance": "federation",
             "name": "Tao Federation",
             "id": "tao_federation",
             "url": "tao_federation.json",
             "color": "#008080",
-            "version": "0.1",
             "description": "The Tao Federation is an alliance of several alien species to band together in the name of survival and prosperity. The Tao rely on a mix of advanced battle warsuits and deadly pulse weaponry to defeat their enemies."
         },
         "battle_sisters": {
+            "version": "1.0",
             "name": "Battle Sisters",
             "id": "battle_sisters",
             "url": "battle_sisters.json",
             "color": "#010203",
             "secondary_color": "#9a1115",
             "alliance": "imperial_alliance",
-            "version": "0.1",
             "description": "The Battle Sisters are a sect of the Human Empire which have a uniquely faithful and religious background. The Battle Sisters rely on prayer and faith in their holy symbols along with some good old fashioned holy fire to defeat their enemies.",
             "subfactions": {"assault_focus": {"name": "Assault", "id": "assault_focus", "color": "#4272b8", "description": "Battle Sisters focused on all-out assaults and aggression."}}
         },
         "machine_guilds": {
+            "version": "1.0",
             "name": "Machine Guilds",
             "id": "machine_guilds",
             "url": "machine_guilds.json",
             "color": "#9a1115",
             "alliance": "imperial_alliance",
-            "version": "0.1",
             "description": "The Machine Guilds are a unique group of several different but organized planets which create and maintain all sort sof wild war machines and contraptions. The Machine Guilds rely on technological augmentation and deadly weapons to destroy their enemies.",
             "subfactions": {
                 "stealth_masters": {
@@ -147,12 +149,12 @@
             }
         },
         "imperial_defense_force": {
+            "version": "1.0",
             "name": "Imperial Defence Force",
             "id": "imperial_defense_force",
             "url": "imperial_defense_force.json",
             "color": "#314821",
             "alliance": "imperial_alliance",
-            "version": "0.1",
             "description": "The Imperial Defense Force is the backbone defense force of the many civilian planets of the empire. They are the first to respond to any miliary threats. They rely on hardy battle tanks and good old artillery shells along with waves of human soldiers to defend the Empire.",
             "hidden_subfactions": {
                 "neon_hive": {
@@ -168,12 +170,12 @@
             }
         },
         "loyal_marines": {
+            "version": "1.0",
             "name": "Loyal Marines",
             "id": "loyal_marines",
             "url": "loyal_marines.json",
             "color": "#0d407f",
             "alliance": "imperial_alliance",
-            "version": "0.1.3",
             "description": "The Loyal Marines are the pride of the Human Empire and its elite order-keeping force should they need to be deployed. The Loyal Marines rely on tough infantry and somewhat advanced vehicle technology to outsmart and eliminate their enemies.",
             "subfactions": {
                 "combined_arms_focus": {"name": "Combined Arms", "id": "combined_arms_focus", "color": "#ffffff", "description": "Loyal Marines who specialize in combined arms tactics."},
@@ -197,21 +199,21 @@
             }
         },
         "throne_guardians": {
+            "version": "1.0",
             "name": "Throne Guardians",
             "id": "throne_guardians",
             "url": "throne_guardians.json",
             "color": "#D4AF37",
             "secondary_color": "#7d0a15",
             "alliance": "imperial_alliance",
-            "version": "0.1",
             "description": "The Throne Guardians are the defenders of the Human Empire's capital. Only the most elite Loyal Marines are recruited to be Throne Guardians and with that they are the most well-trained. The Throne Guardians rely on the most elite and well-trained infantry along with powerful and ancient war weaponry to defend their home planet."
         },
         "orc_clans": {
+            "version": "1.0",
             "name": "Orc Clans",
             "id": "orc_clans",
             "url": "orc_clans.json",
             "color": "#50974A",
-            "version": "0.1",
             "description": "The Orc Clans are a mostly disconnected species of clans who are constantly at war with others and each other. The Orc Clans rely on massive all-out assaults and cobbled-together technology and vehicles to outlast and overwhelm their foes.",
             "subfactions": {
                 "goblin_army": {"name": "Goblin", "id": "goblin_army", "color": "#5f9370", "description": "An Orc Clan with an abundance of powerful and well-equipped goblins.", "restricted": true},
@@ -221,13 +223,13 @@
             }
         },
         "imperial_inquisition": {
+            "version": "1.0",
             "name": "Imperial Inquisition",
             "id": "imperial_inquisition",
             "url": "imperial_inquisition.json",
             "color": "#7d0a15",
             "secondary_color": "#010203",
             "alliance": "imperial_alliance",
-            "version": "0.1",
             "description": "The Imperial Inquisition is the order dedicated to hunting dangerous demons and other Psychic entities which cannot be trusted in the Human Empire. Their tactics rely on using skilled demon hunting individuals along with advanced assassins to hunt and destroy those who most dangerous."
         }
     },

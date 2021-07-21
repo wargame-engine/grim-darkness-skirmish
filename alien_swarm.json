@@ -3,7 +3,6 @@
     "id": "alien_swarm",
     "color": "#3d3354",
     "alliance": "alien_swarm",
-    "version": 0.1,
     "description": "A swarm of aliens from far-away systems controlled by an ancient hive mind. They feast on other species, absorbing their biomass to turn into more of their kind. They have a combination of deadly creatures and swarms of agile aliens to defeat their foes.",
     "author": "Solpine#1305",
     "units": {
