@@ -499,7 +499,7 @@
                     "defense": 9,
                     "reflexes": 6,
                     "rules": [{"id": "wounds", "x": 2}, "leader"],
-                    "weapons": [{"id": "suit_fists", "count": 3}],
+                    "weapons": [{"id": "suit_fists", "count": 2}],
                     "options": [
                         {"limit": 3, "addWeapon": ["flak_launcher", "ion_gatling", "flamethrower", "pulse_gatling", "plasma_rifle", "fusion_blaster", "missile_pod"]},
                         {"addRule": [{"id": "ambush", "name": "Sky Strike"}, {"id": "resilient", "x": 4, "name": "Shield Generator"}, "threat_detector_suit"]}
@@ -528,7 +528,7 @@
                     "defense": 9,
                     "reflexes": 6,
                     "rules": [{"id": "wounds", "x": 2}],
-                    "weapons": [{"id": "suit_fists", "count": 3}],
+                    "weapons": [{"id": "suit_fists", "count": 2}],
                     "options": [
                         {"limit": 3, "addWeapon": ["flak_launcher", "ion_gatling", "flamethrower", "pulse_gatling", "plasma_rifle", "fusion_blaster", "missile_pod"]},
                         {"addRule": [{"id": "ambush", "name": "Sky Strike"}, {"id": "resilient", "x": 4, "name": "Shield Generator"}, "threat_detector_suit"]}
