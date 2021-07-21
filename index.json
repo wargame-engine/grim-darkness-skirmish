@@ -231,6 +231,22 @@
             "secondary_color": "#010203",
             "alliance": "imperial_alliance",
             "description": "The Imperial Inquisition is the order dedicated to hunting dangerous demons and other Psychic entities which cannot be trusted in the Human Empire. Their tactics rely on using skilled demon hunting individuals along with advanced assassins to hunt and destroy those who most dangerous."
+        },
+        "undercity_gangs": {
+            "version": "1.0",
+            "name": "Undercity Gangs",
+            "id": "undercity_gangs",
+            "url": "undercity_gangs.json",
+            "color": "#8a552c",
+            "description": "The Undercity on many manufacturing worlds is filled with criminal gangs vying for power. Occasionally they will ally together to defeat a common enemy and maintain the status quo.",
+            "subfactions": {
+                "finesse_focus": {"name": "Finesse", "id": "finesse_focus", "description": "An Undercity gang focused on finesse and blade mastery."},
+                "brute_focus": {"name": "Brutes", "id": "brute_focus", "color": "#18abcc", "description": "An Undercity gang focused on raw strength and brutality."},
+                "assault_focus": {"name": "Assault", "id": "assault_focus", "color": "#18abcc", "description": "An Undercity gang focused on getting close and deadly with firepower."},
+                "tech_focus": {"name": "Tech", "id": "tech_focus", "color": "#18abcc", "description": "An Undercity gang focused on high tech weaponry and tactical supremacy."},
+                "trickery_focus": {"name": "Trickery", "id": "trickery_focus", "color": "#18abcc", "description": "An Undercity gang focused on trickery and underhanded tactics."},
+                "zealot_focus": {"name": "Zealot", "id": "zealot_focus", "color": "#18abcc", "description": "An Undercity gang focused on zealous fighting."}
+            }
         }
     },
     "unfinished_factions": {
