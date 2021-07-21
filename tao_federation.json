@@ -173,7 +173,7 @@
                     "fight": 4,
                     "defense": 6,
                     "reflexes": 6,
-                    "weapons": ["pulse_carbine", {"id": "ccw", "count": 1}, "stun_grenades"],
+                    "weapons": ["pulse_carbine", "ccw", "stun_grenades"],
                     "options": [{"replaceWeapon": "pulse_carbine", "withWeapon": ["pulse_shotgun", "pulse_rifle"]}],
                     "min": 1,
                     "max": 1
@@ -219,7 +219,7 @@
                     "fight": 5,
                     "defense": 6,
                     "reflexes": 6,
-                    "weapons": ["pulse_carbine", {"id": "ccw", "count": 1}, "stun_grenades"],
+                    "weapons": ["pulse_carbine", "ccw", "stun_grenades"],
                     "options": [{"replaceWeapon": "pulse_carbine", "withWeapon": ["pulse_shotgun", "pulse_rifle"]}],
                     "min": 1,
                     "max": 1
@@ -266,7 +266,7 @@
                     "fight": 4,
                     "defense": 5,
                     "reflexes": 6,
-                    "weapons": ["pulse_carbine", {"id": "ccw", "count": 1}, "stun_grenades"],
+                    "weapons": ["pulse_carbine", "ccw", "stun_grenades"],
                     "options": [{"replaceWeapon": "pulse_carbine", "withWeapon": ["ion_rifle", "rail_rifle"]}, {"addRule": "spotting_laser"}],
                     "min": 1,
                     "max": 1
@@ -381,7 +381,7 @@
                     "defense": 7,
                     "reflexes": 5,
                     "rules": ["fly", "leader"],
-                    "weapons": ["neutron_carbine", {"id": "ccw", "count": 1}],
+                    "weapons": ["neutron_carbine", "ccw"],
                     "min": 1,
                     "max": 1
                 }
@@ -403,7 +403,7 @@
                     "defense": 7,
                     "reflexes": 5,
                     "rules": ["fly"],
-                    "weapons": ["neutron_carbine", {"id": "ccw", "count": 1}],
+                    "weapons": ["neutron_carbine", "ccw"],
                     "options": [{"replaceModel": "insect_warrior_leader", "modelLimit": 1}],
                     "min": 1,
                     "max": 1
@@ -451,7 +451,7 @@
                     "defense": 8,
                     "reflexes": 6,
                     "options": [{"addRule": ["homing_beacon"]}],
-                    "weapons": ["pulse_gatling", {"id": "ccw", "count": 1}, "stun_grenades"],
+                    "weapons": ["pulse_gatling", "ccw", "stun_grenades"],
                     "min": 1,
                     "max": 1
                 }
@@ -473,7 +473,7 @@
                     "fight": 4,
                     "defense": 8,
                     "reflexes": 6,
-                    "weapons": ["pulse_gatling", {"id": "ccw", "count": 1}, "stun_grenades"],
+                    "weapons": ["pulse_gatling", "ccw", "stun_grenades"],
                     "options": [{"replaceWeapon": "pulse_gatling", "withWeapon": ["fusion_blaster"]}, {"addRule": ["homing_beacon"]}],
                     "min": 1,
                     "max": 1
