@@ -257,8 +257,7 @@
                     "fight": 5,
                     "defense": 6,
                     "reflexes": 6,
-                    "weapons": ["pulse_carbine", {"id": "ccw", "count": 2}, "stun_grenades"],
-                    "options": [{"replaceWeapon": "pulse_carbine", "withWeapon": ["pulse_shotgun", "pulse_rifle"]}],
+                    "weapons": ["pulse_shotgun", {"id": "ccw", "count": 2}, "stun_grenades"],
                     "min": 1,
                     "max": 1
                 }
@@ -303,7 +302,7 @@
                     "fight": 6,
                     "defense": 6,
                     "reflexes": 6,
-                    "weapons": ["pulse_carbine", {"id": "ccw", "count": 2}, "stun_grenades"],
+                    "weapons": ["pulse_shotgun", {"id": "ccw", "count": 2}, "stun_grenades"],
                     "min": 1,
                     "max": 1
                 }
