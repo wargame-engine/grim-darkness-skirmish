@@ -34,7 +34,7 @@
                 {
                     "name": "High Elf Champion on Bike",
                     "courage": 7,
-                    "movement": 10,
+                    "movement": 8,
                     "shoot": 7,
                     "fight": 7,
                     "defense": 7,
@@ -62,7 +62,7 @@
                 {
                     "name": "High Elf Champion with Wings",
                     "courage": 7,
-                    "movement": 10,
+                    "movement": 8,
                     "shoot": 7,
                     "fight": 7,
                     "defense": 7,
@@ -447,7 +447,7 @@
                 {
                     "name": "Spectre Leader",
                     "courage": 6,
-                    "movement": 10,
+                    "movement": 8,
                     "shoot": 6,
                     "fight": 6,
                     "defense": 7,
@@ -465,7 +465,7 @@
             "description": "A squad of ghostly warriors adept at remaining unseen until they make their attack.",
             "category": "specialist",
             "keywords": ["Infantry"],
-            "models": [{"name": "Spectre Warrior", "courage": 6, "movement": 10, "shoot": 6, "fight": 6, "defense": 7, "reflexes": 6, "weapons": ["spectre_rifle", "frags"], "min": 1, "max": 1}]
+            "models": [{"name": "Spectre Warrior", "courage": 6, "movement": 8, "shoot": 6, "fight": 6, "defense": 7, "reflexes": 6, "weapons": ["spectre_rifle", "frags"], "min": 1, "max": 1}]
         },
         "scorpion_leader": {
             "name": "Scorpion Leader",
@@ -528,7 +528,7 @@
                     "fight": 6,
                     "defense": 8,
                     "reflexes": 6,
-                    "movement": 10,
+                    "movement": 8,
                     "rules": ["champion"],
                     "weapons": ["laser_lance_shoot", {"id": "laser_lance_melee", "count": 3}, "twin_shard_rifle"],
                     "options": [{"replaceWeapon": ["laser_lance_shoot", {"id": "laser_lance_melee", "count": 3}], "withWeapon": [{"id": "exemplar_blade", "count": 3}, "space_lance"]}],
@@ -553,7 +553,7 @@
                     "fight": 6,
                     "defense": 8,
                     "reflexes": 6,
-                    "movement": 10,
+                    "movement": 8,
                     "weapons": ["laser_lance_shoot", {"id": "laser_lance_melee", "count": 2}, "twin_shard_rifle"],
                     "min": 1,
                     "max": 1
@@ -574,7 +574,7 @@
                     "fight": 6,
                     "defense": 8,
                     "reflexes": 6,
-                    "movement": 10,
+                    "movement": 8,
                     "weapons": ["twin_shard_rifle"],
                     "options": [{"replaceWeapon": "twin_shard_rifle", "withWeapon": ["twin_shard_cannon", "laser_machinegun"]}],
                     "min": 1,
