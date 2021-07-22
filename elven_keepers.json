@@ -10,7 +10,7 @@
             "min": 1,
             "max": 1,
             "category": "command",
-            "rules": [{"id": "leader_x", "x": "Infantry"},  {"id": "keeper_tactics", "x": 1},  {"id": "wounds", "x": 3}],
+            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "keeper_tactics", "x": 1}, {"id": "wounds", "x": 3}],
             "keywords": ["Infantry"],
             "models": [
                 {
@@ -19,15 +19,15 @@
                     "courage": 7,
                     "shoot": 7,
                     "fight": 7,
-                    "defense": 6,
+                    "defense": 7,
                     "reflexes": 6,
-                    "weapons": ["shard_pistol", {"id": "elven_blade", "count": 5}, "plasma_grenade"],
+                    "weapons": ["shard_pistol", {"id": "elven_blade", "count": 4}, "plasma_grenade"],
                     "options": [
                         {"replaceRule": {"id": "keeper_tactics", "x": 1}, "withRule": {"id": "keeper_tactics", "x": 2}},
                         {"replaceWeapon": "shard_pistol", "withWeapon": ["neuron_pistol", "fusion_pistol"]},
                         {
-                            "replaceWeapon": {"id": "elven_blade", "count": 5},
-                            "withWeapon": [{"id": "energy_sword", "count": 5}, {"id": "deathly_caress", "count": 5}, {"id": "deathly_kiss", "count": 5}, {"id": "deathly_embrace", "count": 5}]
+                            "replaceWeapon": {"id": "elven_blade", "count": 4},
+                            "withWeapon": [{"id": "energy_sword", "count": 4}, {"id": "deathly_caress", "count": 4}, {"id": "deathly_kiss", "count": 4}, {"id": "deathly_embrace", "count": 4}]
                         }
                     ],
                     "rules": [],
@@ -42,7 +42,7 @@
             "min": 1,
             "max": 1,
             "category": "command",
-            "rules": [{"id": "support_x", "x": "Infantry"},   {"id": "wounds", "x": 3}],
+            "rules": [{"id": "support_x", "x": "Infantry"}, {"id": "wounds", "x": 3}],
             "keywords": ["Infantry"],
             "models": [
                 {
@@ -67,7 +67,7 @@
             "min": 1,
             "max": 1,
             "category": "command",
-            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "power", "x": 1},   {"id": "wounds", "x": 3}],
+            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "power", "x": 1}, {"id": "wounds", "x": 3}],
             "keywords": ["Infantry"],
             "models": [
                 {
@@ -76,7 +76,7 @@
                     "movement": 7,
                     "shoot": 7,
                     "fight": 7,
-                    "defense": 6,
+                    "defense": 7,
                     "reflexes": 6,
                     "weapons": ["shard_pistol", {"id": "elven_blade", "count": 3}],
                     "options": [
@@ -96,7 +96,7 @@
             "min": 1,
             "max": 1,
             "category": "specialist",
-            "rules": [ {"id": "wounds", "x": 3}],
+            "rules": [{"id": "wounds", "x": 2}, "evasive"],
             "keywords": ["Infantry"],
             "models": [
                 {
@@ -105,9 +105,9 @@
                     "movement": 7,
                     "shoot": 7,
                     "fight": 7,
-                    "defense": 6,
+                    "defense": 7,
                     "reflexes": 6,
-                    "weapons": ["sniper_cannon", {"id": "ccw", "count": 3}],
+                    "weapons": ["sniper_cannon", {"id": "ccw", "count": 2}],
                     "rules": [],
                     "min": 1,
                     "max": 1
@@ -127,9 +127,9 @@
                     "name": "Jester Leader",
                     "courage": 6,
                     "movement": 7,
-                    "shoot": 6,
+                    "shoot": 5,
                     "fight": 6,
-                    "defense": 6,
+                    "defense": 7,
                     "reflexes": 6,
                     "weapons": ["shard_pistol", {"id": "elven_blade", "count": 3}, "plasma_grenade"],
                     "options": [
@@ -141,7 +141,7 @@
                                 {"id": "deathly_kiss", "count": 3},
                                 {"id": "deathly_caress", "count": 3},
                                 {"id": "deathly_embrace", "count": 3},
-                                {"id": "energy_glaive", "count": 4}
+                                {"id": "energy_glaive", "count": 3}
                             ]
                         },
                         {"adRule": "ambush"}
@@ -165,9 +165,9 @@
                     "name": "Jester",
                     "courage": 6,
                     "movement": 7,
-                    "shoot": 6,
+                    "shoot": 5,
                     "fight": 6,
-                    "defense": 6,
+                    "defense": 7,
                     "reflexes": 6,
                     "weapons": ["shard_pistol", {"id": "elven_blade", "count": 3}, "plasma_grenade"],
                     "options": [
@@ -181,8 +181,7 @@
                                 {"id": "deathly_embrace", "count": 3},
                                 {"id": "energy_glaive", "count": 4}
                             ]
-                        },
-                        {"adRule": "ambush"}
+                        }
                     ],
                     "rules": [],
                     "min": 1,
@@ -203,20 +202,20 @@
                     "name": "Mime Leader",
                     "courage": 5,
                     "movement": 7,
-                    "shoot": 6,
+                    "shoot": 5,
                     "fight": 6,
-                    "defense": 5,
+                    "defense": 6,
                     "reflexes": 6,
-                    "weapons": ["shard_pistol", {"id": "elven_blade", "count": 3}],
+                    "weapons": ["shard_pistol", {"id": "elven_blade", "count": 2}],
                     "options": [
                         {"replaceWeapon": "shard_pistol", "withWeapon": ["neuron_pistol", "fusion_pistol", "exploding_bola"]},
                         {
-                            "replaceWeapon": {"id": "elven_blade", "count": 3},
+                            "replaceWeapon": {"id": "elven_blade", "count": 2},
                             "withWeapon": [
                                 {"id": "energy_sword", "count": 3},
                                 {"id": "deathly_kiss", "count": 3},
                                 {"id": "deathly_caress", "count": 3},
-                                {"id": "deathly_embrace", "count": 3},
+                                {"id": "deathly_embrace", "count": 4},
                                 {"id": "energy_glaive", "count": 4}
                             ]
                         }
@@ -239,9 +238,9 @@
                     "name": "Mime",
                     "courage": 5,
                     "movement": 7,
-                    "shoot": 6,
+                    "shoot": 5,
                     "fight": 6,
-                    "defense": 5,
+                    "defense": 6,
                     "reflexes": 6,
                     "weapons": ["shard_pistol", {"id": "elven_blade", "count": 3}],
                     "options": [
@@ -288,7 +287,7 @@
         }
     },
     "weapons": {
-        "neuron_pistol": {"name": "Neuron Pistol", "attacks": 1, "short": 6, "medium": 12, "rules": ["pistol", {"id": "shocking", "x": 1}], "ap": 2},
+        "neuron_pistol": {"name": "Neuron Pistol", "attacks": 1, "short": 6, "rules": ["pistol", {"id": "shocking", "x": 2}], "ap": 2},
         "deathly_caress": {"name": "Deathly Caress", "attacks": 1, "short": "Melee", "ap": 4},
         "deathly_kiss": {"name": "Deathly Kiss", "attacks": 1, "short": "Melee", "ap": 1},
         "deathly_embrace": {"name": "Deathly Embrace", "attacks": 1, "ap": 3, "short": "Melee"},
@@ -297,7 +296,7 @@
             "name": "Sniper Cannon",
             "profiles": [
                 {"name": "Sniper Mode", "attacks": 1, "short": 12, "medium": 24, "rules": ["sniper", {"id": "shocking", "x": 1}, "rending"], "ap": 3},
-                {"name": "Suppression Mode", "attacks": 3, "short": 12, "medium": 24, "rules": [{"id": "shocking", "x": 1}, "rending"], "ap": 3}
+                {"name": "Suppression Mode", "attacks": 3, "short": 12, "medium": 24, "rules": [{"id": "shocking", "x": 1}, "rending"], "ap": 2}
             ]
         },
         "exploding_bola": {"name": "Exploding Bola", "attacks": 1, "short": 6, "medium": 12, "ap": 4, "rules": [{"id": "blast", "x": 2}]}
@@ -335,7 +334,11 @@
     },
     "powers": {
         "storm": {"name": "Storm", "description": "Target enemy unit within 12\" take 5 hits each with AP 0.", "charge": 7},
-        "magic_shield": {"name": "Shield", "description": "Target friendly unit within 12\". Until the end of the round, roll a D10 each time that unit is hit. On a 3 or less, that hit is ignored.", "charge": 7},
+        "magic_shield": {
+            "name": "Shield",
+            "description": "Target friendly unit within 12\". Until the end of the round, roll a D10 each time that unit is hit. On a 3 or less, that hit is ignored.",
+            "charge": 7
+        },
         "time_warp": {"name": "Warp", "description": "Target friendly unit within 12\" may immediately make a free move action.", "charge": 7},
         "weakness": {"name": "Weakness", "description": "Target enemy unit within 12\" must re-roll one die of your choice on its next Save test.", "charge": 6},
         "death": {"name": "Bolt", "description": "Target enemy unit within 18\" takes 1 hit with AP 7.", "charge": 6},
