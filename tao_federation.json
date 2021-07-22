@@ -150,8 +150,8 @@
                     "defense": 6,
                     "reflexes": 6,
                     "rules": ["leader"],
-                    "weapons": ["pulse_carbine", {"id": "ccw", "count": 2}, "stun_grenades"],
-                    "options": [{"replaceWeapon": "pulse_carbine", "withWeapon": ["pulse_shotgun", "pulse_rifle"]}, {"addWeapon": "pulse_pistol"}, {"addRule": "spotting_laser"}],
+                    "weapons": ["pulse_carbine", "ccw", "stun_grenades"],
+                    "options": [{"replaceWeapon": "pulse_carbine", "withWeapon": ["pulse_rifle"]}, {"addWeapon": "pulse_pistol"}, {"addRule": "spotting_laser"}],
                     "min": 1,
                     "max": 1
                 }
@@ -174,7 +174,7 @@
                     "defense": 6,
                     "reflexes": 6,
                     "weapons": ["pulse_carbine", "ccw", "stun_grenades"],
-                    "options": [{"replaceWeapon": "pulse_carbine", "withWeapon": ["pulse_shotgun", "pulse_rifle"]}],
+                    "options": [{"replaceWeapon": "pulse_carbine", "withWeapon": ["pulse_rifle"]}],
                     "min": 1,
                     "max": 1
                 }
@@ -183,8 +183,6 @@
         "veteran_warrior_leader": {
             "name": "Veteran Warrior Leader",
             "description": "A squad of infantry who excel at ranged shooting.",
-            "min": 1,
-            "max": 1,
             "category": "command",
             "models": [
                 {
@@ -196,8 +194,8 @@
                     "defense": 6,
                     "reflexes": 6,
                     "rules": ["leader"],
-                    "weapons": ["pulse_carbine", {"id": "ccw", "count": 2}, "stun_grenades"],
-                    "options": [{"replaceWeapon": "pulse_carbine", "withWeapon": ["pulse_shotgun", "pulse_rifle"]}, {"addWeapon": "pulse_pistol"}, {"addRule": "spotting_laser"}],
+                    "weapons": ["pulse_carbine", "ccw", "stun_grenades"],
+                    "options": [{"replaceWeapon": "pulse_carbine", "withWeapon": ["pulse_rifle"]}, {"addWeapon": "pulse_pistol"}, {"addRule": "spotting_laser"}],
                     "min": 1,
                     "max": 1
                 }
@@ -206,8 +204,6 @@
         "veteran_warrior": {
             "name": "Veteran Warrior",
             "description": "A squad of infantry who excel at ranged shooting.",
-            "min": 1,
-            "max": 1,
             "category": "core",
             "options": [{"addModel": "support_turret", "modelLimit": 1}, {"addModel": ["spotter_drone", "gunner_drone", "shield_drone", "guardian_drone"], "modelLimit": 1}],
             "models": [
@@ -220,7 +216,94 @@
                     "defense": 6,
                     "reflexes": 6,
                     "weapons": ["pulse_carbine", "ccw", "stun_grenades"],
+                    "options": [{"replaceWeapon": "pulse_carbine", "withWeapon": ["pulse_rifle"]}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "assaulter_leader": {
+            "name": "Assaulter Leader",
+            "description": "A squad of infantry who excel at ranged shooting.",
+            "category": "command",
+            "models": [
+                {
+                    "name": "Assaulter Leader",
+                    "movement": 6,
+                    "courage": 5,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 6,
+                    "reflexes": 6,
+                    "rules": ["leader"],
+                    "weapons": ["pulse_shotgun", {"id": "ccw", "count": 2}, "stun_grenades"],
+                    "options": [{"addWeapon": "pulse_pistol"}, {"addRule": "spotting_laser"}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "assaulter": {
+            "name": "Assaulter",
+            "description": "A squad of infantry who excel at ranged shooting.",
+            "category": "core",
+            "options": [{"addModel": "support_turret", "modelLimit": 1}, {"addModel": ["spotter_drone", "gunner_drone", "shield_drone", "guardian_drone"], "modelLimit": 1}],
+            "models": [
+                {
+                    "name": "Assaulter",
+                    "movement": 6,
+                    "courage": 4,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 6,
+                    "reflexes": 6,
+                    "weapons": ["pulse_carbine", {"id": "ccw", "count": 2}, "stun_grenades"],
                     "options": [{"replaceWeapon": "pulse_carbine", "withWeapon": ["pulse_shotgun", "pulse_rifle"]}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "veteran_assaulter_leader": {
+            "name": "Veteran Assaulter Leader",
+            "description": "A squad of infantry who excel at ranged shooting.",
+            "min": 1,
+            "max": 1,
+            "category": "command",
+            "models": [
+                {
+                    "name": "Veteran Assaulter Leader",
+                    "movement": 6,
+                    "courage": 6,
+                    "shoot": 5,
+                    "fight": 6,
+                    "defense": 6,
+                    "reflexes": 6,
+                    "rules": ["leader"],
+                    "weapons": ["pulse_shotgun", {"id": "ccw", "count": 2}, "stun_grenades"],
+                    "options": [{"addWeapon": "pulse_pistol"}, {"addRule": "spotting_laser"}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "veteran_assaulter": {
+            "name": "Veteran Assaulter",
+            "description": "A squad of infantry who excel at ranged shooting.",
+            "min": 1,
+            "max": 1,
+            "category": "core",
+            "options": [{"addModel": "support_turret", "modelLimit": 1}, {"addModel": ["spotter_drone", "gunner_drone", "shield_drone", "guardian_drone"], "modelLimit": 1}],
+            "models": [
+                {
+                    "name": "Veteran Assaulter",
+                    "movement": 6,
+                    "courage": 5,
+                    "shoot": 5,
+                    "fight": 6,
+                    "defense": 6,
+                    "reflexes": 6,
+                    "weapons": ["pulse_carbine", {"id": "ccw", "count": 2}, "stun_grenades"],
                     "min": 1,
                     "max": 1
                 }
