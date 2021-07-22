@@ -621,7 +621,6 @@
                     "movement": 8,
                     "reflexes": 6,
                     "weapons": ["elven_blaster", "frags"],
-                    "options": [{"replaceModel": "hawk_leader", "modelLimit": 1}],
                     "min": 1,
                     "max": 1
                 }
@@ -669,7 +668,6 @@
                     "movement": 7,
                     "reflexes": 6,
                     "weapons": ["spinnerette_rifle"],
-                    "options": [{"replaceModel": "spider_leader", "modelLimit": 1}],
                     "min": 1,
                     "max": 1
                 }
