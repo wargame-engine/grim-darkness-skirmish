@@ -1058,7 +1058,7 @@
             "subfactions": ["change_traitors"],
             "category": "heavy",
             "models": [
-                {"name": "Psychic Marine Heavy", "movement": 5, "courage": 6, "shoot": 6, "fight": 6, "defense": 8, "reflexes": 6, "weapons": ["reaper_minigun", "heavy_ccw"], "min": 1, "max": 1}
+                {"name": "Psychic Marine Heavy", "movement": 5, "courage": 6, "shoot": 6, "fight": 6, "defense": 8, "reflexes": 6, "weapons": ["hexed_minigun", "heavy_ccw"], "min": 1, "max": 1}
             ]
         },
         "change_traitors": {
@@ -1126,7 +1126,7 @@
                     "defense": 9,
                     "reflexes": 6,
                     "weapons": ["twin_hexed_rifle", {"id": "energy_sword", "count": 2}],
-                    "options": [{"replaceWeapon": "twin_hexed_rifle", "withWeapon": ["heavy_flamethrower", "reaper_minigun"]}, {"addWeapon": ["missile_rack"]}],
+                    "options": [{"replaceWeapon": "twin_hexed_rifle", "withWeapon": ["heavy_flamethrower", "hexed_minigun"]}, {"addWeapon": ["missile_rack"]}],
                     "min": 1,
                     "max": 1
                 }
@@ -1323,17 +1323,17 @@
         "pestilence_claw": {"name": "Pestilence Claw", "attacks": 1, "ap": 5, "short": "Melee", "rules": ["pestilence", "cumbersome"]},
         "pestilence_ccw": {"name": "Pestilence CCW", "attacks": 1, "ap": 1, "short": "Melee", "rules": ["pestilence"]},
         "hexed_flamethrower_pistol": {"name": "Hexed Flamethrower Pistol", "attacks": 3, "short": 6, "ap": 1, "rules": ["rending", "flame"]},
-        "hexed_rifle": {"name": "Hexed Marine Rifle", "attacks": 1, "short": 12, "medium": 24, "ap": 2, "rules": ["rapid_fire"]},
+        "hexed_rifle": {"name": "Hexed Marine Rifle", "attacks": 1, "short": 12, "medium": 24, "ap": 1, "rules": ["rapid_fire", "rending"]},
         "hexed_flamethrower": {"name": "Hexed Flamethrower", "attacks": 3, "short": 6, "medium": 12, "ap": 1, "rules": ["rending", "flame"]},
-        "hexed_pistol": {"name": "Hexed Pistol", "attacks": 1, "short": 6, "medium": 12, "ap": 2},
-        "reaper_minigun": {"name": "Reaper Minigun", "attacks": 6, "short": 12, "medium": 24, "ap": 2},
+        "hexed_pistol": {"name": "Hexed Pistol", "attacks": 1, "short": 6, "medium": 12, "ap": 1, "rules": ["rending"]},
+        "hexed_minigun": {"name": "Hexed Minigun", "attacks": 5, "short": 12, "medium": 24, "ap": 2, "rules": ["rending"]},
         "missile_rack": {"name": "Missile Rack", "attacks": 2, "short": 12, "medium": 24, "ap": 6},
         "hexed_blades": {"name": "Hexed Blades", "attacks": 1, "short": "Melee", "ap": 1},
         "hexed_spear": {"name": "Hexed Spear", "attacks": 1, "short": "Melee", "rules": [{"id": "impact", "x": 1}], "ap": 2},
         "hexed_bow": {"name": "Hexed Bow", "attacks": 2, "short": 12, "medium": 24, "ap": 2, "rules": ["rending"]},
         "arch_staff": {"name": "Arch-Psyker's Blessed Staff", "profiles": [{"name": "Strike", "attacks": 5, "short": "Melee", "ap": 8}, {"name": "Sweep", "attacks": 10, "short": "Melee", "ap": 4}]},
         "claws": {"name": "Mutated Claws", "attacks": 1, "short": "Melee", "ap": 3},
-        "twin_hexed_rifle": {"name": "Twin Hexed Rifle", "attacks": 2, "short": 12, "medium": 24, "ap": 2},
+        "twin_hexed_rifle": {"name": "Twin Hexed Rifle", "attacks": 2, "short": 12, "medium": 24, "ap": 1, "rules": ["rending"]},
         "enormous_claws": {"name": "Enormous Claws", "attacks": 1, "short": "Melee", "ap": 6},
         "tentacle_maw": {"name": "Tentacled Maw", "attacks": 1, "short": "Melee", "ap": 2, "rules": [{"id": "blast", "x": 3}]},
         "archtraitor_sword": {"name": "Sword of the Arch-Traitor", "attacks": 1, "short": "Melee", "ap": 5},
