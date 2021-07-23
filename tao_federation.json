@@ -355,101 +355,101 @@
                 }
             ]
         },
-        "savage_commander": {
-            "name": "Savage Commander",
-            "description": "An intelligent savage commander with a rifle.",
+        "avian_commander": {
+            "name": "Avian Mercenary Commander",
+            "description": "An intelligent avian mercenary commander with a rifle.",
             "min": 1,
             "max": 1,
-            "keywords": ["Infantry", "Savages"],
+            "keywords": ["Infantry", "Avian Mercenaries"],
             "category": "command",
             "models": [
                 {
-                    "name": "Savage Commander",
-                    "movement": 7,
+                    "name": "Avian Mercenary Commander",
+                    "movement": 6,
                     "courage": 6,
-                    "shoot": 5,
+                    "shoot": 6,
                     "fight": 6,
-                    "defense": 5,
+                    "defense": 6,
                     "reflexes": 5,
-                    "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "wounds", "x": 2}, {"id": "savage_tactics", "x": 1}],
-                    "weapons": ["savage_rifle", {"id": "heavy_ccw", "count": 3}],
-                    "options": [{"replaceRule": {"id": "savage_tactics", "x": 1}, "withRule": {"id": "savage_tactics", "x": 2}}],
+                    "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "wounds", "x": 2}, {"id": "avian_tactics", "x": 1}],
+                    "weapons": ["avian_rifle", {"id": "heavy_ccw", "count": 3}],
+                    "options": [{"replaceRule": {"id": "avian_tactics", "x": 1}, "withRule": {"id": "avian_tactics", "x": 2}}],
                     "min": 1,
                     "max": 1
                 }
             ]
         },
-        "savage_leader": {
-            "name": "Savage Leader",
-            "description": "A squad of angry savages with rifles.",
+        "avian_leader": {
+            "name": "Avian Mercenary Leader",
+            "description": "A squad of avian mercenaries with rifles.",
             "min": 1,
             "max": 1,
-            "keywords": ["Infantry", "Savages"],
+            "keywords": ["Infantry", "Avian Mercenaries"],
             "category": "command",
             "rules": ["leader"],
             "models": [
                 {
-                    "name": "Savage Leader",
-                    "movement": 7,
+                    "name": "Avian Mercenary Leader",
+                    "movement": 6,
                     "courage": 4,
                     "shoot": 5,
-                    "fight": 6,
-                    "defense": 4,
+                    "fight": 5,
+                    "defense": 5,
                     "reflexes": 5,
-                    "weapons": ["savage_rifle", {"id": "heavy_ccw", "count": 1}],
+                    "weapons": ["avian_rifle", "heavy_ccw"],
                     "options": [{"addRule": "scout"}],
                     "min": 1,
                     "max": 1
                 }
             ]
         },
-        "savage": {
-            "name": "Savage Warrior",
-            "description": "A squad of angry savages with rifles.",
+        "avian_mercenary": {
+            "name": "Avian Mercenary",
+            "description": "A squad of avian mercenaries with rifles.",
             "min": 1,
             "max": 1,
-            "keywords": ["Infantry", "Savages"],
+            "keywords": ["Infantry", "Avian Mercenaries"],
             "category": "core",
             "models": [
                 {
-                    "name": "Savage Warrior",
-                    "movement": 7,
+                    "name": "Avian Mercenary",
+                    "movement": 6,
                     "courage": 4,
                     "shoot": 5,
-                    "fight": 6,
-                    "defense": 4,
+                    "fight": 5,
+                    "defense": 5,
                     "reflexes": 5,
-                    "weapons": ["savage_rifle", {"id": "heavy_ccw", "count": 1}],
+                    "weapons": ["avian_rifle", "heavy_ccw"],
                     "options": [{"addRule": "scout"}],
                     "min": 1,
                     "max": 1
                 }
             ]
         },
-        "savage_hound": {
-            "name": "Savage Hound",
-            "description": "A squad of angry hounds trained by savages.",
+        "avian_hound": {
+            "name": "Avian Hound",
+            "description": "A squad of angry hounds trained by avian mercenaries.",
             "min": 1,
             "max": 1,
             "category": "strike",
-            "keywords": ["Infantry", "Savages"],
-            "models": [{"name": "Savage Hound", "movement": 8, "courage": 4, "shoot": 4, "fight": 6, "defense": 4, "reflexes": 5, "weapons": ["hound_fangs"], "min": 1, "max": 1}]
+            "keywords": ["Infantry", "Avian Mercenaries"],
+            "models": [{"name": "Avian Hound", "movement": 8, "courage": 4, "shoot": 4, "fight": 6, "defense": 4, "reflexes": 5, "weapons": ["hound_fangs"], "min": 1, "max": 1}]
         },
-        "savage_beast_rider": {
-            "name": "Savage Beast Rider",
-            "description": "A squad of savages riding on beasts.",
+        "avian_beast_rider": {
+            "name": "Avian Beast Rider",
+            "description": "A squad of avian mercenaries riding on beasts.",
             "min": 1,
             "max": 1,
             "category": "strike",
-            "keywords": ["Heavy Infantry", "Savages"],
+            "keywords": ["Heavy Infantry", "Avian Mercenaries"],
             "rules": [{"id": "wounds", "x": 2}],
             "models": [
-                {"name": "Savage Beast Rider", "movement": 8, "courage": 4, "shoot": 5, "fight": 6, "defense": 6, "reflexes": 5, "weapons": ["savage_cannon", "beast_fists"], "min": 1, "max": 1}
+                {"name": "Avian Beast Rider", "movement": 8, "courage": 4, "shoot": 5, "fight": 6, "defense": 6, "reflexes": 5, "weapons": ["avian_cannon", "beast_fists"], "min": 1, "max": 1}
             ]
         },
         "insect_warrior_leader": {
             "name": "Insect Warrior Leader",
-            "description": "A squad of angry savages with rifles.",
+            "description": "A squad of flying insects with rifles.",
             "min": 1,
             "max": 1,
             "category": "command",
@@ -471,7 +471,7 @@
         },
         "insect_warrior": {
             "name": "Insect Warrior",
-            "description": "A squad of angry savages with rifles.",
+            "description": "A squad of flying insects with rifles.",
             "min": 1,
             "max": 1,
             "category": "strike",
@@ -796,8 +796,8 @@
         "stun_grenades": {"name": "Stun Grenades", "attacks": 1, "short": 6, "rules": ["grenade", "stun"]},
         "suit_fists": {"name": "Suit Fists", "attacks": 1, "short": "Melee", "ap": 2},
         "beast_fists": {"name": "Beasts Fists", "attacks": 2, "short": "Melee", "ap": 3},
-        "savage_rifle": {"name": "Savage Rifle", "attacks": 1, "short": 12, "medium": 24, "ap": 1},
-        "savage_cannon": {"name": "Savage Cannon", "attacks": 2, "short": 24, "medium": 48, "ap": 4},
+        "avian_rifle": {"name": "Avian Rifle", "attacks": 1, "short": 12, "medium": 24, "ap": 1},
+        "avian_cannon": {"name": "Avian Cannon", "attacks": 2, "short": 24, "medium": 48, "ap": 4},
         "neutron_carbine": {"name": "Neutron Carbine", "attacks": 1, "short": 9, "medium": 18, "ap": 3}
     },
     "rules": {
@@ -823,10 +823,10 @@
             "description": "When this unit is activated, choose up to X friendly _Infantry_ units within 6\" to receive one of the following bonuses until the end of the round: \n * Re-roll failed Accuracy tests of 9+ \n * Re-roll failed Initiative tests of 9+",
             "points": ["rule.x", {"multiply": 5}]
         },
-        "savage_tactics": {
-            "name": "Savage Tactics",
+        "avian_tactics": {
+            "name": "Avian Tactics",
             "inputs": ["x"],
-            "description": "When this unit is activated, choose up to X friendly _Savages_ _Infantry_ units within 6\" to receive one of the following bonuses until the end of the round: \n * Re-roll failed Accuracy tests of 9+ \n * Re-roll failed Strength tests of 9+",
+            "description": "When this unit is activated, choose up to X friendly _Avian Mercenaries_ _Infantry_ units within 6\" to receive one of the following bonuses until the end of the round: \n * Re-roll failed Accuracy tests of 9+ \n * Re-roll failed Strength tests of 9+",
             "points": ["rule.x", {"multiply": 5}]
         },
         "attached": {
