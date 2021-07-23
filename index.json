@@ -247,16 +247,14 @@
                 "trickery_focus": {"name": "Trickery", "id": "trickery_focus", "color": "#18abcc", "description": "An Undercity gang focused on trickery and underhanded tactics."},
                 "zealot_focus": {"name": "Zealot", "id": "zealot_focus", "color": "#18abcc", "description": "An Undercity gang focused on zealous fighting."}
             }
-        }
-    },
-    "unfinished_factions": {
+        },
         "ascended_astroraptors": {
             "alliance": "federation",
             "name": "Ascended Astro-Raptors",
             "id": "ascended_astroraptors",
             "url": "ascended_astroraptors.json",
             "color": "#4f90e0",
-            "version": "0.1",
+            "version": "1.0",
             "description": "Uplifted millenia ago by an unknown precursor race, the Ascended Astro-Raptors advanced from feral beasts to exploring the stars with high-tech lasers and armor.",
             "hidden_subfactions": {
                 "combat_masters": {"name": "Close Combat", "id": "combat_masters", "color": "#00401f", "description": "An Ascended Astro-Raptors trained and drilled in deadly close combat fighting."},
@@ -267,7 +265,9 @@
                 "raygun_focus": {"name": "Rifle Focus", "id": "raygun_focus", "description": "An Ascended Astro-Raptors force trained especially well with their ranged weapons."},
                 "rayshield_focus": {"name": "Defense Focus", "id": "rayshield_focus", "description": "A force of Astro-Raptors equipped with highly advanced shielding technology."}
             }
-        },
+        }
+    },
+    "unfinished_factions": {
         "corrupted_defense_force": {
             "name": "Corrupted Defense Force",
             "id": "corrupted_defense_force",
