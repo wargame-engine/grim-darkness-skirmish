@@ -1387,13 +1387,13 @@
             "description": "Use before an Infantry unit fights. Hit rolls of 1 or 2 gain +1 AP.",
             "cost": 1
         },
-        "daemonforge": {
+        "unyielding": {
             "phase": "activation",
             "subfactions": ["none", "change_traitors", "pestilence_focus"],
-            "name": "Daemonforge",
-            "flavor": "Imbued with demonic energy, traitor vehicles can call upon the powers of the dark gods.",
-            "description": "Use before a _Vehicle_ unit is targeted by an attack. Roll a D10 for each hit. On a 3 or less that hit is prevented.",
-            "cost": 2
+            "name": "Unyielding",
+            "flavor": "Imbued with demonic energy, traitor marines can call upon the powers of the dark gods to keep fighting.",
+            "description": "Use when activating an _Infantry_ unit. That unit may ignore any critical injuries it has sustained for this activation.",
+            "cost": 1
         },
         "fearless": {
             "subfactions": ["none", "change_traitors", "pestilence_focus"],
