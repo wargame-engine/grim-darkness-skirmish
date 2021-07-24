@@ -630,7 +630,7 @@
         "terror": {
             "name": "Terror",
             "phase": "activation",
-            "description": "Use when a unit within 6\" takes a Courage test. That unit suffers -1 Courage.",
+            "description": "Use when a unit within 6\" takes a Courage test. That unit suffers -1 Courage until the end of its activation.",
             "flavor": "Their nightmarish form can terrorize even the strongest of wills.",
             "cost": 1
         },
