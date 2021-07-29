@@ -92,7 +92,7 @@
         "cultists": {
             "name": "Cultists",
             "description": "Humans who have sold their souls to the dark gods.",
-            "subfactions": ["none", "change_traitors", "pestilence_focus"],
+            "subfactions": ["none", "change_corrupteds", "pestilence_focus"],
             "min": 10,
             "max": 30,
             "category": "core",
@@ -117,7 +117,7 @@
         },
         "militia_squad": {
             "name": "Militia Squad",
-            "description": "A rogue band of deserters and traitors.",
+            "description": "A rogue band of deserters and corrupteds.",
             "category": "core",
             "min": 5,
             "max": 10,
@@ -390,7 +390,7 @@
             "name": "Daemon Spawn",
             "description": "Horribly mutated beings that run rampant on the battlefield.",
             "rules": ["mutations", "agile", "fear", {"id": "wounds", "x": 2}],
-            "subfactions": ["none", "change_traitors", "rage_focus", "pestilence_focus"],
+            "subfactions": ["none", "change_corrupteds", "rage_focus", "pestilence_focus"],
             "min": 1,
             "max": 5,
             "category": "strike",

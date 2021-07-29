@@ -1,6 +1,6 @@
 {
-    "id": "traitor_marines",
-    "name": "Traitor Marines",
+    "id": "corrupted_marines",
+    "name": "Corrupted Marines",
     "author": "Caliallie#6369",
     "hidden_subfactions": {
         "assault_focus": {"name": "Assault", "id": "assault_focus", "color": "#18abcc"},
@@ -10,14 +10,14 @@
         "morale_focus": {"name": "Morale", "id": "morale_focus", "color": "#18abcc"}
     },
     "units": {
-        "traitor_lord": {
-            "name": "Traitor Lord",
+        "corrupted_lord": {
+            "name": "Corrupted Lord",
             "description": "A lord of the dark gods.",
             "subfactions": ["none", "pestilence_focus"],
             "category": "command",
             "models": [
                 {
-                    "name": "Traitor Lord",
+                    "name": "Corrupted Lord",
                     "movement": 6,
                     "courage": 7,
                     "shoot": 7,
@@ -52,15 +52,15 @@
                 }
             ]
         },
-        "traitor_lord_on_bike": {
-            "name": "Traitor Lord on Bike",
+        "corrupted_lord_on_bike": {
+            "name": "Corrupted Lord on Bike",
             "description": "A lord of the dark gods riding a bike.",
             "subfactions": ["none"],
             "category": "command",
             "keywords": ["Biker"],
             "models": [
                 {
-                    "name": "Traitor Lord on Bike",
+                    "name": "Corrupted Lord on Bike",
                     "movement": 8,
                     "courage": 7,
                     "shoot": 7,
@@ -181,7 +181,7 @@
             "name": "Daemon Champion",
             "description": "A massive daemon gifted in the art of war.",
             "category": "command",
-            "subfactions": ["none", "pestilence_focus", "change_traitors"],
+            "subfactions": ["none", "pestilence_focus", "change_corrupteds"],
             "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "wounds", "x": 4}, {"id": "melee_tactics", "x": 1}, {"id": "power", "x": 1}],
             "keywords": ["Infantry"],
             "models": [
@@ -229,7 +229,7 @@
         "cultist": {
             "name": "Cultist",
             "description": "A lowlife who has sold their souls to the dark gods.",
-            "subfactions": ["none", "change_traitors", "pestilence_focus"],
+            "subfactions": ["none", "change_corrupteds", "pestilence_focus"],
             "min": 1,
             "max": 1,
             "category": "core",
@@ -252,7 +252,7 @@
         "cultist_specialist": {
             "name": "Cultist Specialist",
             "description": "A heavily armed lowlife who has sold their souls to the dark gods.",
-            "subfactions": ["none", "change_traitors", "pestilence_focus"],
+            "subfactions": ["none", "change_corrupteds", "pestilence_focus"],
             "category": "specialist",
             "models": [
                 {
@@ -279,14 +279,14 @@
             "category": "core",
             "models": [{"name": "Plague Walker", "movement": 5, "courage": 5, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 5, "weapons": [{"id": "ccw", "count": 2}], "min": 1, "max": 1}]
         },
-        "traitor_marine": {
-            "name": "Traitor Marine",
+        "corrupted_marine": {
+            "name": "Corrupted Marine",
             "description": "A marine corrupted by the dark gods.",
             "subfactions": ["none"],
             "category": "core",
             "models": [
                 {
-                    "name": "Traitor Marine",
+                    "name": "Corrupted Marine",
                     "movement": 6,
                     "courage": 6,
                     "shoot": 6,
@@ -303,14 +303,14 @@
                 }
             ]
         },
-        "specialist_traitor_marine": {
-            "name": "Traitor Marine Specialist",
+        "specialist_corrupted_marine": {
+            "name": "Corrupted Marine Specialist",
             "description": "A marine corrupted by the dark gods, wielding experimental weapons.",
             "subfactions": ["none"],
             "category": "specialist",
             "models": [
                 {
-                    "name": "Traitor Marine Specialist",
+                    "name": "Corrupted Marine Specialist",
                     "movement": 6,
                     "courage": 6,
                     "shoot": 6,
@@ -325,14 +325,14 @@
                 }
             ]
         },
-        "traitor_marine_leader": {
-            "name": "Traitor Marine Leader",
+        "corrupted_marine_leader": {
+            "name": "Corrupted Marine Leader",
             "description": "A squad leader corrupted by the dark gods.",
             "subfactions": ["none"],
             "category": "command",
             "models": [
                 {
-                    "name": "Traitor Marine Leader",
+                    "name": "Corrupted Marine Leader",
                     "movement": 6,
                     "courage": 6,
                     "shoot": 6,
@@ -364,7 +364,7 @@
         },
         "lord_of_pestilence": {
             "name": "Lord of Pestilence",
-            "description": "A traitor lord of death and decay.",
+            "description": "A corrupted lord of death and decay.",
             "subfactions": ["pestilence_focus"],
             "category": "command",
             "models": [
@@ -623,8 +623,8 @@
                 }
             ]
         },
-        "traitor_berzerker_leader": {
-            "name": "Traitor Berzerker Leader",
+        "corrupted_berzerker_leader": {
+            "name": "Corrupted Berzerker Leader",
             "description": "A squad leader corrupted by the dark gods filled with rage.",
             "subfactions": ["rage_focus"],
             "category": "command",
@@ -661,8 +661,8 @@
                 }
             ]
         },
-        "traitor_berzerker": {
-            "name": "Traitor Berzerker",
+        "corrupted_berzerker": {
+            "name": "Corrupted Berzerker",
             "description": "Marines corrupted by the dark gods filled with rage.",
             "subfactions": ["rage_focus"],
             "category": "core",
@@ -685,15 +685,15 @@
                 }
             ]
         },
-        "traitor_devastator_leader": {
-            "name": "Traitor Devastator Leader",
+        "corrupted_devastator_leader": {
+            "name": "Corrupted Devastator Leader",
             "description": "A highly trained squad leader armed to the teeth with advanced weaponry.",
             "subfactions": ["none"],
             "category": "command",
             "rules": ["leader"],
             "models": [
                 {
-                    "name": "Traitor Devastator Leader",
+                    "name": "Corrupted Devastator Leader",
                     "movement": 6,
                     "courage": 6,
                     "shoot": 6,
@@ -725,14 +725,14 @@
                 }
             ]
         },
-        "traitor_devastator": {
-            "name": "Traitor Devastator",
-            "description": "A highly trained traitor marine armed to the teeth with advanced weaponry.",
+        "corrupted_devastator": {
+            "name": "Corrupted Devastator",
+            "description": "A highly trained corrupted marine armed to the teeth with advanced weaponry.",
             "subfactions": ["none"],
             "category": "heavy",
             "models": [
                 {
-                    "name": "Traitor Devastator",
+                    "name": "Corrupted Devastator",
                     "movement": 6,
                     "courage": 6,
                     "shoot": 6,
@@ -747,8 +747,8 @@
             ]
         },
         "possessed_brother": {
-            "name": "Possessed Traitor",
-            "description": "A traitor marine who has been gifted with daemonic mutations to aid them in battle.",
+            "name": "Possessed Corrupted",
+            "description": "A corrupted marine who has been gifted with daemonic mutations to aid them in battle.",
             "subfactions": ["none"],
             "category": "specialist",
             "rules": ["mutations"],
@@ -770,7 +770,7 @@
         },
         "greater_possessed_brother": {
             "name": "Greater Possessed Brother",
-            "description": "A squad of traitor marines that have been gifted with significant daemonic mutations to aid them in battle.",
+            "description": "A squad of corrupted marines that have been gifted with significant daemonic mutations to aid them in battle.",
             "subfactions": ["none"],
             "category": "specialist",
             "rules": ["mutations", {"id": "wounds", "x": 3}],
@@ -828,7 +828,7 @@
         },
         "specialist_talon_raptor": {
             "name": "Talon Raptor Specialist",
-            "description": "A heavily armed elite traitor marine jumping into the fray with a jetpack.",
+            "description": "A heavily armed elite corrupted marine jumping into the fray with a jetpack.",
             "subfactions": ["none"],
             "category": "specialist",
             "rules": ["ambush", "fly", "fear"],
@@ -850,7 +850,7 @@
         },
         "talon_raptor": {
             "name": "Talon Raptor",
-            "description": "An elite traitor marine jumping into the fray with a jetpack.",
+            "description": "An elite corrupted marine jumping into the fray with a jetpack.",
             "subfactions": ["none"],
             "category": "strike",
             "rules": ["ambush", "fly", "fear"],
@@ -873,15 +873,15 @@
                 }
             ]
         },
-        "traitor_destroyer_leader": {
-            "name": "Traitor Destroyer Leader",
+        "corrupted_destroyer_leader": {
+            "name": "Corrupted Destroyer Leader",
             "description": "A destroyer that has been corrupted by the dark gods.",
             "rules": ["ambush", "leader"],
             "subfactions": ["none"],
             "category": "command",
             "models": [
                 {
-                    "name": "Traitor Destroyer Leader",
+                    "name": "Corrupted Destroyer Leader",
                     "movement": 5,
                     "courage": 6,
                     "shoot": 6,
@@ -909,15 +909,15 @@
                 }
             ]
         },
-        "traitor_destroyer": {
-            "name": "Traitor Destroyer",
+        "corrupted_destroyer": {
+            "name": "Corrupted Destroyer",
             "description": "A destroyer that has been corrupted by the dark gods.",
             "rules": ["ambush"],
             "subfactions": ["none"],
             "category": "specialist",
             "models": [
                 {
-                    "name": "Traitor Destroyer",
+                    "name": "Corrupted Destroyer",
                     "movement": 5,
                     "courage": 6,
                     "shoot": 6,
@@ -970,7 +970,7 @@
             "name": "Daemonic Spawn",
             "description": "A horribly mutated being that runs rampant on the battlefield.",
             "rules": ["mutations", "agile", "fear", {"id": "wounds", "x": 2}],
-            "subfactions": ["none", "change_traitors", "rage_focus", "pestilence_focus"],
+            "subfactions": ["none", "change_corrupteds", "rage_focus", "pestilence_focus"],
             "category": "strike",
             "models": [{"name": "Daemonic Spawn", "movement": 7, "courage": 7, "shoot": 0, "fight": 5, "defense": 7, "reflexes": 6, "weapons": [{"id": "claws", "count": 3}], "min": 1, "max": 1}]
         },
@@ -978,7 +978,7 @@
             "name": "Sorcerer Lord",
             "description": "A master of combat that leads the forces of change.",
             "rules": [{"id": "power", "x": 2}, {"id": "wounds", "x": 3}, {"id": "rifle_tactics", "x": 2}, "leader"],
-            "subfactions": ["change_traitors"],
+            "subfactions": ["change_corrupteds"],
             "category": "command",
             "models": [
                 {
@@ -1004,7 +1004,7 @@
             "name": "Sorcerer",
             "description": "A distinguished sorcerer who has managed to rise through the ranks of the change brothers.",
             "rules": [{"id": "power", "x": 1}, {"id": "wounds", "x": 2}, {"id": "rifle_tactics", "x": 1}, "leader"],
-            "subfactions": ["change_traitors"],
+            "subfactions": ["change_corrupteds"],
             "category": "command",
             "models": [
                 {
@@ -1026,10 +1026,10 @@
                 }
             ]
         },
-        "change_traitor_leader": {
+        "change_corrupted_leader": {
             "name": "Psychic Marine Sorcerer",
             "description": "A psychically adept change marine, fighting on as a mindless automaton.",
-            "subfactions": ["change_traitors"],
+            "subfactions": ["change_corrupteds"],
             "category": "command",
             "rules": ["leader"],
             "models": [
@@ -1052,19 +1052,19 @@
                 }
             ]
         },
-        "heavy_change_traitor": {
+        "heavy_change_corrupted": {
             "name": "Psychic Marine Heavy",
-            "description": "A hexed traitor marines who wields a curse-bound minigun and fights on as a mindless automaton",
-            "subfactions": ["change_traitors"],
+            "description": "A hexed corrupted marines who wields a curse-bound minigun and fights on as a mindless automaton",
+            "subfactions": ["change_corrupteds"],
             "category": "heavy",
             "models": [
                 {"name": "Psychic Marine Heavy", "movement": 5, "courage": 6, "shoot": 6, "fight": 6, "defense": 8, "reflexes": 6, "weapons": ["hexed_minigun", "heavy_ccw"], "min": 1, "max": 1}
             ]
         },
-        "change_traitors": {
+        "change_corrupteds": {
             "name": "Psychic Marine",
-            "description": "A hexed traitor marine whose body has been turned to dust by a horrible curse, but fights on as an mindless automaton in their remaining armor.",
-            "subfactions": ["change_traitors"],
+            "description": "A hexed corrupted marine whose body has been turned to dust by a horrible curse, but fights on as an mindless automaton in their remaining armor.",
+            "subfactions": ["change_corrupteds"],
             "category": "core",
             "models": [
                 {
@@ -1086,7 +1086,7 @@
             "name": "Psychic Destroyer Sorcerer",
             "description": "A psychically adept change destroyer, fighting on as a mindless automaton.",
             "rules": ["ambush", "leader"],
-            "subfactions": ["change_traitors"],
+            "subfactions": ["change_corrupteds"],
             "category": "command",
             "models": [
                 {
@@ -1112,7 +1112,7 @@
             "name": "Psychic Destroyer",
             "description": "Nothing more than dust bound to a suit of armor, this change brother fights side by side with their brothers.",
             "rules": ["ambush"],
-            "subfactions": ["change_traitors"],
+            "subfactions": ["change_corrupteds"],
             "min": 1,
             "max": 1,
             "category": "specialist",
@@ -1136,7 +1136,7 @@
             "name": "Birdman Leader",
             "description": "A mutated half avian-half man squad leader that fights with the change brothers to acheive their goals.",
             "rules": ["leader"],
-            "subfactions": ["change_traitors"],
+            "subfactions": ["change_corrupteds"],
             "category": "command",
             "models": [
                 {
@@ -1158,7 +1158,7 @@
             "name": "Birdman Sorcerer",
             "description": "A mutated half avian-half man sorcerer that leads demonic forces of change.",
             "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "power", "x": 1}, {"id": "wounds", "x": 2}],
-            "subfactions": ["change_traitors"],
+            "subfactions": ["change_corrupteds"],
             "category": "command",
             "models": [
                 {
@@ -1179,7 +1179,7 @@
         "birdman": {
             "name": "Birdman",
             "description": "A mutated half avian-half man creature that fights with the change brothers to acheive their goals.",
-            "subfactions": ["change_traitors"],
+            "subfactions": ["change_corrupteds"],
             "category": "core",
             "models": [
                 {
@@ -1201,7 +1201,7 @@
             "name": "Birdman Disk Rider",
             "description": "An exalted birdmen riding a psychic disk.",
             "rules": ["hover", {"id": "impact", "x": 1}, {"id": "resilient", "x": 3}],
-            "subfactions": ["change_traitors"],
+            "subfactions": ["change_corrupteds"],
             "min": 1,
             "max": 1,
             "category": "strike",
@@ -1226,15 +1226,15 @@
                 }
             ]
         },
-        "traitor_biker": {
-            "name": "Traitor Biker",
-            "description": "A traitor marine on combat bikes.",
+        "corrupted_biker": {
+            "name": "Corrupted Biker",
+            "description": "A corrupted marine on combat bikes.",
             "rules": [{"id": "impact", "x": 1}],
             "subfactions": ["none"],
             "category": "strike",
             "models": [
                 {
-                    "name": "Traitor Biker",
+                    "name": "Corrupted Biker",
                     "movement": 8,
                     "courage": 6,
                     "shoot": 6,
@@ -1255,15 +1255,15 @@
             ],
             "keywords": ["Biker"]
         },
-        "traitor_biker_leader": {
-            "name": "Traitor Biker Leader",
-            "description": "A traitor marine leader on combat bikes.",
+        "corrupted_biker_leader": {
+            "name": "Corrupted Biker Leader",
+            "description": "A corrupted marine leader on combat bikes.",
             "rules": [{"id": "impact", "x": 1}, "leader"],
             "subfactions": ["none"],
             "category": "command",
             "models": [
                 {
-                    "name": "Traitor Biker Leader",
+                    "name": "Corrupted Biker Leader",
                     "movement": 8,
                     "courage": 6,
                     "shoot": 6,
@@ -1336,9 +1336,9 @@
         "twin_hexed_rifle": {"name": "Twin Hexed Rifle", "attacks": 2, "short": 12, "medium": 24, "ap": 1, "rules": ["rending"]},
         "enormous_claws": {"name": "Enormous Claws", "attacks": 1, "short": "Melee", "ap": 6},
         "tentacle_maw": {"name": "Tentacled Maw", "attacks": 1, "short": "Melee", "ap": 2, "rules": [{"id": "blast", "x": 3}]},
-        "archtraitor_sword": {"name": "Sword of the Arch-Traitor", "attacks": 1, "short": "Melee", "ap": 5},
-        "archtraitor_claw": {"name": "Claw of the Arch-Traitor", "attacks": 1, "short": "Melee", "ap": 8},
-        "archtraitor_ranged": {"name": "Dark Gods' Blessed Rifle", "attacks": 2, "short": 12, "medium": 24, "ap": 2, "rules": ["rapid_fire"]},
+        "archcorrupted_sword": {"name": "Sword of the Arch-Corrupted", "attacks": 1, "short": "Melee", "ap": 5},
+        "archcorrupted_claw": {"name": "Claw of the Arch-Corrupted", "attacks": 1, "short": "Melee", "ap": 8},
+        "archcorrupted_ranged": {"name": "Dark Gods' Blessed Rifle", "attacks": 2, "short": 12, "medium": 24, "ap": 2, "rules": ["rapid_fire"]},
         "pestilence_great_flail": {"name": "Pestilence Great-flail", "attacks": 1, "ap": 4, "short": "Melee", "rules": ["pestilence"]}
     },
     "rules": {
@@ -1381,22 +1381,22 @@
     "strategies": {
         "hate": {
             "phase": "activation",
-            "subfactions": ["none", "change_traitors", "pestilence_focus"],
+            "subfactions": ["none", "change_corrupteds", "pestilence_focus"],
             "name": "Hate",
-            "flavor": "Full with fury, traitor marines can launch devastating close combat assaults.",
+            "flavor": "Full with fury, corrupted marines can launch devastating close combat assaults.",
             "description": "Use before an Infantry unit fights. Hit rolls of 1 or 2 gain +1 AP.",
             "cost": 1
         },
         "unyielding": {
             "phase": "activation",
-            "subfactions": ["none", "change_traitors", "pestilence_focus"],
+            "subfactions": ["none", "change_corrupteds", "pestilence_focus"],
             "name": "Unyielding",
-            "flavor": "Imbued with demonic energy, traitor marines can call upon the powers of the dark gods to keep fighting.",
+            "flavor": "Imbued with demonic energy, corrupted marines can call upon the powers of the dark gods to keep fighting.",
             "description": "Use when activating an _Infantry_ unit. That unit may ignore any critical injuries it has sustained for this activation.",
             "cost": 1
         },
         "fearless": {
-            "subfactions": ["none", "change_traitors", "pestilence_focus"],
+            "subfactions": ["none", "change_corrupteds", "pestilence_focus"],
             "name": "Fearless",
             "phase": "activation",
             "description": "Use before activating a unit. That unit may immediately remove up to 2 Shock.",
@@ -1407,7 +1407,7 @@
             "subfactions": ["stealth_focus"],
             "name": "Concealment",
             "phase": "activation",
-            "flavor": "Traitor marines are sometimes trained in stealth tactics allowing them to hide even in plain sight.",
+            "flavor": "Corrupted marines are sometimes trained in stealth tactics allowing them to hide even in plain sight.",
             "description": "Use this strategy when a unit is targeted by an enemy Shooting attack. That unit gets -1 Accuracy this attack.",
             "cost": 2
         },
@@ -1429,7 +1429,7 @@
         },
         "psychic_channeling": {
             "phase": "activation",
-            "subfactions": ["change_traitors"],
+            "subfactions": ["change_corrupteds"],
             "name": "Psychic Channeling",
             "flavor": "With focus and energy, even the most difficult psychic powers can be manifested.",
             "description": "Use before a unit rolls for casting a psychic power. The spell charge value is increased by 1 and the spell has +6\" of range.",
@@ -1437,18 +1437,18 @@
         },
         "hex_rounds": {
             "phase": "activation",
-            "subfactions": ["change_traitors"],
+            "subfactions": ["change_corrupteds"],
             "name": "Hex Rounds",
             "flavor": "Sometimes used, hex rounds are imbued with psychic fire and are highly deadly.",
             "description": "Use before an Infantry unit shoots. Add +6\" to the short and long range bands of all weapons.",
             "cost": 1
         },
         "cursed_form": {
-            "subfactions": ["change_traitors"],
+            "subfactions": ["change_corrupteds"],
             "name": "Cursed Form",
             "phase": "activation",
             "description": "Use before taking Save rolls for an _Infantry_ unit. It gets +1 Save.",
-            "flavor": "Psychic Traitors, cursed with the loss of their souls, they are less susceptible to damage.",
+            "flavor": "Psychic Corrupteds, cursed with the loss of their souls, they are less susceptible to damage.",
             "cost": 2
         },
         "resilience": {
@@ -1478,33 +1478,33 @@
     },
     "powers": {
         "beam": {
-            "subfactions": ["none", "change_traitors", "pestilence_focus"],
+            "subfactions": ["none", "change_corrupteds", "pestilence_focus"],
             "name": "Invigorating Beam",
             "description": "Target friendly unit within 12\"may immediately make a free move action.",
             "charge": 7
         },
         "magic_shield": {
-            "subfactions": ["none", "change_traitors", "pestilence_focus"],
+            "subfactions": ["none", "change_corrupteds", "pestilence_focus"],
             "name": "Shield",
             "description": "Target friendly unit within 12\". Until the end of the round, roll a D10 each time that unit is hit. On a 2 or less, that hit is ignored.",
             "charge": 7
         },
         "weakness": {
-            "subfactions": ["none", "change_traitors", "pestilence_focus"],
+            "subfactions": ["none", "change_corrupteds", "pestilence_focus"],
             "name": "Weakness",
             "description": "Target enemy unit within 18\" must re-roll one die of your choice on its next Save test.",
             "charge": 6
         },
         "illusion": {
-            "subfactions": ["none", "change_traitors", "pestilence_focus"],
+            "subfactions": ["none", "change_corrupteds", "pestilence_focus"],
             "name": "Encroaching Mutations",
             "description": "Target enemy unit within 18\" gets -1 to hit the next time it shoots or fights.",
             "charge": 6
         },
-        "strike": {"subfactions": ["none", "change_traitors", "pestilence_focus"], "name": "Strike", "description": "Target enemy unit within 18\" takes 2 hits with AP 5.", "charge": 6},
-        "terror": {"subfactions": ["none", "change_traitors", "pestilence_focus"], "name": "Terror", "description": "Target enemy unit within 12\" immediately takes 3 Shock.", "charge": 7},
-        "death": {"name": "Bolt", "subfactions": ["change_traitors"], "description": "Target enemy unit within 18\" takes 1 hit with AP 7.", "charge": 6},
-        "storm": {"subfactions": ["change_traitors"], "name": "Storm", "description": "Target enemy unit within 18\" take 5 hits with AP 1.", "charge": 6},
-        "inferno": {"subfactions": ["change_traitors"], "name": "Inferno", "description": "Target enemy unit within 12\" takes 3 hits with AP 3.", "charge": 6}
+        "strike": {"subfactions": ["none", "change_corrupteds", "pestilence_focus"], "name": "Strike", "description": "Target enemy unit within 18\" takes 2 hits with AP 5.", "charge": 6},
+        "terror": {"subfactions": ["none", "change_corrupteds", "pestilence_focus"], "name": "Terror", "description": "Target enemy unit within 12\" immediately takes 3 Shock.", "charge": 7},
+        "death": {"name": "Bolt", "subfactions": ["change_corrupteds"], "description": "Target enemy unit within 18\" takes 1 hit with AP 7.", "charge": 6},
+        "storm": {"subfactions": ["change_corrupteds"], "name": "Storm", "description": "Target enemy unit within 18\" take 5 hits with AP 1.", "charge": 6},
+        "inferno": {"subfactions": ["change_corrupteds"], "name": "Inferno", "description": "Target enemy unit within 12\" takes 3 hits with AP 3.", "charge": 6}
     }
 }

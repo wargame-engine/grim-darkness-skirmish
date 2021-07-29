@@ -1,11 +1,11 @@
 {
-    "name": "Loyal Marines",
-    "id": "loyal_marines",
+    "name": "Imperial Marines",
+    "id": "imperial_marines",
     "author": "guitarninja#5707",
     "color": "#0d407f",
-    "background": "The Loyal Marines are an arm of the Imperium's military, one of the best-equipped and best trained. They are genetically engineered for battle and created for the sole purpose of destroying the enemies of the Imperium.",
-    "strengths": "The Loyal Marines have the tools for just about every situation, and can take on many types of foes. They are as flexible as you need them to be.",
-    "weaknesses": "Loyal Marines tend to be quite tough and highly trained and as such, their units are often quite expensive and may find it difficult to field models to cover a large battlefield.",
+    "background": "The Imperial Marines are an arm of the Imperium's military, one of the best-equipped and best trained. They are genetically engineered for battle and created for the sole purpose of destroying the enemies of the Imperium.",
+    "strengths": "The Imperial Marines have the tools for just about every situation, and can take on many types of foes. They are as flexible as you need them to be.",
+    "weaknesses": "Imperial Marines tend to be quite tough and highly trained and as such, their units are often quite expensive and may find it difficult to field models to cover a large battlefield.",
     "units": {
         "grav_captin": {
             "name": "Prime Captain (Grav Armor)",
@@ -510,7 +510,7 @@
                 }
             ]
         },
-        "loyal_marine_leader": {
+        "imperial_marine_leader": {
             "name": "Marine Leader",
             "description": "Elite trained marines sworn to protect the Empire.",
             "category": "command",
@@ -538,14 +538,14 @@
                 }
             ]
         },
-        "loyal_marine": {
+        "imperial_marine": {
             "name": "Marine",
             "description": "Elite trained marines sworn to protect the Empire.",
             "category": "core",
             "subfactions": ["none", "assault_focus", "wolf_marines"],
             "models": [{"name": "Marine", "movement": 6, "courage": 6, "shoot": 6, "fight": 6, "defense": 8, "reflexes": 6, "weapons": ["marine_rifle", "heavy_ccw", "at_grenade"], "min": 1, "max": 1}]
         },
-        "loyal_marine_specialist": {
+        "imperial_marine_specialist": {
             "name": "Marine Specialist",
             "description": "Elite trained marines sworn to protect the Empire.",
             "category": "specialist",
@@ -566,7 +566,7 @@
                 }
             ]
         },
-        "loyal_marine_heavy": {
+        "imperial_marine_heavy": {
             "name": "Marine Heavy",
             "description": "Elite trained marines sworn to protect the Empire.",
             "category": "heavy",
@@ -2354,7 +2354,7 @@
         },
         "marine_biker": {
             "name": "Marine Biker",
-            "description": "A loyal marine on combat bike.",
+            "description": "A imperial marine on combat bike.",
             "rules": [{"id": "impact", "x": 1}],
             "subfactions": ["none"],
             "category": "strike",
@@ -2383,7 +2383,7 @@
         },
         "marine_biker_leader": {
             "name": "Marine Biker Leader",
-            "description": "A loyal marine leader on combat bike.",
+            "description": "A imperial marine leader on combat bike.",
             "rules": [{"id": "impact", "x": 1}, "leader"],
             "subfactions": ["none"],
             "category": "command",
@@ -2833,7 +2833,7 @@
             "subfactions": ["stealth_focus"],
             "name": "Concealment",
             "phase": "activation",
-            "flavor": "Loyal marines are sometimes trained in stealth tactics allowing them to hide even in plain sight.",
+            "flavor": "Imperial marines are sometimes trained in stealth tactics allowing them to hide even in plain sight.",
             "description": "Use this strategy when a unit is targeted by an enemy Shooting attack. That unit gets -1 Accuracy this attack.",
             "cost": 2
         },
