@@ -614,5 +614,9 @@
             "cost": 1
         }
     },
-    "relics": {}
+    "relics": {},
+    "buyLinks": [
+        {"name": "Games Workshop", "link": "https://www.games-workshop.com/en-US/Warhammer-40-000?N=2562756967+77492817"},
+        {"name": "OnePageRules", "link": "https://www.myminifactory.com/object/3d-print-alien-hives-army-bundle-145588"}
+    ]
 }

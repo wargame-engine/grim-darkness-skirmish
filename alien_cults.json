@@ -889,5 +889,11 @@
         },
         "blast": {"name": "Blast", "description": "Target enemy unit within 12\" take 5 hits with AP 1.", "charge": 6},
         "bolt": {"name": "Bolt", "description": "Target enemy unit within 18\" takes 2 hits with AP 5.", "charge": 6}
-    }
+    },
+    "buyLinks": [
+        {
+            "name": "Games Workshop",
+            "link": "https://www.games-workshop.com/en-US/Warhammer-40-000?N=2562756967+4251244224"
+        }
+    ]
 }

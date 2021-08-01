@@ -510,5 +510,15 @@
             "description": "Use this strategy when an _Infantry_ unit makes a Move action. That unit gains +3\" of Movement for that action.",
             "cost": 1
         }
+    ],
+    "buyLinks": [
+        {
+            "name": "Games Workshop",
+            "link": "https://www.games-workshop.com/en-US/Warhammer-40-000?N=2562756967+3639190268"
+        },
+        {
+            "name": "OnePageRules",
+            "link": "https://www.myminifactory.com/object/3d-print-battle-sisters-army-bundle-137117"
+        }
     ]
 }
