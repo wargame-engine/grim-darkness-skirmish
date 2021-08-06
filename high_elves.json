@@ -753,7 +753,7 @@
         "vigilance": {
             "name": "Vigilance",
             "phase": "activation",
-            "description": "Use when taking an initiative test. That unit is treated as having +2 Initiative for that test.",
+            "description": "Use when taking an Initiative test for a reaction. That unit is treated as having +2 Initiative for that test.",
             "flavor": "Highly trained and expertly attentive, High Elf troops can react in an instant.",
             "cost": 1
         }

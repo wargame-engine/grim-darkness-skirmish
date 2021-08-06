@@ -602,7 +602,7 @@
         "swarm_reflexes": {
             "name": "Swarm Reflexes",
             "phase": "activation",
-            "description": "Use when taking an initiative test. That unit is treated as having +2 Initiative for that test.",
+            "description": "Use when taking an Initiative test for a reaction. That unit is treated as having +2 Initiative for that test.",
             "flavor": "Sometimes manual override by the swarm host is necessary to react efficiently.",
             "cost": 1
         },
