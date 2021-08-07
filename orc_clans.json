@@ -390,12 +390,12 @@
             ]
         },
         "specialist_orc": {
-            "name": "Specialist Orc",
-            "description": "An orc who can be equipped to specialize in specific combat roles.",
+            "name": "Looter Orc",
+            "description": "An orc obsessed with looting and upgrading weapons. Can be equipped for various specialist roles.",
             "category": "specialist",
             "models": [
                 {
-                    "name": "Specialist Orc",
+                    "name": "Looter Orc",
                     "courage": 5,
                     "shoot": 4,
                     "fight": 6,
