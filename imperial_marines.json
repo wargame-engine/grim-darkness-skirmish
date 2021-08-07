@@ -1689,7 +1689,7 @@
             "description": "Marines clad in very heavy armor and highly trained.",
             "rules": ["ambush"],
             "category": "command",
-            "subfactions": ["none", "assault_focus", "wolf_marines"],
+            "subfactions": ["none", "wolf_marines", "alien_hunters", "assault_focus"],
             "models": [
                 {
                     "name": "Destroyer Leader",
@@ -1715,7 +1715,7 @@
             "description": "Marines clad in very heavy armor and highly trained.",
             "rules": ["ambush"],
             "category": "specialist",
-            "subfactions": ["none", "assault_focus"],
+            "subfactions": ["none", "wolf_marines", "alien_hunters", "assault_focus"],
             "models": [
                 {
                     "name": "Destroyer",
@@ -1739,7 +1739,7 @@
             "name": "Devastator Leader",
             "description": "A squad of highly trained marines armed to the teeth with advanced weaponry.",
             "category": "command",
-            "subfactions": ["none", "assault_focus", "wolf_marines"],
+            "subfactions": ["none", "wolf_marines", "alien_hunters", "assault_focus"],
             "models": [
                 {
                     "name": "Devastator Leader",
@@ -1776,7 +1776,7 @@
             "name": "Devastator",
             "description": "A squad of highly trained marines armed to the teeth with advanced weaponry.",
             "category": "heavy",
-            "subfactions": ["none", "assault_focus", "wolf_marines"],
+            "subfactions": ["none", "wolf_marines", "alien_hunters", "assault_focus"],
             "models": [
                 {
                     "name": "Devastator",
