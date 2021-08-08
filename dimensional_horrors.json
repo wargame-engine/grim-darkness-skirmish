@@ -5,14 +5,14 @@
     "background": "Mutated servants of the dark gods able to materialize anywhere their influence is strong enough.",
     "units": {
         "daemon_champion": {
-            "name": "Daemon Champion",
+            "name": "Demon Champion",
             "description": "A massive daemon gifted in the art of war.",
             "category": "command",
             "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "wounds", "x": 4}, {"id": "melee_tactics", "x": 1}, {"id": "power", "x": 1}],
             "keywords": ["Infantry"],
             "models": [
                 {
-                    "name": "Daemon Champion",
+                    "name": "Demon Champion",
                     "movement": 8,
                     "courage": 7,
                     "shoot": 7,
@@ -84,22 +84,22 @@
             "models": [{"name": "The Shifter", "movement": 8, "courage": 6, "shoot": 6, "fight": 5, "defense": 6, "reflexes": 5, "weapons": ["tricksters_staff"], "min": 1, "max": 1, "rules": []}]
         },
         "flame_warrior": {
-            "name": "Flame Warrior",
+            "name": "Flame Demon",
             "description": "Twisting warriors of change known for shifting forms before the very eyes of their victims.",
             "keywords": ["infantry"],
             "category": "core",
             "subfactions": ["none", "change"],
-            "models": [{"name": "Flame Warrior", "movement": 6, "courage": 5, "shoot": 4, "fight": 4, "defense": 5, "reflexes": 4, "weapons": [{"id": "ccw", "count": 2}], "min": 1, "max": 1}]
+            "models": [{"name": "Flame Demon", "movement": 6, "courage": 5, "shoot": 4, "fight": 4, "defense": 5, "reflexes": 4, "weapons": [{"id": "ccw", "count": 2}], "min": 1, "max": 1}]
         },
         "blue_warrior_leader": {
-            "name": "Blue Warrior Leader",
+            "name": "Blue Demon Leader",
             "description": "Twisting warriors of change known for shifting forms before the very eyes of their victims.",
             "keywords": ["infantry"],
             "category": "command",
             "subfactions": ["none", "change"],
             "models": [
                 {
-                    "name": "Blue Warrior Leader",
+                    "name": "Blue Demon Leader",
                     "movement": 6,
                     "courage": 5,
                     "shoot": 5,
@@ -115,14 +115,14 @@
             ]
         },
         "blue_warrior": {
-            "name": "Blue Warrior",
+            "name": "Blue Demon",
             "description": "Twisting warriors of change known for shifting forms before the very eyes of their victims.",
             "keywords": ["infantry"],
             "category": "core",
             "subfactions": ["none", "change"],
             "models": [
                 {
-                    "name": "Blue Warrior",
+                    "name": "Blue Demon",
                     "movement": 6,
                     "courage": 5,
                     "shoot": 5,
@@ -137,14 +137,14 @@
             ]
         },
         "pink_warrior_leader": {
-            "name": "Pink Warrior Leader",
+            "name": "Pink Demon Leader",
             "description": "Twisting warriors of change known for shifting forms before the very eyes of their victims.",
             "keywords": ["infantry"],
             "category": "command",
             "subfactions": ["none", "change"],
             "models": [
                 {
-                    "name": "Pink Warrior Leader",
+                    "name": "Pink Demon Leader",
                     "movement": 6,
                     "courage": 5,
                     "shoot": 6,
@@ -160,14 +160,14 @@
             ]
         },
         "pink_warrior": {
-            "name": "Pink Warrior",
+            "name": "Pink Demon",
             "description": "Twisting warriors of change known for shifting forms before the very eyes of their victims.",
             "keywords": ["infantry"],
             "category": "core",
             "subfactions": ["none", "change"],
             "models": [
                 {
-                    "name": "Pink Warrior",
+                    "name": "Pink Demon",
                     "movement": 6,
                     "courage": 5,
                     "shoot": 6,
@@ -182,7 +182,7 @@
             ]
         },
         "exalted_flame_daemon": {
-            "name": "Exalted Flame Daemon",
+            "name": "Exalted Flame Demon",
             "description": "A daemon made of twisting, living flame held together by pure magic that acts as a leader for minor flame daemons.",
             "category": "specialist",
             "min": 1,
@@ -191,7 +191,7 @@
             "rules": ["hover", {"id": "wounds", "x": 2}],
             "models": [
                 {
-                    "name": "Exalted Flame Daemon",
+                    "name": "Exalted Flame Demon",
                     "movement": 8,
                     "courage": 6,
                     "shoot": 6,
@@ -206,14 +206,14 @@
             ]
         },
         "flame_daemon": {
-            "name": "Flame Daemon",
+            "name": "Flame Demon",
             "description": "A shifting daemon of living flames.",
             "category": "specialist",
             "subfactions": ["none", "change"],
             "rules": ["hover"],
             "models": [
                 {
-                    "name": "Flame Daemon",
+                    "name": "Flame Demon",
                     "movement": 8,
                     "courage": 5,
                     "shoot": 6,
@@ -227,13 +227,13 @@
             ]
         },
         "manta_daemon": {
-            "name": "Manta Daemon",
+            "name": "Manta Demon",
             "description": "Fast-flying manta-like daemons capable of close-range carnage.",
             "subfactions": ["none", "change"],
             "category": "strike",
             "rules": ["fly"],
             "models": [
-                {"name": "Manta Daemon", "movement": 8, "courage": 5, "shoot": 4, "fight": 5, "defense": 7, "reflexes": 5, "weapons": [{"id": "parasitic_bite", "count": 3}], "min": 1, "max": 1}
+                {"name": "Manta Demon", "movement": 8, "courage": 5, "shoot": 4, "fight": 5, "defense": 7, "reflexes": 5, "weapons": [{"id": "parasitic_bite", "count": 3}], "min": 1, "max": 1}
             ]
         },
         "soul_mirror": {
@@ -336,7 +336,7 @@
             "models": [{"name": "Mask of Excess", "movement": 8, "courage": 6, "shoot": 7, "fight": 7, "defense": 5, "reflexes": 5, "weapons": ["segmented_claws"], "min": 1, "max": 1, "rules": []}]
         },
         "excess_warrior_leader": {
-            "name": "Excess Warrior Leader",
+            "name": "Excess Demon Leader",
             "description": "The main bulk of the forces of excess, these equally alluring and devastating warriors find pleasure in the pain they inflict on the battlefield.",
             "subfactions": ["none", "excess"],
             "keywords": ["infantry"],
@@ -346,11 +346,11 @@
             "rules": ["leader"],
             "options": [{"addRule": ["champion"]}],
             "models": [
-                {"name": "Excess Warrior", "movement": 7, "courage": 5, "shoot": 6, "fight": 6, "defense": 5, "reflexes": 5, "weapons": [{"id": "sweeping_claws", "count": 2}], "min": 1, "max": 1}
+                {"name": "Excess Demon", "movement": 7, "courage": 5, "shoot": 6, "fight": 6, "defense": 5, "reflexes": 5, "weapons": [{"id": "sweeping_claws", "count": 2}], "min": 1, "max": 1}
             ]
         },
         "excess_warrior": {
-            "name": "Excess Warrior",
+            "name": "Excess Demon",
             "description": "The main bulk of the forces of excess, these equally alluring and devastating warriors find pleasure in the pain they inflict on the battlefield.",
             "subfactions": ["none", "excess"],
             "keywords": ["infantry"],
@@ -359,7 +359,7 @@
             "max": 1,
             "options": [{"addRule": ["champion"]}],
             "models": [
-                {"name": "Excess Warrior", "movement": 7, "courage": 5, "shoot": 6, "fight": 6, "defense": 5, "reflexes": 5, "weapons": [{"id": "sweeping_claws", "count": 2}], "min": 1, "max": 1}
+                {"name": "Excess Demon", "movement": 7, "courage": 5, "shoot": 6, "fight": 6, "defense": 5, "reflexes": 5, "weapons": [{"id": "sweeping_claws", "count": 2}], "min": 1, "max": 1}
             ]
         },
         "excess_steed": {
@@ -396,7 +396,7 @@
             "models": [{"name": "Gargoyle", "movement": 10, "courage": 4, "shoot": 4, "fight": 5, "defense": 5, "reflexes": 5, "weapons": [{"id": "ccw", "count": 2}], "min": 1, "max": 1}]
         },
         "death_seeker": {
-            "name": "Excess Warrior Leader on Steed",
+            "name": "Excess Demon Leader on Steed",
             "description": "A seductively mutated beast able to ferring forces of slaanesh into battle.",
             "keywords": ["cavalry"],
             "category": "command",
@@ -404,7 +404,7 @@
             "subfactions": ["none", "excess"],
             "models": [
                 {
-                    "name": "Excess Warrior Leader on Steed",
+                    "name": "Excess Demon Leader on Steed",
                     "movement": 8,
                     "courage": 5,
                     "shoot": 6,
@@ -418,7 +418,7 @@
             ]
         },
         "excess_warrior_on_steed": {
-            "name": "Excess Warrior on Steed",
+            "name": "Excess Demon on Steed",
             "description": "A seductively mutated beast able to ferring forces of slaanesh into battle.",
             "keywords": ["cavalry"],
             "category": "strike",
@@ -490,14 +490,14 @@
             ]
         },
         "wrath_warrior_leader": {
-            "name": "Wrath Warrior Leader",
+            "name": "Wrath Demon Leader",
             "description": ["Minions of the war-god, these ferocious demons know no rest, only battle."],
             "keywords": ["infantry"],
             "category": "command",
             "subfactions": ["none", "war"],
             "models": [
                 {
-                    "name": "Wrath Warrior Leader",
+                    "name": "Wrath Demon Leader",
                     "movement": 6,
                     "courage": 6,
                     "shoot": 6,
@@ -513,14 +513,14 @@
             ]
         },
         "wrath_warrior": {
-            "name": "Wrath Warrior",
+            "name": "Wrath Demon",
             "description": ["Minions of the war-god, these ferocious demons know no rest, only battle."],
             "keywords": ["infantry"],
             "category": "core",
             "subfactions": ["none", "war"],
             "models": [
                 {
-                    "name": "Wrath Warrior",
+                    "name": "Wrath Demon",
                     "movement": 6,
                     "courage": 6,
                     "shoot": 6,
@@ -572,7 +572,7 @@
         "power_cannon": {"name": "Power Cannon", "attacks": 3, "short": 24, "medium": 48, "ap": 4},
         "power_claw": {"name": "Power Claw", "attacks": 1, "short": "Melee", "ap": 6},
         "phlegm_cannon": {"name": "Phlegm Cannon", "attacks": 1, "short": 18, "medium": 36, "ap": 6, "rules": [{"id": "blast", "x": 3}]},
-        "daemon_claw": {"name": "Daemon Claw", "attacks": 10, "short": "Melee", "ap": 6},
+        "daemon_claw": {"name": "Demon Claw", "attacks": 10, "short": "Melee", "ap": 6},
         "lashing_tentacles": {"name": "Lashing Tentacles", "attacks": 1, "short": "Melee", "ap": 3},
         "sweeping_claws": {"name": "Sweeping Claws", "attacks": 1, "short": "Melee", "ap": 0, "rules": ["rending"]},
         "tormenting_whips": {"name": "Tormenting Whips", "attacks": 3, "short": 6, "ap": 1, "rules": ["pistol"]},
@@ -609,7 +609,7 @@
         },
         "herald": {"name": "Herald", "description": "Friendly _Infantry_ units within 6\" may gain +1 AP on all Melee weapons.", "points": 5},
         "psychic_syphon": {"name": "Psychic Syphon", "description": "Enemy models within 12\" of this model suffer -1 to their psychic tests.", "points": 5},
-        "chanting_warriors": {"name": "Chanting Warriors", "description": "Enemy units must subtract one from psychic tests within 9\" of this model.", "points": 5},
+        "chanting_warriors": {"name": "Chanting Demons", "description": "Enemy units must subtract one from psychic tests within 9\" of this model.", "points": 5},
         "no_escape": {
             "name": "No Escape",
             "description": "Enemy units attempting to fall back from this unit take their Initiative test at -2.",
