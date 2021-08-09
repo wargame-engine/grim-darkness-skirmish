@@ -22,10 +22,7 @@
                     "options": [
                         {"replaceRule": {"id": "orc_tactics", "x": 1}, "withRule": {"id": "orc_tactics", "x": 2}},
                         {"replaceWeapon": "heavy_pistol", "withWeapon": ["carbine", "twin_carbine", "combi_heavy_flamer", "combi_rocket_launcher"]},
-                        {
-                            "replaceWeapon": {"id": "heavy_ccw", "count": 5},
-                            "withWeapon": [{"id": "ultra_axe", "count": 5}, {"id": "ultra_saw", "count": 5}, {"id": "ultra_claw", "count": 5}]
-                        },
+                        {"replaceWeapon": {"id": "heavy_ccw", "count": 5}, "withWeapon": [{"id": "ultra_axe", "count": 5}, {"id": "ultra_saw", "count": 5}, {"id": "ultra_claw", "count": 5}]},
                         {"addRule": ["ultra_armor", "cyborg_body_3"], "limit": 1}
                     ],
                     "min": 1,
@@ -50,10 +47,7 @@
                     "weapons": ["heavy_pistol", "frags", {"id": "heavy_ccw", "count": 3}],
                     "options": [
                         {"replaceWeapon": "heavy_pistol", "withWeapon": ["carbine", "twin_carbine", "combi_heavy_flamer", "combi_rocket_launcher"]},
-                        {
-                            "replaceWeapon": {"id": "heavy_ccw", "count": 3},
-                            "withWeapon": [{"id": "ultra_axe", "count": 3}, {"id": "ultra_saw", "count": 3}, {"id": "ultra_claw", "count": 3}]
-                        },
+                        {"replaceWeapon": {"id": "heavy_ccw", "count": 3}, "withWeapon": [{"id": "ultra_axe", "count": 3}, {"id": "ultra_saw", "count": 3}, {"id": "ultra_claw", "count": 3}]},
                         {"replaceRule": {"id": "power", "x": 1}, "withRule": {"id": "power", "x": 2}}
                     ],
                     "rules": [{"id": "power", "x": 1}],
@@ -82,10 +76,7 @@
                             "replaceWeapon": "heavy_pistol",
                             "withWeapon": ["carbine", "twin_carbine", "combi_heavy_flamer", "combi_rocket_launcher", "plasma_pistol", "teleport_pistol", "plasma_rifle", "rocket_launcher", "shock_gun"]
                         },
-                        {
-                            "replaceWeapon": {"id": "heavy_ccw", "count": 3},
-                            "withWeapon": [{"id": "ultra_axe", "count": 3}, {"id": "ultra_saw", "count": 3}, {"id": "ultra_claw", "count": 3}]
-                        },
+                        {"replaceWeapon": {"id": "heavy_ccw", "count": 3}, "withWeapon": [{"id": "ultra_axe", "count": 3}, {"id": "ultra_saw", "count": 3}, {"id": "ultra_claw", "count": 3}]},
                         {"addRule": ["heavy_armor", "ultra_armor", "cyborg_body_3"], "limit": 1},
                         {"replaceRule": {"id": "repair", "x": 3}, "withRule": {"id": "repair", "x": 5}},
                         {"addRule": ["precision_monicle"]},
@@ -114,10 +105,7 @@
                     "weapons": ["heavy_pistol", "frags", {"id": "heavy_ccw", "count": 3}],
                     "options": [
                         {"replaceWeapon": "heavy_pistol", "withWeapon": ["carbine", "twin_carbine"]},
-                        {
-                            "replaceWeapon": {"id": "heavy_ccw", "count": 3},
-                            "withWeapon": [{"id": "ultra_axe", "count": 3}, {"id": "ultra_saw", "count": 3}, {"id": "ultra_claw", "count": 3}]
-                        }
+                        {"replaceWeapon": {"id": "heavy_ccw", "count": 3}, "withWeapon": [{"id": "ultra_axe", "count": 3}, {"id": "ultra_saw", "count": 3}, {"id": "ultra_claw", "count": 3}]}
                     ],
                     "min": 1,
                     "max": 1
@@ -141,10 +129,7 @@
                     "weapons": ["heavy_pistol", "frags", {"id": "heavy_ccw", "count": 3}],
                     "options": [
                         {"replaceWeapon": "heavy_pistol", "withWeapon": ["carbine", "twin_carbine", "combi_heavy_flamer", "combi_rocket_launcher", "plasma_pistol"]},
-                        {
-                            "replaceWeapon": {"id": "heavy_ccw", "count": 3},
-                            "withWeapon": [{"id": "ultra_axe", "count": 3}, {"id": "ultra_saw", "count": 3}, {"id": "ultra_claw", "count": 3}]
-                        }
+                        {"replaceWeapon": {"id": "heavy_ccw", "count": 3}, "withWeapon": [{"id": "ultra_axe", "count": 3}, {"id": "ultra_saw", "count": 3}, {"id": "ultra_claw", "count": 3}]}
                     ],
                     "min": 1,
                     "max": 1
@@ -278,11 +263,20 @@
                     "movement": 5,
                     "weapons": ["heavy_pistol", "frags", {"id": "heavy_ccw", "count": 3}],
                     "options": [
-                        {"replaceWeapon": ["heavy_pistol"], "withWeapon": [{"id": "heavy_ccw", "count": 1}, {"id": "ultra_axe", "count": 1}, {"id": "ultra_saw", "count": 1}, {"id": "ultra_claw", "count": 1}, "carbine", "twin_carbine", "combi_heavy_flamer", "combi_rocket_launcher"]},
                         {
-                            "replaceWeapon": {"id": "heavy_ccw", "count": 3},
-                            "withWeapon": [{"id": "ultra_axe", "count": 3}, {"id": "ultra_saw", "count": 3}, {"id": "ultra_claw", "count": 3}]
+                            "replaceWeapon": ["heavy_pistol"],
+                            "withWeapon": [
+                                {"id": "heavy_ccw", "count": 1},
+                                {"id": "ultra_axe", "count": 1},
+                                {"id": "ultra_saw", "count": 1},
+                                {"id": "ultra_claw", "count": 1},
+                                "carbine",
+                                "twin_carbine",
+                                "combi_heavy_flamer",
+                                "combi_rocket_launcher"
+                            ]
                         },
+                        {"replaceWeapon": {"id": "heavy_ccw", "count": 3}, "withWeapon": [{"id": "ultra_axe", "count": 3}, {"id": "ultra_saw", "count": 3}, {"id": "ultra_claw", "count": 3}]},
                         {"addRule": [{"id": "heavy_armor"}, "cyborg_body"], "limit": 1},
                         {"addWeapon": "fusion_bomb"}
                     ],
@@ -337,7 +331,21 @@
             "description": "A bouncing beast with gnashing teeth.",
             "category": "strike",
             "subfactions": ["none", "goblin_army"],
-            "models": [{"name": "Attack Beast", "courage": 4, "shoot": 4, "movement": 8, "fight": 5, "defense": 4, "reflexes": 5, "weapons": [{"id": "beasts_bite", "count": 2}], "options": [{"addRule": "cyborg_body"}], "min": 1, "max": 1}]
+            "models": [
+                {
+                    "name": "Attack Beast",
+                    "courage": 4,
+                    "shoot": 4,
+                    "movement": 8,
+                    "fight": 5,
+                    "defense": 4,
+                    "reflexes": 5,
+                    "weapons": [{"id": "beasts_bite", "count": 2}],
+                    "options": [{"addRule": "cyborg_body"}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
         },
         "storm_orc": {
             "name": "Storm Orc",
@@ -468,10 +476,7 @@
             "models": [
                 {
                     "options": [
-                        {
-                            "replaceWeapon": {"id": "heavy_ccw", "count": 3},
-                            "withWeapon": [{"id": "ultra_axe", "count": 3}, {"id": "ultra_saw", "count": 3}, {"id": "ultra_claw", "count": 3}]
-                        },
+                        {"replaceWeapon": {"id": "heavy_ccw", "count": 3}, "withWeapon": [{"id": "ultra_axe", "count": 3}, {"id": "ultra_saw", "count": 3}, {"id": "ultra_claw", "count": 3}]},
                         {"replaceWeapon": "heavy_pistol", "withWeapon": ["carbine", "twin_carbine", "combi_heavy_flamer", "combi_rocket_launcher"]}
                     ],
                     "name": "Noble Biker",
@@ -575,10 +580,7 @@
                     "weapons": ["heavy_pistol", "frags", {"id": "heavy_ccw", "count": 3}],
                     "options": [
                         {"replaceWeapon": "heavy_pistol", "withWeapon": ["carbine", "twin_carbine", "combi_heavy_flamer", "combi_rocket_launcher"]},
-                        {
-                            "replaceWeapon": {"id": "heavy_ccw", "count": 3},
-                            "withWeapon": [{"id": "ultra_axe", "count": 3}, {"id": "ultra_saw", "count": 3}, {"id": "ultra_claw", "count": 3}]
-                        },
+                        {"replaceWeapon": {"id": "heavy_ccw", "count": 3}, "withWeapon": [{"id": "ultra_axe", "count": 3}, {"id": "ultra_saw", "count": 3}, {"id": "ultra_claw", "count": 3}]},
                         {"addWeapon": "fusion_bomb"}
                     ],
                     "min": 1,
@@ -604,10 +606,7 @@
                     "weapons": ["heavy_pistol", "frags", {"id": "heavy_ccw", "count": 3}],
                     "options": [
                         {"replaceWeapon": "heavy_pistol", "withWeapon": ["shotgun", "carbine", "twin_carbine", "combi_heavy_flamer", "combi_rocket_launcher"]},
-                        {
-                            "replaceWeapon": {"id": "heavy_ccw", "count": 3},
-                            "withWeapon": [{"id": "ultra_axe", "count": 3}, {"id": "ultra_saw", "count": 3}, {"id": "ultra_claw", "count": 3}]
-                        },
+                        {"replaceWeapon": {"id": "heavy_ccw", "count": 3}, "withWeapon": [{"id": "ultra_axe", "count": 3}, {"id": "ultra_saw", "count": 3}, {"id": "ultra_claw", "count": 3}]},
                         {"addWeapon": "fusion_bomb"},
                         {"addRule": ["cyborg_body"], "limit": 1}
                     ],
@@ -710,10 +709,7 @@
                     "options": [
                         {"addWeapon": ["twin_carbine", "twin_mini_mg"], "limit": 1},
                         {"replaceWeapon": "heavy_pistol", "withWeapon": ["carbine", "twin_carbine", "combi_heavy_flamer", "combi_rocket_launcher"]},
-                        {
-                            "replaceWeapon": {"id": "heavy_ccw", "count": 3},
-                            "withWeapon": [{"id": "ultra_axe", "count": 3}, {"id": "ultra_saw", "count": 3}, {"id": "ultra_claw", "count": 3}]
-                        }
+                        {"replaceWeapon": {"id": "heavy_ccw", "count": 3}, "withWeapon": [{"id": "ultra_axe", "count": 3}, {"id": "ultra_saw", "count": 3}, {"id": "ultra_claw", "count": 3}]}
                     ],
                     "min": 1,
                     "max": 1
@@ -729,10 +725,7 @@
             "models": [
                 {
                     "options": [
-                        {
-                            "replaceWeapon": {"id": "heavy_ccw", "count": 3},
-                            "withWeapon": [{"id": "ultra_axe", "count": 3}, {"id": "ultra_saw", "count": 3}, {"id": "ultra_claw", "count": 3}]
-                        },
+                        {"replaceWeapon": {"id": "heavy_ccw", "count": 3}, "withWeapon": [{"id": "ultra_axe", "count": 3}, {"id": "ultra_saw", "count": 3}, {"id": "ultra_claw", "count": 3}]},
                         {"replaceWeapon": "heavy_pistol", "withWeapon": ["carbine", "twin_carbine", "combi_heavy_flamer", "combi_rocket_launcher"]}
                     ],
                     "name": "Noble Biker Boss",
@@ -812,10 +805,7 @@
                     "weapons": ["heavy_pistol", "frags", {"id": "heavy_ccw", "count": 3}],
                     "options": [
                         {"replaceWeapon": ["heavy_pistol", {"id": "heavy_ccw", "count": 1}], "withWeapon": ["carbine", "twin_carbine", "combi_heavy_flamer", "combi_rocket_launcher"]},
-                        {
-                            "replaceWeapon": {"id": "heavy_ccw", "count": 3},
-                            "withWeapon": [{"id": "ultra_axe", "count": 3}, {"id": "ultra_saw", "count": 3}, {"id": "ultra_claw", "count": 3}]
-                        },
+                        {"replaceWeapon": {"id": "heavy_ccw", "count": 3}, "withWeapon": [{"id": "ultra_axe", "count": 3}, {"id": "ultra_saw", "count": 3}, {"id": "ultra_claw", "count": 3}]},
                         {"addRule": [{"id": "heavy_armor"}]},
                         {"addWeapon": "fusion_bomb"}
                     ],
@@ -994,7 +984,11 @@
         "roar": {"name": "Roar", "description": "Target enemy unit within 12\" gets -1 Courage until the end of the round.", "charge": 8},
         "crunch": {"name": "Crunch", "description": "Target enemy unit within 12\" takes 5 hits with AP 1.", "charge": 8},
         "warpath": {"name": "Warpath", "description": "The next time target friendly unit fights, hit rolls of 1 or 2 generate an additional attack.", "charge": 7},
-        "teleport": {"name": "Jump Teleport", "description": "Target friendly unit within 12\" may move up to 12\" ignoring all models and terrain. This must end outside of 12\" of any enemy units.", "charge": 7},
+        "teleport": {
+            "name": "Jump Teleport",
+            "description": "Target friendly unit within 12\" may move up to 12\" ignoring all models and terrain. This must end outside of 12\" of any enemy units.",
+            "charge": 7
+        },
         "strength": {"name": "Mighty Strength", "description": "Target friendly unit within 12\" gets +1 Strength until the end of the round.", "charge": 6},
         "headbang": {"name": "Headbang", "description": "Target enemy unit within 6\" takes 3 hits with AP 5.", "charge": 5}
     },
@@ -1132,6 +1126,30 @@
             "phase": "activation",
             "flavor": "Striking when the enemy least expects is a good way to quietly deal with an enemy.",
             "description": "Use this strategy when an _Infantry_ unit charges. If the charging unit only makes a single move action this activation, enemy units may not react to that charge.",
+            "cost": 1
+        },
+        "toughness": {
+            "subfactions": ["toughness_focus"],
+            "name": "Toughness",
+            "phase": "activation",
+            "description": "Use when an _Infantry_ unit takes Save rolls. Roll a die for each hit this unit takes. On a 3 or less that hit is prevented.",
+            "flavor": "These marines are particularly tough and can take a hit.",
+            "cost": 2
+        },
+        "durability": {
+            "subfactions": ["toughness_focus"],
+            "name": "Durability",
+            "phase": "activation",
+            "description": "Use before activating a unit with a Damage Chart. That unit is treated as having no critical damage tokens for this activation.",
+            "flavor": "Some of the most well-maintained vehicles and machinery can operate under great stress.",
+            "cost": 1
+        },
+        "piercing_blows": {
+            "subfactions": ["toughness_focus"],
+            "name": "Piercing Blows",
+            "phase": "activation",
+            "flavor": "These Orcs are so tough they can even pentrate some armor for extra damage.",
+            "description": "Use when an _Infantry_ unit performs a Fight action. Hit rolls of 1 or 2 gain +1 AP.",
             "cost": 1
         }
     },
