@@ -2737,7 +2737,7 @@
             "subfactions": ["toughness_focus"],
             "name": "Durability",
             "phase": "activation",
-            "description": "Use before activating a unit with a Damage Table. That unit is treated as having no critical damage tokens for this activation.",
+            "description": "Use before activating a unit with a Damage Chart. That unit is treated as having no critical damage tokens for this activation.",
             "flavor": "Some of the most well-maintained vehicles and machinery can operate under great stress.",
             "cost": 1
         },

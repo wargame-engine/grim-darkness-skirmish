@@ -752,7 +752,7 @@
             "points": ["rule.x", {"multiply": 10}]
         },
         "cult_icon": {"name": "Cult Icon", "description": "Friendly _Infantry_ units within 6\" may gain +1 Save when targeted by a Shooting or Fighting attack.", "points": 10},
-        "extra_armor": {"name": "Reinforced Hull", "description": "Subtract 1 from all Damage Table(X) rolls for this model.", "points": 10},
+        "extra_armor": {"name": "Reinforced Hull", "description": "Subtract 1 from all Damage Chart rolls for this model.", "points": 10},
         "cult_tactics": {
             "name": "Cult Mind Control Tactics",
             "inputs": ["x"],
