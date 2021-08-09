@@ -1116,7 +1116,7 @@
             "subfactions": ["stealth_focus"],
             "name": "Concealment",
             "phase": "activation",
-            "flavor": "Corrupted marines are sometimes trained in stealth tactics allowing them to hide even in plain sight.",
+            "flavor": "Orcs are sometimes trained in stealth tactics allowing them to hide even in plain sight.",
             "description": "Use this strategy when a unit is targeted by an enemy Shooting attack. That unit gets -1 Accuracy this attack.",
             "cost": 2
         },
@@ -1133,7 +1133,7 @@
             "name": "Toughness",
             "phase": "activation",
             "description": "Use when an _Infantry_ unit takes Save rolls. Roll a die for each hit this unit takes. On a 3 or less that hit is prevented.",
-            "flavor": "These marines are particularly tough and can take a hit.",
+            "flavor": "These Orcs are particularly tough and can take a hit.",
             "cost": 2
         },
         "durability": {
