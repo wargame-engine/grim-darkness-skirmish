@@ -1000,13 +1000,13 @@
     },
     "strategies": {
         "here_we_go": {"name": "Here We Go!", "phase": "activation", "description": "Use when a unit declares a Charge action. That unit gets +3\" of Movement for that action.", "cost": 1},
-        "just_a_scratch": {
+        "ramshackle": {
             "subfactions": ["none", "goblin_army"],
             "phase": "activation",
-            "name": "Just a Scratch",
-            "flavor": "Orcs are tougher than most other fighters and fight to the bitter end.",
-            "description": "Use when activating an _Infantry_ unit. That unit may ignore any critical injuries it has sustained for this activation.",
-            "cost": 1
+            "name": "Ramshackle",
+            "flavor": "Many parts of Orc vehicles end up being less important than they seem, falling off without causing damage.",
+            "description": "Use when a _Vehicle_ unit is targeted by an attack. For that attack, roll a D10 each time that unit is hit. On a 3 or less the hit is ignored.",
+            "cost": 2
         },
         "shoot_them": {
             "subfactions": ["goblin_army"],
@@ -1091,7 +1091,7 @@
             "phase": "activation",
             "name": "Indiscriminate Fire",
             "description": "Use when shooting with an _Infantry_ unit. If the attack hits, assign 2 additional Shock.",
-            "flavor": "Firing mostly at random, its enough to Shock most enemies.",
+            "flavor": "Firing mostly at random, it's enough to Shock most enemies.",
             "cost": 1
         },
         "good_shots": {
@@ -1108,6 +1108,30 @@
             "name": "Tune Up",
             "description": "Use before shooting with a unit. Add 3\" to the short and long ranges of all weapons for that unit.",
             "flavor": "Souped up and well-oiled, their weapons perform much better than any others.",
+            "cost": 1
+        },
+        "ambush": {
+            "subfactions": ["stealth_focus"],
+            "name": "Ambush",
+            "phase": "pre_game",
+            "description": "Up to half of any force's units, one point for each may be placed in _Ambush Reserves_ instead of deployed on the field.",
+            "flavor": "A deadly ambush can catch many off guard.",
+            "cost": "1/per"
+        },
+        "concealment": {
+            "subfactions": ["stealth_focus"],
+            "name": "Concealment",
+            "phase": "activation",
+            "flavor": "Corrupted marines are sometimes trained in stealth tactics allowing them to hide even in plain sight.",
+            "description": "Use this strategy when a unit is targeted by an enemy Shooting attack. That unit gets -1 Accuracy this attack.",
+            "cost": 2
+        },
+        "stealth_assault": {
+            "subfactions": ["stealth_focus"],
+            "name": "Stealth Assault",
+            "phase": "activation",
+            "flavor": "Striking when the enemy least expects is a good way to quietly deal with an enemy.",
+            "description": "Use this strategy when an _Infantry_ unit charges. If the charging unit only makes a single move action this activation, enemy units may not react to that charge.",
             "cost": 1
         }
     },

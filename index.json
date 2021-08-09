@@ -219,7 +219,8 @@
                 "goblin_army": {"name": "Goblin", "id": "goblin_army", "color": "#5f9370", "description": "An Orc Clan with an abundance of powerful and well-equipped goblins.", "restricted": true},
                 "combat_focus": {"name": "Close Combat", "id": "combat_focus", "description": "An especially tough Orc clan with a focus on close combat."},
                 "speed_focus": {"name": "Speed", "id": "speed_focus", "description": "An Orc Clan with a need for speed."},
-                "shooting_focus": {"name": "Shooting", "id": "shooting_focus", "description": "An Orc Clan with an addiction for shiny weapons."}
+                "shooting_focus": {"name": "Shooting", "id": "shooting_focus", "description": "An Orc Clan with an addiction for shiny weapons."},
+                "stealth_focus": {"name": "Stealth", "id": "stealth_focus", "description": "An Orc Clan with a knack for stealthy operations."}
             }
         },
         "imperial_inquisition": {
