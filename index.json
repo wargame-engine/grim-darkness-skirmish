@@ -217,7 +217,7 @@
             "description": "The Orc Clans are a mostly disconnected species of clans who are constantly at war with others and each other. The Orc Clans rely on massive all-out assaults and cobbled-together technology and vehicles to outlast and overwhelm their foes.",
             "subfactions": {
                 "goblin_army": {"name": "Goblin", "id": "goblin_army", "color": "#5f9370", "description": "An Orc Clan with an abundance of powerful and well-equipped goblins.", "restricted": true},
-                "combat_focus": {"name": "Close Combat", "id": "combat_focus", "description": "An especially tough Orc clan with a focus on close combat."},
+                "combat_focus": {"name": "Close Combat", "id": "combat_focus", "description": "An Orc Clan with a focus on close combat assaults."},
                 "speed_focus": {"name": "Speed", "id": "speed_focus", "description": "An Orc Clan with a need for speed."},
                 "shooting_focus": {"name": "Shooting", "id": "shooting_focus", "description": "An Orc Clan with an addiction for shiny weapons."},
                 "stealth_focus": {"name": "Stealth", "id": "stealth_focus", "description": "An Orc Clan with a knack for stealthy operations."},
