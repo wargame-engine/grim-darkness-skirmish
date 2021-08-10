@@ -857,7 +857,6 @@
         "mega_claw": {"name": "Mega Claw", "profiles": [{"name": "Strike", "attacks": 4, "short": "Melee", "ap": 8}, {"name": "Sweep", "attacks": 8, "short": "Melee", "ap": 4}]},
         "mega_saw": {"name": "Mega-Saw", "attacks": 4, "short": "Melee", "ap": 6},
         "walker_saw": {"name": "Walker-Saw", "attacks": 1, "short": "Melee", "ap": 5},
-        "heavy_mortar": {"name": "Heavy Mortar", "attacks": 1, "short": 24, "medium": 48, "ap": 1, "rules": ["indirect", {"id": "blast", "x": 3}]},
         "super_machinegun": {"name": "Super Machinegun", "attacks": 3, "short": 18, "medium": 36, "ap": 3},
         "twin_super_machinegun": {"name": "Twin Super Machinegun", "attacks": 6, "short": 18, "medium": 36, "ap": 3},
         "rivet_cannon": {"name": "Rivet Cannon", "attacks": 2, "short": 18, "medium": 36, "ap": 5, "rules": [{"id": "blast", "x": 3}]},

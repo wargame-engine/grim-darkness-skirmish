@@ -420,8 +420,8 @@
         "energy_lance": {"name": "Energy Lance", "attacks": 1, "short": "Melee", "ap": 3},
         "heavy_machinegun": {"name": "Heavy Machinegun", "attacks": 3, "short": 18, "medium": 36, "ap": 2},
         "minigun": {"name": "Minigun", "attacks": 5, "short": 12, "medium": 24, "ap": 2},
-        "mortar": {"name": "Mortar", "attacks": 1, "short": 24, "medium": 48, "ap": 1, "rules": ["indirect", {"id": "blast", "x": 3}]},
-        "heavy_mortar": {"name": "Heavy Mortar", "attacks": 1, "short": 24, "medium": 48, "ap": 2, "rules": ["indirect", {"id": "blast", "x": 3}]},
+        "mortar": {"name": "Mortar", "attacks": 1, "short": 24, "medium": 48, "ap": 1, "rules": ["indirect", "scatter", {"id": "blast", "x": 3}]},
+        "heavy_mortar": {"name": "Heavy Mortar", "attacks": 1, "short": 24, "medium": 48, "ap": 2, "rules": ["indirect", "scatter", {"id": "blast", "x": 3}]},
         "missile_launcher": {
             "name": "Missile Launcher",
             "profiles": [{"name": "Frag", "attacks": 1, "short": 24, "medium": 48, "ap": 1, "rules": [{"id": "blast", "x": 3}]}, {"name": "AT", "attacks": 1, "short": 24, "medium": 48, "ap": 6}]
@@ -685,7 +685,7 @@
         "acid_cannon": {"name": "Acid Cannon", "attacks": 3, "ap": 1, "short": 24, "medium": 48, "rules": [{"id": "poison", "x": 3}]},
         "flamestorm_cannon": {"name": "Flamestorm Cannon", "attacks": 6, "short": 9, "medium": 18, "ap": 3, "rules": ["flame"]},
         "artillery_cannon": {"name": "Artillery Cannon", "attacks": 1, "ap": 7, "short": 42, "medium": 84, "rules": [{"id": "blast", "x": 6}]},
-        "artillery_barrage": {"name": "Artillery Barrage", "attacks": 1, "ap": 6, "short": 18, "medium": 36, "rules": ["indirect", {"id": "blast", "x": 3}]},
+        "artillery_barrage": {"name": "Artillery Barrage", "attacks": 1, "ap": 6, "short": 18, "medium": 36, "rules": ["indirect", "scatter", {"id": "blast", "x": 3}]},
         "eagle_rockets": {"name": "Eagle Rockets", "attacks": 2, "ap": 8, "short": 36, "medium": 72, "rules": [{"id": "blast", "x": 3}]},
         "death_missile": {"name": "Death Missile", "attacks": 1, "ap": 3, "short": 36, "medium": 72, "rules": [{"id": "blast", "x": 10}]},
         "storm_missiles": {"name": "Storm Missiles", "attacks": 1, "ap": 6, "short": 36, "medium": 72},

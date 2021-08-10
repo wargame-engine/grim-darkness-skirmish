@@ -694,7 +694,7 @@
         "wraith_fists": {"name": "Wraith Fists", "attacks": 1, "short": "Melee", "ap": 2},
         "wraith_cannon": {"name": "Wraith Cannon", "attacks": 1, "short": 6, "medium": 12, "ap": 8, "rules": ["assault"]},
         "distortion_rifle": {"name": "Distortion Rifle", "attacks": 1, "short": 6, "ap": 8, "rules": ["assault", {"id": "critical", "x": 1}]},
-        "doom_artillery_cannon": {"name": "Doom Artillery Cannon", "attacks": 2, "short": 24, "medium": 48, "ap": 4, "rules": ["indirect", {"id": "blast", "x": 3}]},
+        "doom_artillery_cannon": {"name": "Doom Artillery Cannon", "attacks": 2, "short": 24, "medium": 48, "ap": 4, "rules": ["indirect", "scatter", {"id": "blast", "x": 3}]},
         "sky_cannon": {"name": "Sky Cannon", "attacks": 2, "short": 18, "medium": 36, "ap": 4},
         "twin_sky_cannon": {"name": "Twin Sky Cannon", "attacks": 4, "short": 18, "medium": 36, "ap": 4},
         "star_spear": {"name": "Star Spear", "attacks": 1, "short": "Melee", "ap": 4, "rules": ["cumbersome"]},

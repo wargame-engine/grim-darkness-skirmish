@@ -755,7 +755,7 @@
         "accelerator_drone": {"name": "Accelerator Drone", "movement": 8, "courage": "-", "shoot": 5, "fight": 4, "defense": "-", "reflexes": "-", "rules": ["accelerator"], "min": 1, "max": 1}
     },
     "weapons": {
-        "ion_bombs": {"name": "Ion Bombs", "attacks": 2, "short": 3, "ap": 4, "rules": ["bomb", {"id": "blast", "x": 3}]},
+        "ion_bombs": {"name": "Ion Bombs", "attacks": 2, "short": 3, "ap": 4, "rules": ["bomb", "scatter", {"id": "blast", "x": 3}]},
         "seeker_missiles": {"name": "Homing Missile", "attacks": 1, "short": 36, "medium": 72, "ap": 6, "rules": ["indirect", "homing", {"id": "ammo", "x": 1}]},
         "flak_launcher": {"name": "Flak Launcher", "attacks": 1, "ap": 1, "short": 9, "medium": 18, "rules": [{"id": "indirect"}, {"id": "blast", "x": 3}, "assault"]},
         "heavy_pulse_gatling": {"name": "Heavy Pulse Gatling", "attacks": 10, "short": 18, "medium": 36, "ap": 3},
