@@ -509,6 +509,78 @@
             "flavor": "With a furious charge, these battle sisters move into combat quickly.",
             "description": "Use this strategy when an _Infantry_ unit makes a Move action. That unit gains +3\" of Movement for that action.",
             "cost": 1
+        },
+        {
+            "subfactions": ["toughness_focus"],
+            "name": "Toughness",
+            "phase": "activation",
+            "description": "Use when an _Infantry_ unit takes Save rolls. Roll a die for each hit this unit takes. On a 3 or less that hit is prevented.",
+            "flavor": "These Battle Sisters are particularly tough and can take a hit.",
+            "cost": 2
+        },
+        {
+            "subfactions": ["toughness_focus"],
+            "name": "Durability",
+            "phase": "activation",
+            "description": "Use before activating a unit with a Damage Chart. That unit is treated as having no critical damage tokens for this activation.",
+            "flavor": "Some of the most well-maintained vehicles and machinery can operate under great stress.",
+            "cost": 1
+        },
+        {
+            "subfactions": ["toughness_focus"],
+            "name": "Unrelenting",
+            "phase": "activation",
+            "flavor": "These Battle Sisters are battle-ready and focused on the fight.",
+            "description": "Use when an _Infantry_ unit performs a Fight or Shoot action. Ignore any skill modifiers from Shock.",
+            "cost": 1
+        },
+        {
+            "subfactions": ["mobility_focus"],
+            "name": "Encircle",
+            "phase": "pre_game",
+            "description": "Up to half of any force's units, one point for each may be placed in Encirclement reserves before the game begins. At the beginning of any round after the first, that unit may be set up within 6\" of any table edge and more than 12\" from any enemy units. If both players have reserves arriving on the same turn, roll off to see who places theirs first.",
+            "flavor": "With speed a ferocity, these marines can outflank their enemies.",
+            "cost": "1/per"
+        },
+        {
+            "subfactions": ["mobility_focus"],
+            "name": "Moving Fire",
+            "phase": "activation",
+            "flavor": "These marines are trained to shoot while moving to maintain pressure on their enemies.",
+            "description": "Use after an _Infantry_ unit makes a Move action. That unit may make a free shoot action with -1 Accuracy.",
+            "cost": 1
+        },
+        {
+            "subfactions": ["mobility_focus"],
+            "name": "Reliability",
+            "phase": "activation",
+            "description": "Use when a unit Shoots. That unit may re-roll a single hit die.",
+            "flavor": "With expert maintenance, their weapons can perform better than most.",
+            "cost": 1
+        },
+        {
+            "subfactions": ["bravery_focus"],
+            "name": "Courageous",
+            "phase": "activation",
+            "description": "Use when activating a unit. That unit gets +1 Courage.",
+            "flavor": "These Battle Sisters are some of the most courageous ever seen, fighting to the bitter end.",
+            "cost": 1
+        },
+        {
+            "subfactions": ["bravery_focus"],
+            "name": "Overwhelming Firepower",
+            "phase": "activation",
+            "description": "Use when an _Infantry_ unit performs a Shoot action. Hit rolls of 1 or 2 cause an additional hit.",
+            "flavor": "Massed firepower can be relatively effective in taking down most targets.",
+            "cost": 1
+        },
+        {
+            "subfactions": ["bravery_focus"],
+            "name": "Counter Attack",
+            "phase": "activation",
+            "flavor": "Against all odds, these Battle Sisters will fight on.",
+            "description": "Use when an _Infantry_ unit is targeted by a Fight action. If that unit has not yet activated, it may perform a Counter Attack reaction without testing Initiative.",
+            "cost": 1
         }
     ],
     "buyLinks": [

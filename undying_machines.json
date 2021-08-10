@@ -688,11 +688,11 @@
             "cost": 2
         },
         {
-            "name": "Undying",
+            "name": "Repair Overdrive",
             "phase": "activation",
-            "description": "Use when activating an _Infantry_ unit. That unit may ignore any critical injuries it has sustained for this activation.",
-            "flavor": "With self-repairing nano-machines Undying Machines can recover from nearly anything.",
-            "cost": 1
+            "description": "Use when activating a _Vehicle_ unit. It may immediately fix a critical damage it has sustained.",
+            "flavor": "With self-repairing nano-machines this vehicle can recover from nearly anything.",
+            "cost": 2
         },
         {
             "subfactions": ["solar_fire"],
@@ -704,7 +704,7 @@
         },
         {
             "subfactions": ["solar_fire"],
-            "name": "Overwhelming Firewpoer",
+            "name": "Overwhelming Firepower",
             "phase": "activation",
             "description": "Use before an _Infantry_ unit performs a Shoot action. Hit rolls of 1 or 2 cause an additional hit.",
             "flavor": "Massed firepower can be relatively effective in taking down most targets.",
