@@ -475,7 +475,7 @@
         {
             "name": "Divine Intervention",
             "phase": "activation",
-            "description": "Use when taking a skill test. You may increase or decrease the value of that test by 1.",
+            "description": "Use when taking a skill test. You may increase or decrease the result of that test by 1.",
             "flavor": "Suddenly you witness the hand of fate intervene on your behalf.",
             "cost": 1
         },
