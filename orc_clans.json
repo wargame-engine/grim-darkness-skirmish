@@ -364,7 +364,7 @@
                     "reflexes": 5,
                     "movement": 8,
                     "weapons": ["heavy_pistol", {"id": "heavy_ccw", "count": 2}, "frags"],
-                    "options": [{"replaceWeapon": "heavy_pistol", "withWeapon": ["carbine"]}],
+                    "options": [{"replaceWeapon": ["heavy_pistol", {"id": "heavy_ccw", "count": 1}], "withWeapon": ["carbine"]}],
                     "min": 1,
                     "max": 1
                 }
@@ -388,8 +388,8 @@
                     "movement": 5,
                     "weapons": ["heavy_pistol", {"id": "heavy_ccw", "count": 2}, "frags"],
                     "options": [
-                        {"replaceWeapon": "heavy_pistol", "withWeapon": ["carbine", "shotgun"]},
-                        {"replaceWeapon": "heavy_pistol", "withWeapon": ["flamethrower", "plasma_rifle", "shred_rifle", "rocket_launcher", "heavy_machinegun"], "limit": 1},
+                        {"replaceWeapon": ["heavy_pistol", {"id": "heavy_ccw", "count": 1}], "withWeapon": ["carbine", "combat_shotgun"]},
+                        {"replaceWeapon": ["heavy_pistol", {"id": "heavy_ccw", "count": 1}], "withWeapon": ["flamethrower", "plasma_rifle", "shred_rifle", "rocket_launcher", "heavy_machinegun"], "limit": 1},
                         {"addWeapon": "fusion_bomb"}
                     ],
                     "min": 1,
@@ -579,7 +579,7 @@
                     "rules": ["leader"],
                     "weapons": ["heavy_pistol", "frags", {"id": "heavy_ccw", "count": 3}],
                     "options": [
-                        {"replaceWeapon": "heavy_pistol", "withWeapon": ["carbine", "twin_carbine", "combi_heavy_flamer", "combi_rocket_launcher"]},
+                        {"replaceWeapon": ["heavy_pistol", {"id": "heavy_ccw", "count": 1}], "withWeapon": ["carbine", "twin_carbine", "combi_heavy_flamer", "combi_rocket_launcher"]},
                         {"replaceWeapon": {"id": "heavy_ccw", "count": 3}, "withWeapon": [{"id": "ultra_axe", "count": 3}, {"id": "ultra_saw", "count": 3}, {"id": "ultra_claw", "count": 3}]},
                         {"addWeapon": "fusion_bomb"}
                     ],
@@ -605,7 +605,7 @@
                     "rules": ["leader"],
                     "weapons": ["heavy_pistol", "frags", {"id": "heavy_ccw", "count": 3}],
                     "options": [
-                        {"replaceWeapon": "heavy_pistol", "withWeapon": ["shotgun", "carbine", "twin_carbine", "combi_heavy_flamer", "combi_rocket_launcher"]},
+                        {"replaceWeapon": ["heavy_pistol", {"id": "heavy_ccw", "count": 1}], "withWeapon": ["combat_shotgun", "carbine", "twin_carbine", "combi_heavy_flamer", "combi_rocket_launcher"]},
                         {"replaceWeapon": {"id": "heavy_ccw", "count": 3}, "withWeapon": [{"id": "ultra_axe", "count": 3}, {"id": "ultra_saw", "count": 3}, {"id": "ultra_claw", "count": 3}]},
                         {"addWeapon": "fusion_bomb"},
                         {"addRule": ["cyborg_body"], "limit": 1}
@@ -708,7 +708,7 @@
                     "weapons": ["heavy_pistol", "frags", {"id": "heavy_ccw", "count": 3}],
                     "options": [
                         {"addWeapon": ["twin_carbine", "twin_mini_mg"], "limit": 1},
-                        {"replaceWeapon": "heavy_pistol", "withWeapon": ["carbine", "twin_carbine", "combi_heavy_flamer", "combi_rocket_launcher"]},
+                        {"replaceWeapon":["heavy_pistol", {"id": "heavy_ccw", "count": 1}], "withWeapon": ["carbine", "twin_carbine", "combi_heavy_flamer", "combi_rocket_launcher"]},
                         {"replaceWeapon": {"id": "heavy_ccw", "count": 3}, "withWeapon": [{"id": "ultra_axe", "count": 3}, {"id": "ultra_saw", "count": 3}, {"id": "ultra_claw", "count": 3}]}
                     ],
                     "min": 1,
@@ -781,7 +781,7 @@
                     "movement": 8,
                     "weapons": ["heavy_pistol", {"id": "heavy_ccw", "count": 2}, "frags"],
                     "options": [
-                        {"replaceWeapon": "heavy_pistol", "withWeapon": ["carbine", "flamethrower", "plasma_rifle", "shred_rifle", "rocket_launcher", "heavy_machinegun"]},
+                        {"replaceWeapon": ["heavy_pistol", {"id": "heavy_ccw", "count": 1}], "withWeapon": ["carbine", "flamethrower", "plasma_rifle", "shred_rifle", "rocket_launcher", "heavy_machinegun"]},
                         {"addWeapon": "fusion_bomb"}
                     ],
                     "min": 1,
