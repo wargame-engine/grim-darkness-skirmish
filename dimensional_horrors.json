@@ -533,6 +533,140 @@
                     "weapons": [{"id": "war_sword", "count": 1}]
                 }
             ]
+        },
+        "pestilent_champion": {
+            "name": "Pestilent Champion",
+            "description": "A feculent champion of the god of pestilence",
+            "keywords": ["infantry"],
+            "category": "command",
+            "subfactions": ["none", "pestilence"],
+            "models": [
+                {
+                    "name": "Pestilent Champion",
+                    "movement": 5,
+                    "courage": 6,
+                    "shoot": 4,
+                    "fight": 6,
+                    "defense": 7,
+                    "reflexes": 5,
+                    "min": 1,
+                    "max": 1,
+                    "weapons": [{"id": "bileblade", "count": 3}],
+                    "rules": [{"id": "power", "x": 1}, {"id": "leader_x", "x": "Infantry"}, {"id": "wounds", "x": 2}, "herald"]
+                }
+            ]
+        },
+        "pestilent_warrior_leader": {
+            "name": "Pestilent Demon Leader",
+            "description": "Plagues given flesh, trying to spread themselves on the edge of a sword",
+            "keywords": ["infantry"],
+            "category": "command",
+            "subfactions": ["none", "pestilence"],
+            "models": [
+                {
+                    "name": "Pestilent Demon Leader",
+                    "movement": 5,
+                    "courage": 6,
+                    "shoot": 4,
+                    "fight": 5,
+                    "defense": 6,
+                    "reflexes": 5,
+                    "min": 1,
+                    "max": 1,
+                    "rules": ["leader"],
+                    "weapons": [{"id": "lesser_bileblade", "count": 1}],
+                    "options": [{"addRule": ["banner"]}, {"limit": 1, "addRule": ["banner", "musician"]}]
+                }
+            ]
+        },
+        "pestilent_warrior": {
+            "name": "Pestilent Demon",
+            "description": "Plagues given flesh, trying to spread themselves on the edge of a sword",
+            "keywords": ["infantry"],
+            "category": "core",
+            "subfactions": ["none", "pestilence"],
+            "models": [
+                {
+                    "name": "Pestilent Demon",
+                    "movement": 5,
+                    "courage": 6,
+                    "shoot": 4,
+                    "fight": 5,
+                    "defense": 6,
+                    "reflexes": 5,
+                    "min": 1,
+                    "max": 1,
+                    "weapons": [{"id": "lesser_bileblade", "count": 1}],
+                    "options": [{"addRule": ["banner"]}, {"limit": 1, "addRule": ["banner", "musician"]}]
+                }
+            ]
+        },
+        "buboes": {
+            "name": "Buboe Swarm",
+            "description": "More symptoms than plauges, buboes are only threats in swarms",
+            "keywords": ["Cavalry"],
+            "category": "core",
+            "subfactions": ["none", "pestilence"],
+            "models": [
+                {
+                    "name": "Buboe Swarm",
+                    "movement": 6,
+                    "courage": 6,
+                    "shoot": 4,
+                    "fight": 4,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "min": 1,
+                    "max": 1,
+                    "weapons": [{"id": "buboe_swarm", "count": 5}],
+                    "rules": [{"id": "wounds", "x": 2}]
+                }
+            ]
+        },
+        "rot_fly_leader": {
+            "name": "Rot Fly Leader",
+            "description": "Pestilent warriors flying on horrid beasts to spread their infection",
+            "keywords": ["Cavalry"],
+            "category": "command",
+            "subfactions": ["none", "pestilence"],
+            "models": [
+                {
+                    "name": "Rot Fly Leader",
+                    "movement": 8,
+                    "courage": 6,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 7,
+                    "reflexes": 5,
+                    "min": 1,
+                    "max": 1,
+                    "rules": ["leader"],
+                    "weapons": [{"id": "lesser_bileblade", "count": 1}, {"id": "horrid_proboscis", "count": 4}, {"id": "infected_parts", "count": 2}],
+                    "options": [{"addRule": ["banner"]}, {"limit": 1, "addRule": ["banner", "musician"]}]
+                }
+            ]
+        },
+        "rot_fly": {
+            "name": "Rot Fly",
+            "description": "Pestilent warriors flying on horrid beasts to spread their infection",
+            "keywords": ["Cavalry"],
+            "category": "strike",
+            "subfactions": ["none", "pestilence"],
+            "models": [
+                {
+                    "name": "Rot Flies",
+                    "movement": 8,
+                    "courage": 6,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 7,
+                    "reflexes": 5,
+                    "min": 1,
+                    "max": 1,
+                    "weapons": [{"id": "lesser_bileblade", "count": 1}, {"id": "horrid_proboscis", "count": 4}, {"id": "infected_parts", "count": 2}],
+                    "options": [{"addRule": ["banner"]}, {"limit": 1, "addRule": ["banner", "musician"]}]
+                }
+            ]
         }
     },
     "weapons": {
@@ -597,8 +731,19 @@
         "blessed_whip": {"name": "War-Blessed Whip", "attacks": 1, "short": 6, "medium": 12, "ap": 5, "rules": ["pistol"]},
         "blessed_greataxe": {
             "name": "War-Blessed Greataxe",
-            "profiles": [{"name": "Sweeping Attack", "attacks": 2, "short": "Melee", "ap": 5}, {"name": "Mighty Strike", "attacks": 1, "short": "Melee", "ap": "12"}]
-        }
+            "profiles": [{"name": "Sweeping Attack", "attacks": 5, "short": "Melee", "ap": 5}, {"name": "Mighty Strike", "attacks": 2, "short": "Melee", "ap": 10}]
+        },
+        "warbeast_horns": {"name": "Warbeast's Horns", "attacks": 1, "short": "Melee", "ap": 2},
+        "war_Cavalry_sword": {"name": "Cavalry Blessed Sword", "attacks": 1, "short": "Melee", "ap": 5, "rules": ["rending"]},
+        "bileblade": {"name": "Bileblade", "attacks": 1, "short": "Melee", "ap": 4, "rules": ["pestilence"]},
+        "buboe_swarm": {"name": "Buboe Swarm", "attacks": 1, "short": "Melee", "rules": ["pestilence"]},
+        "corrosive_vomit": {"name": "Corrosive Vomit", "attacks": 4, "ap": 5, "short": 3, "medium": 6, "rules": ["pestilence", "pistol"]},
+        "dinner_bell": {"name": "Dinner Bell", "attacks": 1, "ap": 3, "short": "Melee", "rules": ["none", "pestilence"]},
+        "massive_bileblade": {"name": "Massive Bileblade", "attacks": 1, "ap": 6, "short": "Melee", "rules": ["pestilence"]},
+        "epic_flail": {"name": "Epic Flail", "ap": 5, "attacks": 1, "short": "Melee", "rules": ["pestilence"]},
+        "lesser_bileblade": {"name": "Lesser Bileblade", "ap": 1, "attacks": 1, "short": "Melee", "rules": ["pestilence"]},
+        "horrid_proboscis": {"name": "Horrid Proboscis", "ap": 2, "attacks": 1, "short": "Melee", "rules": ["pestilence"]},
+        "infected_parts": {"name": "Infected Body Parts", "ap": 1, "attacks": 1, "short": 6, "medium": 12, "rules": ["pestilence"]}
     },
     "rules": {
         "melee_tactics": {
