@@ -401,7 +401,7 @@
         },
         "railgun": {"name": "Railgun", "attacks": 1, "short": 24, "ap": 4, "medium": 48, "rules": [{"id": "blast", "x": 2}]},
         "ccw": {"name": "Light CCW", "attacks": 1, "short": "Melee"},
-        "heavy_ccw": {"name": "Heavy CCW", "attacks": 1, "ap": 1, "short": "Melee"},
+        "heavy_ccw": {"name": "CCW", "attacks": 1, "ap": 1, "short": "Melee"},
         "chainsword": {"name": "Chainsword", "attacks": 1, "ap": 1, "short": "Melee"},
         "chainaxe": {"name": "Chainaxe", "attacks": 1, "ap": 2, "short": "Melee", "rules": ["rending"]},
         "chainfist": {"name": "Chainfist", "attacks": 1, "ap": 4, "short": "Melee", "rules": ["rending", "cumbersome"]},
