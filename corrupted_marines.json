@@ -1474,6 +1474,30 @@
             "flavor": "Sometimes it is necessary to infuse marine rifle rounds with disease to cause extra damage.",
             "description": "Use this strategy when one of your _Infantry_ or _Heavy Infantry_ units Shoots. Choose a weapon name. Each successful hit roll of 2 or less with that weapon gets +1 AP.",
             "cost": 1
+        },
+        "raze": {
+            "name": "Raze",
+            "subfactions": ["destruction_focus"],
+            "phase": "activation",
+            "flavor": "Burn the enemy to the ground.",
+            "description": "Use this strategy when one of your _Infantry_ units Shoots. Successful hit rolls of 1 or 2 gain +1 AP.",
+            "cost": 1
+        },
+        "ferocity": {
+            "subfactions": ["destruction_focus"],
+            "name": "Ferocity",
+            "phase": "activation",
+            "description": "Use this strategy when an _Infantry_ unit charges. All models in that unit may make one additional attack.",
+            "flavor": "Sometimes with disregard for their own life, these marines will stop at nothing to defeat their enemies.",
+            "cost": 1
+        },
+        "bravery": {
+            "subfactions": ["destruction_focus"],
+            "name": "Bravery",
+            "phase": "activation",
+            "description": "Use when a unit takes a Courage test. That unit gets +1 Courage.",
+            "flavor": "These soldiers are particularly enduring and will not surrender.",
+            "cost": 1
         }
     },
     "powers": {

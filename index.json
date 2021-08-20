@@ -72,7 +72,8 @@
                     "restricted": true,
                     "description": "Corrupted marines focused on using powerful magic to defeat their foes."
                 },
-                "siege_focus": {"name": "Siege", "id": "siege_focus", "color": "#18abcc", "description": "Corrupted marines focused on destroying enemy fortifications and vehicles."}
+                "siege_focus": {"name": "Siege", "id": "siege_focus", "color": "#18abcc", "description": "Corrupted marines focused on destroying enemy fortifications and vehicles."},
+                "destruction_focus": {"name": "Destruction", "id": "destruction_focus", "color": "#6a0001", "description": "Corrupted marines focused on despoilation and destruction."}
             }
         },
         "dimensional_horrors": {
