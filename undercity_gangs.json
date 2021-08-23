@@ -316,6 +316,13 @@
             "flavor": "Gangers often go for a total takedown when charging enemy units.",
             "description": "Use after an _Infantry_ unit successfully Charges an enemy unit. The enemy unit gains 2 Shock.",
             "cost": 1
+        },
+        "shove": {
+            "name": "Shove",
+            "phase": "activation",
+            "flavor": "Gangers often resort to dirty fighting tactics to get the job done.",
+            "description": "Use after an _Infantry_ unit Fights an enemy unit. The enemy unit is moved 1\" directly back from the attacker.",
+            "cost": 1
         }
     }
 }
