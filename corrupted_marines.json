@@ -43,7 +43,7 @@
                             ]
                         },
                         {"addRule": ["jetpack", "destroyer_armor"], "limit": 1},
-                        {"addWeapon": ["combat_shield"]},
+                        {"addWeapon": ["shield"]},
                         {"replaceRule": {"id": "rifle_tactics", "x": 2}, "withRule": {"id": "melee_tactics", "x": 2}}
                     ],
                     "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "wounds", "x": 3}, {"id": "rifle_tactics", "x": 2}],

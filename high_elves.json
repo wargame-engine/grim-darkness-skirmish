@@ -169,7 +169,7 @@
                             "replaceWeapon": ["shard_rifle", "ccw"],
                             "withWeapon": [
                                 [{"id": "shard_rifle", "count": 2}, "ccw"],
-                                [{"id": "energy_glaive", "count": 2}, "combat_shield"],
+                                [{"id": "energy_glaive", "count": 2}, "shield"],
                                 ["shard_pistol", {"id": "energy_sword", "count": 2}],
                                 ["shard_pistol", {"id": "energy_glaive", "count": 2}]
                             ]
@@ -347,7 +347,7 @@
                         {
                             "replaceWeapon": [{"id": "wraith_sword", "count": 2}],
                             "withWeapon": [
-                                [{"id": "wraith_axe", "count": 2}, "combat_shield"],
+                                [{"id": "wraith_axe", "count": 2}, "shield"],
                                 ["wraith_cannon", {"id": "wraith_fists", "count": 1}],
                                 ["distortion_rifle", {"id": "wraith_fists", "count": 1}]
                             ]
@@ -378,7 +378,7 @@
                         {
                             "replaceWeapon": [{"id": "wraith_sword", "count": 2}],
                             "withWeapon": [
-                                [{"id": "wraith_axe", "count": 2}, "combat_shield"],
+                                [{"id": "wraith_axe", "count": 2}, "shield"],
                                 ["wraith_cannon", {"id": "wraith_fists", "count": 1}],
                                 ["distortion_rifle", {"id": "wraith_fists", "count": 1}]
                             ]

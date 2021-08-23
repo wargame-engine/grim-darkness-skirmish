@@ -56,7 +56,7 @@
                             ]
                         },
                         {"addWeapon": {"id": "guardian_dagger"}},
-                        {"addWeapon": "combat_shield"}
+                        {"addWeapon": "shield"}
                     ],
                     "min": 1,
                     "max": 1
@@ -90,7 +90,7 @@
                             ]
                         },
                         {"addWeapon": {"id": "guardian_dagger"}},
-                        {"addWeapon": "combat_shield"}
+                        {"addWeapon": "shield"}
                     ],
                     "min": 1,
                     "max": 1
@@ -205,7 +205,7 @@
                             ]
                         },
                         {"addWeapon": {"id": "guardian_dagger"}},
-                        {"addWeapon": "combat_shield"},
+                        {"addWeapon": "shield"},
                         {"replaceRule": "banner_of_blindness", "withRule": ["banner_of_justice", "banner_of_focus", "banner_of_wrath"]}
                     ],
                     "min": 1,
@@ -266,7 +266,7 @@
                             "withWeapon": [[{"id": "guardian_spear_blade", "count": 2}, "guardian_spear_rifle"], [{"id": "guardian_spear_blade", "count": 2}, "guardian_spear_carbine"], ["guardian_rifle", {"id": "heavy_ccw", "count": 1}]]
                         },
                         {"addWeapon": "guardian_dagger"},
-                        {"addWeapon": "combat_shield"}
+                        {"addWeapon": "shield"}
                     ],
                     "min": 1,
                     "max": 1
@@ -296,7 +296,7 @@
                             "withWeapon": [[{"id": "guardian_spear_blade", "count": 2}, "guardian_spear_rifle"], [{"id": "guardian_spear_blade", "count": 2}, "guardian_spear_carbine"], ["guardian_rifle", {"id": "heavy_ccw", "count": 1}]]
                         },
                         {"addWeapon": "guardian_dagger"},
-                        {"addWeapon": "combat_shield"}
+                        {"addWeapon": "shield"}
                     ],
                     "min": 1,
                     "max": 1
@@ -327,7 +327,7 @@
                             "withWeapon": [[{"id": "guardian_spear_blade", "count": 2}, "guardian_spear_fusion"]]
                         },
                         {"addWeapon": "guardian_dagger"},
-                        {"addWeapon": "combat_shield"}
+                        {"addWeapon": "shield"}
                     ],
                     "min": 1,
                     "max": 1
@@ -351,8 +351,8 @@
                     "movement": 8,
                     "defense": 8,
                     "reflexes": 7,
-                    "weapons": ["combat_shield", "guardian_pistol", "at_grenade"],
-                    "options": [{"replaceWeapon": ["combat_shield", "guardian_pistol"], "withWeapon": [["guardian_lance_rifle", {"id": "guardian_lance_blade", "count": 2}]]}],
+                    "weapons": ["shield", "guardian_pistol", "at_grenade"],
+                    "options": [{"replaceWeapon": ["shield", "guardian_pistol"], "withWeapon": [["guardian_lance_rifle", {"id": "guardian_lance_blade", "count": 2}]]}],
                     "min": 1,
                     "max": 1
                 }
