@@ -292,9 +292,7 @@
                     "reflexes": 5,
                     "movement": 6,
                     "weapons": ["defense_rifle", "blasting_charges", "ccw"],
-                    "options": [
-                        {"replaceWeapon": "defense_rifle", "withWeapon": "shotgun"}, {"addRule": "banner"}
-                    ],
+                    "options": [{"replaceWeapon": "defense_rifle", "withWeapon": "shotgun"}, {"addRule": "banner"}],
                     "min": 1,
                     "max": 1
                 }
@@ -315,9 +313,7 @@
                     "reflexes": 5,
                     "movement": 6,
                     "weapons": ["defense_rifle", "blasting_charges", "ccw"],
-                    "options": [
-                        {"replaceWeapon": "defense_rifle", "withWeapon": ["flamethrower", "grenade_launcher", "web_gun"]}
-                    ],
+                    "options": [{"replaceWeapon": "defense_rifle", "withWeapon": ["flamethrower", "grenade_launcher", "web_gun"]}],
                     "min": 1,
                     "max": 1
                 }
@@ -338,9 +334,7 @@
                     "reflexes": 5,
                     "movement": 6,
                     "weapons": ["defense_rifle", "blasting_charges", "ccw"],
-                    "options": [
-                        {"replaceWeapon": "defense_rifle", "withWeapon": ["light_machinegun", "seismic_cannon", "mining_laser"]}
-                    ],
+                    "options": [{"replaceWeapon": "defense_rifle", "withWeapon": ["light_machinegun", "seismic_cannon", "mining_laser"]}],
                     "min": 1,
                     "max": 1
                 }
@@ -394,10 +388,7 @@
                     "reflexes": 6,
                     "movement": 6,
                     "weapons": ["burst_pistol", "blasting_charges", {"id": "heavy_ccw", "count": 2}, {"id": "piercing_claws", "count": 1}],
-                    "options": [
-                        {"replaceWeapon": "burst_pistol", "withWeapon": "flamethrower_pistol"},
-                        {"addRule": "banner"}
-                    ],
+                    "options": [{"replaceWeapon": "burst_pistol", "withWeapon": "flamethrower_pistol"}, {"addRule": "banner"}],
                     "min": 1,
                     "max": 1
                 }
@@ -498,9 +489,7 @@
                     "reflexes": 5,
                     "movement": 6,
                     "weapons": [{"id": "energy_pick", "count": 3}],
-                    "options": [
-                        {"replaceWeapon": {"id": "energy_pick", "count": 3}, "withWeapon": [{"id": "energy_hammer", "count": 2}]}
-                    ],
+                    "options": [{"replaceWeapon": {"id": "energy_pick", "count": 3}, "withWeapon": [{"id": "energy_hammer", "count": 2}]}],
                     "min": 1,
                     "max": 1
                 }
@@ -765,7 +754,8 @@
         "brain_consumer": {"name": "Brain Consumer", "attacks": 6, "short": 9, "medium": 18, "ap": 3, "rules": ["assault"]},
         "heavy_acid_cannon": {"name": "Heavy Acid Cannon", "attacks": 1, "short": 18, "medium": 36, "ap": 7, "rules": [{"id": "blast", "x": 2}]},
         "chokethorn_cannon": {"name": "Chokethorn Cannon", "attacks": 1, "short": 18, "medium": 36, "ap": 4, "rules": [{"id": "blast", "x": 4}]},
-        "spinethrowers": {"name": "Spinethrowers", "attacks": 4, "short": 3, "medium": 6, "ap": 0, "rules": ["assault"]}
+        "spinethrowers": {"name": "Spinethrowers", "attacks": 4, "short": 3, "medium": 6, "ap": 0, "rules": ["assault"]},
+        "legend_sacrificial_dagger": {"name": "Sacrificial Dagger", "attacks": 1, "ap": 2, "short": "Melee", "rules": ["sacrifice"]}
     },
     "rules": {
         "militia_tactics": {
@@ -800,9 +790,45 @@
             "inputs": ["x"],
             "description": "When this unit is activated, choose up to X friendly _Infantry_ units within 6\". Those units may re-roll failed Strength tests of 9+ until the end of the round.",
             "points": ["rule.x", {"multiply": 10}]
+        },
+        "legend_stealth_master": {"name": "Master Infiltrator", "description": "Enemy units suffer -1 Accuracy and -1 Strength when attacking this unit.", "points": 10},
+        "legend_mind_link": {"name": "Mind Link", "description": "Increase the range of all abilities which target friendly units by 6\".", "points": 10},
+        "legend_supernatural_speed": {"name": "Supernatural Speed", "description": "Increase this model's Movement by 2\".", "points": 10},
+        "sacrifice": {
+            "name": "Sacrifice",
+            "description": "When this model activates, you may choose to remove a model from a friendly unit within 3\". If you do, restore one Wound(x) to this model.",
+            "points": 10
         }
     },
     "relics": {
+        "sacrificial_dagger": {
+            "name": "The Sacrificial Dagger",
+            "weapon": "legend_sacrificial_dagger",
+            "description": "Replace one Leader or Support model's CCW with The Sacrificial Dagger.",
+            "flavor": "This dagger is known to possess the ability to restore life if offered a sacrifice.",
+            "points": 10
+        },
+        "supernatural_speed": {
+            "name": "Supernatural Speed",
+            "rule": "legend_supernatural_speed",
+            "description": "Upgrade one Leader or Support model with Supernatural Speed.",
+            "flavor": "This model has an inherent supernatural speed.",
+            "points": 5
+        },
+        "mind_link": {
+            "name": "Mind Link",
+            "rule": "legend_mind_link",
+            "description": "Upgrade one Leader or Support model with Mind Link.",
+            "flavor": "This model has an unnatural connection to those it commands.",
+            "points": 10
+        },
+        "stealth_master": {
+            "name": "Master Infiltrator",
+            "rule": "legend_stealth_master",
+            "description": "Upgrade one Leader or Support model with Master Infiltrator.",
+            "flavor": "This model is a master at hiding and avoiding enemy blows.",
+            "points": 10
+        },
         "strategist": {
             "name": "Brilliant Strategist",
             "rule": "legend_strategist",
@@ -926,10 +952,5 @@
         "blast": {"name": "Blast", "description": "Target enemy unit within 12\" take 5 hits with AP 1.", "charge": 6},
         "bolt": {"name": "Bolt", "description": "Target enemy unit within 18\" takes 2 hits with AP 5.", "charge": 6}
     },
-    "buyLinks": [
-        {
-            "name": "Games Workshop",
-            "link": "https://www.games-workshop.com/en-US/Warhammer-40-000?N=2562756967+4251244224"
-        }
-    ]
+    "buyLinks": [{"name": "Games Workshop", "link": "https://www.games-workshop.com/en-US/Warhammer-40-000?N=2562756967+4251244224"}]
 }
