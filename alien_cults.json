@@ -151,7 +151,7 @@
                     "defense": 6,
                     "reflexes": 6,
                     "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "wounds", "x": 2}, {"id": "power", "x": 1}],
-                    "weapons": ["burst_pistol", "blasting_charges", {"id": "energy_staff", "count": 3}],
+                    "weapons": ["pistol", "blasting_charges", {"id": "energy_staff", "count": 3}],
                     "options": [{"replaceRule": {"id": "power", "x": 1}, "withRule": {"id": "power", "x": 2}}],
                     "min": 1,
                     "max": 1
@@ -175,7 +175,7 @@
                     "fight": 6,
                     "defense": 6,
                     "reflexes": 6,
-                    "weapons": ["burst_pistol", "blasting_charges", {"id": "piercing_claws", "count": 4}],
+                    "weapons": ["pistol", "blasting_charges", {"id": "piercing_claws", "count": 4}],
                     "min": 1,
                     "max": 1
                 }
@@ -197,7 +197,7 @@
                     "fight": 6,
                     "defense": 6,
                     "reflexes": 6,
-                    "weapons": ["burst_pistol", "blasting_charges", {"id": "ccw", "count": 3}],
+                    "weapons": ["pistol", "blasting_charges", {"id": "ccw", "count": 3}],
                     "options": [{"replaceRule": {"id": "cult_tactics", "x": 1}, "withRule": {"id": "cult_tactics", "x": 2}}],
                     "min": 1,
                     "max": 1
@@ -220,7 +220,7 @@
                     "fight": 6,
                     "defense": 6,
                     "reflexes": 6,
-                    "weapons": ["burst_pistol", "blasting_charges", {"id": "ccw", "count": 3}],
+                    "weapons": ["pistol", "blasting_charges", {"id": "ccw", "count": 3}],
                     "min": 1,
                     "max": 1
                 }
@@ -267,8 +267,8 @@
                     "rules": ["leader"],
                     "weapons": ["defense_rifle", "blasting_charges", "ccw"],
                     "options": [
-                        {"replaceWeapon": ["defense_rifle", {"id": "ccw", "count": 1}], "withWeapon": [[{"id": "burst_pistol"}, {"id": "ccw", "count": 2}]]},
-                        {"replaceWeapon": "burst_pistol", "withWeapon": ["heavy_pistol", "marine_pistol", "plasma_pistol"]},
+                        {"replaceWeapon": ["defense_rifle", {"id": "ccw", "count": 1}], "withWeapon": [[{"id": "pistol"}, {"id": "ccw", "count": 2}]]},
+                        {"replaceWeapon": "pistol", "withWeapon": ["heavy_pistol", "marine_pistol", "plasma_pistol"]},
                         {"replaceWeapon": {"id": "ccw", "count": 2}, "withWeapon": [{"id": "energy_pick", "count": 2}, {"id": "energy_mace", "count": 2}]},
                         {"replaceWeapon": "defense_rifle", "withWeapon": "shotgun"}
                     ],
@@ -346,10 +346,10 @@
             "category": "command",
             "options": [
                 {
-                    "replaceWeapon": [{"id": "heavy_ccw", "count": 2}, {"id": "piercing_claws", "count": 1}],
+                    "replaceWeapon": [{"id": "heavy_ccw", "count": 2}],
                     "withWeapon": [{"id": "rock_cutter", "count": 2}, {"id": "rock_drill", "count": 2}, {"id": "rock_saw", "count": 2}, {"id": "demolition_charges", "count": 1}]
                 },
-                {"replaceWeapon": "burst_pistol", "withWeapon": "flamethrower_pistol"},
+                {"replaceWeapon": "pistol", "withWeapon": ["burst_pistol", "flamethrower_pistol"]},
                 {"addRule": "banner"}
             ],
             "models": [
@@ -359,14 +359,15 @@
                     "shoot": 5,
                     "fight": 6,
                     "defense": 6,
-                    "reflexes": 6,
+                    "reflexes": 5,
                     "movement": 6,
                     "rules": ["leader"],
-                    "weapons": ["burst_pistol", "blasting_charges", {"id": "heavy_ccw", "count": 2}, {"id": "piercing_claws", "count": 1}],
+                    "weapons": ["pistol", "blasting_charges", {"id": "heavy_ccw", "count": 2}],
                     "options": [
+                        {"replaceWeapon": "pistol", "withWeapon": ["burst_pistol", "flamethrower_pistol"]},
                         {
-                            "replaceWeapon": [{"id": "heavy_ccw", "count": 2}, "burst_pistol"],
-                            "withWeapon": [[{"id": "bone_sword", "count": 2}, "burst_pistol"], [{"id": "bone_sword", "count": 2}, {"id": "lashing_whip", "count": 1}]]
+                            "replaceWeapon": [{"id": "heavy_ccw", "count": 2}, "pistol"],
+                            "withWeapon": [[{"id": "bone_sword", "count": 2}, "pistol"], [{"id": "bone_sword", "count": 2}, {"id": "lashing_whip", "count": 1}]]
                         }
                     ],
                     "min": 1,
@@ -385,10 +386,10 @@
                     "shoot": 5,
                     "fight": 6,
                     "defense": 6,
-                    "reflexes": 6,
+                    "reflexes": 5,
                     "movement": 6,
-                    "weapons": ["burst_pistol", "blasting_charges", {"id": "heavy_ccw", "count": 2}, {"id": "piercing_claws", "count": 1}],
-                    "options": [{"replaceWeapon": "burst_pistol", "withWeapon": "flamethrower_pistol"}, {"addRule": "banner"}],
+                    "weapons": ["pistol", "blasting_charges", {"id": "heavy_ccw", "count": 2}],
+                    "options": [{"replaceWeapon": "pistol", "withWeapon": ["burst_pistol", "flamethrower_pistol"]}, {"addRule": "banner"}],
                     "min": 1,
                     "max": 1
                 }
@@ -405,12 +406,13 @@
                     "shoot": 5,
                     "fight": 6,
                     "defense": 6,
-                    "reflexes": 6,
+                    "reflexes": 5,
                     "movement": 6,
-                    "weapons": ["burst_pistol", "blasting_charges", {"id": "heavy_ccw", "count": 2}, {"id": "piercing_claws", "count": 1}],
+                    "weapons": ["pistol", "blasting_charges", {"id": "heavy_ccw", "count": 2}],
                     "options": [
+                        {"replaceWeapon": "pistol", "withWeapon": ["burst_pistol", "flamethrower_pistol"]},
                         {
-                            "replaceWeapon": [{"id": "heavy_ccw", "count": 2}, {"id": "piercing_claws", "count": 1}],
+                            "replaceWeapon": [{"id": "heavy_ccw", "count": 2}],
                             "withWeapon": [{"id": "rock_cutter", "count": 2}, {"id": "rock_drill", "count": 2}, {"id": "rock_saw", "count": 2}, {"id": "demolition_charges", "count": 1}]
                         }
                     ],
@@ -429,17 +431,16 @@
                     "courage": 6,
                     "shoot": 5,
                     "fight": 6,
-                    "defense": 6,
+                    "defense": 7,
                     "reflexes": 5,
                     "movement": 6,
                     "rules": ["leader"],
-                    "weapons": ["burst_pistol", "blasting_charges", {"id": "piercing_claws", "count": 3}, {"id": "razor_talons", "count": 1}],
+                    "weapons": ["pistol", "blasting_charges", {"id": "piercing_claws", "count": 3}],
                     "options": [
-                        {"addWeapon": [{"id": "bone_sword", "count": 2}]},
-                        {"replaceWeapon": "burst_pistol", "withWeapon": "flamethrower_pistol"},
+                        {"replaceWeapon": "pistol", "withWeapon": ["burst_pistol", "flamethrower_pistol"]},
                         {
-                            "replaceWeapon": [{"id": "piercing_claws", "count": 3}, {"id": "razor_talons", "count": 1}],
-                            "withWeapon": [{"id": "metamorph_claws", "count": 3}, [{"id": "lashing_whip", "count": 2}, {"id": "piercing_claws", "count": 2}]]
+                            "replaceWeapon": [{"id": "piercing_claws", "count": 3}],
+                            "withWeapon": [[{"id": "bone_sword", "count": 2}, {"id": "lashing_whip", "count": 1}], {"id": "metamorph_claws", "count": 3}]
                         }
                     ],
                     "min": 1,
@@ -457,16 +458,13 @@
                     "courage": 6,
                     "shoot": 5,
                     "fight": 6,
-                    "defense": 6,
+                    "defense": 7,
                     "reflexes": 5,
                     "movement": 6,
-                    "weapons": ["burst_pistol", "blasting_charges", {"id": "piercing_claws", "count": 3}, {"id": "razor_talons", "count": 1}],
+                    "weapons": ["pistol", "blasting_charges", {"id": "piercing_claws", "count": 3}],
                     "options": [
-                        {"replaceWeapon": "burst_pistol", "withWeapon": "flamethrower_pistol"},
-                        {
-                            "replaceWeapon": [{"id": "piercing_claws", "count": 3}, {"id": "razor_talons", "count": 1}],
-                            "withWeapon": [{"id": "metamorph_claws", "count": 3}, [{"id": "lashing_whip", "count": 2}, {"id": "piercing_claws", "count": 2}]]
-                        },
+                        {"replaceWeapon": "pistol", "withWeapon": ["burst_pistol", "flamethrower_pistol"]},
+                        {"replaceWeapon": [{"id": "piercing_claws", "count": 3}], "withWeapon": [{"id": "metamorph_claws", "count": 3}]},
                         {"addRule": "banner"}
                     ],
                     "min": 1,
@@ -524,7 +522,7 @@
             "rules": ["stealth"],
             "options": [
                 {"replaceWeapon": "defense_rifle", "withWeapon": ["grenade_launcher"]},
-                {"replaceWeapon": ["defense_rifle", {"id": "ccw", "count": 1}], "withWeapon": [[{"id": "burst_pistol"}, {"id": "ccw", "count": 2}]]},
+                {"replaceWeapon": ["defense_rifle", {"id": "ccw", "count": 1}], "withWeapon": [[{"id": "pistol"}, {"id": "ccw", "count": 2}]]},
                 {"replaceWeapon": "defense_rifle", "withWeapon": ["shotgun"]}
             ],
             "models": [
@@ -539,7 +537,7 @@
                     "rules": ["leader"],
                     "weapons": ["defense_rifle", "blasting_charges", {"id": "ccw"}],
                     "options": [
-                        {"replaceWeapon": "burst_pistol", "withWeapon": ["heavy_pistol", "marine_pistol", "plasma_pistol"]},
+                        {"replaceWeapon": "pistol", "withWeapon": ["heavy_pistol", "marine_pistol", "plasma_pistol"]},
                         {"replaceWeapon": {"id": "ccw", "count": 2}, "withWeapon": [{"id": "energy_pick", "count": 2}, {"id": "energy_mace", "count": 2}]}
                     ],
                     "min": 1,
@@ -565,7 +563,7 @@
                     "weapons": ["defense_rifle", "blasting_charges", {"id": "ccw"}],
                     "options": [
                         {"replaceWeapon": "defense_rifle", "withWeapon": ["grenade_launcher"]},
-                        {"replaceWeapon": ["defense_rifle", {"id": "ccw", "count": 1}], "withWeapon": [[{"id": "burst_pistol"}, {"id": "ccw", "count": 2}]]},
+                        {"replaceWeapon": ["defense_rifle", {"id": "ccw", "count": 1}], "withWeapon": [[{"id": "pistol"}, {"id": "ccw", "count": 2}]]},
                         {"replaceWeapon": "defense_rifle", "withWeapon": ["shotgun"]}
                     ],
                     "min": 1,
