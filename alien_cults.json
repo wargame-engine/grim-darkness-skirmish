@@ -519,7 +519,6 @@
             "description": "Fast, agile motorbike fighters.",
             "category": "command",
             "keywords": ["Biker"],
-            "rules": ["stealth"],
             "options": [
                 {"replaceWeapon": "defense_rifle", "withWeapon": ["grenade_launcher"]},
                 {"replaceWeapon": ["defense_rifle", {"id": "ccw", "count": 1}], "withWeapon": [[{"id": "pistol"}, {"id": "ccw", "count": 2}]]},
@@ -550,7 +549,6 @@
             "description": "Fast, agile motorbike fighters.",
             "category": "strike",
             "keywords": ["Biker"],
-            "rules": ["stealth"],
             "models": [
                 {
                     "name": "Dirt-Biker",
@@ -576,7 +574,6 @@
             "description": "Fast, agile motorbike fighters.",
             "category": "strike",
             "keywords": ["Biker"],
-            "rules": ["stealth"],
             "models": [
                 {
                     "name": "Quad-Biker",
