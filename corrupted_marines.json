@@ -1491,8 +1491,16 @@
             "flavor": "These soldiers are particularly enduring and will not surrender.",
             "cost": 1
         },
+        "outrun": {
+            "subfactions": ["destruction_focus"],
+            "name": "Outrun",
+            "phase": "activation",
+            "description": "Use this strategy when an _Infantry_ unit charges. That unit gains +3\" of Movement for that action.",
+            "flavor": "These marines will let no enemy escape.",
+            "cost": 1
+        },
         "ferocity": {
-            "subfactions": ["destruction_focus", "rage_focus"],
+            "subfactions": ["rage_focus"],
             "name": "Ferocity",
             "phase": "activation",
             "description": "Use this strategy when an _Infantry_ unit charges. All models in that unit may make one additional attack.",
