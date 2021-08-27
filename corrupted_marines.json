@@ -1524,14 +1524,11 @@
             "cost": 1
         }
     },
+    "powerCategories": {
+        "psychic": {"name": "Psychic"}
+    },
     "powers": {
-        "beam": {
-            "subfactions": ["none", "change_corrupteds", "pestilence_focus"],
-            "name": "Invigorating Beam",
-            "description": "Target friendly unit within 12\"may immediately make a free move action.",
-            "charge": 7
-        },
-        "magic_shield": {
+        "shield": {
             "subfactions": ["none", "change_corrupteds", "pestilence_focus"],
             "name": "Shield",
             "description": "Target friendly unit within 12\". Until the end of the round, roll a D10 each time that unit is hit. On a 2 or less, that hit is ignored.",
@@ -1543,16 +1540,9 @@
             "description": "Target enemy unit within 18\" must re-roll one die of your choice on its next Save test.",
             "charge": 6
         },
-        "illusion": {
-            "subfactions": ["none", "change_corrupteds", "pestilence_focus"],
-            "name": "Encroaching Mutations",
-            "description": "Target enemy unit within 18\" gets -1 to hit the next time it shoots or fights.",
-            "charge": 6
-        },
-        "strike": {"subfactions": ["none", "change_corrupteds", "pestilence_focus"], "name": "Strike", "description": "Target enemy unit within 18\" takes 2 hits with AP 5.", "charge": 6},
-        "terror": {"subfactions": ["none", "change_corrupteds", "pestilence_focus"], "name": "Terror", "description": "Target enemy unit within 12\" immediately takes 3 Shock.", "charge": 7},
-        "death": {"name": "Bolt", "subfactions": ["change_corrupteds"], "description": "Target enemy unit within 18\" takes 1 hit with AP 7.", "charge": 6},
-        "storm": {"subfactions": ["change_corrupteds"], "name": "Storm", "description": "Target enemy unit within 18\" take 5 hits with AP 1.", "charge": 6},
-        "inferno": {"subfactions": ["change_corrupteds"], "name": "Inferno", "description": "Target enemy unit within 12\" takes 3 hits with AP 3.", "charge": 6}
+        "strike": {"subfactions": ["none", "change_corrupteds", "pestilence_focus"], "name": "Strike", "description": "Target enemy unit within 18\" takes 2 hits with AP 5.", "charge": 5},
+        "bolt": {"name": "Bolt", "subfactions": ["change_corrupteds"], "category": "psychic", "description": "Target enemy unit within 18\" takes 1 hit with AP 7.", "charge": 5},
+        "storm": {"subfactions": ["change_corrupteds"], "name": "Storm", "category": "psychic",  "description": "Target enemy unit within 18\" take 5 hits with AP 1.", "charge": 6},
+        "inferno": {"subfactions": ["change_corrupteds"], "name": "Inferno", "category": "psychic",  "description": "Target enemy unit within 12\" takes 3 hits with AP 3.", "charge": 6}
     }
 }
