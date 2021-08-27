@@ -1483,20 +1483,36 @@
             "description": "Use this strategy when one of your _Infantry_ units Shoots. Successful hit rolls of 1 or 2 gain +1 AP.",
             "cost": 1
         },
-        "ferocity": {
-            "subfactions": ["destruction_focus"],
-            "name": "Ferocity",
-            "phase": "activation",
-            "description": "Use this strategy when an _Infantry_ unit charges. All models in that unit may make one additional attack.",
-            "flavor": "Sometimes with disregard for their own life, these marines will stop at nothing to defeat their enemies.",
-            "cost": 1
-        },
         "bravery": {
             "subfactions": ["destruction_focus"],
             "name": "Bravery",
             "phase": "activation",
             "description": "Use when a unit takes a Courage test. That unit gets +1 Courage.",
             "flavor": "These soldiers are particularly enduring and will not surrender.",
+            "cost": 1
+        },
+        "ferocity": {
+            "subfactions": ["destruction_focus", "rage_focus"],
+            "name": "Ferocity",
+            "phase": "activation",
+            "description": "Use this strategy when an _Infantry_ unit charges. All models in that unit may make one additional attack.",
+            "flavor": "Sometimes with disregard for their own life, these marines will stop at nothing to defeat their enemies.",
+            "cost": 1
+        },
+        "nullify": {
+            "subfactions": ["rage_focus"],
+            "phase": "activation",
+            "name": "Nullify",
+            "description": "Use when a Power(x) test is taken within 24\" of any Infantry unit. Roll a D10. If the value is less than or equal to the test to cast the power, it is prevented.",
+            "flavor": "Sometimes those that are favored by the dark gods can be protected from enemy powers.",
+            "cost": 1
+        },
+        "counter_attack": {
+            "subfactions": ["rage_focus"],
+            "name": "Counter Attack",
+            "phase": "activation",
+            "flavor": "These marines do not let their enemy strike first.",
+            "description": "Use when an _Infantry_ unit is targeted by a Fight action. If that unit has not yet activated, it may perform a Counter Attack reaction without testing Initiative.",
             "cost": 1
         }
     },
