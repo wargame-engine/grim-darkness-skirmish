@@ -373,7 +373,95 @@
             "points": 5
         }
     },
-    "powers": {"shock_wave": {"name": "Shock Wave", "description": "Target enemy unit within 12\" takes 3 hits with AP 1. This power may be cast unlimited times.", "charge": 8}},
+    "powerCategories": {
+        "fire": {"name": "Fire"},
+        "water": {"name": "Water"},
+        "earth": {"name": "Earth"},
+        "air": {"name": "Air"},
+        "ice": {"name": "Ice"},
+        "nature": {"name": "Nature"},
+        "metal": {"name": "Metal"},
+        "light": {"name": "Light"},
+        "shadow": {"name": "Shadow"},
+        "death": {"name": "Death"}
+    },
+    "powers": {
+        "searing_bolt": {"name": "Searing Bolt", "description": "Target enemy unit within 12\" takes 1 hits with AP(4).", "charge": 6, "category": "fire"},
+        "fireball": {"name": "Fireball", "description": "Target enemy unit within 12\" takes 3 hit with AP(1). This power may be cast unlimited times per turn.", "charge": 7, "category": "fire"},
+        "flaming_sword": {
+            "name": "Flaming Sword",
+            "description": "This unit gains +1 Strength and may make one additional attack with any Melee weapon until the end of the turn.",
+            "charge": 5,
+            "category": "fire"
+        },
+        "crushing_waves": {"name": "Crushing Waves", "description": "Target enemy unit within 12\" takes 4 hits with AP(4).", "charge": 5, "category": "water"},
+        "aqueous_form": {
+            "name": "Aqueous Form",
+            "description": "Target friendly unit within 12\" gets +2\" Movement and may trat Difficult Ground as normal terrain until the end of the turn.",
+            "charge": 6,
+            "category": "water"
+        },
+        "whirlpool": {"name": "Whirlpool", "description": "Target enemy unit within 24\" takes 3 hit with AP(0).", "charge": 7, "category": "water"},
+        "lightning_bolt": {"name": "Lightning Bolt", "description": "Target enemy unit within 18\" takes 1 hit with AP(7).", "charge": 5, "category": "air"},
+        "violent_gale": {"name": "Violent Gale", "description": "Target enemy unit within 18\" take 3 hits with AP(0) and is pushed 3\" away from this model.", "charge": 7, "category": "air"},
+        "haste": {"name": "Haste", "description": "Target friendly unit within 12\" may immediately make a free move action.", "charge": 6, "category": "air"},
+        "crystal_volley": {"name": "Crystal Volley", "description": "Target enemy unit within 12\" takes 5 hits each with AP(1).", "charge": 7, "category": "earth"},
+        "earthen_armor": {"name": "Earthen Armor", "description": "Target friendly unit within 12\" gains +1 Save until the end of the turn.", "charge": 6, "category": "earth"},
+        "earthquake": {
+            "name": "Earthquake",
+            "description": "Target enemy unit within 12\" takes 3 hits with AP(1). Roll a d10 for all units within 3\" of it. On a 5 or less that unit is hit as well",
+            "charge": 5,
+            "category": "earth"
+        },
+        "wild_frenzy": {"name": "Wild Frenzy", "description": "Target friendly unit within 12\" may immediately make a free charge action.", "charge": 5, "category": "nature"},
+        "entangling_roots": {
+            "name": "Entangling Roots",
+            "description": "Target enemy unit within 12\" takes 3 hit with AP(0) and has -2\" Movement until the end of the turn.",
+            "charge": 6,
+            "category": "nature"
+        },
+        "poison_spores": {"name": "Poison Spores", "description": "Target enemy unit within 12\" takes 3 hits with AP(2).", "charge": 7, "category": "nature"},
+        "molten_iron": {"name": "Rust", "description": "Target enemy unit within 12\" has -1 Save until end of turn.", "charge": 5, "category": "metal"},
+        "silver_bolt": {
+            "name": "Silver Bolt",
+            "description": "Target enemy unit within 12\" takes 1 hit with AP(3). This power may be cast unlimited times per turn.",
+            "charge": 7,
+            "category": "metal"
+        },
+        "magic_shield": {
+            "name": "Magic Shield",
+            "description": "Target friendly unit within 12\". Until the end of the round, roll a D10 each time that unit is hit. On a 3 or less, that hit is ignored. This power may be cast unlimited times.",
+            "charge": 6,
+            "category": "metal"
+        },
+        "cloak_of_shadows": {
+            "name": "Cloak of Shadows",
+            "description": "Target a friendly unit within 12\". Until the end of the turn models suffer -1 Accuracy when shooting at this unit.",
+            "charge": 6,
+            "category": "shadow"
+        },
+        "soul_dagger": {"name": "Soul Dagger", "description": "Target enemy model within 12\" takes 1 hit with AP(3).", "charge": 7, "category": "shadow"},
+        "fright": {"name": "Fright", "description": "Target enemy unit within 12\" gains 2 Shock.", "charge": 5, "category": "shadow"},
+        "inspiration": {"name": "Inspiration", "description": "Target friendly unit within 12\" removes 2 Shock.", "charge": 5, "category": "light"},
+        "blinding_shield": {
+            "name": "Blinding Shield",
+            "description": "Target a friendly unit within 12\". Until the end of the turn models suffer -1 Strength when targeting this unit with a melee attack.",
+            "charge": 6,
+            "category": "light"
+        },
+        "smite": {"name": "Smite", "description": "Target enemy unit within 18\" takes 3 hits with AP(0). This power may be cast unlimited times per turn.", "charge": 7, "category": "light"},
+        "drain_life": {
+            "name": "Drain Life",
+            "description": "Target enemy model within 12\" takes 1 hit with AP(3). If the model is slain restore 1 wound to this model.",
+            "charge": 5,
+            "category": "death"
+        },
+        "doom": {"name": "Doom", "description": "Target enemy unit within 12\" -1 Courage until the end of the turn.", "charge": 6, "category": "death"},
+        "spectral_grasp": {"name": "Spectral Grasp", "description": "Target enemy unit within 18\" take 3 hits with AP(0) and is pulled 3\" towards this model.", "charge": 7, "category": "death"},
+        "frost_lance": {"name": "Frost Lance", "description": "Target enemy unit within 24\" takes 1 hit with AP(3).", "charge": 7, "category": "ice"},
+        "hailstorm": {"name": "Hailstorm", "description": "Target enemy unit within 18\" takes 3 hits with AP(1) and has -1 Accuracy until the end of the turn.", "charge": 6, "category": "ice"},
+        "avalanche": {"name": "Avalanche", "description": "Roll a d10 for each enemy units with 9\". On a roll of 5 or lower the unit hit takes 3 hits with AP(3).", "charge": 5, "category": "ice"}
+    },
     "weapons": {
         "power_blast": {"name": "Shock Wave", "medium": 24, "attacks": 3, "ap": 3},
         "plasma_grenade": {
