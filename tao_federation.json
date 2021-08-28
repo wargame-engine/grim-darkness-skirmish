@@ -894,7 +894,7 @@
         "focus_fire": {
             "phase": "activation",
             "subfactions": ["mobility_focus"],
-            "name": "Focus Fire",
+            "name": "Burst",
             "flavor": "With a wave of fire, surely any target could not survive.",
             "description": "Use when an _Infantry_ unit makes a Shoot action. Hit rolls of 1 or 2 cause 2 hits instead of 1.",
             "cost": 1
