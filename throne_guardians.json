@@ -582,7 +582,7 @@
         {
             "phase": "activation",
             "name": "Combat Awareness",
-            "description": "Use when shooting with an _Infantry_ unit. That unit may target enemies it is engaged with.",
+            "description": "Use when shooting with an _Infantry_ unit. That unit may target enemies it is engaged with at -1 Accuracy.",
             "flavor": "Throne Guardians are trained to be expertly aware of their surroundings including where their allies are.",
             "cost": 1
         },
