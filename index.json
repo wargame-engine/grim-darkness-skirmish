@@ -119,7 +119,11 @@
             "id": "tao_federation",
             "url": "tao_federation.json",
             "color": "#008080",
-            "description": "The Tao Federation is an alliance of several alien species to band together in the name of survival and prosperity. The Tao rely on a mix of advanced battle warsuits and deadly pulse weaponry to defeat their enemies."
+            "description": "The Tao Federation is an alliance of several alien species to band together in the name of survival and prosperity. The Tao rely on a mix of advanced battle warsuits and deadly pulse weaponry to defeat their enemies.",
+            "subfactions": {
+                "vigilance_focus": {"name": "Vigilance", "id": "vigilance_focus", "description": "Tao Federation troops focused on readyness and vigiliant tactics."},
+                "mobility_focus": {"name": "Mobility", "id": "mobility_focus", "description": "Tao Federation troops focused on mobile firing tactics."}
+            }
         },
         "battle_sisters": {
             "version": "1.0",

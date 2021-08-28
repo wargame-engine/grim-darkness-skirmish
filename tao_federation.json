@@ -443,9 +443,7 @@
             "category": "strike",
             "keywords": ["Heavy Infantry", "Avian Mercenaries"],
             "rules": [{"id": "wounds", "x": 2}],
-            "models": [
-                {"name": "Avian Beast Rider", "movement": 8, "courage": 4, "shoot": 5, "fight": 6, "defense": 6, "reflexes": 5, "weapons": ["avian_cannon", "beast_fists"], "min": 1, "max": 1}
-            ]
+            "models": [{"name": "Avian Beast Rider", "movement": 8, "courage": 4, "shoot": 5, "fight": 6, "defense": 6, "reflexes": 5, "weapons": ["avian_cannon", "beast_fists"], "min": 1, "max": 1}]
         },
         "insect_warrior_leader": {
             "name": "Insect Warrior Leader",
@@ -875,6 +873,54 @@
             "name": "Danger Close",
             "description": "Use when shooting with an _Infantry_ unit. That unit may target enemies it is engaged with at -1 Accuracy.",
             "flavor": "Federation troops are trained to use defensive tactics to protect themselves in close quarters.",
+            "cost": 1
+        },
+        "moving_fire": {
+            "subfactions": ["mobility_focus"],
+            "name": "Moving Fire",
+            "phase": "activation",
+            "flavor": "These troops are trained to shoot while moving to maintain pressure on their enemies.",
+            "description": "Use after an _Infantry_ unit Shoots with an _Assault_ weapon. That unit may ignore the -1 Accuracy penalty.",
+            "cost": 1
+        },
+        "double_time": {
+            "subfactions": ["mobility_focus"],
+            "phase": "activation",
+            "name": "Double Time",
+            "description": "Use when a unit makes a Move action. It gains +3\" of Movement for that action",
+            "flavor": "At some points in battle it is necessary to move with great urgency.",
+            "cost": 1
+        },
+        "focus_fire": {
+            "phase": "activation",
+            "subfactions": ["mobility_focus"],
+            "name": "Focus Fire",
+            "flavor": "With a wave of fire, surely any target could not survive.",
+            "description": "Use when an _Infantry_ unit makes a Shoot action. Hit rolls of 1 or 2 cause 2 hits instead of 1.",
+            "cost": 1
+        },
+        "vigilance": {
+            "subfactions": ["vigilance_focus"],
+            "name": "Vigilance",
+            "phase": "activation",
+            "description": "Use when taking an Initiative test for a reaction. That unit is treated as having +2 Initiative for that test.",
+            "flavor": "With countless battles experienced, these troops are trained to react to any situation.",
+            "cost": 1
+        },
+        "cautious": {
+            "subfactions": ["vigilance_focus"],
+            "name": "Cautious",
+            "phase": "activation",
+            "description": "Use after an _Infantry_ unit performs a Move action. That unit may perform a free Hold action.",
+            "flavor": "Cautious movement can be key to staying alive.",
+            "cost": 1
+        },
+        "overcharge": {
+            "phase": "activation",
+            "subfactions": ["vigilance_focus"],
+            "name": "Overcharge",
+            "flavor": "By overcharging their weapons, some hits can pierce even heavily armored targets.",
+            "description": "Use when an _Infantry_ unit makes a Shoot action. Hit rolls of 1 or 2 gain +1 AP.",
             "cost": 1
         }
     },
