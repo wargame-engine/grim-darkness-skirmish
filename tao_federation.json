@@ -873,7 +873,7 @@
         "danger_close": {
             "phase": "activation",
             "name": "Danger Close",
-            "description": "Use when shooting with an _Infantry_ unit. That unit may target enemies it is engaged with.",
+            "description": "Use when shooting with an _Infantry_ unit. That unit may target enemies it is engaged with at -1 Accuracy.",
             "flavor": "Federation troops are trained to use defensive tactics to protect themselves in close quarters.",
             "cost": 1
         }
