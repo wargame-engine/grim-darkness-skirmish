@@ -707,8 +707,8 @@
         "lashing_whip": {"name": "Lashing Whip", "attacks": 1, "ap": 1, "short": "Melee", "rules": ["poison"]},
         "toxic_claw": {"name": "Toxic Claw", "attacks": 1, "ap": 2, "short": "Melee", "rules": ["poison"]},
         "rock_cutter": {"name": "Rock Cutter", "attacks": 1, "short": "Melee", "ap": 6, "rules": ["cumbersome"]},
-        "rock_drill": {"name": "Rock Drill", "attacks": 1, "short": "Melee", "ap": 5, "rules": ["rending"]},
-        "rock_saw": {"name": "Rock Saw", "attacks": 1, "short": "Melee", "ap": 6},
+        "rock_drill": {"name": "Rock Drill", "attacks": 1, "short": "Melee", "ap": 4, "rules": ["rending"]},
+        "rock_saw": {"name": "Rock Saw", "attacks": 1, "short": "Melee", "ap": 5},
         "mining_laser": {"name": "Mining Laser", "attacks": 1, "short": 12, "medium": 24, "ap": 8},
         "heavy_mining_laser": {"name": "Heavy Mining Laser", "attacks": 1, "short": 18, "medium": 36, "ap": 8},
         "seismic_cannon": {
