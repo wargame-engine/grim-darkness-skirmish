@@ -148,7 +148,7 @@
                     "defense": 6,
                     "reflexes": 5,
                     "movement": 7,
-                    "weapons": ["pistol", "frags", "staff"],
+                    "weapons": ["pistol", "frags", "energy_staff"],
                     "options": [
                         {"replaceRule": {"id": "power", "x": 1}, "withRule": {"id": "power", "x": 2}},
                         {"replaceWeapon": "pistol", "withWeapon": ["plasma_pistol"]},

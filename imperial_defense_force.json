@@ -121,9 +121,7 @@
         },
         "psychic": {
             "name": "Psychic",
-            "description": "A trained psychic to support the fighters.",
-            "min": 5,
-            "max": 10,
+            "description": "A trained psychic adept at casting powers and supporting troops.",
             "category": "command",
             "keywords": ["Infantry"],
             "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "power", "x": 1}, {"id": "wounds", "x": 2}],
@@ -136,11 +134,11 @@
                     "defense": 6,
                     "reflexes": 5,
                     "movement": 6,
-                    "weapons": ["pistol", "frags", "staff"],
+                    "weapons": ["pistol", "frags", {"id": "ccw", "count": 2}],
                     "options": [
                         {"replaceRule": {"id": "power", "x": 1}, "withRule": {"id": "power", "x": 2}},
                         {"replaceWeapon": "pistol", "withWeapon": ["plasma_pistol"]},
-                        {"replaceWeapon": {"id": "ccw", "count": 2}, "withWeapon": ["energy_sword", "energy_fist"]}
+                        {"replaceWeapon": {"id": "ccw", "count": 2}, "withWeapon": [{"id": "energy_sword", "count": 2}, {"id": "energy_staff", "count": 2}, {"id": "energy_fist", "count": 2}]}
                     ],
                     "rules": [],
                     "min": 1,

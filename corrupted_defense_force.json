@@ -10,7 +10,7 @@
             "max": 10,
             "category": "command",
             "keywords": ["Infantry"],
-            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "defense_force_tactics", "x": 2},  {"id": "wounds", "x": 2}],
+            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "defense_force_tactics", "x": 2}, {"id": "wounds", "x": 2}],
             "models": [
                 {
                     "name": "Company Commander",
@@ -62,26 +62,24 @@
         },
         "psychic_lord": {
             "name": "Psychic Lord",
-            "description": "A power psychic turned corrupted leader.",
-            "min": 5,
-            "max": 10,
+            "description": "A trained psychic adept at casting powers and supporting troops.",
             "category": "command",
             "keywords": ["Infantry"],
             "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "power", "x": 1}, {"id": "wounds", "x": 3}],
             "models": [
                 {
                     "name": "Psychic Lord",
-                    "courage": 7,
+                    "courage": 5,
                     "shoot": 6,
                     "fight": 6,
                     "defense": 6,
-                    "reflexes": 6,
+                    "reflexes": 5,
                     "movement": 6,
-                    "weapons": ["pistol", "frags", "staff"],
+                    "weapons": ["pistol", "frags", {"id": "heavy_ccw", "count": 3}],
                     "options": [
                         {"replaceRule": {"id": "power", "x": 1}, "withRule": {"id": "power", "x": 2}},
-                        {"replaceWeapon": "pistol", "withWeapon": ["plasma_pistol"]},
-                        {"replaceWeapon": {"id": "ccw", "count": 2}, "withWeapon": ["energy_sword", "energy_fist"]}
+                        {"replaceWeapon": "pistol", "withWeapon": ["plasma_pistol", "fusion_pistol"]},
+                        {"replaceWeapon": {"id": "ccw", "count": 3}, "withWeapon": [{"id": "energy_sword", "count": 3}, {"id": "energy_staff", "count": 3}, {"id": "energy_fist", "count": 3}]}
                     ],
                     "rules": [],
                     "min": 1,
@@ -121,9 +119,7 @@
             "category": "core",
             "min": 5,
             "max": 10,
-            "options": [
-                {"addRule": "banner", "modelLimit": 1}
-            ],
+            "options": [{"addRule": "banner", "modelLimit": 1}],
             "models": [
                 {
                     "name": "Militia Champion",
@@ -837,7 +833,5 @@
             "points": 20
         }
     },
-    "relics": {
-
-    }
+    "relics": {}
 }
