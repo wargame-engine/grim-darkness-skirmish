@@ -110,7 +110,7 @@
                     "movement": 6,
                     "weapons": ["pistol", "frags", {"id": "ccw", "count": 3}],
                     "options": [
-                        {"replaceWeapon": "pistol", "withWeapon": ["plasma_pistol"]},
+                        {"replaceWeapon": "pistol", "withWeapon": ["marine_pistol", "plasma_pistol"]},
                         {"replaceWeapon": {"id": "ccw", "count": 3}, "withWeapon": [{"id": "energy_sword", "count": 3}, {"id": "energy_fist", "count": 3}]}
                     ],
                     "rules": [],
