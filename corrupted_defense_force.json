@@ -771,11 +771,6 @@
             "points": ["rule.x", {"multiply": 10}]
         },
         "ogre_shield": {"name": "Ogre Shield", "description_short": "+1 Save", "description": "This model gets +1 Save.", "points": 2},
-        "no_retreat": {
-            "name": "No Retreat",
-            "description": "Once per round, when a friendly _Infantry_ unit within 3\" fails a Courage test, it may remove a model to re-roll that test. The second result must be used.",
-            "points": 5
-        },
         "extra_armor": {"name": "Reinforced Hull", "description": "Subtract 1 from all Damage Chart rolls for this model.", "points": 10},
         "heavy_armor": {"name": "Heavy Armor", "hidden": true, "description": "This model gets +1 Save.", "description_short": "Save +1", "points": 2},
         "battle_tank_tactics": {
