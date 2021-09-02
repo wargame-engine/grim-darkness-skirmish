@@ -334,23 +334,66 @@
                 }
             ]
         },
+        "stalker_leader": {
+            "name": "Stalker Leader",
+            "description": "Metallic stalking cyborgs for hunting and killing targets.",
+            "category": "command",
+            "rules": ["agile", "leader"],
+            "options": [{"replaceWeapon": [{"id": "sonic_razor", "count": 3}], "withWeapon": {"id": "sonic_blade", "count": 2}}],
+            "models": [
+                {"name": "Stalker", "courage": 5, "movement": 6, "shoot": 5, "fight": 6, "defense": 7, "reflexes": 6, "weapons": [{"id": "sonic_razor", "count": 3}], "min": 1, "max": 1}
+            ]
+        },
         "stalker": {
             "name": "Stalker",
             "description": "Metallic stalking cyborgs for hunting and killing targets.",
-            "min": 1,
-            "max": 1,
             "category": "specialist",
             "rules": ["agile"],
-            "options": [{"replaceWeapon": ["sonic_razor", {"id": "claws", "count": 2}], "withWeapon": {"id": "sonic_blade", "count": 2}}],
+            "options": [{"replaceWeapon": [{"id": "sonic_razor", "count": 3}], "withWeapon": {"id": "sonic_blade", "count": 2}}],
             "models": [
-                {"name": "Stalker", "courage": 5, "movement": 6, "shoot": 6, "fight": 6, "defense": 7, "reflexes": 5, "weapons": ["sonic_razor", {"id": "claws", "count": 2}], "min": 1, "max": 1}
+                {"name": "Stalker", "courage": 5, "movement": 6, "shoot": 5, "fight": 6, "defense": 7, "reflexes": 6, "weapons": [{"id": "sonic_razor", "count": 3}], "min": 1, "max": 1}
+            ]
+        },
+        "infiltrator_leader": {
+            "name": "Infiltrator Leader",
+            "description": "Metal infiltration cyborgs for covert operations.",
+            "category": "command",
+            "rules": ["scout", "stealth", "leader"],
+            "options": [{"replaceWeapon": ["blaster_smg", "taser_sword"], "withWeapon": [["burst_carbine", {"id": "energy_sword"}]]}],
+            "models": [{"name": "Infiltrator", "courage": 5, "movement": 6, "shoot": 6, "fight": 5, "defense": 7, "reflexes": 6, "weapons": ["blaster_smg", "taser_sword"], "min": 1, "max": 1}]
+        },
+        "infiltrator": {
+            "name": "Infiltrator",
+            "description": "Metal infiltration cyborgs for covert operations.",
+            "category": "specialist",
+            "rules": ["scout", "stealth"],
+            "options": [{"replaceWeapon": ["blaster_smg", "taser_sword"], "withWeapon": [["burst_carbine", {"id": "energy_sword"}]]}],
+            "models": [{"name": "Infiltrator", "courage": 5, "movement": 6, "shoot": 6, "fight": 5, "defense": 7, "reflexes": 6, "weapons": ["blaster_smg", "taser_sword"], "min": 1, "max": 1}]
+        },
+        "sky_stalker_leader": {
+            "name": "Sky Stalker Leader",
+            "description": "Metallic stalking cyborgs for hunting and killing targets.",
+            "category": "strike",
+            "rules": ["fly", "leader"],
+            "options": [{"replaceWeapon": "phosphor_pistol", "withWeapon": {"id": "blaster_smg"}}, {"addRule": {"id": "impact", "x": 1, "name": "Cluster Grenades"}, "modelLimit": "all"}],
+            "models": [
+                {
+                    "name": "Sky Stalker",
+                    "courage": 5,
+                    "movement": 8,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 7,
+                    "reflexes": 6,
+                    "weapons": ["phosphor_carbine", {"id": "ccw", "count": 2}],
+                    "min": 1,
+                    "max": 1
+                }
             ]
         },
         "sky_stalker": {
             "name": "Sky Stalker",
             "description": "Metallic stalking cyborgs for hunting and killing targets.",
-            "min": 1,
-            "max": 1,
             "category": "strike",
             "rules": ["fly"],
             "options": [{"replaceWeapon": "phosphor_pistol", "withWeapon": {"id": "blaster_smg"}}, {"addRule": {"id": "impact", "x": 1, "name": "Cluster Grenades"}, "modelLimit": "all"}],
@@ -368,16 +411,6 @@
                     "max": 1
                 }
             ]
-        },
-        "infiltrator": {
-            "name": "Infiltrator",
-            "description": "Metal infiltration cyborgs for covert operations.",
-            "min": 1,
-            "max": 1,
-            "category": "specialist",
-            "rules": ["scout", "stealth"],
-            "options": [{"replaceWeapon": ["blaster_smg", "taser_sword"], "withWeapon": [["burst_carbine", {"id": "energy_sword"}]]}],
-            "models": [{"name": "Infiltrator", "courage": 5, "movement": 6, "shoot": 6, "fight": 6, "defense": 7, "reflexes": 5, "weapons": ["blaster_smg", "taser_sword"], "min": 1, "max": 1}]
         },
         "raiders": {
             "name": "Raider",
@@ -442,20 +475,20 @@
     },
     "weapons": {
         "mini_plasma_cannon": {"name": "Mini Plasma Cannon", "attacks": 1, "short": 12, "medium": 24, "ap": 5, "rules": ["overcharge", {"id": "blast", "x": 2}]},
-        "energy_cannon": {"name": "Energy Cannon", "attacks": 3, "short": 18, "medium": 36, "ap": 4, "rules": [{"id": "blast", "x": 2}, "indirect"]},
+        "energy_cannon": {"name": "Energy Cannon", "attacks": 3, "short": 18, "medium": 36, "ap": 4, "rules": ["indirect", {"id": "blast", "x": 2}]},
         "iron_cannon": {"name": "Iron Cannon", "attacks": 2, "short": 24, "medium": 48, "ap": 6},
         "emp_cannon": {"name": "EMP Cannon", "attacks": 2, "short": 18, "medium": 36, "ap": 4, "rules": ["emp"]},
         "disruption_missiles": {"name": "Disruption Missiles", "attacks": 1, "short": 18, "medium": 36, "ap": 5},
         "contortion_cannon": {"name": "Contortion Cannon", "attacks": 1, "short": 12, "medium": 24, "ap": 6},
         "revolver_pistol": {"name": "Revolver Pistol", "attacks": 1, "ap": 3, "short": 6, "medium": 12},
         "raider_sabre": {"name": "Raider Sabre", "attacks": 2, "ap": 1, "short": "Melee"},
-        "blaster_smg": {"name": "Blaster SMG", "attacks": 3, "short": 6, "medium": 12, "rules": ["pistol"]},
+        "blaster_smg": {"name": "Blaster SMG", "attacks": 2, "short": 6, "medium": 12, "rules": ["rending"]},
         "phosphor_breath": {"name": "Phosphor Breath", "attacks": 3, "short": 6, "ap": 1, "medium": 12, "rules": ["phosphor"]},
         "blaster_carbine": {"name": "Blaster Carbine", "attacks": 1, "short": 9, "ap": 1, "medium": 18, "rules": ["assault"]},
         "energy_staff": {"name": "Machine Staff", "attacks": 3, "ap": 2, "short": "Melee"},
         "shock_staff": {"name": "Shock Staff", "attacks": 1, "ap": 3, "short": "Melee"},
-        "sonic_blade": {"name": "Sonic Blade", "attacks": 1, "ap": 1, "short": "Melee", "rules": ["rending"]},
-        "sonic_razor": {"name": "Sonic Razor", "attacks": 1, "short": "Melee", "rules": [{"id": "poison", "x": 2}]},
+        "sonic_blade": {"name": "Sonic Blade", "attacks": 1, "ap": 3, "short": "Melee", "rules": ["rending"]},
+        "sonic_razor": {"name": "Sonic Razors", "attacks": 1, "ap": 1, "short": "Melee", "rules": ["rending"]},
         "claws": {"name": "Claws", "attacks": 1, "short": "Melee", "rules": ["rending"]},
         "iron_claws": {"name": "Iron Claws", "attacks": 1, "short": "Melee", "ap": 2},
         "robot_fist": {"name": "Robot Fist", "attacks": 1, "short": "Melee", "ap": 8},
@@ -470,8 +503,8 @@
         "radiation_carbine": {"name": "Radiation Carbine", "attacks": 2, "short": 9, "medium": 18, "rules": ["assault"]},
         "ranger_rifle": {"name": "Ranger Rifle", "attacks": 1, "short": 15, "medium": 30, "ap": 1, "rules": ["rending"]},
         "emp_rifle": {"name": "EMP Rifle", "attacks": 2, "short": 12, "medium": 24, "ap": 3, "rules": ["emp"]},
-        "burst_carbine": {"name": "Burst Carbine", "attacks": 2, "ap": 1, "short": 9, "medium": 18, "rules": ["pistol"]},
-        "plasma_burst_carbine": {"name": "Plasma Burst Carbine", "attacks": 2, "short": 9, "medium": 18, "ap": 5, "rules": ["overcharge", "assault"]},
+        "burst_carbine": {"name": "Burst Carbine", "attacks": 1, "ap": 1, "short": 9, "medium": 18, "rules": ["rapid_fire"]},
+        "plasma_burst_carbine": {"name": "Plasma Burst Carbine", "attacks": 1, "short": 9, "medium": 18, "ap": 5, "rules": ["overcharge", "assault", "rapid_fire"]},
         "magnetic_lancer": {"name": "Magnetic Lancer", "attacks": 1, "short": 9, "medium": 18, "ap": 5},
         "sonic_cannon": {"name": "Sonic Cannon", "attacks": 3, "short": 6, "medium": 12, "ap": 1, "rules": []},
         "eradication_beam": {"name": "Eradication Beam", "attacks": 1, "short": 18, "medium": 36, "ap": 4, "rules": [{"id": "blast", "x": 6}]},
@@ -479,11 +512,11 @@
         "eradication_ray": {"name": "Eradication Ray", "attacks": 1, "short": 9, "medium": 18, "ap": 3, "rules": [{"id": "blast", "x": 3}]},
         "combustion_blaster": {"name": "Combustion Blaster", "attacks": 3, "short": 12, "medium": 24, "ap": 3},
         "macro_pistol": {"name": "Macro Pistol", "attacks": 3, "short": 6, "medium": 12, "ap": 1, "rules": ["pistol"]},
-        "phosphor_pistol": {"name": "Phosphor Pistol", "attacks": 1, "short": 6, "medium": 12, "ap": 2, "rules": ["pistol", "phosphor"]},
+        "phosphor_pistol": {"name": "Phosphor Pistol", "attacks": 1, "short": 6, "medium": 12, "ap": 1, "rules": ["pistol", "phosphor"]},
         "radiation_pistol": {"name": "Radiation Pistol", "attacks": 1, "short": 6, "medium": 12, "rules": ["pistol"]},
         "wave_pistol": {"name": "Wave Pistol", "attacks": 1, "short": 6, "medium": 12, "ap": 4, "rules": ["pistol"]},
         "emp_pistol": {"name": "EMP Pistol", "attacks": 1, "short": 6, "medium": 12, "ap": 3, "rules": ["pistol", "emp"]},
-        "phosphor_carbine": {"name": "Phosphor Carbine", "attacks": 2, "short": 9, "medium": 18, "ap": 2, "rules": ["assault", "phosphor"]},
+        "phosphor_carbine": {"name": "Phosphor Carbine", "attacks": 2, "short": 9, "medium": 18, "ap": 1, "rules": ["assault", "phosphor"]},
         "phosphor_rifle": {"name": "Phosphor Rifle", "attacks": 1, "short": 12, "medium": 24, "ap": 2, "rules": ["phosphor"]},
         "phosphor_cannon": {"name": "Phosphor Cannon", "attacks": 2, "short": 18, "medium": 36, "ap": 4, "rules": ["phosphor"]},
         "twin_phosphor_cannon": {"name": "Twin Phosphor Cannon", "attacks": 4, "short": 18, "medium": 36, "ap": 4, "rules": ["phosphor"]},
