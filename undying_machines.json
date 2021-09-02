@@ -303,7 +303,7 @@
             "category": "command",
             "rules": ["leader"],
             "keywords": ["Infantry"],
-            "options": [{"replaceWeapon": [{"id": "war_scythe", "count": 3}], "withWeapon": [[{"id": "phase_sword", "count": 3}, "void_shield"]]}],
+            "options": [{"replaceWeapon": [{"id": "war_scythe", "count": 3}], "withWeapon": [[{"id": "phase_sword", "count": 3}, "shield"]]}],
             "models": [{"name": "Guardian Leader", "courage": 6, "movement": 5, "shoot": 6, "fight": 6, "defense": 9, "reflexes": 5, "weapons": [{"id": "war_scythe", "count": 3}], "min": 1, "max": 1}]
         },
         "guardian": {
@@ -314,7 +314,7 @@
             "category": "specialist",
             "rules": [],
             "keywords": ["Infantry"],
-            "options": [{"replaceWeapon": [{"id": "war_scythe", "count": 3}], "withWeapon": [[{"id": "phase_sword", "count": 3}, "void_shield"]]}],
+            "options": [{"replaceWeapon": [{"id": "war_scythe", "count": 3}], "withWeapon": [[{"id": "phase_sword", "count": 3}, "shield"]]}],
             "models": [{"name": "Guardian", "courage": 6, "movement": 5, "shoot": 6, "fight": 6, "defense": 9, "reflexes": 5, "weapons": [{"id": "war_scythe", "count": 3}], "min": 1, "max": 1}]
         },
         "praetorian": {
@@ -550,7 +550,7 @@
         "heavy_doom_ray": {"name": "Heavy Doom Ray", "attacks": 1, "short": 18, "medium": 36, "ap": 7, "rules": [{"id": "blast", "x": 3}]},
         "doom_ray": {"name": "Doom Ray", "attacks": 1, "short": 18, "medium": 36, "ap": 7},
         "plasma_spike": {"name": "Plasma Spike", "attacks": 1, "short": "Melee", "ap": 1},
-        "void_shield": {"name": "Void Shield", "attacks": 0, "short": "Melee", "rules": ["void_shield"]},
+        "shield": {"name": "Void Shield", "attacks": 0, "short": "Melee", "rules": ["shield"]},
         "metal_fangs": {"name": "Metal Fangs", "attacks": 1, "short": "Melee", "ap": 4},
         "warden_blade": {"name": "Warden Blade", "attacks": 1, "short": "Melee", "ap": 2},
         "phase_sword": {"name": "Phase Sword", "attacks": 1, "short": "Melee", "ap": 3},
@@ -668,7 +668,7 @@
         },
         "nanorobot_cloak": {"name": "Flight Cloak", "hidden": true, "description_short": "+3\" Move, Fly", "description": "This model gains +3\" of Movement and the Fly special rule.", "points": 5},
         "flight_cloak": {"name": "Flight Cloak", "hidden": true, "description_short": "+3\" Move, Fly", "description": "This model gains +3\" of Movement and the Fly special rule.", "points": 5},
-        "void_shield": {"name": "Void Shield", "description": "Whenever this model loses a wound, roll a D10. On a 3 or less that wound is not lost.", "points": 5},
+        "shield": {"name": "Void Shield", "description": "Whenever this model loses a wound, roll a D10. On a 3 or less that wound is not lost.", "points": 5},
         "vision_scope": {"name": "Vision Scope", "description": "This unit's weapons ignore cover at Short range.", "points": 5},
         "snare": {"name": "Snare", "description": "A model may make one free attack with this weapon against units that fall back from combat with it.", "points": 2}
     },
