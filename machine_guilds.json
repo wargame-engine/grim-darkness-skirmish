@@ -341,7 +341,7 @@
             "rules": ["agile", "leader"],
             "options": [{"replaceWeapon": [{"id": "sonic_razor", "count": 3}], "withWeapon": {"id": "sonic_blade", "count": 2}}],
             "models": [
-                {"name": "Stalker", "courage": 5, "movement": 6, "shoot": 5, "fight": 6, "defense": 7, "reflexes": 6, "weapons": [{"id": "sonic_razor", "count": 3}], "min": 1, "max": 1}
+                {"name": "Stalker Leader", "courage": 5, "movement": 6, "shoot": 5, "fight": 6, "defense": 7, "reflexes": 6, "weapons": [{"id": "sonic_razor", "count": 3}], "min": 1, "max": 1}
             ]
         },
         "stalker": {
@@ -360,7 +360,7 @@
             "category": "command",
             "rules": ["scout", "stealth", "leader"],
             "options": [{"replaceWeapon": ["blaster_smg", "taser_sword"], "withWeapon": [["burst_carbine", {"id": "energy_sword"}]]}],
-            "models": [{"name": "Infiltrator", "courage": 5, "movement": 6, "shoot": 6, "fight": 5, "defense": 7, "reflexes": 6, "weapons": ["blaster_smg", "taser_sword"], "min": 1, "max": 1}]
+            "models": [{"name": "Infiltrator Leader", "courage": 5, "movement": 6, "shoot": 6, "fight": 5, "defense": 7, "reflexes": 6, "weapons": ["blaster_smg", "taser_sword"], "min": 1, "max": 1}]
         },
         "infiltrator": {
             "name": "Infiltrator",
@@ -378,7 +378,7 @@
             "options": [{"replaceWeapon": "phosphor_pistol", "withWeapon": {"id": "blaster_smg"}}, {"addRule": {"id": "impact", "x": 1, "name": "Cluster Grenades"}, "modelLimit": "all"}],
             "models": [
                 {
-                    "name": "Sky Stalker",
+                    "name": "Sky Stalker Leader",
                     "courage": 5,
                     "movement": 8,
                     "shoot": 6,
