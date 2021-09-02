@@ -405,10 +405,8 @@
         "breacher": {
             "name": "Breacher",
             "description": "Metallic cyborgs with tracks specialized in breaching defenses and fighting armored targets.",
-            "min": 1,
-            "max": 1,
             "keywords": ["Infantry", "Robot"],
-            "category": "specialist",
+            "category": "heavy",
             "rules": [{"id": "wounds", "x": 2}],
             "options": [{"replaceWeapon": "emp_cannon", "withWeapon": ["contortion_cannon"]}, {"replaceWeapon": {"id": "claws", "count": 3}, "withWeapon": {"id": "iron_claws", "count": 3}}],
             "models": [
@@ -418,10 +416,8 @@
         "destroyer": {
             "name": "Destroyer",
             "description": "Metallic cyborgs with tracks specialized in fighting armored targets at long range.",
-            "min": 1,
-            "max": 1,
             "keywords": ["Infantry", "Robot"],
-            "category": "specialist",
+            "category": "heavy",
             "rules": [{"id": "wounds", "x": 2}],
             "options": [
                 {"addWeapon": ["phosphor_rifle", "flamethrower"]},
