@@ -550,7 +550,6 @@
         "heavy_doom_ray": {"name": "Heavy Doom Ray", "attacks": 1, "short": 18, "medium": 36, "ap": 7, "rules": [{"id": "blast", "x": 3}]},
         "doom_ray": {"name": "Doom Ray", "attacks": 1, "short": 18, "medium": 36, "ap": 7},
         "plasma_spike": {"name": "Plasma Spike", "attacks": 1, "short": "Melee", "ap": 1},
-        "shield": {"name": "Void Shield", "attacks": 0, "short": "Melee", "rules": ["shield"]},
         "metal_fangs": {"name": "Metal Fangs", "attacks": 1, "short": "Melee", "ap": 4},
         "warden_blade": {"name": "Warden Blade", "attacks": 1, "short": "Melee", "ap": 2},
         "phase_sword": {"name": "Phase Sword", "attacks": 1, "short": "Melee", "ap": 3},
