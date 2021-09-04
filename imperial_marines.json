@@ -2909,7 +2909,7 @@
             "subfactions": ["tactical_masters"],
             "name": "Re-organize",
             "phase": "activation",
-            "description": "Use at any point during an _Infantry_ unit's activation. That unit may split into two separate units or merge with another unit of the same data-sheet. This may not exceed the maximum unit size or go below the unit's minimum size.",
+            "description": "Use at the start of an _Infantry_ unit's activation. That unit may group activate with up to one other _Infantry_ unit.",
             "flavor": "With a wave of fire, enemy units cannot hope to stand a chance.",
             "cost": 1
         },
