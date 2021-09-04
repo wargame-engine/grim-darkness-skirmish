@@ -703,7 +703,14 @@
             "flavor": "These soldiers are particularly brave in the face of many horrors.",
             "cost": 1
         },
-        "field_repairs": {"name": "Field Repairs", "phase": "activation", "description": "Use when activating a _Vehicle_ unit. That unit may remove one critical damage.", "cost": 2},
+        "field_bandage": {
+            "subfactions": ["none", "goblin_army"],
+            "phase": "activation",
+            "name": "Field Bandage",
+            "flavor": "Imperial Defense troopers are trained to patch up injuries on the field to keep on fighting.",
+            "description": "Use before an _Infantry_ unit activates. It may ignore any critical injuries it has sustained for this activation.",
+            "cost": 1
+        },
         "firing_ports": {
             "name": "Firing Ports",
             "subfactions": ["mechanized_focus"],
@@ -773,6 +780,30 @@
             "phase": "activation",
             "flavor": "Not afraid of a fight, these soldiers will Counter Attack upon their enemies.",
             "description": "Use when an _Infantry_ unit is targeted by a Fight action. If that unit has not yet activated, it may perform a Counter Attack reaction without testing Initiative.",
+            "cost": 1
+        },
+        "last_stand": {
+            "subfactions": ["survival_focus"],
+            "name": "Last Stand",
+            "phase": "activation",
+            "flavor": "It takes incredible courage to fight to the last man.",
+            "description": "Use when an _Infantry_ unit is defeated. If it has not yet activated, it may make a free Shoot or Fight action before being removed as a casualty.",
+            "cost": 1
+        },
+        "hit_and_run": {
+            "subfactions": ["survival_focus"],
+            "name": "Hit and Run",
+            "phase": "activation",
+            "description": "Use after one of your _Infantry_ or _Biker_ units performs a Shoot or Fight action. You may immediately take a free move action.",
+            "flavor": "Hit and run tactics can sometimes be key to survival.",
+            "cost": 1
+        },
+        "at_all_costs": {
+            "subfactions": ["survival_focus"],
+            "name": "At All Costs",
+            "phase": "activation",
+            "description": "Use when an _Infantry_ unit takes a Break test. That test is automatically passed.",
+            "flavor": "These troopers are prepared to hold at all costs.",
             "cost": 1
         }
     },

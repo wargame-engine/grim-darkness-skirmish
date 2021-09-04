@@ -174,6 +174,7 @@
                 }
             },
             "subfactions": {
+                "survival_focus": {"name": "Survival", "id": "survival_focus", "color": "#6a0001", "description": "An Imperial Defense force with an innate ability to outlast their opponents."},
                 "combat_masters": {"name": "Close Combat", "id": "combat_masters", "color": "#00401f", "description": "An Imperial Defense force trained and drilled in deadly close combat fighting."},
                 "marksmanship_focus": {"name": "Marksmanship", "id": "marksmanship_focus", "description": "An Imperial Defense force with the best shooting skill in the galaxy."}
             }

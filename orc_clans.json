@@ -987,13 +987,19 @@
     },
     "strategies": {
         "here_we_go": {"name": "Here We Go!", "phase": "activation", "description": "Use when a unit declares a Charge action. That unit gets +3\" of Movement for that action.", "cost": 1},
-        "ramshackle": {
+        "goblin_shield": {
+            "name": "Goblin Shield",
+            "phase": "activation",
+            "description": "Use after an _Infantry_ unit has been targeted by a Shooting attack. For this attack, you can roll a D10 each time an attack made with a ranged weapon hits that unit if there is a friendly Goblin Herd unit within 6\" of it. On an 8 or less a hit is transferred to the Goblin Herd instead of the original target.",
+            "cost": 2
+        },
+        "never_surrender": {
             "subfactions": ["none", "goblin_army"],
             "phase": "activation",
-            "name": "Ramshackle",
-            "flavor": "Many parts of Orc vehicles end up being less important than they seem, falling off without causing damage.",
-            "description": "Use when a _Vehicle_ unit is targeted by an attack. For that attack, roll a D10 each time that unit is hit. On a 3 or less the hit is ignored.",
-            "cost": 2
+            "name": "Never Surrender",
+            "flavor": "Orcs have a will to survive and will fight on even when heavily injured.",
+            "description": "Use before an _Infantry_ unit activates. It may ignore any critical injuries it has sustained for this activation.",
+            "cost": 1
         },
         "shoot_them": {
             "subfactions": ["goblin_army"],
@@ -1018,12 +1024,6 @@
             "description": "Use when activating a unit. That unit gets +1 Courage.",
             "flavor": "These goblins are some of the most courageous ever seen, fighting to the bitter end.",
             "cost": 1
-        },
-        "goblin_shield": {
-            "name": "Goblin Shield",
-            "phase": "activation",
-            "description": "Use after an _Infantry_ unit has been targeted by a Shooting attack. For this attack, you can roll a D10 each time an attack made with a ranged weapon hits that unit if there is a friendly Goblin Herd unit within 6\" of it. On an 8 or less a hit is transferred to the Goblin Herd instead of the original target.",
-            "cost": 2
         },
         "tough_ones": {
             "subfactions": ["combat_focus"],
