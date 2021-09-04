@@ -103,6 +103,7 @@
                     "weapons": ["rifle", "frags", "ccw"],
                     "options": [
                         {"addRule": ["light_armor", "medium_armor"], "limit": 1},
+                        {"addRule": ["veteran"]},
                         {"replaceWeapon": "rifle", "withWeapon": ["shotgun", "defense_rifle"]},
                         {"replaceWeapon": ["rifle", "ccw"], "withWeapon": [["pistol", {"id": "ccw", "count": 2}]]},
                         {"replaceWeapon": "pistol", "withWeapon": ["assault_pistol", "burst_pistol"]}
@@ -129,6 +130,7 @@
                     "weapons": [{"id": "pistol", "count": 2}, "frags"],
                     "options": [
                         {"addRule": ["light_armor", "medium_armor"], "limit": 1},
+                        {"addRule": ["veteran"]},
                         {
                             "subfactions": ["finesse_focus"],
                             "replaceWeapon": {"id": "pistol", "count": 2},
@@ -157,6 +159,7 @@
                     "weapons": [{"id": "ccw", "count": 3}, "frags"],
                     "options": [
                         {"addRule": ["light_armor", "medium_armor"], "limit": 1},
+                        {"addRule": ["veteran"]},
                         {
                             "subfactions": ["finesse_focus"],
                             "replaceWeapon": {"id": "ccw", "count": 3},
@@ -186,6 +189,7 @@
                     "rules": ["medic"],
                     "options": [
                         {"addRule": ["light_armor", "medium_armor"], "limit": 1},
+                        {"addRule": ["veteran"]},
                         {"replaceWeapon": "pistol", "withWeapon": ["assault_pistol", "burst_pistol", "marine_pistol", "plasma_pistol", "flamethrower_pistol"]},
                         {
                             "subfactions": ["finesse_focus"],
@@ -217,6 +221,7 @@
                     "options": [
                         {"replaceRule": [{"id": "power", "x": 1}], "withRule": {"id": "power", "x": 2}},
                         {"addRule": ["light_armor", "medium_armor"], "limit": 1},
+                        {"addRule": ["veteran"]},
                         {"replaceWeapon": "pistol", "withWeapon": ["assault_pistol", "burst_pistol", "marine_pistol", "plasma_pistol", "flamethrower_pistol"]},
                         {
                             "subfactions": ["finesse_focus"],
@@ -246,6 +251,7 @@
                     "weapons": ["rifle", "frags", "ccw"],
                     "options": [
                         {"addRule": ["light_armor", "medium_armor"], "limit": 1},
+                        {"addRule": ["veteran"]},
                         {"subfactions": ["finesse_focus"], "replaceWeapon": "rifle", "withWeapon": ["combi_barb_rifle", "barb_rifle", "barb_pistol", "fusion_rifle", "plasma_rifle"]},
                         {"subfactions": ["none"], "replaceWeapon": "rifle", "withWeapon": ["shotgun", "defense_rifle"]},
                         {"replaceWeapon": ["rifle", "ccw"], "withWeapon": [["pistol", {"id": "ccw", "count": 2}]]},
@@ -278,6 +284,7 @@
                     "weapons": ["rifle", "frags", "ccw"],
                     "options": [
                         {"addRule": ["light_armor", "medium_armor"], "limit": 1},
+                        {"addRule": ["veteran"]},
                         {"replaceWeapon": "rifle", "withWeapon": ["light_machinegun"]}
                     ],
                     "min": 1,
@@ -294,6 +301,7 @@
             "description": "When this unit is activated, choose up to X friendly _Infantry_ units within 6\" to receive one of the following bonuses until the end of the round: \n * Re-roll failed Accuracy tests of 9+ \n * Re-roll failed Strength tests of 9+ \n * +3\" of Movement",
             "points": ["rule.x", {"multiply": 5}]
         },
+        "veteran": {"name": "Veteran", "hidden": true, "description": "This model gets +1 Courage.", "description_short": "Courage +1", "points": 2},
         "light_armor_leader": {"name": "Light Armor", "hidden": true, "description": "This model gets +1 Save.", "description_short": "Save +1", "points": 4},
         "medium_armor_leader": {"name": "Medium Armor", "hidden": true, "description": "This model gets +2 Save.", "description_short": "Save +2", "points": 8},
         "heavy_armor_leader": {"name": "Heavy Armor", "hidden": true, "description": "This model gets +3 Save.", "description_short": "Save +3", "points": 12},
