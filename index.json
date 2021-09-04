@@ -150,9 +150,9 @@
             "alliance": "imperial_alliance",
             "description": "The Machine Guilds are a unique group of several different but organized planets which create and maintain all sort sof wild war machines and contraptions. The Machine Guilds rely on technological augmentation and deadly weapons to destroy their enemies.",
             "subfactions": {
-                "stealth_masters": {
+                "stealth_focus": {
                     "name": "Stealth",
-                    "id": "stealth_masters",
+                    "id": "stealth_focus",
                     "color": "#231f20",
                     "description": "A Machine Guild focused on stealth uses surprise and infiltration to defeat its foes."
                 }

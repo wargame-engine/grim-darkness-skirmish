@@ -576,6 +576,30 @@
             "description": "Use before an _Infantry_ unit shoots. Hit rolls of 1 or 2 gain +1 AP.",
             "flavor": "While very harmful to the firer, sometimes it is beneficial to supercharge radiation weapons to deal with a foe more swiftly.",
             "cost": 1
+        },
+        {
+            "subfactions": ["stealth_focus"],
+            "name": "Concealment",
+            "phase": "activation",
+            "flavor": "Machine Guild troops are sometimes trained in stealth tactics allowing them to hide even in plain sight.",
+            "description": "Use this strategy when a unit is targeted by an enemy Shooting attack. That unit gets -1 Accuracy this attack.",
+            "cost": 2
+        },
+        {
+            "subfactions": ["stealth_focus"],
+            "name": "Infiltrate",
+            "phase": "pre_game",
+            "description": "Up to half of any force's units, one point for each may be placed in _Ambush Reserves_ instead of deployed on the field.",
+            "flavor": "With countless battles experienced, these soldiers are trained to react to any situation.",
+            "cost": "1/per"
+        },
+        {
+            "subfactions": ["stealth_focus"],
+            "name": "Decoy",
+            "phase": "activation",
+            "description": "Use after a _Leader_ unit has been targeted by a Shooting attack within 6\" of a friendly _Infantry_ unit. For this attack, you can roll a D10 each time an attack made with a ranged weapon hits that unit. On an 8 or less a hit is transferred to the _Infantry_ unit instead of the original target.",
+            "flavor": "Unsure of which is the real leader, enemies often get confused and shoot a different target.",
+            "cost": 2
         }
     ],
     "powers": {}
