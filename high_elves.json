@@ -149,8 +149,6 @@
         "avenger_leader": {
             "name": "Avenger Leader",
             "description": "A group of elite high elf warriors.",
-            "min": 1,
-            "max": 1,
             "category": "command",
             "keywords": ["Infantry"],
             "models": [
@@ -183,8 +181,6 @@
         "avenger": {
             "name": "Avenger",
             "description": "A group of elite high elf warriors.",
-            "min": 1,
-            "max": 1,
             "category": "core",
             "keywords": ["Infantry"],
             "models": [
@@ -392,8 +388,6 @@
         "banshee_leader": {
             "name": "Banshee Leader",
             "description": "A group of swift and brutal melee warriors.",
-            "min": 1,
-            "max": 1,
             "category": "command",
             "keywords": ["Infantry"],
             "models": [
@@ -419,8 +413,6 @@
         "banshee": {
             "name": "Banshee",
             "description": "A group of swift and brutal melee warriors.",
-            "min": 1,
-            "max": 1,
             "category": "specialist",
             "keywords": ["Infantry"],
             "models": [
@@ -540,8 +532,6 @@
         "glittering_spears": {
             "name": "Glittering Spear",
             "description": "A squad of highly trained bikers that are adept at both melee and short range combat.",
-            "min": 1,
-            "max": 1,
             "category": "strike",
             "keywords": ["Biker"],
             "rules": ["hover"],

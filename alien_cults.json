@@ -90,8 +90,6 @@
         "cult_war_leader": {
             "name": "Cult War Leader",
             "description": "A mutated being carrying a cult icon.",
-            "min": 1,
-            "max": 1,
             "category": "command",
             "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "wounds", "x": 3}, {"id": "cult_melee_tactics", "x": 1}],
             "models": [
@@ -138,8 +136,6 @@
         "psychic": {
             "name": "Psychic",
             "description": "An uplifted human with psychic powers.",
-            "min": 1,
-            "max": 1,
             "category": "command",
             "models": [
                 {
@@ -162,8 +158,6 @@
         "acolyte_icon_bearer": {
             "name": "Acolyte Icon Bearer",
             "description": "A mutated being carrying a cult icon.",
-            "min": 1,
-            "max": 1,
             "category": "command",
             "rules": [{"id": "leader_x", "x": "Infantry"}, "cult_icon", {"id": "wounds", "x": 2}],
             "models": [
@@ -184,8 +178,6 @@
         "cult_strategist": {
             "name": "Cult Strategist",
             "description": "A cult specialist who rallies the hordes of troops.",
-            "min": 1,
-            "max": 1,
             "category": "command",
             "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "cult_tactics", "x": 1}, {"id": "wounds", "x": 2}],
             "models": [
@@ -207,8 +199,6 @@
         "cult_proclamator": {
             "name": "Cult Proclamator",
             "description": "A cult specialist who rallies the hordes of troops.",
-            "min": 1,
-            "max": 1,
             "category": "command",
             "rules": [{"id": "leader", "x": "Infantry"}, "cult_speaker", {"id": "wounds", "x": 2}, "scrambler"],
             "models": [
@@ -229,8 +219,6 @@
         "pure_soul_snatcher": {
             "name": "Pure Soul Stealer",
             "description": "Barely recognizable mutants of other species",
-            "min": 1,
-            "max": 1,
             "category": "specialist",
             "rules": ["agile"],
             "models": [

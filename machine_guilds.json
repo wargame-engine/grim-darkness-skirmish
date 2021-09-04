@@ -7,8 +7,6 @@
         "machine_grand_master": {
             "name": "Machine Grand Master",
             "description": "The smartest and most intelligent machine guild leader.",
-            "min": 1,
-            "max": 1,
             "category": "command",
             "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "repair", "x": 3}],
             "keywords": ["Infantry"],
@@ -37,8 +35,6 @@
         "machine_master": {
             "name": "Machine Master",
             "description": "A master craftsman and leader of the machine guild.",
-            "min": 1,
-            "max": 1,
             "category": "command",
             "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "wounds", "x": 3}, {"id": "canticles", "x": 2}],
             "models": [
@@ -71,8 +67,6 @@
         "machine_manipulator": {
             "name": "Machine Manipulator",
             "description": "A machine tinkerer of the guild.",
-            "min": 1,
-            "max": 1,
             "category": "command",
             "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "wounds", "x": 2}, "manipulator"],
             "models": [
@@ -94,8 +88,6 @@
         "machine_apprentice": {
             "name": "Machine Apprentice",
             "description": "A master craftsman and leader of the machine guild.",
-            "min": 1,
-            "max": 1,
             "category": "command",
             "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "wounds", "x": 2}, {"id": "canticles", "x": 1}],
             "models": [
@@ -121,8 +113,6 @@
         "data_specialist": {
             "name": "Data Specialist",
             "description": "An expert in manipulating machine data.",
-            "min": 1,
-            "max": 1,
             "category": "command",
             "rules": [{"id": "leader_x", "x": "Infantry"}],
             "models": [
@@ -144,8 +134,6 @@
         "vanguard_commander": {
             "name": "Vanguard Commander",
             "description": "Commander of the foot-mobile machine guild protection forces.",
-            "min": 1,
-            "max": 1,
             "category": "command",
             "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "wounds", "x": 2}, {"id": "vanguard_tactics", "x": 1}],
             "models": [
@@ -172,8 +160,6 @@
         "vanguard_leader": {
             "name": "Vanguard Leader",
             "description": "Foot-mobile machine guild protection forces.",
-            "min": 1,
-            "max": 1,
             "category": "command",
             "models": [
                 {
@@ -200,16 +186,12 @@
         "vanguard": {
             "name": "Vanguard",
             "description": "Foot-mobile machine guild protection forces.",
-            "min": 1,
-            "max": 1,
             "category": "core",
             "models": [{"name": "Vanguard", "courage": 5, "movement": 6, "shoot": 6, "fight": 5, "defense": 6, "reflexes": 6, "weapons": ["radiation_carbine", "ccw"], "min": 1, "max": 1}]
         },
         "vanguard_specialist": {
             "name": "Vanguard Specialist",
             "description": "Foot-mobile machine guild protection forces.",
-            "min": 1,
-            "max": 1,
             "category": "specialist",
             "models": [
                 {
@@ -230,8 +212,6 @@
         "ranger_leader": {
             "name": "Ranger Leader",
             "description": "Foot-mobile machine guild long range recon and marksmen forces.",
-            "min": 1,
-            "max": 1,
             "category": "command",
             "rules": ["scout"],
             "models": [
@@ -259,8 +239,6 @@
         "rangers": {
             "name": "Ranger",
             "description": "Foot-mobile machine guild long range recon and marksmen forces.",
-            "min": 1,
-            "max": 1,
             "category": "core",
             "rules": ["scout"],
             "models": [{"name": "Ranger", "courage": 5, "movement": 6, "shoot": 6, "fight": 5, "defense": 6, "reflexes": 6, "weapons": ["ranger_rifle", "ccw"], "min": 1, "max": 1}]
@@ -268,8 +246,6 @@
         "ranger_specialist": {
             "name": "Ranger Specialist",
             "description": "Foot-mobile machine guild long range recon and marksmen forces.",
-            "min": 1,
-            "max": 1,
             "category": "specialist",
             "rules": ["scout"],
             "models": [
@@ -291,8 +267,6 @@
         "shock_priest_leader": {
             "name": "Shock Priest Leader",
             "description": "Crazed fighters coursing with electric energy.",
-            "min": 1,
-            "max": 1,
             "category": "command",
             "rules": [{"id": "resilient", "x": 3}, "leader"],
             "models": [
@@ -314,8 +288,6 @@
         "shock_priest": {
             "name": "Shock Priest",
             "description": "Crazed fighters coursing with electric energy.",
-            "min": 1,
-            "max": 1,
             "category": "core",
             "rules": [{"id": "resilient", "x": 3}],
             "models": [

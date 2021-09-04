@@ -91,8 +91,6 @@
         "celestial": {
             "name": "Celestial",
             "description": "A high ranking Federation member.",
-            "min": 1,
-            "max": 1,
             "category": "command",
             "models": [
                 {
@@ -114,8 +112,6 @@
         "warrior_commander": {
             "name": "Warrior Commander",
             "description": "A commander who is in charge of warrior teams.",
-            "min": 1,
-            "max": 1,
             "category": "command",
             "options": [{"addModel": ["spotter_drone", "gunner_drone", "shield_drone"], "modelLimit": 2}],
             "models": [
@@ -137,8 +133,6 @@
         "warrior_leader": {
             "name": "Warrior Leader",
             "description": "A squad of infantry who excel at ranged shooting.",
-            "min": 1,
-            "max": 1,
             "category": "command",
             "models": [
                 {
@@ -160,8 +154,6 @@
         "warrior": {
             "name": "Warrior",
             "description": "A squad of infantry who excel at ranged shooting.",
-            "min": 1,
-            "max": 1,
             "category": "core",
             "options": [{"addModel": "support_turret", "modelLimit": 1}, {"addModel": ["spotter_drone", "gunner_drone", "shield_drone", "guardian_drone"], "modelLimit": 1}],
             "models": [
@@ -266,8 +258,6 @@
         "veteran_assaulter_leader": {
             "name": "Veteran Assaulter Leader",
             "description": "A squad of infantry who excel at ranged shooting.",
-            "min": 1,
-            "max": 1,
             "category": "command",
             "models": [
                 {
@@ -289,8 +279,6 @@
         "veteran_assaulter": {
             "name": "Veteran Assaulter",
             "description": "A squad of infantry who excel at ranged shooting.",
-            "min": 1,
-            "max": 1,
             "category": "core",
             "options": [{"addModel": "support_turret", "modelLimit": 1}, {"addModel": ["spotter_drone", "gunner_drone", "shield_drone", "guardian_drone"], "modelLimit": 1}],
             "models": [
@@ -311,8 +299,6 @@
         "pathfinder_leader": {
             "name": "Pathfinder Leader",
             "description": "A squad of infantry who excel at forward scouting and spotting.",
-            "min": 1,
-            "max": 1,
             "category": "command",
             "rules": ["scout", "leader"],
             "models": [
@@ -334,8 +320,6 @@
         "pathfinder": {
             "name": "Pathfinder",
             "description": "A squad of infantry who excel at forward scouting and spotting.",
-            "min": 1,
-            "max": 1,
             "category": "specialist",
             "options": [{"addModel": ["recon_drone", "spotter_drone", "gunner_drone", "shield_drone", "inhibitor_drone", "accelerator_drone"], "modelLimit": 1}],
             "rules": ["scout"],
@@ -429,8 +413,6 @@
         "avian_hound": {
             "name": "Avian Hound",
             "description": "A squad of angry hounds trained by avian mercenaries.",
-            "min": 1,
-            "max": 1,
             "category": "strike",
             "keywords": ["Infantry", "Avian Mercenaries"],
             "models": [{"name": "Avian Hound", "movement": 8, "courage": 4, "shoot": 4, "fight": 6, "defense": 4, "reflexes": 5, "weapons": ["hound_fangs"], "min": 1, "max": 1}]
@@ -438,8 +420,6 @@
         "avian_beast_rider": {
             "name": "Avian Beast Rider",
             "description": "A squad of avian mercenaries riding on beasts.",
-            "min": 1,
-            "max": 1,
             "category": "strike",
             "keywords": ["Heavy Infantry", "Avian Mercenaries"],
             "rules": [{"id": "wounds", "x": 2}],
@@ -448,8 +428,6 @@
         "insect_warrior_leader": {
             "name": "Insect Warrior Leader",
             "description": "A squad of flying insects with rifles.",
-            "min": 1,
-            "max": 1,
             "category": "command",
             "models": [
                 {
@@ -470,8 +448,6 @@
         "insect_warrior": {
             "name": "Insect Warrior",
             "description": "A squad of flying insects with rifles.",
-            "min": 1,
-            "max": 1,
             "category": "strike",
             "models": [
                 {
@@ -493,8 +469,6 @@
         "stealth_suit_leader": {
             "name": "Stealth Suit Leader",
             "description": "A light battlesuit with camo cloaking technology.",
-            "min": 1,
-            "max": 1,
             "category": "command",
             "rules": ["stealth", "fly", "leader"],
             "models": [
@@ -516,8 +490,6 @@
         "stealth_suit": {
             "name": "Stealth Suit",
             "description": "A light battlesuit with camo cloaking technology.",
-            "min": 1,
-            "max": 1,
             "category": "specialist",
             "rules": ["stealth", "fly"],
             "options": [{"addModel": ["spotter_drone", "gunner_drone", "shield_drone"], "modelLimit": 1}],
@@ -540,8 +512,6 @@
         "stealth_suit_heavy": {
             "name": "Stealth Suit Heavy",
             "description": "A light battlesuit with camo cloaking technology.",
-            "min": 1,
-            "max": 1,
             "category": "heavy",
             "rules": ["stealth", "fly"],
             "models": [

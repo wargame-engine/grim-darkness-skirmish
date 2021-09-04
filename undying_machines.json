@@ -7,8 +7,6 @@
         "tri_scorpion_lord": {
             "name": "Tri-Scorpion Lord",
             "description": "A lord of the undying machines equipped with high tech tri-legs and a tough carapace.",
-            "min": 1,
-            "max": 1,
             "category": "command",
             "rules": [{"id": "leader_x", "x": "Infantry"}, "walker", {"id": "wounds", "x": 3}, {"id": "machine_tactics", "x": 1}],
             "keywords": ["Heavy Infantry"],
@@ -30,8 +28,6 @@
         "annihilator_overlord": {
             "name": "Annihilator Overlord",
             "description": "A high lord with an Annihilator body.",
-            "min": 1,
-            "max": 1,
             "category": "command",
             "rules": [{"id": "leader_x", "x": "Infantry"}, "hover", {"id": "wounds", "x": 3}, {"id": "machine_tactics", "x": 1}],
             "keywords": ["Heavy Infantry"],
@@ -65,8 +61,6 @@
         "overlord": {
             "name": "Overlord",
             "description": "A high lord of the undying machines.",
-            "min": 1,
-            "max": 1,
             "category": "command",
             "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "wounds", "x": 3}, {"id": "machine_tactics", "x": 2}],
             "keywords": ["Infantry"],
@@ -101,8 +95,6 @@
         "lord": {
             "name": "Lord",
             "description": "A lord of the undying machines.",
-            "min": 1,
-            "max": 1,
             "category": "command",
             "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "wounds", "x": 2}, {"id": "machine_tactics", "x": 1}],
             "keywords": ["Infantry"],
@@ -137,8 +129,6 @@
         "technomancer": {
             "name": "Technomancer",
             "description": "A techno-wizard of the undying machines.",
-            "min": 1,
-            "max": 1,
             "category": "command",
             "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "wounds", "x": 2}],
             "keywords": ["Infantry"],
@@ -161,8 +151,6 @@
         "warden": {
             "name": "Warden",
             "description": "A sworn guardian of the lords and one of the more elite machines.",
-            "min": 1,
-            "max": 1,
             "category": "command",
             "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "wounds", "x": 2}, "warden_tactics"],
             "keywords": ["Infantry"],
@@ -194,8 +182,6 @@
         "warrior_leader": {
             "name": "Warrior Leader",
             "description": "A group of machines, bent on reclaiming their land.",
-            "min": 1,
-            "max": 1,
             "category": "command",
             "keywords": ["Infantry"],
             "models": [
@@ -218,8 +204,6 @@
         "warrior": {
             "name": "Warrior",
             "description": "A group of machines, bent on reclaiming their land.",
-            "min": 1,
-            "max": 1,
             "category": "core",
             "keywords": ["Infantry"],
             "models": [
@@ -242,8 +226,6 @@
         "eternal_leader": {
             "name": "Eternal Leader",
             "description": "A group of veteran machines.",
-            "min": 1,
-            "max": 1,
             "category": "command",
             "keywords": ["Infantry"],
             "options": [{"replaceWeapon": "heavy_gauss_rifle", "withWeapon": ["tesla_rifle"]}],
@@ -266,8 +248,6 @@
         "eternal": {
             "name": "Eternal",
             "description": "A group of veteran machines.",
-            "min": 1,
-            "max": 1,
             "category": "core",
             "keywords": ["Infantry"],
             "options": [{"replaceWeapon": "heavy_gauss_rifle", "withWeapon": ["tesla_rifle"]}],
@@ -289,8 +269,6 @@
         "techno_thrall": {
             "name": "Techno-Thrall",
             "description": "Techno-thralls are minions created to serve a Technomancer and are quite deadly.",
-            "min": 1,
-            "max": 1,
             "category": "specialist",
             "keywords": ["Infantry"],
             "models": [{"name": "Techno-thrall", "courage": 5, "movement": 5, "shoot": 6, "fight": 6, "defense": 7, "reflexes": 6, "weapons": ["techno_scythes", "techno_beam"], "min": 1, "max": 1}]
@@ -298,8 +276,6 @@
         "guardian_leader": {
             "name": "Guardian Leader",
             "description": "A group of machine guardians bound to defend their home.",
-            "min": 1,
-            "max": 1,
             "category": "command",
             "rules": ["leader"],
             "keywords": ["Infantry"],
@@ -309,8 +285,6 @@
         "guardian": {
             "name": "Guardian",
             "description": "A group of machine guardians bound to defend their home.",
-            "min": 1,
-            "max": 1,
             "category": "specialist",
             "rules": [],
             "keywords": ["Infantry"],
@@ -320,8 +294,6 @@
         "praetorian": {
             "name": "Praetorian",
             "description": "A group of machine guardians with special anti-gravity generators.",
-            "min": 1,
-            "max": 1,
             "category": "strike",
             "rules": ["fly"],
             "keywords": ["Infantry"],
@@ -344,8 +316,6 @@
         "flayer": {
             "name": "Flayer",
             "description": "A group of machines obsessed with the flayed flesh of their enemies.",
-            "min": 1,
-            "max": 1,
             "category": "core",
             "rules": ["fear"],
             "keywords": ["Infantry"],
@@ -368,8 +338,6 @@
         "hunter": {
             "name": "Hunter",
             "description": "A group of veteran machines adept at hunting and killing valuable targets.",
-            "min": 1,
-            "max": 1,
             "category": "specialist",
             "rules": ["ambush"],
             "keywords": ["Infantry"],
@@ -378,8 +346,6 @@
         "gyro_bike": {
             "name": "Gyro-Bike",
             "description": "A group of machines mounted on gyroscopic anti-gravity bikes.",
-            "min": 1,
-            "max": 1,
             "category": "strike",
             "rules": ["hover"],
             "keywords": ["Biker"],
@@ -408,8 +374,6 @@
         "shifter": {
             "name": "Shifter",
             "description": "A group of snake-like robots that shift between dimensions.",
-            "min": 1,
-            "max": 1,
             "category": "specialist",
             "rules": ["teleport", {"id": "wounds", "x": 2}],
             "keywords": ["Heavy Infantry"],
@@ -419,8 +383,6 @@
         "tri_scorpion_annihilator": {
             "name": "Tri-Scorpion Annihilator",
             "description": "A melee-focused annihilator equipped with high tech tri-legs and a tough carapace.",
-            "min": 1,
-            "max": 1,
             "category": "specialist",
             "keywords": ["Heavy Infantry"],
             "models": [
@@ -456,8 +418,6 @@
         "tunneling_annihilator": {
             "name": "Tunneling Annihilator",
             "description": "A melee-focused annihilator which tunnels under the ground.",
-            "min": 1,
-            "max": 1,
             "category": "specialist",
             "keywords": ["Heavy Infantry"],
             "rules": ["ambush", "coil_body"],
@@ -494,8 +454,6 @@
         "annihilator": {
             "name": "Annihilator",
             "description": "A ranged-focused annihilator which hovers across all terrain.",
-            "min": 1,
-            "max": 1,
             "category": "heavy",
             "rules": ["hover", {"id": "wounds", "x": 2}],
             "keywords": ["Heavy Infantry"],
@@ -505,8 +463,6 @@
         "heavy_annihilator": {
             "name": "Heavy Annihilator",
             "description": "A ranged-focused heavy annihilator which hovers across all terrain.",
-            "min": 1,
-            "max": 1,
             "category": "heavy",
             "rules": ["hover", {"id": "wounds", "x": 2}],
             "keywords": ["Heavy Infantry"],
@@ -516,8 +472,6 @@
         "spider_worker": {
             "name": "Spider Worker",
             "description": "A spider-like automation tasked with maintaing other machines.",
-            "min": 1,
-            "max": 1,
             "category": "specialist",
             "rules": ["hover", {"id": "wounds", "x": 3}],
             "keywords": ["Vehicle"],

@@ -1796,8 +1796,6 @@
         "psychic_grand_master": {
             "name": "Psychic Grand Master",
             "description": "A Master of psychic powers and martial combat.",
-            "min": 1,
-            "max": 1,
             "category": "command",
             "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "ward", "x": 1}, {"id": "wounds", "x": 3}, {"id": "melee_tactics", "x": 2}],
             "subfactions": ["psychic_marines"],
@@ -1833,8 +1831,6 @@
         "psychic_brother": {
             "name": "Psychic Brother",
             "description": "A Psychic marine leader.",
-            "min": 1,
-            "max": 1,
             "category": "command",
             "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "ward", "x": 1}, {"id": "wounds", "x": 3}, {"id": "melee_tactics", "x": 1}],
             "subfactions": ["psychic_marines"],

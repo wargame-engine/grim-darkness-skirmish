@@ -7,8 +7,6 @@
         "troupe_master": {
             "name": "Troupe Master",
             "description": "A master of the Elven Keepers. Highly swift and deadly on foot.",
-            "min": 1,
-            "max": 1,
             "category": "command",
             "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "keeper_tactics", "x": 1}, {"id": "wounds", "x": 3}],
             "keywords": ["Infantry"],
@@ -39,8 +37,6 @@
         "solitaire": {
             "name": "Solitaire",
             "description": "A solo wandering player who has perfected the dance of war and occasionally joins the main troupe to deadly effect.",
-            "min": 1,
-            "max": 1,
             "category": "command",
             "rules": [{"id": "support_x", "x": "Infantry"}, {"id": "wounds", "x": 3}],
             "keywords": ["Infantry"],
@@ -64,8 +60,6 @@
         "elven_seer": {
             "name": "Elven Seer",
             "description": "An elven keeper gifted with the power of minor foresight and energy manipulation.",
-            "min": 1,
-            "max": 1,
             "category": "command",
             "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "power", "x": 1}, {"id": "wounds", "x": 3}],
             "keywords": ["Infantry"],
@@ -93,8 +87,6 @@
         "jester_assassin": {
             "name": "Jester Assassin",
             "description": "A highly trained troupe member that specializes in accurate long-range weaponry.",
-            "min": 1,
-            "max": 1,
             "category": "specialist",
             "rules": [{"id": "wounds", "x": 2}, "evasive"],
             "keywords": ["Infantry"],
@@ -117,8 +109,6 @@
         "troupe_leader": {
             "name": "Jester Leader",
             "description": "Elven jesters on foot.",
-            "min": 1,
-            "max": 1,
             "category": "command",
             "rules": [],
             "keywords": ["Infantry"],
@@ -155,8 +145,6 @@
         "troupe": {
             "name": "Jester",
             "description": "Elven jesters on foot.",
-            "min": 1,
-            "max": 1,
             "category": "core",
             "rules": [],
             "keywords": ["Infantry"],
@@ -192,8 +180,6 @@
         "mime_leader": {
             "name": "Mime Leader",
             "description": "Newly indicted troupe members doing their best to prove themselves on and off of the battlefield.",
-            "min": 1,
-            "max": 1,
             "category": "command",
             "rules": [],
             "keywords": ["Infantry"],
@@ -228,8 +214,6 @@
         "mime": {
             "name": "Mime",
             "description": "Newly indicted troupe members doing their best to prove themselves on and off of the battlefield.",
-            "min": 1,
-            "max": 1,
             "category": "core",
             "rules": [],
             "keywords": ["Infantry"],
@@ -264,8 +248,6 @@
         "jetbikes": {
             "name": "Jetbike",
             "description": "Fast-moving hover bikes outfitted with deadly weapons to choreograph the dance of war.",
-            "min": 1,
-            "max": 1,
             "category": "strike",
             "rules": ["hover", {"id": "wounds", "x": 2}],
             "keywords": ["Biker"],

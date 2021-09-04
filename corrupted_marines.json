@@ -230,8 +230,6 @@
             "name": "Cultist",
             "description": "A lowlife who has sold their souls to the dark gods.",
             "subfactions": ["none", "change_corrupteds", "pestilence_focus"],
-            "min": 1,
-            "max": 1,
             "category": "core",
             "models": [
                 {
@@ -274,8 +272,6 @@
             "name": "Plague Walker",
             "description": "An unfortunate soul who has been mutated into a walking undead.",
             "subfactions": ["pestilence_focus"],
-            "min": 1,
-            "max": 1,
             "category": "core",
             "models": [{"name": "Plague Walker", "movement": 5, "courage": 5, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 5, "weapons": [{"id": "ccw", "count": 2}], "min": 1, "max": 1}]
         },
@@ -1113,8 +1109,6 @@
             "description": "Nothing more than dust bound to a suit of armor, this change brother fights side by side with their brothers.",
             "rules": ["ambush"],
             "subfactions": ["change_corrupteds"],
-            "min": 1,
-            "max": 1,
             "category": "specialist",
             "models": [
                 {
@@ -1202,8 +1196,6 @@
             "description": "An exalted birdmen riding a psychic disk.",
             "rules": ["hover", {"id": "impact", "x": 1}, {"id": "resilient", "x": 3}],
             "subfactions": ["change_corrupteds"],
-            "min": 1,
-            "max": 1,
             "category": "strike",
             "models": [
                 {
