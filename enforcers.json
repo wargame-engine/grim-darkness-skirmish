@@ -162,7 +162,7 @@
             ]
         },
         "enforcer_medic": {
-            "name": "Enforcer Medc",
+            "name": "Enforcer Medic",
             "description": "A paramedic of the Planetary Enforcement Division, making sure his allies stay alive.",
             "category": "specialist",
             "rules": ["fly", "medic"],
