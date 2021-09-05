@@ -52,7 +52,7 @@
             "name": "Corrupted Marines",
             "id": "corrupted_marines",
             "url": "corrupted_marines.json",
-            "color": "#231f20",
+            "color": "#343a40",
             "alliance": "corrupteds",
             "description": "The corrupted marines are a band of marines that betrayed the Human Empire and now cooperate with demons and other heretics to pursue their own desires. They have a mix of deadly beasts, dangerous war machines and tough marine infantry.",
             "subfactions": {
@@ -130,7 +130,7 @@
             "name": "Battle Sisters",
             "id": "battle_sisters",
             "url": "battle_sisters.json",
-            "color": "#010203",
+            "color": "#383838",
             "secondary_color": "#9a1115",
             "alliance": "imperial_alliance",
             "description": "The Battle Sisters are a sect of the Human Empire which have a uniquely faithful and religious background. The Battle Sisters rely on prayer and faith in their holy symbols along with some good old fashioned holy fire to defeat their enemies.",
