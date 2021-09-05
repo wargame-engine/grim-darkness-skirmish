@@ -150,12 +150,7 @@
             "alliance": "imperial_alliance",
             "description": "The Machine Guilds are a unique group of several different but organized planets which create and maintain all sort sof wild war machines and contraptions. The Machine Guilds rely on technological augmentation and deadly weapons to destroy their enemies.",
             "subfactions": {
-                "stealth_focus": {
-                    "name": "Stealth",
-                    "id": "stealth_focus",
-                    "color": "#231f20",
-                    "description": "A Machine Guild focused on stealth uses surprise and infiltration to defeat its foes."
-                }
+                "stealth_focus": {"name": "Stealth", "id": "stealth_focus", "color": "#231f20", "description": "A Machine Guild focused on stealth uses surprise and infiltration to defeat its foes."}
             }
         },
         "imperial_defense_force": {
@@ -293,6 +288,16 @@
                 "raygun_focus": {"name": "Rifle", "id": "raygun_focus", "description": "An Ascended Astro-Raptors force trained especially well with their ranged weapons."},
                 "rayshield_focus": {"name": "Defense", "id": "rayshield_focus", "description": "A force of Astro-Raptors equipped with highly advanced shielding technology."}
             }
+        },
+        "enforcers": {
+            "version": "1.0",
+            "name": "Planetary Enforcement Division",
+            "id": "enforcers",
+            "url": "enforcers.json",
+            "color": "#262b34",
+            "secondary_color": "#455a64",
+            "alliance": "imperial_alliance",
+            "description": ""
         }
     },
     "unfinished_factions": {

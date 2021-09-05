@@ -1,0 +1,661 @@
+{
+  "id" : "enforcers",
+  "name" : "Planetary Enforcement Division",
+  "author" : "Xekon#8266",
+  "color" : "#262b34",
+  "secondary_color" : "#455a64",
+  "units" : {
+    "enforcer_captain" : {
+      "name" : "Enforcer Captain",
+      "description" : "A captain of the Planetary Enforcement Division, trained in hunting and taking down dangerous criminals.",
+      "category" : "command",
+      "rules" : [
+        {
+          "id" : "leader_x",
+          "x" : "Infantry"
+        },
+        "fly",
+        {
+          "id" : "tough",
+          "x" : 1
+        }
+      ],
+      "models" : [
+        {
+          "name" : "Enforcer Captain",
+          "courage" : 7,
+          "shoot" : 6,
+          "fight" : 5,
+          "defense" : 6,
+          "reflexes" : 6,
+          "movement" : 6,
+          "weapons" : [
+            "pistol",
+            "at_grenade",
+            {
+              "id" : "ccw",
+              "count" : 3
+            }
+          ],
+          "options" : [
+            {
+              "replaceWeapon" : [
+                "pistol"
+              ],
+              "withWeapon" : [
+                "defense_rifle",
+                "shotgun"
+              ]
+            },
+            {
+              "replaceWeapon" : [
+                {
+                  "id" : "ccw",
+                  "count" : 3
+                }
+              ],
+              "withWeapon" : [
+                {
+                  "id" : "heavy_ccw",
+                  "count" : 3
+                }
+              ]
+            }
+          ],
+          "min" : 1,
+          "max" : 1
+        }
+      ]
+    },
+    "enforcer" : {
+      "name" : "Enforcer",
+      "description" : "A trooper of the Planetary Enforcement Division, trained in hunting and taking down dangerous criminals.",
+      "category" : "core",
+      "rules" : [
+        "fly"
+      ],
+      "models" : [
+        {
+          "name" : "Enforcer",
+          "courage" : 6,
+          "shoot" : 5,
+          "fight" : 5,
+          "defense" : 6,
+          "reflexes" : 5,
+          "movement" : 6,
+          "weapons" : [
+            "defense_rifle",
+            "ccw"
+          ],
+          "options" : [
+            {
+              "replaceWeapon" : [
+                "defense_rifle"
+              ],
+              "withWeapon" : [
+                "shotgun"
+              ]
+            },
+            {
+              "replaceWeapon" : [
+                "ccw"
+              ],
+              "withWeapon" : [
+                "heavy_ccw"
+              ]
+            },
+            {
+              "addWeapon" : [
+                "pistol"
+              ]
+            }
+          ],
+          "min" : 1,
+          "max" : 1
+        }
+      ]
+    },
+    "scout_captain" : {
+      "name" : "Scout Captain",
+      "description" : "A captain of the Planetary Enforcement Division, deployed behind enemy lines and moving unseen.",
+      "category" : "command",
+      "rules" : [
+        {
+          "id" : "leader_x",
+          "x" : "Infantry"
+        },
+        "scout"
+      ],
+      "models" : [
+        {
+          "name" : "Scout Captain",
+          "courage" : 7,
+          "shoot" : 6,
+          "fight" : 5,
+          "defense" : 5,
+          "reflexes" : 6,
+          "movement" : 6,
+          "weapons" : [
+            "pistol",
+            "at_grenade",
+            {
+              "id" : "ccw",
+              "count" : 3
+            }
+          ],
+          "options" : [
+            {
+              "replaceWeapon" : [
+                {
+                  "id" : "ccw",
+                  "count" : 3
+                }
+              ],
+              "withWeapon" : [
+                {
+                  "id" : "heavy_ccw",
+                  "count" : 3
+                }
+              ]
+            }
+          ],
+          "min" : 1,
+          "max" : 1
+        }
+      ]
+    },
+    "scout" : {
+      "name" : "Scout",
+      "description" : "A scout of the Planetary Enforcement Division, deployed behind enemy lines and moving unseen.",
+      "category" : "core",
+      "rules" : [
+        "scout"
+      ],
+      "models" : [
+        {
+          "name" : "Scout",
+          "courage" : 6,
+          "shoot" : 5,
+          "fight" : 5,
+          "defense" : 5,
+          "reflexes" : 5,
+          "movement" : 6,
+          "weapons" : [
+            "spotter_rifle",
+            "ccw"
+          ],
+          "options" : [
+            {
+              "replaceWeapon" : [
+                "spotter_rifle"
+              ],
+              "withWeapon" : [
+                "shotgun"
+              ]
+            },
+            {
+              "addWeapon" : [
+                "pistol"
+              ]
+            }
+          ],
+          "min" : 1,
+          "max" : 1
+        }
+      ]
+    },
+    "enforcer_specialist" : {
+      "name" : "Enforcer Specialist",
+      "description" : "A trooper of the Planetary Enforcement Division, trained in wielding various weapons to fight in specific roles.",
+      "category" : "specialist",
+      "rules" : [
+        "fly"
+      ],
+      "models" : [
+        {
+          "name" : "Enforcer Specialist",
+          "courage" : 6,
+          "shoot" : 5,
+          "fight" : 5,
+          "defense" : 6,
+          "reflexes" : 5,
+          "movement" : 6,
+          "weapons" : [
+            "defense_rifle",
+            "ccw"
+          ],
+          "options" : [
+            {
+              "replaceWeapon" : [
+                "defense_rifle"
+              ],
+              "withWeapon" : [
+                "shotgun",
+                "light_machinegun",
+                "flamethrower",
+                "assault_missile_launcher",
+                "sniper_rifle",
+                "fusion_rifle",
+                "plasma_rifle"
+              ]
+            },
+            {
+              "addWeapon" : [
+                "pistol"
+              ]
+            }
+          ],
+          "min" : 1,
+          "max" : 1
+        }
+      ]
+    },
+    "scout_specialist" : {
+      "name" : "Scout Specialist",
+      "description" : "A scout of the Planetary Enforcement Division, striking behind enemy lines.",
+      "category" : "specialist",
+      "rules" : [
+        "scout"
+      ],
+      "models" : [
+        {
+          "name" : "Scout Specialist",
+          "courage" : 6,
+          "shoot" : 5,
+          "fight" : 5,
+          "defense" : 5,
+          "reflexes" : 5,
+          "movement" : 6,
+          "weapons" : [
+            "spotter_rifle",
+            "ccw"
+          ],
+          "options" : [
+            {
+              "replaceWeapon" : [
+                "spotter_rifle"
+              ],
+              "withWeapon" : [
+                "shotgun",
+                "sniper_rifle"
+              ]
+            },
+            {
+              "addWeapon" : [
+                "pistol"
+              ]
+            }
+          ],
+          "min" : 1,
+          "max" : 1
+        }
+      ]
+    },
+    "enforcer_destroyer" : {
+      "name" : "Enforcer Destroyer",
+      "description" : "A heavily armored trooper of the Planetary Enforcement Division, shrugging off even tank shells.",
+      "category" : "specialist",
+      "rules" : [
+        "fly",
+        "ambush"
+      ],
+      "models" : [
+        {
+          "name" : "Enforcer Destroyer",
+          "courage" : 6,
+          "shoot" : 6,
+          "fight" : 5,
+          "defense" : 7,
+          "reflexes" : 5,
+          "movement" : 6,
+          "weapons" : [
+            "twin_defense_rifle",
+            {
+              "id" : "ccw",
+              "count" : 3
+            }
+          ],
+          "options" : [
+            {
+              "replaceWeapon" : [
+                "twin_defense_rifle"
+              ],
+              "withWeapon" : [
+                "flamethrower",
+                "light_machinegun"
+              ]
+            },
+            {
+              "replaceWeapon" : [
+                {
+                  "id" : "ccw",
+                  "count" : 3
+                }
+              ],
+              "withWeapon" : [
+                {
+                  "id" : "heavy_ccw",
+                  "count" : 3
+                }
+              ]
+            }
+          ],
+          "min" : 1,
+          "max" : 1
+        }
+      ]
+    },
+    "enforcer_medic" : {
+      "name" : "Enforcer Medc",
+      "description" : "A paramedic of the Planetary Enforcement Division, making sure his allies stay alive.",
+      "category" : "specialist",
+      "rules" : [
+        "fly",
+        "medic"
+      ],
+      "models" : [
+        {
+          "name" : "Enforcer Medic",
+          "courage" : 6,
+          "shoot" : 5,
+          "fight" : 5,
+          "defense" : 6,
+          "reflexes" : 5,
+          "movement" : 6,
+          "weapons" : [
+            "pistol",
+            "ccw"
+          ],
+          "options" : [
+            {
+              "replaceWeapon" : [
+                "pistol"
+              ],
+              "withWeapon" : [
+                "defense_rifle",
+                "shotgun"
+              ]
+            },
+            {
+              "replaceWeapon" : [
+                "ccw"
+              ],
+              "withWeapon" : [
+                "heavy_ccw"
+              ]
+            }
+          ],
+          "min" : 1,
+          "max" : 1
+        }
+      ]
+    },
+    "enforcer_engineer" : {
+      "name" : "Enforcer Engineer",
+      "description" : "A combat engineer of the Planetary Enforcement Division, able to repair and hack robots and automatic defense systems.",
+      "category" : "specialist",
+      "rules" : [
+        "fly",
+        "engineer"
+      ],
+      "models" : [
+        {
+          "name" : "Enforcer Engineer",
+          "courage" : 6,
+          "shoot" : 5,
+          "fight" : 5,
+          "defense" : 6,
+          "reflexes" : 5,
+          "movement" : 6,
+          "weapons" : [
+            "defense_rifle",
+            "ccw"
+          ],
+          "options" : [
+            {
+              "replaceWeapon" : [
+                "defense_rifle"
+              ],
+              "withWeapon" : [
+                "shotgun"
+              ]
+            },
+            {
+              "addWeapon" : [
+                "pistol"
+              ]
+            }
+          ],
+          "min" : 1,
+          "max" : 1
+        }
+      ]
+    },
+    "robot_hound" : {
+      "name" : "Robot Hound",
+      "description" : "A mechanical beast, hunting down anyone and anything.",
+      "category" : "core",
+      "models" : [
+        {
+          "name" : "Robot Hound",
+          "movement" : 7,
+          "courage" : 4,
+          "shoot" : 5,
+          "fight" : 5,
+          "defense" : 4,
+          "reflexes" : 5,
+          "weapons" : [
+            {
+              "id" : "heavy_ccw",
+              "count" : 2
+            }
+          ],
+          "min" : 1,
+          "max" : 1,
+          "rules" : [
+            "scout"
+          ]
+        }
+      ]
+    },
+    "gun_hound" : {
+      "name" : "Gun Hound",
+      "description" : "A mechanical beast, armed with heavy weaponry.",
+      "category" : "heavy",
+      "models" : [
+        {
+          "name" : "Gun Hound",
+          "movement" : 7,
+          "courage" : 4,
+          "shoot" : 5,
+          "fight" : 4,
+          "defense" : 5,
+          "reflexes" : 5,
+          "weapons" : [
+            {
+              "id" : "heavy_ccw",
+              "count" : 2
+            },
+            "light_machinegun"
+          ],
+          "min" : 1,
+          "max" : 1,
+          "options" : [
+            {
+              "replaceWeapon" : [
+                "light_machinegun"
+              ],
+              "withWeapon" : [
+                "heavy_machinegun",
+                "rocket_pod",
+                "twin_flamethrower"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "enforcer_jet_bike" : {
+      "name" : "Enforcer on Jetbike",
+      "description" : "A trooper of the Planetary Enforcement Division, rushing into the fray on a super fast jetbike.",
+      "category" : "strike",
+      "keywords" : [
+        "Biker"
+      ],
+      "models" : [
+        {
+          "name" : "Enforcer on Jetbike",
+          "movement" : 8,
+          "courage" : 6,
+          "shoot" : 5,
+          "fight" : 5,
+          "defense" : 6,
+          "reflexes" : 5,
+          "weapons" : [
+            "ccw",
+            {
+              "id" : "twin_defense_rifle",
+              "mount" : [
+                "Front"
+              ]
+            }
+          ],
+          "rules" : [
+            {
+              "id" : "impact",
+              "x" : 1
+            },
+            "hover"
+          ],
+          "min" : 1,
+          "max" : 1
+        }
+      ]
+    },
+    "destroyer_captain" : {
+      "name" : "Destroyer Captain",
+      "description" : "A heavily armored captain of the Planetary Enforcement Division, shrugging off even tank shells.",
+      "category" : "specialist",
+      "rules" : [
+        "fly",
+        "ambush"
+      ],
+      "models" : [
+        {
+          "name" : "Destroyer Captain",
+          "courage" : 7,
+          "shoot" : 6,
+          "fight" : 5,
+          "defense" : 7,
+          "reflexes" : 5,
+          "movement" : 6,
+          "weapons" : [
+            "twin_defense_rifle",
+            {
+              "id" : "heavy_ccw",
+              "count" : 3
+            }
+          ],
+          "options" : [
+            {
+              "replaceWeapon" : [
+                {
+                  "id" : "heavy_ccw",
+                  "count" : 3
+                }
+              ],
+              "withWeapon" : [
+                {
+                  "id" : "ccw",
+                  "count" : 3
+                }
+              ]
+            }
+          ],
+          "min" : 1,
+          "max" : 1
+        }
+      ]
+    },
+    "enforcer_mechsuit" : {
+      "name" : "Enforcer Mechsuit",
+      "description" : "A combat walker of the Planetary Enforcement Division, designed to take down heavily defended fortifications.",
+      "category" : "heavy",
+      "rules" : [
+        "scout",
+        "walker"
+      ],
+      "models" : [
+        {
+          "name" : "Enforcer Mechsuit",
+          "courage" : 6,
+          "shoot" : 5,
+          "fight" : 5,
+          "defense" : 9,
+          "reflexes" : 5,
+          "movement" : 6,
+          "weapons" : [
+            "heavy_flamethrower",
+            "walker_chainsaw"
+          ],
+          "options" : [
+            {
+              "replaceWeapon" : [
+                "heavy_flamethrower",
+                "walker_chainsaw"
+              ],
+              "withWeapon" : [
+                "laser_machinegun"
+              ]
+            },
+            {
+              "replaceWeapon" : [
+                "heavy_flamethrower"
+              ],
+              "withWeapon" : [
+                "walker_chainsaw"
+              ]
+            },
+            {
+              "replaceWeapon" : [
+                "walker_chainsaw"
+              ],
+              "withWeapon" : [
+                "heavy_flamethrower"
+              ]
+            }
+          ],
+          "min" : 1,
+          "max" : 1
+        }
+      ]
+    }
+  },
+  "weapons" : {
+    "spotter_rifle" : {
+      "name" : "Spotter Rifle",
+      "attacks" : 1,
+      "rules" : [
+        "spotting_laser"
+      ],
+      "short" : 12,
+      "medium" : 24
+    },
+    "twin_defense_rifle" : {
+      "name" : "Twin Defense Rifle",
+      "attacks" : 2,
+      "short" : 12,
+      "medium" : 24,
+      "rules" : [
+        "rapid_fire"
+      ]
+    }
+  },
+  "rules" : {
+    "spotting_laser" : {
+      "name" : "Spotting Laser",
+      "description" : "Any time during this model's activation, pick an enemy unit within 36\" to gain 1 spotting marker. When a friendly unit shoots at that target they may spend spotting markers to gain the following for that attack: \n * One Marker: Re-roll Accuracy rolls of 9+ \n * Two Markers: +1 Accuracy \n\n\n These effects are cumulative and may be activated multiple times. At the end of the round, remove all spotting markers.",
+      "points" : 5
+    }
+  }
+}
