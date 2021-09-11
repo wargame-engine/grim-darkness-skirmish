@@ -311,6 +311,29 @@
             ]
         }
     },
+    "strategies": {
+        "pacify": {
+            "name": "Pacify",
+            "phase": "activation",
+            "flavor": "Pacification is the first step to stopping a threat.",
+            "description": "Use when an _Infantry_ unit fights. That attack assigns 1 additional Shock",
+            "cost": 1
+        },
+        "move_move": {
+            "name": "Move Move!",
+            "phase": "activation",
+            "flavor": "Getting somewhere quick is important for quickly responding.",
+            "description": "Use this strategy when an _Infantry_ unit makes a Move action. That unit gains +3\" of Movement for that action.",
+            "cost": 1
+        },
+        "pride": {
+            "name": "Pride",
+            "phase": "activation",
+            "flavor": "It takes incredible courage to fight to the last man.",
+            "description": "Use when an _Infantry_ unit takes a Break test. That test is automatically passed.",
+            "cost": 1
+        }
+    },
     "weapons": {
         "spotter_rifle": {"name": "Spotter Rifle", "attacks": 1, "rules": ["spotting_laser"], "short": 12, "medium": 24},
         "twin_defense_rifle": {"name": "Twin Defense Rifle", "attacks": 2, "short": 12, "medium": 24, "rules": ["rapid_fire"]}
