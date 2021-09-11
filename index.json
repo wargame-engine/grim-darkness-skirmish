@@ -291,13 +291,13 @@
         },
         "enforcers": {
             "version": "1.0",
-            "name": "Planetary Enforcement Division",
+            "name": "Planetary Enforcers",
             "id": "enforcers",
             "url": "enforcers.json",
             "color": "#262b34",
             "secondary_color": "#455a64",
             "alliance": "imperial_alliance",
-            "description": ""
+            "description": "The Planetary Enforcers is responsible for maintaining peace on worlds part of the Imperial Alliance. While they tend to avoid combat when possible, it is sometimes necessary for them to step in. They are equipped with many crowd-control measures to ensure they can keep order in the worst of circumstances."
         }
     },
     "unfinished_factions": {
@@ -309,7 +309,7 @@
             "secondary_color": "#231f20",
             "alliance": "corrupteds",
             "version": "0.1",
-            "description": "The corrupted defense force are a band of deserters and other folks out for their own interests. They have gathered much of what they can from the Imperial Defense Force and now fight with the corrupteds against those that stay imperial."
+            "description": "The Corrupted Defense Force are a band of deserters and other folks out for their own interests. They have gathered much of what they can from the Imperial Defense Force and now fight with the corrupteds against those that stay imperial."
         }
     },
     "alliances": {
