@@ -74,6 +74,115 @@
                 }
             ]
         },
+        "psychic":{
+            "name": "Psychic",
+            "description": "A gifted high elf psychic.",
+            "category": "command",
+            "keywords": ["Infantry"],
+            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "rifle_tactics", "x": 2}, {"id": "power", "x": 2}, {"id": "wounds", "x": 3}],
+            "models": [
+                {
+                    "name": "Psychic",
+                    "courage": 7,
+                    "movement": 7,
+                    "shoot": 7,
+                    "fight": 7,
+                    "defense": 6,
+                    "reflexes": 6,
+                    "weapons": ["shard_pistol", {"id":"hexblade", "count":2}],
+                    "options": [{"replaceWeapon": {"id":"hexblade", "count":2}, "withWeapon": [["laser_lance_shoot", {"id": "laser_lance_melee", "count": 2}]]}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "psychic_on_bike":{
+            "name": "Psychic on Bike",
+            "description": "A gifted high elf psychic riding a sleek motorbike.",
+            "category": "command",
+            "keywords": ["Biker"],
+            "rules": [{"id": "leader_x", "x": "Biker"}, {"id": "rifle_tactics", "x": 2}, {"id": "power", "x": 2}, {"id": "wounds", "x": 3}, "hover"],
+            "models": [
+                {
+                    "name": "Psychic",
+                    "courage": 7,
+                    "movement": 8,
+                    "shoot": 7,
+                    "fight": 7,
+                    "defense": 6,
+                    "reflexes": 6,
+                    "weapons": ["shard_pistol", {"id":"hexblade", "count":2}, "twin_shard_rifle"],
+                    "options": [{"replaceWeapon": {"id":"hexblade", "count":2}, "withWeapon": [["laser_lance_shoot", {"id": "laser_lance_melee", "count": 2}]]}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "spirit_psychic": {
+            "name": "Spirit Psychic",
+            "description": "A high elf psychic focused on enhancing the mechanical aspects of the army.",
+            "category": "command",
+            "keywords": ["Infantry"],
+            "rules": [{"id": "rifle_tactics", "x": 2}, {"id": "repair", "x": 1}, {"id": "ward", "x":1}, {"id": "wounds", "x": 2}],
+            "models":[
+                {
+                    "name": "Spirit Psychic",
+                    "courage": 6,
+                    "movement": 7,
+                    "shoot": 7,
+                    "fight": 7,
+                    "defense": 6,
+                    "reflexes": 6,
+                    "weapons": ["shard_pistol", {"id": "hexblade", "count": 2}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "war_psychic": {
+            "name": "War Psychic",
+            "description": "A high elf psychic trained in the arts of war.",
+            "category": "command",
+            "keywords": ["Infantry"],
+            "rules": [{"id": "leader_x", "x": "Infantry"},  {"id": "power", "x": 1}],
+            "models": [
+                {
+                    "name": "War Psychic",
+                    "courage": 6,
+                    "movement": 7,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 6,
+                    "reflexes": 6,
+                    "weapons": ["shard_pistol", {"id":"hexblade", "count":2}],
+                    "options": [{"replaceWeapon": {"id":"hexblade", "count":2}, "withWeapon": [["laser_lance_shoot", {"id": "laser_lance_melee", "count": 2}]]}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "war_psychic_on_bike":{
+            "name": "War Psychic on Bike",
+            "description": "A high elf psychic practiced in the arts of war riding a sleek motorbike.",
+            "category": "command",
+            "keywords": ["Biker"],
+            "rules": [{"id": "leader_x", "x": "Biker"}, {"id": "power", "x": 1}, "hover"],
+            "models": [
+                {
+                    "name": "War Psychic on Bike",
+                    "courage": 6,
+                    "movement": 8,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 6,
+                    "reflexes": 6,
+                    "weapons": ["shard_pistol", {"id":"hexblade", "count":2}, "twin_shard_rifle"],
+                    "options": [{"replaceWeapon": {"id":"hexblade", "count":2}, "withWeapon": [["laser_lance_shoot", {"id": "laser_lance_melee", "count": 2}]]}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
         "defender_leader": {
             "name": "Defender Leader",
             "description": "A group of high elf warriors.",
