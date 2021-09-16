@@ -1,18 +1,18 @@
 {
-    "id": "battle_sisters",
-    "name": "Battle Sisters",
+    "id": "faith_wardens",
+    "name": "Faith Wardens",
     "author": "guitarninja#5707",
     "units": {
-        "greater_high_sister": {
-            "name": "Greater High Sister",
-            "description": "A High sister of the Battle Sisters order.",
+        "greater_high_warden": {
+            "name": "Greater High Warden",
+            "description": "A High warden of the Faith Wardens order.",
             "min": 5,
             "max": 10,
             "category": "command",
-            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "wounds", "x": 3}, {"id": "sisters_tactics", "x": 2}],
+            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "wounds", "x": 3}, {"id": "wardens_tactics", "x": 2}],
             "models": [
                 {
-                    "name": "High Sister",
+                    "name": "High Warden",
                     "movement": 6,
                     "courage": 7,
                     "shoot": 7,
@@ -31,16 +31,16 @@
                 }
             ]
         },
-        "high_sister": {
-            "name": "High Sister",
-            "description": "A High sister of the Battle Sisters order.",
+        "high_warden": {
+            "name": "High Warden",
+            "description": "A High warden of the Faith Wardens order.",
             "min": 5,
             "max": 10,
             "category": "command",
-            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "wounds", "x": 2}, {"id": "sisters_tactics", "x": 1}],
+            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "wounds", "x": 2}, {"id": "wardens_tactics", "x": 1}],
             "models": [
                 {
-                    "name": "High Sister",
+                    "name": "High Warden",
                     "movement": 6,
                     "courage": 7,
                     "shoot": 7,
@@ -59,16 +59,16 @@
                 }
             ]
         },
-        "herald_sister": {
-            "name": "Herald Sister",
-            "description": "A sister herald with banner.",
+        "herald_warden": {
+            "name": "Herald Warden",
+            "description": "A warden herald with banner.",
             "min": 5,
             "max": 10,
             "category": "command",
             "rules": ["leader", "banner_of_focus", {"id": "wounds", "x": 2}],
             "models": [
                 {
-                    "name": "Herald Sister",
+                    "name": "Herald Warden",
                     "movement": 6,
                     "courage": 6,
                     "shoot": 6,
@@ -85,16 +85,16 @@
                 }
             ]
         },
-        "sister_nurse": {
-            "name": "Nurse Sister",
-            "description": "A sister herald with banner.",
+        "warden_nurse": {
+            "name": "Nurse Warden",
+            "description": "A warden herald with banner.",
             "min": 5,
             "max": 10,
             "category": "command",
             "rules": ["leader", "medic", {"id": "wounds", "x": 2}],
             "models": [
                 {
-                    "name": "Nurse Sister",
+                    "name": "Nurse Warden",
                     "movement": 6,
                     "courage": 6,
                     "shoot": 6,
@@ -107,16 +107,16 @@
                 }
             ]
         },
-        "sister_preacher": {
-            "name": "Preacher Sister",
-            "description": "A sister preacher with a staff.",
+        "warden_preacher": {
+            "name": "Preacher Warden",
+            "description": "A warden preacher with a staff.",
             "min": 5,
             "max": 10,
             "category": "command",
             "rules": ["leader", {"id": "wounds", "x": 2}, "preacher"],
             "models": [
                 {
-                    "name": "Preacher Sister",
+                    "name": "Preacher Warden",
                     "movement": 6,
                     "courage": 6,
                     "shoot": 6,
@@ -129,13 +129,13 @@
                 }
             ]
         },
-        "battle_sister_leader": {
-            "name": "Battle Sister Superior",
-            "description": "A group of sisters with marine rifles to pack an extra punch.",
+        "warden_leader": {
+            "name": "Warden Superior",
+            "description": "A group of wardens with marine rifles to pack an extra punch.",
             "category": "command",
             "models": [
                 {
-                    "name": "Battle Sister Superior",
+                    "name": "Warden Superior",
                     "movement": 6,
                     "courage": 6,
                     "shoot": 6,
@@ -155,13 +155,13 @@
                 }
             ]
         },
-        "battle_sister": {
-            "name": "Battle Sister",
-            "description": "A group of sisters with marine rifles to pack an extra punch.",
+        "warden": {
+            "name": "Warden",
+            "description": "A group of wardens with marine rifles to pack an extra punch.",
             "category": "core",
             "models": [
                 {
-                    "name": "Battle Sister",
+                    "name": "Warden",
                     "movement": 6,
                     "courage": 6,
                     "shoot": 6,
@@ -175,13 +175,13 @@
                 }
             ]
         },
-        "battle_sister_specialist": {
-            "name": "Battle Sister Specialist",
-            "description": "A group of sisters with marine rifles to pack an extra punch.",
+        "warden_specialist": {
+            "name": "Warden Specialist",
+            "description": "A group of wardens with marine rifles to pack an extra punch.",
             "category": "specialist",
             "models": [
                 {
-                    "name": "Battle Sister Specialist",
+                    "name": "Warden Specialist",
                     "movement": 6,
                     "courage": 6,
                     "shoot": 6,
@@ -195,14 +195,14 @@
                 }
             ]
         },
-        "dominion_sister_leader": {
-            "name": "Dominion Sister Superior",
-            "description": "A group of sisters with marine rifles to pack an extra punch.",
+        "dominion_warden_leader": {
+            "name": "Dominion Warden Superior",
+            "description": "A group of wardens with marine rifles to pack an extra punch.",
             "category": "command",
             "rules": ["scout"],
             "models": [
                 {
-                    "name": "Dominion Sister Superior",
+                    "name": "Dominion Warden Superior",
                     "movement": 6,
                     "courage": 6,
                     "shoot": 6,
@@ -222,14 +222,14 @@
                 }
             ]
         },
-        "dominion_sisters": {
-            "name": "Dominion Sister",
-            "description": "A group of sisters with marine rifles to pack an extra punch.",
+        "dominion_wardens": {
+            "name": "Dominion Warden",
+            "description": "A group of wardens with marine rifles to pack an extra punch.",
             "category": "strike",
             "rules": ["scout"],
             "models": [
                 {
-                    "name": "Dominion Sister",
+                    "name": "Dominion Warden",
                     "movement": 6,
                     "courage": 6,
                     "shoot": 6,
@@ -243,15 +243,15 @@
                 }
             ]
         },
-        "celestial_sister_leader": {
-            "name": "Celestial Sister Superior",
-            "description": "A group of elite sisters with marine rifles to pack an extra punch.",
+        "celestial_warden_leader": {
+            "name": "Celestial Warden Superior",
+            "description": "A group of elite wardens with marine rifles to pack an extra punch.",
             "min": 5,
             "max": 10,
             "category": "command",
             "models": [
                 {
-                    "name": "Celestial Sister Superior",
+                    "name": "Celestial Warden Superior",
                     "movement": 6,
                     "courage": 6,
                     "shoot": 6,
@@ -271,13 +271,13 @@
                 }
             ]
         },
-        "celestial_sister": {
-            "name": "Celestial Sister",
-            "description": "A group of elite sisters with marine rifles to pack an extra punch.",
+        "celestial_warden": {
+            "name": "Celestial Warden",
+            "description": "A group of elite wardens with marine rifles to pack an extra punch.",
             "category": "core",
             "models": [
                 {
-                    "name": "Celestial Sister",
+                    "name": "Celestial Warden",
                     "movement": 6,
                     "courage": 6,
                     "shoot": 6,
@@ -291,13 +291,13 @@
                 }
             ]
         },
-        "celestial_sister_specialist": {
-            "name": "Celestial Sister Specialist",
-            "description": "A group of elite sisters with marine rifles to pack an extra punch.",
+        "celestial_warden_specialist": {
+            "name": "Celestial Warden Specialist",
+            "description": "A group of elite wardens with marine rifles to pack an extra punch.",
             "category": "specialist",
             "models": [
                 {
-                    "name": "Celestial Sister Specialist",
+                    "name": "Celestial Warden Specialist",
                     "movement": 6,
                     "courage": 6,
                     "shoot": 6,
@@ -311,16 +311,16 @@
                 }
             ]
         },
-        "redemption_sister_leader": {
-            "name": "Redemption Sister Superior",
-            "description": "A group of sisters atoning for their sins with righteous fury.",
+        "redemption_warden_leader": {
+            "name": "Redemption Warden Superior",
+            "description": "A group of wardens atoning for their sins with righteous fury.",
             "min": 5,
             "max": 10,
             "category": "command",
             "rules": [{"id": "resilient", "x": 3}],
             "models": [
                 {
-                    "name": "Redemption Sister Superior",
+                    "name": "Redemption Warden Superior",
                     "movement": 6,
                     "courage": 6,
                     "shoot": 6,
@@ -335,27 +335,27 @@
                 }
             ]
         },
-        "redemption_sister": {
-            "name": "Redemption Sister",
-            "description": "A group of sisters atoning for their sins with righteous fury.",
+        "redemption_warden": {
+            "name": "Redemption Warden",
+            "description": "A group of wardens atoning for their sins with righteous fury.",
             "min": 5,
             "max": 10,
             "category": "specialist",
             "rules": [{"id": "resilient", "x": 3}],
             "models": [
-                {"name": "Redemption Sister", "movement": 6, "courage": 6, "shoot": 6, "fight": 6, "defense": 5, "reflexes": 5, "weapons": [{"id": "heavy_chainsword", "count": 2}], "min": 1, "max": 1}
+                {"name": "Redemption Warden", "movement": 6, "courage": 6, "shoot": 6, "fight": 6, "defense": 5, "reflexes": 5, "weapons": [{"id": "heavy_chainsword", "count": 2}], "min": 1, "max": 1}
             ]
         },
-        "winged_sister_leader": {
-            "name": "Winged Sister Superior",
-            "description": "A group of sisters with flying jetpacks.",
+        "winged_warden_leader": {
+            "name": "Winged Warden Superior",
+            "description": "A group of wardens with flying jetpacks.",
             "min": 5,
             "max": 10,
             "category": "command",
             "rules": ["fly"],
             "models": [
                 {
-                    "name": "Winged Sister Superior",
+                    "name": "Winged Warden Superior",
                     "movement": 8,
                     "courage": 6,
                     "shoot": 6,
@@ -373,16 +373,16 @@
                 }
             ]
         },
-        "winged_sister": {
-            "name": "Winged Sister",
-            "description": "A group of sisters with flying jetpacks.",
+        "winged_warden": {
+            "name": "Winged Warden",
+            "description": "A group of wardens with flying jetpacks.",
             "min": 5,
             "max": 10,
             "category": "strike",
             "rules": ["fly"],
             "models": [
                 {
-                    "name": "Winged Sister",
+                    "name": "Winged Warden",
                     "movement": 8,
                     "courage": 6,
                     "shoot": 6,
@@ -399,16 +399,16 @@
                 }
             ]
         },
-        "devastator_sisters": {
-            "name": "Retribution Sister",
-            "description": "A group of sisters packed with heavy weapons to deal high damage.",
+        "devastator_wardens": {
+            "name": "Retribution Warden",
+            "description": "A group of wardens packed with heavy weapons to deal high damage.",
             "min": 5,
             "max": 10,
             "category": "heavy",
             "options": [],
             "models": [
                 {
-                    "name": "Retribution Sister",
+                    "name": "Retribution Warden",
                     "movement": 6,
                     "courage": 6,
                     "shoot": 6,
@@ -440,8 +440,8 @@
         "legend_vengeance_pistol": {"name": "The Vengeance Pistol", "attacks": 1, "short": 6, "ap": 7, "rules": ["pistol", {"id": "critical", "x": 2}]}
     },
     "rules": {
-        "sisters_tactics": {
-            "name": "Sisters Tactics",
+        "wardens_tactics": {
+            "name": "Wardens Tactics",
             "inputs": ["x"],
             "description": "When this unit is activated, choose up to X friendly _Infantry_ units within 6\" to receive one of the following bonuses until the end of the round: \n * Re-roll failed Accuracy tests of 9+ \n * Re-roll failed Strength tests of 9+",
             "points": ["rule.x", {"multiply": 5}]
@@ -496,7 +496,7 @@
             "phase": "activation",
             "name": "Holy Protection",
             "description": "Use when a Power(x) test is taken within 24\" of any Infantry unit. Roll a D10. If the value is less than or equal to the test to cast the power, it is prevented.",
-            "flavor": "Shielded by holy energy, Battle Sisters can protect themselves from psychic powers.",
+            "flavor": "Shielded by holy energy, Faith Wardens can protect themselves from psychic powers.",
             "cost": 1
         },
         {
@@ -504,14 +504,14 @@
             "name": "Ferocity",
             "phase": "activation",
             "description": "Use this strategy when an _Infantry_ unit charges. All models in that unit may make one additional attack.",
-            "flavor": "Sometimes with disregard for their own life, these battle sisters will stop at nothing to defeat their enemies.",
+            "flavor": "Sometimes with disregard for their own life, these wardens will stop at nothing to defeat their enemies.",
             "cost": 1
         },
         {
             "subfactions": ["assault_focus"],
             "name": "Fury",
             "phase": "activation",
-            "flavor": "These battle sisters are furious in resolve and can rip through their enemies.",
+            "flavor": "These wardens are furious in resolve and can rip through their enemies.",
             "description": "Use when an _Infantry_ unit makes a Fight action. Hit rolls of 1 or 2 gain +1 AP.",
             "cost": 1
         },
@@ -519,7 +519,7 @@
             "subfactions": ["assault_focus"],
             "name": "Assault",
             "phase": "activation",
-            "flavor": "With a furious charge, these battle sisters move into combat quickly.",
+            "flavor": "With a furious charge, these wardens move into combat quickly.",
             "description": "Use this strategy when an _Infantry_ unit makes a Move action. That unit gains +3\" of Movement for that action.",
             "cost": 1
         },
@@ -528,7 +528,7 @@
             "name": "Toughness",
             "phase": "activation",
             "description": "Use when an _Infantry_ unit takes Save rolls. Roll a die for each hit this unit takes. On a 3 or less that hit is prevented.",
-            "flavor": "These Battle Sisters are particularly tough and can take a hit.",
+            "flavor": "These Faith Wardens are particularly tough and can take a hit.",
             "cost": 2
         },
         {
@@ -543,7 +543,7 @@
             "subfactions": ["toughness_focus"],
             "name": "Unrelenting",
             "phase": "activation",
-            "flavor": "These Battle Sisters are battle-ready and focused on the fight.",
+            "flavor": "These Faith Wardens are battle-ready and focused on the fight.",
             "description": "Use when an _Infantry_ unit performs a Fight or Shoot action. Ignore any skill modifiers from Shock.",
             "cost": 1
         },
@@ -576,7 +576,7 @@
             "name": "Courageous",
             "phase": "activation",
             "description": "Use when activating a unit. That unit gets +1 Courage.",
-            "flavor": "These Battle Sisters are some of the most courageous ever seen, fighting to the bitter end.",
+            "flavor": "These Faith Wardens are some of the most courageous ever seen, fighting to the bitter end.",
             "cost": 1
         },
         {
@@ -591,13 +591,13 @@
             "subfactions": ["bravery_focus"],
             "name": "Counter Attack",
             "phase": "activation",
-            "flavor": "Against all odds, these Battle Sisters will fight on.",
+            "flavor": "Against all odds, these Faith Wardens will fight on.",
             "description": "Use when an _Infantry_ unit is targeted by a Fight action. If that unit has not yet activated, it may perform a Counter Attack reaction without testing Initiative.",
             "cost": 1
         }
     ],
     "buyLinks": [
         {"name": "Games Workshop", "link": "https://www.games-workshop.com/en-US/Warhammer-40-000?N=2562756967+3639190268"},
-        {"name": "OnePageRules", "link": "https://www.myminifactory.com/object/3d-print-battle-sisters-army-bundle-137117"}
+        {"name": "OnePageRules", "link": "https://www.myminifactory.com/object/3d-print-battle-wardens-army-bundle-137117"}
     ]
 }

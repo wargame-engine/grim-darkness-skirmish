@@ -125,20 +125,20 @@
                 "mobility_focus": {"name": "Mobility", "id": "mobility_focus", "description": "Tao Federation troops focused on mobile firing tactics."}
             }
         },
-        "battle_sisters": {
+        "faith_wardens": {
             "version": "1.0",
-            "name": "Battle Sisters",
-            "id": "battle_sisters",
-            "url": "battle_sisters.json",
+            "name": "Faith Wardens",
+            "id": "faith_wardens",
+            "url": "faith_wardens.json",
             "color": "#383838",
             "secondary_color": "#9a1115",
             "alliance": "imperial_alliance",
-            "description": "The Battle Sisters are a sect of the Human Empire which have a uniquely faithful and religious background. The Battle Sisters rely on prayer and faith in their holy symbols along with some good old fashioned holy fire to defeat their enemies.",
+            "description": "The Faith Wardens are a sect of the Human Empire which have a uniquely faithful and religious background. The Faith Wardens rely on prayer and faith in their holy symbols along with some good old fashioned holy fire to defeat their enemies.",
             "subfactions": {
-                "assault_focus": {"name": "Assault", "id": "assault_focus", "color": "#4272b8", "description": "Battle Sisters focused on all-out assaults and aggression."},
-                "toughness_focus": {"name": "Toughness", "id": "toughness_focus", "description": "Battle Sisters focused on taking hits and keeping the fight going."},
-                "mobility_focus": {"name": "Mobility", "id": "mobility_focus", "description": "Battle Sisters focused on mobile tactics."},
-                "bravery_focus": {"name": "Bravery", "id": "bravery_focus", "description": "Battle Sisters focused on bravery against all odds."}
+                "assault_focus": {"name": "Assault", "id": "assault_focus", "color": "#4272b8", "description": "Faith Wardens focused on all-out assaults and aggression."},
+                "toughness_focus": {"name": "Toughness", "id": "toughness_focus", "description": "Faith Wardens focused on taking hits and keeping the fight going."},
+                "mobility_focus": {"name": "Mobility", "id": "mobility_focus", "description": "Faith Wardens focused on mobile tactics."},
+                "bravery_focus": {"name": "Bravery", "id": "bravery_focus", "description": "Faith Wardens focused on bravery against all odds."}
             }
         },
         "machine_guilds": {
