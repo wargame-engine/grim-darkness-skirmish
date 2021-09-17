@@ -306,7 +306,7 @@
             "id": "corrupted_defense_force",
             "url": "corrupted_defense_force.json",
             "color": "#ba7f00",
-            "secondary_color": "#231f20",
+            "secondary_color": "#343a40",
             "alliance": "corrupteds",
             "version": "0.1",
             "description": "The Corrupted Defense Force are a band of deserters and other folks out for their own interests. They have gathered much of what they can from the Imperial Defense Force and now fight with the corrupteds against those that stay imperial."
