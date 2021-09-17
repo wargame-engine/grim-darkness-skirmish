@@ -824,17 +824,9 @@
         }
     },
     "buyLinks": [
-        {
-            "name": "Games Workshop",
-            "link": "https://www.games-workshop.com/en-US/Warhammer-40-000?N=2562756967+1138996955"
-        },
-        {
-            "name": "Victoria Miniatures",
-            "link": "https://victoriaminiatures.com/"
-        },
-        {
-            "name": "The Makers Cult",
-            "link": "https://www.cgtrader.com/3d-print-models/guard?author=themakerscult"
-        }
+        {"name": "DavikDesigns", "link": "https://davikdesigns.gumroad.com/l/wAKtHk"},
+        {"name": "Games Workshop", "link": "https://www.games-workshop.com/en-US/Warhammer-40-000?N=2562756967+1138996955"},
+        {"name": "Victoria Miniatures", "link": "https://victoriaminiatures.com/"},
+        {"name": "The Makers Cult", "link": "https://www.cgtrader.com/3d-print-models/guard?author=themakerscult"}
     ]
 }
