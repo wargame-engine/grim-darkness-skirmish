@@ -21,34 +21,36 @@
                     "defense": 7,
                     "reflexes": 6,
                     "rules": ["leader"],
-                    "weapons": ["storm_rifle", {"id": "heavy_ccw", "count": 3}, "frags"],
+                    "weapons": ["burst_pistol", {"id": "heavy_ccw", "count": 3}, "frags"],
                     "options": [
-                        {"replaceWeapon": ["storm_rifle"], "withWeapon": ["marine_rifle", "plasma_pistol", "flamethrower_pistol"]},
-                        {"replaceWeapon": [{"id": "heavy_ccw", "count": 3}], "withWeapon": [{"id": "energy_hammer", "count": 3}]}
+                        {"replaceWeapon": ["burst_pistol"], "withWeapon": ["burst_carbine", "plasma_pistol", "fusion_pistol"]},
+                        {"replaceWeapon": [{"id": "heavy_ccw", "count": 3}], "withWeapon": [{"id": "energy_hammer", "count": 2}]},
+                        {"addRule": "destroyer_armor"}
                     ],
                     "min": 1,
                     "max": 1
                 }
             ]
         },
-        "forge_brute_captain": {
-            "name": "Forgeborn Brute Captain",
-            "description": "",
+        "forge_champion": {
+            "name": "Forgeborn Champion",
+            "description": "A berzerker who has gained great honors in combat.",
             "category": "command",
             "models": [
                 {
-                    "name": "Forgeborn Brute Captain",
+                    "name": "Forgeborn Champion",
                     "movement": 5,
                     "courage": 7,
-                    "shoot": 5,
+                    "shoot": 6,
                     "fight": 7,
                     "defense": 6,
                     "reflexes": 6,
                     "rules": ["leader", "furious"],
                     "weapons": ["burst_pistol", {"id": "heavy_ccw", "count": 3}, "frags"],
                     "options": [
-                        {"replaceWeapon": ["burst_pistol"], "withWeapon": ["marine_rifle"]},
-                        {"replaceWeapon": [{"id": "heavy_ccw", "count": 3}], "withWeapon": [{"id": "energy_hammer", "count": 3}]}
+                        {"replaceWeapon": ["burst_pistol"], "withWeapon": ["plasma_pistol"]},
+                        {"replaceWeapon": [{"id": "heavy_ccw", "count": 3}], "withWeapon": [{"id": "energy_hammer", "count": 2}]},
+                        {"addRule": "destroyer_armor"}
                     ],
                     "min": 1,
                     "max": 1
@@ -69,29 +71,8 @@
                     "defense": 6,
                     "reflexes": 6,
                     "rules": [{"id": "power", "x": 1}, "leader"],
-                    "weapons": ["burst_pistol", "energy_hammer"],
-                    "options": [{"replaceRule": [{"id": "power", "x": 1}], "withRule": [{"id": "power", "x": 2}]}],
-                    "min": 1,
-                    "max": 1
-                }
-            ]
-        },
-        "forge_destroyer_chieftain": {
-            "name": "Forgeborn Destroyer Chieftain",
-            "description": "",
-            "category": "command",
-            "models": [
-                {
-                    "name": "Forgeborn Destroyer Chieftain",
-                    "movement": 5,
-                    "courage": 7,
-                    "shoot": 7,
-                    "fight": 6,
-                    "defense": 8,
-                    "reflexes": 6,
-                    "rules": ["leader", "ambush"],
-                    "weapons": ["marine_rifle", {"id": "energy_hammer", "count": 3}, "frags"],
-                    "options": [{"replaceWeapon": ["marine_rifle"], "withWeapon": ["heavy_machinegun"]}],
+                    "weapons": ["burst_pistol", {"id": "ccw", "count": 2}],
+                    "options": [{"replaceWeapon": [{"id": "ccw", "count": 2}], "withWeapon": ["energy_hammer"]}, {"replaceRule": [{"id": "power", "x": 1}], "withRule": [{"id": "power", "x": 2}]}],
                     "min": 1,
                     "max": 1
                 }
@@ -108,12 +89,12 @@
                     "courage": 5,
                     "shoot": 5,
                     "fight": 5,
-                    "defense": 6,
+                    "defense": 5,
                     "reflexes": 5,
-                    "weapons": ["marine_rifle", "ccw"],
+                    "weapons": ["burst_carbine", "ccw"],
                     "min": 1,
                     "max": 1,
-                    "options": [{"addWeapon": ["burst_pistol"]}]
+                    "options": [{"replaceWeapon": ["burst_carbine", "ccw"], "withWeapon": [["burst_pistol", {"id": "ccw", "count": 2}]]}]
                 }
             ]
         },
@@ -128,37 +109,37 @@
                     "courage": 5,
                     "shoot": 6,
                     "fight": 5,
-                    "defense": 7,
+                    "defense": 6,
                     "reflexes": 5,
-                    "weapons": ["marine_rifle", "ccw"],
+                    "weapons": ["burst_carbine", "heavy_ccw"],
                     "min": 1,
                     "max": 1,
-                    "options": [{"addWeapon": ["burst_pistol"]}]
+                    "options": [{"replaceWeapon": ["burst_carbine", "ccw"], "withWeapon": [["burst_pistol", {"id": "heavy_ccw", "count": 2}]]}]
                 }
             ]
         },
-        "forge_brute": {
-            "name": "Forgeborn Brute",
+        "forge_berzerker": {
+            "name": "Forgeborn Berzerker",
             "description": "Charging into close combat with powerful weapons.",
             "category": "core",
             "models": [
                 {
-                    "name": "Forgeborn Brute",
+                    "name": "Forgeborn Berzerker",
                     "movement": 5,
                     "courage": 5,
                     "shoot": 5,
                     "fight": 6,
                     "defense": 6,
                     "reflexes": 5,
-                    "weapons": ["burst_pistol", "heavy_ccw"],
+                    "weapons": ["burst_pistol", {"id": "heavy_ccw", "count": 2}],
                     "min": 1,
                     "max": 1,
-                    "options": [{"replaceWeapon": ["burst_pistol"], "withWeapon": ["marine_rifle"]}, {"replaceWeapon": ["heavy_ccw"], "withWeapon": ["energy_hammer"]}],
+                    "options": [{"replaceWeapon": [{"id": "heavy_ccw", "count": 2}], "withWeapon": ["energy_hammer"]}, {"replaceWeapon": ["burst_pistol"], "withWeapon": ["plasma_pistol"]}],
                     "rules": ["furious"]
                 }
             ]
         },
-        "forge_gunner": {
+        "gunner_spec": {
             "name": "Gunner Specialist",
             "description": "A warrior with heavy weapons.",
             "category": "specialist",
@@ -169,12 +150,12 @@
                     "courage": 5,
                     "shoot": 6,
                     "fight": 5,
-                    "defense": 7,
+                    "defense": 6,
                     "reflexes": 5,
-                    "weapons": ["twin_storm_rifle", "ccw", "frags"],
+                    "weapons": ["twin_burst_carbine", "ccw", "frags"],
                     "min": 1,
                     "max": 1,
-                    "options": [{"replaceWeapon": ["twin_storm_rifle"], "withWeapon": ["missile_launcher", "flamethrower", "heavy_machinegun", "fusion_rifle"]}, {"addWeapon": ["burst_pistol"]}]
+                    "options": [{"replaceWeapon": ["twin_burst_carbine"], "withWeapon": ["missile_launcher", "flamethrower", "heavy_machinegun", "fusion_rifle"]}]
                 }
             ]
         },
@@ -185,21 +166,21 @@
             "models": [
                 {
                     "name": "Forgeborn Destroyer",
-                    "movement": 5,
+                    "movement": 4,
                     "courage": 6,
                     "shoot": 6,
                     "fight": 5,
-                    "defense": 8,
+                    "defense": 7,
                     "reflexes": 6,
                     "rules": ["ambush"],
-                    "weapons": ["marine_rifle", "energy_hammer"],
-                    "options": [{"replaceWeapon": ["marine_rifle"], "withWeapon": ["heavy_machinegun", "fusion_cannon"]}, {"addWeapon": ["rocket_pod"]}],
+                    "weapons": ["heavy_burst_carbine", "energy_hammer"],
+                    "options": [{"replaceWeapon": ["heavy_burst_carbine"], "withWeapon": ["heavy_machinegun", "fusion_cannon", "heavy_flamethrower", "plasma_cannon"]}, {"addWeapon": ["rocket_pod"]}],
                     "min": 1,
                     "max": 1
                 }
             ]
         },
-        "forge_engineer": {
+        "engineer_spec": {
             "name": "Engineer Specialist",
             "description": "Capable of field repairs and hacking even under heavy fire.",
             "category": "specialist",
@@ -212,37 +193,104 @@
                     "fight": 6,
                     "defense": 6,
                     "reflexes": 5,
-                    "weapons": ["burst_pistol", "heavy_ccw", "plasma_grenade"],
+                    "weapons": ["heavy_burst_pistol", "heavy_ccw", "plasma_grenade"],
                     "min": 1,
                     "max": 1,
-                    "options": [{"replaceWeapon": ["burst_pistol"], "withWeapon": ["marine_rifle"]}],
-                    "rules": [{"id": "engineer", "x": 1}]
+                    "options": [{"replaceWeapon": ["heavy_burst_pistol"], "withWeapon": ["plasma_rifle", "flamethrower", "fusion_rifle"]}],
+                    "rules": ["engineer"]
                 }
             ]
         },
-        "forge_brute_gunner": {
-            "name": "Brute Gunner Specialist",
-            "description": "Charging into close combat with heavy weapons.",
-            "category": "specialist",
+        "forge_militia_leader": {
+            "name": "Forgeborn Militia Leader",
+            "description": "Not all defenders of the Great Forges are soldiers.",
+            "category": "command",
             "models": [
                 {
-                    "name": "Brute Gunner Specialist",
+                    "name": "Forgeborn Militia Leader",
+                    "movement": 5,
+                    "courage": 5,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "weapons": ["burst_carbine", "ccw"],
+                    "min": 1,
+                    "max": 1,
+                    "options": [{"replaceWeapon": ["burst_carbine", "ccw"], "withWeapon": [["burst_pistol", {"id": "ccw", "count": 2}]]}],
+                    "rules": ["leader"]
+                }
+            ]
+        },
+        "forge_warrior_leader": {
+            "name": "Forgeborn Warrior Leader",
+            "description": "Equipped with better armor than the common militia.",
+            "category": "command",
+            "models": [
+                {
+                    "name": "Forgeborn Warrior Leader",
+                    "movement": 5,
+                    "courage": 5,
+                    "shoot": 6,
+                    "fight": 5,
+                    "defense": 6,
+                    "reflexes": 5,
+                    "weapons": ["burst_carbine", "heavy_ccw"],
+                    "min": 1,
+                    "max": 1,
+                    "options": [{"replaceWeapon": ["burst_carbine", "ccw"], "withWeapon": [["burst_pistol", {"id": "heavy_ccw", "count": 2}]]}],
+                    "rules": ["leader"]
+                }
+            ]
+        },
+        "forge_berzerker_leader": {
+            "name": "Forgeborn Berzerker Leader",
+            "description": "Charging into close combat with powerful weapons.",
+            "category": "command",
+            "models": [
+                {
+                    "name": "Forgeborn Berzerker Leader",
                     "movement": 5,
                     "courage": 5,
                     "shoot": 5,
                     "fight": 6,
                     "defense": 6,
                     "reflexes": 5,
-                    "weapons": ["marine_rifle", "heavy_ccw"],
+                    "weapons": ["burst_pistol", {"id": "heavy_ccw", "count": 2}],
                     "min": 1,
                     "max": 1,
-                    "options": [{"replaceWeapon": ["marine_rifle"], "withWeapon": ["fusion_rifle", "flamethrower"]}, {"replaceWeapon": ["heavy_ccw"], "withWeapon": ["energy_hammer"]}],
-                    "rules": ["furious"]
+                    "options": [{"replaceWeapon": [{"id": "heavy_ccw", "count": 2}], "withWeapon": ["energy_hammer"]}, {"replaceWeapon": ["burst_pistol"], "withWeapon": ["plasma_pistol"]}],
+                    "rules": ["furious", "leader"]
+                }
+            ]
+        },
+        "forge_destroyer_leader": {
+            "name": "Forgeborn Destroyer Leader",
+            "description": "",
+            "category": "command",
+            "models": [
+                {
+                    "name": "Forgeborn Destroyer Leader",
+                    "movement": 4,
+                    "courage": 6,
+                    "shoot": 6,
+                    "fight": 5,
+                    "defense": 7,
+                    "reflexes": 6,
+                    "rules": ["ambush", "leader"],
+                    "weapons": ["heavy_burst_carbine", "energy_hammer"],
+                    "options": [{"replaceWeapon": ["heavy_burst_carbine"], "withWeapon": ["heavy_machinegun", "fusion_cannon", "heavy_flamethrower", "plasma_cannon"]}, {"addWeapon": ["rocket_pod"]}],
+                    "min": 1,
+                    "max": 1
                 }
             ]
         }
     },
-    "weapons": {},
+    "weapons": {
+        "burst_carbine": {"name": "Burst Carbine", "attacks": 1, "short": 9, "medium": 18, "rules": ["rapid_fire", "assault"]},
+        "heavy_burst_carbine": {"name": "Heavy Burst Carbine", "attacks": 1, "ap": 1, "short": 9, "medium": 18, "rules": ["rapid_fire", "assault"]},
+        "twin_burst_carbine": {"name": "Twin Burst Carbine", "attacks": 2, "short": 9, "medium": 18, "rules": ["rapid_fire", "assault"]}
+    },
     "rules": {},
     "strategies": [
         {
