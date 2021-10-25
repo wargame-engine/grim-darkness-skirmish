@@ -880,9 +880,9 @@
             "description": "When this model successfully charges an enemy unit, make X Strength tests. For each success, the enemy takes 1 hit with AP 1.",
             "points": ["rule.x", {"multiply": 3}]
         },
-        "jetpack_character": {"name": "Jetpack", "hidden": true, "description_short": "Fly, Ambush, Movement +2\"", "points": 15},
-        "jetpack": {"name": "Jetpacks", "points": 4, "hidden": true, "description_short": "Fly, Ambush, Movement +2\""},
-        "destroyer_armor": {"name": "Destroyer Armor", "hidden": true, "description_short": "Ambush, Save +1, Movement -1\"", "points": 15},
+        "jetpack_character": {"name": "Jetpack", "hidden": true, "description_short": "Fly, Ambush, Movement +2\"", "points": 15, "description": "Fly, Ambush, Movement +2\""},
+        "jetpack": {"name": "Jetpacks", "points": 4, "hidden": true, "description_short": "Fly, Ambush, Movement +2\"", "description": "Fly, Ambush, Movement +2\""},
+        "destroyer_armor": {"name": "Destroyer Armor", "hidden": true, "description_short": "Ambush, Save +1, Movement -1\"", "points": 15, "description": "Ambush, Save +1, Movement -1\""},
         "mutations": {
             "name": "Mutations",
             "description": "At the beginning of the game choose one of the following effects to be applied to this unit: \n * +1 AP to their attacks  \n * +1 attacks per model \n * +1 Save ",
