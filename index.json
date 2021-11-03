@@ -235,6 +235,7 @@
             "id": "orc_clans",
             "url": "orc_clans.json",
             "color": "#50974A",
+            "alliance": "greenskins",
             "description": "The Orc Clans are a mostly disconnected species of clans who are constantly at war with others and each other. The Orc Clans rely on massive all-out assaults and cobbled-together technology and vehicles to outlast and overwhelm their foes.",
             "subfactions": {
                 "goblin_army": {"name": "Goblin", "id": "goblin_army", "color": "#5f9370", "description": "An Orc Clan with an abundance of powerful and well-equipped goblins.", "restricted": true},
@@ -318,7 +319,8 @@
         "imperial_alliance": {"name": "Imperial Alliance"},
         "elven_coaliation": {"name": "Elven Coalition"},
         "corrupteds": {"name": "Corrupted Pact"},
-        "federation": {"name": "Federated Species"}
+        "federation": {"name": "Federated Species"},
+        "greenskins": {"name": "Greenskins Warband"}
     },
     "categories": {
         "command": {"name": "Command"},
