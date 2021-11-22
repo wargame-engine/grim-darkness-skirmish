@@ -1572,7 +1572,7 @@
             "name": "Corrupted Chosen Leader",
             "description": "Blessed by their dark gods, this marine sets out to slay their foes greatest leaders.",
             "subfactions": ["none"],
-            "category": "specialist",
+            "category": "command",
             "models": [
                 {
                     "name": "Corrupted Chosen Leader",
