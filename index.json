@@ -300,7 +300,16 @@
             "alliance": "imperial_alliance",
             "description": "The Planetary Enforcers are responsible for maintaining peace on Imperial Alliance worlds. While they tend to avoid combat when possible, it is sometimes necessary for them to step in. They are equipped with many crowd-control measures to ensure they can keep order in the worst of circumstances."
         },
-        "forge_masters": {"version": "0.1", "name": "Forge Masters", "id": "forge_masters", "url": "forge_masters.json", "color": "#7a2007", "secondary_color": "#a82d0a", "description": ""}
+        "forge_masters": {"version": "0.1", "name": "Forge Masters", "id": "forge_masters", "url": "forge_masters.json", "color": "#7a2007", "secondary_color": "#a82d0a", "description": ""},
+        "gca": {
+            "version": "0.1",
+            "name": "Galactic Corperate Allegiance",
+            "id": "gca",
+            "url": "gca.json",
+            "color": "#657432",
+            "alliance": "mercenaries",
+            "description": "The Galactic Corperate Allegiance is a brittle union of opportunistic arms dealers, cutthroat mining companies and private armies all vying for control over lost sectors and profitable regions."
+        }
     },
     "unfinished_factions": {
         "corrupted_defense_force": {
@@ -320,7 +329,8 @@
         "elven_coaliation": {"name": "Elven Coalition"},
         "corrupteds": {"name": "Corrupted Pact"},
         "federation": {"name": "Federated Species"},
-        "greenskins": {"name": "Greenskins Warband"}
+        "greenskins": {"name": "Greenskins Warband"},
+        "mercenaries": {"name": "Mercenaries"}
     },
     "categories": {
         "command": {"name": "Command"},
