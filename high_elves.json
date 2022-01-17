@@ -74,7 +74,7 @@
                 }
             ]
         },
-        "psychic":{
+        "psychic": {
             "name": "Psychic",
             "description": "A gifted high elf psychic.",
             "category": "command",
@@ -89,14 +89,14 @@
                     "fight": 7,
                     "defense": 6,
                     "reflexes": 6,
-                    "weapons": ["shard_pistol", {"id":"hexblade", "count":2}],
-                    "options": [{"replaceWeapon": {"id":"hexblade", "count":2}, "withWeapon": [["laser_lance_shoot", {"id": "laser_lance_melee", "count": 2}]]}],
+                    "weapons": ["shard_pistol", {"id": "hexblade", "count": 2}],
+                    "options": [{"replaceWeapon": {"id": "hexblade", "count": 2}, "withWeapon": [["laser_lance_shoot", {"id": "laser_lance_melee", "count": 2}]]}],
                     "min": 1,
                     "max": 1
                 }
             ]
         },
-        "psychic_on_bike":{
+        "psychic_on_bike": {
             "name": "Psychic on Bike",
             "description": "A gifted high elf psychic riding a sleek motorbike.",
             "category": "command",
@@ -111,8 +111,8 @@
                     "fight": 7,
                     "defense": 6,
                     "reflexes": 6,
-                    "weapons": ["shard_pistol", {"id":"hexblade", "count":2}, "twin_shard_rifle"],
-                    "options": [{"replaceWeapon": {"id":"hexblade", "count":2}, "withWeapon": [["laser_lance_shoot", {"id": "laser_lance_melee", "count": 2}]]}],
+                    "weapons": ["shard_pistol", {"id": "hexblade", "count": 2}, "twin_shard_rifle"],
+                    "options": [{"replaceWeapon": {"id": "hexblade", "count": 2}, "withWeapon": [["laser_lance_shoot", {"id": "laser_lance_melee", "count": 2}]]}],
                     "min": 1,
                     "max": 1
                 }
@@ -123,8 +123,8 @@
             "description": "A high elf psychic focused on enhancing the mechanical aspects of the army.",
             "category": "command",
             "keywords": ["Infantry"],
-            "rules": [{"id": "rifle_tactics", "x": 2}, {"id": "repair", "x": 1}, {"id": "ward", "x":1}, {"id": "wounds", "x": 2}],
-            "models":[
+            "rules": [{"id": "rifle_tactics", "x": 2}, {"id": "repair", "x": 1}, {"id": "ward", "x": 1}, {"id": "wounds", "x": 2}],
+            "models": [
                 {
                     "name": "Spirit Psychic",
                     "courage": 6,
@@ -144,7 +144,7 @@
             "description": "A high elf psychic trained in the arts of war.",
             "category": "command",
             "keywords": ["Infantry"],
-            "rules": [{"id": "leader_x", "x": "Infantry"},  {"id": "power", "x": 1}],
+            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "power", "x": 1}],
             "models": [
                 {
                     "name": "War Psychic",
@@ -154,14 +154,14 @@
                     "fight": 6,
                     "defense": 6,
                     "reflexes": 6,
-                    "weapons": ["shard_pistol", {"id":"hexblade", "count":2}],
-                    "options": [{"replaceWeapon": {"id":"hexblade", "count":2}, "withWeapon": [["laser_lance_shoot", {"id": "laser_lance_melee", "count": 2}]]}],
+                    "weapons": ["shard_pistol", {"id": "hexblade", "count": 2}],
+                    "options": [{"replaceWeapon": {"id": "hexblade", "count": 2}, "withWeapon": [["laser_lance_shoot", {"id": "laser_lance_melee", "count": 2}]]}],
                     "min": 1,
                     "max": 1
                 }
             ]
         },
-        "war_psychic_on_bike":{
+        "war_psychic_on_bike": {
             "name": "War Psychic on Bike",
             "description": "A high elf psychic practiced in the arts of war riding a sleek motorbike.",
             "category": "command",
@@ -176,8 +176,8 @@
                     "fight": 6,
                     "defense": 6,
                     "reflexes": 6,
-                    "weapons": ["shard_pistol", {"id":"hexblade", "count":2}, "twin_shard_rifle"],
-                    "options": [{"replaceWeapon": {"id":"hexblade", "count":2}, "withWeapon": [["laser_lance_shoot", {"id": "laser_lance_melee", "count": 2}]]}],
+                    "weapons": ["shard_pistol", {"id": "hexblade", "count": 2}, "twin_shard_rifle"],
+                    "options": [{"replaceWeapon": {"id": "hexblade", "count": 2}, "withWeapon": [["laser_lance_shoot", {"id": "laser_lance_melee", "count": 2}]]}],
                     "min": 1,
                     "max": 1
                 }
@@ -210,18 +210,7 @@
             "category": "core",
             "keywords": ["Infantry"],
             "models": [
-                {
-                    "name": "Defender",
-                    "courage": 5,
-                    "movement": 7,
-                    "shoot": 6,
-                    "fight": 5,
-                    "defense": 5,
-                    "reflexes": 6,
-                    "weapons": ["shard_carbine", "plasma_grenade", "ccw"],
-                    "min": 1,
-                    "max": 1
-                }
+                {"name": "Defender", "courage": 5, "movement": 7, "shoot": 6, "fight": 5, "defense": 5, "reflexes": 6, "weapons": ["shard_carbine", "plasma_grenade", "ccw"], "min": 1, "max": 1}
             ]
         },
         "defender_weapon_platform": {
@@ -292,20 +281,7 @@
             "description": "A group of elite high elf warriors.",
             "category": "core",
             "keywords": ["Infantry"],
-            "models": [
-                {
-                    "name": "Avenger",
-                    "courage": 6,
-                    "movement": 7,
-                    "shoot": 6,
-                    "fight": 5,
-                    "defense": 6,
-                    "reflexes": 6,
-                    "weapons": ["shard_rifle", "plasma_grenade", "ccw"],
-                    "min": 1,
-                    "max": 1
-                }
-            ]
+            "models": [{"name": "Avenger", "courage": 6, "movement": 7, "shoot": 6, "fight": 5, "defense": 6, "reflexes": 6, "weapons": ["shard_rifle", "plasma_grenade", "ccw"], "min": 1, "max": 1}]
         },
         "ranger_leader": {
             "name": "Ranger Leader",
@@ -335,20 +311,7 @@
             "category": "core",
             "keywords": ["Infantry"],
             "rules": ["stealth", "scout"],
-            "models": [
-                {
-                    "name": "Ranger",
-                    "courage": 5,
-                    "movement": 7,
-                    "shoot": 6,
-                    "fight": 5,
-                    "defense": 5,
-                    "reflexes": 6,
-                    "weapons": ["shard_sniper", "plasma_grenade", "ccw"],
-                    "min": 1,
-                    "max": 1
-                }
-            ]
+            "models": [{"name": "Ranger", "courage": 5, "movement": 7, "shoot": 6, "fight": 5, "defense": 5, "reflexes": 6, "weapons": ["shard_sniper", "plasma_grenade", "ccw"], "min": 1, "max": 1}]
         },
         "storm_leader": {
             "name": "Storm Warrior Leader",
@@ -710,20 +673,7 @@
             "category": "strike",
             "keyowrds": ["Infantry"],
             "rules": ["ambush", "fly"],
-            "models": [
-                {
-                    "name": "Hawk Warrior",
-                    "courage": 6,
-                    "shoot": 6,
-                    "fight": 6,
-                    "defense": 6,
-                    "movement": 8,
-                    "reflexes": 6,
-                    "weapons": ["elven_blaster", "frags"],
-                    "min": 1,
-                    "max": 1
-                }
-            ]
+            "models": [{"name": "Hawk Warrior", "courage": 6, "shoot": 6, "fight": 6, "defense": 6, "movement": 8, "reflexes": 6, "weapons": ["elven_blaster", "frags"], "min": 1, "max": 1}]
         },
         "spider_leader": {
             "name": "Spider Warrior Leader",
@@ -757,16 +707,47 @@
             "category": "strike",
             "keywords": ["Infantry"],
             "rules": ["stealth", "ambush"],
+            "models": [{"name": "Spider Warrior", "courage": 6, "shoot": 6, "fight": 6, "defense": 7, "movement": 7, "reflexes": 6, "weapons": ["spinnerette_rifle"], "min": 1, "max": 1}]
+        },
+        "ranger_biker": {
+            "name": "Ranger Biker",
+            "description": "A highly trained biker that is adept at taking out high-value targets on the move.",
+            "category": "strike",
+            "keywords": ["Biker"],
+            "rules": ["hover", "scout", "stealth"],
             "models": [
                 {
-                    "name": "Spider Warrior",
+                    "name": "Ranger Biker",
                     "courage": 6,
                     "shoot": 6,
                     "fight": 6,
-                    "defense": 7,
-                    "movement": 7,
+                    "defense": 8,
                     "reflexes": 6,
-                    "weapons": ["spinnerette_rifle"],
+                    "movement": 8,
+                    "weapons": ["twin_shard_rifle", "shard_sniper"],
+                    "options": [{"replaceWeapon": "twin_shard_rifle", "withWeapon": ["twin_shard_cannon", "laser_machinegun"]}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "ranger_biker_leader": {
+            "name": "Ranger Biker Leader",
+            "description": "A highly trained biker leader that is adept at taking out high-value targets on the move.",
+            "category": "command",
+            "keywords": ["Biker"],
+            "rules": ["hover", "scout", "stealth", "leader"],
+            "models": [
+                {
+                    "name": "Ranger Biker Leader",
+                    "courage": 6,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 8,
+                    "reflexes": 6,
+                    "movement": 8,
+                    "weapons": ["twin_shard_rifle", "shard_sniper"],
+                    "options": [{"replaceWeapon": "twin_shard_rifle", "withWeapon": ["twin_shard_cannon", "laser_machinegun"]}],
                     "min": 1,
                     "max": 1
                 }
