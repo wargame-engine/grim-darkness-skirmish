@@ -65,9 +65,9 @@
                     "restricted": true,
                     "description": "Corrupted marines focused on using disease and decay to defeat their foes."
                 },
-                "change_corrupteds": {
+                "psychic_focus": {
                     "name": "Psychic",
-                    "id": "change_corrupteds",
+                    "id": "psychic_focus",
                     "color": "#18abcc",
                     "restricted": true,
                     "description": "Corrupted marines focused on using powerful magic to defeat their foes."
