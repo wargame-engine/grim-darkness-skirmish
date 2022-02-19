@@ -1,905 +1,932 @@
 {
-    "id": "tao_federation",
-    "name": "Tao Federation",
-    "author": "guitarninja#5707",
-    "background": "The Tao Federation are a group of cooperating aliens, and explorers expanding their influence throughout the stars. Their primary fighting style involves a combined arms assault of mechanized infantry, flying battlesuits and high-tech infantry.",
-    "units": {
-        "bs_comm": {
-            "name": "Battlesuit Commander",
-            "description": "An elite commander in an agile battlesuit.",
-            "min": 1,
-            "max": 1,
-            "keywords": ["Heavy Infantry"],
-            "category": "command",
-            "options": [{"addModel": ["spotter_drone", "gunner_drone", "shield_drone"], "modelLimit": 2}],
-            "models": [
-                {
-                    "name": "Commander",
-                    "movement": 8,
-                    "courage": 7,
-                    "shoot": 7,
-                    "fight": 6,
-                    "defense": 9,
-                    "reflexes": 6,
-                    "rules": [{"id": "leader_x", "x": "Infantry, Heavy Infantry"}, "fly", {"id": "wounds", "x": 3}, {"id": "commander_tactics", "x": 2}],
-                    "weapons": [{"id": "suit_fists", "count": 4}],
-                    "options": [
-                        {"limit": 3, "addWeapon": ["flak_launcher", "ion_gatling", "flamethrower", "pulse_gatling", "plasma_rifle", "fusion_blaster", "missile_pod"]},
-                        {"addRule": [{"id": "ambush", "name": "Sky Strike"}, {"id": "resilient", "x": 3, "name": "Shield Generator"}, "threat_detector_suit"]}
-                    ],
-                    "min": 1,
-                    "max": 1
-                }
-            ]
-        },
-        "bs_comm_coldfusion": {
-            "name": "Coldfusion Battlesuit Commander",
-            "description": "An elite commander in an agile battlesuit.",
-            "min": 1,
-            "max": 1,
-            "keywords": ["Heavy Infantry"],
-            "category": "command",
-            "options": [{"addModel": ["spotter_drone", "gunner_drone", "shield_drone"], "modelLimit": 2}],
-            "models": [
-                {
-                    "name": "Coldfusion Battlesuit Commander",
-                    "movement": 12,
-                    "courage": 7,
-                    "shoot": 7,
-                    "fight": 6,
-                    "defense": 9,
-                    "reflexes": 6,
-                    "rules": [{"id": "leader_x", "x": "Infantry, Heavy Infantry"}, "fly", {"id": "wounds", "x": 3}, {"id": "commander_tactics", "x": 2}],
-                    "weapons": [{"id": "suit_fists", "count": 4}],
-                    "options": [
-                        {"limit": 3, "addWeapon": ["flak_launcher", "ion_gatling", "flamethrower", "pulse_gatling", "plasma_rifle", "fusion_blaster", "missile_pod"]},
-                        {"addRule": [{"id": "ambush", "name": "Sky Strike"}, {"id": "resilient", "x": 3, "name": "Shield Generator"}, "threat_detector_suit"]}
-                    ],
-                    "min": 1,
-                    "max": 1
-                }
-            ]
-        },
-        "bs_comm_armor": {
-            "name": "Armored Battlesuit Commander",
-            "description": "An elite armored commander in an agile battlesuit.",
-            "min": 1,
-            "max": 1,
-            "keywords": ["Heavy Infantry"],
-            "category": "command",
-            "options": [{"addModel": ["spotter_drone", "gunner_drone", "shield_drone"], "modelLimit": 2}],
-            "models": [
-                {
-                    "name": "Armored Battlesuit Commander",
-                    "movement": 8,
-                    "courage": 7,
-                    "shoot": 7,
-                    "fight": 6,
-                    "defense": 10,
-                    "reflexes": 6,
-                    "rules": [{"id": "leader_x", "x": "Infantry, Heavy Infantry"}, "fly", {"id": "wounds", "x": 3}, {"id": "commander_tactics", "x": 2}],
-                    "weapons": [{"id": "suit_fists", "count": 4}],
-                    "options": [
-                        {"limit": 3, "addWeapon": ["flak_launcher", "ion_gatling", "flamethrower", "pulse_gatling", "plasma_rifle", "fusion_blaster", "missile_pod"]},
-                        {"addRule": [{"id": "ambush", "name": "Sky Strike"}, {"id": "resilient", "x": 3, "name": "Shield Generator"}, "threat_detector_suit"]}
-                    ],
-                    "min": 1,
-                    "max": 1
-                }
-            ]
-        },
-        "celestial": {
-            "name": "Celestial",
-            "description": "A high ranking Federation member.",
-            "category": "command",
-            "models": [
-                {
-                    "name": "Celestial",
-                    "movement": 6,
-                    "courage": 6,
-                    "shoot": 5,
-                    "fight": 6,
-                    "defense": 5,
-                    "reflexes": 5,
-                    "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "wounds", "x": 2}, {"id": "power", "x": 1}],
-                    "weapons": [{"id": "energy_sword", "count": 3}],
-                    "options": [{"addRule": "hover_drone"}, {"addModel": ["spotter_drone", "gunner_drone", "shield_drone"], "modelLimit": 2}],
-                    "min": 1,
-                    "max": 1
-                }
-            ]
-        },
-        "warrior_commander": {
-            "name": "Warrior Commander",
-            "description": "A commander who is in charge of warrior teams.",
-            "category": "command",
-            "options": [{"addModel": ["spotter_drone", "gunner_drone", "shield_drone"], "modelLimit": 2}],
-            "models": [
-                {
-                    "name": "Warrior Commander",
-                    "movement": 6,
-                    "courage": 7,
-                    "shoot": 7,
-                    "fight": 6,
-                    "defense": 6,
-                    "reflexes": 6,
-                    "weapons": ["pulse_rifle", {"id": "ccw", "count": 3}, "stun_grenades"],
-                    "rules": [{"id": "warrior_tactics", "x": 2}, {"id": "wounds", "x": 3}],
-                    "min": 1,
-                    "max": 1
-                }
-            ]
-        },
-        "warrior_leader": {
-            "name": "Warrior Leader",
-            "description": "A squad of infantry who excel at ranged shooting.",
-            "category": "command",
-            "models": [
-                {
-                    "name": "Warrior Leader",
-                    "movement": 6,
-                    "courage": 5,
-                    "shoot": 5,
-                    "fight": 4,
-                    "defense": 6,
-                    "reflexes": 6,
-                    "rules": ["leader"],
-                    "weapons": ["pulse_carbine", "ccw", "stun_grenades"],
-                    "options": [{"replaceWeapon": "pulse_carbine", "withWeapon": ["pulse_rifle"]}, {"addWeapon": "pulse_pistol"}, {"addRule": "spotting_laser"}],
-                    "min": 1,
-                    "max": 1
-                }
-            ]
-        },
-        "warrior": {
-            "name": "Warrior",
-            "description": "A squad of infantry who excel at ranged shooting.",
-            "category": "core",
-            "options": [{"addModel": "support_turret", "modelLimit": 1}, {"addModel": ["spotter_drone", "gunner_drone", "shield_drone", "guardian_drone"], "modelLimit": 1}],
-            "models": [
-                {
-                    "name": "Warrior",
-                    "movement": 6,
-                    "courage": 4,
-                    "shoot": 5,
-                    "fight": 4,
-                    "defense": 6,
-                    "reflexes": 6,
-                    "weapons": ["pulse_carbine", "ccw", "stun_grenades"],
-                    "options": [{"replaceWeapon": "pulse_carbine", "withWeapon": ["pulse_rifle"]}],
-                    "min": 1,
-                    "max": 1
-                }
-            ]
-        },
-        "veteran_warrior_leader": {
-            "name": "Veteran Warrior Leader",
-            "description": "A squad of infantry who excel at ranged shooting.",
-            "category": "command",
-            "models": [
-                {
-                    "name": "Warrior Leader",
-                    "movement": 6,
-                    "courage": 6,
-                    "shoot": 6,
-                    "fight": 5,
-                    "defense": 6,
-                    "reflexes": 6,
-                    "rules": ["leader"],
-                    "weapons": ["pulse_carbine", "ccw", "stun_grenades"],
-                    "options": [{"replaceWeapon": "pulse_carbine", "withWeapon": ["pulse_rifle"]}, {"addWeapon": "pulse_pistol"}, {"addRule": "spotting_laser"}],
-                    "min": 1,
-                    "max": 1
-                }
-            ]
-        },
-        "veteran_warrior": {
-            "name": "Veteran Warrior",
-            "description": "A squad of infantry who excel at ranged shooting.",
-            "category": "core",
-            "options": [{"addModel": "support_turret", "modelLimit": 1}, {"addModel": ["spotter_drone", "gunner_drone", "shield_drone", "guardian_drone"], "modelLimit": 1}],
-            "models": [
-                {
-                    "name": "Veteran Warrior",
-                    "movement": 6,
-                    "courage": 5,
-                    "shoot": 6,
-                    "fight": 5,
-                    "defense": 6,
-                    "reflexes": 6,
-                    "weapons": ["pulse_carbine", "ccw", "stun_grenades"],
-                    "options": [{"replaceWeapon": "pulse_carbine", "withWeapon": ["pulse_rifle"]}],
-                    "min": 1,
-                    "max": 1
-                }
-            ]
-        },
-        "assaulter_leader": {
-            "name": "Assaulter Leader",
-            "description": "A squad of infantry who excel at ranged shooting.",
-            "category": "command",
-            "models": [
-                {
-                    "name": "Assaulter Leader",
-                    "movement": 6,
-                    "courage": 5,
-                    "shoot": 5,
-                    "fight": 5,
-                    "defense": 6,
-                    "reflexes": 6,
-                    "rules": ["leader"],
-                    "weapons": ["pulse_shotgun", {"id": "ccw", "count": 2}, "stun_grenades"],
-                    "options": [{"addWeapon": "pulse_pistol"}, {"addRule": "spotting_laser"}],
-                    "min": 1,
-                    "max": 1
-                }
-            ]
-        },
-        "assaulter": {
-            "name": "Assaulter",
-            "description": "A squad of infantry who excel at ranged shooting.",
-            "category": "core",
-            "options": [{"addModel": "support_turret", "modelLimit": 1}, {"addModel": ["spotter_drone", "gunner_drone", "shield_drone", "guardian_drone"], "modelLimit": 1}],
-            "models": [
-                {
-                    "name": "Assaulter",
-                    "movement": 6,
-                    "courage": 4,
-                    "shoot": 5,
-                    "fight": 5,
-                    "defense": 6,
-                    "reflexes": 6,
-                    "weapons": ["pulse_shotgun", {"id": "ccw", "count": 2}, "stun_grenades"],
-                    "min": 1,
-                    "max": 1
-                }
-            ]
-        },
-        "veteran_assaulter_leader": {
-            "name": "Veteran Assaulter Leader",
-            "description": "A squad of infantry who excel at ranged shooting.",
-            "category": "command",
-            "models": [
-                {
-                    "name": "Veteran Assaulter Leader",
-                    "movement": 6,
-                    "courage": 6,
-                    "shoot": 5,
-                    "fight": 6,
-                    "defense": 6,
-                    "reflexes": 6,
-                    "rules": ["leader"],
-                    "weapons": ["pulse_shotgun", {"id": "ccw", "count": 2}, "stun_grenades"],
-                    "options": [{"addWeapon": "pulse_pistol"}, {"addRule": "spotting_laser"}],
-                    "min": 1,
-                    "max": 1
-                }
-            ]
-        },
-        "veteran_assaulter": {
-            "name": "Veteran Assaulter",
-            "description": "A squad of infantry who excel at ranged shooting.",
-            "category": "core",
-            "options": [{"addModel": "support_turret", "modelLimit": 1}, {"addModel": ["spotter_drone", "gunner_drone", "shield_drone", "guardian_drone"], "modelLimit": 1}],
-            "models": [
-                {
-                    "name": "Veteran Assaulter",
-                    "movement": 6,
-                    "courage": 5,
-                    "shoot": 5,
-                    "fight": 6,
-                    "defense": 6,
-                    "reflexes": 6,
-                    "weapons": ["pulse_shotgun", {"id": "ccw", "count": 2}, "stun_grenades"],
-                    "min": 1,
-                    "max": 1
-                }
-            ]
-        },
-        "pathfinder_leader": {
-            "name": "Pathfinder Leader",
-            "description": "A squad of infantry who excel at forward scouting and spotting.",
-            "category": "command",
-            "rules": ["scout", "leader"],
-            "models": [
-                {
-                    "name": "Pathfinder Leader",
-                    "movement": 6,
-                    "courage": 5,
-                    "shoot": 6,
-                    "fight": 4,
-                    "defense": 5,
-                    "reflexes": 6,
-                    "weapons": ["pulse_carbine", {"id": "ccw", "count": 2}, "stun_grenades"],
-                    "options": [{"addWeapon": "pulse_pistol"}, {"addRule": "spotting_laser"}],
-                    "min": 1,
-                    "max": 1
-                }
-            ]
-        },
-        "pathfinder": {
-            "name": "Pathfinder",
-            "description": "A squad of infantry who excel at forward scouting and spotting.",
-            "category": "specialist",
-            "options": [{"addModel": ["recon_drone", "spotter_drone", "gunner_drone", "shield_drone", "inhibitor_drone", "accelerator_drone"], "modelLimit": 1}],
-            "rules": ["scout"],
-            "models": [
-                {
-                    "name": "Pathfinder",
-                    "movement": 6,
-                    "courage": 4,
-                    "shoot": 6,
-                    "fight": 4,
-                    "defense": 5,
-                    "reflexes": 6,
-                    "weapons": ["pulse_carbine", "ccw", "stun_grenades"],
-                    "options": [{"replaceWeapon": "pulse_carbine", "withWeapon": ["ion_rifle", "rail_rifle"]}, {"addRule": "spotting_laser"}],
-                    "min": 1,
-                    "max": 1
-                }
-            ]
-        },
-        "avian_commander": {
-            "name": "Avian Mercenary Commander",
-            "description": "An intelligent avian mercenary commander with a rifle.",
-            "min": 1,
-            "max": 1,
-            "keywords": ["Infantry", "Avian Mercenaries"],
-            "category": "command",
-            "models": [
-                {
-                    "name": "Avian Mercenary Commander",
-                    "movement": 6,
-                    "courage": 6,
-                    "shoot": 6,
-                    "fight": 6,
-                    "defense": 6,
-                    "reflexes": 5,
-                    "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "wounds", "x": 2}, {"id": "avian_tactics", "x": 1}],
-                    "weapons": ["avian_rifle", {"id": "heavy_ccw", "count": 3}],
-                    "options": [{"replaceRule": {"id": "avian_tactics", "x": 1}, "withRule": {"id": "avian_tactics", "x": 2}}],
-                    "min": 1,
-                    "max": 1
-                }
-            ]
-        },
-        "avian_leader": {
-            "name": "Avian Mercenary Leader",
-            "description": "A squad of avian mercenaries with rifles.",
-            "min": 1,
-            "max": 1,
-            "keywords": ["Infantry", "Avian Mercenaries"],
-            "category": "command",
-            "rules": ["leader"],
-            "models": [
-                {
-                    "name": "Avian Mercenary Leader",
-                    "movement": 6,
-                    "courage": 4,
-                    "shoot": 5,
-                    "fight": 5,
-                    "defense": 5,
-                    "reflexes": 5,
-                    "weapons": ["avian_rifle", "heavy_ccw"],
-                    "options": [{"addRule": "scout"}],
-                    "min": 1,
-                    "max": 1
-                }
-            ]
-        },
-        "avian_mercenary": {
-            "name": "Avian Mercenary",
-            "description": "A squad of avian mercenaries with rifles.",
-            "min": 1,
-            "max": 1,
-            "keywords": ["Infantry", "Avian Mercenaries"],
-            "category": "core",
-            "models": [
-                {
-                    "name": "Avian Mercenary",
-                    "movement": 6,
-                    "courage": 4,
-                    "shoot": 5,
-                    "fight": 5,
-                    "defense": 5,
-                    "reflexes": 5,
-                    "weapons": ["avian_rifle", "heavy_ccw"],
-                    "options": [{"addRule": "scout"}],
-                    "min": 1,
-                    "max": 1
-                }
-            ]
-        },
-        "avian_hound": {
-            "name": "Avian Hound",
-            "description": "A squad of angry hounds trained by avian mercenaries.",
-            "category": "strike",
-            "keywords": ["Infantry", "Avian Mercenaries"],
-            "models": [{"name": "Avian Hound", "movement": 8, "courage": 4, "shoot": 4, "fight": 6, "defense": 4, "reflexes": 5, "weapons": ["hound_fangs"], "min": 1, "max": 1}]
-        },
-        "avian_beast_rider": {
-            "name": "Avian Beast Rider",
-            "description": "A squad of avian mercenaries riding on beasts.",
-            "category": "strike",
-            "keywords": ["Heavy Infantry", "Avian Mercenaries"],
-            "rules": [{"id": "wounds", "x": 2}],
-            "models": [{"name": "Avian Beast Rider", "movement": 8, "courage": 4, "shoot": 5, "fight": 6, "defense": 6, "reflexes": 5, "weapons": ["avian_cannon", "beast_fists"], "min": 1, "max": 1}]
-        },
-        "insect_warrior_leader": {
-            "name": "Insect Warrior Leader",
-            "description": "A squad of flying insects with rifles.",
-            "category": "command",
-            "models": [
-                {
-                    "name": "Insect Warrior Leader",
-                    "movement": 8,
-                    "courage": 5,
-                    "shoot": 5,
-                    "fight": 5,
-                    "defense": 7,
-                    "reflexes": 5,
-                    "rules": ["fly", "leader"],
-                    "weapons": ["neutron_carbine", "ccw"],
-                    "min": 1,
-                    "max": 1
-                }
-            ]
-        },
-        "insect_warrior": {
-            "name": "Insect Warrior",
-            "description": "A squad of flying insects with rifles.",
-            "category": "strike",
-            "models": [
-                {
-                    "name": "Insect Warrior",
-                    "movement": 8,
-                    "courage": 4,
-                    "shoot": 5,
-                    "fight": 5,
-                    "defense": 7,
-                    "reflexes": 5,
-                    "rules": ["fly"],
-                    "weapons": ["neutron_carbine", "ccw"],
-                    "options": [{"replaceModel": "insect_warrior_leader", "modelLimit": 1}],
-                    "min": 1,
-                    "max": 1
-                }
-            ]
-        },
-        "stealth_suit_leader": {
-            "name": "Stealth Suit Leader",
-            "description": "A light battlesuit with camo cloaking technology.",
-            "category": "command",
-            "rules": ["stealth", "fly", "leader"],
-            "models": [
-                {
-                    "name": "Stealth Suit Leader",
-                    "movement": 8,
-                    "courage": 5,
-                    "shoot": 5,
-                    "fight": 4,
-                    "defense": 8,
-                    "reflexes": 6,
-                    "weapons": ["pulse_gatling", {"id": "ccw", "count": 2}, "stun_grenades"],
-                    "options": [{"addRule": "spotting_laser"}, {"addRule": ["homing_beacon"]}, {"replaceWeapon": "pulse_gatling", "withWeapon": ["fusion_blaster"], "modelLimit": 1}],
-                    "min": 1,
-                    "max": 1
-                }
-            ]
-        },
-        "stealth_suit": {
-            "name": "Stealth Suit",
-            "description": "A light battlesuit with camo cloaking technology.",
-            "category": "specialist",
-            "rules": ["stealth", "fly"],
-            "options": [{"addModel": ["spotter_drone", "gunner_drone", "shield_drone"], "modelLimit": 1}],
-            "models": [
-                {
-                    "name": "Stealth Suit",
-                    "movement": 8,
-                    "courage": 4,
-                    "shoot": 5,
-                    "fight": 4,
-                    "defense": 8,
-                    "reflexes": 6,
-                    "options": [{"addRule": ["homing_beacon"]}],
-                    "weapons": ["pulse_gatling", "ccw", "stun_grenades"],
-                    "min": 1,
-                    "max": 1
-                }
-            ]
-        },
-        "stealth_suit_heavy": {
-            "name": "Stealth Suit Heavy",
-            "description": "A light battlesuit with camo cloaking technology.",
-            "category": "heavy",
-            "rules": ["stealth", "fly"],
-            "models": [
-                {
-                    "name": "Stealth Suit",
-                    "movement": 8,
-                    "courage": 4,
-                    "shoot": 5,
-                    "fight": 4,
-                    "defense": 8,
-                    "reflexes": 6,
-                    "weapons": ["pulse_gatling", "ccw", "stun_grenades"],
-                    "options": [{"replaceWeapon": "pulse_gatling", "withWeapon": ["fusion_blaster"]}, {"addRule": ["homing_beacon"]}],
-                    "min": 1,
-                    "max": 1
-                }
-            ]
-        },
-        "battle_suit_leader": {
-            "name": "Battlesuit Leader",
-            "description": "Warriors in agile battlesuits.",
-            "min": 1,
-            "max": 1,
-            "keywords": ["Heavy Infantry"],
-            "category": "command",
-            "options": [{"addModel": ["spotter_drone", "gunner_drone", "shield_drone"], "modelLimit": 2}],
-            "rules": ["fly"],
-            "models": [
-                {
-                    "name": "Battlesuit Leader",
-                    "movement": 8,
-                    "courage": 5,
-                    "shoot": 5,
-                    "fight": 4,
-                    "defense": 9,
-                    "reflexes": 6,
-                    "rules": [{"id": "wounds", "x": 2}, "leader"],
-                    "weapons": [{"id": "suit_fists", "count": 2}],
-                    "options": [
-                        {"limit": 3, "addWeapon": ["flak_launcher", "ion_gatling", "flamethrower", "pulse_gatling", "plasma_rifle", "fusion_blaster", "missile_pod"]},
-                        {"addRule": [{"id": "ambush", "name": "Sky Strike"}, {"id": "resilient", "x": 3, "name": "Shield Generator"}, "threat_detector_suit"]}
-                    ],
-                    "min": 1,
-                    "max": 1
-                }
-            ]
-        },
-        "battle_suit": {
-            "name": "Battlesuit",
-            "description": "Warriors in agile battlesuits.",
-            "min": 1,
-            "max": 1,
-            "keywords": ["Heavy Infantry"],
-            "category": "specialist",
-            "options": [{"addModel": ["spotter_drone", "gunner_drone", "shield_drone"], "modelLimit": 2}],
-            "rules": ["fly"],
-            "models": [
-                {
-                    "name": "Battlesuit",
-                    "movement": 8,
-                    "courage": 5,
-                    "shoot": 5,
-                    "fight": 4,
-                    "defense": 9,
-                    "reflexes": 6,
-                    "rules": [{"id": "wounds", "x": 2}],
-                    "weapons": [{"id": "suit_fists", "count": 2}],
-                    "options": [
-                        {"limit": 3, "addWeapon": ["flak_launcher", "ion_gatling", "flamethrower", "pulse_gatling", "plasma_rifle", "fusion_blaster", "missile_pod"]},
-                        {"addRule": [{"id": "ambush", "name": "Sky Strike"}, {"id": "resilient", "x": 3, "name": "Shield Generator"}, "threat_detector_suit"]}
-                    ],
-                    "min": 1,
-                    "max": 1
-                }
-            ]
-        },
-        "tactical_drone": {
-            "name": "Tactical Drone",
-            "description": "A squad of support drones.",
-            "min": 1,
-            "max": 1,
-            "keywords": ["Drone"],
-            "category": "specialist",
-            "models": [
-                {
-                    "name": "Tactical Drone",
-                    "movement": 8,
-                    "courage": 5,
-                    "shoot": 5,
-                    "fight": 4,
-                    "defense": 7,
-                    "reflexes": 5,
-                    "weapons": ["defense_system"],
-                    "rules": ["fly", "tactical_drone"],
-                    "min": 1,
-                    "max": 1
-                }
-            ]
-        },
-        "gun_drone": {
-            "name": "Heavy Gun Drone",
-            "description": "A squad of drones with heavy weapons.",
-            "min": 1,
-            "max": 1,
-            "keywords": ["Drone"],
-            "category": "strike",
-            "models": [
-                {
-                    "name": "Heavy Gun Drone",
-                    "movement": 8,
-                    "courage": 5,
-                    "shoot": 5,
-                    "fight": 4,
-                    "defense": 7,
-                    "reflexes": 5,
-                    "weapons": ["pulse_gatling"],
-                    "rules": ["fly"],
-                    "options": [{"addWeapon": "pulse_gatling"}, {"addRule": "spotting_laser"}],
-                    "min": 1,
-                    "max": 1
-                }
-            ]
-        },
-        "sniper_drone": {
-            "name": "Sniper Drone",
-            "description": "A squad of drones with sniper rifles.",
-            "min": 1,
-            "max": 1,
-            "keywords": ["Drone"],
-            "category": "specialist",
-            "models": [
-                {"name": "Sniper Drone", "movement": 8, "courage": 5, "shoot": 5, "fight": 4, "defense": 7, "reflexes": 5, "weapons": ["pulse_sniper"], "rules": ["fly", "stealth"], "min": 1, "max": 1}
-            ]
+  "id": "tao_federation",
+  "name": "Tao Federation",
+  "author": "guitarninja#5707",
+  "background": "The Tao Federation are a group of cooperating aliens, and explorers expanding their influence throughout the stars. Their primary fighting style involves a combined arms assault of mechanized infantry, flying battlesuits and high-tech infantry.",
+  "units": {
+    "bs_comm": {
+      "name": "Battlesuit Commander",
+      "description": "An elite commander in an agile battlesuit.",
+      "min": 1,
+      "max": 1,
+      "keywords": ["Heavy Infantry"],
+      "category": "command",
+      "options": [{"addModel": ["spotter_drone", "gunner_drone", "shield_drone"], "modelLimit": 2}],
+      "models": [
+        {
+          "name": "Commander",
+          "movement": 8,
+          "courage": 7,
+          "shoot": 7,
+          "fight": 6,
+          "defense": 9,
+          "reflexes": 6,
+          "rules": [{"id": "leader_x", "x": "Infantry, Heavy Infantry"}, "fly", {"id": "wounds", "x": 3}, {"id": "commander_tactics", "x": 2}],
+          "weapons": [{"id": "suit_fists", "count": 4}],
+          "options": [
+            {"limit": 3, "addWeapon": ["flak_launcher", "ion_gatling", "flamethrower", "pulse_gatling", "plasma_rifle", "fusion_blaster", "missile_pod"]},
+            {"addRule": [{"id": "ambush", "name": "Sky Strike"}, {"id": "resilient", "x": 3, "name": "Shield Generator"}, "threat_detector_suit"]}
+          ],
+          "min": 1,
+          "max": 1
         }
+      ]
     },
-    "models": {
-        "support_turret": {
-            "name": "Support Turret",
-            "movement": 6,
-            "courage": "-",
-            "shoot": 5,
-            "fight": 4,
-            "defense": "-",
-            "reflexes": "-",
-            "weapons": ["smart_missile"],
-            "options": [{"replaceWeapon": "smart_missile", "withWeapon": "missile"}],
-            "min": 1,
-            "max": 1
-        },
-        "attached_interceptor_drone": {
-            "name": "Attached Interceptor Drone",
-            "movement": 8,
-            "courage": "-",
-            "shoot": 5,
-            "fight": 4,
-            "defense": "-",
-            "reflexes": "-",
-            "rules": ["attached"],
-            "weapons": [{"id": "ion_rifle", "count": 2}],
-            "min": 1,
-            "max": 1
-        },
-        "attached_gunner_drone": {
-            "name": "Attached Gunner Drone",
-            "movement": 8,
-            "courage": "-",
-            "shoot": 5,
-            "fight": 4,
-            "defense": "-",
-            "reflexes": "-",
-            "rules": ["attached"],
-            "weapons": [{"id": "pulse_carbine", "count": 2}],
-            "min": 0,
-            "max": 1
-        },
-        "recon_drone": {
-            "name": "Recon Drone",
-            "movement": 8,
-            "courage": "-",
-            "shoot": 5,
-            "fight": 4,
-            "defense": "-",
-            "reflexes": "-",
-            "weapons": ["pulse_gatling"],
-            "rules": ["recon_drone"],
-            "min": 1,
-            "max": 1
-        },
-        "shield_missile_drone": {
-            "name": "Shield Missile Drone",
-            "movement": 8,
-            "courage": "-",
-            "shoot": 5,
-            "fight": 4,
-            "defense": "-",
-            "reflexes": "-",
-            "rules": [{"id": "resilient", "x": 4}],
-            "weapons": ["missile_pod"],
-            "min": 1,
-            "max": 1
-        },
-        "inhibitor_drone": {"name": "Inhibitor Drone", "movement": 8, "courage": "-", "shoot": 5, "fight": 4, "defense": "-", "reflexes": "-", "rules": ["inhibitor"], "min": 0, "max": 1},
-        "spotter_drone": {"name": "Spotter Drone", "movement": 8, "courage": "-", "shoot": 5, "fight": 4, "defense": "-", "reflexes": "-", "rules": ["spotting_laser"], "min": 1, "max": 1},
-        "missile_drone": {"name": "Missile Drone", "movement": 8, "courage": "-", "shoot": 5, "fight": 4, "defense": "-", "reflexes": "-", "rules": [], "weapons": ["missile_pod"], "min": 1, "max": 1},
-        "stealth_drone": {"name": "Stealth Drone", "movement": 8, "courage": "-", "shoot": 5, "fight": 4, "defense": "-", "reflexes": "-", "rules": ["stealth_field"], "min": 1, "max": 1},
-        "gunner_drone": {"name": "Gunner Drone", "movement": 8, "courage": "-", "shoot": 5, "fight": 4, "defense": "-", "reflexes": "-", "weapons": ["pulse_carbine"], "min": 1, "max": 1},
-        "shield_drone": {"name": "Shield Drone", "movement": 8, "courage": "-", "shoot": 5, "fight": 4, "defense": "-", "reflexes": "-", "rules": ["pulse_shield"], "min": 1, "max": 1},
-        "guardian_drone": {"name": "Guardian Drone", "movement": 8, "courage": "-", "shoot": 5, "fight": 4, "defense": "-", "reflexes": "-", "rules": ["protection"], "min": 1, "max": 1},
-        "accelerator_drone": {"name": "Accelerator Drone", "movement": 8, "courage": "-", "shoot": 5, "fight": 4, "defense": "-", "reflexes": "-", "rules": ["accelerator"], "min": 1, "max": 1}
-    },
-    "weapons": {
-        "ion_bombs": {"name": "Ion Bombs", "attacks": 2, "short": 3, "ap": 4, "rules": ["bomb", "scatter", {"id": "blast", "x": 3}]},
-        "seeker_missiles": {"name": "Homing Missile", "attacks": 1, "short": 36, "medium": 72, "ap": 6, "rules": ["indirect", "homing", {"id": "ammo", "x": 1}]},
-        "flak_launcher": {"name": "Flak Launcher", "attacks": 1, "ap": 1, "short": 9, "medium": 18, "rules": [{"id": "indirect"}, {"id": "blast", "x": 3}, "assault"]},
-        "heavy_pulse_gatling": {"name": "Heavy Pulse Gatling", "attacks": 10, "short": 18, "medium": 36, "ap": 3},
-        "pulse_gatling": {"name": "Pulse Gatling", "attacks": 3, "short": 9, "medium": 18, "ap": 2, "rules": ["assault"]},
-        "ion_gatling": {"name": "Ion Gatling", "attacks": 3, "short": 9, "medium": 18, "ap": 3, "rules": ["overcharge", "assault"]},
-        "fusion_blaster": {"name": "Fusion Blaster", "attacks": 1, "short": 12, "medium": 24, "ap": 6, "rules": [{"id": "critical", "x": 1}, "assault"]},
-        "heavy_fusion_blaster": {"name": "Heavy Fusion Blaster", "attacks": 2, "short": 18, "medium": 36, "ap": 6, "rules": [{"id": "critical", "x": 1}]},
-        "missile": {"name": "Assault Missile", "attacks": 1, "short": 18, "medium": 36, "ap": 3, "rules": ["assault"]},
-        "missile_pod": {"name": "Assault Missile Pod", "attacks": 2, "short": 18, "medium": 36, "ap": 3, "rules": ["assault"]},
-        "heavy_missile_pod": {"name": "Heavy Missile Pod", "attacks": 2, "short": 18, "medium": 36, "ap": 4},
-        "support_missile_pod": {"name": "Support Missile Pod", "attacks": 2, "short": 18, "medium": 36, "ap": 4},
-        "twin_missile_battery": {"name": "Twin Missile Battery", "attacks": 4, "short": 20, "medium": 30, "long": 40, "ap": 1, "rules": [{"id": "blast", "x": 3}]},
-        "heavy_gatling_vulcan": {"name": "Heavy Gatling Vulcan", "attacks": 12, "short": 20, "medium": 30, "long": 40, "ap": 1},
-        "heavy_railgun": {
-            "name": "Heavy Rail Cannon",
-            "profiles": [{"name": "Beam", "attacks": 1, "short": 36, "medium": 72, "ap": 8}, {"name": "Blast", "attacks": 1, "short": 36, "medium": 72, "ap": 3, "rules": [{"id": "blast", "x": 6}]}]
-        },
-        "ion_rifle": {"name": "Ion Rifle", "attacks": 1, "short": 15, "medium": 30, "ap": 4, "rules": ["overcharge", "sniper"]},
-        "ion_cannon": {"name": "Ion Cannon", "attacks": 1, "short": 30, "medium": 60, "ap": 5, "rules": ["overcharge", {"id": "blast", "x": 6}]},
-        "quad_ion_rifle": {"name": "Quad Ion Rifle", "attacks": 4, "short": 15, "medium": 30, "ap": 4, "rules": [{"id": "overcharge"}]},
-        "ion_destroyer": {"name": "Ion Destroyer", "attacks": 4, "short": 24, "medium": 48, "ap": 4, "rules": [{"id": "overcharge"}]},
-        "hound_fangs": {"name": "Hound Fangs", "attacks": 2, "short": "Melee", "ap": 1, "rules": ["rending"]},
-        "defense_system": {"name": "Defense System", "attacks": 1, "short": 8, "ap": 2, "rules": ["assault"]},
-        "vulcan_rifle": {"name": "Vulcan Rifle", "attacks": 1, "short": 18, "medium": 36, "ap": 1},
-        "vulcan_carbine": {"name": "Vulcan Carbine", "attacks": 1, "short:": 9, "medium": 18, "ap": 1},
-        "vulcan_shotgun": {"name": "Vulcan Shotgun", "attacks": 1, "short": 6, "medium": 12, "long": 15, "ap": 3},
-        "hand_railgun": {"name": "Hand railgun", "attacks": 1, "short": 20, "medium": 25, "long": 30, "ap": 4},
-        "rail_rifle": {"name": "Rail Rifle", "attacks": 1, "short": 15, "medium": 30, "ap": 5, "rules": ["sniper"]},
-        "heavy_rail_rifle": {"name": "Heavy Rail Rifle", "attacks": 1, "short": 30, "medium": 60, "ap": 7},
-        "smart_missile": {"name": "Smart Missile", "attacks": 1, "short": 15, "medium": 30, "ap": 2, "rules": ["indirect"]},
-        "smart_missiles": {"name": "Smart Missile Pod", "attacks": 2, "short": 15, "medium": 30, "ap": 2, "rules": ["indirect"]},
-        "pulse_shotgun": {"name": "Pulse Shotgun", "attacks": 1, "short": 6, "medium": 12, "ap": 2, "rules": ["assault", "brutal"]},
-        "pulse_carbine": {"name": "Pulse Carbine", "attacks": 1, "short": 9, "medium": 18, "ap": 2, "rules": ["assault"]},
-        "twin_pulse_carbine": {"name": "Twin Pulse Carbine", "attacks": 4, "short": 9, "medium": 18, "ap": 2, "rules": ["assault"]},
-        "pulse_rifle": {"name": "Pulse Rifle", "attacks": 1, "short": 15, "medium": 30, "ap": 2, "rules": ["assault"]},
-        "pulse_sniper": {"name": "Pulse Sniper", "attacks": 1, "short": 24, "medium": 48, "ap": 2, "rules": ["sniper"]},
-        "pulse_pistol": {"name": "Pulse Pistol", "attacks": 1, "short": 6, "medium": 12, "ap": 2, "rules": ["pistol"]},
-        "stun_grenades": {"name": "Stun Grenades", "attacks": 1, "short": 6, "rules": ["grenade", "stun"]},
-        "suit_fists": {"name": "Suit Fists", "attacks": 1, "short": "Melee", "ap": 2},
-        "beast_fists": {"name": "Beasts Fists", "attacks": 2, "short": "Melee", "ap": 3},
-        "avian_rifle": {"name": "Avian Rifle", "attacks": 1, "short": 12, "medium": 24, "ap": 1},
-        "avian_cannon": {"name": "Avian Cannon", "attacks": 2, "short": 24, "medium": 48, "ap": 4},
-        "neutron_carbine": {"name": "Neutron Carbine", "attacks": 1, "short": 9, "medium": 18, "ap": 3}
-    },
-    "rules": {
-        "stealth_field": {
-            "name": "Stealth Field",
-            "description": "Once per round, when an enemy unit targets a friendly _Infantry_ unit within 3\" suffer -1 Accuracy. This may be used one additional time per round for each model with this rule.",
-            "points": 5
-        },
-        "pulse_shield": {
-            "name": "Pulse Shield",
-            "description": "Once per round, when an enemy unit targets a friendly _Infantry_ unit within 3\" roll a die for each hit that unit takes. On a 3 or less that hit is prevented. This may be used one additional time per round for each model with this rule.",
-            "points": 5
-        },
-        "commander_tactics": {
-            "name": "Commander Tactics",
-            "inputs": ["x"],
-            "description": "When this unit is activated, choose up to X friendly _Infantry_ or _Heavy Infantry_ units within 6\" to receive one of the following bonuses until the end of the round: \n * Re-roll failed Accuracy tests of 9+ \n * Re-roll failed Initiative tests of 9+",
-            "points": ["rule.x", {"multiply": 5}]
-        },
-        "warrior_tactics": {
-            "name": "Warrior Tactics",
-            "inputs": ["x"],
-            "description": "When this unit is activated, choose up to X friendly _Infantry_ units within 6\" to receive one of the following bonuses until the end of the round: \n * Re-roll failed Accuracy tests of 9+ \n * Re-roll failed Initiative tests of 9+",
-            "points": ["rule.x", {"multiply": 5}]
-        },
-        "avian_tactics": {
-            "name": "Avian Tactics",
-            "inputs": ["x"],
-            "description": "When this unit is activated, choose up to X friendly _Avian Mercenaries_ _Infantry_ units within 6\" to receive one of the following bonuses until the end of the round: \n * Re-roll failed Accuracy tests of 9+ \n * Re-roll failed Strength tests of 9+",
-            "points": ["rule.x", {"multiply": 5}]
-        },
-        "attached": {
-            "name": "Attached",
-            "description": "This model is attached to its hosting unit and counts as being embarked but does not take up any transport space and may shoot while embarked."
-        },
-        "spotting_laser": {
-            "name": "Spotting Laser",
-            "description": "Any time during this model's activation, pick an enemy unit within 36\" to gain 1 spotting marker. When a friendly unit shoots at that target they may spend spotting markers to gain the following for that attack: \n * One Marker: Re-roll Accuracy rolls of 9+ \n * Two Markers: +1 Accuracy \n\n\n These effects are cumulative and may be activated multiple times. At the end of the round, remove all spotting markers.",
-            "points": 5
-        },
-        "homing_beacon": {
-            "name": "Homing Beacon",
-            "description": "Friendly units deploying using Ambush deployment may ignore enemy units when deploying within 6\" of this model and automatically pass Initiative tests to Ambush.",
-            "points": 5
-        },
-        "inhibitor": {"name": "Inhibitor", "description": "Enemy units suffer -2\" of movement with any Charge actions targeting friendly units within 3\".", "points": 5},
-        "tactical_drone": {
-            "name": "Tactical Drone",
-            "description": "Whenever a friendly _Infantry_ model within 6\" is killed or loses a Wound(x), roll a D10. On a 3 or less, that loss is prevented.",
-            "points": 5
-        },
-        "recon_drone": {"name": "Recon Scope", "description": "Friendly models within 3\" may ignore cover bonuses.", "points": 2},
-        "accelerator": {"name": "Accelerator", "description": "Friendly models within 3\" add +3\" to the short and long ranges of all weapons.", "points": 5},
-        "threat_detector_suit": {"name": "Threat Detector", "description_short": "+1 Initiative", "description": "This model gets +1 Initiative.", "points": 5},
-        "hover_drone": {"name": "Hover Drone", "hidden": "true", "description": "This model gets +2\" Move and Fly.", "description_short": "+4\" Move, Fly", "points": 5},
-        "protection": {"name": "Protection", "description": "Friendly _Infantry_ units within 3\" get +1 Save.", "points": 5}
-    },
-    "strategies": {
-        "covering_fire": {
-            "name": "Covering Fire",
-            "phase": "activation",
-            "flavor": "Members of the Federation are tirelessly drilled on covering one another in the event that one unit is overrun.",
-            "description": "Use when a friendly _Infantry_ or _Heavy Infantry_ unit is Charged. One friendly _Infantry_ or _Heavy Infantry_ unit within 6\" may take an Initiative test and attempt to react to the charging unit.",
-            "cost": 1
-        },
-        "preservation_protocols": {
-            "name": "Preservation Protocols",
-            "phase": "activation",
-            "flavor": "Federation drones are programmed to protect their creators at all costs.",
-            "description": "Use after an _Infantry_ or _Heavy Infantry_ unit has been hit by a ranged weapon. For this attack, you can roll a D10 each time an attack made with a ranged weapon hits that unit. If there is a friendly _Drone_ unit within 6\" of it, and the _Drone_ unit is closer to the attacking model than the target unit. On an 8 or less a hit is transferred to the _Drone_ unit instead of the original target.",
-            "cost": 2
-        },
-        "danger_close": {
-            "phase": "activation",
-            "name": "Danger Close",
-            "description": "Use when shooting with an _Infantry_ unit. That unit may target enemies it is engaged with at -1 Accuracy.",
-            "flavor": "Federation troops are trained to use defensive tactics to protect themselves in close quarters.",
-            "cost": 1
-        },
-        "moving_fire": {
-            "subfactions": ["mobility_focus"],
-            "name": "Moving Fire",
-            "phase": "activation",
-            "flavor": "These troops are trained to shoot while moving to maintain pressure on their enemies.",
-            "description": "Use after an _Infantry_ unit Shoots with an _Assault_ weapon. That unit may ignore the -1 Accuracy penalty.",
-            "cost": 1
-        },
-        "double_time": {
-            "subfactions": ["mobility_focus"],
-            "phase": "activation",
-            "name": "Double Time",
-            "description": "Use when a unit makes a Move action. It gains +3\" of Movement for that action",
-            "flavor": "At some points in battle it is necessary to move with great urgency.",
-            "cost": 1
-        },
-        "focus_fire": {
-            "phase": "activation",
-            "subfactions": ["mobility_focus"],
-            "name": "Burst",
-            "flavor": "With a wave of fire, surely any target could not survive.",
-            "description": "Use when an _Infantry_ unit makes a Shoot action. Hit rolls of 1 or 2 cause 2 hits instead of 1.",
-            "cost": 1
-        },
-        "vigilance": {
-            "subfactions": ["vigilance_focus"],
-            "name": "Vigilance",
-            "phase": "activation",
-            "description": "Use when taking an Initiative test for a reaction. That unit is treated as having +2 Initiative for that test.",
-            "flavor": "With countless battles experienced, these troops are trained to react to any situation.",
-            "cost": 1
-        },
-        "cautious": {
-            "subfactions": ["vigilance_focus"],
-            "name": "Cautious",
-            "phase": "activation",
-            "description": "Use after an _Infantry_ unit performs a Move action. That unit may perform a free Hold action.",
-            "flavor": "Cautious movement can be key to staying alive.",
-            "cost": 1
-        },
-        "overcharge": {
-            "phase": "activation",
-            "subfactions": ["vigilance_focus"],
-            "name": "Overcharge",
-            "flavor": "By overcharging their weapons, some hits can pierce even heavily armored targets.",
-            "description": "Use when an _Infantry_ unit makes a Shoot action. Hit rolls of 1 or 2 gain +1 AP.",
-            "cost": 1
+    "bs_comm_coldfusion": {
+      "name": "Coldfusion Battlesuit Commander",
+      "description": "An elite commander in an agile battlesuit.",
+      "min": 1,
+      "max": 1,
+      "keywords": ["Heavy Infantry"],
+      "category": "command",
+      "options": [{"addModel": ["spotter_drone", "gunner_drone", "shield_drone"], "modelLimit": 2}],
+      "models": [
+        {
+          "name": "Coldfusion Battlesuit Commander",
+          "movement": 12,
+          "courage": 7,
+          "shoot": 7,
+          "fight": 6,
+          "defense": 9,
+          "reflexes": 6,
+          "rules": [{"id": "leader_x", "x": "Infantry, Heavy Infantry"}, "fly", {"id": "wounds", "x": 3}, {"id": "commander_tactics", "x": 2}],
+          "weapons": [{"id": "suit_fists", "count": 4}],
+          "options": [
+            {"limit": 3, "addWeapon": ["flak_launcher", "ion_gatling", "flamethrower", "pulse_gatling", "plasma_rifle", "fusion_blaster", "missile_pod"]},
+            {"addRule": [{"id": "ambush", "name": "Sky Strike"}, {"id": "resilient", "x": 3, "name": "Shield Generator"}, "threat_detector_suit"]}
+          ],
+          "min": 1,
+          "max": 1
         }
+      ]
     },
-    "powers": {
-        "fortify": {"name": "Courage", "description": "Target friendly unit within 12\" gets +1 Courage until the of the round.", "charge": 8},
-        "steady": {"name": "Steady", "description": "Target friendly unit within 12\" gets +2 Initiative until the end of the round.", "charge": 8},
-        "calm": {"name": "Calm", "description": "Target enemy unit within 18\" suffers -1 Strength with its next attack.", "charge": 6},
-        "inferno": {"name": "Inferno", "description": "Target enemy unit within 12\" takes 3 hits with AP 3.", "charge": 6},
-        "terror": {"name": "Terror", "description": "Target enemy unit within 12\" immediately takes 3 Shock.", "charge": 7},
-        "storm": {"name": "Storm", "description": "Target enemy unit within 12\" takes 3 hits with AP 2.", "charge": 7}
+    "bs_comm_armor": {
+      "name": "Armored Battlesuit Commander",
+      "description": "An elite armored commander in an agile battlesuit.",
+      "min": 1,
+      "max": 1,
+      "keywords": ["Heavy Infantry"],
+      "category": "command",
+      "options": [{"addModel": ["spotter_drone", "gunner_drone", "shield_drone"], "modelLimit": 2}],
+      "models": [
+        {
+          "name": "Armored Battlesuit Commander",
+          "movement": 8,
+          "courage": 7,
+          "shoot": 7,
+          "fight": 6,
+          "defense": 10,
+          "reflexes": 6,
+          "rules": [{"id": "leader_x", "x": "Infantry, Heavy Infantry"}, "fly", {"id": "wounds", "x": 3}, {"id": "commander_tactics", "x": 2}],
+          "weapons": [{"id": "suit_fists", "count": 4}],
+          "options": [
+            {"limit": 3, "addWeapon": ["flak_launcher", "ion_gatling", "flamethrower", "pulse_gatling", "plasma_rifle", "fusion_blaster", "missile_pod"]},
+            {"addRule": [{"id": "ambush", "name": "Sky Strike"}, {"id": "resilient", "x": 3, "name": "Shield Generator"}, "threat_detector_suit"]}
+          ],
+          "min": 1,
+          "max": 1
+        }
+      ]
+    },
+    "celestial": {
+      "name": "Celestial",
+      "description": "A high ranking Federation member.",
+      "category": "command",
+      "models": [
+        {
+          "name": "Celestial",
+          "movement": 6,
+          "courage": 6,
+          "shoot": 5,
+          "fight": 6,
+          "defense": 5,
+          "reflexes": 5,
+          "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "wounds", "x": 2}, {"id": "power", "x": 1}],
+          "weapons": [{"id": "energy_sword", "count": 3}],
+          "options": [{"addRule": "hover_drone"}, {"addModel": ["spotter_drone", "gunner_drone", "shield_drone"], "modelLimit": 2}],
+          "min": 1,
+          "max": 1
+        }
+      ]
+    },
+    "warrior_commander": {
+      "name": "Warrior Commander",
+      "description": "A commander who is in charge of warrior teams.",
+      "category": "command",
+      "options": [{"addModel": ["spotter_drone", "gunner_drone", "shield_drone"], "modelLimit": 2}],
+      "models": [
+        {
+          "name": "Warrior Commander",
+          "movement": 6,
+          "courage": 7,
+          "shoot": 7,
+          "fight": 6,
+          "defense": 6,
+          "reflexes": 6,
+          "weapons": ["pulse_rifle", {"id": "ccw", "count": 3}, "stun_grenades"],
+          "rules": [{"id": "warrior_tactics", "x": 2}, {"id": "wounds", "x": 3}],
+          "min": 1,
+          "max": 1
+        }
+      ]
+    },
+    "warrior_leader": {
+      "name": "Warrior Leader",
+      "description": "A squad of infantry who excel at ranged shooting.",
+      "category": "command",
+      "models": [
+        {
+          "name": "Warrior Leader",
+          "movement": 6,
+          "courage": 5,
+          "shoot": 5,
+          "fight": 4,
+          "defense": 6,
+          "reflexes": 6,
+          "rules": ["leader"],
+          "weapons": ["pulse_carbine", "ccw", "stun_grenades"],
+          "options": [{"replaceWeapon": "pulse_carbine", "withWeapon": ["pulse_rifle"]}, {"addWeapon": "pulse_pistol"}, {"addRule": "spotting_laser"}],
+          "min": 1,
+          "max": 1
+        }
+      ]
+    },
+    "warrior": {
+      "name": "Warrior",
+      "description": "A squad of infantry who excel at ranged shooting.",
+      "category": "core",
+      "options": [{"addModel": "support_turret", "modelLimit": 1}, {"addModel": ["spotter_drone", "gunner_drone", "shield_drone", "guardian_drone"], "modelLimit": 1}],
+      "models": [
+        {
+          "name": "Warrior",
+          "movement": 6,
+          "courage": 4,
+          "shoot": 5,
+          "fight": 4,
+          "defense": 6,
+          "reflexes": 6,
+          "weapons": ["pulse_carbine", "ccw", "stun_grenades"],
+          "options": [{"replaceWeapon": "pulse_carbine", "withWeapon": ["pulse_rifle"]}],
+          "min": 1,
+          "max": 1
+        }
+      ]
+    },
+    "veteran_warrior_leader": {
+      "name": "Veteran Warrior Leader",
+      "description": "A squad of infantry who excel at ranged shooting.",
+      "category": "command",
+      "models": [
+        {
+          "name": "Warrior Leader",
+          "movement": 6,
+          "courage": 6,
+          "shoot": 6,
+          "fight": 5,
+          "defense": 6,
+          "reflexes": 6,
+          "rules": ["leader"],
+          "weapons": ["pulse_carbine", "ccw", "stun_grenades"],
+          "options": [{"replaceWeapon": "pulse_carbine", "withWeapon": ["pulse_rifle"]}, {"addWeapon": "pulse_pistol"}, {"addRule": "spotting_laser"}],
+          "min": 1,
+          "max": 1
+        }
+      ]
+    },
+    "veteran_warrior": {
+      "name": "Veteran Warrior",
+      "description": "A squad of infantry who excel at ranged shooting.",
+      "category": "core",
+      "options": [{"addModel": "support_turret", "modelLimit": 1}, {"addModel": ["spotter_drone", "gunner_drone", "shield_drone", "guardian_drone"], "modelLimit": 1}],
+      "models": [
+        {
+          "name": "Veteran Warrior",
+          "movement": 6,
+          "courage": 5,
+          "shoot": 6,
+          "fight": 5,
+          "defense": 6,
+          "reflexes": 6,
+          "weapons": ["pulse_carbine", "ccw", "stun_grenades"],
+          "options": [{"replaceWeapon": "pulse_carbine", "withWeapon": ["pulse_rifle"]}],
+          "min": 1,
+          "max": 1
+        }
+      ]
+    },
+    "assaulter_leader": {
+      "name": "Assaulter Leader",
+      "description": "A squad of infantry who excel at ranged shooting.",
+      "category": "command",
+      "models": [
+        {
+          "name": "Assaulter Leader",
+          "movement": 6,
+          "courage": 5,
+          "shoot": 5,
+          "fight": 5,
+          "defense": 6,
+          "reflexes": 6,
+          "rules": ["leader"],
+          "weapons": ["pulse_shotgun", {"id": "ccw", "count": 2}, "stun_grenades"],
+          "options": [{"addWeapon": "pulse_pistol"}, {"addRule": "spotting_laser"}],
+          "min": 1,
+          "max": 1
+        }
+      ]
+    },
+    "assaulter": {
+      "name": "Assaulter",
+      "description": "A squad of infantry who excel at ranged shooting.",
+      "category": "core",
+      "options": [{"addModel": "support_turret", "modelLimit": 1}, {"addModel": ["spotter_drone", "gunner_drone", "shield_drone", "guardian_drone"], "modelLimit": 1}],
+      "models": [
+        {
+          "name": "Assaulter",
+          "movement": 6,
+          "courage": 4,
+          "shoot": 5,
+          "fight": 5,
+          "defense": 6,
+          "reflexes": 6,
+          "weapons": ["pulse_shotgun", {"id": "ccw", "count": 2}, "stun_grenades"],
+          "min": 1,
+          "max": 1
+        }
+      ]
+    },
+    "veteran_assaulter_leader": {
+      "name": "Veteran Assaulter Leader",
+      "description": "A squad of infantry who excel at ranged shooting.",
+      "category": "command",
+      "models": [
+        {
+          "name": "Veteran Assaulter Leader",
+          "movement": 6,
+          "courage": 6,
+          "shoot": 5,
+          "fight": 6,
+          "defense": 6,
+          "reflexes": 6,
+          "rules": ["leader"],
+          "weapons": ["pulse_shotgun", {"id": "ccw", "count": 2}, "stun_grenades"],
+          "options": [{"addWeapon": "pulse_pistol"}, {"addRule": "spotting_laser"}],
+          "min": 1,
+          "max": 1
+        }
+      ]
+    },
+    "veteran_assaulter": {
+      "name": "Veteran Assaulter",
+      "description": "A squad of infantry who excel at ranged shooting.",
+      "category": "core",
+      "options": [{"addModel": "support_turret", "modelLimit": 1}, {"addModel": ["spotter_drone", "gunner_drone", "shield_drone", "guardian_drone"], "modelLimit": 1}],
+      "models": [
+        {
+          "name": "Veteran Assaulter",
+          "movement": 6,
+          "courage": 5,
+          "shoot": 5,
+          "fight": 6,
+          "defense": 6,
+          "reflexes": 6,
+          "weapons": ["pulse_shotgun", {"id": "ccw", "count": 2}, "stun_grenades"],
+          "min": 1,
+          "max": 1
+        }
+      ]
+    },
+    "pathfinder_leader": {
+      "name": "Pathfinder Leader",
+      "description": "A squad of infantry who excel at forward scouting and spotting.",
+      "category": "command",
+      "rules": ["scout", "leader"],
+      "models": [
+        {
+          "name": "Pathfinder Leader",
+          "movement": 6,
+          "courage": 5,
+          "shoot": 6,
+          "fight": 4,
+          "defense": 5,
+          "reflexes": 6,
+          "weapons": ["pulse_carbine", {"id": "ccw", "count": 2}, "stun_grenades"],
+          "options": [{"addWeapon": "pulse_pistol"}, {"addRule": "spotting_laser"}],
+          "min": 1,
+          "max": 1
+        }
+      ]
+    },
+    "pathfinder": {
+      "name": "Pathfinder",
+      "description": "A squad of infantry who excel at forward scouting and spotting.",
+      "category": "specialist",
+      "options": [{"addModel": ["recon_drone", "spotter_drone", "gunner_drone", "shield_drone", "inhibitor_drone", "accelerator_drone"], "modelLimit": 1}],
+      "rules": ["scout"],
+      "models": [
+        {
+          "name": "Pathfinder",
+          "movement": 6,
+          "courage": 4,
+          "shoot": 6,
+          "fight": 4,
+          "defense": 5,
+          "reflexes": 6,
+          "weapons": ["pulse_carbine", "ccw", "stun_grenades"],
+          "options": [{"replaceWeapon": "pulse_carbine", "withWeapon": ["ion_rifle", "rail_rifle"]}, {"addRule": "spotting_laser"}],
+          "min": 1,
+          "max": 1
+        }
+      ]
+    },
+    "avian_commander": {
+      "name": "Avian Mercenary Commander",
+      "description": "An intelligent avian mercenary commander with a rifle.",
+      "min": 1,
+      "max": 1,
+      "keywords": ["Infantry", "Avian Mercenaries"],
+      "category": "command",
+      "models": [
+        {
+          "name": "Avian Mercenary Commander",
+          "movement": 6,
+          "courage": 6,
+          "shoot": 6,
+          "fight": 6,
+          "defense": 6,
+          "reflexes": 5,
+          "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "wounds", "x": 2}, {"id": "avian_tactics", "x": 1}],
+          "weapons": ["avian_rifle", {"id": "heavy_ccw", "count": 3}],
+          "options": [{"replaceRule": {"id": "avian_tactics", "x": 1}, "withRule": {"id": "avian_tactics", "x": 2}}],
+          "min": 1,
+          "max": 1
+        }
+      ]
+    },
+    "avian_leader": {
+      "name": "Avian Mercenary Leader",
+      "description": "A squad of avian mercenaries with rifles.",
+      "min": 1,
+      "max": 1,
+      "keywords": ["Infantry", "Avian Mercenaries"],
+      "category": "command",
+      "rules": ["leader"],
+      "models": [
+        {
+          "name": "Avian Mercenary Leader",
+          "movement": 6,
+          "courage": 4,
+          "shoot": 5,
+          "fight": 5,
+          "defense": 5,
+          "reflexes": 5,
+          "weapons": ["avian_rifle", "heavy_ccw"],
+          "options": [{"addRule": "scout"}],
+          "min": 1,
+          "max": 1
+        }
+      ]
+    },
+    "avian_mercenary": {
+      "name": "Avian Mercenary",
+      "description": "A squad of avian mercenaries with rifles.",
+      "min": 1,
+      "max": 1,
+      "keywords": ["Infantry", "Avian Mercenaries"],
+      "category": "core",
+      "models": [
+        {
+          "name": "Avian Mercenary",
+          "movement": 6,
+          "courage": 4,
+          "shoot": 5,
+          "fight": 5,
+          "defense": 5,
+          "reflexes": 5,
+          "weapons": ["avian_rifle", "heavy_ccw"],
+          "options": [{"addRule": "scout"}],
+          "min": 1,
+          "max": 1
+        }
+      ]
+    },
+    "avian_hound": {
+      "name": "Avian Hound",
+      "description": "A squad of angry hounds trained by avian mercenaries.",
+      "category": "strike",
+      "keywords": ["Infantry", "Avian Mercenaries"],
+      "models": [{"name": "Avian Hound", "movement": 8, "courage": 4, "shoot": 4, "fight": 6, "defense": 4, "reflexes": 5, "weapons": ["hound_fangs"], "min": 1, "max": 1}]
+    },
+    "avian_beast_rider": {
+      "name": "Avian Beast Rider",
+      "description": "A squad of avian mercenaries riding on beasts.",
+      "category": "strike",
+      "keywords": ["Heavy Infantry", "Avian Mercenaries"],
+      "rules": [{"id": "wounds", "x": 2}],
+      "models": [{"name": "Avian Beast Rider", "movement": 8, "courage": 4, "shoot": 5, "fight": 6, "defense": 6, "reflexes": 5, "weapons": ["avian_cannon", "beast_fists"], "min": 1, "max": 1}]
+    },
+    "insect_warrior_leader": {
+      "name": "Insect Warrior Leader",
+      "description": "A squad of flying insects with rifles.",
+      "category": "command",
+      "models": [
+        {
+          "name": "Insect Warrior Leader",
+          "movement": 8,
+          "courage": 5,
+          "shoot": 5,
+          "fight": 5,
+          "defense": 7,
+          "reflexes": 5,
+          "rules": ["fly", "leader"],
+          "weapons": ["neutron_carbine", "ccw"],
+          "min": 1,
+          "max": 1
+        }
+      ]
+    },
+    "insect_warrior": {
+      "name": "Insect Warrior",
+      "description": "A squad of flying insects with rifles.",
+      "category": "strike",
+      "models": [
+        {
+          "name": "Insect Warrior",
+          "movement": 8,
+          "courage": 4,
+          "shoot": 5,
+          "fight": 5,
+          "defense": 7,
+          "reflexes": 5,
+          "rules": ["fly"],
+          "weapons": ["neutron_carbine", "ccw"],
+          "options": [{"replaceModel": "insect_warrior_leader", "modelLimit": 1}],
+          "min": 1,
+          "max": 1
+        }
+      ]
+    },
+    "stealth_suit_leader": {
+      "name": "Stealth Suit Leader",
+      "description": "A light battlesuit with camo cloaking technology.",
+      "category": "command",
+      "rules": ["stealth", "fly", "leader"],
+      "models": [
+        {
+          "name": "Stealth Suit Leader",
+          "movement": 8,
+          "courage": 5,
+          "shoot": 5,
+          "fight": 4,
+          "defense": 8,
+          "reflexes": 6,
+          "weapons": ["pulse_gatling", {"id": "ccw", "count": 2}, "stun_grenades"],
+          "options": [{"addRule": "spotting_laser"}, {"addRule": ["homing_beacon"]}, {"replaceWeapon": "pulse_gatling", "withWeapon": ["fusion_blaster"], "modelLimit": 1}],
+          "min": 1,
+          "max": 1
+        }
+      ]
+    },
+    "stealth_suit": {
+      "name": "Stealth Suit",
+      "description": "A light battlesuit with camo cloaking technology.",
+      "category": "specialist",
+      "rules": ["stealth", "fly"],
+      "options": [{"addModel": ["spotter_drone", "gunner_drone", "shield_drone"], "modelLimit": 1}],
+      "models": [
+        {
+          "name": "Stealth Suit",
+          "movement": 8,
+          "courage": 4,
+          "shoot": 5,
+          "fight": 4,
+          "defense": 8,
+          "reflexes": 6,
+          "options": [{"addRule": ["homing_beacon"]}],
+          "weapons": ["pulse_gatling", "ccw", "stun_grenades"],
+          "min": 1,
+          "max": 1
+        }
+      ]
+    },
+    "stealth_suit_heavy": {
+      "name": "Stealth Suit Heavy",
+      "description": "A light battlesuit with camo cloaking technology.",
+      "category": "heavy",
+      "rules": ["stealth", "fly"],
+      "models": [
+        {
+          "name": "Stealth Suit",
+          "movement": 8,
+          "courage": 4,
+          "shoot": 5,
+          "fight": 4,
+          "defense": 8,
+          "reflexes": 6,
+          "weapons": ["pulse_gatling", "ccw", "stun_grenades"],
+          "options": [{"replaceWeapon": "pulse_gatling", "withWeapon": ["fusion_blaster"]}, {"addRule": ["homing_beacon"]}],
+          "min": 1,
+          "max": 1
+        }
+      ]
+    },
+    "battle_suit_leader": {
+      "name": "Battlesuit Leader",
+      "description": "Warriors in agile battlesuits.",
+      "min": 1,
+      "max": 1,
+      "keywords": ["Heavy Infantry"],
+      "category": "command",
+      "options": [{"addModel": ["spotter_drone", "gunner_drone", "shield_drone"], "modelLimit": 2}],
+      "rules": ["fly"],
+      "models": [
+        {
+          "name": "Battlesuit Leader",
+          "movement": 8,
+          "courage": 5,
+          "shoot": 5,
+          "fight": 4,
+          "defense": 9,
+          "reflexes": 6,
+          "rules": [{"id": "wounds", "x": 2}, "leader"],
+          "weapons": [{"id": "suit_fists", "count": 2}],
+          "options": [
+            {"limit": 3, "addWeapon": ["flak_launcher", "ion_gatling", "flamethrower", "pulse_gatling", "plasma_rifle", "fusion_blaster", "missile_pod"]},
+            {"addRule": [{"id": "ambush", "name": "Sky Strike"}, {"id": "resilient", "x": 3, "name": "Shield Generator"}, "threat_detector_suit"]}
+          ],
+          "min": 1,
+          "max": 1
+        }
+      ]
+    },
+    "battle_suit": {
+      "name": "Battlesuit",
+      "description": "Warriors in agile battlesuits.",
+      "min": 1,
+      "max": 1,
+      "keywords": ["Heavy Infantry"],
+      "category": "specialist",
+      "options": [{"addModel": ["spotter_drone", "gunner_drone", "shield_drone"], "modelLimit": 2}],
+      "rules": ["fly"],
+      "models": [
+        {
+          "name": "Battlesuit",
+          "movement": 8,
+          "courage": 5,
+          "shoot": 5,
+          "fight": 4,
+          "defense": 9,
+          "reflexes": 6,
+          "rules": [{"id": "wounds", "x": 2}],
+          "weapons": [{"id": "suit_fists", "count": 2}],
+          "options": [
+            {"limit": 3, "addWeapon": ["flak_launcher", "ion_gatling", "flamethrower", "pulse_gatling", "plasma_rifle", "fusion_blaster", "missile_pod"]},
+            {"addRule": [{"id": "ambush", "name": "Sky Strike"}, {"id": "resilient", "x": 3, "name": "Shield Generator"}, "threat_detector_suit"]}
+          ],
+          "min": 1,
+          "max": 1
+        }
+      ]
+    },
+    "tactical_drone": {
+      "name": "Tactical Drone",
+      "description": "A squad of support drones.",
+      "min": 1,
+      "max": 1,
+      "keywords": ["Drone"],
+      "category": "specialist",
+      "models": [
+        {
+          "name": "Tactical Drone",
+          "movement": 8,
+          "courage": 5,
+          "shoot": 5,
+          "fight": 4,
+          "defense": 7,
+          "reflexes": 5,
+          "weapons": ["defense_system"],
+          "rules": ["fly", "tactical_drone"],
+          "min": 1,
+          "max": 1
+        }
+      ]
+    },
+    "gun_drone": {
+      "name": "Heavy Gun Drone",
+      "description": "A squad of drones with heavy weapons.",
+      "min": 1,
+      "max": 1,
+      "keywords": ["Drone"],
+      "category": "strike",
+      "models": [
+        {
+          "name": "Heavy Gun Drone",
+          "movement": 8,
+          "courage": 5,
+          "shoot": 5,
+          "fight": 4,
+          "defense": 7,
+          "reflexes": 5,
+          "weapons": ["pulse_gatling"],
+          "rules": ["fly"],
+          "options": [{"addWeapon": "pulse_gatling"}, {"addRule": "spotting_laser"}],
+          "min": 1,
+          "max": 1
+        }
+      ]
+    },
+    "sniper_drone": {
+      "name": "Sniper Drone",
+      "description": "A squad of drones with sniper rifles.",
+      "min": 1,
+      "max": 1,
+      "keywords": ["Drone"],
+      "category": "specialist",
+      "models": [
+        {"name": "Sniper Drone", "movement": 8, "courage": 5, "shoot": 5, "fight": 4, "defense": 7, "reflexes": 5, "weapons": ["pulse_sniper"], "rules": ["fly", "stealth"], "min": 1, "max": 1}
+      ]
     }
+  },
+  "models": {
+    "support_turret": {
+      "name": "Support Turret",
+      "movement": 6,
+      "courage": "-",
+      "shoot": 5,
+      "fight": 4,
+      "defense": "-",
+      "reflexes": "-",
+      "weapons": ["smart_missile"],
+      "options": [{"replaceWeapon": "smart_missile", "withWeapon": "missile"}],
+      "min": 1,
+      "max": 1
+    },
+    "attached_interceptor_drone": {
+      "name": "Attached Interceptor Drone",
+      "movement": 8,
+      "courage": "-",
+      "shoot": 5,
+      "fight": 4,
+      "defense": "-",
+      "reflexes": "-",
+      "rules": ["attached"],
+      "weapons": [{"id": "ion_rifle", "count": 2}],
+      "min": 1,
+      "max": 1
+    },
+    "attached_gunner_drone": {
+      "name": "Attached Gunner Drone",
+      "movement": 8,
+      "courage": "-",
+      "shoot": 5,
+      "fight": 4,
+      "defense": "-",
+      "reflexes": "-",
+      "rules": ["attached"],
+      "weapons": [{"id": "pulse_carbine", "count": 2}],
+      "min": 0,
+      "max": 1
+    },
+    "recon_drone": {
+      "name": "Recon Drone",
+      "movement": 8,
+      "courage": "-",
+      "shoot": 5,
+      "fight": 4,
+      "defense": "-",
+      "reflexes": "-",
+      "weapons": ["pulse_gatling"],
+      "rules": ["recon_drone"],
+      "min": 1,
+      "max": 1
+    },
+    "shield_missile_drone": {
+      "name": "Shield Missile Drone",
+      "movement": 8,
+      "courage": "-",
+      "shoot": 5,
+      "fight": 4,
+      "defense": "-",
+      "reflexes": "-",
+      "rules": [{"id": "resilient", "x": 4}],
+      "weapons": ["missile_pod"],
+      "min": 1,
+      "max": 1
+    },
+    "inhibitor_drone": {"name": "Inhibitor Drone", "movement": 8, "courage": "-", "shoot": 5, "fight": 4, "defense": "-", "reflexes": "-", "rules": ["inhibitor"], "min": 0, "max": 1},
+    "spotter_drone": {"name": "Spotter Drone", "movement": 8, "courage": "-", "shoot": 5, "fight": 4, "defense": "-", "reflexes": "-", "rules": ["spotting_laser"], "min": 1, "max": 1},
+    "missile_drone": {"name": "Missile Drone", "movement": 8, "courage": "-", "shoot": 5, "fight": 4, "defense": "-", "reflexes": "-", "rules": [], "weapons": ["missile_pod"], "min": 1, "max": 1},
+    "stealth_drone": {"name": "Stealth Drone", "movement": 8, "courage": "-", "shoot": 5, "fight": 4, "defense": "-", "reflexes": "-", "rules": ["stealth_field"], "min": 1, "max": 1},
+    "gunner_drone": {"name": "Gunner Drone", "movement": 8, "courage": "-", "shoot": 5, "fight": 4, "defense": "-", "reflexes": "-", "weapons": ["pulse_carbine"], "min": 1, "max": 1},
+    "shield_drone": {"name": "Shield Drone", "movement": 8, "courage": "-", "shoot": 5, "fight": 4, "defense": "-", "reflexes": "-", "rules": ["pulse_shield"], "min": 1, "max": 1},
+    "guardian_drone": {"name": "Guardian Drone", "movement": 8, "courage": "-", "shoot": 5, "fight": 4, "defense": "-", "reflexes": "-", "rules": ["protection"], "min": 1, "max": 1},
+    "accelerator_drone": {"name": "Accelerator Drone", "movement": 8, "courage": "-", "shoot": 5, "fight": 4, "defense": "-", "reflexes": "-", "rules": ["accelerator"], "min": 1, "max": 1}
+  },
+  "weapons": {
+    "ion_bombs": {"name": "Ion Bombs", "attacks": 2, "short": 3, "ap": 4, "rules": ["bomb", "scatter", {"id": "blast", "x": 3}]},
+    "seeker_missiles": {"name": "Homing Missile", "attacks": 1, "short": 36, "medium": 72, "ap": 6, "rules": ["indirect", "homing", {"id": "ammo", "x": 1}]},
+    "flak_launcher": {"name": "Flak Launcher", "attacks": 1, "ap": 1, "short": 9, "medium": 18, "rules": [{"id": "indirect"}, {"id": "blast", "x": 3}, "assault"]},
+    "heavy_pulse_gatling": {"name": "Heavy Pulse Gatling", "attacks": 10, "short": 18, "medium": 36, "ap": 3},
+    "pulse_gatling": {"name": "Pulse Gatling", "attacks": 3, "short": 9, "medium": 18, "ap": 2, "rules": ["assault"]},
+    "ion_gatling": {"name": "Ion Gatling", "attacks": 3, "short": 9, "medium": 18, "ap": 3, "rules": ["overcharge", "assault"]},
+    "fusion_blaster": {"name": "Fusion Blaster", "attacks": 1, "short": 12, "medium": 24, "ap": 6, "rules": [{"id": "critical", "x": 1}, "assault"]},
+    "heavy_fusion_blaster": {"name": "Heavy Fusion Blaster", "attacks": 2, "short": 18, "medium": 36, "ap": 6, "rules": [{"id": "critical", "x": 1}]},
+    "missile": {"name": "Assault Missile", "attacks": 1, "short": 18, "medium": 36, "ap": 3, "rules": ["assault"]},
+    "missile_pod": {"name": "Assault Missile Pod", "attacks": 2, "short": 18, "medium": 36, "ap": 3, "rules": ["assault"]},
+    "heavy_missile_pod": {"name": "Heavy Missile Pod", "attacks": 2, "short": 18, "medium": 36, "ap": 4},
+    "support_missile_pod": {"name": "Support Missile Pod", "attacks": 2, "short": 18, "medium": 36, "ap": 4},
+    "twin_missile_battery": {"name": "Twin Missile Battery", "attacks": 4, "short": 20, "medium": 30, "long": 40, "ap": 1, "rules": [{"id": "blast", "x": 3}]},
+    "heavy_gatling_vulcan": {"name": "Heavy Gatling Vulcan", "attacks": 12, "short": 20, "medium": 30, "long": 40, "ap": 1},
+    "heavy_railgun": {
+      "name": "Heavy Rail Cannon",
+      "profiles": [{"name": "Beam", "attacks": 1, "short": 36, "medium": 72, "ap": 8}, {"name": "Blast", "attacks": 1, "short": 36, "medium": 72, "ap": 3, "rules": [{"id": "blast", "x": 6}]}]
+    },
+    "ion_rifle": {"name": "Ion Rifle", "attacks": 1, "short": 15, "medium": 30, "ap": 4, "rules": ["overcharge", "sniper"]},
+    "ion_cannon": {"name": "Ion Cannon", "attacks": 1, "short": 30, "medium": 60, "ap": 5, "rules": ["overcharge", {"id": "blast", "x": 6}]},
+    "quad_ion_rifle": {"name": "Quad Ion Rifle", "attacks": 4, "short": 15, "medium": 30, "ap": 4, "rules": [{"id": "overcharge"}]},
+    "ion_destroyer": {"name": "Ion Destroyer", "attacks": 4, "short": 24, "medium": 48, "ap": 4, "rules": [{"id": "overcharge"}]},
+    "hound_fangs": {"name": "Hound Fangs", "attacks": 2, "short": "Melee", "ap": 1, "rules": ["rending"]},
+    "defense_system": {"name": "Defense System", "attacks": 1, "short": 8, "ap": 2, "rules": ["assault"]},
+    "vulcan_rifle": {"name": "Vulcan Rifle", "attacks": 1, "short": 18, "medium": 36, "ap": 1},
+    "vulcan_carbine": {"name": "Vulcan Carbine", "attacks": 1, "short:": 9, "medium": 18, "ap": 1},
+    "vulcan_shotgun": {"name": "Vulcan Shotgun", "attacks": 1, "short": 6, "medium": 12, "long": 15, "ap": 3},
+    "hand_railgun": {"name": "Hand railgun", "attacks": 1, "short": 20, "medium": 25, "long": 30, "ap": 4},
+    "rail_rifle": {"name": "Rail Rifle", "attacks": 1, "short": 15, "medium": 30, "ap": 5, "rules": ["sniper"]},
+    "heavy_rail_rifle": {"name": "Heavy Rail Rifle", "attacks": 1, "short": 30, "medium": 60, "ap": 7},
+    "smart_missile": {"name": "Smart Missile", "attacks": 1, "short": 15, "medium": 30, "ap": 2, "rules": ["indirect"]},
+    "smart_missiles": {"name": "Smart Missile Pod", "attacks": 2, "short": 15, "medium": 30, "ap": 2, "rules": ["indirect"]},
+    "pulse_shotgun": {"name": "Pulse Shotgun", "attacks": 1, "short": 6, "medium": 12, "ap": 2, "rules": ["assault", "brutal"]},
+    "pulse_carbine": {"name": "Pulse Carbine", "attacks": 1, "short": 9, "medium": 18, "ap": 2, "rules": ["assault"]},
+    "twin_pulse_carbine": {"name": "Twin Pulse Carbine", "attacks": 4, "short": 9, "medium": 18, "ap": 2, "rules": ["assault"]},
+    "pulse_rifle": {"name": "Pulse Rifle", "attacks": 1, "short": 15, "medium": 30, "ap": 2, "rules": ["assault"]},
+    "pulse_sniper": {"name": "Pulse Sniper", "attacks": 1, "short": 24, "medium": 48, "ap": 2, "rules": ["sniper"]},
+    "pulse_pistol": {"name": "Pulse Pistol", "attacks": 1, "short": 6, "medium": 12, "ap": 2, "rules": ["pistol"]},
+    "stun_grenades": {"name": "Stun Grenades", "attacks": 1, "short": 6, "rules": ["grenade", "stun"]},
+    "suit_fists": {"name": "Suit Fists", "attacks": 1, "short": "Melee", "ap": 2},
+    "beast_fists": {"name": "Beasts Fists", "attacks": 2, "short": "Melee", "ap": 3},
+    "avian_rifle": {"name": "Avian Rifle", "attacks": 1, "short": 12, "medium": 24, "ap": 1},
+    "avian_cannon": {"name": "Avian Cannon", "attacks": 2, "short": 24, "medium": 48, "ap": 4},
+    "neutron_carbine": {"name": "Neutron Carbine", "attacks": 1, "short": 9, "medium": 18, "ap": 3},
+    "amplified_pulse_rifle": {"name": "Amplified Pulse Rifle", "attacks": 1, "short": 24, "medium": 48, "ap": 3, "rules": ["rapid_fire"]}
+  },
+  "rules": {
+    "stealth_field": {
+      "name": "Stealth Field",
+      "description": "Once per round, when an enemy unit targets a friendly _Infantry_ unit within 3\" suffer -1 Accuracy. This may be used one additional time per round for each model with this rule.",
+      "points": 5
+    },
+    "pulse_shield": {
+      "name": "Pulse Shield",
+      "description": "Once per round, when an enemy unit targets a friendly _Infantry_ unit within 3\" roll a die for each hit that unit takes. On a 3 or less that hit is prevented. This may be used one additional time per round for each model with this rule.",
+      "points": 5
+    },
+    "commander_tactics": {
+      "name": "Commander Tactics",
+      "inputs": ["x"],
+      "description": "When this unit is activated, choose up to X friendly _Infantry_ or _Heavy Infantry_ units within 6\" to receive one of the following bonuses until the end of the round: \n * Re-roll failed Accuracy tests of 9+ \n * Re-roll failed Initiative tests of 9+",
+      "points": ["rule.x", {"multiply": 5}]
+    },
+    "warrior_tactics": {
+      "name": "Warrior Tactics",
+      "inputs": ["x"],
+      "description": "When this unit is activated, choose up to X friendly _Infantry_ units within 6\" to receive one of the following bonuses until the end of the round: \n * Re-roll failed Accuracy tests of 9+ \n * Re-roll failed Initiative tests of 9+",
+      "points": ["rule.x", {"multiply": 5}]
+    },
+    "avian_tactics": {
+      "name": "Avian Tactics",
+      "inputs": ["x"],
+      "description": "When this unit is activated, choose up to X friendly _Avian Mercenaries_ _Infantry_ units within 6\" to receive one of the following bonuses until the end of the round: \n * Re-roll failed Accuracy tests of 9+ \n * Re-roll failed Strength tests of 9+",
+      "points": ["rule.x", {"multiply": 5}]
+    },
+    "attached": {"name": "Attached", "description": "This model is attached to its hosting unit and counts as being embarked but does not take up any transport space and may shoot while embarked."},
+    "spotting_laser": {
+      "name": "Spotting Laser",
+      "description": "Any time during this model's activation, pick an enemy unit within 36\" to gain 1 spotting marker. When a friendly unit shoots at that target they may spend spotting markers to gain the following for that attack: \n * One Marker: Re-roll Accuracy rolls of 9+ \n * Two Markers: +1 Accuracy \n\n\n These effects are cumulative and may be activated multiple times. At the end of the round, remove all spotting markers.",
+      "points": 5
+    },
+    "homing_beacon": {
+      "name": "Homing Beacon",
+      "description": "Friendly units deploying using Ambush deployment may ignore enemy units when deploying within 6\" of this model and automatically pass Initiative tests to Ambush.",
+      "points": 5
+    },
+    "inhibitor": {"name": "Inhibitor", "description": "Enemy units suffer -2\" of movement with any Charge actions targeting friendly units within 3\".", "points": 5},
+    "tactical_drone": {
+      "name": "Tactical Drone",
+      "description": "Whenever a friendly _Infantry_ model within 6\" is killed or loses a Wound(x), roll a D10. On a 3 or less, that loss is prevented.",
+      "points": 5
+    },
+    "recon_drone": {"name": "Recon Scope", "description": "Friendly models within 3\" may ignore cover bonuses.", "points": 2},
+    "accelerator": {"name": "Accelerator", "description": "Friendly models within 3\" add +3\" to the short and long ranges of all weapons.", "points": 5},
+    "threat_detector_suit": {"name": "Threat Detector", "description_short": "+1 Initiative", "description": "This model gets +1 Initiative.", "points": 5},
+    "hover_drone": {"name": "Hover Drone", "hidden": "true", "description": "This model gets +2\" Move and Fly.", "description_short": "+4\" Move, Fly", "points": 5},
+    "protection": {"name": "Protection", "description": "Friendly _Infantry_ units within 3\" get +1 Save.", "points": 5},
+    "legend_emergency_kit": {"name": "Emergency Kit", "description": "Once per game at the start this unit's activation, it may choose to regain Wounds(x) equal to half its total Wounds(x) value rounded up. This may not bring the unit above its maximum Wounds(x) value.", "points": 4},
+    "legend_advanced_spotting_laser": {
+      "name": "Advanced Spotting Laser",
+      "description": "Any time during this model's activation, pick an enemy unit within 36\" to gain 2 spotting markers. When a friendly unit shoots at that target they may spend spotting markers to gain the following for that attack: \n * One Marker: Re-roll Accuracy rolls of 9+ \n * Two Markers: +1 Accuracy \n\n\n These effects are cumulative and may be activated multiple times. At the end of the round, remove all spotting markers.",
+      "points": 5
+    }
+  },
+  "strategies": {
+    "covering_fire": {
+      "name": "Covering Fire",
+      "phase": "activation",
+      "flavor": "Members of the Federation are tirelessly drilled on covering one another in the event that one unit is overrun.",
+      "description": "Use when a friendly _Infantry_ or _Heavy Infantry_ unit is Charged. One friendly _Infantry_ or _Heavy Infantry_ unit within 6\" may take an Initiative test and attempt to react to the charging unit.",
+      "cost": 1
+    },
+    "preservation_protocols": {
+      "name": "Preservation Protocols",
+      "phase": "activation",
+      "flavor": "Federation drones are programmed to protect their creators at all costs.",
+      "description": "Use after an _Infantry_ or _Heavy Infantry_ unit has been hit by a ranged weapon. For this attack, you can roll a D10 each time an attack made with a ranged weapon hits that unit. If there is a friendly _Drone_ unit within 6\" of it, and the _Drone_ unit is closer to the attacking model than the target unit. On an 8 or less a hit is transferred to the _Drone_ unit instead of the original target.",
+      "cost": 2
+    },
+    "danger_close": {
+      "phase": "activation",
+      "name": "Danger Close",
+      "description": "Use when shooting with an _Infantry_ unit. That unit may target enemies it is engaged with at -1 Accuracy.",
+      "flavor": "Federation troops are trained to use defensive tactics to protect themselves in close quarters.",
+      "cost": 1
+    },
+    "moving_fire": {
+      "subfactions": ["mobility_focus"],
+      "name": "Moving Fire",
+      "phase": "activation",
+      "flavor": "These troops are trained to shoot while moving to maintain pressure on their enemies.",
+      "description": "Use after an _Infantry_ unit Shoots with an _Assault_ weapon. That unit may ignore the -1 Accuracy penalty.",
+      "cost": 1
+    },
+    "double_time": {
+      "subfactions": ["mobility_focus"],
+      "phase": "activation",
+      "name": "Double Time",
+      "description": "Use when a unit makes a Move action. It gains +3\" of Movement for that action",
+      "flavor": "At some points in battle it is necessary to move with great urgency.",
+      "cost": 1
+    },
+    "focus_fire": {
+      "phase": "activation",
+      "subfactions": ["mobility_focus"],
+      "name": "Burst",
+      "flavor": "With a wave of fire, surely any target could not survive.",
+      "description": "Use when an _Infantry_ unit makes a Shoot action. Hit rolls of 1 or 2 cause 2 hits instead of 1.",
+      "cost": 1
+    },
+    "vigilance": {
+      "subfactions": ["vigilance_focus"],
+      "name": "Vigilance",
+      "phase": "activation",
+      "description": "Use when taking an Initiative test for a reaction. That unit is treated as having +2 Initiative for that test.",
+      "flavor": "With countless battles experienced, these troops are trained to react to any situation.",
+      "cost": 1
+    },
+    "cautious": {
+      "subfactions": ["vigilance_focus"],
+      "name": "Cautious",
+      "phase": "activation",
+      "description": "Use after an _Infantry_ unit performs a Move action. That unit may perform a free Hold action.",
+      "flavor": "Cautious movement can be key to staying alive.",
+      "cost": 1
+    },
+    "overcharge": {
+      "phase": "activation",
+      "subfactions": ["vigilance_focus"],
+      "name": "Overcharge",
+      "flavor": "By overcharging their weapons, some hits can pierce even heavily armored targets.",
+      "description": "Use when an _Infantry_ unit makes a Shoot action. Hit rolls of 1 or 2 gain +1 AP.",
+      "cost": 1
+    }
+  },
+  "relics": {
+    "emergency_kit": {
+      "name": "Emergency Kit",
+      "rule": "legend_emergency_kit",
+      "description": "Upgrade one _Leader_ model to be upgraded with Emergency Kit.",
+      "flavor": "It never hurts to have a backup plan.",
+      "points": 5
+    },
+    "advanced_spotting_laser": {
+      "name": "Advanced Spotting Laser",
+      "rule": "legend_advanced_spotting_laser",
+      "description": "Replace one Spotting Laser with an Advanced Spotting Laser.",
+      "flavor": "Upgraded with advanced optics, this spotting laser can iluminate targets twice as bright.",
+      "points": 5
+    },
+    "amplified_pulse_rifle": {
+      "name": "Amplified Pulse Rifle",
+      "weapon": "amplified_pulse_rifle",
+      "description": "Replace one _Leader_ Pulse Rifle with an Amplified Pulse Rifle.",
+      "flavor": "Specifically crafted for longer range fire support, this pulse rifle can rapidly fire and cause significant damage.",
+      "points": 5
+    }
+  },
+  "powers": {
+    "fortify": {"name": "Courage", "description": "Target friendly unit within 12\" gets +1 Courage until the of the round.", "charge": 8},
+    "steady": {"name": "Steady", "description": "Target friendly unit within 12\" gets +2 Initiative until the end of the round.", "charge": 8},
+    "calm": {"name": "Calm", "description": "Target enemy unit within 18\" suffers -1 Strength with its next attack.", "charge": 6},
+    "inferno": {"name": "Inferno", "description": "Target enemy unit within 12\" takes 3 hits with AP 3.", "charge": 6},
+    "terror": {"name": "Terror", "description": "Target enemy unit within 12\" immediately takes 3 Shock.", "charge": 7},
+    "storm": {"name": "Storm", "description": "Target enemy unit within 12\" takes 3 hits with AP 2.", "charge": 7}
+  }
 }
