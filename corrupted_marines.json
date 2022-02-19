@@ -1630,7 +1630,9 @@
     "archcorrupted_sword": {"name": "Sword of the Arch-Corrupted", "attacks": 1, "short": "Melee", "ap": 5},
     "archcorrupted_claw": {"name": "Claw of the Arch-Corrupted", "attacks": 1, "short": "Melee", "ap": 8},
     "archcorrupted_ranged": {"name": "Dark Gods' Blessed Rifle", "attacks": 2, "short": 12, "medium": 24, "ap": 2, "rules": ["rapid_fire"]},
-    "pestilence_great_flail": {"name": "Pestilence Great-flail", "attacks": 1, "ap": 4, "short": "Melee", "rules": ["pestilence"]}
+    "pestilence_great_flail": {"name": "Pestilence Great-flail", "attacks": 1, "ap": 4, "short": "Melee", "rules": ["pestilence"]},
+    "legend_flamethrower_pistol": {"name": "Psychic Inferno Pistol", "attacks": 3, "short": 6, "medium": 12, "ap": 2, "rules": ["rending", "flame"]},
+    "legend_staff": {"name": "Psychic Staff", "attacks": 1, "short": "Melee", "ap": 1, "rules": ["shielding", "warding_staff"]}
   },
   "rules": {
     "archmage_tactics": {
@@ -1639,7 +1641,8 @@
       "description": "When this unit is activated, choose up to X friendly units with the Power special rule within 6\".  Those units may reroll dice rolls of 9+ while using the Power ability until the end of the round.",
       "points": 5
     },
-    "archmage": {"name": "Blessings of the Psyker God", "description": "When this unit casts the Shock Wave Power, double the number of hits it deals.", "points": 10}
+    "archmage": {"name": "Blessings of the Psyker God", "description": "When this unit casts the Shock Wave Power, double the number of hits it deals.", "points": 10},
+    "warding_staff": {"name": "Warding", "description": "Enemy units suffer -1 to all Power(x) test while within 12\" of this model.", "points": 1}
   },
   "strategies": {
     "hate": {
@@ -1785,6 +1788,32 @@
       "flavor": "These marines do not let their enemy strike first.",
       "description": "Use when an _Infantry_ unit is targeted by a Fight action. If that unit has not yet activated, it may perform a Counter Attack reaction without testing Initiative.",
       "cost": 1
+    }
+  },
+  "relics": {
+    "legend_psychic_prowess": {
+      "name": "Psychic Prowess",
+      "subfactions": ["psychic_focus"],
+      "rule": {"id": "psychic_prowess", "x": 1},
+      "description": "Upgrade one Leader model with Prowess(1).",
+      "flavor": "This hero has studied the magic arts and is adept at invoking powers.",
+      "points": 5
+    },
+    "legend_staff": {
+      "subfactions": ["psychic_focus"],
+      "name": "The Warding Staff",
+      "weapon": "legend_staff",
+      "description": "Replace one Leader model's Energy Staff with The Warding Staff.",
+      "flavor": "This staff has the power to absorb and stop psychic energy.",
+      "points": 5
+  },
+    "legend_flamethrower_pistol": {
+      "subfactions": ["psychic_focus"],
+      "name": "The Psychic Inferno Pistol",
+      "weapon": "legend_flamethrower_pistol",
+      "description": "Replace one Hexed Flamethrower Pistol with The Psychic Inferno Pistol",
+      "flavor": "This pistol is enhanced with fiery magic immolating those at longer range.",
+      "points": 5
     }
   },
   "powerCategories": {"psychic": {"name": "Psychic"}},
