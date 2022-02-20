@@ -1,628 +1,644 @@
 {
-    "name": "Throne Guardians",
-    "id": "throne_guardians",
-    "author": "guitarninja#5707",
-    "units": {
-        "witch_hunters_champion": {
-            "name": "Witch Hunter Champion",
-            "description": "A Witch Hunter leader adept at leading witch hunters into battle.",
-            "min": 5,
-            "max": 10,
-            "category": "command",
-            "models": [
-                {
-                    "name": "Witch Hunter Champion",
-                    "movement": 6,
-                    "courage": 6,
-                    "shoot": 6,
-                    "fight": 6,
-                    "defense": 7,
-                    "reflexes": 6,
-                    "weapons": ["marine_rifle", "psychic_grenade", {"id": "ccw", "count": 3}],
-                    "rules": [{"id": "ward", "x": 1}, {"id": "witch_hunter_tactics", "x": 1}, {"id": "wounds", "x": 3}, {"id": "leader_x", "x": "Infantry"}],
-                    "options": [
-                        {"replaceRule": {"id": "witch_hunter_tactics", "x": 1}, "withRule": {"id": "witch_hunter_tactics", "x": 2}},
-                        {"replaceWeapon": ["marine_rifle", {"id": "ccw", "count": 3}], "withWeapon": [["flamethrower", {"id": "ccw", "count": 3}], {"id": "energy_greatblade", "count": 4}], "limit": 1}
-                    ],
-                    "min": 1,
-                    "max": 1
-                }
-            ]
-        },
-        "throne_commander": {
-            "name": "Guardian Commander",
-            "description": "Highly trained and elite fighters.",
-            "min": 5,
-            "max": 10,
-            "category": "command",
-            "rules": [{"id": "wounds", "x": 4}, {"id": "battle_tactics", "x": 2}, {"id": "leader_x", "x": "Infantry"}],
-            "models": [
-                {
-                    "name": "Guardian Commander",
-                    "courage": 8,
-                    "shoot": 8,
-                    "fight": 8,
-                    "movement": 6,
-                    "defense": 9,
-                    "reflexes": 7,
-                    "weapons": [{"id": "guardian_sword_blade", "count": 5}, "guardian_sword_pistol", "at_grenade"],
-                    "options": [
-                        {
-                            "replaceWeapon": [{"id": "guardian_sword_blade", "count": 5}, "guardian_sword_pistol"],
-                            "withWeapon": [
-                                [{"id": "guardian_spear_blade", "count": 5}, "guardian_spear_rifle"],
-                                [{"id": "guardian_axe_blade", "count": 5}, "guardian_axe_rifle"],
-                                ["guardian_rifle", {"id": "heavy_ccw", "count": 4}]
-                            ]
-                        },
-                        {"addWeapon": {"id": "guardian_dagger"}},
-                        {"addWeapon": "shield"}
-                    ],
-                    "min": 1,
-                    "max": 1
-                }
-            ]
-        },
-        "throne_captain": {
-            "name": "Guardian Captain",
-            "description": "Highly trained and elite fighters.",
-            "min": 5,
-            "max": 10,
-            "category": "command",
-            "rules": [{"id": "wounds", "x": 3},  {"id": "battle_tactics", "x": 1}, {"id": "leader_x", "x": "Infantry"}],
-            "models": [
-                {
-                    "name": "Guardian Captain",
-                    "courage": 7,
-                    "shoot": 7,
-                    "fight": 7,
-                    "movement": 6,
-                    "defense": 9,
-                    "reflexes": 7,
-                    "weapons": [{"id": "guardian_sword_blade", "count": 4}, "guardian_sword_pistol", "at_grenade"],
-                    "options": [
-                        {
-                            "replaceWeapon": [{"id": "guardian_sword_blade", "count": 4}, "guardian_sword_pistol"],
-                            "withWeapon": [
-                                [{"id": "guardian_spear_blade", "count": 4}, "guardian_spear_rifle"],
-                                [{"id": "guardian_axe_blade", "count": 4}, "guardian_axe_rifle"],
-                                ["guardian_rifle", {"id": "heavy_ccw", "count": 3}]
-                            ]
-                        },
-                        {"addWeapon": {"id": "guardian_dagger"}},
-                        {"addWeapon": "shield"}
-                    ],
-                    "min": 1,
-                    "max": 1
-                }
-            ]
-        },
-        "guardian_captain_on_jetbike": {
-            "name": "Guardian Captain on Jetbike",
-            "description": "Throne guardians on high speed jet bikes.",
-            "category": "command",
-            "keywords": ["Biker"],
-            "rules": [{"id": "wounds", "x": 3}, "hover", {"id": "battle_tactics_biker", "x": 1}, {"id": "leader_x", "x": "Infantry, Biker"}],
-            "models": [
-                {
-                    "name": "Guardian Captain on Jetbike",
-                    "courage": 7,
-                    "shoot": 8,
-                    "fight": 8,
-                    "defense": 9,
-                    "movement": 8,
-                    "reflexes": 7,
-                    "weapons": ["guardian_rifle_array", {"id": "guardian_lance", "count": 5}],
-                    "options": [{"replaceWeapon": ["guardian_rifle_array"], "withWeapon": ["guardian_missiles"]}, {"addWeapon": {"id": "guardian_dagger"}}],
-                    "min": 1,
-                    "max": 1
-                }
-            ]
-        },
-        "witch_hunter_leader": {
-            "name": "Witch Hunter Leader",
-            "description": "A group of Witch hunters adept at hunting Psychic individuals.",
-            "min": 5,
-            "max": 10,
-            "category": "command",
-            "keywords": ["Infantry", "Witch Hunters"],
-            "models": [
-                {
-                    "name": "Witch Hunter Leader",
-                    "movement": 6,
-                    "courage": 6,
-                    "shoot": 6,
-                    "fight": 6,
-                    "defense": 7,
-                    "reflexes": 6,
-                    "weapons": ["marine_rifle", "psychic_grenade", {"id": "ccw", "count": 2}],
-                    "rules": [{"id": "ward", "x": 1}, {"id": "leader_x", "x": "Infantry"}],
-                    "options": [
-                        {
-                            "replaceWeapon": ["marine_rifle", {"id": "ccw", "count": 2}],
-                            "withWeapon": [["flamethrower", {"id": "ccw", "count": 2}], {"id": "energy_greatblade", "count": 2}],
-                            "limit": 1
-                        }
-                    ],
-                    "min": 1,
-                    "max": 1
-                }
-            ]
-        },
-        "witch_hunter": {
-            "name": "Witch Hunter",
-            "description": "A group of Witch hunters adept at hunting Psychic individuals.",
-            "min": 5,
-            "max": 10,
-            "category": "core",
-            "keywords": ["Infantry", "Witch Hunters"],
-            "models": [
-                {
-                    "name": "Witch Hunter",
-                    "movement": 6,
-                    "courage": 6,
-                    "shoot": 6,
-                    "fight": 6,
-                    "defense": 7,
-                    "reflexes": 6,
-                    "options": [
-                        {
-                            "replaceWeapon": ["marine_rifle", {"id": "ccw", "count": 2}],
-                            "withWeapon": [["flamethrower", {"id": "ccw", "count": 2}], {"id": "energy_greatblade", "count": 2}],
-                            "limit": 1
-                        }
-                    ],
-                    "weapons": ["marine_rifle", "psychic_grenade", {"id": "ccw", "count": 2}],
-                    "min": 1,
-                    "max": 1
-                }
-            ]
-        },
-        "throne_ancient": {
-            "name": "Guardian Ancient",
-            "description": "A banner carrier for the Throne Guardians.",
-            "min": 5,
-            "max": 10,
-            "category": "command",
-            "rules": [{"id": "wounds", "x": 3}, "banner_of_blindness", {"id": "leader_x", "x": "Infantry"}],
-            "models": [
-                {
-                    "name": "Guardian Ancient",
-                    "courage": 7,
-                    "shoot": 7,
-                    "fight": 7,
-                    "movement": 6,
-                    "defense": 9,
-                    "reflexes": 7,
-                    "weapons": [{"id": "guardian_sword_blade", "count": 3}, "guardian_sword_pistol", "at_grenade"],
-                    "options": [
-                        {
-                            "replaceWeapon": [{"id": "guardian_sword_blade", "count": 3}, "guardian_sword_pistol"],
-                            "withWeapon": [
-                                [{"id": "guardian_spear_blade", "count": 3}, "guardian_spear_rifle"],
-                                [{"id": "guardian_axe_blade", "count": 3}, "guardian_axe_rifle"],
-                                ["guardian_rifle", {"id": "heavy_ccw", "count": 2}]
-                            ]
-                        },
-                        {"addWeapon": {"id": "guardian_dagger"}},
-                        {"addWeapon": "shield"},
-                        {"replaceRule": "banner_of_blindness", "withRule": ["banner_of_justice", "banner_of_focus", "banner_of_wrath"]}
-                    ],
-                    "min": 1,
-                    "max": 1
-                }
-            ]
-        },
-        "throne_ancient_destroyer": {
-            "name": "Guardian Ancient in Destroyer Armor",
-            "description": "A banner carrier for the Throne Guardians in heavy armor.",
-            "category": "command",
-            "rules": [{"id": "wounds", "x": 3}, "banner_of_blindness", {"id": "leader_x", "x": "Infantry"}],
-            "models": [
-                {
-                    "name": "Guardian Ancient in Destroyer Armor",
-                    "courage": 7,
-                    "shoot": 7,
-                    "fight": 7,
-                    "defense": 10,
-                    "movement": 5,
-                    "reflexes": 7,
-                    "weapons": [{"id": "guardian_spear_blade", "count": 3}, "guardian_spear_rifle", "guardian_grenade_launcher"],
-                    "options": [
-                        {
-                            "replaceWeapon": [{"id": "guardian_spear_blade", "count": 3}, "guardian_spear_rifle"],
-                            "withWeapon": [
-                                [{"id": "guardian_axe_blade", "count": 3}, "guardian_axe_rifle"]
-                            ]
-                        },
-                        {"addWeapon": "guardian_dagger"},
-                        {"replaceRule": "banner_of_blindness", "withRule": ["banner_of_justice", "banner_of_focus", "banner_of_wrath"]}
-                    ],
-                    "min": 1,
-                    "max": 1
-                }
-            ]
-        },
-        "guardian_leader": {
-            "name": "Guardian Leader",
-            "description": "Highly trained and elite fighters.",
-            "min": 5,
-            "max": 10,
-            "category": "command",
-            "rules": [{"id": "wounds", "x": 2}, {"id": "leader_x", "x": "Infantry"}],
-            "models": [
-                {
-                    "name": "Guardian",
-                    "courage": 7,
-                    "shoot": 7,
-                    "fight": 7,
-                    "movement": 6,
-                    "defense": 9,
-                    "reflexes": 7,
-                    "weapons": [{"id": "guardian_sword_blade", "count": 2}, "guardian_sword_pistol", "at_grenade"],
-                    "options": [
-                        {
-                            "replaceWeapon": [{"id": "guardian_sword_blade", "count": 2}, "guardian_sword_pistol"],
-                            "withWeapon": [[{"id": "guardian_spear_blade", "count": 2}, "guardian_spear_rifle"], [{"id": "guardian_spear_blade", "count": 2}, "guardian_spear_carbine"], ["guardian_rifle", {"id": "heavy_ccw", "count": 1}]]
-                        },
-                        {"addWeapon": "guardian_dagger"},
-                        {"addWeapon": "shield"}
-                    ],
-                    "min": 1,
-                    "max": 1
-                }
-            ]
-        },
-        "guardian": {
-            "name": "Guardian",
-            "description": "Highly trained and elite fighters.",
-            "min": 5,
-            "max": 10,
-            "category": "core",
-            "rules": [{"id": "wounds", "x": 2}],
-            "models": [
-                {
-                    "name": "Guardian",
-                    "courage": 7,
-                    "shoot": 7,
-                    "fight": 7,
-                    "movement": 6,
-                    "defense": 9,
-                    "reflexes": 7,
-                    "weapons": [{"id": "guardian_sword_blade", "count": 2}, "guardian_sword_pistol", "at_grenade"],
-                    "options": [
-                        {
-                            "replaceWeapon": [{"id": "guardian_sword_blade", "count": 2}, "guardian_sword_pistol"],
-                            "withWeapon": [[{"id": "guardian_spear_blade", "count": 2}, "guardian_spear_rifle"], [{"id": "guardian_spear_blade", "count": 2}, "guardian_spear_carbine"], ["guardian_rifle", {"id": "heavy_ccw", "count": 1}]]
-                        },
-                        {"addWeapon": "guardian_dagger"},
-                        {"addWeapon": "shield"}
-                    ],
-                    "min": 1,
-                    "max": 1
-                }
-            ]
-        },
-        "guardian_heavy": {
-            "name": "Guardian Specialist",
-            "description": "Highly trained and elite fighters.",
-            "min": 5,
-            "max": 10,
-            "category": "specialist",
-            "rules": [{"id": "wounds", "x": 2}],
-
-            "models": [
-                {
-                    "name": "Guardian Specialist",
-                    "courage": 7,
-                    "shoot": 7,
-                    "fight": 7,
-                    "movement": 6,
-                    "defense": 9,
-                    "reflexes": 7,
-                    "weapons": [{"id": "guardian_sword_blade", "count": 2}, "guardian_sword_pistol", "at_grenade"],
-                    "options": [
-                        {
-                            "replaceWeapon": [{"id": "guardian_sword_blade", "count": 2}, "guardian_sword_pistol"],
-                            "withWeapon": [[{"id": "guardian_spear_blade", "count": 2}, "guardian_spear_fusion"]]
-                        },
-                        {"addWeapon": "guardian_dagger"},
-                        {"addWeapon": "shield"}
-                    ],
-                    "min": 1,
-                    "max": 1
-                }
-            ]
-        },
-        "guardian_jetpack": {
-            "name": "Guardian Jetpack",
-            "description": "Highly trained and elite fighters.",
-            "min": 5,
-            "max": 10,
-            "category": "strike",
-            "rules": [{"id": "wounds", "x": 2}, "fly", "ambush"],
-            "options": [{"addWeapon": "guardian_dagger"}],
-            "models": [
-                {
-                    "name": "Guardian Jetpack",
-                    "courage": 7,
-                    "shoot": 7,
-                    "fight": 7,
-                    "movement": 8,
-                    "defense": 8,
-                    "reflexes": 7,
-                    "weapons": ["shield", "guardian_pistol", "at_grenade"],
-                    "options": [{"replaceWeapon": ["shield", "guardian_pistol"], "withWeapon": [["guardian_lance_rifle", {"id": "guardian_lance_blade", "count": 2}]]}],
-                    "min": 1,
-                    "max": 1
-                }
-            ]
-        },
-        "warden_leader": {
-            "name": "Warden Leader",
-            "description": "Watch masters and veteran throne guardians.",
-            "min": 5,
-            "max": 10,
-            "category": "command",
-            "rules": [{"id": "resilient", "x": 3}, {"id": "wounds", "x": 2}, {"id": "leader_x", "x": "Infantry"}],
-            "models": [
-                {
-                    "name": "Warden",
-                    "courage": 7,
-                    "shoot": 7,
-                    "fight": 7,
-                    "defense": 9,
-                    "movement": 6,
-                    "reflexes": 7,
-                    "options": [
-                        {
-                            "replaceWeapon": [{"id": "guardian_spear_blade", "count": 3}, "guardian_spear_rifle"],
-                            "withWeapon": [
-                                [{"id": "guardian_axe_blade", "count": 3}, "guardian_axe_rifle"],
-                                ["guardian_rifle", {"id": "heavy_ccw", "count": 2}]
-                            ]
-                        },
-                        {"addWeapon": "guardian_dagger"}
-                    ],
-                    "weapons": [{"id": "guardian_spear_blade", "count": 3}, "guardian_spear_rifle", "at_grenade"],
-                    "min": 1,
-                    "max": 1
-                }
-            ]
-        },
-        "warden": {
-            "name": "Warden",
-            "description": "Watch masters and veteran throne guardians.",
-            "min": 5,
-            "max": 10,
-            "category": "core",
-            "rules": [{"id": "resilient", "x": 3}, {"id": "wounds", "x": 2}],
-            "models": [
-                {
-                    "name": "Warden",
-                    "courage": 7,
-                    "shoot": 7,
-                    "fight": 7,
-                    "defense": 9,
-                    "movement": 6,
-                    "reflexes": 7,
-                    "options": [
-                        {
-                            "replaceWeapon": [{"id": "guardian_spear_blade", "count": 3}, "guardian_spear_rifle"],
-                            "withWeapon": [
-                                [{"id": "guardian_axe_blade", "count": 3}, "guardian_axe_rifle"],
-                                ["guardian_rifle", {"id": "heavy_ccw", "count": 2}]
-                            ]
-                        },
-                        {"addWeapon": "guardian_dagger"}
-                    ],
-                    "weapons": [{"id": "guardian_spear_blade", "count": 3}, "guardian_spear_rifle", "at_grenade"],
-                    "min": 1,
-                    "max": 1
-                }
-            ]
-        },
-        "jetbike": {
-            "name": "Jetbike",
-            "description": "Throne guardians on high speed jet bikes.",
-            "category": "strike",
-            "rules": [{"id": "wounds", "x": 2}, "hover"],
-            "models": [
-                {
-                    "name": "Jetbike",
-                    "courage": 7,
-                    "shoot": 7,
-                    "fight": 7,
-                    "defense": 9,
-                    "movement": 8,
-                    "reflexes": 7,
-                    "options": [{"replaceWeapon": ["guardian_rifle_array"], "withWeapon": ["guardian_missiles"]}],
-                    "weapons": ["guardian_rifle_array", {"id": "guardian_lance", "count": 3}],
-                    "min": 1,
-                    "max": 1
-                }
-            ]
-        },
-        "guardian_destoyers": {
-            "name": "Guardian Destroyer",
-            "description": "Guardians clad in very heavy armor.",
-            "rules": ["ambush", {"id": "wounds", "x": 2}],
-            "category": "specialist",
-            "models": [
-                {
-                    "name": "Guardian Destroyer",
-                    "movement": 5,
-                    "courage": 7,
-                    "shoot": 7,
-                    "fight": 7,
-                    "defense": 10,
-                    "reflexes": 7,
-                    "weapons": ["twin_guardian_rifle", {"id": "energy_claws", "count": 3}],
-                    "options": [
-                        {"replaceWeapon": {"id": "energy_claws", "count": 3}, "withWeapon": [{"id": "energy_fist", "count": 3}]},
-                        {"replaceWeapon": "twin_guardian_rifle", "withWeapon": ["twin_guardian_destructor", "guardian_flamethrower"]}
-                    ],
-                    "min": 1,
-                    "max": 1
-                }
-            ]
-        },
-        "guardian_assault_destroyers": {
-            "name": "Guardian Assault Destroyer",
-            "description": "Guardians in extra heavy armor.",
-            "category": "specialist",
-            "rules": ["ambush", {"id": "wounds", "x": 2}],
-            "models": [
-                {
-                    "name": "Guardian Assault Destroyer",
-                    "courage": 7,
-                    "shoot": 7,
-                    "fight": 7,
-                    "defense": 10,
-                    "movement": 5,
-                    "reflexes": 7,
-                    "weapons": [{"id": "guardian_spear_blade", "count": 3}, "guardian_spear_rifle", "guardian_grenade_launcher"],
-                    "options": [
-                        {
-                            "replaceWeapon": [{"id": "guardian_spear_blade", "count": 3}, "guardian_spear_rifle"],
-                            "withWeapon": [
-                                [{"id": "guardian_axe_blade", "count": 3}, "guardian_axe_rifle"]
-                            ]
-                        },
-                        {"addWeapon": "guardian_dagger"}
-                    ],
-                    "min": 1,
-                    "max": 1
-                }
-            ]
+  "name": "Throne Guardians",
+  "id": "throne_guardians",
+  "author": "guitarninja#5707",
+  "units": {
+    "witch_hunters_champion": {
+      "name": "Witch Hunter Champion",
+      "description": "A Witch Hunter leader adept at leading witch hunters into battle.",
+      "min": 5,
+      "max": 10,
+      "category": "command",
+      "models": [
+        {
+          "name": "Witch Hunter Champion",
+          "movement": 6,
+          "courage": 6,
+          "shoot": 6,
+          "fight": 6,
+          "defense": 7,
+          "reflexes": 6,
+          "weapons": ["marine_rifle", "psychic_grenade", {"id": "ccw", "count": 3}],
+          "rules": [{"id": "ward", "x": 1}, {"id": "witch_hunter_tactics", "x": 1}, {"id": "wounds", "x": 3}, {"id": "leader_x", "x": "Infantry"}],
+          "options": [
+            {"replaceRule": {"id": "witch_hunter_tactics", "x": 1}, "withRule": {"id": "witch_hunter_tactics", "x": 2}},
+            {"replaceWeapon": ["marine_rifle", {"id": "ccw", "count": 3}], "withWeapon": [["flamethrower", {"id": "ccw", "count": 3}], {"id": "energy_greatblade", "count": 4}], "limit": 1}
+          ],
+          "min": 1,
+          "max": 1
         }
+      ]
     },
-    "weapons": {
-        "guardian_grenade_launcher": {"name": "Guardian Grenade Launcher", "attacks": 1, "short": 6, "medium": 12, "ap": 1, "rules": [{"id": "blast", "x": 2}]},
-        "guardian_rifle_array": {"name": "Guardian Rifle Array", "attacks": 3, "short": 12, "medium": 24, "ap": 1, "rules": ["rapid_fire"]},
-        "guardian_missile_array": {"name": "Guardian Missile Array", "attacks": 4, "short": 12, "medium": 24, "ap": 2},
-        "guardian_missiles": {
-            "name": "Guardian Missiles",
-            "profiles": [
-                {"name": "Flak", "attacks": 2, "short": 12, "medium": 24, "ap": 4, "rules": ["assault", "anti_air"]},
-                {"name": "AT", "attacks": 1, "short": 12, "medium": 24, "ap": 6, "rules": ["assault", {"id": "critical", "x": 1}]}
-            ]
-        },
-        "guardian_twin_light_laser_cannon": {
-            "name": "Guardian Twin Light Laser Cannon",
-            "profiles": [{"name": "Focused", "attacks": 2, "short": 18, "medium": 36, "ap": 5}, {"name": "Dispersed", "attacks": 6, "short": 12, "medium": 24, "ap": 3}]
-        },
-        "guardian_twin_heavy_machinegun": {"name": "Guardian Twin Heavy Machinegun", "attacks": 6, "short": 18, "medium": 36, "ap": 3},
-        "guardian_twin_laser_cannon": {"name": "Guardian Twin Laser Cannon", "attacks": 4, "short": 30, "medium": 60, "ap": 6},
-        "guardian_lance": {"name": "Guardian Lance", "attacks": 1, "short": "Melee", "ap": 3, "rules": ["lance"]},
-        "guardian_dagger": {"name": "Guardian Dagger", "attacks": 1, "short": "Melee", "ap": 1},
-        "guardian_axe_blade": {"name": "Guardian Axe (Blade)", "attacks": 1, "short": "Melee", "ap": 5, "rules": ["cumbersome"]},
-        "guardian_axe_rifle": {"name": "Guardian Axe (Rifle)", "attacks": 1, "short": 12, "medium": 24, "ap": 1, "rules": ["rapid_fire"]},
-        "guardian_lance_blade": {"name": "Guardian Lance (Blade)", "attacks": 1, "short": "Melee", "ap": 4},
-        "guardian_lance_rifle": {"name": "Guardian Lance (Rifle)", "attacks": 1, "short": 6, "medium": 12, "ap": 3, "rules": ["assault"]},
-        "guardian_spear_blade": {"name": "Guardian Spear (Blade)", "attacks": 1, "short": "Melee", "ap": 2},
-        "guardian_spear_rifle": {"name": "Guardian Spear (Rifle)", "attacks": 1, "short": 12, "medium": 24, "ap": 1, "rules": ["rapid_fire"]},
-        "guardian_spear_carbine": {"name": "Guardian Spear (Carbine)", "attacks": 1, "short": 9, "medium": 18, "ap": 1, "rules": ["assault"]},
-        "guardian_spear_fusion": {"name": "Guardian Spear (Fusion)", "attacks": 1, "short": 6, "medium": 12, "ap": 6, "rules": [{"id": "critical", "x": 1}]},
-        "guardian_rifle": {
-            "name": "Guardian Rifle",
-            "profiles": [{"name": "HE", "attacks": 1, "short": 18, "medium": 36, "ap": 2, "rules": ["rapid_fire"]}, {"name": "AP", "attacks": 1, "short": 12, "medium": 24, "ap": 5, "rules": ["rapid_fire"]}]
-        },
-        "twin_guardian_rifle": {
-            "name": "Twin Guardian Rifle",
-            "attacks": 2, "short": 12, "medium": 24, "ap": 2, "rules": ["rapid_fire"]
-        },
-        "twin_guardian_destructor": {
-            "name": "Twin Guardian Destructor",
-            "attacks": 2, "short": 9, "medium": 18, "ap": 4, "rules": ["assault"]
-        },
-        "guardian_flamethrower": {"name": "Guardian Flamethrower", "attacks": 3, "short": 6, "medium": 12, "ap": 3, "rules": ["flame"]},
-        "guardian_pistol": {"name": "Guardian Pistol", "attacks": 1, "short": 9, "ap": 4, "rules": ["pistol"]},
-        "guardian_sword_pistol": {"name": "Guardian Sword (Pistol)", "attacks": 1, "short": 6, "medium": 12, "ap": 1, "rules": ["pistol"]},
-        "guardian_sword_blade": {"name": "Guardian Sword (Blade)", "attacks": 1, "short": "Melee", "ap": 2},
-        "walker_sword_shoot": {"name": "Walker Sword (Shoot)", "attacks": 2, "short": 6, "medium": 12, "ap": 3, "rules": [{"id": "blast", "x": 3}]},
-        "walker_sword_blade": {"name": "Walker Sword (Blade)", "attacks": 1, "short": "Melee", "ap": 5},
-        "walker_spear_blade": {"name": "Walker Spear (Blade)", "attacks": 1, "short": "Melee", "ap": 8},
-        "walker_spear_rifle": {"name": "Walker Spear (Shoot)", "attacks": 2, "short": 12, "medium": 24, "ap": 5},
-        "laser_spear": {
-            "name": "Laser Spear",
-            "profiles": [{"name": "Blade", "attacks": 1, "short": "Melee", "ap": 3}, {"name": "Carbine", "attacks": 1, "short": 9, "medium": 18, "ap": 3, "rules": ["assault"]}]
-        },
-        "scorching_spear": {
-            "name": "Scorching Spear",
-            "profiles": [{"name": "Blade", "attacks": 1, "short": "Melee", "ap": 3}, {"name": "Flame", "attacks": 1, "short": 6, "medium": 12, "ap": 4, "rules": ["assault"]}]
+    "throne_commander": {
+      "name": "Guardian Commander",
+      "description": "Highly trained and elite fighters.",
+      "min": 5,
+      "max": 10,
+      "category": "command",
+      "rules": [{"id": "wounds", "x": 4}, {"id": "battle_tactics", "x": 2}, {"id": "leader_x", "x": "Infantry"}],
+      "models": [
+        {
+          "name": "Guardian Commander",
+          "courage": 8,
+          "shoot": 8,
+          "fight": 8,
+          "movement": 6,
+          "defense": 9,
+          "reflexes": 7,
+          "weapons": [{"id": "guardian_sword_blade", "count": 5}, "guardian_sword_pistol", "at_grenade"],
+          "options": [
+            {
+              "replaceWeapon": [{"id": "guardian_sword_blade", "count": 5}, "guardian_sword_pistol"],
+              "withWeapon": [
+                [{"id": "guardian_spear_blade", "count": 5}, "guardian_spear_rifle"],
+                [{"id": "guardian_axe_blade", "count": 5}, "guardian_axe_rifle"],
+                ["guardian_rifle", {"id": "heavy_ccw", "count": 4}]
+              ]
+            },
+            {"addWeapon": {"id": "guardian_dagger"}},
+            {"addWeapon": "shield"}
+          ],
+          "min": 1,
+          "max": 1
         }
+      ]
     },
-    "rules": {
-        "banner_of_blindness": {
-            "name": "Banner of Blindness",
-            "description": "Once per round a when a friendly Infantry unit is targeted by a shooting attack, the attacker suffers -1 Accuracy.",
-            "points": 10
-        },
-        "battle_tactics": {
-            "name": "Battle Tactics",
-            "inputs": ["x"],
-            "description": "When this unit is activated, choose up to X friendly _Infantry_ units within 6\". Those units may re-roll failed Accuracy tests of 9+ and failed Strength tests of 9+ until the end of the round.",
-            "points": 20
-        },
-        "battle_tactics_biker": {
-            "name": "Biker Battle Tactics",
-            "inputs": ["x"],
-            "description": "When this unit is activated, choose up to X friendly _Infantry_ or _Biker_ units within 6\". Those units may re-roll failed Accuracy tests of 9+ and failed Strength tests of 9+ until the end of the round.",
-            "points": 20
-        },
-        "witch_hunter_tactics": {
-            "name": "Witch Hunter Tactics",
-            "inputs": ["x"],
-            "description": "When this unit is activated, choose up to X friendly _Witch Hunters Infantry_ units within 6\" to receive one of the following bonuses until the end of the round: \n * Re-roll failed Accuracy tests of 9+ \n * Re-roll failed Strength tests of 9+",
-            "points": ["rule.x", {"multiply": 10}]
+    "throne_captain": {
+      "name": "Guardian Captain",
+      "description": "Highly trained and elite fighters.",
+      "min": 5,
+      "max": 10,
+      "category": "command",
+      "rules": [{"id": "wounds", "x": 3}, {"id": "battle_tactics", "x": 1}, {"id": "leader_x", "x": "Infantry"}],
+      "models": [
+        {
+          "name": "Guardian Captain",
+          "courage": 7,
+          "shoot": 7,
+          "fight": 7,
+          "movement": 6,
+          "defense": 9,
+          "reflexes": 7,
+          "weapons": [{"id": "guardian_sword_blade", "count": 4}, "guardian_sword_pistol", "at_grenade"],
+          "options": [
+            {
+              "replaceWeapon": [{"id": "guardian_sword_blade", "count": 4}, "guardian_sword_pistol"],
+              "withWeapon": [
+                [{"id": "guardian_spear_blade", "count": 4}, "guardian_spear_rifle"],
+                [{"id": "guardian_axe_blade", "count": 4}, "guardian_axe_rifle"],
+                ["guardian_rifle", {"id": "heavy_ccw", "count": 3}]
+              ]
+            },
+            {"addWeapon": {"id": "guardian_dagger"}},
+            {"addWeapon": "shield"}
+          ],
+          "min": 1,
+          "max": 1
         }
+      ]
     },
-    "strategies": [
+    "guardian_captain_on_jetbike": {
+      "name": "Guardian Captain on Jetbike",
+      "description": "Throne guardians on high speed jet bikes.",
+      "category": "command",
+      "keywords": ["Biker"],
+      "rules": [{"id": "wounds", "x": 3}, "hover", {"id": "battle_tactics_biker", "x": 1}, {"id": "leader_x", "x": "Infantry, Biker"}],
+      "models": [
         {
-            "phase": "activation",
-            "name": "Combat Awareness",
-            "description": "Use when shooting with an _Infantry_ unit. That unit may target enemies it is engaged with at -1 Accuracy.",
-            "flavor": "Throne Guardians are trained to be expertly aware of their surroundings including where their allies are.",
-            "cost": 1
-        },
+          "name": "Guardian Captain on Jetbike",
+          "courage": 7,
+          "shoot": 8,
+          "fight": 8,
+          "defense": 9,
+          "movement": 8,
+          "reflexes": 7,
+          "weapons": ["guardian_rifle_array", {"id": "guardian_lance", "count": 5}],
+          "options": [{"replaceWeapon": ["guardian_rifle_array"], "withWeapon": ["guardian_missiles"]}, {"addWeapon": {"id": "guardian_dagger"}}],
+          "min": 1,
+          "max": 1
+        }
+      ]
+    },
+    "witch_hunter_leader": {
+      "name": "Witch Hunter Leader",
+      "description": "A group of Witch hunters adept at hunting Psychic individuals.",
+      "min": 5,
+      "max": 10,
+      "category": "command",
+      "keywords": ["Infantry", "Witch Hunters"],
+      "models": [
         {
-            "name": "Unyielding",
-            "phase": "activation",
-            "description": "Use when activating an _Infantry_ unit. That unit may ignore any critical injuries it has sustained for this activation.",
-            "flavor": "Throne Guardians fight to the bitter end to defend the throne.",
-            "cost": 1
-        },
+          "name": "Witch Hunter Leader",
+          "movement": 6,
+          "courage": 6,
+          "shoot": 6,
+          "fight": 6,
+          "defense": 7,
+          "reflexes": 6,
+          "weapons": ["marine_rifle", "psychic_grenade", {"id": "ccw", "count": 2}],
+          "rules": [{"id": "ward", "x": 1}, {"id": "leader_x", "x": "Infantry"}],
+          "options": [{"replaceWeapon": ["marine_rifle", {"id": "ccw", "count": 2}], "withWeapon": [["flamethrower", {"id": "ccw", "count": 2}], {"id": "energy_greatblade", "count": 2}], "limit": 1}],
+          "min": 1,
+          "max": 1
+        }
+      ]
+    },
+    "witch_hunter": {
+      "name": "Witch Hunter",
+      "description": "A group of Witch hunters adept at hunting Psychic individuals.",
+      "min": 5,
+      "max": 10,
+      "category": "core",
+      "keywords": ["Infantry", "Witch Hunters"],
+      "models": [
         {
-            "phase": "activation",
-            "name": "Psychic Shield",
-            "description": "Use when a Power(x) test is taken within 24\" of any Infantry unit. Roll a D10. If the value is less than or equal to the test to cast the power, it is prevented.",
-            "flavor": "Shielded by holy energy, Throne Guardians can protect themselves from psychic powers.",
-            "cost": 1
-        },
+          "name": "Witch Hunter",
+          "movement": 6,
+          "courage": 6,
+          "shoot": 6,
+          "fight": 6,
+          "defense": 7,
+          "reflexes": 6,
+          "options": [{"replaceWeapon": ["marine_rifle", {"id": "ccw", "count": 2}], "withWeapon": [["flamethrower", {"id": "ccw", "count": 2}], {"id": "energy_greatblade", "count": 2}], "limit": 1}],
+          "weapons": ["marine_rifle", "psychic_grenade", {"id": "ccw", "count": 2}],
+          "min": 1,
+          "max": 1
+        }
+      ]
+    },
+    "throne_ancient": {
+      "name": "Guardian Ancient",
+      "description": "A banner carrier for the Throne Guardians.",
+      "min": 5,
+      "max": 10,
+      "category": "command",
+      "rules": [{"id": "wounds", "x": 3}, "banner_of_blindness", {"id": "leader_x", "x": "Infantry"}],
+      "models": [
         {
-            "subfactions": ["fear_focus"],
-            "name": "Terror",
-            "phase": "activation",
-            "description": "Use when a unit within 6\" takes a Courage test. That unit suffers -1 Courage until the end of its activation.",
-            "flavor": "These guardians invoke a sense of fear in their enemies which has not been seen before.",
-            "cost": 1
-          },
-          {
-              "subfactions": ["fear_focus"],
-              "name": "Overwhelming Assault",
-              "phase": "activation",
-              "description": "Use this strategy when an _Infantry_ unit charges. That unit gains +3\" of Movement for the charge action.",
-              "flavor": "Frozen in fear, their enemies can only watch as these guardians advance.",
-              "cost": 1
-          },
-          {
-            "subfactions": ["fear_focus"],
-            "phase": "activation",
-            "name": "Shock Tactics",
-            "description": "Use when fighting with an _Infantry_ unit. If the attack hits, assign 2 additional Shock.",
-            "flavor": "With a sudden strike these guardians strike fear in their targets keeping them from retaliating.",
-            "cost": 1
-          }
-    ]
+          "name": "Guardian Ancient",
+          "courage": 7,
+          "shoot": 7,
+          "fight": 7,
+          "movement": 6,
+          "defense": 9,
+          "reflexes": 7,
+          "weapons": [{"id": "guardian_sword_blade", "count": 3}, "guardian_sword_pistol", "at_grenade"],
+          "options": [
+            {
+              "replaceWeapon": [{"id": "guardian_sword_blade", "count": 3}, "guardian_sword_pistol"],
+              "withWeapon": [
+                [{"id": "guardian_spear_blade", "count": 3}, "guardian_spear_rifle"],
+                [{"id": "guardian_axe_blade", "count": 3}, "guardian_axe_rifle"],
+                ["guardian_rifle", {"id": "heavy_ccw", "count": 2}]
+              ]
+            },
+            {"addWeapon": {"id": "guardian_dagger"}},
+            {"addWeapon": "shield"},
+            {"replaceRule": "banner_of_blindness", "withRule": ["banner_of_justice", "banner_of_focus", "banner_of_wrath"]}
+          ],
+          "min": 1,
+          "max": 1
+        }
+      ]
+    },
+    "throne_ancient_destroyer": {
+      "name": "Guardian Ancient in Destroyer Armor",
+      "description": "A banner carrier for the Throne Guardians in heavy armor.",
+      "category": "command",
+      "rules": [{"id": "wounds", "x": 3}, "banner_of_blindness", {"id": "leader_x", "x": "Infantry"}],
+      "models": [
+        {
+          "name": "Guardian Ancient in Destroyer Armor",
+          "courage": 7,
+          "shoot": 7,
+          "fight": 7,
+          "defense": 10,
+          "movement": 5,
+          "reflexes": 7,
+          "weapons": [{"id": "guardian_spear_blade", "count": 3}, "guardian_spear_rifle", "guardian_grenade_launcher"],
+          "options": [
+            {"replaceWeapon": [{"id": "guardian_spear_blade", "count": 3}, "guardian_spear_rifle"], "withWeapon": [[{"id": "guardian_axe_blade", "count": 3}, "guardian_axe_rifle"]]},
+            {"addWeapon": "guardian_dagger"},
+            {"replaceRule": "banner_of_blindness", "withRule": ["banner_of_justice", "banner_of_focus", "banner_of_wrath"]}
+          ],
+          "min": 1,
+          "max": 1
+        }
+      ]
+    },
+    "guardian_leader": {
+      "name": "Guardian Leader",
+      "description": "Highly trained and elite fighters.",
+      "min": 5,
+      "max": 10,
+      "category": "command",
+      "rules": [{"id": "wounds", "x": 2}, {"id": "leader_x", "x": "Infantry"}],
+      "models": [
+        {
+          "name": "Guardian",
+          "courage": 7,
+          "shoot": 7,
+          "fight": 7,
+          "movement": 6,
+          "defense": 9,
+          "reflexes": 7,
+          "weapons": [{"id": "guardian_sword_blade", "count": 2}, "guardian_sword_pistol", "at_grenade"],
+          "options": [
+            {
+              "replaceWeapon": [{"id": "guardian_sword_blade", "count": 2}, "guardian_sword_pistol"],
+              "withWeapon": [
+                [{"id": "guardian_spear_blade", "count": 2}, "guardian_spear_rifle"],
+                [{"id": "guardian_spear_blade", "count": 2}, "guardian_spear_carbine"],
+                ["guardian_rifle", {"id": "heavy_ccw", "count": 1}]
+              ]
+            },
+            {"addWeapon": "guardian_dagger"},
+            {"addWeapon": "shield"}
+          ],
+          "min": 1,
+          "max": 1
+        }
+      ]
+    },
+    "guardian": {
+      "name": "Guardian",
+      "description": "Highly trained and elite fighters.",
+      "min": 5,
+      "max": 10,
+      "category": "core",
+      "rules": [{"id": "wounds", "x": 2}],
+      "models": [
+        {
+          "name": "Guardian",
+          "courage": 7,
+          "shoot": 7,
+          "fight": 7,
+          "movement": 6,
+          "defense": 9,
+          "reflexes": 7,
+          "weapons": [{"id": "guardian_sword_blade", "count": 2}, "guardian_sword_pistol", "at_grenade"],
+          "options": [
+            {
+              "replaceWeapon": [{"id": "guardian_sword_blade", "count": 2}, "guardian_sword_pistol"],
+              "withWeapon": [
+                [{"id": "guardian_spear_blade", "count": 2}, "guardian_spear_rifle"],
+                [{"id": "guardian_spear_blade", "count": 2}, "guardian_spear_carbine"],
+                ["guardian_rifle", {"id": "heavy_ccw", "count": 1}]
+              ]
+            },
+            {"addWeapon": "guardian_dagger"},
+            {"addWeapon": "shield"}
+          ],
+          "min": 1,
+          "max": 1
+        }
+      ]
+    },
+    "guardian_heavy": {
+      "name": "Guardian Specialist",
+      "description": "Highly trained and elite fighters.",
+      "min": 5,
+      "max": 10,
+      "category": "specialist",
+      "rules": [{"id": "wounds", "x": 2}],
+      "models": [
+        {
+          "name": "Guardian Specialist",
+          "courage": 7,
+          "shoot": 7,
+          "fight": 7,
+          "movement": 6,
+          "defense": 9,
+          "reflexes": 7,
+          "weapons": [{"id": "guardian_sword_blade", "count": 2}, "guardian_sword_pistol", "at_grenade"],
+          "options": [
+            {"replaceWeapon": [{"id": "guardian_sword_blade", "count": 2}, "guardian_sword_pistol"], "withWeapon": [[{"id": "guardian_spear_blade", "count": 2}, "guardian_spear_fusion"]]},
+            {"addWeapon": "guardian_dagger"},
+            {"addWeapon": "shield"}
+          ],
+          "min": 1,
+          "max": 1
+        }
+      ]
+    },
+    "guardian_jetpack": {
+      "name": "Guardian Jetpack",
+      "description": "Highly trained and elite fighters.",
+      "min": 5,
+      "max": 10,
+      "category": "strike",
+      "rules": [{"id": "wounds", "x": 2}, "fly", "ambush"],
+      "options": [{"addWeapon": "guardian_dagger"}],
+      "models": [
+        {
+          "name": "Guardian Jetpack",
+          "courage": 7,
+          "shoot": 7,
+          "fight": 7,
+          "movement": 8,
+          "defense": 8,
+          "reflexes": 7,
+          "weapons": ["shield", "guardian_pistol", "at_grenade"],
+          "options": [{"replaceWeapon": ["shield", "guardian_pistol"], "withWeapon": [["guardian_lance_rifle", {"id": "guardian_lance_blade", "count": 2}]]}],
+          "min": 1,
+          "max": 1
+        }
+      ]
+    },
+    "warden_leader": {
+      "name": "Warden Leader",
+      "description": "Watch masters and veteran throne guardians.",
+      "min": 5,
+      "max": 10,
+      "category": "command",
+      "rules": [{"id": "resilient", "x": 3}, {"id": "wounds", "x": 2}, {"id": "leader_x", "x": "Infantry"}],
+      "models": [
+        {
+          "name": "Warden",
+          "courage": 7,
+          "shoot": 7,
+          "fight": 7,
+          "defense": 9,
+          "movement": 6,
+          "reflexes": 7,
+          "options": [
+            {
+              "replaceWeapon": [{"id": "guardian_spear_blade", "count": 3}, "guardian_spear_rifle"],
+              "withWeapon": [[{"id": "guardian_axe_blade", "count": 3}, "guardian_axe_rifle"], ["guardian_rifle", {"id": "heavy_ccw", "count": 2}]]
+            },
+            {"addWeapon": "guardian_dagger"}
+          ],
+          "weapons": [{"id": "guardian_spear_blade", "count": 3}, "guardian_spear_rifle", "at_grenade"],
+          "min": 1,
+          "max": 1
+        }
+      ]
+    },
+    "warden": {
+      "name": "Warden",
+      "description": "Watch masters and veteran throne guardians.",
+      "min": 5,
+      "max": 10,
+      "category": "core",
+      "rules": [{"id": "resilient", "x": 3}, {"id": "wounds", "x": 2}],
+      "models": [
+        {
+          "name": "Warden",
+          "courage": 7,
+          "shoot": 7,
+          "fight": 7,
+          "defense": 9,
+          "movement": 6,
+          "reflexes": 7,
+          "options": [
+            {
+              "replaceWeapon": [{"id": "guardian_spear_blade", "count": 3}, "guardian_spear_rifle"],
+              "withWeapon": [[{"id": "guardian_axe_blade", "count": 3}, "guardian_axe_rifle"], ["guardian_rifle", {"id": "heavy_ccw", "count": 2}]]
+            },
+            {"addWeapon": "guardian_dagger"}
+          ],
+          "weapons": [{"id": "guardian_spear_blade", "count": 3}, "guardian_spear_rifle", "at_grenade"],
+          "min": 1,
+          "max": 1
+        }
+      ]
+    },
+    "jetbike": {
+      "name": "Jetbike",
+      "description": "Throne guardians on high speed jet bikes.",
+      "category": "strike",
+      "rules": [{"id": "wounds", "x": 2}, "hover"],
+      "models": [
+        {
+          "name": "Jetbike",
+          "courage": 7,
+          "shoot": 7,
+          "fight": 7,
+          "defense": 9,
+          "movement": 8,
+          "reflexes": 7,
+          "options": [{"replaceWeapon": ["guardian_rifle_array"], "withWeapon": ["guardian_missiles"]}],
+          "weapons": ["guardian_rifle_array", {"id": "guardian_lance", "count": 3}],
+          "min": 1,
+          "max": 1
+        }
+      ]
+    },
+    "guardian_destoyers": {
+      "name": "Guardian Destroyer",
+      "description": "Guardians clad in very heavy armor.",
+      "rules": ["ambush", {"id": "wounds", "x": 2}],
+      "category": "specialist",
+      "models": [
+        {
+          "name": "Guardian Destroyer",
+          "movement": 5,
+          "courage": 7,
+          "shoot": 7,
+          "fight": 7,
+          "defense": 10,
+          "reflexes": 7,
+          "weapons": ["twin_guardian_rifle", {"id": "energy_claws", "count": 3}],
+          "options": [
+            {"replaceWeapon": {"id": "energy_claws", "count": 3}, "withWeapon": [{"id": "energy_fist", "count": 3}]},
+            {"replaceWeapon": "twin_guardian_rifle", "withWeapon": ["twin_guardian_destructor", "guardian_flamethrower"]}
+          ],
+          "min": 1,
+          "max": 1
+        }
+      ]
+    },
+    "guardian_assault_destroyers": {
+      "name": "Guardian Assault Destroyer",
+      "description": "Guardians in extra heavy armor.",
+      "category": "specialist",
+      "rules": ["ambush", {"id": "wounds", "x": 2}],
+      "models": [
+        {
+          "name": "Guardian Assault Destroyer",
+          "courage": 7,
+          "shoot": 7,
+          "fight": 7,
+          "defense": 10,
+          "movement": 5,
+          "reflexes": 7,
+          "weapons": [{"id": "guardian_spear_blade", "count": 3}, "guardian_spear_rifle", "guardian_grenade_launcher"],
+          "options": [
+            {"replaceWeapon": [{"id": "guardian_spear_blade", "count": 3}, "guardian_spear_rifle"], "withWeapon": [[{"id": "guardian_axe_blade", "count": 3}, "guardian_axe_rifle"]]},
+            {"addWeapon": "guardian_dagger"}
+          ],
+          "min": 1,
+          "max": 1
+        }
+      ]
+    }
+  },
+  "weapons": {
+    "guardian_grenade_launcher": {"name": "Guardian Grenade Launcher", "attacks": 1, "short": 6, "medium": 12, "ap": 1, "rules": [{"id": "blast", "x": 2}]},
+    "guardian_rifle_array": {"name": "Guardian Rifle Array", "attacks": 3, "short": 12, "medium": 24, "ap": 1, "rules": ["rapid_fire"]},
+    "guardian_missile_array": {"name": "Guardian Missile Array", "attacks": 4, "short": 12, "medium": 24, "ap": 2},
+    "guardian_missiles": {
+      "name": "Guardian Missiles",
+      "profiles": [
+        {"name": "Flak", "attacks": 2, "short": 12, "medium": 24, "ap": 4, "rules": ["assault", "anti_air"]},
+        {"name": "AT", "attacks": 1, "short": 12, "medium": 24, "ap": 6, "rules": ["assault", {"id": "critical", "x": 1}]}
+      ]
+    },
+    "guardian_twin_light_laser_cannon": {
+      "name": "Guardian Twin Light Laser Cannon",
+      "profiles": [{"name": "Focused", "attacks": 2, "short": 18, "medium": 36, "ap": 5}, {"name": "Dispersed", "attacks": 6, "short": 12, "medium": 24, "ap": 3}]
+    },
+    "guardian_twin_heavy_machinegun": {"name": "Guardian Twin Heavy Machinegun", "attacks": 6, "short": 18, "medium": 36, "ap": 3},
+    "guardian_twin_laser_cannon": {"name": "Guardian Twin Laser Cannon", "attacks": 4, "short": 30, "medium": 60, "ap": 6},
+    "guardian_lance": {"name": "Guardian Lance", "attacks": 1, "short": "Melee", "ap": 3, "rules": ["lance"]},
+    "guardian_dagger": {"name": "Guardian Dagger", "attacks": 1, "short": "Melee", "ap": 1},
+    "guardian_axe_blade": {"name": "Guardian Axe (Blade)", "attacks": 1, "short": "Melee", "ap": 5, "rules": ["cumbersome"]},
+    "guardian_axe_rifle": {"name": "Guardian Axe (Rifle)", "attacks": 1, "short": 12, "medium": 24, "ap": 1, "rules": ["rapid_fire"]},
+    "guardian_lance_blade": {"name": "Guardian Lance (Blade)", "attacks": 1, "short": "Melee", "ap": 4},
+    "guardian_lance_rifle": {"name": "Guardian Lance (Rifle)", "attacks": 1, "short": 6, "medium": 12, "ap": 3, "rules": ["assault"]},
+    "guardian_spear_blade": {"name": "Guardian Spear (Blade)", "attacks": 1, "short": "Melee", "ap": 2},
+    "guardian_spear_rifle": {"name": "Guardian Spear (Rifle)", "attacks": 1, "short": 12, "medium": 24, "ap": 1, "rules": ["rapid_fire"]},
+    "guardian_spear_carbine": {"name": "Guardian Spear (Carbine)", "attacks": 1, "short": 9, "medium": 18, "ap": 1, "rules": ["assault"]},
+    "guardian_spear_fusion": {"name": "Guardian Spear (Fusion)", "attacks": 1, "short": 6, "medium": 12, "ap": 6, "rules": [{"id": "critical", "x": 1}]},
+    "guardian_rifle": {
+      "name": "Guardian Rifle",
+      "profiles": [{"name": "HE", "attacks": 1, "short": 18, "medium": 36, "ap": 2, "rules": ["rapid_fire"]}, {"name": "AP", "attacks": 1, "short": 12, "medium": 24, "ap": 5, "rules": ["rapid_fire"]}]
+    },
+    "twin_guardian_rifle": {"name": "Twin Guardian Rifle", "attacks": 2, "short": 12, "medium": 24, "ap": 2, "rules": ["rapid_fire"]},
+    "twin_guardian_destructor": {"name": "Twin Guardian Destructor", "attacks": 2, "short": 9, "medium": 18, "ap": 4, "rules": ["assault"]},
+    "guardian_flamethrower": {"name": "Guardian Flamethrower", "attacks": 3, "short": 6, "medium": 12, "ap": 3, "rules": ["flame"]},
+    "guardian_pistol": {"name": "Guardian Pistol", "attacks": 1, "short": 9, "ap": 4, "rules": ["pistol"]},
+    "guardian_sword_pistol": {"name": "Guardian Sword (Pistol)", "attacks": 1, "short": 6, "medium": 12, "ap": 1, "rules": ["pistol"]},
+    "guardian_sword_blade": {"name": "Guardian Sword (Blade)", "attacks": 1, "short": "Melee", "ap": 2},
+    "walker_sword_shoot": {"name": "Walker Sword (Shoot)", "attacks": 2, "short": 6, "medium": 12, "ap": 3, "rules": [{"id": "blast", "x": 3}]},
+    "walker_sword_blade": {"name": "Walker Sword (Blade)", "attacks": 1, "short": "Melee", "ap": 5},
+    "walker_spear_blade": {"name": "Walker Spear (Blade)", "attacks": 1, "short": "Melee", "ap": 8},
+    "walker_spear_rifle": {"name": "Walker Spear (Shoot)", "attacks": 2, "short": 12, "medium": 24, "ap": 5},
+    "laser_spear": {
+      "name": "Laser Spear",
+      "profiles": [{"name": "Blade", "attacks": 1, "short": "Melee", "ap": 3}, {"name": "Carbine", "attacks": 1, "short": 9, "medium": 18, "ap": 3, "rules": ["assault"]}]
+    },
+    "scorching_spear": {
+      "name": "Scorching Spear",
+      "profiles": [{"name": "Blade", "attacks": 1, "short": "Melee", "ap": 3}, {"name": "Flame", "attacks": 1, "short": 6, "medium": 12, "ap": 4, "rules": ["assault"]}]
+    }
+  },
+  "rules": {
+    "banner_of_blindness": {
+      "name": "Banner of Blindness",
+      "description": "Once per round a when a friendly Infantry unit is targeted by a shooting attack, the attacker suffers -1 Accuracy.",
+      "points": 10
+    },
+    "battle_tactics": {
+      "name": "Battle Tactics",
+      "inputs": ["x"],
+      "description": "When this unit is activated, choose up to X friendly _Infantry_ units within 6\". Those units may re-roll failed Accuracy tests of 9+ and failed Strength tests of 9+ until the end of the round.",
+      "points": 20
+    },
+    "battle_tactics_biker": {
+      "name": "Biker Battle Tactics",
+      "inputs": ["x"],
+      "description": "When this unit is activated, choose up to X friendly _Infantry_ or _Biker_ units within 6\". Those units may re-roll failed Accuracy tests of 9+ and failed Strength tests of 9+ until the end of the round.",
+      "points": 20
+    },
+    "witch_hunter_tactics": {
+      "name": "Witch Hunter Tactics",
+      "inputs": ["x"],
+      "description": "When this unit is activated, choose up to X friendly _Witch Hunters Infantry_ units within 6\" to receive one of the following bonuses until the end of the round: \n * Re-roll failed Accuracy tests of 9+ \n * Re-roll failed Strength tests of 9+",
+      "points": ["rule.x", {"multiply": 10}]
+    }
+  },
+  "strategies": [
+    {
+      "phase": "activation",
+      "name": "Combat Awareness",
+      "description": "Use when shooting with an _Infantry_ unit. That unit may target enemies it is engaged with at -1 Accuracy.",
+      "flavor": "Throne Guardians are trained to be expertly aware of their surroundings including where their allies are.",
+      "cost": 1
+    },
+    {
+      "name": "Unyielding",
+      "phase": "activation",
+      "description": "Use when activating an _Infantry_ unit. That unit may ignore any critical injuries it has sustained for this activation.",
+      "flavor": "Throne Guardians fight to the bitter end to defend the throne.",
+      "cost": 1
+    },
+    {
+      "phase": "activation",
+      "name": "Psychic Shield",
+      "description": "Use when a Power(x) test is taken within 24\" of any Infantry unit. Roll a D10. If the value is less than or equal to the test to cast the power, it is prevented.",
+      "flavor": "Shielded by holy energy, Throne Guardians can protect themselves from psychic powers.",
+      "cost": 1
+    },
+    {
+      "subfactions": ["fear_focus"],
+      "name": "Terror",
+      "phase": "activation",
+      "description": "Use when a unit within 6\" takes a Courage test. That unit suffers -1 Courage until the end of its activation.",
+      "flavor": "These guardians invoke a sense of fear in their enemies which has not been seen before.",
+      "cost": 1
+    },
+    {
+      "subfactions": ["fear_focus"],
+      "name": "Overwhelming Assault",
+      "phase": "activation",
+      "description": "Use this strategy when an _Infantry_ unit charges. That unit gains +3\" of Movement for the charge action.",
+      "flavor": "Frozen in fear, their enemies can only watch as these guardians advance.",
+      "cost": 1
+    },
+    {
+      "subfactions": ["fear_focus"],
+      "phase": "activation",
+      "name": "Shock Tactics",
+      "description": "Use when fighting with an _Infantry_ unit. If the attack hits, assign 2 additional Shock.",
+      "flavor": "With a sudden strike these guardians strike fear in their targets keeping them from retaliating.",
+      "cost": 1
+    },
+    {
+      "subfactions": ["shadow_focus"],
+      "name": "Ambush",
+      "phase": "pre_game",
+      "description": "Up to half of any force's units, one point for each may be placed in _Ambush Reserves_ instead of deployed on the field.",
+      "flavor": "These guardians are trained to wait for the right moment to strike.",
+      "cost": "1/per"
+    },
+    {
+      "subfactions": ["shadow_focus"],
+      "name": "Concealment",
+      "phase": "activation",
+      "flavor": "Guardians trained in shadow tactics can find places to hide even in plain sight.",
+      "description": "Use this strategy when a unit is targeted by an enemy Shooting attack. That unit gets -1 Accuracy this attack.",
+      "cost": 2
+    },
+    {
+      "subfactions": ["shadow_focus"],
+      "name": "Stealth Move",
+      "phase": "activation",
+      "flavor": "Moving quietly is sometimes key in advancing on the enemy.",
+      "description": "Use this strategy when an _Infantry_ unit performs a Move action. Enemy units may not perform reactions to that Move action.",
+      "cost": 1
+    },
+    {
+      "subfactions": ["honor_focus"],
+      "name": "Fearless",
+      "phase": "activation",
+      "description": "Use before activating a unit. That unit may immediately remove up to 2 Shock.",
+      "flavor": "These guardians maintain their focus even in the toughest of situations.",
+      "cost": 1
+    },
+    {
+      "name": "Valiant Defense",
+      "phase": "activation",
+      "description": "Use after an _Infantry_ unit has been targeted by a Shooting attack within 3\" of a friendly unit with Shields. For this attack, you can roll a D10 each time an attack made with a ranged weapon hits that unit. On an 8 or less a hit is transferred to the unit with Shields instead of the original target.",
+      "flavor": "At a moments notice, these guardians can aid their allies with protective shields.",
+      "cost": 2
+    },
+    {
+      "name": "Lead The Assault",
+      "phase": "pre_game",
+      "description": "Choose any number of units to Lead The Assault. When this unit is deployed or arrives from Reserves, it may make a free Move action. This action may not move within 12\" of any enemy units.",
+      "flavor": "These guardians lead others into battle with a thunderous charge.",
+      "cost": "1/per"
+    }
+  ]
 }

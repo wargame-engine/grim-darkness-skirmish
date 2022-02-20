@@ -2834,10 +2834,10 @@
         },
         {
             "subfactions": ["stealth_focus"],
-            "name": "Stealth Assault",
+            "name": "Stealth Move",
             "phase": "activation",
-            "flavor": "Striking when the enemy least expects is a good way to quietly deal with an enemy.",
-            "description": "Use this strategy when an _Infantry_ unit charges. If the charging unit only makes a single move action this activation, enemy units may not react to that charge.",
+            "flavor": "Moving quietly is sometimes key in advancing on the enemy.",
+            "description": "Use this strategy when an _Infantry_ unit performs a Move action. Enemy units may not perform reactions to that Move action.",
             "cost": 1
         },
         {
