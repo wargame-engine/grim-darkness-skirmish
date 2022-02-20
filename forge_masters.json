@@ -2,7 +2,6 @@
     "name": "Forge Masters",
     "id": "forge_masters",
     "author": "Xekon#8266",
-    "description": "",
     "version": "0.1",
     "units": {
         "forge_chief": {
