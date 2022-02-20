@@ -627,6 +627,7 @@
       "cost": 1
     },
     {
+      "subfactions": ["honor_focus"],
       "name": "Valiant Defense",
       "phase": "activation",
       "description": "Use after an _Infantry_ unit has been targeted by a Shooting attack within 3\" of a friendly unit with Shields. For this attack, you can roll a D10 each time an attack made with a ranged weapon hits that unit. On an 8 or less a hit is transferred to the unit with Shields instead of the original target.",
@@ -634,6 +635,7 @@
       "cost": 2
     },
     {
+      "subfactions": ["honor_focus"],
       "name": "Lead The Assault",
       "phase": "pre_game",
       "description": "Choose any number of units to Lead The Assault. When this unit is deployed or arrives from Reserves, it may make a free Move action. This action may not move within 12\" of any enemy units.",
