@@ -205,7 +205,12 @@
       "color": "#D4AF37",
       "secondary_color": "#7d0a15",
       "alliance": "imperial_alliance",
-      "description": "The Throne Guardians are the defenders of the Human Empire's capital. Only the most elite Imperial Marines are recruited to be Throne Guardians and with that they are the most well-trained. The Throne Guardians rely on the most elite and well-trained infantry along with powerful and ancient war weaponry to defend their home planet."
+      "description": "The Throne Guardians are the defenders of the Human Empire's capital. Only the most elite Imperial Marines are recruited to be Throne Guardians and with that they are the most well-trained. The Throne Guardians rely on the most elite and well-trained infantry along with powerful and ancient war weaponry to defend their home planet.",
+      "subfactions": {
+        "shadow_focus": {"name": "Shadow", "id": "shadow_focus", "description": "A Throne Guardian sect with a focus on stealth and shadow tactics."},
+        "fear_focus": {"name": "Fear", "id": "fear_focus", "description": "A Throne Guardian sect with a focus on fear and intimidation tactics."},
+        "honor_focus": {"name": "Honor", "id": "honor_focus", "description": "A Throne Guardian sect with a focus on swiftness and honor."}
+      }
     },
     "orc_clans": {
       "version": "1.0",
@@ -876,7 +881,7 @@
     "destroyer_armor": {"name": "Destroyer Armor", "hidden": true, "description_short": "Ambush, Save +1, Movement -1\"", "points": 15, "description": "Ambush, Save +1, Movement -1\""},
     "mutations": {
       "name": "Mutations",
-      "description": "At the beginning of the game choose one of the following effects to be applied to this unit: \n * +1 AP to their attacks  \n * +1 attacks per model \n * +1 Save ",
+      "description": "At the beginning of the game choose one of the following effects to be applied to this unit: \n * Strength rolls of 1 or 2 gain +1 AP \n * Strength rolls of 1 or 2 cause 2 hits instead of 1. \n * +1 Save ",
       "points": 2
     },
     "disk_of_change": {
