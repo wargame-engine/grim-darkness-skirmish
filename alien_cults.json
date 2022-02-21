@@ -862,7 +862,7 @@
             "subfactions": ["ambush_focus"],
             "name": "Scramblers",
             "phase": "activation",
-            "description": "Use after an _Infantry_ unit declares it is arriving from reserves within 24\" of this unit. That unit automatically fails any Initiative tests for arriving on the table.",
+            "description": "Use after a unit declares it is arriving from reserves within 24\" of this unit. That unit automatically fails any Initiative tests for arriving on the table.",
             "flavor": "Prepared for any enemies, these scramblers will ensure no one can find our units.",
             "cost": 1
         },
