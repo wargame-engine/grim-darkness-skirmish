@@ -91,6 +91,7 @@
       "id": "undying_machines",
       "url": "undying_machines.json",
       "color": "#1e7331",
+      "alliance": "corrupteds",
       "description": "The Undying Machines are a race of once-people now turned into machine beings that are immortal. The Undying machines rely on waves of reanimating machines and advanced ancient battle technology to win their battles.",
       "subfactions": {
         "solar_fire": {"name": "Solar Fire", "id": "solar_fire", "description": "Undying Machines focused on overwhelming firepower."},
@@ -245,6 +246,7 @@
       "id": "undercity_gangs",
       "url": "undercity_gangs.json",
       "color": "#8a552c",
+      "alliance": "mercenaries",
       "description": "The Undercity on many manufacturing worlds is filled with criminal gangs vying for power. Occasionally they will ally together to defeat a common enemy and maintain the status quo.",
       "subfactions": {
         "finesse_focus": {"name": "Finesse", "id": "finesse_focus", "description": "An Undercity gang focused on finesse and blade mastery."},
@@ -321,7 +323,7 @@
     "elven_coaliation": {"name": "Elven Coalition"},
     "corrupteds": {"name": "Corrupted Pact"},
     "federation": {"name": "Federated Species"},
-    "greenskins": {"name": "Greenskins Warband"},
+    "greenskins": {"name": "Greenskin Tribes"},
     "mercenaries": {"name": "Mercenaries"}
   },
   "categories": {
