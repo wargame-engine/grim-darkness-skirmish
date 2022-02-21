@@ -91,8 +91,8 @@
       "id": "undying_machines",
       "url": "undying_machines.json",
       "color": "#1e7331",
-      "alliance": "traitors",
-      "description": "The Undying Machines are a race of once-people now turned into machine beings that are immortal. The Undying machines rely on waves of reanimating machines and advanced ancient battle technology to win their battles.",
+      "alliance": "corrupted_pact",
+      "description": "The Undying Machines are a race of once-people now cursed with unending machine immortality. They rely on waves of reanimating soldiers and advanced ancient technology to win their battles.",
       "subfactions": {
         "solar_fire": {"name": "Solar Fire", "id": "solar_fire", "description": "Undying Machines focused on overwhelming firepower."},
         "combat_focus": {"name": "Close Combat", "id": "combat_focus", "description": "Undying Machines focused on deadly close assaults."}
