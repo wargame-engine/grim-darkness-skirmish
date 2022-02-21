@@ -650,7 +650,7 @@
             "cost": 1
         },
         {
-            "subfactions": ["speed_focus"],
+            "subfactions": ["assault_focus"],
             "phase": "activation",
             "name": "Quick Aim",
             "description": "Use when an _Infantry_ unit with any _Assault_ weapons is firing. That unit does not suffer -1 to hit when using the _Assault_ rule.",
