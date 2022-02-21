@@ -147,7 +147,8 @@
       "subfactions": {
         "stealth_focus": {"name": "Stealth", "id": "stealth_focus", "description": "A Machine Guild focused on surprise and infiltration."},
         "firepower_focus": {"name": "Firepower", "id": "firepower_focus", "description": "A Machine Guild focused on overwhelming firepower."},
-        "defense_focus": {"name": "Defense", "id": "defense_focus", "description": "A Machine Guild focused on heavy defense and survival."}
+        "defense_focus": {"name": "Defense", "id": "defense_focus", "description": "A Machine Guild focused on heavy defense and survival."},
+        "assault_focus": {"name": "Assault", "id": "assault_focus", "description": "A Machine Guild focused on melee assaults and close quarters fighting."}
       }
     },
     "imperial_defense_force": {
