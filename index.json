@@ -53,7 +53,7 @@
       "id": "corrupted_marines",
       "url": "corrupted_marines.json",
       "color": "#343a40",
-      "alliance": "corrupteds",
+      "alliance": "corrupted_pact",
       "description": "The corrupted marines are a band of marines that betrayed the Human Empire and now cooperate with demons and other heretics to pursue their own desires. They have a mix of deadly beasts, dangerous war machines and tough marine infantry.",
       "subfactions": {
         "rage_focus": {"name": "Rage", "id": "rage_focus", "color": "#6a0001", "description": "Corrupted marines focused on anger and brutal close assault to defeat their foes."},
@@ -76,7 +76,7 @@
       "id": "dimensional_horrors",
       "url": "dimensional_horrors.json",
       "color": "#90305d",
-      "alliance": "corrupteds",
+      "alliance": "corrupted_pact",
       "description": "The dimensional horrors are a species of demon entities from an unknown dimension controlled by several demon lords. Their existence is largely not understood. They focus on rapid and unpredictable entry and deadly waves of infantry and beasts to surprise and overwhelm their foes.",
       "subfactions": {
         "change": {"name": "Magic", "id": "change", "color": "#90305d", "restricted": true, "description": "Horrors with an adept magical skill."},
@@ -91,7 +91,7 @@
       "id": "undying_machines",
       "url": "undying_machines.json",
       "color": "#1e7331",
-      "alliance": "corrupteds",
+      "alliance": "traitors",
       "description": "The Undying Machines are a race of once-people now turned into machine beings that are immortal. The Undying machines rely on waves of reanimating machines and advanced ancient battle technology to win their battles.",
       "subfactions": {
         "solar_fire": {"name": "Solar Fire", "id": "solar_fire", "description": "Undying Machines focused on overwhelming firepower."},
@@ -312,16 +312,16 @@
       "url": "corrupted_defense_force.json",
       "color": "#ba7f00",
       "secondary_color": "#343a40",
-      "alliance": "corrupteds",
+      "alliance": "corrupted_pact",
       "version": "0.1",
-      "description": "The Corrupted Defense Force are a band of deserters and other folks out for their own interests. They have gathered much of what they can from the Imperial Defense Force and now fight with the corrupteds against those that stay imperial."
+      "description": "The Corrupted Defense Force are a band of deserters and other folks out for their own interests. They have gathered much of what they can from the Imperial Defense Force and now fight with the Corrupted Pact against those that stay imperial."
     }
   },
   "alliances": {
     "alien_swarm": {"name": "Alien Swarm"},
     "imperial_alliance": {"name": "Imperial Alliance"},
     "elven_coaliation": {"name": "Elven Coalition"},
-    "corrupteds": {"name": "Corrupted Pact"},
+    "corrupted_pact": {"name": "Corrupted Pact"},
     "federation": {"name": "Federated Species"},
     "greenskins": {"name": "Greenskin Tribes"},
     "mercenaries": {"name": "Mercenaries"}
