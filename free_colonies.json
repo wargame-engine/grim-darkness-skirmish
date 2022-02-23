@@ -924,7 +924,7 @@
     "avian_cannon": {"name": "Avian Cannon", "attacks": 2, "short": 24, "medium": 48, "ap": 4},
     "neutron_carbine": {"name": "Neutron Carbine", "attacks": 1, "short": 9, "medium": 18, "ap": 3},
     "suit_sword": {"name": "Plasma Sword", "attacks": 1, "short": "Melee", "ap": 3},
-    "suit_relic_sword": {"name": "Heirloom Sword", "attacks": 1, "short": "Melee", "ap": 5},
+    "suit_relic_sword": {"name": "Plasma Greatsword", "attacks": 1, "short": "Melee", "ap": 5},
     "suit_powerfist": {"name": "Plasma Gauntlets", "attacks": 1, "short": "Melee", "ap": 5, "rules": ["cumbersome"]},
     "amplified_pulse_rifle": {"name": "Amplified Pulse Rifle", "attacks": 1, "short": 24, "medium": 48, "ap": 3, "rules": ["rapid_fire"]}
   },
