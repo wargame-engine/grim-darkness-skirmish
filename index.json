@@ -114,7 +114,7 @@
       "id": "free_colonies",
       "url": "free_colonies.json",
       "color": "#008080",
-      "description": "The Free Colonies are an alliance of several alien species cooperating together in the name of survival and prosperity. They rely on a mix of advanced battle warsuits and deadly pulse weaponry to defeat their enemies.",
+      "description": "The Free Colonies are an alliance of several alien worlds cooperating together in the name of survival and prosperity. They rely on a mix of advanced battle warsuits and deadly pulse weaponry to defeat their enemies.",
       "subfactions": {
         "vigilance_focus": {"name": "Vigilance", "id": "vigilance_focus", "description": "Free Colonies troops focused on readyness and vigiliant tactics."},
         "mobility_focus": {"name": "Mobility", "id": "mobility_focus", "description": "Free Colonies troops focused on mobile firing tactics."}
