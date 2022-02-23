@@ -110,7 +110,7 @@
     "free_colonies": {
       "version": "1.0",
       "alliance": "federation",
-      "name": "",
+      "name": "Free Colonies",
       "id": "free_colonies",
       "url": "free_colonies.json",
       "color": "#008080",
