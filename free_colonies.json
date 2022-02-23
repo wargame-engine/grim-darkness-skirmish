@@ -1,8 +1,8 @@
 {
-  "id": "tao_federation",
-  "name": "Tao Federation",
+  "id": "free_colonies",
+  "name": "Free Colonies",
   "author": "guitarninja#5707",
-  "background": "The Tao Federation are a group of cooperating aliens, and explorers expanding their influence throughout the stars. Their primary fighting style involves a combined arms assault of mechanized infantry, flying battlesuits and high-tech infantry.",
+  "background": "The Free Colonies are a group of cooperating aliens, and explorers expanding their influence throughout the stars. Their primary fighting style involves a combined arms assault of mechanized infantry, flying battlesuits and high-tech infantry.",
   "units": {
     "bs_comm": {
       "name": "Battlesuit Commander",
@@ -90,7 +90,7 @@
     },
     "celestial": {
       "name": "Celestial",
-      "description": "A high ranking Federation member.",
+      "description": "A high ranking Colony member.",
       "category": "command",
       "models": [
         {
@@ -831,14 +831,14 @@
     "covering_fire": {
       "name": "Covering Fire",
       "phase": "activation",
-      "flavor": "Members of the Federation are tirelessly drilled on covering one another in the event that one unit is overrun.",
+      "flavor": "Members of the Colonies are tirelessly drilled on covering one another in the event that one unit is overrun.",
       "description": "Use when a friendly _Infantry_ or _Heavy Infantry_ unit is Charged. One friendly _Infantry_ or _Heavy Infantry_ unit within 6\" may take an Initiative test and attempt to react to the charging unit.",
       "cost": 1
     },
     "preservation_protocols": {
       "name": "Preservation Protocols",
       "phase": "activation",
-      "flavor": "Federation drones are programmed to protect their creators at all costs.",
+      "flavor": "Colony drones are programmed to protect their creators at all costs.",
       "description": "Use after an _Infantry_ or _Heavy Infantry_ unit has been hit by a ranged weapon. For this attack, you can roll a D10 each time an attack made with a ranged weapon hits that unit. If there is a friendly _Drone_ unit within 6\" of it, and the _Drone_ unit is closer to the attacking model than the target unit. On an 8 or less a hit is transferred to the _Drone_ unit instead of the original target.",
       "cost": 2
     },
@@ -846,7 +846,7 @@
       "phase": "activation",
       "name": "Danger Close",
       "description": "Use when shooting with an _Infantry_ unit. That unit may target enemies it is engaged with at -1 Accuracy.",
-      "flavor": "Federation troops are trained to use defensive tactics to protect themselves in close quarters.",
+      "flavor": "Colony troops are trained to use defensive tactics to protect themselves in close quarters.",
       "cost": 1
     },
     "moving_fire": {

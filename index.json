@@ -107,17 +107,17 @@
       "alliance": "elven_coaliation",
       "description": "The Elven Keepers are a race of elves who are tasked with keeping the grand elf library. They have a unique close combat and fast oriented style with deadly weaponry and quick jetbike and hovercraft vehicles."
     },
-    "tao_federation": {
+    "free_colonies": {
       "version": "1.0",
       "alliance": "federation",
-      "name": "Tao Federation",
-      "id": "tao_federation",
-      "url": "tao_federation.json",
+      "name": "",
+      "id": "free_colonies",
+      "url": "free_colonies.json",
       "color": "#008080",
-      "description": "The Tao Federation is an alliance of several alien species to band together in the name of survival and prosperity. The Tao rely on a mix of advanced battle warsuits and deadly pulse weaponry to defeat their enemies.",
+      "description": "The Free Colonies are an alliance of several alien species cooperating together in the name of survival and prosperity. They rely on a mix of advanced battle warsuits and deadly pulse weaponry to defeat their enemies.",
       "subfactions": {
-        "vigilance_focus": {"name": "Vigilance", "id": "vigilance_focus", "description": "Tao Federation troops focused on readyness and vigiliant tactics."},
-        "mobility_focus": {"name": "Mobility", "id": "mobility_focus", "description": "Tao Federation troops focused on mobile firing tactics."}
+        "vigilance_focus": {"name": "Vigilance", "id": "vigilance_focus", "description": "Free Colonies troops focused on readyness and vigiliant tactics."},
+        "mobility_focus": {"name": "Mobility", "id": "mobility_focus", "description": "Free Colonies troops focused on mobile firing tactics."}
       }
     },
     "faith_wardens": {
