@@ -21,7 +21,10 @@
       "url": "dark_elves.json",
       "color": "#0b474a",
       "alliance": "elven_coaliation",
-      "description": "The Dark Elf Raiders are a group of elves who have an obsession with attacking a raiding settlements for plunder. Their tactics revolve around attacking quickly with highly agile ships and doing damage after which they quickly escape."
+      "description": "The Dark Elf Raiders are a group of elves who have an obsession with attacking a raiding settlements for plunder. Their tactics revolve around attacking quickly with highly agile ships and doing damage after which they quickly escape.",
+      "subfactions": {
+        "speed_focus": {"name": "Speed Focus", "id": "speed_focus", "description": "Dark Elves focused fast attack tactics."}
+      }
     },
     "alien_swarm": {
       "version": "1.0",
