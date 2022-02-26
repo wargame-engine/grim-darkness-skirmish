@@ -1650,7 +1650,7 @@
       "subfactions": ["none", "psychic_focus", "pestilence_focus"],
       "name": "Hate",
       "flavor": "Full with fury, corrupted marines can launch devastating close combat assaults.",
-      "description": "Use before an Infantry unit fights. Hit rolls of 1 or 2 gain +1 AP.",
+      "description": "Use before an Infantry unit fights. Successful hits gain +1 AP.",
       "cost": 1
     },
     "unyielding": {
@@ -1746,7 +1746,7 @@
       "subfactions": ["destruction_focus"],
       "phase": "activation",
       "flavor": "Burn the enemy to the ground.",
-      "description": "Use this strategy when one of your _Infantry_ units Shoots. Successful hit rolls of 1 or 2 gain +1 AP.",
+      "description": "Use this strategy when one of your _Infantry_ units Shoots. Successful hits gain +1 AP.",
       "cost": 1
     },
     "bravery": {

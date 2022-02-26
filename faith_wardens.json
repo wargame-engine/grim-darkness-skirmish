@@ -512,7 +512,7 @@
             "name": "Fury",
             "phase": "activation",
             "flavor": "These wardens are furious in resolve and can rip through their enemies.",
-            "description": "Use when an _Infantry_ unit makes a Fight action. Hit rolls of 1 or 2 gain +1 AP.",
+            "description": "Use when an _Infantry_ unit makes a Fight action. Successful hits gain +1 AP.",
             "cost": 1
         },
         {
@@ -583,7 +583,7 @@
             "subfactions": ["bravery_focus"],
             "name": "Overwhelming Firepower",
             "phase": "activation",
-            "description": "Use when an _Infantry_ unit performs a Shoot action. Hit rolls of 1 or 2 cause an additional hit.",
+            "description": "Use when an _Infantry_ unit performs a Shoot action. Successful hits cause an additional hit.",
             "flavor": "Massed firepower can be relatively effective in taking down most targets.",
             "cost": 1
         },

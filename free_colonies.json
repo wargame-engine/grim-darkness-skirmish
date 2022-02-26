@@ -1033,7 +1033,7 @@
       "subfactions": ["mobility_focus"],
       "name": "Burst",
       "flavor": "With a wave of fire, surely any target could not survive.",
-      "description": "Use when an _Infantry_ unit makes a Shoot action. Hit rolls of 1 or 2 cause 2 hits instead of 1.",
+      "description": "Use when an _Infantry_ unit makes a Shoot action. Successful hits cause 2 hits instead of 1.",
       "cost": 1
     },
     "vigilance": {
@@ -1057,7 +1057,7 @@
       "subfactions": ["vigilance_focus"],
       "name": "Overcharge",
       "flavor": "By overcharging their weapons, some hits can pierce even heavily armored targets.",
-      "description": "Use when an _Infantry_ unit makes a Shoot action. Hit rolls of 1 or 2 gain +1 AP.",
+      "description": "Use when an _Infantry_ unit makes a Shoot action. Successful hits gain +1 AP.",
       "cost": 1
     }
   },

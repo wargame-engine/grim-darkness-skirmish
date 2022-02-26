@@ -573,7 +573,7 @@
         {
             "name": "Radiation Supercharge",
             "phase": "activation",
-            "description": "Use before an _Infantry_ unit shoots. Hit rolls of 1 or 2 gain +1 AP.",
+            "description": "Use before an _Infantry_ unit shoots. Successful hits gain +1 AP.",
             "flavor": "While very harmful to the firer, sometimes it is beneficial to supercharge radiation weapons to deal with a foe more swiftly.",
             "cost": 1
         },
@@ -621,7 +621,7 @@
             "subfactions": ["firepower_focus"],
             "name": "Scatter Shot",
             "phase": "activation",
-            "description": "Use when an _Infantry_ unit shoots. Hit rolls of 1 or 2 cause 2 hits instead of 1.",
+            "description": "Use when an _Infantry_ unit shoots. Successful hits cause 2 hits instead of 1.",
             "flavor": "With enhanced firepower, their weapons can hit with extra strength.",
             "cost": 1
         },
@@ -662,7 +662,7 @@
             "name": "Fury",
             "phase": "activation",
             "flavor": "These guild members are furious in resolve and can rip through their enemies.",
-            "description": "Use when an _Infantry_ unit makes a Fight action. Hit rolls of 1 or 2 gain +1 AP.",
+            "description": "Use when an _Infantry_ unit makes a Fight action. Successful hits gain +1 AP.",
             "cost": 1
         },
         {

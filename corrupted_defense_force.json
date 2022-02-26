@@ -794,7 +794,7 @@
             "phase": "activation",
             "name": "Hate",
             "flavor": "Full with fury, corrupted defense force soldiers can launch devastating close combat assaults.",
-            "description": "Use before an Infantry unit fights. Hit rolls of 1 or 2 gain +1 AP.",
+            "description": "Use before an Infantry unit fights. Successful hits gain +1 AP.",
             "cost": 1
         },
         "field_repairs": {"name": "Field Repairs", "phase": "activation", "description": "Use when activating a _Vehicle_ unit. That unit may remove one critical damage.", "cost": 2}

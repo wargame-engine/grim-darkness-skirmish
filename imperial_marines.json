@@ -2756,7 +2756,7 @@
             "subfactions": ["forge_focus"],
             "name": "Enhancements",
             "phase": "activation",
-            "description": "Use when an _Infantry_ unit shoots. Hit rolls of 1 or 2 gain +1 AP.",
+            "description": "Use when an _Infantry_ unit shoots. Successful hits gain +1 AP.",
             "flavor": "With enhanced firepower, their weapons can hit with extra strength.",
             "cost": 1
         },
@@ -2764,7 +2764,7 @@
             "subfactions": ["toughness_focus"],
             "name": "Machine Might",
             "phase": "activation",
-            "description": "Use when a _Vehicle_ unit attacks in melee. Hit rolls of 1 or 2 gain +1 AP.",
+            "description": "Use when a _Vehicle_ unit attacks in melee. Successful hits gain +1 AP.",
             "flavor": "With a wave of fire, enemy units cannot hope to stand a chance.",
             "cost": 1
         },
@@ -2788,7 +2788,7 @@
             "subfactions": ["siege_masters"],
             "name": "Rapid Fire",
             "phase": "activation",
-            "description": "Use before an _Infantry_ unit performs a Shoot action. Hit rolls of 1 or 2 cause an additional hit.",
+            "description": "Use before an _Infantry_ unit performs a Shoot action. Successful hits cause an additional hit.",
             "flavor": "With a wave of fire, enemy units cannot hope to stand a chance.",
             "cost": 1
         },
@@ -2877,7 +2877,7 @@
             "name": "Fury",
             "phase": "activation",
             "flavor": "These marines are furious in resolve and can rip through their enemies.",
-            "description": "Use when an _Infantry_ unit makes a Fight action. Hit rolls of 1 or 2 gain +1 AP.",
+            "description": "Use when an _Infantry_ unit makes a Fight action. Successful hits gain +1 AP.",
             "cost": 1
         },
         {
@@ -2924,7 +2924,7 @@
             "subfactions": ["zeal_focus"],
             "name": "Strike Down",
             "phase": "activation",
-            "description": "Use when an _Infantry_ unit performs a Fight action. Hit rolls of 1 or 2 cause an additional hit.",
+            "description": "Use when an _Infantry_ unit performs a Fight action. Successful hits cause an additional hit.",
             "flavor": "These marines strike their foes down with a flurry of melee attacks.",
             "cost": 1
         },

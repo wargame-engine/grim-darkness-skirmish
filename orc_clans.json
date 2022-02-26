@@ -1001,7 +1001,7 @@
       "subfactions": ["goblin_army"],
       "phase": "activation",
       "name": "Deadly In Numbers",
-      "description": "Use before shooting with an _Infantry_ unit. Hit rolls of 1 or 2 gain +1 AP.",
+      "description": "Use before shooting with an _Infantry_ unit. Successful hits gain +1 AP.",
       "flavor": "With enough Goblins trained on a target, even they can do significant damage.",
       "cost": 1
     },
@@ -1026,7 +1026,7 @@
       "name": "Smash Them",
       "phase": "activation",
       "flavor": "It's about time we got to fighting.",
-      "description": "Use when an _Infantry_ unit performs a Fight action. Hit rolls of 1 or 2 cause an additional hit.",
+      "description": "Use when an _Infantry_ unit performs a Fight action. Successful hits cause an additional hit.",
       "cost": 1
     },
     "counter_attack": {
@@ -1130,7 +1130,7 @@
       "name": "Piercing Blows",
       "phase": "activation",
       "flavor": "These Orcs are so tough they can even pentrate some armor for extra damage.",
-      "description": "Use when an _Infantry_ unit performs a Fight action. Hit rolls of 1 or 2 gain +1 AP.",
+      "description": "Use when an _Infantry_ unit performs a Fight action. Successful hits gain +1 AP.",
       "cost": 1
     }
   },
