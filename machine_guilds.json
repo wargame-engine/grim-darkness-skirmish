@@ -213,12 +213,12 @@
         {
           "name": "Protector Leader",
           "courage": 5,
-          "movement": 5,
+          "movement": 6,
           "shoot": 5,
           "fight": 6,
           "defense": 6,
           "reflexes": 6,
-          "weapons": [{"id": "taser_spear_melee", "count": 2}, "taser_spear_shoot", "magnetic_shield"],
+          "weapons": [{"id": "shock_spear_melee", "count": 2}, "shock_spear_shoot", "magnetic_shield"],
           "options": [{"addRule": [{"id": "data_link"}, "heat_scanner"]}],
           "rules": ["leader"],
           "min": 1,
@@ -234,12 +234,12 @@
         {
           "name": "Protector",
           "courage": 5,
-          "movement": 5,
+          "movement": 6,
           "shoot": 5,
           "fight": 6,
           "defense": 6,
           "reflexes": 6,
-          "weapons": [{"id": "taser_spear_melee", "count": 2}, "taser_spear_shoot", "magnetic_shield"],
+          "weapons": [{"id": "shock_spear_melee", "count": 2}, "shock_spear_shoot", "magnetic_shield"],
           "min": 1,
           "max": 1
         }
@@ -548,8 +548,8 @@
     "twin_phosphor_cannon": {"name": "Twin Phosphor Cannon", "attacks": 4, "short": 18, "medium": 36, "ap": 4, "rules": ["phosphor"]},
     "bomb_rack": {"name": "Bomb Rack", "attacks": 2, "short": 6, "ap": 3, "rules": [{"id": "blast", "x": 3}, "bomb"]},
     "aa_missiles": {"name": "AA Missile System", "attacks": 1, "short": 24, "medium": 48, "ap": 5, "rules": ["anti_air"]},
-    "taser_spear_melee": {"name": "Taser Spear (Strike)", "attacks": 1, "ap": 1, "short": "Melee", "rules": ["taser", {"id": "reach", "x": 1}]},
-    "taser_spear_shoot": {"name": "Taser Spear (Arc)", "attacks": 1, "ap": 1, "short": 6, "medium": 12, "rules": ["taser", "assault"]},
+    "shock_spear_melee": {"name": "Shock Spear (Strike)", "attacks": 1, "ap": 1, "short": "Melee", "rules": [{"id": "reach", "x": 1}]},
+    "shock_spear_shoot": {"name": "Shock Spear (Arc)", "attacks": 1, "ap": 1, "short": 6, "medium": 12, "rules": ["assault"]},
     "magnetic_shield": {"name": "Magnetic Shield", "attacks": 0, "short": "Melee", "rules": ["shield"]}
   },
   "rules": {
