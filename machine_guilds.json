@@ -213,7 +213,7 @@
         {
           "name": "Protector Leader",
           "courage": 5,
-          "movement": 6,
+          "movement": 5,
           "shoot": 5,
           "fight": 6,
           "defense": 6,
@@ -234,7 +234,7 @@
         {
           "name": "Protector",
           "courage": 5,
-          "movement": 6,
+          "movement": 5,
           "shoot": 5,
           "fight": 6,
           "defense": 6,
@@ -517,7 +517,7 @@
     "claws": {"name": "Claws", "attacks": 1, "short": "Melee", "rules": ["rending"]},
     "iron_claws": {"name": "Iron Claws", "attacks": 1, "short": "Melee", "ap": 2},
     "robot_fist": {"name": "Robot Fist", "attacks": 1, "short": "Melee", "ap": 8},
-    "taser_gauntlets_zap": {"name": "Taser Gauntlets (Zap)", "ap": 1, "attacks": 1, "short": 6, "medium": 12, "rules": ["taser"]},
+    "taser_gauntlets_zap": {"name": "Taser Gauntlets (Zap)", "ap": 1, "attacks": 1, "short": 6, "rules": ["taser", "pistol"]},
     "taser_gauntlets_strike": {"name": "Taser Gauntlets (Strike)", "ap": 1, "attacks": 1, "short": "Melee", "rules": ["taser"]},
     "taser_sword": {"name": "Taser Sword", "attacks": 1, "ap": 1, "short": "Melee", "rules": ["taser"]},
     "taser_lance": {"name": "Taser Lance", "attacks": 3, "ap": 2, "short": "Melee", "rules": ["taser"]},
