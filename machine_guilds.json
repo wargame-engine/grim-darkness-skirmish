@@ -268,7 +268,7 @@
     },
     "seeker": {
       "name": "Seeker",
-      "description": "Foot-mobile machine guild protection forces.",
+      "description": "Guild troops wielding short-ranged shock artillery rifles.",
       "category": "core",
       "models": [{"name": "Seeker", "courage": 5, "movement": 6, "shoot": 6, "fight": 5, "defense": 6, "reflexes": 6, "weapons": ["shock_caster", "ccw"], "min": 1, "max": 1}]
     },
