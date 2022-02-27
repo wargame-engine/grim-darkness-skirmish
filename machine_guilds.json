@@ -1,678 +1,697 @@
 {
-    "id": "machine_guilds",
-    "name": "Machine Guilds",
-    "author": "guitarninja#5707",
-    "background": "The Machine Guilds are a group of aspiring machinist and inventors of war machines. Their strange obsession with cybernetic augmentation has left them in a state of machine-worship. With some of the most high-tech weaponry available to mortals, the Machine Guilds make good use of it against their enemies.",
-    "hidden_units": {
-        "machine_grand_master": {
-            "name": "Machine Grand Master",
-            "description": "The smartest and most intelligent machine guild leader.",
-            "category": "command",
-            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "repair", "x": 3}],
-            "keywords": ["Infantry"],
-            "models": [
-                {
-                    "name": "Arch Master",
-                    "courage": 7,
-                    "movement": 6,
-                    "shoot": 8,
-                    "fight": 8,
-                    "defense": 11,
-                    "reflexes": 7,
-                    "weapons": [{"id": "axe_halberd", "count": 3}],
-                    "options": [
-                        {"addRule": [{"id": "ward", "x": 1, "name": "Machine Powers"}, {"id": "ward", "x": "2", "name": "Master Machine Powers"}]},
-                        {"addWeapon": ["eradication_ray", "combustion_blaster"], "limit": 1},
-                        {"addWeapon": ["macro_pistol", "phosphor_carbine"], "limit": 1}
-                    ],
-                    "min": 1,
-                    "max": 1
-                }
-            ]
+  "id": "machine_guilds",
+  "name": "Machine Guilds",
+  "author": "guitarninja#5707",
+  "background": "The Machine Guilds are a group of aspiring machinist and inventors of war machines. Their strange obsession with cybernetic augmentation has left them in a state of machine-worship. With some of the most high-tech weaponry available to mortals, the Machine Guilds make good use of it against their enemies.",
+  "hidden_units": {
+    "machine_grand_master": {
+      "name": "Machine Grand Master",
+      "description": "The smartest and most intelligent machine guild leader.",
+      "category": "command",
+      "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "repair", "x": 3}],
+      "keywords": ["Infantry"],
+      "models": [
+        {
+          "name": "Arch Master",
+          "courage": 7,
+          "movement": 6,
+          "shoot": 8,
+          "fight": 8,
+          "defense": 11,
+          "reflexes": 7,
+          "weapons": [{"id": "axe_halberd", "count": 3}],
+          "options": [
+            {"addRule": [{"id": "ward", "x": 1, "name": "Machine Powers"}, {"id": "ward", "x": "2", "name": "Master Machine Powers"}]},
+            {"addWeapon": ["eradication_ray", "combustion_blaster"], "limit": 1},
+            {"addWeapon": ["macro_pistol", "phosphor_carbine"], "limit": 1}
+          ],
+          "min": 1,
+          "max": 1
         }
-    },
-    "units": {
-        "machine_master": {
-            "name": "Machine Master",
-            "description": "A master craftsman and leader of the machine guild.",
-            "category": "command",
-            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "wounds", "x": 3}, {"id": "canticles", "x": 2}],
-            "models": [
-                {
-                    "name": "Machine Master",
-                    "courage": 7,
-                    "movement": 6,
-                    "shoot": 7,
-                    "fight": 6,
-                    "defense": 9,
-                    "reflexes": 6,
-                    "weapons": [{"id": "axe_halberd", "count": 3}],
-                    "options": [
-                        {
-                            "addRule": [
-                                {"id": "repair", "x": 5, "name": "Master Machinist"},
-                                {"id": "ward", "x": 1, "name": "Psychic Resonator"},
-                                {"id": "ward", "x": 2, "name": "Enhanced Psychic Resonator"}
-                            ],
-                            "limit": 1
-                        },
-                        {"addWeapon": ["eradication_ray", "combustion_blaster"], "limit": 1},
-                        {"addWeapon": ["macro_pistol", "phosphor_carbine"], "limit": 1}
-                    ],
-                    "min": 1,
-                    "max": 1
-                }
-            ]
-        },
-        "machine_manipulator": {
-            "name": "Machine Manipulator",
-            "description": "A machine tinkerer of the guild.",
-            "category": "command",
-            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "wounds", "x": 2}, "manipulator"],
-            "models": [
-                {
-                    "name": "Machine Manipulator",
-                    "courage": 6,
-                    "movement": 6,
-                    "shoot": 6,
-                    "fight": 6,
-                    "defense": 9,
-                    "reflexes": 6,
-                    "weapons": [{"id": "energy_staff", "count": 2}],
-                    "options": [{"addWeapon": ["magnetic_lancer", "sonic_cannon"], "limit": 1}],
-                    "min": 1,
-                    "max": 1
-                }
-            ]
-        },
-        "machine_apprentice": {
-            "name": "Machine Apprentice",
-            "description": "A master craftsman and leader of the machine guild.",
-            "category": "command",
-            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "wounds", "x": 2}, {"id": "canticles", "x": 1}],
-            "models": [
-                {
-                    "name": "Machine Apprentice",
-                    "courage": 6,
-                    "movement": 6,
-                    "shoot": 5,
-                    "fight": 5,
-                    "defense": 8,
-                    "reflexes": 6,
-                    "weapons": [{"id": "axe_halberd", "count": 2}],
-                    "options": [
-                        {"addRule": [{"id": "repair", "x": 3, "name": "Machinist"}, {"id": "ward", "x": 1, "name": "Psychic Resonator"}]},
-                        {"addWeapon": ["eradication_ray", "combustion_blaster"], "limit": 1},
-                        {"addWeapon": ["macro_pistol", "phosphor_carbine"], "limit": 1}
-                    ],
-                    "min": 1,
-                    "max": 1
-                }
-            ]
-        },
-        "data_specialist": {
-            "name": "Data Specialist",
-            "description": "An expert in manipulating machine data.",
-            "category": "command",
-            "rules": [{"id": "leader_x", "x": "Infantry"}],
-            "models": [
-                {
-                    "name": "Data Specialist",
-                    "courage": 6,
-                    "movement": 6,
-                    "shoot": 6,
-                    "fight": 6,
-                    "defense": 9,
-                    "reflexes": 6,
-                    "weapons": ["energy_fist", "wave_pistol"],
-                    "rules": [{"id": "repair", "x": 3, "name": "Machinist"}, "data_chips"],
-                    "min": 1,
-                    "max": 1
-                }
-            ]
-        },
-        "vanguard_commander": {
-            "name": "Vanguard Commander",
-            "description": "Commander of the foot-mobile machine guild protection forces.",
-            "category": "command",
-            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "wounds", "x": 2}, {"id": "vanguard_tactics", "x": 1}],
-            "models": [
-                {
-                    "name": "Vanguard Commander",
-                    "courage": 6,
-                    "movement": 6,
-                    "shoot": 6,
-                    "fight": 6,
-                    "defense": 6,
-                    "reflexes": 6,
-                    "weapons": ["radiation_carbine", "ccw"],
-                    "options": [
-                        {"replaceRule": {"id": "vanguard_tactics", "x": 1}, "withRule": {"id": "vanguard_tactics", "x": 2}},
-                        {"replaceWeapon": ["radiation_carbine", "ccw"], "withWeapon": [["radiation_pistol", {"id": "taser_sword", "count": 2}]], "limit": 1},
-                        {"replaceWeapon": "radiation_pistol", "withWeapon": ["phosphor_pistol", "emp_pistol"], "limit": 1},
-                        {"replaceWeapon": {"id": "taser_sword", "count": 2}, "withWeapon": [{"id": "energy_sword", "count": 2}, {"id": "taser_maul", "count": 2}], "limit": 1}
-                    ],
-                    "min": 1,
-                    "max": 1
-                }
-            ]
-        },
-        "vanguard_leader": {
-            "name": "Vanguard Leader",
-            "description": "Foot-mobile machine guild protection forces.",
-            "category": "command",
-            "models": [
-                {
-                    "name": "Vanguard Leader",
-                    "courage": 5,
-                    "movement": 6,
-                    "shoot": 6,
-                    "fight": 5,
-                    "defense": 6,
-                    "reflexes": 6,
-                    "rules": ["leader"],
-                    "weapons": ["radiation_carbine", "ccw"],
-                    "options": [
-                        {"addRule": [{"id": "data_link"}, "heat_scanner"]},
-                        {"replaceWeapon": ["radiation_carbine", "ccw"], "withWeapon": [["radiation_pistol", {"id": "taser_sword", "count": 2}]], "limit": 1},
-                        {"replaceWeapon": "radiation_pistol", "withWeapon": ["phosphor_pistol", "emp_pistol"], "limit": 1},
-                        {"replaceWeapon": {"id": "taser_sword", "count": 2}, "withWeapon": [{"id": "energy_sword", "count": 2}, {"id": "taser_maul", "count": 2}], "limit": 1}
-                    ],
-                    "min": 1,
-                    "max": 1
-                }
-            ]
-        },
-        "vanguard": {
-            "name": "Vanguard",
-            "description": "Foot-mobile machine guild protection forces.",
-            "category": "core",
-            "models": [{"name": "Vanguard", "courage": 5, "movement": 6, "shoot": 6, "fight": 5, "defense": 6, "reflexes": 6, "weapons": ["radiation_carbine", "ccw"], "min": 1, "max": 1}]
-        },
-        "vanguard_specialist": {
-            "name": "Vanguard Specialist",
-            "description": "Foot-mobile machine guild protection forces.",
-            "category": "specialist",
-            "models": [
-                {
-                    "name": "Vanguard Specialist",
-                    "courage": 5,
-                    "movement": 6,
-                    "shoot": 6,
-                    "fight": 5,
-                    "defense": 6,
-                    "reflexes": 6,
-                    "weapons": ["radiation_carbine", "ccw"],
-                    "options": [{"replaceWeapon": "radiation_carbine", "withWeapon": ["flamethrower", "emp_rifle", "plasma_burst_carbine", "uranium_rifle"]}],
-                    "min": 1,
-                    "max": 1
-                }
-            ]
-        },
-        "ranger_leader": {
-            "name": "Ranger Leader",
-            "description": "Foot-mobile machine guild long range recon and marksmen forces.",
-            "category": "command",
-            "rules": ["scout"],
-            "models": [
-                {
-                    "name": "Ranger Leader",
-                    "courage": 5,
-                    "movement": 6,
-                    "shoot": 6,
-                    "fight": 5,
-                    "defense": 6,
-                    "reflexes": 6,
-                    "rules": ["leader"],
-                    "weapons": ["ranger_rifle", "ccw"],
-                    "options": [
-                        {"addRule": [{"id": "data_link"}, "heat_scanner"]},
-                        {"replaceWeapon": ["ranger_rifle", "ccw"], "withWeapon": [["radiation_pistol", {"id": "taser_sword", "count": 2}]], "limit": 1},
-                        {"replaceWeapon": "radiation_pistol", "withWeapon": ["phosphor_pistol", "emp_pistol"], "limit": 1},
-                        {"replaceWeapon": {"id": "taser_sword", "count": 2}, "withWeapon": [{"id": "energy_sword", "count": 2}, {"id": "taser_maul", "count": 2}], "limit": 1}
-                    ],
-                    "min": 1,
-                    "max": 1
-                }
-            ]
-        },
-        "rangers": {
-            "name": "Ranger",
-            "description": "Foot-mobile machine guild long range recon and marksmen forces.",
-            "category": "core",
-            "rules": ["scout"],
-            "models": [{"name": "Ranger", "courage": 5, "movement": 6, "shoot": 6, "fight": 5, "defense": 6, "reflexes": 6, "weapons": ["ranger_rifle", "ccw"], "min": 1, "max": 1}]
-        },
-        "ranger_specialist": {
-            "name": "Ranger Specialist",
-            "description": "Foot-mobile machine guild long range recon and marksmen forces.",
-            "category": "specialist",
-            "rules": ["scout"],
-            "models": [
-                {
-                    "name": "Ranger Specialist",
-                    "courage": 5,
-                    "movement": 6,
-                    "shoot": 6,
-                    "fight": 5,
-                    "defense": 6,
-                    "reflexes": 6,
-                    "weapons": ["ranger_rifle", "ccw"],
-                    "options": [{"replaceWeapon": "ranger_rifle", "withWeapon": ["flamethrower", "emp_rifle", "plasma_burst_carbine", "uranium_rifle"]}],
-                    "min": 1,
-                    "max": 1
-                }
-            ]
-        },
-        "shock_priest_leader": {
-            "name": "Shock Priest Leader",
-            "description": "Crazed fighters coursing with electric energy.",
-            "category": "command",
-            "rules": [{"id": "resilient", "x": 3}, "leader"],
-            "models": [
-                {
-                    "name": "Shock Priest",
-                    "courage": 6,
-                    "movement": 6,
-                    "shoot": 5,
-                    "fight": 6,
-                    "defense": 5,
-                    "reflexes": 6,
-                    "weapons": [{"id": "shock_staff", "count": 2}],
-                    "options": [{"replaceWeapon": {"id": "shock_staff", "count": 2}, "withWeapon": [["taser_gauntlets_zap", {"id": "taser_gauntlets_strike", "count": 2}]]}],
-                    "min": 1,
-                    "max": 1
-                }
-            ]
-        },
-        "shock_priest": {
-            "name": "Shock Priest",
-            "description": "Crazed fighters coursing with electric energy.",
-            "category": "core",
-            "rules": [{"id": "resilient", "x": 3}],
-            "models": [
-                {
-                    "name": "Shock Priest",
-                    "courage": 6,
-                    "movement": 6,
-                    "shoot": 5,
-                    "fight": 6,
-                    "defense": 5,
-                    "reflexes": 6,
-                    "weapons": [{"id": "shock_staff", "count": 2}],
-                    "options": [{"replaceWeapon": {"id": "shock_staff", "count": 2}, "withWeapon": [["taser_gauntlets_zap", {"id": "taser_gauntlets_strike", "count": 2}]]}],
-                    "min": 1,
-                    "max": 1
-                }
-            ]
-        },
-        "stalker_leader": {
-            "name": "Stalker Leader",
-            "description": "Metallic stalking cyborgs for hunting and killing targets.",
-            "category": "command",
-            "rules": ["agile", "leader"],
-            "options": [{"replaceWeapon": [{"id": "sonic_razor", "count": 3}], "withWeapon": {"id": "sonic_blade", "count": 2}}],
-            "models": [{"name": "Stalker Leader", "courage": 5, "movement": 6, "shoot": 5, "fight": 6, "defense": 7, "reflexes": 6, "weapons": [{"id": "sonic_razor", "count": 3}], "min": 1, "max": 1}]
-        },
-        "stalker": {
-            "name": "Stalker",
-            "description": "Metallic stalking cyborgs for hunting and killing targets.",
-            "category": "specialist",
-            "rules": ["agile"],
-            "options": [{"replaceWeapon": [{"id": "sonic_razor", "count": 3}], "withWeapon": {"id": "sonic_blade", "count": 2}}],
-            "models": [{"name": "Stalker", "courage": 5, "movement": 6, "shoot": 5, "fight": 6, "defense": 7, "reflexes": 6, "weapons": [{"id": "sonic_razor", "count": 3}], "min": 1, "max": 1}]
-        },
-        "infiltrator_leader": {
-            "name": "Infiltrator Leader",
-            "description": "Metal infiltration cyborgs for covert operations.",
-            "category": "command",
-            "rules": ["scout", "stealth", "leader"],
-            "options": [{"replaceWeapon": ["blaster_smg", "taser_sword"], "withWeapon": [["burst_carbine", {"id": "energy_sword"}]]}],
-            "models": [{"name": "Infiltrator Leader", "courage": 5, "movement": 6, "shoot": 6, "fight": 5, "defense": 7, "reflexes": 6, "weapons": ["blaster_smg", "taser_sword"], "min": 1, "max": 1}]
-        },
-        "infiltrator": {
-            "name": "Infiltrator",
-            "description": "Metal infiltration cyborgs for covert operations.",
-            "category": "specialist",
-            "rules": ["scout", "stealth"],
-            "options": [{"replaceWeapon": ["blaster_smg", "taser_sword"], "withWeapon": [["burst_carbine", {"id": "energy_sword"}]]}],
-            "models": [{"name": "Infiltrator", "courage": 5, "movement": 6, "shoot": 6, "fight": 5, "defense": 7, "reflexes": 6, "weapons": ["blaster_smg", "taser_sword"], "min": 1, "max": 1}]
-        },
-        "sky_stalker_leader": {
-            "name": "Sky Stalker Leader",
-            "description": "Metallic stalking cyborgs for hunting and killing targets.",
-            "category": "command",
-            "rules": ["fly", "leader"],
-            "models": [
-                {
-                    "name": "Sky Stalker Leader",
-                    "courage": 5,
-                    "movement": 8,
-                    "shoot": 6,
-                    "fight": 6,
-                    "defense": 7,
-                    "reflexes": 6,
-                    "weapons": ["taser_sword", "phosphor_carbine"],
-                    "options": [
-                        {"replaceWeapon": "phosphor_carbine", "withWeapon": [[{"id": "phosphor_pistol"}, {"id": "taser_sword", "count": 2}]]},
-                        {"replaceWeapon": "phosphor_carbine", "withWeapon": {"id": "flamethrower"}},
-                        {"addRule": {"id": "impact", "x": 1, "name": "Cluster Grenades"}}
-                    ],
-                    "min": 1,
-                    "max": 1
-                }
-            ]
-        },
-        "sky_stalker": {
-            "name": "Sky Stalker",
-            "description": "Metallic stalking cyborgs for hunting and killing targets.",
-            "category": "strike",
-            "rules": ["fly"],
-            "models": [
-                {
-                    "name": "Sky Stalker",
-                    "courage": 5,
-                    "movement": 8,
-                    "shoot": 6,
-                    "fight": 6,
-                    "defense": 7,
-                    "reflexes": 6,
-                    "weapons": ["phosphor_carbine", "taser_sword"],
-                    "options": [{"replaceWeapon": "phosphor_carbine", "withWeapon": {"id": "flamethrower"}}, {"addRule": {"id": "impact", "x": 1, "name": "Cluster Grenades"}}],
-                    "min": 1,
-                    "max": 1
-                }
-            ]
-        },
-        "raider_leader": {
-            "name": "Raider Leader",
-            "description": "Cyborgs mounted on fast-moving robotic dog machines.",
-            "category": "command",
-            "rules": ["scout", "agile", {"id": "wounds", "x": 2}, "leader"],
-            "models": [
-                {
-                    "name": "Raider Leader",
-                    "courage": 5,
-                    "movement": 8,
-                    "shoot": 6,
-                    "fight": 5,
-                    "defense": 7,
-                    "reflexes": 6,
-                    "weapons": [{"id": "phosphor_pistol", "count": 2}, {"id": "ccw", "count": 1}],
-                    "options": [
-                        {"addRule": [{"id": "data_link"}]},
-                        {"replaceWeapon": {"id": "ccw", "count": 1}, "withWeapon": ["energy_sword", "taser_maul"]},
-                        {"addWeapon": {"id": "revolver_pistol"}},
-                        {"addWeapon": ["phosphor_breath"]},
-                        {"replaceWeapon": [{"id": "ccw", "count": 1}, {"id": "phosphor_pistol", "count": 2}], "withWeapon": [["raider_carbine", {"id": "raider_sabre", "count": 2}]]},
-                        {"replaceWeapon": {"id": "phosphor_pistol", "count": 2}, "withWeapon": "phosphor_carbine"}
-                    ],
-                    "min": 1,
-                    "max": 1
-                }
-            ]
-        },
-        "raider": {
-            "name": "Raider",
-            "description": "Cyborgs mounted on fast-moving robotic dog machines.",
-            "category": "strike",
-            "rules": ["scout", "agile", {"id": "wounds", "x": 2}],
-            "models": [
-                {
-                    "name": "Raider",
-                    "courage": 5,
-                    "movement": 8,
-                    "shoot": 6,
-                    "fight": 5,
-                    "defense": 7,
-                    "reflexes": 6,
-                    "weapons": [{"id": "phosphor_pistol", "count": 2}, {"id": "ccw", "count": 1}],
-                    "options": [
-                        {"addWeapon": ["phosphor_breath"]},
-                        {"replaceWeapon": [{"id": "ccw", "count": 1}, {"id": "phosphor_pistol", "count": 2}], "withWeapon": [["raider_carbine", {"id": "raider_sabre", "count": 2}]]},
-                        {"replaceWeapon": {"id": "phosphor_pistol", "count": 2}, "withWeapon": "phosphor_carbine"}
-                    ],
-                    "min": 1,
-                    "max": 1
-                }
-            ]
-        },
-        "breacher": {
-            "name": "Breacher",
-            "description": "Metallic cyborgs with tracks specialized in breaching defenses and fighting armored targets.",
-            "keywords": ["Infantry", "Robot"],
-            "category": "heavy",
-            "rules": [{"id": "wounds", "x": 2}],
-            "options": [{"replaceWeapon": "emp_cannon", "withWeapon": ["contortion_cannon"]}, {"replaceWeapon": {"id": "claws", "count": 3}, "withWeapon": {"id": "iron_claws", "count": 3}}],
-            "models": [
-                {"name": "Breacher", "courage": 5, "movement": 6, "shoot": 5, "fight": 5, "defense": 9, "reflexes": 5, "weapons": ["emp_cannon", {"id": "claws", "count": 3}], "min": 1, "max": 1}
-            ]
-        },
-        "destroyer": {
-            "name": "Destroyer",
-            "description": "Metallic cyborgs with tracks specialized in fighting armored targets at long range.",
-            "keywords": ["Infantry", "Robot"],
-            "category": "heavy",
-            "rules": [{"id": "wounds", "x": 2}],
-            "options": [
-                {"addWeapon": ["phosphor_rifle", "flamethrower"]},
-                {"replaceWeapon": "mini_plasma_cannon", "withWeapon": ["heavy_gravity_cannon"]},
-                {"replaceWeapon": {"id": "claws", "count": 3}, "withWeapon": {"id": "iron_claws", "count": 3}}
-            ],
-            "models": [
-                {
-                    "name": "Destroyer",
-                    "courage": 5,
-                    "movement": 6,
-                    "shoot": 5,
-                    "fight": 5,
-                    "defense": 8,
-                    "reflexes": 6,
-                    "weapons": ["mini_plasma_cannon", {"id": "claws", "count": 3}],
-                    "min": 1,
-                    "max": 1
-                }
-            ]
+      ]
+    }
+  },
+  "units": {
+    "machine_master": {
+      "name": "Machine Master",
+      "description": "A master craftsman and leader of the machine guild.",
+      "category": "command",
+      "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "wounds", "x": 3}, {"id": "canticles", "x": 2}],
+      "models": [
+        {
+          "name": "Machine Master",
+          "courage": 7,
+          "movement": 6,
+          "shoot": 7,
+          "fight": 6,
+          "defense": 9,
+          "reflexes": 6,
+          "weapons": [{"id": "axe_halberd", "count": 3}],
+          "options": [
+            {
+              "addRule": [{"id": "repair", "x": 5, "name": "Master Machinist"}, {"id": "ward", "x": 1, "name": "Psychic Resonator"}, {"id": "ward", "x": 2, "name": "Enhanced Psychic Resonator"}],
+              "limit": 1
+            },
+            {"addWeapon": ["eradication_ray", "combustion_blaster"], "limit": 1},
+            {"addWeapon": ["macro_pistol", "phosphor_carbine"], "limit": 1}
+          ],
+          "min": 1,
+          "max": 1
         }
+      ]
     },
-    "weapons": {
-        "mini_plasma_cannon": {"name": "Mini Plasma Cannon", "attacks": 1, "short": 12, "medium": 24, "ap": 5, "rules": ["overcharge", {"id": "blast", "x": 2}]},
-        "energy_cannon": {"name": "Energy Cannon", "attacks": 3, "short": 18, "medium": 36, "ap": 4, "rules": ["indirect", {"id": "blast", "x": 2}]},
-        "iron_cannon": {"name": "Iron Cannon", "attacks": 2, "short": 24, "medium": 48, "ap": 6},
-        "emp_cannon": {"name": "EMP Cannon", "attacks": 2, "short": 18, "medium": 36, "ap": 4, "rules": ["emp"]},
-        "disruption_missiles": {"name": "Disruption Missiles", "attacks": 1, "short": 18, "medium": 36, "ap": 5},
-        "contortion_cannon": {"name": "Contortion Cannon", "attacks": 1, "short": 12, "medium": 24, "ap": 6},
-        "revolver_pistol": {"name": "Revolver Pistol", "attacks": 1, "ap": 3, "short": 6, "medium": 12},
-        "raider_sabre": {"name": "Raider Sabre", "attacks": 1, "ap": 1, "short": "Melee"},
-        "blaster_smg": {"name": "Blaster SMG", "attacks": 2, "short": 6, "medium": 12, "rules": ["rending"]},
-        "phosphor_breath": {"name": "Phosphor Breath", "attacks": 1, "short": 6, "ap": 1, "medium": 12, "rules": ["phosphor"]},
-        "blaster_carbine": {"name": "Blaster Carbine", "attacks": 1, "short": 9, "ap": 1, "medium": 18, "rules": ["assault"]},
-        "energy_staff": {"name": "Machine Staff", "attacks": 3, "ap": 2, "short": "Melee"},
-        "shock_staff": {"name": "Shock Staff", "attacks": 1, "ap": 3, "short": "Melee"},
-        "sonic_blade": {"name": "Sonic Blade", "attacks": 1, "ap": 3, "short": "Melee", "rules": ["rending"]},
-        "sonic_razor": {"name": "Sonic Razors", "attacks": 1, "ap": 1, "short": "Melee", "rules": ["rending"]},
-        "claws": {"name": "Claws", "attacks": 1, "short": "Melee", "rules": ["rending"]},
-        "iron_claws": {"name": "Iron Claws", "attacks": 1, "short": "Melee", "ap": 2},
-        "robot_fist": {"name": "Robot Fist", "attacks": 1, "short": "Melee", "ap": 8},
-        "taser_gauntlets_zap": {"name": "Taser Gauntlets (Zap)", "ap": 1, "attacks": 1, "short": 6, "medium": 12, "rules": ["taser"]},
-        "taser_gauntlets_strike": {"name": "Taser Gauntlets (Strike)", "ap": 1, "attacks": 1, "short": "Melee", "rules": ["taser"]},
-        "taser_sword": {"name": "Taser Sword", "attacks": 1, "ap": 1, "short": "Melee", "rules": ["taser"]},
-        "taser_lance": {"name": "Taser Lance", "attacks": 3, "ap": 2, "short": "Melee", "rules": ["taser"]},
-        "taser_arm": {"name": "Taser Arm", "attacks": 2, "ap": 2, "short": "Melee", "rules": ["taser"]},
-        "taser_maul": {"name": "Taser Maul", "attacks": 1, "ap": 3, "short": "Melee", "rules": ["taser"]},
-        "uranium_rifle": {"name": "Uranium Rifle", "attacks": 1, "short": 24, "medium": 48, "ap": 4, "rules": ["sniper"]},
-        "radiation_sniper": {"name": "Radiation Sniper", "attacks": 2, "short": 15, "medium": 30, "ap": 2, "rules": ["sniper"]},
-        "radiation_carbine": {"name": "Radiation Carbine", "attacks": 2, "short": 9, "medium": 18, "rules": ["assault"]},
-        "raider_carbine": {"name": "Raider Carbine", "attacks": 1, "short": 9, "medium": 18, "ap": 1, "rules": ["rending"]},
-        "ranger_rifle": {"name": "Ranger Rifle", "attacks": 1, "short": 15, "medium": 30, "ap": 1, "rules": ["rending"]},
-        "emp_rifle": {"name": "EMP Rifle", "attacks": 2, "short": 12, "medium": 24, "ap": 3, "rules": ["emp"]},
-        "burst_carbine": {"name": "Burst Carbine", "attacks": 1, "ap": 1, "short": 9, "medium": 18, "rules": ["rapid_fire"]},
-        "plasma_burst_carbine": {"name": "Plasma Burst Carbine", "attacks": 1, "short": 9, "medium": 18, "ap": 5, "rules": ["overcharge", "assault", "rapid_fire"]},
-        "magnetic_lancer": {"name": "Magnetic Lancer", "attacks": 1, "short": 9, "medium": 18, "ap": 5},
-        "sonic_cannon": {"name": "Sonic Cannon", "attacks": 3, "short": 6, "medium": 12, "ap": 1, "rules": []},
-        "eradication_beam": {"name": "Eradication Beam", "attacks": 1, "short": 18, "medium": 36, "ap": 4, "rules": [{"id": "blast", "x": 6}]},
-        "neutron_laser": {"name": "Neutron Laser", "attacks": 2, "short": 36, "medium": 72, "ap": 7, "rules": [{"id": "critical", "x": 1}]},
-        "eradication_ray": {"name": "Eradication Ray", "attacks": 1, "short": 9, "medium": 18, "ap": 3, "rules": [{"id": "blast", "x": 3}]},
-        "combustion_blaster": {"name": "Combustion Blaster", "attacks": 3, "short": 12, "medium": 24, "ap": 3},
-        "macro_pistol": {"name": "Macro Pistol", "attacks": 3, "short": 9, "ap": 1, "rules": ["pistol"]},
-        "phosphor_pistol": {"name": "Phosphor Pistol", "attacks": 1, "short": 6, "ap": 1, "rules": ["pistol", "phosphor"]},
-        "radiation_pistol": {"name": "Radiation Pistol", "attacks": 1, "short": 6, "rules": ["pistol"]},
-        "wave_pistol": {"name": "Wave Pistol", "attacks": 1, "short": 6, "ap": 4, "rules": ["pistol"]},
-        "emp_pistol": {"name": "EMP Pistol", "attacks": 1, "short": 6, "ap": 3, "rules": ["pistol", "emp"]},
-        "phosphor_carbine": {"name": "Phosphor Carbine", "attacks": 2, "short": 9, "medium": 18, "ap": 1, "rules": ["assault", "phosphor"]},
-        "phosphor_rifle": {"name": "Phosphor Rifle", "attacks": 1, "short": 12, "medium": 24, "ap": 2, "rules": ["phosphor"]},
-        "phosphor_cannon": {"name": "Phosphor Cannon", "attacks": 2, "short": 18, "medium": 36, "ap": 4, "rules": ["phosphor"]},
-        "twin_phosphor_cannon": {"name": "Twin Phosphor Cannon", "attacks": 4, "short": 18, "medium": 36, "ap": 4, "rules": ["phosphor"]},
-        "bomb_rack": {"name": "Bomb Rack", "attacks": 2, "short": 6, "ap": 3, "rules": [{"id": "blast", "x": 3}, "bomb"]},
-        "aa_missiles": {"name": "AA Missile System", "attacks": 1, "short": 24, "medium": 48, "ap": 5, "rules": ["anti_air"]}
-    },
-    "rules": {
-        "radiation": {"name": "Radiation", "description": "This weapon gains +1 AP while in short range.", "points": ["weapon.attacks"]},
-        "vanguard_tactics": {
-            "name": "Vanguard Tactics",
-            "inputs": ["x"],
-            "description": "When this unit is activated, choose up to X friendly _Infantry_ units within 6\" to receive one of the following bonuses until the end of the round: \n * Re-roll failed Accuracy tests of 9+ \n * Re-roll failed Strength tests of 9+",
-            "points": ["rule.x", {"multiply": 5}]
-        },
-        "manipulator": {
-            "name": "Manipulator",
-            "description": "Friendly _Infantry_ unit within 3\" may receive one of the following bonuses: \n * +1 AP \n * +3\" of short and long range",
-            "points": 5
-        },
-        "data_chips": {
-            "name": "Data Chips",
-            "description": "At any point during this unit's activation, it may choose a friendly _Robot_ unit within 3\" to receive one of the following bonuses: \n * +1 Save \n * Hit rolls of 1 or 2 generate one additional attack \n\n\n The bonus is in effect until a new one is chosen.",
-            "points": 5
-        },
-        "canticles": {
-            "name": "Canticles",
-            "inputs": ["x"],
-            "description": "When this unit is activated, choose up to X friendly _Infantry_ units within 6\" to receive one of the following bonuses until the end of the round: \n * Re-roll failed Accuracy tests of 9+ \n * Re-roll failed Strength tests of 9+ \n * +1 Save \n * +2\" Movement",
-            "points": ["rule.x", {"multiply": 5}]
-        },
-        "data_link": {"name": "Data-Link", "hidden": true, "description": "This model gains +1 Courage.", "description_short": "+1 Courage", "points": 5},
-        "heat_scanner": {"name": "Heat Scanner", "description": "This model and friendly _Infantry_ units within 3\" may ignore the benefit of cover with shooting attacks.", "points": 5},
-        "phosphor": {"name": "Phosphor", "description": "This weapon ignores cover at Short range.", "points": ["weapon.attacks"]},
-        "taser": {"name": "Taser", "description": "Each successful unmodified hit roll of 1 or 2 with this weapon causes 2 hits.", "points": ["weapon.attacks"]}
-    },
-    "strategies": [
+    "machine_manipulator": {
+      "name": "Machine Manipulator",
+      "description": "A machine tinkerer of the guild.",
+      "category": "command",
+      "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "wounds", "x": 2}, "manipulator"],
+      "models": [
         {
-            "name": "Flesh is Weak",
-            "phase": "activation",
-            "description": "Use when activating an _Infantry_ unit. That unit may ignore any critical injuries it has sustained for this activation.",
-            "flavor": "The Machine Guilds have a tendency to push through difficult situations with technological supremacy.",
-            "cost": 1
-        },
-        {
-            "name": "Cybernetic Enhancements",
-            "phase": "activation",
-            "description": "Use before taking Save rolls for an _Infantry_ unit. It gets +1 Save.",
-            "flavor": "Half-man and half-machine, Machine Guild infantry can withstand even the toughest punishment.",
-            "cost": 2
-        },
-        {
-            "name": "Radiation Supercharge",
-            "phase": "activation",
-            "description": "Use before an _Infantry_ unit shoots. Successful hits gain +1 AP.",
-            "flavor": "While very harmful to the firer, sometimes it is beneficial to supercharge radiation weapons to deal with a foe more swiftly.",
-            "cost": 1
-        },
-        {
-            "subfactions": ["stealth"],
-            "name": "Ambush",
-            "phase": "pre_game",
-            "description": "Up to half of any force's units, one point for each may be placed in _Ambush Reserves_ instead of deployed on the field.",
-            "flavor": "These guardians are trained to wait for the right moment to strike.",
-            "cost": "1/per"
-          },
-          {
-            "subfactions": ["stealth"],
-            "name": "Concealment",
-            "phase": "activation",
-            "flavor": "Guardians trained in shadow tactics can find places to hide even in plain sight.",
-            "description": "Use this strategy when a unit is targeted by an enemy Shooting attack. That unit gets -1 Accuracy this attack.",
-            "cost": 2
-          },
-          {
-            "subfactions": ["stealth"],
-            "name": "Stealth Move",
-            "phase": "activation",
-            "flavor": "Moving quietly is sometimes key in advancing on the enemy.",
-            "description": "Use this strategy when an _Infantry_ unit performs a Move action. Enemy units may not perform reactions to that Move action.",
-            "cost": 1
-          },
-          {
-            "subfactions": ["firepower_focus"],
-            "name": "Reliability",
-            "phase": "activation",
-            "description": "Use when a unit attacks. That unit may re-roll a single hit die.",
-            "flavor": "With expert craftsmanship, their weapons can perform better than most.",
-            "cost": 1
-        },
-        {
-            "subfactions": ["firepower_focus"],
-            "name": "Tactical Retreat",
-            "phase": "activation",
-            "description": "Use when an _Infantry_ unit attempts to fall back from melee. That unit automatically passes the Initiative check required to fall back.",
-            "flavor": "A quick tactical retreat and a burst of fire can cause an enemy a lot of problems.",
-            "cost": 1
-        },
-        {
-            "subfactions": ["firepower_focus"],
-            "name": "Scatter Shot",
-            "phase": "activation",
-            "description": "Use when an _Infantry_ unit shoots. Successful hits cause 2 hits instead of 1.",
-            "flavor": "With enhanced firepower, their weapons can hit with extra strength.",
-            "cost": 1
-        },
-        {
-            "subfactions": ["defense_focus"],
-            "name": "Toughness",
-            "phase": "activation",
-            "description": "Use when an _Infantry_ unit takes Save rolls. Roll a die for each hit this unit takes. On a 3 or less that hit is prevented.",
-            "flavor": "These guild members are particularly tough and can take a hit.",
-            "cost": 2
-        },
-        {
-            "subfactions": ["defense_focus"],
-            "name": "Bravery",
-            "phase": "activation",
-            "description": "Use when activating a unit. That unit gets +1 Courage.",
-            "flavor": "These soldiers are particularly brave in the face of many horrors.",
-            "cost": 1
-        },
-        {
-            "subfactions": ["defense_focus"],
-            "name": "Scramblers",
-            "phase": "activation",
-            "description": "Use after a unit declares it is arriving from reserves within 24\" of this unit. That unit automatically fails any Initiative tests for arriving on the table.",
-            "flavor": "Prepared for any enemies, these scramblers will ensure no one can find our units.",
-            "cost": 1
-        },
-        {
-            "subfactions": ["assault_focus"],
-            "phase": "activation",
-            "name": "Quick Aim",
-            "description": "Use when an _Infantry_ unit with any _Assault_ weapons is firing. That unit does not suffer -1 to hit when using the _Assault_ rule.",
-            "flavor": "These guild members are so used to firing from the hip while speeding their way upfield that their accuracy doesn't suffer.",
-            "cost": 1
-        },
-        {
-            "subfactions": ["assault_focus"],
-            "name": "Fury",
-            "phase": "activation",
-            "flavor": "These guild members are furious in resolve and can rip through their enemies.",
-            "description": "Use when an _Infantry_ unit makes a Fight action. Successful hits gain +1 AP.",
-            "cost": 1
-        },
-        {
-            "subfactions": ["assault_focus"],
-            "name": "Assault",
-            "phase": "activation",
-            "flavor": "With a furious charge, these guild members move into combat quickly.",
-            "description": "Use this strategy when an _Infantry_ unit charges. That unit gains +3\" of Movement for the charge action.",
-            "cost": 1
+          "name": "Machine Manipulator",
+          "courage": 6,
+          "movement": 6,
+          "shoot": 6,
+          "fight": 6,
+          "defense": 9,
+          "reflexes": 6,
+          "weapons": [{"id": "energy_staff", "count": 2}],
+          "options": [{"addWeapon": ["magnetic_lancer", "sonic_cannon"], "limit": 1}],
+          "min": 1,
+          "max": 1
         }
-    ],
-    "powers": {}
+      ]
+    },
+    "machine_apprentice": {
+      "name": "Machine Apprentice",
+      "description": "A master craftsman and leader of the machine guild.",
+      "category": "command",
+      "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "wounds", "x": 2}, {"id": "canticles", "x": 1}],
+      "models": [
+        {
+          "name": "Machine Apprentice",
+          "courage": 6,
+          "movement": 6,
+          "shoot": 5,
+          "fight": 5,
+          "defense": 8,
+          "reflexes": 6,
+          "weapons": [{"id": "axe_halberd", "count": 2}],
+          "options": [
+            {"addRule": [{"id": "repair", "x": 3, "name": "Machinist"}, {"id": "ward", "x": 1, "name": "Psychic Resonator"}]},
+            {"addWeapon": ["eradication_ray", "combustion_blaster"], "limit": 1},
+            {"addWeapon": ["macro_pistol", "phosphor_carbine"], "limit": 1}
+          ],
+          "min": 1,
+          "max": 1
+        }
+      ]
+    },
+    "data_specialist": {
+      "name": "Data Specialist",
+      "description": "An expert in manipulating machine data.",
+      "category": "command",
+      "rules": [{"id": "leader_x", "x": "Infantry"}],
+      "models": [
+        {
+          "name": "Data Specialist",
+          "courage": 6,
+          "movement": 6,
+          "shoot": 6,
+          "fight": 6,
+          "defense": 9,
+          "reflexes": 6,
+          "weapons": ["energy_fist", "wave_pistol"],
+          "rules": [{"id": "repair", "x": 3, "name": "Machinist"}, "data_chips"],
+          "min": 1,
+          "max": 1
+        }
+      ]
+    },
+    "vanguard_commander": {
+      "name": "Vanguard Commander",
+      "description": "Commander of the foot-mobile machine guild protection forces.",
+      "category": "command",
+      "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "wounds", "x": 2}, {"id": "vanguard_tactics", "x": 1}],
+      "models": [
+        {
+          "name": "Vanguard Commander",
+          "courage": 6,
+          "movement": 6,
+          "shoot": 6,
+          "fight": 6,
+          "defense": 6,
+          "reflexes": 6,
+          "weapons": ["radiation_carbine", "ccw"],
+          "options": [
+            {"replaceRule": {"id": "vanguard_tactics", "x": 1}, "withRule": {"id": "vanguard_tactics", "x": 2}},
+            {"replaceWeapon": ["radiation_carbine", "ccw"], "withWeapon": [["radiation_pistol", {"id": "taser_sword", "count": 2}]], "limit": 1},
+            {"replaceWeapon": "radiation_pistol", "withWeapon": ["phosphor_pistol", "emp_pistol"], "limit": 1},
+            {"replaceWeapon": {"id": "taser_sword", "count": 2}, "withWeapon": [{"id": "energy_sword", "count": 2}, {"id": "taser_maul", "count": 2}], "limit": 1}
+          ],
+          "min": 1,
+          "max": 1
+        }
+      ]
+    },
+    "vanguard_leader": {
+      "name": "Vanguard Leader",
+      "description": "Foot-mobile machine guild protection forces.",
+      "category": "command",
+      "models": [
+        {
+          "name": "Vanguard Leader",
+          "courage": 5,
+          "movement": 6,
+          "shoot": 6,
+          "fight": 5,
+          "defense": 6,
+          "reflexes": 6,
+          "rules": ["leader"],
+          "weapons": ["radiation_carbine", "ccw"],
+          "options": [
+            {"addRule": [{"id": "data_link"}, "heat_scanner"]},
+            {"replaceWeapon": ["radiation_carbine", "ccw"], "withWeapon": [["radiation_pistol", {"id": "taser_sword", "count": 2}]], "limit": 1},
+            {"replaceWeapon": "radiation_pistol", "withWeapon": ["phosphor_pistol", "emp_pistol"], "limit": 1},
+            {"replaceWeapon": {"id": "taser_sword", "count": 2}, "withWeapon": [{"id": "energy_sword", "count": 2}, {"id": "taser_maul", "count": 2}], "limit": 1}
+          ],
+          "min": 1,
+          "max": 1
+        }
+      ]
+    },
+    "vanguard": {
+      "name": "Vanguard",
+      "description": "Foot-mobile machine guild protection forces.",
+      "category": "core",
+      "models": [{"name": "Vanguard", "courage": 5, "movement": 6, "shoot": 6, "fight": 5, "defense": 6, "reflexes": 6, "weapons": ["radiation_carbine", "ccw"], "min": 1, "max": 1}]
+    },
+    "vanguard_specialist": {
+      "name": "Vanguard Specialist",
+      "description": "Foot-mobile machine guild protection forces.",
+      "category": "specialist",
+      "models": [
+        {
+          "name": "Vanguard Specialist",
+          "courage": 5,
+          "movement": 6,
+          "shoot": 6,
+          "fight": 5,
+          "defense": 6,
+          "reflexes": 6,
+          "weapons": ["radiation_carbine", "ccw"],
+          "options": [{"replaceWeapon": "radiation_carbine", "withWeapon": ["flamethrower", "emp_rifle", "plasma_burst_carbine", "uranium_rifle"]}],
+          "min": 1,
+          "max": 1
+        }
+      ]
+    },
+    "protector_leader": {
+      "name": "Protector Leader",
+      "description": "Guild guardians clad with special magnetic shields and taser spears.",
+      "category": "command",
+      "models": [
+        {
+          "name": "Protector Leader",
+          "courage": 5,
+          "movement": 6,
+          "shoot": 5,
+          "fight": 6,
+          "defense": 6,
+          "reflexes": 6,
+          "weapons": [{"id": "taser_spear_melee", "count": 2}, "taser_spear_shoot", "magnetic_shield"],
+          "options": [{"addRule": [{"id": "data_link"}, "heat_scanner"]}],
+          "rules": ["leader"],
+          "min": 1,
+          "max": 1
+        }
+      ]
+    },
+    "protector": {
+      "name": "Protector",
+      "description": "Guild guardians clad with special magnetic shields and taser spears.",
+      "category": "core",
+      "models": [
+        {
+          "name": "Protector",
+          "courage": 5,
+          "movement": 6,
+          "shoot": 5,
+          "fight": 6,
+          "defense": 6,
+          "reflexes": 6,
+          "weapons": [{"id": "taser_spear_melee", "count": 2}, "taser_spear_shoot", "magnetic_shield"],
+          "min": 1,
+          "max": 1
+        }
+      ]
+    },
+    "ranger_leader": {
+      "name": "Ranger Leader",
+      "description": "Foot-mobile machine guild long range recon and marksmen forces.",
+      "category": "command",
+      "rules": ["scout"],
+      "models": [
+        {
+          "name": "Ranger Leader",
+          "courage": 5,
+          "movement": 6,
+          "shoot": 6,
+          "fight": 5,
+          "defense": 6,
+          "reflexes": 6,
+          "rules": ["leader"],
+          "weapons": ["ranger_rifle", "ccw"],
+          "options": [
+            {"addRule": [{"id": "data_link"}, "heat_scanner"]},
+            {"replaceWeapon": ["ranger_rifle", "ccw"], "withWeapon": [["radiation_pistol", {"id": "taser_sword", "count": 2}]], "limit": 1},
+            {"replaceWeapon": "radiation_pistol", "withWeapon": ["phosphor_pistol", "emp_pistol"], "limit": 1},
+            {"replaceWeapon": {"id": "taser_sword", "count": 2}, "withWeapon": [{"id": "energy_sword", "count": 2}, {"id": "taser_maul", "count": 2}], "limit": 1}
+          ],
+          "min": 1,
+          "max": 1
+        }
+      ]
+    },
+    "rangers": {
+      "name": "Ranger",
+      "description": "Foot-mobile machine guild long range recon and marksmen forces.",
+      "category": "core",
+      "rules": ["scout"],
+      "models": [{"name": "Ranger", "courage": 5, "movement": 6, "shoot": 6, "fight": 5, "defense": 6, "reflexes": 6, "weapons": ["ranger_rifle", "ccw"], "min": 1, "max": 1}]
+    },
+    "ranger_specialist": {
+      "name": "Ranger Specialist",
+      "description": "Foot-mobile machine guild long range recon and marksmen forces.",
+      "category": "specialist",
+      "rules": ["scout"],
+      "models": [
+        {
+          "name": "Ranger Specialist",
+          "courage": 5,
+          "movement": 6,
+          "shoot": 6,
+          "fight": 5,
+          "defense": 6,
+          "reflexes": 6,
+          "weapons": ["ranger_rifle", "ccw"],
+          "options": [{"replaceWeapon": "ranger_rifle", "withWeapon": ["flamethrower", "emp_rifle", "plasma_burst_carbine", "uranium_rifle"]}],
+          "min": 1,
+          "max": 1
+        }
+      ]
+    },
+    "shock_priest_leader": {
+      "name": "Shock Priest Leader",
+      "description": "Crazed fighters coursing with electric energy.",
+      "category": "command",
+      "rules": [{"id": "resilient", "x": 3}, "leader"],
+      "models": [
+        {
+          "name": "Shock Priest",
+          "courage": 6,
+          "movement": 6,
+          "shoot": 5,
+          "fight": 6,
+          "defense": 5,
+          "reflexes": 6,
+          "weapons": [{"id": "shock_staff", "count": 2}],
+          "options": [{"replaceWeapon": {"id": "shock_staff", "count": 2}, "withWeapon": [["taser_gauntlets_zap", {"id": "taser_gauntlets_strike", "count": 2}]]}],
+          "min": 1,
+          "max": 1
+        }
+      ]
+    },
+    "shock_priest": {
+      "name": "Shock Priest",
+      "description": "Crazed fighters coursing with electric energy.",
+      "category": "core",
+      "rules": [{"id": "resilient", "x": 3}],
+      "models": [
+        {
+          "name": "Shock Priest",
+          "courage": 6,
+          "movement": 6,
+          "shoot": 5,
+          "fight": 6,
+          "defense": 5,
+          "reflexes": 6,
+          "weapons": [{"id": "shock_staff", "count": 2}],
+          "options": [{"replaceWeapon": {"id": "shock_staff", "count": 2}, "withWeapon": [["taser_gauntlets_zap", {"id": "taser_gauntlets_strike", "count": 2}]]}],
+          "min": 1,
+          "max": 1
+        }
+      ]
+    },
+    "stalker_leader": {
+      "name": "Stalker Leader",
+      "description": "Metallic stalking cyborgs for hunting and killing targets.",
+      "category": "command",
+      "rules": ["agile", "leader"],
+      "options": [{"replaceWeapon": [{"id": "sonic_razor", "count": 3}], "withWeapon": {"id": "sonic_blade", "count": 2}}],
+      "models": [{"name": "Stalker Leader", "courage": 5, "movement": 6, "shoot": 5, "fight": 6, "defense": 7, "reflexes": 6, "weapons": [{"id": "sonic_razor", "count": 3}], "min": 1, "max": 1}]
+    },
+    "stalker": {
+      "name": "Stalker",
+      "description": "Metallic stalking cyborgs for hunting and killing targets.",
+      "category": "specialist",
+      "rules": ["agile"],
+      "options": [{"replaceWeapon": [{"id": "sonic_razor", "count": 3}], "withWeapon": {"id": "sonic_blade", "count": 2}}],
+      "models": [{"name": "Stalker", "courage": 5, "movement": 6, "shoot": 5, "fight": 6, "defense": 7, "reflexes": 6, "weapons": [{"id": "sonic_razor", "count": 3}], "min": 1, "max": 1}]
+    },
+    "infiltrator_leader": {
+      "name": "Infiltrator Leader",
+      "description": "Metal infiltration cyborgs for covert operations.",
+      "category": "command",
+      "rules": ["scout", "stealth", "leader"],
+      "options": [{"replaceWeapon": ["blaster_smg", "taser_sword"], "withWeapon": [["burst_carbine", {"id": "energy_sword"}]]}],
+      "models": [{"name": "Infiltrator Leader", "courage": 5, "movement": 6, "shoot": 6, "fight": 5, "defense": 7, "reflexes": 6, "weapons": ["blaster_smg", "taser_sword"], "min": 1, "max": 1}]
+    },
+    "infiltrator": {
+      "name": "Infiltrator",
+      "description": "Metal infiltration cyborgs for covert operations.",
+      "category": "specialist",
+      "rules": ["scout", "stealth"],
+      "options": [{"replaceWeapon": ["blaster_smg", "taser_sword"], "withWeapon": [["burst_carbine", {"id": "energy_sword"}]]}],
+      "models": [{"name": "Infiltrator", "courage": 5, "movement": 6, "shoot": 6, "fight": 5, "defense": 7, "reflexes": 6, "weapons": ["blaster_smg", "taser_sword"], "min": 1, "max": 1}]
+    },
+    "sky_stalker_leader": {
+      "name": "Sky Stalker Leader",
+      "description": "Metallic stalking cyborgs for hunting and killing targets.",
+      "category": "command",
+      "rules": ["fly", "leader"],
+      "models": [
+        {
+          "name": "Sky Stalker Leader",
+          "courage": 5,
+          "movement": 8,
+          "shoot": 6,
+          "fight": 6,
+          "defense": 7,
+          "reflexes": 6,
+          "weapons": ["taser_sword", "phosphor_carbine"],
+          "options": [
+            {"replaceWeapon": "phosphor_carbine", "withWeapon": [[{"id": "phosphor_pistol"}, {"id": "taser_sword", "count": 2}]]},
+            {"replaceWeapon": "phosphor_carbine", "withWeapon": {"id": "flamethrower"}},
+            {"addRule": {"id": "impact", "x": 1, "name": "Cluster Grenades"}}
+          ],
+          "min": 1,
+          "max": 1
+        }
+      ]
+    },
+    "sky_stalker": {
+      "name": "Sky Stalker",
+      "description": "Metallic stalking cyborgs for hunting and killing targets.",
+      "category": "strike",
+      "rules": ["fly"],
+      "models": [
+        {
+          "name": "Sky Stalker",
+          "courage": 5,
+          "movement": 8,
+          "shoot": 6,
+          "fight": 6,
+          "defense": 7,
+          "reflexes": 6,
+          "weapons": ["phosphor_carbine", "taser_sword"],
+          "options": [{"replaceWeapon": "phosphor_carbine", "withWeapon": {"id": "flamethrower"}}, {"addRule": {"id": "impact", "x": 1, "name": "Cluster Grenades"}}],
+          "min": 1,
+          "max": 1
+        }
+      ]
+    },
+    "raider_leader": {
+      "name": "Raider Leader",
+      "description": "Cyborgs mounted on fast-moving robotic dog machines.",
+      "category": "command",
+      "rules": ["scout", "agile", {"id": "wounds", "x": 2}, "leader"],
+      "models": [
+        {
+          "name": "Raider Leader",
+          "courage": 5,
+          "movement": 8,
+          "shoot": 6,
+          "fight": 5,
+          "defense": 7,
+          "reflexes": 6,
+          "weapons": [{"id": "phosphor_pistol", "count": 2}, {"id": "ccw", "count": 1}],
+          "options": [
+            {"addRule": [{"id": "data_link"}]},
+            {"replaceWeapon": {"id": "ccw", "count": 1}, "withWeapon": ["energy_sword", "taser_maul"]},
+            {"addWeapon": {"id": "revolver_pistol"}},
+            {"addWeapon": ["phosphor_breath"]},
+            {"replaceWeapon": [{"id": "ccw", "count": 1}, {"id": "phosphor_pistol", "count": 2}], "withWeapon": [["raider_carbine", {"id": "raider_sabre", "count": 2}]]},
+            {"replaceWeapon": {"id": "phosphor_pistol", "count": 2}, "withWeapon": "phosphor_carbine"}
+          ],
+          "min": 1,
+          "max": 1
+        }
+      ]
+    },
+    "raider": {
+      "name": "Raider",
+      "description": "Cyborgs mounted on fast-moving robotic dog machines.",
+      "category": "strike",
+      "rules": ["scout", "agile", {"id": "wounds", "x": 2}],
+      "models": [
+        {
+          "name": "Raider",
+          "courage": 5,
+          "movement": 8,
+          "shoot": 6,
+          "fight": 5,
+          "defense": 7,
+          "reflexes": 6,
+          "weapons": [{"id": "phosphor_pistol", "count": 2}, {"id": "ccw", "count": 1}],
+          "options": [
+            {"addWeapon": ["phosphor_breath"]},
+            {"replaceWeapon": [{"id": "ccw", "count": 1}, {"id": "phosphor_pistol", "count": 2}], "withWeapon": [["raider_carbine", {"id": "raider_sabre", "count": 2}]]},
+            {"replaceWeapon": {"id": "phosphor_pistol", "count": 2}, "withWeapon": "phosphor_carbine"}
+          ],
+          "min": 1,
+          "max": 1
+        }
+      ]
+    },
+    "breacher": {
+      "name": "Breacher",
+      "description": "Metallic cyborgs with tracks specialized in breaching defenses and fighting armored targets.",
+      "keywords": ["Infantry", "Robot"],
+      "category": "heavy",
+      "rules": [{"id": "wounds", "x": 2}],
+      "options": [{"replaceWeapon": "emp_cannon", "withWeapon": ["contortion_cannon"]}, {"replaceWeapon": {"id": "claws", "count": 3}, "withWeapon": {"id": "iron_claws", "count": 3}}],
+      "models": [{"name": "Breacher", "courage": 5, "movement": 6, "shoot": 5, "fight": 5, "defense": 9, "reflexes": 5, "weapons": ["emp_cannon", {"id": "claws", "count": 3}], "min": 1, "max": 1}]
+    },
+    "destroyer": {
+      "name": "Destroyer",
+      "description": "Metallic cyborgs with tracks specialized in fighting armored targets at long range.",
+      "keywords": ["Infantry", "Robot"],
+      "category": "heavy",
+      "rules": [{"id": "wounds", "x": 2}],
+      "options": [
+        {"addWeapon": ["phosphor_rifle", "flamethrower"]},
+        {"replaceWeapon": "mini_plasma_cannon", "withWeapon": ["heavy_gravity_cannon"]},
+        {"replaceWeapon": {"id": "claws", "count": 3}, "withWeapon": {"id": "iron_claws", "count": 3}}
+      ],
+      "models": [
+        {"name": "Destroyer", "courage": 5, "movement": 6, "shoot": 5, "fight": 5, "defense": 8, "reflexes": 6, "weapons": ["mini_plasma_cannon", {"id": "claws", "count": 3}], "min": 1, "max": 1}
+      ]
+    }
+  },
+  "weapons": {
+    "mini_plasma_cannon": {"name": "Mini Plasma Cannon", "attacks": 1, "short": 12, "medium": 24, "ap": 5, "rules": ["overcharge", {"id": "blast", "x": 2}]},
+    "energy_cannon": {"name": "Energy Cannon", "attacks": 3, "short": 18, "medium": 36, "ap": 4, "rules": ["indirect", {"id": "blast", "x": 2}]},
+    "iron_cannon": {"name": "Iron Cannon", "attacks": 2, "short": 24, "medium": 48, "ap": 6},
+    "emp_cannon": {"name": "EMP Cannon", "attacks": 2, "short": 18, "medium": 36, "ap": 4, "rules": ["emp"]},
+    "disruption_missiles": {"name": "Disruption Missiles", "attacks": 1, "short": 18, "medium": 36, "ap": 5},
+    "contortion_cannon": {"name": "Contortion Cannon", "attacks": 1, "short": 12, "medium": 24, "ap": 6},
+    "revolver_pistol": {"name": "Revolver Pistol", "attacks": 1, "ap": 3, "short": 6, "medium": 12},
+    "raider_sabre": {"name": "Raider Sabre", "attacks": 1, "ap": 1, "short": "Melee"},
+    "blaster_smg": {"name": "Blaster SMG", "attacks": 2, "short": 6, "medium": 12, "rules": ["rending"]},
+    "phosphor_breath": {"name": "Phosphor Breath", "attacks": 1, "short": 6, "ap": 1, "medium": 12, "rules": ["phosphor"]},
+    "blaster_carbine": {"name": "Blaster Carbine", "attacks": 1, "short": 9, "ap": 1, "medium": 18, "rules": ["assault"]},
+    "energy_staff": {"name": "Machine Staff", "attacks": 3, "ap": 2, "short": "Melee"},
+    "shock_staff": {"name": "Shock Staff", "attacks": 1, "ap": 3, "short": "Melee"},
+    "sonic_blade": {"name": "Sonic Blade", "attacks": 1, "ap": 3, "short": "Melee", "rules": ["rending"]},
+    "sonic_razor": {"name": "Sonic Razors", "attacks": 1, "ap": 1, "short": "Melee", "rules": ["rending"]},
+    "claws": {"name": "Claws", "attacks": 1, "short": "Melee", "rules": ["rending"]},
+    "iron_claws": {"name": "Iron Claws", "attacks": 1, "short": "Melee", "ap": 2},
+    "robot_fist": {"name": "Robot Fist", "attacks": 1, "short": "Melee", "ap": 8},
+    "taser_gauntlets_zap": {"name": "Taser Gauntlets (Zap)", "ap": 1, "attacks": 1, "short": 6, "medium": 12, "rules": ["taser"]},
+    "taser_gauntlets_strike": {"name": "Taser Gauntlets (Strike)", "ap": 1, "attacks": 1, "short": "Melee", "rules": ["taser"]},
+    "taser_sword": {"name": "Taser Sword", "attacks": 1, "ap": 1, "short": "Melee", "rules": ["taser"]},
+    "taser_lance": {"name": "Taser Lance", "attacks": 3, "ap": 2, "short": "Melee", "rules": ["taser"]},
+    "taser_arm": {"name": "Taser Arm", "attacks": 2, "ap": 2, "short": "Melee", "rules": ["taser"]},
+    "taser_maul": {"name": "Taser Maul", "attacks": 1, "ap": 3, "short": "Melee", "rules": ["taser"]},
+    "uranium_rifle": {"name": "Uranium Rifle", "attacks": 1, "short": 24, "medium": 48, "ap": 4, "rules": ["sniper"]},
+    "radiation_sniper": {"name": "Radiation Sniper", "attacks": 2, "short": 15, "medium": 30, "ap": 2, "rules": ["sniper"]},
+    "radiation_carbine": {"name": "Radiation Carbine", "attacks": 2, "short": 9, "medium": 18, "rules": ["assault"]},
+    "raider_carbine": {"name": "Raider Carbine", "attacks": 1, "short": 9, "medium": 18, "ap": 1, "rules": ["rending"]},
+    "ranger_rifle": {"name": "Ranger Rifle", "attacks": 1, "short": 15, "medium": 30, "ap": 1, "rules": ["rending"]},
+    "emp_rifle": {"name": "EMP Rifle", "attacks": 2, "short": 12, "medium": 24, "ap": 3, "rules": ["emp"]},
+    "burst_carbine": {"name": "Burst Carbine", "attacks": 1, "ap": 1, "short": 9, "medium": 18, "rules": ["rapid_fire"]},
+    "plasma_burst_carbine": {"name": "Plasma Burst Carbine", "attacks": 1, "short": 9, "medium": 18, "ap": 5, "rules": ["overcharge", "assault", "rapid_fire"]},
+    "magnetic_lancer": {"name": "Magnetic Lancer", "attacks": 1, "short": 9, "medium": 18, "ap": 5},
+    "sonic_cannon": {"name": "Sonic Cannon", "attacks": 3, "short": 6, "medium": 12, "ap": 1, "rules": []},
+    "eradication_beam": {"name": "Eradication Beam", "attacks": 1, "short": 18, "medium": 36, "ap": 4, "rules": [{"id": "blast", "x": 6}]},
+    "neutron_laser": {"name": "Neutron Laser", "attacks": 2, "short": 36, "medium": 72, "ap": 7, "rules": [{"id": "critical", "x": 1}]},
+    "eradication_ray": {"name": "Eradication Ray", "attacks": 1, "short": 9, "medium": 18, "ap": 3, "rules": [{"id": "blast", "x": 3}]},
+    "combustion_blaster": {"name": "Combustion Blaster", "attacks": 3, "short": 12, "medium": 24, "ap": 3},
+    "macro_pistol": {"name": "Macro Pistol", "attacks": 3, "short": 9, "ap": 1, "rules": ["pistol"]},
+    "phosphor_pistol": {"name": "Phosphor Pistol", "attacks": 1, "short": 6, "ap": 1, "rules": ["pistol", "phosphor"]},
+    "radiation_pistol": {"name": "Radiation Pistol", "attacks": 1, "short": 6, "rules": ["pistol"]},
+    "wave_pistol": {"name": "Wave Pistol", "attacks": 1, "short": 6, "ap": 4, "rules": ["pistol"]},
+    "emp_pistol": {"name": "EMP Pistol", "attacks": 1, "short": 6, "ap": 3, "rules": ["pistol", "emp"]},
+    "phosphor_carbine": {"name": "Phosphor Carbine", "attacks": 2, "short": 9, "medium": 18, "ap": 1, "rules": ["assault", "phosphor"]},
+    "phosphor_rifle": {"name": "Phosphor Rifle", "attacks": 1, "short": 12, "medium": 24, "ap": 2, "rules": ["phosphor"]},
+    "phosphor_cannon": {"name": "Phosphor Cannon", "attacks": 2, "short": 18, "medium": 36, "ap": 4, "rules": ["phosphor"]},
+    "twin_phosphor_cannon": {"name": "Twin Phosphor Cannon", "attacks": 4, "short": 18, "medium": 36, "ap": 4, "rules": ["phosphor"]},
+    "bomb_rack": {"name": "Bomb Rack", "attacks": 2, "short": 6, "ap": 3, "rules": [{"id": "blast", "x": 3}, "bomb"]},
+    "aa_missiles": {"name": "AA Missile System", "attacks": 1, "short": 24, "medium": 48, "ap": 5, "rules": ["anti_air"]}
+  },
+  "rules": {
+    "radiation": {"name": "Radiation", "description": "This weapon gains +1 AP while in short range.", "points": ["weapon.attacks"]},
+    "vanguard_tactics": {
+      "name": "Vanguard Tactics",
+      "inputs": ["x"],
+      "description": "When this unit is activated, choose up to X friendly _Infantry_ units within 6\" to receive one of the following bonuses until the end of the round: \n * Re-roll failed Accuracy tests of 9+ \n * Re-roll failed Strength tests of 9+",
+      "points": ["rule.x", {"multiply": 5}]
+    },
+    "manipulator": {"name": "Manipulator", "description": "Friendly _Infantry_ unit within 3\" may receive one of the following bonuses: \n * +1 AP \n * +3\" of short and long range", "points": 5},
+    "data_chips": {
+      "name": "Data Chips",
+      "description": "At any point during this unit's activation, it may choose a friendly _Robot_ unit within 3\" to receive one of the following bonuses: \n * +1 Save \n * Hit rolls of 1 or 2 generate one additional attack \n\n\n The bonus is in effect until a new one is chosen.",
+      "points": 5
+    },
+    "canticles": {
+      "name": "Canticles",
+      "inputs": ["x"],
+      "description": "When this unit is activated, choose up to X friendly _Infantry_ units within 6\" to receive one of the following bonuses until the end of the round: \n * Re-roll failed Accuracy tests of 9+ \n * Re-roll failed Strength tests of 9+ \n * +1 Save \n * +2\" Movement",
+      "points": ["rule.x", {"multiply": 5}]
+    },
+    "data_link": {"name": "Data-Link", "hidden": true, "description": "This model gains +1 Courage.", "description_short": "+1 Courage", "points": 5},
+    "heat_scanner": {"name": "Heat Scanner", "description": "This model and friendly _Infantry_ units within 3\" may ignore the benefit of cover with shooting attacks.", "points": 5},
+    "phosphor": {"name": "Phosphor", "description": "This weapon ignores cover at Short range.", "points": ["weapon.attacks"]},
+    "taser": {"name": "Taser", "description": "Each successful unmodified hit roll of 1 or 2 with this weapon causes 2 hits.", "points": ["weapon.attacks"]}
+  },
+  "strategies": [
+    {
+      "name": "Flesh is Weak",
+      "phase": "activation",
+      "description": "Use when activating an _Infantry_ unit. That unit may ignore any critical injuries it has sustained for this activation.",
+      "flavor": "The Machine Guilds have a tendency to push through difficult situations with technological supremacy.",
+      "cost": 1
+    },
+    {
+      "name": "Cybernetic Enhancements",
+      "phase": "activation",
+      "description": "Use before taking Save rolls for an _Infantry_ unit. It gets +1 Save.",
+      "flavor": "Half-man and half-machine, Machine Guild infantry can withstand even the toughest punishment.",
+      "cost": 2
+    },
+    {
+      "name": "Radiation Supercharge",
+      "phase": "activation",
+      "description": "Use before an _Infantry_ unit shoots. Successful hits gain +1 AP.",
+      "flavor": "While very harmful to the firer, sometimes it is beneficial to supercharge radiation weapons to deal with a foe more swiftly.",
+      "cost": 1
+    },
+    {
+      "subfactions": ["stealth"],
+      "name": "Ambush",
+      "phase": "pre_game",
+      "description": "Up to half of any force's units, one point for each may be placed in _Ambush Reserves_ instead of deployed on the field.",
+      "flavor": "These guardians are trained to wait for the right moment to strike.",
+      "cost": "1/per"
+    },
+    {
+      "subfactions": ["stealth"],
+      "name": "Concealment",
+      "phase": "activation",
+      "flavor": "Guardians trained in shadow tactics can find places to hide even in plain sight.",
+      "description": "Use this strategy when a unit is targeted by an enemy Shooting attack. That unit gets -1 Accuracy this attack.",
+      "cost": 2
+    },
+    {
+      "subfactions": ["stealth"],
+      "name": "Stealth Move",
+      "phase": "activation",
+      "flavor": "Moving quietly is sometimes key in advancing on the enemy.",
+      "description": "Use this strategy when an _Infantry_ unit performs a Move action. Enemy units may not perform reactions to that Move action.",
+      "cost": 1
+    },
+    {
+      "subfactions": ["firepower_focus"],
+      "name": "Reliability",
+      "phase": "activation",
+      "description": "Use when a unit attacks. That unit may re-roll a single hit die.",
+      "flavor": "With expert craftsmanship, their weapons can perform better than most.",
+      "cost": 1
+    },
+    {
+      "subfactions": ["firepower_focus"],
+      "name": "Tactical Retreat",
+      "phase": "activation",
+      "description": "Use when an _Infantry_ unit attempts to fall back from melee. That unit automatically passes the Initiative check required to fall back.",
+      "flavor": "A quick tactical retreat and a burst of fire can cause an enemy a lot of problems.",
+      "cost": 1
+    },
+    {
+      "subfactions": ["firepower_focus"],
+      "name": "Scatter Shot",
+      "phase": "activation",
+      "description": "Use when an _Infantry_ unit shoots. Successful hits cause 2 hits instead of 1.",
+      "flavor": "With enhanced firepower, their weapons can hit with extra strength.",
+      "cost": 1
+    },
+    {
+      "subfactions": ["defense_focus"],
+      "name": "Toughness",
+      "phase": "activation",
+      "description": "Use when an _Infantry_ unit takes Save rolls. Roll a die for each hit this unit takes. On a 3 or less that hit is prevented.",
+      "flavor": "These guild members are particularly tough and can take a hit.",
+      "cost": 2
+    },
+    {
+      "subfactions": ["defense_focus"],
+      "name": "Bravery",
+      "phase": "activation",
+      "description": "Use when activating a unit. That unit gets +1 Courage.",
+      "flavor": "These soldiers are particularly brave in the face of many horrors.",
+      "cost": 1
+    },
+    {
+      "subfactions": ["defense_focus"],
+      "name": "Scramblers",
+      "phase": "activation",
+      "description": "Use after a unit declares it is arriving from reserves within 24\" of this unit. That unit automatically fails any Initiative tests for arriving on the table.",
+      "flavor": "Prepared for any enemies, these scramblers will ensure no one can find our units.",
+      "cost": 1
+    },
+    {
+      "subfactions": ["assault_focus"],
+      "phase": "activation",
+      "name": "Quick Aim",
+      "description": "Use when an _Infantry_ unit with any _Assault_ weapons is firing. That unit does not suffer -1 to hit when using the _Assault_ rule.",
+      "flavor": "These guild members are so used to firing from the hip while speeding their way upfield that their accuracy doesn't suffer.",
+      "cost": 1
+    },
+    {
+      "subfactions": ["assault_focus"],
+      "name": "Fury",
+      "phase": "activation",
+      "flavor": "These guild members are furious in resolve and can rip through their enemies.",
+      "description": "Use when an _Infantry_ unit makes a Fight action. Successful hits gain +1 AP.",
+      "cost": 1
+    },
+    {
+      "subfactions": ["assault_focus"],
+      "name": "Assault",
+      "phase": "activation",
+      "flavor": "With a furious charge, these guild members move into combat quickly.",
+      "description": "Use this strategy when an _Infantry_ unit charges. That unit gains +3\" of Movement for the charge action.",
+      "cost": 1
+    }
+  ],
+  "powers": {}
 }
