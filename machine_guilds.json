@@ -245,6 +245,33 @@
         }
       ]
     },
+    "seeker_leader": {
+      "name": "Seeker Leader",
+      "description": "Guild troops wielding short-ranged shock artillery rifles.",
+      "category": "command",
+      "models": [
+        {
+          "name": "Seeker Leader",
+          "courage": 5,
+          "movement": 6,
+          "shoot": 6,
+          "fight": 5,
+          "defense": 6,
+          "reflexes": 6,
+          "weapons": ["shock_caster", "ccw"],
+          "options": [{"addRule": [{"id": "data_link"}, "heat_scanner"]}],
+          "rules": ["leader"],
+          "min": 1,
+          "max": 1
+        }
+      ]
+    },
+    "seeker": {
+      "name": "Seeker",
+      "description": "Foot-mobile machine guild protection forces.",
+      "category": "core",
+      "models": [{"name": "Seeker", "courage": 5, "movement": 6, "shoot": 6, "fight": 5, "defense": 6, "reflexes": 6, "weapons": ["shock_caster", "ccw"], "min": 1, "max": 1}]
+    },
     "ranger_leader": {
       "name": "Ranger Leader",
       "description": "Foot-mobile machine guild long range recon and marksmen forces.",
@@ -550,7 +577,14 @@
     "aa_missiles": {"name": "AA Missile System", "attacks": 1, "short": 24, "medium": 48, "ap": 5, "rules": ["anti_air"]},
     "shock_spear_melee": {"name": "Shock Spear (Strike)", "attacks": 1, "ap": 1, "short": "Melee", "rules": [{"id": "reach", "x": 1}]},
     "shock_spear_shoot": {"name": "Shock Spear (Arc)", "attacks": 1, "ap": 1, "short": 6, "medium": 12, "rules": ["assault"]},
-    "magnetic_shield": {"name": "Magnetic Shield", "attacks": 0, "short": "Melee", "rules": ["shield"]}
+    "magnetic_shield": {"name": "Magnetic Shield", "attacks": 0, "short": "Melee", "rules": ["shield"]},
+    "shock_caster": {
+      "name": "Shock Caster",
+      "profiles": [
+        {"name": "Focused", "attacks": 1, "short": 12, "medium": 24, "ap": 2, "rules": ["indirect"]},
+        {"name": "Dispersed", "attacks": 2, "short": 9, "medium": 18, "ap": 1, "rules": ["indirect"]}
+      ]
+    }
   },
   "rules": {
     "radiation": {"name": "Radiation", "description": "This weapon gains +1 AP while in short range.", "points": ["weapon.attacks"]},
