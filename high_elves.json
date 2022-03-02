@@ -813,7 +813,17 @@
         "hawk_talon": {"name": "Hawk Talon", "attacks": 4, "short": 12, "medium": 24, "ap": 2, "rules": ["assault"]},
         "sunlight_rifle": {"name": "Sunlight Rifle", "attacks": 4, "short": 12, "medium": 24, "ap": 1, "rules": ["assault"]},
         "spinnerette_rifle": {"name": "Spinnerette Rifle", "attacks": 2, "short": 6, "medium": 12, "ap": 3, "rules": ["assault", "rending"]},
-        "web_rifle": {"name": "Web Rifle", "attacks": 1, "short": 9, "medium": 18, "ap": 4, "rules": ["rapid_fire"]}
+        "web_rifle": {"name": "Web Rifle", "attacks": 1, "short": 9, "medium": 18, "ap": 4, "rules": ["rapid_fire"]},
+        "hexblade": {"name": "Hexblade", "attacks": 1, "short": "Melee", "ap": 0, "rules": [{"id": "rending"}]}
+    },
+    "powers": {
+        "luck": {
+            "name": "Luck",
+            "description": "Until the end of the activation phase, whenever target friendly unit within 18\" takes a hit, roll a D10. On a result of 3 or less ignore that hit.",
+            "charge": 7
+        },
+        "brain_blast": {"name": "Brain Blast", "description": "Target enemy model within 12\" takes 1 hit with AP(3).", "charge": 6},
+        "dire_fate": {"name": "Dire Fate", "description": "Target enemy unit within 12\" suffers -1 Save until the end of the activation phase.", "charge": 5}
     },
     "strategies": {
         "mobility_training": {
