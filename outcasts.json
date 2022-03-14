@@ -1,0 +1,564 @@
+{
+    "id": "outcasts",
+    "name": "Outcasts",
+    "author": "Xekon#2688",
+    "units": {
+        "outcast_captain": {
+            "name": "Outcast Captain",
+            "description": "A captain of a small outcast fleet.",
+            "category": "command",
+            "models": [
+                {
+                    "name": "Outcast Captain",
+                    "movement": 6,
+                    "courage": 7,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 6,
+                    "reflexes": 6,
+                    "weapons": ["pistol", {"id": "ccw", "count": 3}, "frags"],
+                    "rules": [{"id": "outcast_tactics", "x": 1}, {"id": "wounds", "x": 3}, "leader"],
+                    "options": [
+                        {
+                            "replaceWeapon": ["pistol"],
+                            "withWeapon": ["sniper_rifle", "smg", "plasma_pistol", "combat_shotgun", "fusion_pistol", "flamethrower_pistol", "defense_rifle", "defense_carbine"]
+                        },
+                        {
+                            "replaceWeapon": [{"id": "ccw", "count": 3}],
+                            "withWeapon": [{"id": "energy_sword", "count": 3}, {"id": "energy_hammer", "count": 3}, {"id": "energy_fist", "count": 3}, {"id": "energy_claws", "count": 4}]
+                        },
+                        {"addRule": [{"name": "Jetpack", "id": "fly"}, "shield"]},
+                        {"replaceRule": [{"id": "outcast_tactics", "x": 1}], "withRule": [{"id": "outcast_tactics", "x": 2}]}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "captain_jetbike": {
+            "name": "Outcast Captain on Jetbike",
+            "description": "A captain of a small outcast fleet, driving a swift jetbike.",
+            "category": "command",
+            "models": [
+                {
+                    "name": "Outcast Captain on Jetbike",
+                    "movement": 8,
+                    "courage": 7,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 6,
+                    "reflexes": 6,
+                    "weapons": ["heavy_pistol", {"id": "ccw", "count": 3}, "frags", {"id": "twin_marine_rifle", "mount": ["Front"]}],
+                    "rules": [{"id": "outcast_tactics", "x": 1}, {"id": "wounds", "x": 3}, "leader", {"id": "impact", "x": 1}, "scout"],
+                    "options": [
+                        {"replaceWeapon": ["heavy_pistol"], "withWeapon": ["sniper_rifle", "smg", "plasma_pistol", "combat_shotgun", "defense_rifle"]},
+                        {"replaceWeapon": [{"id": "ccw", "count": 3}], "withWeapon": [{"id": "energy_sword", "count": 3}, {"id": "energy_hammer", "count": 3}, {"id": "energy_fist", "count": 3}]},
+                        {
+                            "replaceWeapon": [{"id": "twin_marine_rifle", "mount": ["Front"]}],
+                            "withWeapon": [{"id": "twin_plasma_rifle", "mount": ["Front"]}, {"id": "twin_fusion_rifle", "mount": ["Front"]}, {"id": "twin_flamethrower", "mount": ["Front"]}]
+                        },
+                        {"replaceRule": [{"id": "outcast_tactics", "x": 1}], "withRule": [{"id": "outcast_tactics", "x": 2}]}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ],
+            "keywords": ["Biker"]
+        },
+        "captain_destroyer": {
+            "name": "Outcast Captain in Destroyer Armor",
+            "description": "A captain of a small outcast fleet, clad in heavy armor.",
+            "category": "command",
+            "models": [
+                {
+                    "name": "Outcast Captain in Destroyer Armor",
+                    "movement": 5,
+                    "courage": 7,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 9,
+                    "reflexes": 6,
+                    "weapons": ["heavy_defense_rifle", {"id": "heavy_ccw", "count": 3}, "frags"],
+                    "rules": [{"id": "outcast_tactics", "x": 1}, {"id": "wounds", "x": 3}, "leader", "ambush"],
+                    "options": [
+                        {
+                            "replaceWeapon": ["heavy_defense_rifle"],
+                            "withWeapon": ["combat_shotgun", "plasma_rifle", "fusion_rifle", "flamethrower", "light_machinegun", "laser_cannon", "missile_launcher"]
+                        },
+                        {
+                            "replaceWeapon": [{"id": "heavy_ccw", "count": 3}],
+                            "withWeapon": [{"id": "energy_sword", "count": 3}, {"id": "energy_hammer", "count": 3}, {"id": "energy_fist", "count": 3}, {"id": "energy_claws", "count": 4}]
+                        },
+                        {"addRule": [{"name": "Jetpack", "id": "fly"}, "shield"]},
+                        {"replaceRule": [{"id": "outcast_tactics", "x": 1}], "withRule": [{"id": "outcast_tactics", "x": 2}]}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "outcast_psychic": {
+            "name": "Outcast Psychic",
+            "description": "A rogue psychic, who channels powerful spells.",
+            "category": "command",
+            "models": [
+                {
+                    "name": "Outcast Psychic",
+                    "movement": 6,
+                    "courage": 6,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 6,
+                    "reflexes": 6,
+                    "weapons": ["pistol", {"id": "energy_staff", "count": 2}, "frags"],
+                    "rules": [{"id": "power", "x": 1}, {"id": "wounds", "x": 3}, "leader"],
+                    "options": [
+                        {"replaceWeapon": ["pistol"], "withWeapon": ["smg", "combat_shotgun", "defense_carbine", "plasma_pistol", "flamethrower_pistol", "fusion_pistol"]},
+                        {
+                            "replaceWeapon": [{"id": "energy_staff", "count": 2}],
+                            "withWeapon": [{"id": "energy_sword", "count": 2}, {"id": "energy_fist", "count": 2}, {"id": "energy_claws", "count": 3}]
+                        },
+                        {"addRule": [{"name": "Jetpack", "id": "fly"}]},
+                        {"replaceRule": [{"id": "power", "x": 1}], "withRule": [{"id": "power", "x": 2}]}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "psychic_destroyer": {
+            "name": "Outcast Psychic in Destroyer Armor",
+            "description": "A rogue psychic, clad in heavy armor.",
+            "category": "command",
+            "models": [
+                {
+                    "name": "Outcast Psychic in Destroyer Armor",
+                    "movement": 5,
+                    "courage": 6,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 9,
+                    "reflexes": 6,
+                    "weapons": ["heavy_defense_rifle", {"id": "energy_staff", "count": 2}, "frags"],
+                    "rules": [{"id": "power", "x": 1}, {"id": "wounds", "x": 3}, "leader", "ambush"],
+                    "options": [
+                        {"replaceWeapon": ["heavy_defense_rifle"], "withWeapon": ["combat_shotgun", "plasma_rifle", "flamethrower", "fusion_rifle"]},
+                        {
+                            "replaceWeapon": [{"id": "energy_staff", "count": 2}],
+                            "withWeapon": [{"id": "energy_sword", "count": 2}, {"id": "energy_fist", "count": 2}, {"id": "energy_claws", "count": 3}]
+                        },
+                        {"addRule": [{"name": "Jetpack", "id": "fly"}]},
+                        {"replaceRule": [{"id": "power", "x": 1}], "withRule": [{"id": "power", "x": 2}]}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "outcast_fixer": {
+            "name": "Outcast Fixer",
+            "description": "A freelancing engineer, a valuable member of any crew.",
+            "category": "specialist",
+            "models": [
+                {
+                    "name": "Outcast Fixer",
+                    "movement": 6,
+                    "courage": 5,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 6,
+                    "reflexes": 6,
+                    "weapons": ["defense_rifle", "ccw", "emp_grenade"],
+                    "rules": [{"id": "wounds", "x": 2}, "engineer"],
+                    "options": [
+                        {"replaceWeapon": ["defense_rifle", "ccw"], "withWeapon": [["pistol", {"id": "ccw", "count": 2}]]},
+                        {"replaceWeapon": ["defense_rifle"], "withWeapon": ["defense_carbine", "missile_launcher", "laser_cannon", "flamethrower", "fusion_rifle", "plasma_rifle", "grenade_launcher"]},
+                        {"replaceWeapon": "pistol", "withWeapon": ["plasma_pistol", "fusion_pistol", "flamethrower_pistol", "smg", "combat_shotgun"]},
+                        {"replaceWeapon": {"id": "ccw", "count": 2}, "withWeapon": [{"id": "energy_claws", "count": 3}, {"id": "energy_hammer", "count": 2}, {"id": "energy_fist", "count": 2}]},
+                        {"addRule": [{"name": "Jetpack", "id": "fly"}]}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "outcast_trooper": {
+            "name": "Outcast Trooper",
+            "description": "An experienced soldier that travels the stars in search of fortune and glory.",
+            "category": "core",
+            "models": [
+                {
+                    "name": "Outcast Trooper",
+                    "movement": 6,
+                    "courage": 5,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 6,
+                    "reflexes": 6,
+                    "weapons": ["defense_rifle", "ccw", "frags"],
+                    "min": 1,
+                    "max": 1,
+                    "options": [
+                        {"replaceWeapon": ["defense_rifle", "ccw"], "withWeapon": [["pistol", {"id": "ccw", "count": 2}]]},
+                        {"replaceWeapon": "pistol", "withWeapon": ["plasma_pistol", "fusion_pistol", "flamethrower_pistol"]},
+                        {
+                            "replaceWeapon": {"id": "ccw", "count": 2},
+                            "withWeapon": [{"id": "energy_claws", "count": 3}, {"id": "energy_fist", "count": 2}, {"id": "energy_hammer", "count": 2}, {"id": "energy_sword", "count": 2}]
+                        },
+                        {"replaceWeapon": "defense_rifle", "withWeapon": ["combat_shotgun", "smg", "defense_carbine"]},
+                        {"addRule": [{"name": "Jetpack", "id": "fly"}, "shield"]}
+                    ]
+                }
+            ]
+        },
+        "outcast_trooper_gunner": {
+            "name": "Outcast Trooper Gunner",
+            "description": "An experienced soldier wielding heavy weapons.",
+            "category": "specialist",
+            "models": [
+                {
+                    "name": "Outcast Trooper Gunner",
+                    "movement": 6,
+                    "courage": 5,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 6,
+                    "reflexes": 6,
+                    "weapons": ["flamethrower", "ccw", "frags"],
+                    "min": 1,
+                    "max": 1,
+                    "options": [
+                        {"replaceWeapon": "flamethrower", "withWeapon": ["grenade_launcher", "plasma_rifle", "fusion_rifle", "light_machinegun", "sniper_rifle", "missile_launcher"]},
+                        {"addRule": [{"name": "Jetpack", "id": "fly"}, "shield"]}
+                    ]
+                }
+            ]
+        },
+        "outcast_trooper_leader": {
+            "name": "Outcast Trooper Leader",
+            "description": "An experienced Leader that travels the stars in search of fortune and glory.",
+            "category": "command",
+            "models": [
+                {
+                    "name": "Outcast Trooper Leader",
+                    "movement": 6,
+                    "courage": 5,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 6,
+                    "reflexes": 6,
+                    "weapons": ["defense_rifle", "ccw", "frags"],
+                    "min": 1,
+                    "max": 1,
+                    "options": [
+                        {"replaceWeapon": ["defense_rifle", "ccw"], "withWeapon": [["pistol", {"id": "ccw", "count": 2}]]},
+                        {"replaceWeapon": "pistol", "withWeapon": ["plasma_pistol", "fusion_pistol", "flamethrower_pistol"]},
+                        {
+                            "replaceWeapon": {"id": "ccw", "count": 2},
+                            "withWeapon": [{"id": "energy_claws", "count": 3}, {"id": "energy_fist", "count": 2}, {"id": "energy_hammer", "count": 2}, {"id": "energy_sword", "count": 2}]
+                        },
+                        {"replaceWeapon": "defense_rifle", "withWeapon": ["combat_shotgun", "smg", "defense_carbine"]},
+                        {"addRule": ["champion", {"name": "Jetpack", "id": "fly"}, "shield"]}
+                    ],
+                    "rules": ["leader"]
+                }
+            ]
+        },
+        "trooper_jetbike": {
+            "name": "Trooper Jetbiker",
+            "description": "A fast-moving soldier that has specialized in hit-and-run tactics.",
+            "category": "strike",
+            "keywords": ["Biker"],
+            "models": [
+                {
+                    "name": "Trooper Jetbiker",
+                    "movement": 8,
+                    "courage": 5,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 6,
+                    "reflexes": 6,
+                    "weapons": ["pistol", {"id": "ccw", "count": 2}, "frags", {"id": "twin_marine_rifle", "mount": ["Front"]}],
+                    "min": 1,
+                    "max": 1,
+                    "rules": [{"id": "impact", "x": 1}, "scout"],
+                    "options": [
+                        {"replaceWeapon": "pistol", "withWeapon": ["plasma_pistol", "fusion_pistol", "flamethrower_pistol"]},
+                        {
+                            "replaceWeapon": {"id": "twin_marine_rifle", "mount": ["Front"]},
+                            "withWeapon": [{"id": "twin_plasma_rifle", "mount": ["Front"]}, {"id": "twin_flamethrower", "mount": ["Front"]}, {"id": "twin_fusion_rifle", "mount": ["Front"]}]
+                        }
+                    ]
+                }
+            ]
+        },
+        "trooper_jetbike_leader": {
+            "name": "Trooper Jetbiker Leader",
+            "description": "A fast-moving leader that has specialized in hit-and-run tactics.",
+            "category": "command",
+            "keywords": ["Biker"],
+            "models": [
+                {
+                    "name": "Trooper Jetbiker Leader",
+                    "movement": 8,
+                    "courage": 5,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 6,
+                    "reflexes": 6,
+                    "weapons": ["pistol", {"id": "ccw", "count": 2}, "frags", {"id": "twin_marine_rifle", "mount": ["Front"]}],
+                    "min": 1,
+                    "max": 1,
+                    "rules": [{"id": "impact", "x": 1}, "scout", {"id": "leader_x", "x": "Infantry, Biker"}],
+                    "options": [
+                        {"replaceWeapon": "pistol", "withWeapon": ["plasma_pistol", "fusion_pistol", "flamethrower_pistol"]},
+                        {
+                            "replaceWeapon": {"id": "twin_marine_rifle", "mount": ["Front"]},
+                            "withWeapon": [{"id": "twin_plasma_rifle", "mount": ["Front"]}, {"id": "twin_flamethrower", "mount": ["Front"]}, {"id": "twin_fusion_rifle", "mount": ["Front"]}]
+                        },
+                        {"addRule": ["champion"]}
+                    ]
+                }
+            ],
+            "options": []
+        },
+        "outcast_destroyer": {
+            "name": "Outcast Destroyer",
+            "description": "Wearing handcrafted destroyer armor, this veteran provides much-needed firepower.",
+            "category": "specialist",
+            "models": [
+                {
+                    "name": "Outcast Destroyer",
+                    "movement": 5,
+                    "courage": 6,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 9,
+                    "reflexes": 6,
+                    "weapons": ["heavy_defense_rifle", {"id": "heavy_ccw", "count": 2}, "frags"],
+                    "min": 1,
+                    "max": 1,
+                    "options": [
+                        {
+                            "replaceWeapon": "heavy_defense_rifle",
+                            "withWeapon": ["combat_shotgun", "plasma_rifle", "light_machinegun", "flamethrower", "fusion_rifle", "laser_cannon", "missile_launcher"]
+                        },
+                        {
+                            "replaceWeapon": [{"id": "heavy_ccw", "count": 2}],
+                            "withWeapon": [
+                                {"id": "energy_sword", "count": 2},
+                                {"id": "energy_hammer", "count": 2},
+                                {"id": "energy_fist", "count": 2},
+                                {"id": "energy_claws", "count": 3},
+                                {"id": "energy_shield", "count": 2}
+                            ]
+                        },
+                        {"addWeapon": "rocket_pod"},
+                        {"addRule": [{"id": "fly", "name": "Jetpack"}]}
+                    ],
+                    "rules": ["ambush"]
+                }
+            ]
+        },
+        "outcast_destroyer_leader": {
+            "name": "Outcast Destroyer Leader",
+            "description": "Wearing handcrafted destroyer armor, this leader provides much-needed firepower.",
+            "category": "command",
+            "models": [
+                {
+                    "name": "Outcast Destroyer Leader",
+                    "movement": 5,
+                    "courage": 6,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 9,
+                    "reflexes": 6,
+                    "weapons": ["heavy_defense_rifle", {"id": "heavy_ccw", "count": 2}, "frags"],
+                    "min": 1,
+                    "max": 1,
+                    "options": [
+                        {
+                            "replaceWeapon": "heavy_defense_rifle",
+                            "withWeapon": ["combat_shotgun", "plasma_rifle", "light_machinegun", "flamethrower", "fusion_rifle", "laser_cannon", "missile_launcher"]
+                        },
+                        {
+                            "replaceWeapon": [{"id": "heavy_ccw", "count": 2}],
+                            "withWeapon": [
+                                {"id": "energy_sword", "count": 2},
+                                {"id": "energy_hammer", "count": 2},
+                                {"id": "energy_fist", "count": 2},
+                                {"id": "energy_claws", "count": 3},
+                                {"id": "energy_shield", "count": 2}
+                            ]
+                        },
+                        {"addWeapon": "rocket_pod"},
+                        {"addRule": [{"ArrayItem": "champion", "id": "fly", "name": "Jetpack"}]}
+                    ],
+                    "rules": ["ambush", "leader"]
+                }
+            ]
+        },
+        "outcast_annihilator": {
+            "name": "Outcast Annihilator",
+            "description": "A heavy gunner, wielding anti-armor weapons.",
+            "category": "heavy",
+            "models": [
+                {
+                    "name": "Outcast Annihilator",
+                    "movement": 6,
+                    "courage": 5,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 6,
+                    "reflexes": 6,
+                    "weapons": ["flamethrower", "ccw", "plasma_grenade"],
+                    "min": 1,
+                    "max": 1,
+                    "options": [
+                        {"replaceWeapon": "flamethrower", "withWeapon": ["plasma_cannon", "fusion_cannon", "laser_cannon", "heavy_machinegun", "missile_launcher", "autocannon"]},
+                        {"addRule": [{"name": "Jetpack", "id": "fly"}, "shield"]}
+                    ]
+                }
+            ]
+        },
+        "outcast_annihilator_leader": {
+            "name": "Outcast Annihilator Leader",
+            "description": "A leader, wielding anti-armor weapons.",
+            "category": "command",
+            "models": [
+                {
+                    "name": "Outcast Annihilator Leader",
+                    "movement": 6,
+                    "courage": 5,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 6,
+                    "reflexes": 6,
+                    "weapons": ["flamethrower", "ccw", "plasma_grenade"],
+                    "min": 1,
+                    "max": 1,
+                    "options": [
+                        {"replaceWeapon": "flamethrower", "withWeapon": ["plasma_cannon", "fusion_cannon", "laser_cannon", "heavy_machinegun", "missile_launcher", "autocannon"]},
+                        {"addRule": ["champion", {"name": "Jetpack", "id": "fly"}, "shield"]}
+                    ],
+                    "rules": ["leader"]
+                }
+            ]
+        },
+        "breacher_warsuit": {
+            "name": "Breacher Warsuit",
+            "description": "A heavily equipped assault warsuit, piloted by an experienced veteran.",
+            "category": "heavy",
+            "models": [
+                {
+                    "name": "Breacher Warsuit",
+                    "movement": 8,
+                    "courage": 6,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 9,
+                    "reflexes": 6,
+                    "weapons": ["light_machinegun", {"id": "energy_fist", "count": 2}],
+                    "options": [
+                        {
+                            "replaceWeapon": ["light_machinegun"],
+                            "withWeapon": ["missile_launcher", "heavy_flamethrower", "autocannon", "heavy_machinegun", "fusion_cannon", "plasma_cannon", "laser_cannon"]
+                        },
+                        {
+                            "replaceWeapon": [{"id": "energy_fist", "count": 2}],
+                            "withWeapon": ["missile_launcher", "heavy_flamethrower", "autocannon", "heavy_machinegun", "fusion_cannon", "plasma_cannon", "laser_cannon"]
+                        },
+                        {"addWeapon": ["railgun", "rocket_pod", {"id": "twin_marine_rifle", "mount": ["Front"]}]}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ],
+            "keywords": ["Vehicle"],
+            "rules": ["vulnerable_rear", "damage_chart", "fearless"]
+        },
+        "breacher_warsuit_leader": {
+            "name": "Breacher Warsuit Leader",
+            "description": "A heavily equipped assault warsuit, piloted by an experienced leader.",
+            "category": "command",
+            "models": [
+                {
+                    "name": "Breacher Warsuit Leader",
+                    "movement": 8,
+                    "courage": 6,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 9,
+                    "reflexes": 6,
+                    "weapons": ["light_machinegun", {"id": "energy_fist", "count": 2}],
+                    "options": [
+                        {
+                            "replaceWeapon": ["light_machinegun"],
+                            "withWeapon": ["missile_launcher", "heavy_flamethrower", "autocannon", "heavy_machinegun", "fusion_cannon", "plasma_cannon", "laser_cannon"]
+                        },
+                        {
+                            "replaceWeapon": [{"id": "energy_fist", "count": 2}],
+                            "withWeapon": ["missile_launcher", "heavy_flamethrower", "autocannon", "heavy_machinegun", "fusion_cannon", "plasma_cannon", "laser_cannon"]
+                        },
+                        {"addWeapon": ["railgun", "rocket_pod", {"id": "twin_marine_rifle", "mount": ["Front"]}]}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ],
+            "keywords": ["Vehicle"],
+            "rules": ["vulnerable_rear", "damage_chart", "fearless", {"id": "leader_x", "x": "Infantry, Vehicle"}]
+        }
+    },
+    "weapons": {
+        "energy_shield": {"name": "Energy Shield", "attacks": 1, "short": "Melee", "rules": ["shield"]},
+        "emp_grenade": {"name": "EMP Grenade", "attacks": 1, "short": 6, "ap": 3, "rules": ["grenade", "emp"]}
+    },
+    "rules": {
+        "outcast_tactics": {
+            "name": "Outcast Tactics",
+            "inputs": ["x"],
+            "description": "When this unit is activated, choose up to X friendly _Infantry_ units within 6\" to receive one of the following bonuses until the end of the round: \n * Re-roll failed Accuracy tests of 9+ \n * Re-roll failed Strength tests of 9+ \n * +3\" of Movement",
+            "points": ["rule.x", {"multiply": 5}]
+        }
+    },
+    "strategies": {
+        "ambush": {
+            "name": "Teleport",
+            "phase": "pre_game",
+            "description": "Up to half of any force's units, one point for each may be placed in _Ambush Reserves_ instead of deployed on the field.",
+            "flavor": "",
+            "cost": "1/per"
+        },
+        "auto_targetting_systems": {
+            "name": "Auto-targeting Systems",
+            "phase": "activation",
+            "description": "Use when a unit makes a Shooting attack. That unit may re-roll a single attack die.",
+            "flavor": "Laser sights, rangefinders and ai-controlled targeting arrays result in lethal accuracy.",
+            "cost": 1
+        },
+        "digital_camo": {
+            "name": "Digital Camouflage",
+            "phase": "activation",
+            "flavor": "Outcasts know how to hide in plain sight, evading enemy attacks by blending in with their surroundings.",
+            "description": "Use this strategy when a unit is targeted by an enemy Shooting attack. That unit gets -1 Accuracy this attack.",
+            "cost": 2
+        }
+    },
+    "powers": {
+        "blink": {
+            "name": "Blink",
+            "description": "Target friendly unit within 12\" may move up to 12\" ignoring all models and terrain. This must end outside of 12\" of any enemy units.",
+            "charge": 7
+        },
+        "scorch": {"name": "Scorch", "description": "Target enemy unit within 18\" takes 5 hits with AP(1).", "charge": 5},
+        "barrier": {
+            "name": "Barrier",
+            "description": "Target friendly unit within 24“. Until the end of the round, roll a D10 each time that unit is hit. On a 2 or less, that hit is ignored.",
+            "charge": 6
+        }
+    },
+    "secondary_color": "#3A3B3C",
+    "color": "#5C4033",
+    "alliance": "mercenaries"
+}
