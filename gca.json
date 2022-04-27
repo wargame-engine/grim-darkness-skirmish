@@ -1,59 +1,127 @@
 {
     "id": "gca",
-    "name": "Galactic Corperate Allegiance",
+    "name": "Galactic Corporate Allegiance",
     "author": "Xekon#2688",
     "units": {
-        "sergeant": {
-            "name": "Sergeant",
-            "description": "A commander who is in charge of a strike team.",
+        "exosuit_sergeant": {
+            "name": "Exosuit Sergeant",
+            "description": "",
             "category": "command",
             "models": [
                 {
-                    "name": "Sergeant",
+                    "name": "Exosuit Sergeant",
+                    "movement": 6,
+                    "courage": 7,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 9,
+                    "reflexes": 6,
+                    "weapons": ["plasma_grenade", "marine_rifle", "energy_fist"],
+                    "min": 1,
+                    "max": 1,
+                    "options": [
+                        {"replaceWeapon": ["marine_rifle"], "withWeapon": ["plasma_rifle", "fusion_rifle", "flamethrower", "grenade_launcher", "light_machinegun"]},
+                        {"replaceWeapon": ["energy_fist"], "withWeapon": ["plasma_rifle", "fusion_rifle", "flamethrower", "grenade_launcher", "light_machinegun"]},
+                        {"addWeapon": ["rocket_pod", "railgun", "fusion_cannon", "plasma_cannon", "heavy_machinegun"], "limit": 1},
+                        {"addRule": [{"name": "Jetpack", "id": "fly"}, "shield"]}
+                    ],
+                    "rules": ["ambush", {"id": "field_orders", "x": 1}, "leader", {"id": "wounds", "x": 3}]
+                }
+            ]
+        },
+        "veteran_sergeant": {
+            "name": "Veteran Sergeant",
+            "description": "",
+            "category": "command",
+            "models": [
+                {
+                    "name": "Veteran Sergeant",
                     "movement": 6,
                     "courage": 7,
                     "shoot": 6,
                     "fight": 6,
                     "defense": 6,
                     "reflexes": 6,
-                    "weapons": ["heavy_burst_rifle", {"id": "heavy_ccw", "count": 3}, "plasma_grenade"],
+                    "weapons": ["pistol", "plasma_grenade", {"id": "heavy_ccw", "count": 3}],
                     "rules": [{"id": "field_orders", "x": 1}, {"id": "wounds", "x": 3}, "leader"],
                     "options": [
-                        {"replaceWeapon": ["heavy_burst_rifle"], "withWeapon": ["sniper_rifle", "plasma_pistol", "fusion_pistol"]},
-                        {"addRule": [{"name": "Camo-Cloak", "id": "evasive"}, {"name": "Jetpack", "id": "fly"}, {"name": "Short-range Teleporter", "id": "ambush"}]}
+                        {"replaceWeapon": ["pistol"], "withWeapon": ["thermal_rifle", "heavy_defense_rifle", "plasma_pistol", "combat_shotgun", "sniper_rifle"]},
+                        {"replaceWeapon": [{"id": "heavy_ccw", "count": 3}], "withWeapon": [{"id": "energy_sword", "count": 3}, {"id": "energy_fist", "count": 3}]},
+                        {"addRule": [{"name": "Orbital Insertion", "id": "ambush"}, {"name": "Camo-Cloak", "id": "evasive"}, {"name": "Jetpack", "id": "fly"}]}
                     ],
                     "min": 1,
                     "max": 1
                 }
             ]
         },
-        "striker": {
-            "name": "Striker",
+        "veteran": {
+            "name": "Veteran",
             "description": "A well-equipped infantryman who is deployed to secure and protect corporate property.",
             "category": "core",
             "models": [
                 {
-                    "name": "Striker",
+                    "name": "Veteran",
                     "movement": 6,
-                    "courage": 5,
+                    "courage": 6,
                     "shoot": 5,
                     "fight": 5,
                     "defense": 6,
-                    "reflexes": 6,
-                    "weapons": ["burst_rifle", "ccw", "plasma_grenade"],
+                    "reflexes": 5,
+                    "weapons": ["heavy_defense_rifle", "ccw", "plasma_grenade"],
+                    "min": 1,
+                    "max": 1,
+                    "options": [{"replaceWeapon": ["heavy_defense_rifle"], "withWeapon": ["combat_shotgun"]}, {"addRule": ["field_radio", {"name": "Orbital Insertion", "id": "ambush"}, "shield"]}]
+                }
+            ]
+        },
+        "veteran_leader": {
+            "name": "Veteran Leader",
+            "description": "A well-equipped leader who is deployed to secure and protect corporate property.",
+            "category": "command",
+            "models": [
+                {
+                    "name": "Veteran Leader",
+                    "movement": 6,
+                    "courage": 6,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 6,
+                    "reflexes": 5,
+                    "weapons": ["heavy_defense_rifle", "ccw", "plasma_grenade"],
+                    "min": 1,
+                    "max": 1,
+                    "options": [{"replaceWeapon": ["heavy_defense_rifle"], "withWeapon": ["combat_shotgun"]}, {"addRule": ["field_radio", {"name": "Orbital Insertion", "id": "ambush"}, "shield"]}],
+                    "rules": ["leader"]
+                }
+            ]
+        },
+        "veteran_gunner": {
+            "name": "Veteran Gunner",
+            "description": "A well-equipped heavy gunner who is deployed to secure and protect corporate property.",
+            "category": "specialist",
+            "models": [
+                {
+                    "name": "Veteran Gunner",
+                    "movement": 6,
+                    "courage": 6,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 6,
+                    "reflexes": 5,
+                    "weapons": ["thermal_rifle", "ccw", "plasma_grenade"],
                     "min": 1,
                     "max": 1,
                     "options": [
-                        {"replaceWeapon": ["burst_rifle"], "withWeapon": ["light_machinegun", "fusion_rifle", "laser_cannon", "plasma_rifle", "flamethrower"]},
-                        {"addRule": {"name": "Short-range Teleporter", "id": "ambush"}},
-                        {"addRule": ["field_radio"]}
+                        {"replaceWeapon": ["thermal_rifle"], "withWeapon": ["light_machinegun", "fusion_rifle", "laser_cannon", "flamethrower", "plasma_rifle", "grenade_launcher", "sniper_rifle"]},
+                        {"addRule": ["field_radio", {"name": "Orbital Insertion", "id": "ambush"}, "shield"]},
+                        {}
                     ]
                 }
             ]
         },
         "scout": {
             "name": "Scout",
-            "description": "A fast infantryman, specialised in sabotage and stealth",
+            "description": "An elite infantryman, specialised in sabotage and stealth",
             "category": "core",
             "models": [
                 {
@@ -62,13 +130,100 @@
                     "courage": 5,
                     "shoot": 5,
                     "fight": 5,
-                    "defense": 6,
+                    "defense": 5,
                     "reflexes": 6,
-                    "weapons": ["burst_carbine", "ccw", "plasma_grenade"],
+                    "weapons": ["heavy_carbine", "ccw", "plasma_grenade"],
                     "min": 1,
                     "max": 1,
                     "rules": ["scout"],
-                    "options": [{"replaceWeapon": "burst_carbine", "withWeapon": "sniper_rifle"}, {"addRule": [{"name": "Camo-Cloak", "id": "evasive"}, {"name": "Jetpack", "id": "fly"}]}]
+                    "options": [
+                        {"replaceWeapon": "heavy_carbine", "withWeapon": "sniper_rifle"},
+                        {"addRule": ["field_radio", {"name": "Camo-Cloak", "id": "evasive"}, {"name": "Jetpack", "id": "fly"}]}
+                    ]
+                }
+            ]
+        },
+        "scout_leader": {
+            "name": "Scout Leader",
+            "description": "An elite leader, specialised in sabotage and stealth",
+            "category": "command",
+            "models": [
+                {
+                    "name": "Scout Leader",
+                    "movement": 6,
+                    "courage": 5,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 6,
+                    "weapons": ["heavy_carbine", "ccw", "plasma_grenade"],
+                    "min": 1,
+                    "max": 1,
+                    "rules": ["scout", "leader"],
+                    "options": [
+                        {"replaceWeapon": "heavy_carbine", "withWeapon": "sniper_rifle"},
+                        {"addRule": ["field_radio", {"name": "Camo-Cloak", "id": "evasive"}, {"name": "Jetpack", "id": "fly"}]}
+                    ]
+                }
+            ]
+        },
+        "scout_drone": {
+            "name": "Scout Drone",
+            "description": "A small supportive drone, capable of scouting ahead of a strike team\n\n",
+            "category": "core",
+            "models": [
+                {"name": "Scout Drone", "movement": 7, "courage": 5, "shoot": 5, "fight": 5, "defense": 4, "reflexes": 5, "weapons": ["defense_carbine"], "min": 1, "max": 1, "rules": ["scout", "fly"]}
+            ]
+        },
+        "exosuit_devastator": {
+            "name": "Exosuit Devastator",
+            "description": "An exosuit wearing elite, deployed as heavy support to combat enemy resistance that can't be orbitally bombarded.",
+            "category": "specialist",
+            "models": [
+                {
+                    "name": "Exosuit Devastator",
+                    "movement": 6,
+                    "courage": 6,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 9,
+                    "reflexes": 6,
+                    "weapons": ["plasma_grenade", "marine_rifle", "energy_fist"],
+                    "min": 1,
+                    "max": 1,
+                    "options": [
+                        {"replaceWeapon": ["marine_rifle"], "withWeapon": ["plasma_rifle", "fusion_rifle", "flamethrower", "grenade_launcher", "light_machinegun"]},
+                        {"replaceWeapon": ["energy_fist"], "withWeapon": ["plasma_rifle", "fusion_rifle", "flamethrower", "grenade_launcher", "light_machinegun"]},
+                        {"addWeapon": ["rocket_pod", "railgun", "fusion_cannon", "plasma_cannon", "heavy_machinegun"], "limit": 1},
+                        {"addRule": ["field_radio", {"name": "Jetpack", "id": "fly"}, "shield"]}
+                    ],
+                    "rules": ["ambush"]
+                }
+            ]
+        },
+        "exosuit_devastator_leader": {
+            "name": "Exosuit Devastator Leader",
+            "description": "An exosuit wearing leader, deployed as heavy support to combat enemy resistance that can't be orbitally bombarded.",
+            "category": "command",
+            "models": [
+                {
+                    "name": "Exosuit Devastator Leader",
+                    "movement": 6,
+                    "courage": 6,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 9,
+                    "reflexes": 6,
+                    "weapons": ["plasma_grenade", "marine_rifle", "energy_fist"],
+                    "min": 1,
+                    "max": 1,
+                    "options": [
+                        {"replaceWeapon": ["marine_rifle"], "withWeapon": ["plasma_rifle", "fusion_rifle", "flamethrower", "grenade_launcher", "light_machinegun"]},
+                        {"replaceWeapon": ["energy_fist"], "withWeapon": ["plasma_rifle", "fusion_rifle", "flamethrower", "grenade_launcher", "light_machinegun"]},
+                        {"addWeapon": ["rocket_pod", "railgun", "fusion_cannon", "plasma_cannon", "heavy_machinegun"], "limit": 1},
+                        {"addRule": ["field_radio", {"name": "Jetpack", "id": "fly"}, "shield"]}
+                    ],
+                    "rules": ["ambush", "leader"]
                 }
             ]
         },
@@ -88,7 +243,7 @@
                     "weapons": ["laser_cannon", "energy_fist"],
                     "options": [
                         {"addWeapon": ["rocket_pod", "strike_missiles"], "limit": 1},
-                        {"replaceWeapon": "laser_cannon", "withWeapon": ["missile_launcher", "heavy_machinegun", "heavy_flamethrower", "autocannon", "plasma_cannon"]}
+                        {"replaceWeapon": "laser_cannon", "withWeapon": ["missile_launcher", "heavy_machinegun", "heavy_flamethrower", "autocannon", "plasma_cannon", "thermal_lance"]}
                     ],
                     "min": 1,
                     "max": 1
@@ -96,6 +251,31 @@
             ],
             "keywords": ["Automata", "Vehicle"],
             "rules": ["vulnerable_rear", "damage_chart", "scout", "fearless"]
+        },
+        "light_walker_leader": {
+            "name": "Light Combat Walker Leader",
+            "description": "Lightly equipped recon walker leader, deployed into battle alongside human infantry.",
+            "category": "command",
+            "models": [
+                {
+                    "name": "Light Combat Walker Leader",
+                    "movement": 8,
+                    "courage": 5,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 8,
+                    "reflexes": 5,
+                    "weapons": ["laser_cannon", "energy_fist"],
+                    "options": [
+                        {"addWeapon": ["rocket_pod", "strike_missiles"], "limit": 1},
+                        {"replaceWeapon": "laser_cannon", "withWeapon": ["missile_launcher", "heavy_machinegun", "heavy_flamethrower", "autocannon", "plasma_cannon", "thermal_lance"]}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ],
+            "keywords": ["Automata", "Vehicle"],
+            "rules": ["vulnerable_rear", "damage_chart", "scout", "fearless", {"id": "leader_x", "x": "Infantry, Vehicle"}]
         },
         "heavy_walker": {
             "name": "Heavy Combat Walker",
@@ -112,9 +292,9 @@
                     "reflexes": 5,
                     "weapons": ["laser_cannon", {"id": "energy_fist", "count": 2}],
                     "options": [
-                        {"addWeapon": ["rocket_pod", "strike_missiles"], "limit": 1},
-                        {"replaceWeapon": "laser_cannon", "withWeapon": ["missile_launcher", "fusion_cannon", "heavy_machinegun", "autocannon", "plasma_cannon"]},
-                        {"replaceWeapon": [{"id": "energy_fist", "count": 2}], "withWeapon": ["missile_launcher", "fusion_cannon", "heavy_machinegun", "autocannon", "plasma_cannon"]}
+                        {"addWeapon": ["strike_missiles", "rocket_pod"], "limit": 1},
+                        {"replaceWeapon": "laser_cannon", "withWeapon": ["missile_launcher", "fusion_cannon", "heavy_machinegun", "autocannon", "plasma_cannon", "thermal_lance"]},
+                        {"replaceWeapon": [{"id": "energy_fist", "count": 2}], "withWeapon": ["missile_launcher", "fusion_cannon", "heavy_machinegun", "autocannon", "plasma_cannon", "thermal_lance"]}
                     ],
                     "min": 1,
                     "max": 1
@@ -123,39 +303,38 @@
             "keywords": ["Automata", "Vehicle"],
             "rules": ["vulnerable_rear", "damage_chart", "fearless"]
         },
+        "heavy_walker_leader": {
+            "name": "Heavy Combat Walker Leader",
+            "description": "A heavy-class combat walker leader, equipped with an array of devastating weapons.",
+            "category": "command",
+            "models": [
+                {
+                    "name": "Heavy Combat Walker",
+                    "movement": 8,
+                    "courage": 5,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 10,
+                    "reflexes": 5,
+                    "weapons": ["laser_cannon", {"id": "energy_fist", "count": 2}],
+                    "options": [
+                        {"addWeapon": ["strike_missiles", "rocket_pod"], "limit": 1},
+                        {"replaceWeapon": "laser_cannon", "withWeapon": ["missile_launcher", "fusion_cannon", "heavy_machinegun", "autocannon", "plasma_cannon", "thermal_lance"]},
+                        {"replaceWeapon": [{"id": "energy_fist", "count": 2}], "withWeapon": ["missile_launcher", "fusion_cannon", "heavy_machinegun", "autocannon", "plasma_cannon", "thermal_lance"]}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ],
+            "keywords": ["Automata", "Vehicle"],
+            "rules": ["vulnerable_rear", "damage_chart", "fearless", {"id": "leader_x", "x": "Infantry, Vehicle"}]
+        },
         "teleporter": {
             "name": "Teleporter Unit",
             "description": "Advanced \"borrowed\" Technology allows for quick redeployment and surprise maneuvers during a firefight.",
             "category": "fortification",
             "models": [{"name": "Teleporter Unit", "min": 2, "max": 2, "rules": ["terrain", "portal"], "courage": "-", "movement": "-", "shoot": "-", "fight": "-", "defense": "-", "reflexes": "-"}],
             "keywords": ["Fortification"]
-        },
-        "exosuit_devastator": {
-            "name": "Exosuit Devastator",
-            "description": "A exosuit wearing elite, deployed as heavy support to combat enemy resistance that can't be orbitally bombarded.",
-            "category": "specialist",
-            "models": [
-                {
-                    "name": "Exosuit Devastator",
-                    "movement": 6,
-                    "courage": 6,
-                    "shoot": 6,
-                    "fight": 6,
-                    "defense": 9,
-                    "reflexes": 6,
-                    "weapons": ["plasma_grenade", "heavy_burst_rifle", "energy_fist"],
-                    "min": 1,
-                    "max": 1,
-                    "options": [
-                        {"replaceWeapon": ["heavy_burst_rifle"], "withWeapon": ["plasma_rifle", "fusion_rifle", "flamethrower", "grenade_launcher", "light_machinegun"]},
-                        {"replaceWeapon": ["energy_fist"], "withWeapon": ["plasma_rifle", "fusion_rifle", "flamethrower", "grenade_launcher", "light_machinegun"]},
-                        {"addWeapon": ["rocket_pod", "railgun", "fusion_cannon", "plasma_cannon", "heavy_machinegun"], "limit": 1},
-                        {"addRule": [{"name": "Jetpack", "id": "fly"}]},
-                        {"addRule": ["field_radio"]}
-                    ],
-                    "rules": ["ambush"]
-                }
-            ]
         },
         "security_drone": {
             "name": "Security Drone",
@@ -172,7 +351,7 @@
                     "defense": 6,
                     "reflexes": 6,
                     "weapons": ["light_machinegun", "ccw", "railgun"],
-                    "options": [{"replaceWeapon": ["light_machinegun"], "withWeapon": ["laser_cannon", "heavy_flamethrower"]}],
+                    "options": [{"replaceWeapon": ["light_machinegun"], "withWeapon": ["laser_cannon", "heavy_flamethrower"]}, {"addRule": ["field_radio"]}],
                     "min": 1,
                     "max": 1,
                     "rules": ["fearless"]
@@ -180,14 +359,14 @@
             ],
             "rules": [{"id": "wounds", "x": 2}]
         },
-        "security_drone_command": {
-            "name": "Security Drone Commander",
-            "description": "A remote controlled drone which has been outfitted with a command array, allowing it to relay commands from an off-site commander.",
+        "security_drone_leader": {
+            "name": "Security Drone Leader",
+            "description": "A remote controlled drone leader which is used for surveilance of high-value property.",
             "keywords": ["Automata", "Infantry"],
             "category": "command",
             "models": [
                 {
-                    "name": "Security Drone Commander",
+                    "name": "Security Drone",
                     "movement": 6,
                     "courage": 5,
                     "shoot": 6,
@@ -195,17 +374,17 @@
                     "defense": 6,
                     "reflexes": 6,
                     "weapons": ["light_machinegun", "ccw", "railgun"],
-                    "options": [{"replaceWeapon": ["light_machinegun"], "withWeapon": ["laser_cannon", "heavy_flamethrower"]}],
+                    "options": [{"replaceWeapon": ["light_machinegun"], "withWeapon": ["laser_cannon", "heavy_flamethrower"]}, {"addRule": ["field_radio"]}],
                     "min": 1,
                     "max": 1,
-                    "rules": ["fearless", "leader"]
+                    "rules": ["fearless"]
                 }
             ],
-            "rules": [{"id": "wounds", "x": 2}]
+            "rules": [{"id": "wounds", "x": 2}, {"id": "wounds", "x": "Infantry, Automata"}]
         },
         "support_drone": {
             "name": "Support Drone",
-            "description": "A autonomous drone that can be equipped with weapons and other equipment to fulfill varied tasks.",
+            "description": "Autonomous drones that can be equipped with weapons and other equipment to fulfill varied tasks.",
             "category": "specialist",
             "models": [
                 {
@@ -220,9 +399,23 @@
                     "options": [
                         {
                             "replaceWeapon": ["light_machinegun"],
-                            "withWeapon": ["fusion_rifle", "rocket_pod", "laser_cannon", "plasma_rifle", "heavy_flamethrower", "mortar", "autocannon", "heavy_machinegun"]
+                            "withWeapon": ["fusion_rifle", "rocket_pod", "laser_cannon", "plasma_rifle", "heavy_flamethrower", "mortar", "autocannon", "heavy_machinegun", "thermal_lance"]
                         },
-                        {"addWeapon": ["fusion_rifle", "rocket_pod", "laser_cannon", "plasma_rifle", "heavy_flamethrower", "mortar", "autocannon", "heavy_machinegun", "light_machinegun"], "limit": 1},
+                        {
+                            "addWeapon": [
+                                "fusion_rifle",
+                                "rocket_pod",
+                                "laser_cannon",
+                                "plasma_rifle",
+                                "heavy_flamethrower",
+                                "mortar",
+                                "autocannon",
+                                "heavy_machinegun",
+                                "light_machinegun",
+                                "thermal_lance"
+                            ],
+                            "limit": 1
+                        },
                         {"addRule": ["field_radio", "shield_generator"], "limit": 1}
                     ],
                     "min": 1,
@@ -232,109 +425,12 @@
             ],
             "keywords": ["Vehicle"],
             "rules": ["vulnerable_rear", {"id": "wounds", "x": 2}]
-        },
-        "strike_leader": {
-            "name": "Striker Leader",
-            "description": "A squad leader, leading a strike team on dangerous missions.",
-            "category": "command",
-            "models": [
-                {
-                    "name": "Striker Leader",
-                    "movement": 6,
-                    "courage": 5,
-                    "shoot": 5,
-                    "fight": 5,
-                    "defense": 6,
-                    "reflexes": 6,
-                    "weapons": ["burst_rifle", "ccw", "plasma_grenade"],
-                    "min": 1,
-                    "max": 1,
-                    "options": [
-                        {"replaceWeapon": ["burst_rifle"], "withWeapon": ["light_machinegun", "fusion_rifle", "laser_cannon", "plasma_rifle", "flamethrower"]},
-                        {"addRule": {"name": "Short-range Teleporter", "id": "ambush"}},
-                        {"addRule": ["field_radio"]}
-                    ],
-                    "rules": ["leader"]
-                }
-            ]
-        },
-        "scout_leader": {
-            "name": "Scout Leader",
-            "description": "A squad leader, leading a strike team on reconnaissance missions.",
-            "category": "command",
-            "options": [{"addModel": ["scout_drone"], "modelLimit": 3}],
-            "models": [
-                {
-                    "name": "Scout Leader",
-                    "movement": 6,
-                    "courage": 5,
-                    "shoot": 5,
-                    "fight": 5,
-                    "defense": 6,
-                    "reflexes": 6,
-                    "weapons": ["burst_carbine", "ccw", "plasma_grenade"],
-                    "min": 1,
-                    "max": 1,
-                    "rules": ["scout", "leader"],
-                    "options": [{"replaceWeapon": "burst_carbine", "withWeapon": "sniper_rifle"}, {"addRule": [{"name": "Camo-Cloak", "id": "evasive"}, {"name": "Jetpack", "id": "fly"}]}]
-                }
-            ]
-        },
-        "exosuit_devastator_leader": {
-            "name": "Exosuit Devastator Leader",
-            "description": "A heavily armed and armoed squad leader, leading a strike team on dangerous missions.",
-            "category": "command",
-            "models": [
-                {
-                    "name": "Exosuit Devastator Leader",
-                    "movement": 6,
-                    "courage": 6,
-                    "shoot": 6,
-                    "fight": 6,
-                    "defense": 9,
-                    "reflexes": 6,
-                    "weapons": ["plasma_grenade", "heavy_burst_rifle", "energy_fist"],
-                    "min": 1,
-                    "max": 1,
-                    "options": [
-                        {"replaceWeapon": ["heavy_burst_rifle"], "withWeapon": ["plasma_rifle", "fusion_rifle", "flamethrower", "grenade_launcher", "light_machinegun"]},
-                        {"replaceWeapon": ["energy_fist"], "withWeapon": ["plasma_rifle", "fusion_rifle", "flamethrower", "grenade_launcher", "light_machinegun"]},
-                        {"addWeapon": ["rocket_pod", "railgun", "fusion_cannon", "plasma_cannon", "heavy_machinegun"], "limit": 1, "modelLimit": "1/3"},
-                        {"modelLimit": "all", "addRule": [{"name": "Jetpack", "id": "fly"}]},
-                        {"addRule": ["field_radio"], "modelLimit": 1}
-                    ],
-                    "rules": ["ambush"]
-                }
-            ]
-        },
-        "scout_drone": {
-            "name": "Scout Drone",
-            "description": "A small supportive drone, capable of scouting ahead of a strike team",
-            "category": "core",
-            "models": [
-                {"name": "Scout Drone", "movement": 7, "courage": 5, "shoot": 5, "fight": 5, "defense": 4, "reflexes": 5, "weapons": ["burst_carbine"], "min": 1, "max": 1, "rules": ["scout", "fly"]}
-            ]
-        }
-    },
-    "models": {
-        "scout_drone": {
-            "name": "Scout Drone",
-            "movement": 7,
-            "courage": 5,
-            "shoot": 5,
-            "fight": 5,
-            "defense": 4,
-            "reflexes": 5,
-            "weapons": ["burst_carbine"],
-            "min": 1,
-            "max": 1,
-            "rules": ["scout", "fly"]
         }
     },
     "weapons": {
-        "burst_rifle": {"name": "Burst Rifle", "attacks": 1, "ap": 1, "short": 12, "medium": 24, "rules": ["rapid_fire", "rending"]},
-        "heavy_burst_rifle": {"name": "Heavy Burst Rifle", "attacks": 1, "ap": 2, "short": 12, "medium": 24, "rules": ["rapid_fire", "rending"]},
-        "burst_carbine": {"name": "Burst Carbine", "attacks": 1, "ap": 1, "short": 9, "medium": 18, "rules": ["rending", "assault"]}
+        "thermal_rifle": {"name": "Thermal Rifle", "attacks": 1, "short": 12, "medium": 24, "ap": 3, "rules": ["flame", "overcharge"]},
+        "thermal_lance": {"name": "Thermal Lance", "attacks": 1, "short": 24, "medium": 48, "ap": 6, "rules": ["flame", "overcharge"]},
+        "heavy_carbine": {"name": "Heavy Carbine", "attacks": 1, "short": 9, "medium": 18, "ap": 1, "rules": ["assault"]}
     },
     "rules": {
         "inspiring": {"name": "Inspiring (Infantry)", "description": "When activated, this unit may perform a group activation with up to 2 other friendly _Infantry_ units within 6\".", "points": 3},
