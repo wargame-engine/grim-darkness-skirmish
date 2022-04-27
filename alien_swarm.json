@@ -6,12 +6,84 @@
     "description": "A swarm of aliens from far-away systems controlled by an ancient hive mind. They feast on other species, absorbing their biomass to turn into more of their kind. They have a combination of deadly creatures and swarms of agile aliens to defeat their foes.",
     "author": "Solpine#1305",
     "units": {
-        "snatcher_lord": {
-            "name": "Soul Stealer Lord",
-            "description": "A massive mutant with psychic powers",
-            "keywords": ["Monster"],
+        "hive_lord": {
+            "name": "Hive Lord",
+            "description": "A great alien beast, acting as a catalyst for the hive mind.",
             "category": "command",
-            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "wounds", "x": 3}, {"id": "swarm_melee_tactics", "x": 1}],
+            "keywords": ["Monster"],
+            "rules": ["damage_chart"],
+            "models": [
+                {
+                    "name": "Hive Lord",
+                    "courage": 7,
+                    "reflexes": 6,
+                    "shoot": 6,
+                    "fight": 7,
+                    "defense": 12,
+                    "movement": 8,
+                    "rules": [{"id": "power", "x": 1}],
+                    "weapons": [{"id": "large_razor_talons", "count": 6}, "grabbing_tail"],
+                    "options": [
+                        {
+                            "replaceWeapon": {"id": "large_razor_talons", "count": 3},
+                            "withWeapon": [
+                                {"id": "large_piercing_claws", "count": 3},
+                                {"id": "large_boneswords", "count": 4},
+                                "heavy_acid_cannon",
+                                "chokethorn_cannon",
+                                {"id": "maggot_spitter", "count": 2},
+                                {"id": "brain_consumer", "count": 2}
+                            ]
+                        },
+                        {
+                            "replaceWeapon": {"id": "large_razor_talons", "count": 3},
+                            "withWeapon": [
+                                {"id": "large_piercing_claws", "count": 3},
+                                {"id": "large_boneswords", "count": 4},
+                                {"id": "maggot_spitter", "count": 2},
+                                {"id": "brain_consumer", "count": 2}
+                            ]
+                        },
+                        {"addRule": ["wings", "adrenaline_glands_large", "toxic_sacks_large"]},
+                        {"replaceRule": {"id": "power", "x": 1}, "withRule": {"id": "power", "x": 2}}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "hive_queen": {
+            "name": "Hive Queen",
+            "description": "A great alien beast, birthing swarms of aliens when needed.",
+            "category": "command",
+            "keywords": ["Monster"],
+            "rules": ["damage_chart", "birthing_pods", {"id": "swarm_gun_tactics", "x": 1}],
+            "models": [
+                {
+                    "name": "Hive Queen",
+                    "courage": 7,
+                    "reflexes": 6,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 12,
+                    "movement": 8,
+                    "rules": [{"id": "power", "x": 1}],
+                    "weapons": [{"id": "large_razor_talons", "count": 3}, "spine_salvo"],
+                    "options": [
+                        {"replaceWeapon": {"id": "large_razor_talons", "count": 3}, "withWeapon": [{"id": "crushing_claws", "count": 3}]},
+                        {"addRule": ["adrenaline_glands_large", "toxic_sacks_large", {"id": "transport", "x": 11}]},
+                        {"replaceRule": {"id": "swarm_gun_tactics", "x": 1}, "withRule": {"id": "swarm_gun_tactics", "x": 2}}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "soul_stealer_lord": {
+            "name": "Soul Stealer Lord",
+            "description": "A mutant with psychic powers.",
+            "category": "command",
+            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "wounds", "x": 3}, {"id": "power", "x": 1}, {"id": "swarm_melee_tactics", "x": 1}],
             "models": [
                 {
                     "name": "Soul Stealer Lord",
@@ -28,51 +100,9 @@
                 }
             ]
         },
-        "soul_snatcher_leader": {
-            "name": "Soul Stealer Leader",
-            "description": "Barely recognizable mutants of other species",
-            "category": "command",
-            "rules": ["agile", "leader"],
-            "models": [
-                {
-                    "name": "Soul Stealer",
-                    "courage": 6,
-                    "shoot": 5,
-                    "fight": 6,
-                    "defense": 6,
-                    "reflexes": 6,
-                    "movement": 8,
-                    "weapons": [{"id": "piercing_claws", "count": 3}],
-                    "options": [{"addWeapon": ["razor_talons"]}, {"addWeapon": ["meat_hooks", "acidic_jaws"], "limit": 1}],
-                    "min": 1,
-                    "max": 1
-                }
-            ]
-        },
-        "soul_snatchers": {
-            "name": "Soul Stealer",
-            "description": "Barely recognizable mutants of other species",
-            "category": "core",
-            "rules": ["agile"],
-            "models": [
-                {
-                    "name": "Soul Stealer",
-                    "courage": 6,
-                    "shoot": 5,
-                    "fight": 6,
-                    "defense": 6,
-                    "reflexes": 6,
-                    "movement": 8,
-                    "weapons": [{"id": "piercing_claws", "count": 3}],
-                    "options": [{"addWeapon": ["razor_talons"]}, {"addWeapon": ["meat_hooks", "acidic_jaws"], "limit": 1}],
-                    "min": 1,
-                    "max": 1
-                }
-            ]
-        },
         "hive_warrior_prime": {
             "name": "Hive Warrior Prime",
-            "description": "",
+            "description": "A leader amongst the elite alien warriors.",
             "category": "command",
             "keywords": ["Heavy Infantry"],
             "rules": [{"id": "leader_x", "x": "Infantry, Heavy Infantry"}, {"id": "wounds", "x": 3}, {"id": "swarm_melee_tactics", "x": 1}],
@@ -91,7 +121,7 @@
                             "replaceWeapon": "consumer",
                             "withWeapon": [{"id": "razor_talons", "count": 2}, "spikefists", "acid_spitter", {"id": "piercing_claws", "count": 2}, {"id": "boneswords", "count": 2}]
                         },
-                        {"replaceWeapon": {"id": "razor_talons", "count": 3}, "withWeapon": [{"id": "piercing_claws", "count": 3}, {"id": "boneswords", "count": 4}]},
+                        {"replaceWeapon": {"id": "razor_talons", "count": 4}, "withWeapon": [{"id": "piercing_claws", "count": 4}, {"id": "boneswords", "count": 5}]},
                         {"addWeapon": ["meat_hooks"]},
                         {"replaceRule": {"id": "swarm_melee_tactics", "x": 1}, "withRule": {"id": "swarm_melee_tactics", "x": 2}}
                     ],
@@ -100,41 +130,11 @@
                 }
             ]
         },
-        "hive_warrior_leader": {
-            "name": "Hive Warrior Champion",
-            "description": "Large bugs which can extend the hive mind",
-            "category": "command",
-            "keywords": ["Infantry"],
-            "rules": [{"id": "wounds", "x": 2}],
-            "models": [
-                {
-                    "name": "Hive Warrior Champion",
-                    "courage": 6,
-                    "shoot": 5,
-                    "fight": 6,
-                    "defense": 7,
-                    "reflexes": 6,
-                    "movement": 6,
-                    "rules": ["leader"],
-                    "weapons": ["consumer", {"id": "razor_talons", "count": 3}],
-                    "options": [
-                        {
-                            "replaceWeapon": "consumer",
-                            "withWeapon": [{"id": "razor_talons", "count": 2}, "spikefists", "acid_spitter", {"id": "piercing_claws", "count": 2}, {"id": "boneswords", "count": 2}]
-                        },
-                        {"replaceWeapon": {"id": "razor_talons", "count": 3}, "withWeapon": [{"id": "piercing_claws", "count": 3}, {"id": "boneswords", "count": 4}]},
-                        {"addWeapon": ["meat_hooks"]}
-                    ],
-                    "min": 1,
-                    "max": 1
-                }
-            ]
-        },
         "hive_warrior": {
             "name": "Hive Warrior",
-            "description": "Large bugs which can extend the hive mind",
-            "keywords": ["Infantry"],
+            "description": "Elite warrior who grows additional limbs when they absorb enough biomass.",
             "category": "core",
+            "keywords": ["Heavy Infantry"],
             "rules": [{"id": "wounds", "x": 2}],
             "models": [
                 {
@@ -149,7 +149,15 @@
                     "options": [
                         {
                             "replaceWeapon": "consumer",
-                            "withWeapon": [{"id": "razor_talons", "count": 2}, "spikefists", "acid_spitter", {"id": "piercing_claws", "count": 2}, {"id": "boneswords", "count": 2}]
+                            "withWeapon": [
+                                "acid_cannon",
+                                "spiked_strangler",
+                                {"id": "razor_talons", "count": 2},
+                                "spikefists",
+                                "acid_spitter",
+                                {"id": "piercing_claws", "count": 2},
+                                {"id": "boneswords", "count": 2}
+                            ]
                         },
                         {"replaceWeapon": {"id": "razor_talons", "count": 3}, "withWeapon": [{"id": "piercing_claws", "count": 3}, {"id": "boneswords", "count": 4}]},
                         {"addWeapon": ["meat_hooks"]}
@@ -159,15 +167,15 @@
                 }
             ]
         },
-        "hive_warrior_heavy": {
-            "name": "Hive Warrior Heavy",
-            "description": "Large bugs which can extend the hive mind",
-            "category": "heavy",
-            "keywords": ["Infantry"],
-            "rules": [{"id": "wounds", "x": 2}],
+        "hive_warrior_leader": {
+            "name": "Hive Warrior Leader",
+            "description": "Elite leader who grows additional limbs when they absorb enough biomass.",
+            "category": "command",
+            "keywords": ["Heavy Infantry"],
+            "rules": [{"id": "wounds", "x": 2}, {"id": "leader_x", "x": "Infantry, Heavy Infantry"}],
             "models": [
                 {
-                    "name": "Hive Warrior",
+                    "name": "Hive Warrior Leader",
                     "courage": 6,
                     "shoot": 5,
                     "fight": 6,
@@ -176,10 +184,17 @@
                     "movement": 6,
                     "weapons": ["consumer", {"id": "razor_talons", "count": 3}],
                     "options": [
-                        {"replaceWeapon": "consumer", "withWeapon": ["spiked_strangler", "acid_cannon"]},
                         {
                             "replaceWeapon": "consumer",
-                            "withWeapon": [{"id": "razor_talons", "count": 2}, "spikefists", "acid_spitter", {"id": "piercing_claws", "count": 2}, {"id": "boneswords", "count": 2}]
+                            "withWeapon": [
+                                "acid_cannon",
+                                "spiked_strangler",
+                                {"id": "razor_talons", "count": 2},
+                                "spikefists",
+                                "acid_spitter",
+                                {"id": "piercing_claws", "count": 2},
+                                {"id": "boneswords", "count": 2}
+                            ]
                         },
                         {"replaceWeapon": {"id": "razor_talons", "count": 3}, "withWeapon": [{"id": "piercing_claws", "count": 3}, {"id": "boneswords", "count": 4}]},
                         {"addWeapon": ["meat_hooks"]}
@@ -189,108 +204,43 @@
                 }
             ]
         },
-        "burrower": {
-            "name": "Hive Burrower",
-            "description": "Large bugs which burrow underground to surprise their targets.",
-            "category": "strike",
-            "rules": [{"id": "wounds", "x": 2}, "ambush"],
+        "soul_stealer": {
+            "name": "Soul Stealer",
+            "description": "Mutant that rips apart their foes with unnerving speed.",
+            "category": "core",
+            "rules": ["agile"],
             "models": [
                 {
-                    "name": "Hive Burrower",
-                    "courage": 4,
+                    "name": "Soul Stealer",
+                    "courage": 6,
                     "shoot": 5,
                     "fight": 6,
                     "defense": 6,
-                    "reflexes": 5,
-                    "movement": 7,
-                    "weapons": [{"id": "razor_talons", "count": 4}],
-                    "options": [{"replaceWeapon:": {"id": "razor_talons", "count": 2}, "withWeapon": {"id": "piercing_claws", "count": 2}}, {"addWeapon": ["spikefists", "consumer", "acid_spitter"]}],
+                    "reflexes": 6,
+                    "movement": 8,
+                    "weapons": [{"id": "piercing_claws", "count": 3}],
+                    "options": [{"addWeapon": ["razor_talons"]}, {"addWeapon": ["meat_hooks", "acidic_jaws"], "limit": 1}],
                     "min": 1,
                     "max": 1
                 }
             ]
         },
-        "grunt_leader": {
-            "name": "Grunt Leader",
-            "description": "Basic bugs with biological weapons",
+        "soul_stealer_leader": {
+            "name": "Soul Stealer Leader",
+            "description": "Mutant leader that rips apart their foes with unnerving speed.",
             "category": "command",
-            "rules": [],
+            "rules": ["agile", "leader"],
             "models": [
                 {
-                    "name": "Grunt Leader",
-                    "courage": 4,
+                    "name": "Soul Stealer Leader",
+                    "courage": 6,
                     "shoot": 5,
-                    "fight": 5,
-                    "defense": 4,
-                    "reflexes": 5,
-                    "movement": 7,
-                    "rules": ["leader"],
-                    "weapons": ["meat_borer", "ccw"],
-                    "options": [{"replaceWeapon": "meat_borer", "withWeapon": ["consumer"]}, {"addRule": ["toxic_sacks", "adrenaline_glands"]}],
-                    "min": 1,
-                    "max": 1
-                }
-            ]
-        },
-        "grunt": {
-            "name": "Grunt",
-            "description": "Basic bugs with biological weapons",
-            "category": "core",
-            "rules": [],
-            "models": [
-                {
-                    "name": "Grunt",
-                    "courage": 4,
-                    "shoot": 5,
-                    "fight": 5,
-                    "defense": 4,
-                    "reflexes": 5,
-                    "movement": 7,
-                    "weapons": ["meat_borer", "ccw"],
-                    "options": [{"replaceWeapon": "meat_borer", "withWeapon": ["consumer"]}, {"addRule": ["toxic_sacks", "adrenaline_glands"]}],
-                    "min": 1,
-                    "max": 1
-                }
-            ]
-        },
-        "assault_grunt_leader": {
-            "name": "Assault Grunt Leader",
-            "description": "Fast bugs which attack in swarms",
-            "category": "command",
-            "rules": ["agile"],
-            "models": [
-                {
-                    "name": "Assault Grunt Leader",
-                    "courage": 4,
-                    "shoot": 0,
                     "fight": 6,
-                    "defense": 4,
-                    "reflexes": 5,
-                    "movement": 7,
-                    "rules": ["leader"],
-                    "weapons": [{"id": "light_razor_talons", "count": 2}],
-                    "options": [{"addRule": ["toxic_sacks", "adrenaline_glands"]}],
-                    "min": 1,
-                    "max": 1
-                }
-            ]
-        },
-        "assault_grunt": {
-            "name": "Assault Grunt",
-            "description": "Fast bugs which attack in swarms",
-            "category": "core",
-            "rules": ["agile"],
-            "models": [
-                {
-                    "name": "Assault Grunt",
-                    "courage": 4,
-                    "shoot": 0,
-                    "fight": 6,
-                    "defense": 4,
-                    "reflexes": 5,
-                    "movement": 7,
-                    "weapons": [{"id": "light_razor_talons", "count": 2}],
-                    "options": [{"addRule": ["toxic_sacks", "adrenaline_glands"]}],
+                    "defense": 6,
+                    "reflexes": 6,
+                    "movement": 8,
+                    "weapons": [{"id": "piercing_claws", "count": 3}],
+                    "options": [{"addWeapon": ["razor_talons"]}, {"addWeapon": ["meat_hooks", "acidic_jaws"], "limit": 1}],
                     "min": 1,
                     "max": 1
                 }
@@ -298,7 +248,7 @@
         },
         "hive_swarm": {
             "name": "Hive Swarm",
-            "description": "Swarms of smaller bugs, weak on their own but dangerous in numbers",
+            "description": "A swarm of alien insects, weak on their own but dangerous in numbers.",
             "category": "core",
             "keywords": ["Swarm"],
             "rules": [{"id": "swarm", "x": 3}],
@@ -318,33 +268,140 @@
                 }
             ]
         },
-        "gargoyle_leader": {
-            "name": "Gargoyle Leader",
-            "description": "Basic flying bugs with biological weapons",
-            "category": "command",
+        "assault_grunt": {
+            "name": "Assault Grunt",
+            "description": "The core of an invasion fleet, allowing for rapid attacks.",
+            "category": "core",
+            "rules": ["agile"],
             "models": [
                 {
-                    "name": "Gargoyle",
+                    "name": "Assault Grunt",
                     "courage": 4,
                     "shoot": 5,
-                    "fight": 5,
+                    "fight": 6,
                     "defense": 4,
                     "reflexes": 5,
-                    "movement": 8,
-                    "weapons": ["meat_borer", "ccw", "venom_spit"],
-                    "rules": ["leader", "fly"],
+                    "movement": 7,
+                    "weapons": [{"id": "light_razor_talons", "count": 2}],
+                    "options": [{"addRule": ["toxic_sacks", "adrenaline_glands"]}],
                     "min": 1,
                     "max": 1
                 }
             ]
         },
-        "gargoyle": {
-            "name": "Gargoyle",
-            "description": "Basic flying bugs with biological weapons",
+        "assault_grunt_leader": {
+            "name": "Assault Grunt Leader",
+            "description": "The leader of an invasion fleet, allowing for rapid attacks.",
+            "category": "command",
+            "rules": ["agile", "leader"],
+            "models": [
+                {
+                    "name": "Assault Grunt Leader",
+                    "courage": 4,
+                    "shoot": 5,
+                    "fight": 6,
+                    "defense": 4,
+                    "reflexes": 5,
+                    "movement": 7,
+                    "weapons": [{"id": "light_razor_talons", "count": 2}],
+                    "options": [{"addRule": ["toxic_sacks", "adrenaline_glands"]}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "grunt": {
+            "name": "Grunt",
+            "description": "The core of an invasion fleet, equipped with a bio-weapon.",
+            "category": "core",
+            "models": [
+                {
+                    "name": "Grunt",
+                    "courage": 4,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 4,
+                    "reflexes": 5,
+                    "movement": 7,
+                    "weapons": ["meat_borer", "ccw"],
+                    "options": [{"replaceWeapon": "meat_borer", "withWeapon": ["consumer", "spikefists"]}, {"addRule": ["toxic_sacks", "adrenaline_glands"]}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "grunt_leader": {
+            "name": "Grunt Leader",
+            "description": "The leader of an invasion fleet, equipped with a bio-weapon.",
+            "category": "command",
+            "models": [
+                {
+                    "name": "Grunt Leader",
+                    "courage": 4,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 4,
+                    "reflexes": 5,
+                    "movement": 7,
+                    "weapons": ["meat_borer", "ccw"],
+                    "options": [{"replaceWeapon": "meat_borer", "withWeapon": ["consumer", "spikefists"]}, {"addRule": ["toxic_sacks", "adrenaline_glands"]}],
+                    "min": 1,
+                    "max": 1,
+                    "rules": ["leader"]
+                }
+            ]
+        },
+        "burrower": {
+            "name": "Hive Burrower",
+            "description": "Large alien beast which burrows underground to surprise their prey.",
+            "category": "strike",
+            "keywords": ["Heavy Infantry"],
+            "rules": [{"id": "wounds", "x": 2}, "ambush"],
+            "models": [
+                {
+                    "name": "Hive Burrower",
+                    "courage": 4,
+                    "shoot": 5,
+                    "fight": 6,
+                    "defense": 6,
+                    "reflexes": 5,
+                    "movement": 7,
+                    "weapons": [{"id": "razor_talons", "count": 4}],
+                    "options": [{"replaceWeapon:": {"id": "razor_talons", "count": 2}, "withWeapon": {"id": "piercing_claws", "count": 2}}, {"addWeapon": ["spikefists", "consumer", "acid_spitter"]}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "burrower_leader": {
+            "name": "Hive Burrower Leader",
+            "description": "Large alien leader which burrows underground to surprise their prey.",
+            "category": "command",
+            "keywords": ["Heavy Infantry"],
+            "rules": [{"id": "wounds", "x": 2}, "ambush", {"id": "leader_x", "x": "Infantry, Heavy Infantry"}],
+            "models": [
+                {
+                    "name": "Hive Burrower",
+                    "courage": 4,
+                    "shoot": 5,
+                    "fight": 6,
+                    "defense": 6,
+                    "reflexes": 5,
+                    "movement": 7,
+                    "weapons": [{"id": "razor_talons", "count": 4}],
+                    "options": [{"replaceWeapon:": {"id": "razor_talons", "count": 2}, "withWeapon": {"id": "piercing_claws", "count": 2}}, {"addWeapon": ["spikefists", "consumer", "acid_spitter"]}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "flying_grunt": {
+            "name": "Flying Grunt",
+            "description": "Mutated grunt who can fly and spit blinding venom.",
             "category": "strike",
             "models": [
                 {
-                    "name": "Gargoyle",
+                    "name": "Flying Grunt",
                     "courage": 4,
                     "shoot": 5,
                     "fight": 5,
@@ -358,11 +415,31 @@
                 }
             ]
         },
+        "flying_grunt_leader": {
+            "name": "Flying Grunt Leader",
+            "description": "Mutated leader who can fly and spit blinding venom.",
+            "category": "command",
+            "models": [
+                {
+                    "name": "Flying Grunt Leader",
+                    "courage": 4,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 4,
+                    "reflexes": 5,
+                    "movement": 8,
+                    "weapons": ["meat_borer", "ccw", "venom_spit"],
+                    "rules": ["fly", "leader"],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
         "transport_spore": {
             "name": "Transport Spore",
-            "description": "A floating spore which can hover across the battlefield or be launched from hive ships",
+            "description": "A floating spore which can hover across the battlefield or be launched from hive ships for orbital deployment.",
             "category": "transport",
-            "rules": ["hover", "ambush", "damage_table_monster", {"id": "transport", "x": 20}],
+            "rules": ["hover", "ambush", "damage_chart", {"id": "transport", "x": 20}],
             "models": [
                 {
                     "name": "Transport Spore",
@@ -373,20 +450,42 @@
                     "defense": 9,
                     "movement": 6,
                     "weapons": [{"id": "heavy_ccw", "count": 4}],
-                    "options": [{"addWeapon": [{"id": "acid_spitter"}, {"id": "spiked_strangler"}, {"id": "acid_cannon"}], "limit": 5}],
+                    "options": [{"addWeapon": ["acid_cannon", "spiked_strangler", "acid_spitter"], "limit": 5}],
                     "min": 1,
                     "max": 1
                 }
             ]
         },
-        "hive_guard": {
-            "name": "Hive Guard",
-            "description": "Armed with homing cannons, these guard the flanks of the hive's attacks",
-            "category": "heavy",
+        "consumption_beast": {
+            "name": "Consumption Beast",
+            "description": "A monster with huge tentacled jaws meant to rapidly consume biomass.",
+            "category": "specialist",
+            "keywords": ["Monster"],
+            "rules": ["damage_chart"],
+            "models": [
+                {
+                    "name": "Consumption Beast",
+                    "courage": 4,
+                    "reflexes": 5,
+                    "fight": 5,
+                    "shoot": 5,
+                    "defense": 12,
+                    "movement": 7,
+                    "weapons": [{"id": "grabbing_tongue", "count": 1}, {"id": "ravenous_jaws", "count": 4}, {"id": "pincer_claws", "count": 2}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "hive_guardian": {
+            "name": "Hive Guardian",
+            "description": "Elite warrior with a thick carapace and a deadly bio-cannon.",
+            "category": "specialist",
+            "keywords": ["Heavy Infantry"],
             "rules": [{"id": "wounds", "x": 2}],
             "models": [
                 {
-                    "name": "Hive Guard",
+                    "name": "Hive Guardian",
                     "courage": 5,
                     "reflexes": 5,
                     "fight": 5,
@@ -400,54 +499,168 @@
                 }
             ]
         },
-        "lurker": {
-            "name": "Lurker",
-            "description": "Working alone, Lurkers hide in the shadows waiting for the moment to strike",
-            "category": "specialist",
-            "rules": [{"id": "wounds", "x": 2}, "stealth", "ambush"],
+        "hive_guardian_leader": {
+            "name": "Hive Guardian Leader",
+            "description": "Elite leader with a thick carapace and a deadly bio-cannon.",
+            "category": "command",
+            "keywords": ["Heavy Infantry"],
+            "rules": [{"id": "wounds", "x": 2}, {"id": "leader_x", "x": "Infantry, Heavy Infantry"}],
             "models": [
                 {
-                    "name": "Lurker",
+                    "name": "Hive Guardian Leader",
+                    "courage": 5,
+                    "reflexes": 5,
+                    "fight": 5,
+                    "shoot": 6,
+                    "defense": 8,
+                    "movement": 5,
+                    "weapons": ["impaler_lance", "ccw"],
+                    "options": [{"replaceWeapon": "impaler_lance", "withWeapon": ["shock_cannon"]}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "hive_stalker": {
+            "name": "Hive Stalker",
+            "description": "Working alone, a Hive Stalker hides in the shadows waiting for the moment to strike.",
+            "category": "specialist",
+            "keywords": ["Heavy Infantry"],
+            "rules": [{"id": "wounds", "x": 2}, "evasive", "ambush"],
+            "models": [
+                {
+                    "name": "Hive Stalker",
                     "courage": 7,
                     "reflexes": 7,
                     "fight": 7,
                     "shoot": 5,
                     "defense": 6,
                     "movement": 8,
-                    "weapons": ["meat_hooks", {"id": "grabbing_talons", "count": 4}, "piercing_claws"],
+                    "weapons": ["meat_hooks", {"id": "grabbing_talons", "count": 3}, "piercing_claws"],
                     "min": 1,
                     "max": 1
                 }
             ]
         },
-        "flame_beasts": {
-            "name": "Flame Beast",
-            "description": "",
+        "hive_stalker_leader": {
+            "name": "Hive Stalker Leader",
+            "description": "Working alone, a Hive Stalker Leader hides in the shadows waiting for the moment to strike.",
+            "category": "command",
+            "keywords": ["Heavy Infantry"],
+            "rules": [{"id": "wounds", "x": 2}, "evasive", "ambush", {"id": "leader_x", "x": "Infantry, Heavy Infantry"}],
+            "models": [
+                {
+                    "name": "Hive Stalker Leader",
+                    "courage": 7,
+                    "reflexes": 7,
+                    "fight": 7,
+                    "shoot": 5,
+                    "defense": 6,
+                    "movement": 8,
+                    "weapons": ["meat_hooks", {"id": "grabbing_talons", "count": 3}, "piercing_claws"],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "mind_beast": {
+            "name": "Mind Beast",
+            "description": "A psychic beast capable of bending reality with its mind and claws.",
             "category": "specialist",
+            "keywords": ["Monster"],
+            "rules": ["damage_chart", {"id": "power", "x": "1"}],
+            "models": [
+                {"name": "Mind Beast", "courage": 7, "reflexes": 6, "fight": 6, "shoot": 5, "defense": 11, "movement": 7, "weapons": [{"id": "large_razor_talons", "count": 3}], "min": 1, "max": 1}
+            ]
+        },
+        "mind_beast_leader": {
+            "name": "Mind Beast Leader",
+            "description": "A psychic leader capable of bending reality with its mind and claws.",
+            "category": "command",
+            "keywords": ["Monster"],
+            "rules": ["damage_chart", {"id": "power", "x": "1"}, {"id": "leader_x", "x": "Infantry, Heavy Infantry"}],
+            "models": [
+                {
+                    "name": "Mind Beast Leader",
+                    "courage": 7,
+                    "reflexes": 6,
+                    "fight": 6,
+                    "shoot": 5,
+                    "defense": 11,
+                    "movement": 7,
+                    "weapons": [{"id": "large_razor_talons", "count": 3}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "acidmaw_beast": {
+            "name": "Acidmaw Beast",
+            "description": "Alien beast which spist highly corrosive acid, melting flesh from bone.",
+            "category": "specialist",
+            "keywords": ["Heavy Infantry"],
             "rules": [{"id": "wounds", "x": 2}],
             "models": [
                 {
-                    "name": "Flame Beast",
+                    "name": "Acidmaw Beast",
                     "courage": 4,
                     "reflexes": 5,
                     "fight": 5,
                     "shoot": 5,
                     "defense": 7,
                     "movement": 5,
-                    "weapons": ["flame_spit", {"id": "acidic_jaws", "count": 2}],
+                    "weapons": ["corrosive_spit", {"id": "acidic_jaws", "count": 2}],
                     "min": 1,
                     "max": 1
                 }
             ]
         },
-        "hive_lord_guard": {
-            "name": "Hive Lord Guard",
-            "description": "The heavily armored guardians of a Hive Lord",
+        "acidmaw_beast_leader": {
+            "name": "Acidmaw Beast Leader",
+            "description": "Alien leader which spits highly corrosive acid, melting flesh from bone.",
+            "category": "command",
+            "keywords": ["Heavy Infantry"],
+            "rules": [{"id": "wounds", "x": 2}, {"id": "leader_x", "x": "Infantry, Heavy Infantry"}],
+            "models": [
+                {
+                    "name": "Acidmaw Beast Leader",
+                    "courage": 4,
+                    "reflexes": 5,
+                    "fight": 5,
+                    "shoot": 5,
+                    "defense": 7,
+                    "movement": 5,
+                    "weapons": ["corrosive_spit", {"id": "acidic_jaws", "count": 2}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "mortar_beast": {
+            "name": "Mortar Beast",
+            "description": "Big beast with an organic projectile weapon integrated into their body.",
             "category": "specialist",
+            "keywords": ["Heavy Infantry"],
+            "rules": [{"id": "wounds", "x": 2}],
+            "models": [{"name": "Mortar Beast", "courage": 4, "reflexes": 5, "fight": 5, "shoot": 7, "defense": 7, "movement": 5, "weapons": ["spore_shot"], "min": 1, "max": 1}]
+        },
+        "mortar_beast_leader": {
+            "name": "Mortar Beast Leader",
+            "description": "Big beast with an organic projectile weapon integrated into their body.",
+            "category": "command",
+            "keywords": ["Heavy Infantry"],
+            "rules": [{"id": "wounds", "x": 2}, {"id": "leader_x", "x": "Infantry, Heavy Infantry"}],
+            "models": [{"name": "Mortar Beast Leader", "courage": 4, "reflexes": 5, "fight": 5, "shoot": 7, "defense": 7, "movement": 5, "weapons": ["spore_shot"], "min": 1, "max": 1}]
+        },
+        "hive_lord_guard": {
+            "name": "Hive Lord Guardian",
+            "description": "Heavily armored bodyguard of Hive Lords.",
+            "category": "specialist",
+            "keywords": ["Heavy Infantry"],
             "rules": [{"id": "wounds", "x": 2}],
             "models": [
                 {
-                    "name": "Hive Lord Guard",
+                    "name": "Hive Lord Guardian",
                     "courage": 5,
                     "reflexes": 5,
                     "fight": 6,
@@ -461,31 +674,67 @@
                 }
             ]
         },
-        "venom_beasts": {
-            "name": "Venom Beasts",
-            "description": "",
-            "category": "specialist",
-            "rules": [{"id": "wounds", "x": 2}],
-            "options": [{"addRule": "spore_cloud"}],
-            "models": [{"name": "Venom Beast", "courage": 4, "reflexes": 5, "fight": 5, "shoot": 5, "defense": 6, "movement": 5, "weapons": [{"id": "venom_lashes", "count": 2}], "min": 3, "max": 6}]
-        },
-        "psychic_beasts_leader": {
-            "name": "Psychic Beast Leader",
-            "description": "",
+        "hive_lord_guard_leader": {
+            "name": "Hive Lord Guardian Leader",
+            "description": "Heavily armored bodyguard leader of Hive Lords.",
             "category": "command",
-            "keywords": ["Monster"],
+            "keywords": ["Heavy Infantry"],
+            "rules": [{"id": "wounds", "x": 2}, {"id": "leader_x", "x": "Infantry, Heavy Infantry"}],
+            "models": [
+                {
+                    "name": "Hive Lord Guardian Leader",
+                    "courage": 5,
+                    "reflexes": 5,
+                    "fight": 6,
+                    "shoot": 5,
+                    "defense": 9,
+                    "movement": 7,
+                    "weapons": [{"id": "medium_razor_talons", "count": 1}, {"id": "medium_piercing_claws", "count": 2}],
+                    "options": [{"replaceWeapon": "medium_razor_talons", "withWeapon": ["crushing_claws"]}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "spore_beast": {
+            "name": "Sporeback Beast",
+            "description": "Hulking beast which sometimes emits a thick clouds of spores, hiding other warriors from view.",
+            "category": "specialist",
+            "keywords": ["Heavy Infantry"],
             "rules": [{"id": "wounds", "x": 2}],
             "models": [
                 {
-                    "name": "Psychic Beast Leader",
-                    "courage": 7,
-                    "reflexes": 6,
+                    "name": "Sporeback Beast",
+                    "courage": 4,
+                    "reflexes": 5,
                     "fight": 5,
-                    "shoot": 0,
+                    "shoot": 5,
                     "defense": 6,
                     "movement": 5,
-                    "weapons": ["heavy_ccw"],
-                    "rules": [{"id": "power", "x": 1}, "leader"],
+                    "options": [{"addRule": "spore_cloud"}],
+                    "weapons": [{"id": "venom_lashes", "count": 2}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "spore_beast_leader": {
+            "name": "Sporeback Beast Leader",
+            "description": "Hulking leader which sometimes emits a thick clouds of spores, hiding other warriors from view.",
+            "category": "command",
+            "keywords": ["Heavy Infantry"],
+            "rules": [{"id": "wounds", "x": 2}, {"id": "leader_x", "x": "Infantry, Heavy Infantry"}],
+            "models": [
+                {
+                    "name": "Sporeback Beast Leader",
+                    "courage": 4,
+                    "reflexes": 5,
+                    "fight": 5,
+                    "shoot": 5,
+                    "defense": 6,
+                    "movement": 5,
+                    "options": [{"addRule": "spore_cloud"}],
+                    "weapons": [{"id": "venom_lashes", "count": 2}],
                     "min": 1,
                     "max": 1
                 }
@@ -493,22 +742,171 @@
         },
         "psychic_beast": {
             "name": "Psychic Beast",
-            "description": "",
+            "description": "When this beast concentrates they are able to alter reality to the hive minds will.",
             "category": "specialist",
-            "keywords": ["Monster"],
+            "keywords": ["Heavy Infantry"],
             "rules": [{"id": "wounds", "x": 2}, {"id": "power", "x": 1}],
-            "models": [{"name": "Psychic Beast", "courage": 7, "reflexes": 6, "fight": 5, "shoot": 0, "defense": 6, "movement": 5, "weapons": ["heavy_ccw"], "min": 1, "max": 1}]
+            "models": [{"name": "Psychic Beast", "courage": 7, "reflexes": 6, "fight": 5, "shoot": 5, "defense": 6, "movement": 5, "weapons": ["heavy_ccw"], "min": 1, "max": 1}]
+        },
+        "psychic_beast_leader": {
+            "name": "Psychic Beast Leader",
+            "description": "When this leader concentrates they are able to alter reality to the hive minds will.",
+            "category": "command",
+            "keywords": ["Heavy Infantry"],
+            "rules": [{"id": "wounds", "x": 2}, {"id": "power", "x": 1}, {"id": "leader_x", "x": "Infantry, Heavy Infantry"}],
+            "models": [{"name": "Psychic Beast Leader", "courage": 7, "reflexes": 6, "fight": 5, "shoot": 5, "defense": 6, "movement": 5, "weapons": ["heavy_ccw"], "min": 1, "max": 1}]
+        },
+        "carnivorous_beast": {
+            "name": "Siegebreaker Beast",
+            "description": "A huge alien beast with a thick carapace, used to destroy enemy fortifications with overwhelming strength.",
+            "category": "heavy",
+            "keywords": ["Monster"],
+            "rules": ["damage_chart", {"id": "impact", "x": 3}],
+            "models": [
+                {
+                    "name": "Siegebreaker Beast",
+                    "courage": 5,
+                    "reflexes": 5,
+                    "fight": 5,
+                    "shoot": 5,
+                    "defense": 10,
+                    "movement": 8,
+                    "weapons": [{"id": "large_razor_talons", "count": 4}],
+                    "options": [
+                        {"replaceWeapon": {"id": "large_razor_talons", "count": 2}, "withWeapon": [{"id": "crushing_claws", "count": 2}]},
+                        {
+                            "replaceWeapon": {"id": "large_razor_talons", "count": 2},
+                            "withWeapon": ["heavy_acid_cannon", "chokethorn_cannon", {"id": "maggot_spitter", "count": 2}, {"id": "brain_consumer", "count": 2}]
+                        },
+                        {"replaceWeapon": {"id": "large_razor_talons", "count": 2}, "withWeapon": [{"id": "maggot_spitter", "count": 2}, {"id": "brain_consumer", "count": 2}]},
+                        {"addWeapon": ["bonemace", "thrashing_scythe"], "limit": 1},
+                        {"addWeapon": ["huge_acidic_jaws", "bio_plasma"], "limit": 1},
+                        {"addRule": ["enhanced_senses", "adrenaline_glands_large", "toxic_sacks_large", "tusks"]},
+                        {"addWeapon": "spine_banks"},
+                        {"addRule": "spore_cyst"}
+                    ],
+                    "min": 1,
+                    "max": 3
+                }
+            ]
+        },
+        "cannon_beast": {
+            "name": "Cannon Beast",
+            "description": "A huge alien beast with an organic cannon.",
+            "category": "heavy",
+            "keywords": ["Monster"],
+            "rules": ["damage_chart"],
+            "models": [
+                {
+                    "name": "Cannon Beast",
+                    "courage": 4,
+                    "reflexes": 4,
+                    "fight": 5,
+                    "shoot": 6,
+                    "defense": 12,
+                    "movement": 6,
+                    "weapons": ["bio_plasma_cannon", {"id": "ccw", "count": 3}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "gunnery_beast": {
+            "name": "Bio-Gunner Beast",
+            "description": "A huge alien beast using a massive organic gun.",
+            "category": "heavy",
+            "keywords": ["Monster"],
+            "rules": ["damage_chart"],
+            "models": [
+                {
+                    "name": "Bio-Gunner Beast",
+                    "courage": 5,
+                    "reflexes": 5,
+                    "fight": 5,
+                    "shoot": 5,
+                    "defense": 12,
+                    "movement": 6,
+                    "weapons": [{"id": "ccw", "count": 4}, "spine_salvo", "acid_jet"],
+                    "options": [{"replaceWeapon": "acid_jet", "withWeapon": ["meat_borer_cluster", "bio_eruptor"]}, {"addRule": ["adrenaline_glands_large", "toxic_sacks_large"]}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "gargantuan_creature": {
+            "name": "Gargantuan Monstrosity",
+            "description": "An alien monster the size of a city-block.",
+            "category": "super_heavy",
+            "keywords": ["Monster"],
+            "models": [
+                {
+                    "name": "Gargantuan Monstrosity",
+                    "courage": 6,
+                    "reflexes": 6,
+                    "fight": 6,
+                    "shoot": 6,
+                    "defense": 14,
+                    "movement": 10,
+                    "rules": ["damage_chart", "titanic", "walker", {"id": "transport", "x": "20"}],
+                    "weapons": [{"id": "gargantuan_talons", "count": 6}, {"id": "lashing_whips", "count": 10}, "acidic_torrent", "bio_cannon"],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "gargantuan_flying_creature": {
+            "name": "Flying Gargantuan Monstrosity",
+            "description": "A giant alien monster that descends from the skies.",
+            "category": "super_heavy",
+            "keywords": ["Monster"],
+            "models": [
+                {
+                    "name": "Flying Gargantuan Monstrosity",
+                    "courage": 6,
+                    "reflexes": 6,
+                    "fight": 6,
+                    "shoot": 6,
+                    "defense": 13,
+                    "movement": 12,
+                    "rules": ["damage_chart", "titanic", "aircraft", "hover", {"id": "transport", "x": "20"}],
+                    "weapons": [{"id": "gargantuan_talons", "count": 5}, "bio_cannon"],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "massive_burrower": {
+            "name": "Massive Burrower",
+            "description": "A subterranean monstrosity waiting to attack.",
+            "category": "heavy",
+            "keywords": ["Monster"],
+            "rules": ["damage_chart", "ambush", {"id": "transport", "x": "20"}],
+            "models": [
+                {
+                    "name": "Massive Burrower",
+                    "courage": 7,
+                    "shoot": 5,
+                    "fight": 6,
+                    "reflexes": 5,
+                    "defense": 11,
+                    "movement": 8,
+                    "min": 1,
+                    "max": 1,
+                    "weapons": [{"id": "large_razor_talons", "count": "6"}, "toxin_spike", "bio_pulse"],
+                    "options": [{"replaceWeapon": {"id": "toxin_spike"}, "withWeapon": ["bio_rattle", "grabbing_tail"]}, {"addRule": ["adrenaline_glands_large", "toxic_sacks_large"]}]
+                }
+            ]
         }
     },
     "weapons": {
         "venom_spit": {"name": "Venom Spit", "attacks": 1, "short": 6, "rules": ["grenade", "stun"]},
         "bio_plasma": {"name": "Bio-Plasma", "attacks": 1, "short": 6, "medium": 12, "ap": 5, "rules": ["assault", {"id": "blast", "x": 2}]},
         "venom_lashes": {"name": "Venom Lashes", "attacks": 1, "short": 6, "ap": 1, "rules": ["pistol"]},
-        "flame_spit": {"name": "Flame Spit", "attacks": 1, "short": 6, "medium": 12, "ap": 2, "rules": ["flame", {"id": "blast", "x": 4}, "assault"]},
-        "grabbing_talons": {"name": "Grabbing Talons", "attacks": 1, "short": "Melee", "ap": 3},
+        "corrosive_spit": {"name": "Corrosive Spit", "attacks": 1, "short": 6, "medium": 12, "ap": 2, "rules": ["flame", {"id": "blast", "x": 4}, "assault"]},
+        "grabbing_talons": {"name": "Grabbing Talons", "attacks": 1, "short": "Melee", "ap": 3, "rules": [{"id": "slowing", "x": 2}]},
         "grabbing_tongue": {"name": "Grabbing Tongue", "attacks": 1, "short": 6, "medium": 12, "ap": 4, "rules": ["assault"]},
-        "impaler_lance": {"name": "Impaler Lance", "attacks": 2, "short": 18, "medium": 36, "ap": 6, "rules": ["indirect", "flame"]},
-        "shock_cannon": {"name": "Shock Cannon", "attacks": 1, "short": 12, "medium": 24, "ap": 4, "rules": [{"id": "blast", "x": 2}]},
+        "impaler_lance": {"name": "Impaler Lance", "attacks": 2, "short": 12, "medium": 24, "ap": 4, "rules": ["indirect", "flame"]},
+        "shock_cannon": {"name": "Shock Cannon", "attacks": 1, "short": 18, "medium": 36, "ap": 5, "rules": [{"id": "blast", "x": 2}]},
         "ravenous_jaws": {"name": "Ravenous Jaws", "attacks": 1, "short": "Melee", "ap": 4},
         "pincer_claws": {"name": "Pincer Claws", "attacks": 1, "short": "Melee", "ap": 10},
         "piercing_claws": {"name": "Piercing Claws", "attacks": 1, "short": "Melee", "ap": 1, "rules": ["rending"]},
@@ -537,12 +935,25 @@
         "chokethorn_cannon": {"name": "Chokethorn Cannon", "attacks": 1, "short": 18, "medium": 36, "ap": 4, "rules": [{"id": "blast", "x": 4}]},
         "spinethrowers": {"name": "Spinethrowers", "attacks": 3, "short": 6, "rules": ["assault", "pistol"]},
         "spine_banks": {"name": "Spine Banks", "attacks": 3, "short": 6, "ap": 2, "rules": ["assault", "pistol"]},
-        "thrashing_scythe": {"name": "Thrashing Scythe", "attacks": 2, "short": "Melee", "ap": 1}
+        "spine_salvo": {"name": "Spine Salvo", "attacks": 4, "medium": 24, "short": 12, "ap": 2, "rules": ["assault"]},
+        "thrashing_scythe": {"name": "Thrashing Scythe", "attacks": 2, "short": "Melee", "ap": 1},
+        "gargantuan_talons": {"name": "Gargantuan Talons", "attacks": 1, "short": "Melee", "ap": 8, "rules": [{"id": "reach", "x": 2}]},
+        "lashing_whips": {"name": "Lashing Whips", "attacks": 1, "short": "Melee", "ap": 3},
+        "acidic_torrent": {"name": "Acidic Torrent", "attacks": 7, "short": 6, "medium": 12, "ap": 5, "rules": ["flame"]},
+        "bio_cannon": {"name": "Bio Cannon", "attacks": 6, "short": 24, "medium": 48, "ap": 8},
+        "toxin_spike": {"name": "Toxin Spike", "attacks": 1, "short": "Melee", "ap": 1, "rules": ["poison"]},
+        "bio_rattle": {"name": "Bio-Electric Rattle", "attacks": 1, "short": "Melee", "ap": 1, "rules": [{"id": "shocking", "x": 1}]},
+        "bio_pulse": {"name": "Bio-Electric Pulse", "attacks": 6, "short": 6, "long": 12, "ap": 2},
+        "bio_plasma_cannon": {"name": "Bio-Plasma Cannon", "attacks": 2, "short": 18, "medium": 36, "ap": 5, "rules": [{"id": "blast", "x": 3}]},
+        "acid_jet": {"name": "Acid Jet", "attacks": 6, "short": 9, "medium": 18, "ap": 1, "rules": []},
+        "meat_borer_cluster": {"name": "Meat Borer Cluster", "attacks": 20, "short": 9, "medium": 18, "ap": 2, "rules": []},
+        "bio_eruptor": {"name": "Bio-Eruptor", "attacks": 3, "short": 24, "medium": 48, "ap": 8, "rules": [{"id": "critical", "x": 1}]},
+        "spore_shot": {"name": "Spore Shot", "attacks": 1, "short": 24, "medium": 48, "ap": 7, "rules": ["lethal", "scatter", "indirect"]}
     },
     "rules": {
         "tusks": {"name": "Tusks", "hidden": true, "description_short": "Impact +3", "description": "This model gains +3 impact.", "points": 6},
         "adrenaline_glands": {"name": "Adrenaline Glands", "hidden": true, "description_short": "+1\" Movement", "description": "This model gets +1\" Movement", "points": 1},
-        "adrenaline_glands_large": {"name": "Adrenaline Glands", "hidden": true, "description_short": "+1\" Movement", "description": "This model gets +1\" Movement", "points": 5},
+        "adrenaline_glands_large": {"name": "Hyper-Adrenaline Glands", "hidden": true, "description_short": "+2\" Movement", "description": "This model gets +2\" Movement", "points": 5},
         "toxic_sacks": {"name": "Toxic Sacks", "description": "Hit rolls of 1 or 2 gain +1 AP.", "points": 1},
         "toxic_sacks_large": {"name": "Toxic Sacks", "description": "Hit rolls of 1 or 2 gain +1 AP.", "points": 5},
         "enhanced_senses": {"name": "Enhanced Senses", "hidden": true, "description_short": "+1 Accuracy", "description": "This model gets +1 Accuracy", "points": 10},
@@ -550,7 +961,13 @@
             "name": "Swarm Melee Tactics",
             "inputs": ["x"],
             "description": "When this unit is activated, choose up to X friendly _Infantry_ units within 6\". Those units may re-roll failed Strength tests of 9+ until the end of the round.",
-            "points": ["rule.x", {"multiply": 5}]
+            "points": ["rule.x", {"multiply": 10}]
+        },
+        "swarm_gun_tactics": {
+            "name": "Swarm Ranged Tactics",
+            "inputs": ["x"],
+            "description": "When this unit is activated, choose up to X friendly _Infantry_ units within 6\". Those units may re-roll failed Accuracy tests of 9+ until the end of the round.",
+            "points": ["rule.x", {"multiply": 10}]
         },
         "spore_cloud": {
             "name": "Spore Cloud",
@@ -561,20 +978,31 @@
             "name": "Spore Cyst",
             "description": "Once per round, models suffer -1 Accuracy when shooting at this model's unit. This may be used one additional time per round for each model in the unit with this rule.",
             "points": 10
-        }
+        },
+        "legend_born_survivor": {
+            "name": "Born Survivor",
+            "description": "After taking saves for this unit, roll a d10 for each model or Wound(x) lost.  On a 3 or less, that model or Wound(x) is restored."
+        },
+        "birthing_pods": {
+            "name": "Birthing Pods",
+            "description": "Once per round after taking Saves for an _Infantry_ unit, roll a D10 for each model or Wound(x) lost. On a 3 or less, that model or Wound(x) is restored. Models must be restored to full Wounds(x) before restoring a new model.",
+            "points": 15
+        },
+        "legend_influential_presence": {"name": "Influential Presence", "description": "Increase the range of all abilities which target friendly units by 6\".", "points": 10},
+        "legend_adrenaline_pheromones": {"name": "Adrenaline Pheromones", "description": "Friendly _Infantry_ units within 6\" add +1\" to their Movement characteristic.", "points": 5},
+        "legend_stealth_master": {"name": "Master Infiltrator", "description": "Enemy units suffer -1 Accuracy and -1 Strength when attacking this unit.", "points": 10}
     },
     "powers": {
-        "direct_control": {
-            "name": "Direct Control",
-            "description": "Target friendly unit within 24\" may immediately activate, and use this model's Courage value until the end of the activation phase.",
-            "charge": 7
-        },
-        "vitality": {
-            "name": "Vitality",
+        "hardened_carapace": {
+            "name": "Hardened Carapace",
             "description": "Until the end of the activation phase, whenever target friendly unit within 18\" takes a hit, roll a D10. On a result of 3 or less ignore that hit.",
-            "charge": 7
+            "charge": 5
         },
-        "horror": {"name": "Horror", "description": "Target enemy unit within 24\" suffers -1 Accuracy, -1 Strength, and -1 Courage until the end of the activation phase.", "charge": 6},
+        "psychic_assault": {
+            "name": "Psychic Assault",
+            "description": "Target enemy unit within 24\" suffers -1 Accuracy, -1 Strength, and -1 Courage until the end of the activation phase.",
+            "charge": 6
+        },
         "onslaught": {
             "name": "Onslaught",
             "description": "Target friendly unit within 18\" gains one of the following effects until the end of the phase: \n * The unit may make a free shoot action after it moves \n * The unit may make a free Charge action after it moves",
@@ -602,9 +1030,135 @@
             "description": "Use when activating an _Infantry_ or _Monster_ unit. Choose another friendly _Infantry_ or _Monster_ unit within 6\" and use its Courage and Initative values for this activation.",
             "flavor": "The hive mind controls those who may be unwilling in order to maintain battle order.",
             "cost": 1
+        },
+        "hulking_flesh": {
+            "name": "Hulking Flesh",
+            "phase": "activation",
+            "description": "Use when activating a _Monster_ unit. That unit may remove one critical damage.",
+            "flavor": "The enormous, fleshy bodies of these monsters regenerate at an incredible rate.",
+            "subfactions": ["kaiju_focus"],
+            "cost": 2
+        },
+        "monstrous_clash": {
+            "subfactions": ["kaiju_focus"],
+            "name": "Monstrous Clash",
+            "phase": "activation",
+            "flavor": "These furious beasts are always ready to swing their massive claws at the foe .",
+            "description": "Use when a _Monster_ unit is targeted by a Fight action. If that unit has not yet activated, it may perform a Counter Attack reaction without testing Initiative.",
+            "cost": 1
+        },
+        "sweeping_blows": {
+            "subfactions": ["kaiju_focus"],
+            "name": "Sweeping Blows",
+            "phase": "activation",
+            "flavor": "The enourmous swings of this beast's claws can cause damage even on misses and backswings.",
+            "description": "Use before a _Monster_ unit uses a fight action, it may re-roll all misses.",
+            "cost": 1
+        },
+        "swarming_shield": {
+            "subfactions": ["swarm_focus"],
+            "name": "Swarming Shield",
+            "phase": "activation",
+            "flavor": "The rolling wave of disposable bodies in the swarm can be directed by the hive mind to sacrifice themselves to protect more valuable aliens.",
+            "description": "Use after a _Infantry_ unit has been targeted by a Shooting attack. For this attack, you can roll a D10 each time an attack made with a ranged weapon hits that unit if there is a friendly Grunt, Assault Grunt, or Hive Swarm unit within 6\" of it. On an 8 or less a hit is transferred to that unit instead of the original target.",
+            "cost": 2
+        },
+        "clawing_mass": {
+            "subfactions": ["swarm_focus"],
+            "name": "Clawing Mass",
+            "phase": "activation",
+            "description": "Use when an _Infantry_ unit performs a Fight action. Hit rolls of 1 or 2 cause an additional hit.",
+            "flavor": "In a mass of swarming claws, more claws always find a way to enter the fray.",
+            "cost": 1
+        },
+        "hive_determination": {
+            "subfactions": ["swarm_focus"],
+            "name": "Hive Determination",
+            "phase": "activation",
+            "description": "Use before activating an _Infantry_ unit. That unit may immediately remove up to 2 Shock.",
+            "flavor": "The hive mind can focus the minds of lesser creatures to defy the horrors of combat.",
+            "cost": 1
+        },
+        "ambush": {
+            "subfactions": ["hunter_focus"],
+            "name": "Ambush",
+            "phase": "pre_game",
+            "description": "Up to half of any force's units, one point for each may be placed in _Ambush Reserves_ instead of deployed on the field.",
+            "flavor": "Alien Swarms can burrow around to lie in wait for the best moment to strike from surprise.",
+            "cost": "1/per"
+        },
+        "careful_hunters": {
+            "subfactions": ["hunter_focus"],
+            "name": "Careful Hunters",
+            "phase": "activation",
+            "description": "Use before activating a unit in _Ambush Reserves_. After placing the unit on the board, you may move it up to 1d6\" in any direction.",
+            "flavor": "Elite hunters are able to tunnel accurately and remain undetected in even close proximity to enemies.",
+            "cost": 1
+        },
+        "leaping_assault": {
+            "subfactions": ["hunter_focus"],
+            "name": "Leaping Assault",
+            "phase": "activation",
+            "flavor": "A sudden, explosive leap forward often catches even the most calculating opponent off guard.",
+            "description": "Use this strategy when an _Infantry_ unit charges. If the charging unit only makes a single move action this activation, enemy units may not react to that charge.",
+            "cost": 1
         }
     },
-    "relics": {},
+    "relics": {
+        "born_survivor": {
+            "name": "Born Survivor",
+            "rule": "legend_born_survivor",
+            "description": "Upgrade one _Leader_ or _Monster_ model with Born Survivor",
+            "flavor": "This bio-form was designed to survive blows that would destroy even its fellows.",
+            "points": 15
+        },
+        "psychic-eater": {
+            "name": "Psychic Eater",
+            "rule": {"id": "ward", "x": 1},
+            "description": "Upgrade one _Leader_ or _Support_ model with Ward(1)",
+            "flavor": "This leader has gotten a taste for psychic minds, and has learned how to get close enough to get them."
+        },
+        "influential_presence": {
+            "subfactions": ["swarm_focus"],
+            "name": "Influential Presence",
+            "rule": "legend_influential_presence",
+            "description": "Upgrade one _Leader_ or _Support_ model with Mind Link.",
+            "flavor": "This leader can exert additional influence on the mass of lesser beings around it.",
+            "points": 10
+        },
+        "adrenaline_pheromones": {
+            "subfactions": ["swarm_focus"],
+            "name": "Adrenaline Pheromones",
+            "rule": "legend_adrenaline_pheromones",
+            "flavor": "This model can exude pheromones that give nearby units a burst of energy.",
+            "description": "Upgrade one _Leader_ or _Monster_ model with Adrenaline Pheromones.",
+            "points": 5
+        },
+        "stealth_master": {
+            "subfactions": ["hunter_focus"],
+            "name": "Master Infiltrator",
+            "rule": "legend_stealth_master",
+            "description": "Upgrade one Leader or Support model with Master Infiltrator.",
+            "flavor": "This model is a master at hiding and avoiding enemy blows.",
+            "points": 10
+        },
+        "chitin_plating": {
+            "subfactions": ["kaiju_focus"],
+            "name": "Chitin Plating",
+            "rule": {"id": "tough", "x": 1},
+            "description": "Upgrade one _Monster_ model with Tough(1).",
+            "flavor": "Overlapping chitinous plates can deflect all but the most penetrating weapons.",
+            "points": 10
+        },
+        "primal_roar": {
+            "subfactions": ["kaiju_focus"],
+            "name": "Primal Roar",
+            "description": "Upgrade one _Leader_ model with Leader(Monster).",
+            "flavor": "Coordinating rampaging beasts can only be done by those mighty enough to earn their respect.",
+            "points": 15,
+            "rule": {"id": "leader_x", "x": "Monster"}
+        }
+    },
     "buyLinks": [
         {"name": "Games Workshop", "link": "https://www.games-workshop.com/en-US/Warhammer-40-000?N=2562756967+77492817"},
         {"name": "OnePageRules", "link": "https://www.myminifactory.com/object/3d-print-alien-hives-army-bundle-145588"}
