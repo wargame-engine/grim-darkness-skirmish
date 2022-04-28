@@ -1,336 +1,338 @@
 {
-    "id": "undercity_gangs",
-    "name": "Undercity Gangs",
-    "background": "Uplifted millenia ago by an unknown precursor race, the Ascended Astro-Raptors advanced from feral beasts to exploring the stars with high-tech lasers and armor.",
-    "author": "guitarninja#5707",
-    "units": {
-        "gang_leader": {
-            "name": "Ganger Leader",
-            "description": "The gang leader and current highest ranking member.",
-            "category": "command",
-            "keywords": ["Infantry"],
-            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "wounds", "x": 3}],
-            "models": [
-                {
-                    "name": "Ganger Leader",
-                    "courage": 7,
-                    "shoot": 6,
-                    "fight": 6,
-                    "defense": 5,
-                    "reflexes": 6,
-                    "movement": 6,
-                    "weapons": ["rifle", "frags", {"id": "ccw", "count": 2}],
-                    "options": [
-                        {"addRule": [{"id": "gang_tactics", "x": 1}, {"id": "gang_tactics", "x": 2}], "limit": 1},
-                        {"addRule": ["light_armor_leader", "medium_armor_leader", "heavy_armor_leader"], "limit": 1},
-                        {"replaceWeapon": "rifle", "withWeapon": ["shotgun", "defense_rifle"]},
-                        {"replaceWeapon": ["rifle", "ccw"], "withWeapon": [["pistol", {"id": "ccw", "count": 2}]]},
-                        {"replaceWeapon": "pistol", "withWeapon": ["assault_pistol", "burst_pistol"]}
-                    ],
-                    "min": 1,
-                    "max": 1
-                }
-            ]
-        },
-        "ganger_champion": {
-            "name": "Ganger Champion",
-            "description": "A ganger who has risen through the ranks.",
-            "category": "command",
-            "keywords": ["Infantry"],
-            "models": [
-                {
-                    "name": "Ganger Champion",
-                    "courage": 6,
-                    "shoot": 5,
-                    "fight": 5,
-                    "defense": 5,
-                    "reflexes": 5,
-                    "movement": 6,
-                    "weapons": ["rifle", "frags", "ccw"],
-                    "rules": ["leader"],
-                    "options": [
-                        {"addRule": ["champion"]},
-                        {"addRule": ["light_armor", "medium_armor", "heavy_armor"], "limit": 1},
-                        {"replaceWeapon": "rifle", "withWeapon": ["shotgun", "defense_rifle"]},
-                        {"replaceWeapon": ["rifle", "ccw"], "withWeapon": [["pistol", {"id": "ccw", "count": 2}]]},
-                        {"replaceWeapon": "pistol", "withWeapon": ["assault_pistol", "burst_pistol"]}
-                    ],
-                    "min": 1,
-                    "max": 1
-                }
-            ]
-        },
-        "recruit": {
-            "name": "Recruit",
-            "description": "A new member with very little experience.",
-            "category": "core",
-            "keywords": ["Infantry"],
-            "models": [
-                {
-                    "name": "Recruit",
-                    "courage": 5,
-                    "shoot": 5,
-                    "fight": 5,
-                    "defense": 4,
-                    "reflexes": 4,
-                    "movement": 6,
-                    "weapons": ["rifle", "frags", "ccw"],
-                    "options": [
-                        {"addRule": ["light_armor", "medium_armor"], "limit": 1},
-                        {"replaceWeapon": "rifle", "withWeapon": ["shotgun", "defense_rifle"]},
-                        {"replaceWeapon": ["rifle", "ccw"], "withWeapon": [["pistol", {"id": "ccw", "count": 2}]]},
-                        {"replaceWeapon": "pistol", "withWeapon": ["assault_pistol", "burst_pistol"], "count": 2}
-                    ],
-                    "min": 1,
-                    "max": 1
-                }
-            ]
-        },
-        "ganger": {
-            "name": "Ganger",
-            "description": "A hardened gang member who has finished initiation.",
-            "category": "core",
-            "keywords": ["Infantry"],
-            "models": [
-                {
-                    "name": "Ganger",
-                    "courage": 5,
-                    "shoot": 5,
-                    "fight": 5,
-                    "defense": 5,
-                    "reflexes": 5,
-                    "movement": 6,
-                    "weapons": ["rifle", "frags", "ccw"],
-                    "options": [
-                        {"addRule": ["light_armor", "medium_armor"], "limit": 1},
-                        {"addRule": ["veteran"]},
-                        {"replaceWeapon": "rifle", "withWeapon": ["shotgun", "defense_rifle"]},
-                        {"replaceWeapon": ["rifle", "ccw"], "withWeapon": [["pistol", {"id": "ccw", "count": 2}]]},
-                        {"replaceWeapon": "pistol", "withWeapon": ["assault_pistol", "burst_pistol"]}
-                    ],
-                    "min": 1,
-                    "max": 1
-                }
-            ]
-        },
-        "ganger_gunslinger": {
-            "name": "Ganger Gunslinger",
-            "description": "A hardened gang member who has finished initiation. Equipped with dual pistols to blast away at close range.",
-            "category": "specialist",
-            "keywords": ["Infantry"],
-            "models": [
-                {
-                    "name": "Ganger Gunslinger",
-                    "courage": 5,
-                    "shoot": 5,
-                    "fight": 5,
-                    "defense": 5,
-                    "reflexes": 5,
-                    "movement": 6,
-                    "weapons": [{"id": "pistol", "count": 2}, "frags"],
-                    "options": [
-                        {"addRule": ["light_armor", "medium_armor"], "limit": 1},
-                        {"addRule": ["veteran"]},
-                        {
-                            "subfactions": ["finesse_focus"],
-                            "replaceWeapon": {"id": "pistol", "count": 2},
-                            "withWeapon": [{"id": "assault_pistol", "count": 2}, {"id": "burst_pistol", "count": 2}, {"id": "marine_pistol", "count": 2}, {"id": "plasma_pistol", "count": 2}, {"id": "flamethrower_pistol", "count": 2}]
-                        }
-                    ],
-                    "min": 1,
-                    "max": 1
-                }
-            ]
-        },
-        "ganger_fighter": {
-            "name": "Ganger Brawler",
-            "description": "A hardened gang member who has finished initiation. Equipped with dual melee weapons to get up close and deadly.",
-            "category": "specialist",
-            "keywords": ["Infantry"],
-            "models": [
-                {
-                    "name": "Ganger Brawler",
-                    "courage": 5,
-                    "shoot": 5,
-                    "fight": 5,
-                    "defense": 5,
-                    "reflexes": 5,
-                    "movement": 6,
-                    "weapons": [{"id": "ccw", "count": 3}, "frags"],
-                    "options": [
-                        {"addRule": ["light_armor", "medium_armor"], "limit": 1},
-                        {"addRule": ["veteran"]},
-                        {
-                            "subfactions": ["finesse_focus"],
-                            "replaceWeapon": {"id": "ccw", "count": 3},
-                            "withWeapon": [{"id": "energy_knife", "count": 3}, {"id": "energy_sword", "count": 3}, {"id": "barb_knife", "count": 3}, {"id": "barb_sword", "count": 3}]
-                        }
-                    ],
-                    "min": 1,
-                    "max": 1
-                }
-            ]
-        },
-        "ganger_doc": {
-            "name": "Ganger Doctor",
-            "description": "A ganger with some medical training.",
-            "category": "specialist",
-            "keywords": ["Infantry"],
-            "models": [
-                {
-                    "name": "Ganger Doctor",
-                    "courage": 6,
-                    "shoot": 5,
-                    "fight": 5,
-                    "defense": 5,
-                    "reflexes": 5,
-                    "movement": 6,
-                    "weapons": ["pistol", "frags", {"id": "ccw", "x": 2}],
-                    "rules": ["medic"],
-                    "options": [
-                        {"addRule": ["light_armor", "medium_armor"], "limit": 1},
-                        {"addRule": ["veteran"]},
-                        {"replaceWeapon": "pistol", "withWeapon": ["assault_pistol", "burst_pistol", "marine_pistol", "plasma_pistol", "flamethrower_pistol"]},
-                        {
-                            "subfactions": ["finesse_focus"],
-                            "replaceWeapon": {"id": "ccw", "count": 2},
-                            "withWeapon": [{"id": "energy_knife", "count": 2}, {"id": "energy_sword", "count": 2}, {"id": "barb_knife", "count": 2}, {"id": "barb_sword", "count": 2}]
-                        }
-                    ],
-                    "min": 1,
-                    "max": 1
-                }
-            ]
-        },
-        "ganger_psychic": {
-            "name": "Ganger Psychic",
-            "description": "A ganger with a particular aptitude for psychic powers.",
-            "category": "specialist",
-            "keywords": ["Infantry"],
-            "models": [
-                {
-                    "name": "Ganger Psychic",
-                    "courage": 6,
-                    "shoot": 5,
-                    "fight": 5,
-                    "defense": 5,
-                    "reflexes": 5,
-                    "movement": 6,
-                    "weapons": ["pistol", "frags", {"id": "ccw", "x": 2}],
-                    "rules": [{"id": "power", "x": 1}],
-                    "options": [
-                        {"replaceRule": [{"id": "power", "x": 1}], "withRule": {"id": "power", "x": 2}},
-                        {"addRule": ["light_armor", "medium_armor"], "limit": 1},
-                        {"addRule": ["veteran"]},
-                        {"replaceWeapon": "pistol", "withWeapon": ["assault_pistol", "burst_pistol", "marine_pistol", "plasma_pistol", "flamethrower_pistol"]},
-                        {
-                            "subfactions": ["finesse_focus"],
-                            "replaceWeapon": {"id": "ccw", "count": 2},
-                            "withWeapon": [{"id": "energy_knife", "count": 2}, {"id": "energy_sword", "count": 2}, {"id": "barb_knife", "count": 2}, {"id": "barb_sword", "count": 2}]
-                        }
-                    ],
-                    "min": 1,
-                    "max": 1
-                }
-            ]
-        },
-        "ganger_specialist": {
-            "name": "Ganger Specialist",
-            "description": "A hardened gang member who has finished initiation. May be equipped with various special weaponry.",
-            "category": "specialist",
-            "keywords": ["Infantry"],
-            "models": [
-                {
-                    "name": "Ganger Specialist",
-                    "courage": 5,
-                    "shoot": 5,
-                    "fight": 5,
-                    "defense": 5,
-                    "reflexes": 5,
-                    "movement": 6,
-                    "weapons": ["rifle", "frags", "ccw"],
-                    "options": [
-                        {"addRule": ["light_armor", "medium_armor"], "limit": 1},
-                        {"addRule": ["veteran"]},
-                        {"subfactions": ["finesse_focus"], "replaceWeapon": "rifle", "withWeapon": ["combi_barb_rifle", "barb_rifle", "barb_pistol", "fusion_rifle", "plasma_rifle"]},
-                        {"subfactions": ["none"], "replaceWeapon": "rifle", "withWeapon": ["shotgun", "defense_rifle"]},
-                        {"replaceWeapon": ["rifle", "ccw"], "withWeapon": [["pistol", {"id": "ccw", "count": 2}]]},
-                        {"replaceWeapon": "pistol", "withWeapon": ["assault_pistol", "burst_pistol", "marine_pistol", "plasma_pistol", "flamethrower_pistol"]},
-                        {
-                            "subfactions": ["finesse_focus"],
-                            "replaceWeapon": {"id": "ccw", "count": 2},
-                            "withWeapon": [{"id": "energy_knife", "count": 2}, {"id": "energy_sword", "count": 2}, {"id": "barb_knife", "count": 2}, {"id": "barb_sword", "count": 2}]
-                        }
-                    ],
-                    "min": 1,
-                    "max": 1
-                }
-            ]
-        },
-        "ganger_heavy": {
-            "name": "Ganger Heavy",
-            "description": "A hardened gang member who has finished initiation.",
-            "category": "heavy",
-            "keywords": ["Infantry"],
-            "models": [
-                {
-                    "name": "Ganger Heavy",
-                    "courage": 5,
-                    "shoot": 5,
-                    "fight": 5,
-                    "defense": 5,
-                    "reflexes": 5,
-                    "movement": 6,
-                    "weapons": ["rifle", "frags", "ccw"],
-                    "options": [
-                        {"addRule": ["light_armor", "medium_armor"], "limit": 1},
-                        {"addRule": ["veteran"]},
-                        {"replaceWeapon": "rifle", "withWeapon": ["light_machinegun"]}
-                    ],
-                    "min": 1,
-                    "max": 1
-                }
-            ]
+  "id": "undercity_gangs",
+  "name": "Undercity Gangs",
+  "background": "Uplifted millenia ago by an unknown precursor race, the Ascended Astro-Raptors advanced from feral beasts to exploring the stars with high-tech lasers and armor.",
+  "author": "guitarninja#5707",
+  "units": {
+    "gang_leader": {
+      "name": "Ganger Leader",
+      "description": "The gang leader and current highest ranking member.",
+      "category": "command",
+      "keywords": ["Infantry"],
+      "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "wounds", "x": 3}],
+      "models": [
+        {
+          "name": "Ganger Leader",
+          "courage": 7,
+          "shoot": 6,
+          "fight": 6,
+          "defense": 5,
+          "reflexes": 6,
+          "movement": 6,
+          "weapons": ["rifle", "frags", {"id": "ccw", "count": 2}],
+          "options": [
+            {"addRule": [{"id": "gang_tactics", "x": 1}, {"id": "gang_tactics", "x": 2}], "limit": 1},
+            {"addRule": ["light_armor_leader", "medium_armor_leader", "heavy_armor_leader"], "limit": 1},
+            {"replaceWeapon": "rifle", "withWeapon": ["shotgun", "defense_rifle"]},
+            {"replaceWeapon": ["rifle", "ccw"], "withWeapon": [["pistol", {"id": "ccw", "count": 2}]]},
+            {"replaceWeapon": "pistol", "withWeapon": ["assault_pistol", "burst_pistol"]}
+          ],
+          "min": 1,
+          "max": 1
         }
+      ]
     },
-    "weapons": {},
-    "rules": {
-        "gang_tactics": {
-            "name": "Gang Tactics",
-            "inputs": ["x"],
-            "description": "When this unit is activated, choose up to X friendly _Infantry_ units within 6\" to receive one of the following bonuses until the end of the round: \n * Re-roll failed Accuracy tests of 9+ \n * Re-roll failed Strength tests of 9+ \n * +3\" of Movement",
-            "points": ["rule.x", {"multiply": 5}]
-        },
-        "veteran": {"name": "Veteran", "hidden": true, "description": "This model gets +1 Courage.", "description_short": "Courage +1", "points": 2},
-        "light_armor_leader": {"name": "Light Armor", "hidden": true, "description": "This model gets +1 Save.", "description_short": "Save +1", "points": 4},
-        "medium_armor_leader": {"name": "Medium Armor", "hidden": true, "description": "This model gets +2 Save.", "description_short": "Save +2", "points": 8},
-        "heavy_armor_leader": {"name": "Heavy Armor", "hidden": true, "description": "This model gets +3 Save.", "description_short": "Save +3", "points": 12},
-        "light_armor": {"name": "Light Armor", "hidden": true, "description": "This model gets +1 Save.", "description_short": "Save +1", "points": 2},
-        "medium_armor": {"name": "Medium Armor", "hidden": true, "description": "This model gets +2 Save.", "description_short": "Save +2", "points": 4},
-        "heavy_armor": {"name": "Heavy Armor", "hidden": true, "description": "This model gets +3 Save.", "description_short": "Save +3", "points": 6}
-    },
-    "powers": {},
-    "strategies": {
-        "blind_fire": {
-            "name": "Blind Fire",
-            "phase": "activation",
-            "flavor": "It is common for gangers to fire around corners blindly to allow other members to push up aggressively.",
-            "description": "Use when shooting with an _Infantry_ unit. That unit may target enemies it cannot see at -1 Accuracy.",
-            "cost": 1
-        },
-        "takedown": {
-            "name": "Takedown",
-            "phase": "activation",
-            "flavor": "Gangers often go for a total takedown when charging enemy units.",
-            "description": "Use after an _Infantry_ unit successfully Charges an enemy unit. The enemy unit gains 2 Shock.",
-            "cost": 1
-        },
-        "shove": {
-            "name": "Shove",
-            "phase": "activation",
-            "flavor": "Gangers often resort to dirty fighting tactics to get the job done.",
-            "description": "Use after an _Infantry_ unit Fights an enemy unit. The enemy unit is moved 1\" directly back from the attacker.",
-            "cost": 1
+    "ganger_champion": {
+      "name": "Ganger Champion",
+      "description": "A ganger who has risen through the ranks.",
+      "category": "command",
+      "keywords": ["Infantry"],
+      "models": [
+        {
+          "name": "Ganger Champion",
+          "courage": 6,
+          "shoot": 5,
+          "fight": 5,
+          "defense": 5,
+          "reflexes": 5,
+          "movement": 6,
+          "weapons": ["rifle", "frags", "ccw"],
+          "rules": ["leader"],
+          "options": [
+            {"addRule": ["champion"]},
+            {"addRule": ["light_armor", "medium_armor", "heavy_armor"], "limit": 1},
+            {"replaceWeapon": "rifle", "withWeapon": ["shotgun", "defense_rifle"]},
+            {"replaceWeapon": ["rifle", "ccw"], "withWeapon": [["pistol", {"id": "ccw", "count": 2}]]},
+            {"replaceWeapon": "pistol", "withWeapon": ["assault_pistol", "burst_pistol"]}
+          ],
+          "min": 1,
+          "max": 1
         }
+      ]
+    },
+    "recruit": {
+      "name": "Recruit",
+      "description": "A new member with very little experience.",
+      "category": "core",
+      "keywords": ["Infantry"],
+      "models": [
+        {
+          "name": "Recruit",
+          "courage": 5,
+          "shoot": 5,
+          "fight": 5,
+          "defense": 4,
+          "reflexes": 4,
+          "movement": 6,
+          "weapons": ["rifle", "frags", "ccw"],
+          "options": [
+            {"addRule": ["light_armor", "medium_armor"], "limit": 1},
+            {"replaceWeapon": "rifle", "withWeapon": ["shotgun", "defense_rifle"]},
+            {"replaceWeapon": ["rifle", "ccw"], "withWeapon": [["pistol", {"id": "ccw", "count": 2}]]},
+            {"replaceWeapon": "pistol", "withWeapon": ["assault_pistol", "burst_pistol"], "count": 2}
+          ],
+          "min": 1,
+          "max": 1
+        }
+      ]
+    },
+    "ganger": {
+      "name": "Ganger",
+      "description": "A hardened gang member who has finished initiation.",
+      "category": "core",
+      "keywords": ["Infantry"],
+      "models": [
+        {
+          "name": "Ganger",
+          "courage": 5,
+          "shoot": 5,
+          "fight": 5,
+          "defense": 5,
+          "reflexes": 5,
+          "movement": 6,
+          "weapons": ["rifle", "frags", "ccw"],
+          "options": [
+            {"addRule": ["light_armor", "medium_armor"], "limit": 1},
+            {"addRule": ["veteran"]},
+            {"replaceWeapon": "rifle", "withWeapon": ["shotgun", "defense_rifle"]},
+            {"replaceWeapon": ["rifle", "ccw"], "withWeapon": [["pistol", {"id": "ccw", "count": 2}]]},
+            {"replaceWeapon": "pistol", "withWeapon": ["assault_pistol", "burst_pistol"]}
+          ],
+          "min": 1,
+          "max": 1
+        }
+      ]
+    },
+    "ganger_gunslinger": {
+      "name": "Ganger Gunslinger",
+      "description": "A hardened gang member who has finished initiation. Equipped with dual pistols to blast away at close range.",
+      "category": "specialist",
+      "keywords": ["Infantry"],
+      "models": [
+        {
+          "name": "Ganger Gunslinger",
+          "courage": 5,
+          "shoot": 5,
+          "fight": 5,
+          "defense": 5,
+          "reflexes": 5,
+          "movement": 6,
+          "weapons": [{"id": "pistol", "count": 2}, "frags"],
+          "options": [
+            {"addRule": ["light_armor", "medium_armor"], "limit": 1},
+            {"addRule": ["veteran"]},
+            {
+              "subfactions": ["finesse_focus"],
+              "replaceWeapon": {"id": "pistol", "count": 2},
+              "withWeapon": [
+                {"id": "assault_pistol", "count": 2},
+                {"id": "burst_pistol", "count": 2},
+                {"id": "marine_pistol", "count": 2},
+                {"id": "plasma_pistol", "count": 2},
+                {"id": "flamethrower_pistol", "count": 2}
+              ]
+            }
+          ],
+          "min": 1,
+          "max": 1
+        }
+      ]
+    },
+    "ganger_fighter": {
+      "name": "Ganger Brawler",
+      "description": "A hardened gang member who has finished initiation. Equipped with dual melee weapons to get up close and deadly.",
+      "category": "specialist",
+      "keywords": ["Infantry"],
+      "models": [
+        {
+          "name": "Ganger Brawler",
+          "courage": 5,
+          "shoot": 5,
+          "fight": 5,
+          "defense": 5,
+          "reflexes": 5,
+          "movement": 6,
+          "weapons": [{"id": "ccw", "count": 3}, "frags"],
+          "options": [
+            {"addRule": ["light_armor", "medium_armor"], "limit": 1},
+            {"addRule": ["veteran"]},
+            {
+              "subfactions": ["finesse_focus"],
+              "replaceWeapon": {"id": "ccw", "count": 3},
+              "withWeapon": [{"id": "energy_knife", "count": 3}, {"id": "energy_sword", "count": 3}, {"id": "barb_knife", "count": 3}, {"id": "barb_sword", "count": 3}]
+            }
+          ],
+          "min": 1,
+          "max": 1
+        }
+      ]
+    },
+    "ganger_doc": {
+      "name": "Ganger Doctor",
+      "description": "A ganger with some medical training.",
+      "category": "specialist",
+      "keywords": ["Infantry"],
+      "models": [
+        {
+          "name": "Ganger Doctor",
+          "courage": 6,
+          "shoot": 5,
+          "fight": 5,
+          "defense": 5,
+          "reflexes": 5,
+          "movement": 6,
+          "weapons": ["pistol", "frags", {"id": "ccw", "x": 2}],
+          "rules": ["medic"],
+          "options": [
+            {"addRule": ["light_armor", "medium_armor"], "limit": 1},
+            {"addRule": ["veteran"]},
+            {"replaceWeapon": "pistol", "withWeapon": ["assault_pistol", "burst_pistol", "marine_pistol", "plasma_pistol", "flamethrower_pistol"]},
+            {
+              "subfactions": ["finesse_focus"],
+              "replaceWeapon": {"id": "ccw", "count": 2},
+              "withWeapon": [{"id": "energy_knife", "count": 2}, {"id": "energy_sword", "count": 2}, {"id": "barb_knife", "count": 2}, {"id": "barb_sword", "count": 2}]
+            }
+          ],
+          "min": 1,
+          "max": 1
+        }
+      ]
+    },
+    "ganger_psychic": {
+      "name": "Ganger Psychic",
+      "description": "A ganger with a particular aptitude for psychic powers.",
+      "category": "specialist",
+      "keywords": ["Infantry"],
+      "models": [
+        {
+          "name": "Ganger Psychic",
+          "courage": 6,
+          "shoot": 5,
+          "fight": 5,
+          "defense": 5,
+          "reflexes": 5,
+          "movement": 6,
+          "weapons": ["pistol", "frags", {"id": "ccw", "x": 2}],
+          "rules": [{"id": "power", "x": 1}],
+          "options": [
+            {"replaceRule": [{"id": "power", "x": 1}], "withRule": {"id": "power", "x": 2}},
+            {"addRule": ["light_armor", "medium_armor"], "limit": 1},
+            {"addRule": ["veteran"]},
+            {"replaceWeapon": "pistol", "withWeapon": ["assault_pistol", "burst_pistol", "marine_pistol", "plasma_pistol", "flamethrower_pistol"]},
+            {
+              "subfactions": ["finesse_focus"],
+              "replaceWeapon": {"id": "ccw", "count": 2},
+              "withWeapon": [{"id": "energy_knife", "count": 2}, {"id": "energy_sword", "count": 2}, {"id": "barb_knife", "count": 2}, {"id": "barb_sword", "count": 2}]
+            }
+          ],
+          "min": 1,
+          "max": 1
+        }
+      ]
+    },
+    "ganger_specialist": {
+      "name": "Ganger Specialist",
+      "description": "A hardened gang member who has finished initiation. May be equipped with various special weaponry.",
+      "category": "specialist",
+      "keywords": ["Infantry"],
+      "models": [
+        {
+          "name": "Ganger Specialist",
+          "courage": 5,
+          "shoot": 5,
+          "fight": 5,
+          "defense": 5,
+          "reflexes": 5,
+          "movement": 6,
+          "weapons": ["rifle", "frags", "ccw"],
+          "options": [
+            {"addRule": ["light_armor", "medium_armor"], "limit": 1},
+            {"addRule": ["veteran"]},
+            {"subfactions": ["finesse_focus"], "replaceWeapon": "rifle", "withWeapon": ["combi_barb_rifle", "barb_rifle", "barb_pistol", "fusion_rifle", "plasma_rifle"]},
+            {"subfactions": ["none"], "replaceWeapon": "rifle", "withWeapon": ["shotgun", "defense_rifle"]},
+            {"replaceWeapon": ["rifle", "ccw"], "withWeapon": [["pistol", {"id": "ccw", "count": 2}]]},
+            {"replaceWeapon": "pistol", "withWeapon": ["assault_pistol", "burst_pistol", "marine_pistol", "plasma_pistol", "flamethrower_pistol"]},
+            {
+              "subfactions": ["finesse_focus"],
+              "replaceWeapon": {"id": "ccw", "count": 2},
+              "withWeapon": [{"id": "energy_knife", "count": 2}, {"id": "energy_sword", "count": 2}, {"id": "barb_knife", "count": 2}, {"id": "barb_sword", "count": 2}]
+            }
+          ],
+          "min": 1,
+          "max": 1
+        }
+      ]
+    },
+    "ganger_heavy": {
+      "name": "Ganger Heavy",
+      "description": "A hardened gang member who has finished initiation.",
+      "category": "heavy",
+      "keywords": ["Infantry"],
+      "models": [
+        {
+          "name": "Ganger Heavy",
+          "courage": 5,
+          "shoot": 5,
+          "fight": 5,
+          "defense": 5,
+          "reflexes": 5,
+          "movement": 6,
+          "weapons": ["rifle", "frags", "ccw"],
+          "options": [{"addRule": ["light_armor", "medium_armor"], "limit": 1}, {"addRule": ["veteran"]}, {"replaceWeapon": "rifle", "withWeapon": ["light_machinegun"]}],
+          "min": 1,
+          "max": 1
+        }
+      ]
     }
+  },
+  "weapons": {},
+  "rules": {
+    "gang_tactics": {
+      "name": "Gang Tactics",
+      "inputs": ["x"],
+      "description": "When this unit is activated, choose up to X friendly _Infantry_ units within 6\" to receive one of the following bonuses until the end of the round: \n * Re-roll failed Accuracy tests of 9+ \n * Re-roll failed Strength tests of 9+ \n * +3\" of Movement",
+      "points": ["rule.x", {"multiply": 5}]
+    },
+    "veteran": {"name": "Veteran", "hidden": true, "description": "This model gets +1 Courage.", "description_short": "Courage +1", "points": 2},
+    "light_armor_leader": {"name": "Light Armor", "hidden": true, "description": "This model gets +1 Save.", "description_short": "Save +1", "points": 4},
+    "medium_armor_leader": {"name": "Medium Armor", "hidden": true, "description": "This model gets +2 Save.", "description_short": "Save +2", "points": 8},
+    "heavy_armor_leader": {"name": "Heavy Armor", "hidden": true, "description": "This model gets +3 Save.", "description_short": "Save +3", "points": 12},
+    "light_armor": {"name": "Light Armor", "hidden": true, "description": "This model gets +1 Save.", "description_short": "Save +1", "points": 2},
+    "medium_armor": {"name": "Medium Armor", "hidden": true, "description": "This model gets +2 Save.", "description_short": "Save +2", "points": 4},
+    "heavy_armor": {"name": "Heavy Armor", "hidden": true, "description": "This model gets +3 Save.", "description_short": "Save +3", "points": 6}
+  },
+  "powers": {},
+  "strategies": {
+    "blind_fire": {
+      "name": "Blind Fire",
+      "phase": "activation",
+      "flavor": "It is common for gangers to fire around corners blindly to allow other members to push up aggressively.",
+      "description": "Use when shooting with an _Infantry_ unit. That unit may target enemies it cannot see at -1 Accuracy.",
+      "cost": 1
+    },
+    "takedown": {
+      "name": "Takedown",
+      "phase": "activation",
+      "flavor": "Gangers often go for a total takedown when charging enemy units.",
+      "description": "Use after an _Infantry_ unit successfully Charges an enemy unit. The enemy unit gains 2 Shock.",
+      "cost": 1
+    },
+    "shove": {
+      "name": "Shove",
+      "phase": "activation",
+      "flavor": "Gangers often resort to dirty fighting tactics to get the job done.",
+      "description": "Use after an _Infantry_ unit Fights an enemy unit. The enemy unit is moved 1\" directly back from the attacker.",
+      "cost": 1
+    }
+  }
 }
