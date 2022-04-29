@@ -805,6 +805,30 @@
             "description": "Use when an _Infantry_ unit takes a Break test. That test is automatically passed.",
             "flavor": "These troopers are prepared to hold at all costs.",
             "cost": 1
+        },
+        "fearless": {
+            "subfactions": ["entrenchment_focus"],
+            "name": "Fearless",
+            "phase": "activation",
+            "description": "Use before activating a unit. That unit may immediately remove up to 2 Shock.",
+            "flavor": "These trench fighters will not back down, even in the toughest situations.",
+            "cost": 1
+        },
+        "dig_in": {
+            "subfactions": ["entrenchment_focus"],
+            "name": "Dig In",
+            "phase": "activation",
+            "description": "Use when an _Infantry_ unit is targeted by an enemy. If it did not move this round, that unit may increase its cover level by 1 (none to soft, soft to hard).",
+            "flavor": "A strong defensive position ensures greater survival, even against the toughest of weapons.",
+            "cost": 1
+        },
+        "final_stand": {
+            "subfactions": ["entrenchment_focus"],
+            "phase": "activation",
+            "name": "Final Stand",
+            "description": "Use when a unit is destroyed, but before any models are removed from the table. It may perform one shoot or fight action ignoring any shock points.",
+            "flavor": "Even in their last breath, trench fighters will put up resistance.",
+            "cost": 2
         }
     },
     "relics": {
