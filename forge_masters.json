@@ -335,7 +335,6 @@
   "rules": {},
   "strategies": [
     {
-      "subfactions": ["none", "goblin_army"],
       "phase": "activation",
       "name": "Determined",
       "flavor": "It's tough to slow down a Dwarf, even when heavily injured.",
