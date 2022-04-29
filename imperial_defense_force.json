@@ -611,7 +611,7 @@
     "engineer_leader": {
       "name": "Combat Engineer Sergeant",
       "description": "A combat engineer sergeant kitted out for close-range engagements and destroying emplacements.",
-      "category": "leader",
+      "category": "command",
       "models": [
         {
           "name": "Combat Engineer Sergeant",
