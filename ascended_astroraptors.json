@@ -761,7 +761,23 @@
             "description": "Use when shooting with an _Infantry_ unit. If the attack hits, assign 2 additional Shock.",
             "flavor": "The sight of an overly enthused Astro-raptor firing indescriminately will make all but the most foolhardy begin reconsidering their choices. ",
             "cost": 1
-        }
+        },
+        "superior_shielding": {
+            "name": "Superior Shielding",
+            "subfactions": ["rayshield_focus"],
+            "phase": "activation",
+            "description": "Use before taking Save rolls for an _Infantry_ unit. It gets +1 Save.",
+            "flavor": "Rayshield specialists tweak their shields beyond the usual available to their kind.",
+            "cost": 2
+        }, 
+        "signal_jammer": {
+        "subfactions": ["rayshield_focus"],
+            "name": "Signal Jammer",
+            "phase": "activation",
+            "description": "Use after a unit declares it is arriving from reserves within 24\" of this unit. That unit automatically fails any Initiative tests for arriving on the table and must scatter directly away from this unit.",
+            "flavor": "Prepared for any enemies, these scramblers will ensure no one can find our units.",
+            "cost": 1
+    }
 
     },
     "buyLinks": [{"name": "Treadhead Rad", "link": "https://www.myminifactory.com/campaigns/raygun-raptors-95"}]
