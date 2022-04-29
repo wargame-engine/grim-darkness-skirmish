@@ -1,840 +1,859 @@
 {
-    "id": "imperial_defense_force",
-    "name": "Imperial Defence Force",
-    "author": "guitarninja#5707",
-    "units": {
-        "commander": {
-            "name": "Company Commander",
-            "description": "Foot infantry commander of the imperial defense force.",
-            "category": "command",
-            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "defense_force_tactics", "x": 2}, {"id": "wounds", "x": 2}],
-            "models": [
-                {
-                    "name": "Company Commander",
-                    "courage": 7,
-                    "shoot": 6,
-                    "fight": 6,
-                    "defense": 6,
-                    "reflexes": 6,
-                    "movement": 6,
-                    "weapons": ["defense_rifle", "frags", {"id": "ccw", "count": 2}],
-                    "options": [
-                        {"replaceWeapon": ["defense_rifle", {"id": "ccw", "count": 2}], "withWeapon": [["pistol", {"id": "ccw", "count": 3}]]},
-                        {"replaceWeapon": "pistol", "withWeapon": ["marine_pistol", "plasma_pistol"]},
-                        {"replaceWeapon": {"id": "ccw", "count": 3}, "withWeapon": [{"id": "energy_sword", "count": 3}, {"id": "energy_fist", "count": 3}, {"id": "chainsword", "count": 3}]}
-                    ],
-                    "min": 1,
-                    "max": 1
-                }
-            ]
-        },
-        "stormtrooper_commander": {
-            "name": "Stormtrooper Commander",
-            "description": "Foot infantry commander of the elite storm troopers.",
-            "category": "command",
-            "keywords": ["Storm Trooper", "Infantry"],
-            "rules": [{"id": "stormtrooper_tactics", "x": 1}, {"id": "leader_x", "x": "Infantry"}, {"id": "wounds", "x": 2}],
-            "models": [
-                {
-                    "name": "Stormtrooper Commander",
-                    "courage": 7,
-                    "shoot": 6,
-                    "fight": 6,
-                    "defense": 6,
-                    "reflexes": 6,
-                    "movement": 6,
-                    "weapons": ["heavy_defense_rifle", "frags", {"id": "chainsword", "count": 2}],
-                    "options": [
-                        {"replaceWeapon": ["heavy_defense_rifle", {"id": "chainsword", "count": 2}], "withWeapon": [["marine_pistol", {"id": "chainsword", "count": 3}]]},
-                        {"replaceWeapon": "marine_pistol", "withWeapon": ["plasma_pistol"]},
-                        {"replaceWeapon": {"id": "chainsword", "count": 3}, "withWeapon": [{"id": "energy_sword", "count": 3}, {"id": "energy_fist", "count": 3}]},
-                        {"replaceRule": {"id": "stormtrooper_tactics", "x": 1}, "withRule": {"id": "stormtrooper_tactics", "x": 2}}
-                    ],
-                    "min": 1,
-                    "max": 1
-                }
-            ]
-        },
-        "platoon_commander": {
-            "name": "Platoon Commander",
-            "description": "Foot infantry platoon leader of the imperial defense force.",
-            "category": "command",
-            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "defense_force_tactics", "x": 1}, {"id": "wounds", "x": 2}],
-            "models": [
-                {
-                    "name": "Platoon Commander",
-                    "courage": 7,
-                    "shoot": 6,
-                    "fight": 6,
-                    "defense": 6,
-                    "reflexes": 6,
-                    "movement": 6,
-                    "weapons": ["defense_rifle", "frags", {"id": "ccw", "count": 2}],
-                    "options": [
-                        {"replaceWeapon": ["defense_rifle", {"id": "ccw", "count": 2}], "withWeapon": [["pistol", {"id": "ccw", "count": 3}]]},
-                        {"replaceWeapon": "pistol", "withWeapon": ["marine_pistol", "plasma_pistol"]},
-                        {"replaceWeapon": {"id": "ccw", "count": 3}, "withWeapon": [{"id": "energy_sword", "count": 3}, {"id": "energy_fist", "count": 3}, {"id": "chainsword", "count": 3}]}
-                    ],
-                    "min": 1,
-                    "max": 1
-                }
-            ]
-        },
-        "commissar": {
-            "name": "Commissar",
-            "description": "A field officer assigned to keep soldiers motivated and in line.",
-            "category": "command",
-            "rules": [{"id": "leader_x", "x": "Infantry"}, "no_retreat", {"id": "wounds", "x": 2}],
-            "models": [
-                {
-                    "name": "Commissar",
-                    "courage": 7,
-                    "shoot": 6,
-                    "fight": 6,
-                    "defense": 6,
-                    "reflexes": 6,
-                    "movement": 6,
-                    "weapons": ["pistol", "frags", {"id": "ccw", "count": 3}],
-                    "options": [
-                        {"replaceWeapon": "pistol", "withWeapon": ["marine_pistol", "plasma_pistol"]},
-                        {"replaceWeapon": {"id": "ccw", "count": 3}, "withWeapon": [{"id": "energy_sword", "count": 3}, {"id": "energy_fist", "count": 3}, {"id": "chainsword", "count": 3}]}
-                    ],
-                    "min": 1,
-                    "max": 1
-                }
-            ]
-        },
-        "psychic": {
-            "name": "Psychic",
-            "description": "A trained psychic adept at casting powers and supporting troops.",
-            "category": "command",
-            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "power", "x": 1}, {"id": "wounds", "x": 2}],
-            "models": [
-                {
-                    "name": "Psychic",
-                    "courage": 5,
-                    "shoot": 6,
-                    "fight": 6,
-                    "defense": 6,
-                    "reflexes": 5,
-                    "movement": 6,
-                    "weapons": ["pistol", "frags", {"id": "ccw", "count": 2}],
-                    "options": [
-                        {"replaceWeapon": "pistol", "withWeapon": ["plasma_pistol"]},
-                        {"replaceWeapon": {"id": "ccw", "count": 2}, "withWeapon": [{"id": "energy_sword", "count": 2}, {"id": "energy_staff", "count": 2}, {"id": "energy_fist", "count": 2}]},
-                        {"replaceRule": {"id": "power", "x": 1}, "withRule": {"id": "power", "x": 2}}
-                    ],
-                    "min": 1,
-                    "max": 1
-                }
-            ]
-        },
-        "conscripted_sergeant": {
-            "name": "Conscripted Sergeant",
-            "description": "An inexperienced leader sent to the frontline with little training.",
-            "category": "command",
-            "models": [
-                {
-                    "name": "Conscripted Sergeant",
-                    "courage": 4,
-                    "shoot": 5,
-                    "fight": 5,
-                    "defense": 5,
-                    "reflexes": 4,
-                    "movement": 6,
-                    "rules": ["leader"],
-                    "weapons": ["defense_rifle", "frags", "ccw"],
-                    "options": [{"replaceWeapon": ["defense_rifle", "ccw"], "withWeapon": [["pistol", {"id": "ccw", "count": 2}]]}],
-                    "min": 1,
-                    "max": 1
-                }
-            ]
-        },
-        "conscripted_trooper": {
-            "name": "Conscripted Trooper",
-            "description": "An inexperienced soldier sent to the frontline with little training.",
-            "category": "core",
-            "models": [
-                {
-                    "name": "Conscripted Trooper",
-                    "courage": 4,
-                    "shoot": 5,
-                    "fight": 5,
-                    "defense": 5,
-                    "reflexes": 4,
-                    "movement": 6,
-                    "weapons": ["defense_rifle", "frags", "ccw"],
-                    "options": [{"addRule": "field_radio"}],
-                    "min": 1,
-                    "max": 1
-                }
-            ]
-        },
-        "infantry_sergeant": {
-            "name": "Trooper Sergeant",
-            "description": "The backbone of the imperial defense force.",
-            "category": "command",
-            "models": [
-                {
-                    "name": "Sergeant",
-                    "courage": 5,
-                    "shoot": 5,
-                    "fight": 5,
-                    "defense": 5,
-                    "reflexes": 5,
-                    "movement": 6,
-                    "rules": ["leader"],
-                    "weapons": ["defense_rifle", "frags", "ccw"],
-                    "options": [
-                        {"replaceWeapon": "defense_rifle", "withWeapon": ["marine_rifle"]},
-                        {"replaceWeapon": ["defense_rifle", "ccw"], "withWeapon": [["pistol", {"id": "ccw", "count": 2}]]},
-                        {"replaceWeapon": "pistol", "withWeapon": ["marine_pistol", "plasma_pistol"]},
-                        {
-                            "replaceWeapon": {"id": "ccw", "count": 2},
-                            "withWeapon": [
-                                {"id": "energy_sword", "count": 2},
-                                {"id": "energy_axe", "count": 2},
-                                {"id": "energy_mace", "count": 2},
-                                {"id": "energy_fist", "count": 2},
-                                {"id": "chainsword", "count": 2}
-                            ]
-                        }
-                    ],
-                    "min": 1,
-                    "max": 1
-                }
-            ]
-        },
-        "infantry_trooper": {
-            "name": "Trooper",
-            "description": "The backbone of the imperial defense force.",
-            "category": "core",
-            "models": [
-                {
-                    "name": "Trooper",
-                    "courage": 5,
-                    "shoot": 5,
-                    "fight": 5,
-                    "defense": 5,
-                    "reflexes": 5,
-                    "movement": 6,
-                    "weapons": ["defense_rifle", "frags", "ccw"],
-                    "options": [{"addRule": "field_radio"}],
-                    "min": 1,
-                    "max": 1
-                }
-            ]
-        },
-        "trooper_specialist": {
-            "name": "Trooper Specialist",
-            "description": "A soldier kitted out with a special weapon befitting the situation.",
-            "category": "specialist",
-            "models": [
-                {
-                    "name": "Trooper Specialist",
-                    "courage": 5,
-                    "shoot": 5,
-                    "fight": 5,
-                    "defense": 5,
-                    "reflexes": 5,
-                    "movement": 6,
-                    "weapons": ["flamethrower", "frags", "ccw"],
-                    "options": [{"addRule": "field_radio"}, {"replaceWeapon": "flamethrower", "withWeapon": ["grenade_launcher", "fusion_rifle", "plasma_rifle", "sniper_rifle"]}],
-                    "min": 1,
-                    "max": 1
-                }
-            ]
-        },
-        "veteran_sergeant": {
-            "name": "Veteran Sergeant",
-            "description": "A more experienced leader that has seen combat and survived.",
-            "category": "command",
-            "models": [
-                {
-                    "name": "Veteran Sergeant",
-                    "courage": 6,
-                    "shoot": 6,
-                    "fight": 5,
-                    "defense": 5,
-                    "reflexes": 5,
-                    "movement": 6,
-                    "rules": ["leader"],
-                    "weapons": ["defense_rifle", "frags", "ccw"],
-                    "options": [
-                        {"replaceWeapon": "defense_rifle", "withWeapon": ["marine_rifle", "shotgun"]},
-                        {"replaceWeapon": ["defense_rifle", "ccw"], "withWeapon": [["pistol", {"id": "ccw", "count": 2}]]},
-                        {"replaceWeapon": "pistol", "withWeapon": ["marine_pistol", "plasma_pistol"]},
-                        {
-                            "replaceWeapon": {"id": "ccw", "count": 2},
-                            "withWeapon": [
-                                {"id": "energy_sword", "count": 2},
-                                {"id": "energy_axe", "count": 2},
-                                {"id": "energy_mace", "count": 2},
-                                {"id": "energy_fist", "count": 2},
-                                {"id": "chainsword", "count": 2}
-                            ]
-                        },
-                        {"addRule": ["heavy_armor"]}
-                    ],
-                    "min": 1,
-                    "max": 1
-                }
-            ]
-        },
-        "veteran_trooper": {
-            "name": "Veteran Trooper",
-            "description": "A more experienced soldier that has seen combat and survived.",
-            "category": "core",
-            "models": [
-                {
-                    "name": "Veteran Trooper",
-                    "courage": 6,
-                    "shoot": 6,
-                    "fight": 5,
-                    "defense": 5,
-                    "reflexes": 5,
-                    "movement": 6,
-                    "weapons": ["defense_rifle", "frags", "ccw"],
-                    "options": [{"replaceWeapon": "defense_rifle", "withWeapon": "shotgun"}, {"addRule": ["field_radio", "heavy_armor"]}],
-                    "min": 1,
-                    "max": 1
-                }
-            ]
-        },
-        "veteran_trooper_specialist": {
-            "name": "Veteran Specialist",
-            "description": "A more experienced gunner that has seen combat and survived.",
-            "category": "specialist",
-            "models": [
-                {
-                    "name": "Veteran Specialist",
-                    "courage": 6,
-                    "shoot": 6,
-                    "fight": 5,
-                    "defense": 5,
-                    "reflexes": 5,
-                    "movement": 6,
-                    "weapons": ["flamethrower", "frags", "ccw"],
-                    "options": [{"replaceWeapon": "flamethrower", "withWeapon": ["grenade_launcher", "fusion_rifle", "plasma_rifle", "sniper_rifle"]}, {"addRule": ["field_radio", "heavy_armor"]}],
-                    "min": 1,
-                    "max": 1
-                }
-            ]
-        },
-        "support_trooper": {
-            "name": "Support Trooper",
-            "description": "A soldier used to support a commanding officer.",
-            "category": "specialist",
-            "models": [
-                {
-                    "name": "Support Trooper",
-                    "courage": 6,
-                    "shoot": 6,
-                    "fight": 5,
-                    "defense": 5,
-                    "movement": 6,
-                    "reflexes": 5,
-                    "weapons": ["defense_rifle", "frags", "ccw"],
-                    "options": [
-                        {"replaceWeapon": "defense_rifle", "withWeapon": ["shotgun", "flamethrower", "grenade_launcher", "fusion_rifle", "plasma_rifle", "sniper_rifle"]},
-                        {"addRule": ["banner", "medic", "field_radio"], "limit": 1},
-                        {"addRule": ["heavy_armor"]}
-                    ],
-                    "min": 1,
-                    "max": 1
-                }
-            ]
-        },
-        "support_trooper_heavy": {
-            "name": "Support Trooper Heavy",
-            "description": "A heavy weapon trooper, wielding a devastating flamethrower.",
-            "category": "heavy",
-            "models": [
-                {
-                    "name": "Support Trooper Heavy",
-                    "courage": 6,
-                    "shoot": 6,
-                    "fight": 5,
-                    "defense": 5,
-                    "movement": 6,
-                    "reflexes": 5,
-                    "weapons": ["heavy_flamethrower", "frags", "ccw"],
-                    "options": [{"addRule": "heavy_armor"}],
-                    "min": 1,
-                    "max": 1
-                }
-            ]
-        },
-        "artillerist": {
-            "name": "Artillerist",
-            "description": "A forward operator, calling down artillery barrages down on their foes.",
-            "category": "heavy",
-            "models": [
-                {
-                    "name": "Artillerist",
-                    "courage": 6,
-                    "shoot": 6,
-                    "fight": 5,
-                    "defense": 5,
-                    "movement": 6,
-                    "reflexes": 5,
-                    "weapons": ["defense_rifle", "frags", "ccw", "artillery_barrage"],
-                    "options": [{"addRule": ["heavy_armor"]}],
-                    "min": 1,
-                    "max": 1
-                }
-            ]
-        },
-        "heavy_weapon_squad": {
-            "name": "Heavy Weapon Team",
-            "description": "A heavy weapons teams loaded out to deal with a variety of targets.",
-            "category": "heavy",
-            "rules": [{"id": "wounds", "x": 2}],
-            "models": [
-                {
-                    "name": "Heavy Weapon Team",
-                    "courage": 5,
-                    "shoot": 5,
-                    "fight": 5,
-                    "defense": 5,
-                    "movement": 6,
-                    "reflexes": 5,
-                    "weapons": [{"id": "heavy_machinegun", "mount": ["Front"]}, "frags", {"id": "ccw", "count": 2}],
-                    "options": [
-                        {
-                            "replaceWeapon": {"id": "heavy_machinegun", "mount": ["Front"]},
-                            "withWeapon": [
-                                {"id": "missile_launcher", "mount": ["Front"]},
-                                {"id": "autocannon", "mount": ["Front"]},
-                                {"id": "laser_cannon", "mount": ["Front"]},
-                                {"id": "mortar", "mount": ["Front"]}
-                            ]
-                        }
-                    ],
-                    "min": 1,
-                    "max": 1
-                }
-            ]
-        },
-        "veteran_heavy_weapon_squad": {
-            "name": "Veteran Heavy Weapon Team",
-            "description": "A veteran heavy weapons teams loaded out to deal with a variety of targets.",
-            "category": "heavy",
-            "models": [
-                {
-                    "name": "Veteran Heavy Weapon Team",
-                    "courage": 6,
-                    "shoot": 6,
-                    "fight": 5,
-                    "defense": 5,
-                    "reflexes": 5,
-                    "movement": 6,
-                    "weapons": [{"id": "heavy_machinegun", "count": 1, "mount": ["Front"]}, "frags", {"id": "ccw", "count": 2}],
-                    "rules": [{"id": "wounds", "x": 2}],
-                    "options": [
-                        {
-                            "replaceWeapon": {"id": "heavy_machinegun", "mount": ["Front"]},
-                            "withWeapon": [
-                                {"id": "missile_launcher", "mount": ["Front"]},
-                                {"id": "autocannon", "mount": ["Front"]},
-                                {"id": "laser_cannon", "mount": ["Front"]},
-                                {"id": "mortar", "mount": ["Front"]}
-                            ]
-                        }
-                    ],
-                    "min": 1,
-                    "max": 1
-                }
-            ]
-        },
-        "sniper": {
-            "name": "Sniper",
-            "description": "A lone wolf, hunting high value targets with a deadly sniper rifle.",
-            "category": "specialist",
-            "rules": ["stealth", "scout"],
-            "models": [{"name": "Sniper", "courage": 5, "shoot": 5, "fight": 5, "defense": 5, "movement": 6, "reflexes": 5, "weapons": ["sniper_rifle", "frags", "ccw"], "min": 1, "max": 1}]
-        },
-        "stormtrooper_sergeant": {
-            "name": "Stormtrooper Sergeant",
-            "description": "Specially equipped and elite trained stormtrooper leader.",
-            "category": "command",
-            "keywords": ["Storm Trooper", "Infantry"],
-            "models": [
-                {
-                    "name": "Stormtrooper Sergeant",
-                    "courage": 5,
-                    "shoot": 6,
-                    "fight": 5,
-                    "defense": 6,
-                    "reflexes": 6,
-                    "movement": 6,
-                    "rules": ["leader"],
-                    "weapons": ["heavy_defense_rifle", "frags", "ccw"],
-                    "options": [
-                        {"replaceWeapon": ["heavy_defense_rifle", "ccw"], "withWeapon": [["marine_pistol", {"id": "ccw", "count": 2}]]},
-                        {"replaceWeapon": "marine_pistol", "withWeapon": ["plasma_pistol"]},
-                        {"replaceWeapon": {"id": "ccw", "count": 2}, "withWeapon": [{"id": "energy_sword", "count": 2}, {"id": "energy_fist", "count": 2}, {"id": "chainsword", "count": 2}]},
-                        {"addRule": {"id": "ambush", "name": "Orbital Insertion"}}
-                    ],
-                    "min": 1,
-                    "max": 1
-                }
-            ]
-        },
-        "stormtroopers": {
-            "name": "Stormtrooper",
-            "description": "Specially equipped and elite trained stormtrooper soldier.",
-            "category": "core",
-            "keywords": ["Storm Trooper", "Infantry"],
-            "models": [
-                {
-                    "name": "Stormtrooper",
-                    "courage": 5,
-                    "shoot": 6,
-                    "fight": 5,
-                    "defense": 6,
-                    "reflexes": 6,
-                    "movement": 6,
-                    "weapons": ["heavy_defense_rifle", "frags", "ccw"],
-                    "options": [{"addRule": [{"id": "ambush", "name": "Orbital Insertion"}, "field_radio"]}],
-                    "min": 1,
-                    "max": 1
-                }
-            ]
-        },
-        "stormtrooper_specialist": {
-            "name": "Stormtrooper Specialist",
-            "description": "Specially equipped and elite trained stormtrooper gunner.",
-            "category": "specialist",
-            "keywords": ["Storm Trooper", "Infantry"],
-            "models": [
-                {
-                    "name": "Stormtrooper Specialist",
-                    "courage": 5,
-                    "shoot": 6,
-                    "fight": 5,
-                    "defense": 6,
-                    "reflexes": 6,
-                    "movement": 6,
-                    "weapons": ["flamethrower", "frags", "ccw"],
-                    "options": [
-                        {"ArrayItem": "flamethrower", "withWeapon": ["volley_gun", "plasma_rifle", "grenade_launcher", "fusion_rifle", "sniper_rifle"]},
-                        {"addRule": [{"id": "ambush", "name": "Orbital Insertion"}, "field_radio"]}
-                    ],
-                    "min": 1,
-                    "max": 1
-                }
-            ]
-        },
-        "rider_sergeant": {
-            "name": "Rider Sergeant",
-            "description": "A leader mounted on either horseback or motorcycle for more mobility.",
-            "category": "command",
-            "rules": [{"id": "impact", "x": 1}, {"id": "wounds", "x": 2}, {"id": "leader_x", "x": "Infantry, Biker, Cavalry"}],
-            "models": [
-                {
-                    "name": "Rider Sergeant",
-                    "courage": 5,
-                    "shoot": 5,
-                    "fight": 5,
-                    "defense": 5,
-                    "movement": 8,
-                    "reflexes": 5,
-                    "weapons": ["pistol", "frags", {"id": "ccw", "count": 2}],
-                    "options": [
-                        {"replaceWeapon": "pistol", "withWeapon": ["marine_pistol", "plasma_pistol"]},
-                        {"replaceWeapon": {"id": "ccw", "count": 2}, "withWeapon": ["rider_lance", "chainsword", "energy_sword", "energy_axe", "energy_mace", "energy_fist"]}
-                    ],
-                    "min": 1,
-                    "max": 1
-                }
-            ]
-        },
-        "rider": {
-            "name": "Rider",
-            "description": "A soldier mounted on either horseback or motorcycle for more mobility.",
-            "category": "strike",
-            "rules": [{"id": "impact", "x": 1}, {"id": "wounds", "x": 2}],
-            "models": [
-                {
-                    "name": "Rider",
-                    "courage": 5,
-                    "shoot": 5,
-                    "fight": 5,
-                    "movement": 8,
-                    "defense": 5,
-                    "reflexes": 5,
-                    "weapons": ["pistol", "frags", {"id": "ccw", "count": 2}],
-                    "options": [
-                        {"replaceWeapon": "pistol", "withWeapon": ["flamethrower", "grenade_launcher", "fusion_rifle", "plasma_rifle"]},
-                        {"replaceWeapon": {"id": "ccw", "count": 2}, "withWeapon": ["rider_lance"]},
-                        {"addRule": "field_radio"}
-                    ],
-                    "min": 1,
-                    "max": 1
-                }
-            ]
-        },
-        "ogre_leader": {
-            "name": "Ogre Leader",
-            "description": "A super-strong large mutated leader.",
-            "category": "command",
-            "rules": [{"id": "wounds", "x": 2}],
-            "models": [
-                {
-                    "name": "Ogre Leader",
-                    "courage": 6,
-                    "shoot": 5,
-                    "fight": 6,
-                    "defense": 7,
-                    "movement": 6,
-                    "reflexes": 5,
-                    "rules": ["leader"],
-                    "weapons": ["heavy_shotgun", "frags", {"id": "heavy_ccw", "count": 2}],
-                    "options": [
-                        {"addRule": ["shield"]},
-                        {"replaceWeapon": "heavy_shotgun", "withWeapon": ["wrist_grenades"]},
-                        {"replaceWeapon": {"id": "heavy_ccw", "count": 2}, "withWeapon": ["ogre_maul"]}
-                    ],
-                    "min": 1,
-                    "max": 1
-                }
-            ]
-        },
-        "ogre": {
-            "name": "Ogre",
-            "description": "A super-strong large mutated creature.",
-            "category": "specialist",
-            "rules": [{"id": "wounds", "x": 2}],
-            "models": [
-                {
-                    "name": "Ogre",
-                    "courage": 6,
-                    "shoot": 5,
-                    "fight": 6,
-                    "movement": 6,
-                    "defense": 7,
-                    "reflexes": 5,
-                    "weapons": ["heavy_shotgun", "frags", {"id": "heavy_ccw", "count": 2}],
-                    "options": [
-                        {"addRule": ["shield"]},
-                        {"replaceWeapon": "heavy_shotgun", "withWeapon": ["wrist_grenades"]},
-                        {"replaceWeapon": {"id": "heavy_ccw", "count": 2}, "withWeapon": ["ogre_maul"]}
-                    ],
-                    "min": 1,
-                    "max": 1
-                }
-            ]
-        },
-        "sapper_sergeant": {
-            "name": "Sapper Sergeant",
-            "description": "A leader kitted out for close-range engagements and destroying emplacements.",
-            "category": "command",
-            "rules": ["ambush", "leader"],
-            "models": [
-                {
-                    "name": "Sapper Sergeant",
-                    "courage": 5,
-                    "shoot": 5,
-                    "fight": 5,
-                    "defense": 5,
-                    "reflexes": 5,
-                    "movement": 6,
-                    "weapons": ["shotgun", "frags", {"id": "ccw", "count": 2}],
-                    "options": [
-                        {"replaceWeapon": ["shotgun"], "withWeapon": ["defense_rifle", "marine_rifle"]},
-                        {"replaceWeapon": ["shotgun", "ccw"], "withWeapon": [["pistol", {"id": "ccw", "count": 2}]]},
-                        {"replaceWeapon": "pistol", "withWeapon": ["plasma_pistol", "marine_pistol"]},
-                        {"replaceWeapon": {"id": "ccw", "count": 2}, "withWeapon": [{"id": "energy_sword", "count": 2}, {"id": "energy_fist", "count": 2}, {"id": "chainsword", "count": 2}]},
-                        {
-                            "replaceWeapon": {"id": "ccw", "count": 2},
-                            "withWeapon": [
-                                {"id": "energy_sword", "count": 2},
-                                {"id": "energy_axe", "count": 2},
-                                {"id": "energy_mace", "count": 2},
-                                {"id": "energy_fist", "count": 2},
-                                {"id": "chainsword", "count": 2}
-                            ]
-                        }
-                    ],
-                    "min": 1,
-                    "max": 1
-                }
-            ]
-        },
-        "sapper": {
-            "name": "Sapper",
-            "description": "A soldier kitted out for close-range engagements and destroying emplacements.",
-            "category": "specialist",
-            "rules": ["ambush"],
-            "models": [{"name": "Sapper", "courage": 5, "shoot": 6, "fight": 5, "defense": 6, "reflexes": 5, "movement": 6, "weapons": ["shotgun", "frags", "ccw"], "min": 1, "max": 1}]
+  "id": "imperial_defense_force",
+  "name": "Imperial Defence Force",
+  "author": "guitarninja#5707",
+  "units": {
+    "commander": {
+      "name": "Company Commander",
+      "description": "Foot infantry commander of the imperial defense force.",
+      "category": "command",
+      "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "defense_force_tactics", "x": 2}, {"id": "wounds", "x": 2}],
+      "models": [
+        {
+          "name": "Company Commander",
+          "courage": 7,
+          "shoot": 6,
+          "fight": 6,
+          "defense": 6,
+          "reflexes": 6,
+          "movement": 6,
+          "weapons": ["defense_rifle", "frags", {"id": "ccw", "count": 2}],
+          "options": [
+            {"replaceWeapon": ["defense_rifle", {"id": "ccw", "count": 2}], "withWeapon": [["pistol", {"id": "ccw", "count": 3}]]},
+            {"replaceWeapon": "pistol", "withWeapon": ["marine_pistol", "plasma_pistol"]},
+            {"replaceWeapon": {"id": "ccw", "count": 3}, "withWeapon": [{"id": "energy_sword", "count": 3}, {"id": "energy_fist", "count": 3}, {"id": "chainsword", "count": 3}]}
+          ],
+          "min": 1,
+          "max": 1
         }
+      ]
     },
-    "weapons": {
-        "hammer_cannon": {"name": "The Hammer", "attacks": 1, "ap": 7, "short": 24, "medium": 48, "rules": [{"id": "blast", "x": 3}]},
-        "titan_hell_cannon": {"name": "Titan Hell Cannon", "attacks": 2, "short": 18, "medium": 36, "ap": 10, "rules": [{"id": "blast", "x": 3}]},
-        "titan_battle_cannon": {"name": "Titan Battle Cannon", "attacks": 2, "ap": 8, "short": 36, "medium": 72, "rules": [{"id": "blast", "x": 3}]},
-        "fusion_cannon": {"name": "Fusion Cannon", "attacks": 2, "short": 12, "medium": 24, "ap": 6, "rules": [{"id": "critical", "x": 1}]},
-        "power_bolt": {"medium": 18, "attacks": 1, "ap": 7},
-        "power_storm": {"medium": 9, "ap": 1, "attacks": 8},
-        "stun_grenades": {"name": "Stun Grenades", "attacks": 1, "short": 6, "rules": ["grenade", "stun"]}
-    },
-    "rules": {
-        "high_command": {"name": "High Command", "description": "This model may use Defense Force Tactics one additional time.", "points": 2},
-        "defense_force_tactics": {
-            "name": "Defense Force Tactics",
-            "inputs": ["x"],
-            "description": "When this unit is activated, choose up to X friendly _Infantry_ units within 6\" to receive one of the following bonuses until the end of the round: \n * Re-roll failed Accuracy tests of 9+ \n * Re-roll failed Strength tests of 9+ \n * +3\" of Movement",
-            "points": ["rule.x", {"multiply": 5}]
-        },
-        "ogre_shield": {"name": "Ogre Shield", "description_short": "+1 Save", "description": "This model gets +1 Save.", "points": 2},
-        "extra_armor": {"name": "Reinforced Hull", "description": "Subtract 1 from all Damage Chart rolls for this model.", "points": 10},
-        "heavy_armor": {"name": "Heavy Armor", "hidden": true, "description": "This model gets +1 Save.", "description_short": "Save +1", "points": 2}
-    },
-    "powers": {
-        "barrier": {"name": "Barrier", "description": "Target friendly unit within 12\" gets +1 Save the next time it is attacked.", "charge": 5},
-        "bolster": {"name": "Bolster", "description": "Target friendly unit within 12\" gets +1 Courage until the end of the round.", "charge": 6},
-        "crush": {"name": "Crush", "description": "Target enemy unit within 12\" takes 2 hits with AP(6).", "charge": 7}
-    },
-    "strategies": {
-        "take_cover": {
-            "name": "Take Cover",
-            "phase": "activation",
-            "description": "Use before taking Save rolls for an _Infantry_ unit. It gets +1 Save.",
-            "flavor": "Imperial Defense force soldiers are trained to take the best advantage of cover they can to survive.",
-            "cost": 2
-        },
-        "bravery": {
-            "name": "Bravery",
-            "phase": "activation",
-            "description": "Use when activating a unit. That unit gets +1 Courage.",
-            "flavor": "These soldiers are particularly brave in the face of many horrors.",
-            "cost": 1
-        },
-        "field_bandage": {
-            "subfactions": ["none", "goblin_army"],
-            "phase": "activation",
-            "name": "Field Bandage",
-            "flavor": "Imperial Defense troopers are trained to patch up injuries on the field to keep on fighting.",
-            "description": "Use before an _Infantry_ unit activates. It may ignore any critical injuries it has sustained for this activation.",
-            "cost": 1
-        },
-        "firing_ports": {
-            "name": "Firing Ports",
-            "subfactions": ["mechanized_focus"],
-            "phase": "activation",
-            "description": "Use when activating an _Infantry_ unit embarked in a Transport. That unit may make a single Shoot action.",
-            "flavor": "Mechanized forces usually have modified firing ports to allow infantry to fire their weapons while embarked.",
-            "cost": 1
-        },
-        "rapid_disembark": {
-            "name": "Rapid Disembark",
-            "subfactions": ["mechanized_focus"],
-            "phase": "activation",
-            "description": "Use when activating a transport _Vehicle_ unit. At any time during this unit's activation, all embarked units may make a free Move action to disembark. This may be used even after the transport has taken 2 Move actions.",
-            "flavor": "Rapidly disembarking is a difficult feat only for those expertly trained.",
-            "cost": 1
-        },
-        "well_built": {
-            "subfactions": ["mechanized_focus"],
-            "phase": "activation",
-            "name": "Well-Built",
-            "flavor": "Expertly built and well-maintained, this vehicle is prepared for battle.",
-            "description": "Use when a _Vehicle_ unit is targeted by an attack. For that attack, roll a D10 each time that unit is hit. On a 3 or less the hit is ignored.",
-            "cost": 2
-        },
-        "drilled_marksmen": {
-            "subfactions": ["marksmanship_focus"],
-            "phase": "activation",
-            "name": "Drilled Marksmen",
-            "description": "Use when an _Infantry_ unit Shoots. That unit gets +1 Accuracy if it did not move this round.",
-            "flavor": "Expertly drilled, these soldiers can aim and hit targets with considerable accuracy.",
-            "cost": 1
-        },
-        "focused_attack": {
-            "subfactions": ["marksmanship_focus"],
-            "phase": "activation",
-            "name": "Focused Attack",
-            "description": "Use when a unit hits an enemy with a shooting attack. The next unit to shoot at that target gets +1 Accuracy.",
-            "flavor": "Spotting targets for other units is sometimes left to the infantry but can be quite effective.",
-            "cost": 1
-        },
-        "ranked_fire": {
-            "subfactions": ["marksmanship_focus"],
-            "phase": "activation",
-            "name": "Ranked Fire",
-            "description": "Use when an _Infantry_ unit shoots. Successful hits cause 2 hits instead of 1.",
-            "flavor": "Sometimes infantry units will organize into multiple ranks, firing one after another in a devastating volley.",
-            "cost": 1
-        },
-        "ambush_tactics": {
-            "subfactions": ["combat_masters"],
-            "name": "Ambush",
-            "phase": "pre_game",
-            "description": "Up to half of any force's units, one point for each may be placed in _Ambush Reserves_ instead of deployed on the field.",
-            "cost": "1/per"
-        },
-        "superhuman_strength": {
-            "subfactions": ["combat_masters"],
-            "name": "Superhuman Strength",
-            "phase": "activation",
-            "flavor": "These soldiers have an unnatural ability to smash their targets.",
-            "description": "Use when an _Infantry_ unit performs a Fight action. Successful hits gain +1 AP.",
-            "cost": 1
-        },
-        "counter_attack": {
-            "subfactions": ["combat_masters"],
-            "name": "Counter Attack",
-            "phase": "activation",
-            "flavor": "Not afraid of a fight, these soldiers will Counter Attack upon their enemies.",
-            "description": "Use when an _Infantry_ unit is targeted by a Fight action. If that unit has not yet activated, it may perform a Counter Attack reaction without testing Initiative.",
-            "cost": 1
-        },
-        "last_stand": {
-            "subfactions": ["survival_focus"],
-            "name": "Last Stand",
-            "phase": "activation",
-            "flavor": "It takes incredible courage to fight to the last man.",
-            "description": "Use when an _Infantry_ unit is defeated. If it has not yet activated, it may make a free Shoot or Fight action before being removed as a casualty.",
-            "cost": 1
-        },
-        "hit_and_run": {
-            "subfactions": ["survival_focus"],
-            "name": "Hit and Run",
-            "phase": "activation",
-            "description": "Use after one of your _Infantry_ or _Biker_ units performs a Shoot or Fight action. You may immediately take a free move action.",
-            "flavor": "Hit and run tactics can sometimes be key to survival.",
-            "cost": 1
-        },
-        "at_all_costs": {
-            "subfactions": ["survival_focus"],
-            "name": "At All Costs",
-            "phase": "activation",
-            "description": "Use when an _Infantry_ unit takes a Break test. That test is automatically passed.",
-            "flavor": "These troopers are prepared to hold at all costs.",
-            "cost": 1
+    "stormtrooper_commander": {
+      "name": "Stormtrooper Commander",
+      "description": "Foot infantry commander of the elite storm troopers.",
+      "category": "command",
+      "keywords": ["Storm Trooper", "Infantry"],
+      "rules": [{"id": "stormtrooper_tactics", "x": 1}, {"id": "leader_x", "x": "Infantry"}, {"id": "wounds", "x": 2}],
+      "models": [
+        {
+          "name": "Stormtrooper Commander",
+          "courage": 7,
+          "shoot": 6,
+          "fight": 6,
+          "defense": 6,
+          "reflexes": 6,
+          "movement": 6,
+          "weapons": ["heavy_defense_rifle", "frags", {"id": "chainsword", "count": 2}],
+          "options": [
+            {"replaceWeapon": ["heavy_defense_rifle", {"id": "chainsword", "count": 2}], "withWeapon": [["marine_pistol", {"id": "chainsword", "count": 3}]]},
+            {"replaceWeapon": "marine_pistol", "withWeapon": ["plasma_pistol"]},
+            {"replaceWeapon": {"id": "chainsword", "count": 3}, "withWeapon": [{"id": "energy_sword", "count": 3}, {"id": "energy_fist", "count": 3}]},
+            {"replaceRule": {"id": "stormtrooper_tactics", "x": 1}, "withRule": {"id": "stormtrooper_tactics", "x": 2}}
+          ],
+          "min": 1,
+          "max": 1
         }
+      ]
     },
-    "relics": {
-        "strategist": {
-            "name": "Brilliant Strategist",
-            "rule": "legend_strategist",
-            "description": "Upgrade one Leader model with Brilliant Strategist.",
-            "flavor": "This model has an adept strategic mind.",
-            "points": 15
-        },
-        "high_command": {
-            "name": "High Command",
-            "rule": "high_command",
-            "description": "Upgrade one Leader model with Defense Force Tactics with High Command.",
-            "flavor": "This model has been promoted to a higher position in the defense force ranks.",
-            "points": 5
+    "platoon_commander": {
+      "name": "Platoon Commander",
+      "description": "Foot infantry platoon leader of the imperial defense force.",
+      "category": "command",
+      "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "defense_force_tactics", "x": 1}, {"id": "wounds", "x": 2}],
+      "models": [
+        {
+          "name": "Platoon Commander",
+          "courage": 7,
+          "shoot": 6,
+          "fight": 6,
+          "defense": 6,
+          "reflexes": 6,
+          "movement": 6,
+          "weapons": ["defense_rifle", "frags", {"id": "ccw", "count": 2}],
+          "options": [
+            {"replaceWeapon": ["defense_rifle", {"id": "ccw", "count": 2}], "withWeapon": [["pistol", {"id": "ccw", "count": 3}]]},
+            {"replaceWeapon": "pistol", "withWeapon": ["marine_pistol", "plasma_pistol"]},
+            {"replaceWeapon": {"id": "ccw", "count": 3}, "withWeapon": [{"id": "energy_sword", "count": 3}, {"id": "energy_fist", "count": 3}, {"id": "chainsword", "count": 3}]}
+          ],
+          "min": 1,
+          "max": 1
         }
+      ]
     },
-    "buyLinks": [
-        {"name": "DavikDesigns", "link": "https://davikdesigns.gumroad.com/l/wAKtHk"},
-        {"name": "Games Workshop", "link": "https://www.games-workshop.com/en-US/Warhammer-40-000?N=2562756967+1138996955"},
-        {"name": "Victoria Miniatures", "link": "https://victoriaminiatures.com/"},
-        {"name": "The Makers Cult", "link": "https://www.cgtrader.com/3d-print-models/guard?author=themakerscult"}
-    ]
+    "commissar": {
+      "name": "Commissar",
+      "description": "A field officer assigned to keep soldiers motivated and in line.",
+      "category": "command",
+      "rules": [{"id": "leader_x", "x": "Infantry"}, "no_retreat", {"id": "wounds", "x": 2}],
+      "models": [
+        {
+          "name": "Commissar",
+          "courage": 7,
+          "shoot": 6,
+          "fight": 6,
+          "defense": 6,
+          "reflexes": 6,
+          "movement": 6,
+          "weapons": ["pistol", "frags", {"id": "ccw", "count": 3}],
+          "options": [
+            {"replaceWeapon": "pistol", "withWeapon": ["marine_pistol", "plasma_pistol"]},
+            {"replaceWeapon": {"id": "ccw", "count": 3}, "withWeapon": [{"id": "energy_sword", "count": 3}, {"id": "energy_fist", "count": 3}, {"id": "chainsword", "count": 3}]}
+          ],
+          "min": 1,
+          "max": 1
+        }
+      ]
+    },
+    "psychic": {
+      "name": "Psychic",
+      "description": "A trained psychic adept at casting powers and supporting troops.",
+      "category": "command",
+      "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "power", "x": 1}, {"id": "wounds", "x": 2}],
+      "models": [
+        {
+          "name": "Psychic",
+          "courage": 5,
+          "shoot": 6,
+          "fight": 6,
+          "defense": 6,
+          "reflexes": 5,
+          "movement": 6,
+          "weapons": ["pistol", "frags", {"id": "ccw", "count": 2}],
+          "options": [
+            {"replaceWeapon": "pistol", "withWeapon": ["plasma_pistol"]},
+            {"replaceWeapon": {"id": "ccw", "count": 2}, "withWeapon": [{"id": "energy_sword", "count": 2}, {"id": "energy_staff", "count": 2}, {"id": "energy_fist", "count": 2}]},
+            {"replaceRule": {"id": "power", "x": 1}, "withRule": {"id": "power", "x": 2}}
+          ],
+          "min": 1,
+          "max": 1
+        }
+      ]
+    },
+    "conscripted_sergeant": {
+      "name": "Conscripted Sergeant",
+      "description": "An inexperienced leader sent to the frontline with little training.",
+      "category": "command",
+      "models": [
+        {
+          "name": "Conscripted Sergeant",
+          "courage": 4,
+          "shoot": 5,
+          "fight": 5,
+          "defense": 5,
+          "reflexes": 4,
+          "movement": 6,
+          "rules": ["leader"],
+          "weapons": ["defense_rifle", "frags", "ccw"],
+          "options": [{"replaceWeapon": ["defense_rifle", "ccw"], "withWeapon": [["pistol", {"id": "ccw", "count": 2}]]}],
+          "min": 1,
+          "max": 1
+        }
+      ]
+    },
+    "conscripted_trooper": {
+      "name": "Conscripted Trooper",
+      "description": "An inexperienced soldier sent to the frontline with little training.",
+      "category": "core",
+      "models": [
+        {
+          "name": "Conscripted Trooper",
+          "courage": 4,
+          "shoot": 5,
+          "fight": 5,
+          "defense": 5,
+          "reflexes": 4,
+          "movement": 6,
+          "weapons": ["defense_rifle", "frags", "ccw"],
+          "options": [{"addRule": "field_radio"}],
+          "min": 1,
+          "max": 1
+        }
+      ]
+    },
+    "infantry_sergeant": {
+      "name": "Trooper Sergeant",
+      "description": "The backbone of the imperial defense force.",
+      "category": "command",
+      "models": [
+        {
+          "name": "Sergeant",
+          "courage": 5,
+          "shoot": 5,
+          "fight": 5,
+          "defense": 5,
+          "reflexes": 5,
+          "movement": 6,
+          "rules": ["leader"],
+          "weapons": ["defense_rifle", "frags", "ccw"],
+          "options": [
+            {"replaceWeapon": "defense_rifle", "withWeapon": ["marine_rifle"]},
+            {"replaceWeapon": ["defense_rifle", "ccw"], "withWeapon": [["pistol", {"id": "ccw", "count": 2}]]},
+            {"replaceWeapon": "pistol", "withWeapon": ["marine_pistol", "plasma_pistol"]},
+            {
+              "replaceWeapon": {"id": "ccw", "count": 2},
+              "withWeapon": [
+                {"id": "energy_sword", "count": 2},
+                {"id": "energy_axe", "count": 2},
+                {"id": "energy_mace", "count": 2},
+                {"id": "energy_fist", "count": 2},
+                {"id": "chainsword", "count": 2}
+              ]
+            }
+          ],
+          "min": 1,
+          "max": 1
+        }
+      ]
+    },
+    "infantry_trooper": {
+      "name": "Trooper",
+      "description": "The backbone of the imperial defense force.",
+      "category": "core",
+      "models": [
+        {
+          "name": "Trooper",
+          "courage": 5,
+          "shoot": 5,
+          "fight": 5,
+          "defense": 5,
+          "reflexes": 5,
+          "movement": 6,
+          "weapons": ["defense_rifle", "frags", "ccw"],
+          "options": [{"addRule": "field_radio"}],
+          "min": 1,
+          "max": 1
+        }
+      ]
+    },
+    "trooper_specialist": {
+      "name": "Trooper Specialist",
+      "description": "A soldier kitted out with a special weapon befitting the situation.",
+      "category": "specialist",
+      "models": [
+        {
+          "name": "Trooper Specialist",
+          "courage": 5,
+          "shoot": 5,
+          "fight": 5,
+          "defense": 5,
+          "reflexes": 5,
+          "movement": 6,
+          "weapons": ["flamethrower", "frags", "ccw"],
+          "options": [{"addRule": "field_radio"}, {"replaceWeapon": "flamethrower", "withWeapon": ["grenade_launcher", "fusion_rifle", "plasma_rifle", "sniper_rifle"]}],
+          "min": 1,
+          "max": 1
+        }
+      ]
+    },
+    "veteran_sergeant": {
+      "name": "Veteran Sergeant",
+      "description": "A more experienced leader that has seen combat and survived.",
+      "category": "command",
+      "models": [
+        {
+          "name": "Veteran Sergeant",
+          "courage": 6,
+          "shoot": 6,
+          "fight": 5,
+          "defense": 5,
+          "reflexes": 5,
+          "movement": 6,
+          "rules": ["leader"],
+          "weapons": ["defense_rifle", "frags", "ccw"],
+          "options": [
+            {"replaceWeapon": "defense_rifle", "withWeapon": ["marine_rifle", "shotgun"]},
+            {"replaceWeapon": ["defense_rifle", "ccw"], "withWeapon": [["pistol", {"id": "ccw", "count": 2}]]},
+            {"replaceWeapon": "pistol", "withWeapon": ["marine_pistol", "plasma_pistol"]},
+            {
+              "replaceWeapon": {"id": "ccw", "count": 2},
+              "withWeapon": [
+                {"id": "energy_sword", "count": 2},
+                {"id": "energy_axe", "count": 2},
+                {"id": "energy_mace", "count": 2},
+                {"id": "energy_fist", "count": 2},
+                {"id": "chainsword", "count": 2}
+              ]
+            },
+            {"addRule": ["heavy_armor"]}
+          ],
+          "min": 1,
+          "max": 1
+        }
+      ]
+    },
+    "veteran_trooper": {
+      "name": "Veteran Trooper",
+      "description": "A more experienced soldier that has seen combat and survived.",
+      "category": "core",
+      "models": [
+        {
+          "name": "Veteran Trooper",
+          "courage": 6,
+          "shoot": 6,
+          "fight": 5,
+          "defense": 5,
+          "reflexes": 5,
+          "movement": 6,
+          "weapons": ["defense_rifle", "frags", "ccw"],
+          "options": [{"replaceWeapon": "defense_rifle", "withWeapon": "shotgun"}, {"addRule": ["field_radio", "heavy_armor"]}],
+          "min": 1,
+          "max": 1
+        }
+      ]
+    },
+    "veteran_trooper_specialist": {
+      "name": "Veteran Specialist",
+      "description": "A more experienced gunner that has seen combat and survived.",
+      "category": "specialist",
+      "models": [
+        {
+          "name": "Veteran Specialist",
+          "courage": 6,
+          "shoot": 6,
+          "fight": 5,
+          "defense": 5,
+          "reflexes": 5,
+          "movement": 6,
+          "weapons": ["flamethrower", "frags", "ccw"],
+          "options": [{"replaceWeapon": "flamethrower", "withWeapon": ["grenade_launcher", "fusion_rifle", "plasma_rifle", "sniper_rifle"]}, {"addRule": ["field_radio", "heavy_armor"]}],
+          "min": 1,
+          "max": 1
+        }
+      ]
+    },
+    "support_trooper": {
+      "name": "Support Trooper",
+      "description": "A soldier used to support a commanding officer.",
+      "category": "specialist",
+      "models": [
+        {
+          "name": "Support Trooper",
+          "courage": 6,
+          "shoot": 6,
+          "fight": 5,
+          "defense": 5,
+          "movement": 6,
+          "reflexes": 5,
+          "weapons": ["defense_rifle", "frags", "ccw"],
+          "options": [
+            {"replaceWeapon": "defense_rifle", "withWeapon": ["shotgun", "flamethrower", "grenade_launcher", "fusion_rifle", "plasma_rifle", "sniper_rifle"]},
+            {"addRule": ["banner", "medic", "field_radio"], "limit": 1},
+            {"addRule": ["heavy_armor"]}
+          ],
+          "min": 1,
+          "max": 1
+        }
+      ]
+    },
+    "support_trooper_heavy": {
+      "name": "Support Trooper Heavy",
+      "description": "A heavy weapon trooper, wielding a devastating flamethrower.",
+      "category": "heavy",
+      "models": [
+        {
+          "name": "Support Trooper Heavy",
+          "courage": 6,
+          "shoot": 6,
+          "fight": 5,
+          "defense": 5,
+          "movement": 6,
+          "reflexes": 5,
+          "weapons": ["heavy_flamethrower", "frags", "ccw"],
+          "options": [{"addRule": "heavy_armor"}],
+          "min": 1,
+          "max": 1
+        }
+      ]
+    },
+    "artillerist": {
+      "name": "Artillerist",
+      "description": "A forward operator, calling down artillery barrages down on their foes.",
+      "category": "heavy",
+      "models": [
+        {
+          "name": "Artillerist",
+          "courage": 6,
+          "shoot": 6,
+          "fight": 5,
+          "defense": 5,
+          "movement": 6,
+          "reflexes": 5,
+          "weapons": ["defense_rifle", "frags", "ccw", "artillery_barrage"],
+          "options": [{"addRule": ["heavy_armor"]}],
+          "min": 1,
+          "max": 1
+        }
+      ]
+    },
+    "heavy_weapon_squad": {
+      "name": "Heavy Weapon Team",
+      "description": "A heavy weapons teams loaded out to deal with a variety of targets.",
+      "category": "heavy",
+      "rules": [{"id": "wounds", "x": 2}],
+      "models": [
+        {
+          "name": "Heavy Weapon Team",
+          "courage": 5,
+          "shoot": 5,
+          "fight": 5,
+          "defense": 5,
+          "movement": 6,
+          "reflexes": 5,
+          "weapons": [{"id": "heavy_machinegun", "mount": ["Front"]}, "frags", {"id": "ccw", "count": 2}],
+          "options": [
+            {
+              "replaceWeapon": {"id": "heavy_machinegun", "mount": ["Front"]},
+              "withWeapon": [{"id": "missile_launcher", "mount": ["Front"]}, {"id": "autocannon", "mount": ["Front"]}, {"id": "laser_cannon", "mount": ["Front"]}, {"id": "mortar", "mount": ["Front"]}]
+            }
+          ],
+          "min": 1,
+          "max": 1
+        }
+      ]
+    },
+    "veteran_heavy_weapon_squad": {
+      "name": "Veteran Heavy Weapon Team",
+      "description": "A veteran heavy weapons teams loaded out to deal with a variety of targets.",
+      "category": "heavy",
+      "models": [
+        {
+          "name": "Veteran Heavy Weapon Team",
+          "courage": 6,
+          "shoot": 6,
+          "fight": 5,
+          "defense": 5,
+          "reflexes": 5,
+          "movement": 6,
+          "weapons": [{"id": "heavy_machinegun", "count": 1, "mount": ["Front"]}, "frags", {"id": "ccw", "count": 2}],
+          "rules": [{"id": "wounds", "x": 2}],
+          "options": [
+            {
+              "replaceWeapon": {"id": "heavy_machinegun", "mount": ["Front"]},
+              "withWeapon": [{"id": "missile_launcher", "mount": ["Front"]}, {"id": "autocannon", "mount": ["Front"]}, {"id": "laser_cannon", "mount": ["Front"]}, {"id": "mortar", "mount": ["Front"]}]
+            }
+          ],
+          "min": 1,
+          "max": 1
+        }
+      ]
+    },
+    "sniper": {
+      "name": "Sniper",
+      "description": "A lone wolf, hunting high value targets with a deadly sniper rifle.",
+      "category": "specialist",
+      "rules": ["stealth", "scout"],
+      "models": [{"name": "Sniper", "courage": 5, "shoot": 5, "fight": 5, "defense": 5, "movement": 6, "reflexes": 5, "weapons": ["sniper_rifle", "frags", "ccw"], "min": 1, "max": 1}]
+    },
+    "stormtrooper_sergeant": {
+      "name": "Stormtrooper Sergeant",
+      "description": "Specially equipped and elite trained stormtrooper leader.",
+      "category": "command",
+      "keywords": ["Storm Trooper", "Infantry"],
+      "models": [
+        {
+          "name": "Stormtrooper Sergeant",
+          "courage": 5,
+          "shoot": 6,
+          "fight": 5,
+          "defense": 6,
+          "reflexes": 6,
+          "movement": 6,
+          "rules": ["leader"],
+          "weapons": ["heavy_defense_rifle", "frags", "ccw"],
+          "options": [
+            {"replaceWeapon": ["heavy_defense_rifle", "ccw"], "withWeapon": [["marine_pistol", {"id": "ccw", "count": 2}]]},
+            {"replaceWeapon": "marine_pistol", "withWeapon": ["plasma_pistol"]},
+            {"replaceWeapon": {"id": "ccw", "count": 2}, "withWeapon": [{"id": "energy_sword", "count": 2}, {"id": "energy_fist", "count": 2}, {"id": "chainsword", "count": 2}]},
+            {"addRule": {"id": "ambush", "name": "Orbital Insertion"}}
+          ],
+          "min": 1,
+          "max": 1
+        }
+      ]
+    },
+    "stormtroopers": {
+      "name": "Stormtrooper",
+      "description": "Specially equipped and elite trained stormtrooper soldier.",
+      "category": "core",
+      "keywords": ["Storm Trooper", "Infantry"],
+      "models": [
+        {
+          "name": "Stormtrooper",
+          "courage": 5,
+          "shoot": 6,
+          "fight": 5,
+          "defense": 6,
+          "reflexes": 6,
+          "movement": 6,
+          "weapons": ["heavy_defense_rifle", "frags", "ccw"],
+          "options": [{"addRule": [{"id": "ambush", "name": "Orbital Insertion"}, "field_radio"]}],
+          "min": 1,
+          "max": 1
+        }
+      ]
+    },
+    "stormtrooper_specialist": {
+      "name": "Stormtrooper Specialist",
+      "description": "Specially equipped and elite trained stormtrooper gunner.",
+      "category": "specialist",
+      "keywords": ["Storm Trooper", "Infantry"],
+      "models": [
+        {
+          "name": "Stormtrooper Specialist",
+          "courage": 5,
+          "shoot": 6,
+          "fight": 5,
+          "defense": 6,
+          "reflexes": 6,
+          "movement": 6,
+          "weapons": ["flamethrower", "frags", "ccw"],
+          "options": [
+            {"ArrayItem": "flamethrower", "withWeapon": ["volley_gun", "plasma_rifle", "grenade_launcher", "fusion_rifle", "sniper_rifle"]},
+            {"addRule": [{"id": "ambush", "name": "Orbital Insertion"}, "field_radio"]}
+          ],
+          "min": 1,
+          "max": 1
+        }
+      ]
+    },
+    "rider_sergeant": {
+      "name": "Rider Sergeant",
+      "description": "A leader mounted on either horseback or motorcycle for more mobility.",
+      "category": "command",
+      "rules": [{"id": "impact", "x": 1}, {"id": "wounds", "x": 2}, {"id": "leader_x", "x": "Infantry, Biker, Cavalry"}],
+      "models": [
+        {
+          "name": "Rider Sergeant",
+          "courage": 5,
+          "shoot": 5,
+          "fight": 5,
+          "defense": 5,
+          "movement": 8,
+          "reflexes": 5,
+          "weapons": ["pistol", "frags", {"id": "ccw", "count": 2}],
+          "options": [
+            {"replaceWeapon": "pistol", "withWeapon": ["marine_pistol", "plasma_pistol"]},
+            {"replaceWeapon": {"id": "ccw", "count": 2}, "withWeapon": ["rider_lance", "chainsword", "energy_sword", "energy_axe", "energy_mace", "energy_fist"]}
+          ],
+          "min": 1,
+          "max": 1
+        }
+      ]
+    },
+    "rider": {
+      "name": "Rider",
+      "description": "A soldier mounted on either horseback or motorcycle for more mobility.",
+      "category": "strike",
+      "rules": [{"id": "impact", "x": 1}, {"id": "wounds", "x": 2}],
+      "models": [
+        {
+          "name": "Rider",
+          "courage": 5,
+          "shoot": 5,
+          "fight": 5,
+          "movement": 8,
+          "defense": 5,
+          "reflexes": 5,
+          "weapons": ["pistol", "frags", {"id": "ccw", "count": 2}],
+          "options": [
+            {"replaceWeapon": "pistol", "withWeapon": ["flamethrower", "grenade_launcher", "fusion_rifle", "plasma_rifle"]},
+            {"replaceWeapon": {"id": "ccw", "count": 2}, "withWeapon": ["rider_lance"]},
+            {"addRule": "field_radio"}
+          ],
+          "min": 1,
+          "max": 1
+        }
+      ]
+    },
+    "ogre_leader": {
+      "name": "Ogre Leader",
+      "description": "A super-strong large mutated leader.",
+      "category": "command",
+      "rules": [{"id": "wounds", "x": 2}],
+      "models": [
+        {
+          "name": "Ogre Leader",
+          "courage": 6,
+          "shoot": 5,
+          "fight": 6,
+          "defense": 7,
+          "movement": 6,
+          "reflexes": 5,
+          "rules": ["leader"],
+          "weapons": ["heavy_shotgun", "frags", {"id": "heavy_ccw", "count": 2}],
+          "options": [{"addRule": ["shield"]}, {"replaceWeapon": "heavy_shotgun", "withWeapon": ["wrist_grenades"]}, {"replaceWeapon": {"id": "heavy_ccw", "count": 2}, "withWeapon": ["ogre_maul"]}],
+          "min": 1,
+          "max": 1
+        }
+      ]
+    },
+    "ogre": {
+      "name": "Ogre",
+      "description": "A super-strong large mutated creature.",
+      "category": "specialist",
+      "rules": [{"id": "wounds", "x": 2}],
+      "models": [
+        {
+          "name": "Ogre",
+          "courage": 6,
+          "shoot": 5,
+          "fight": 6,
+          "movement": 6,
+          "defense": 7,
+          "reflexes": 5,
+          "weapons": ["heavy_shotgun", "frags", {"id": "heavy_ccw", "count": 2}],
+          "options": [{"addRule": ["shield"]}, {"replaceWeapon": "heavy_shotgun", "withWeapon": ["wrist_grenades"]}, {"replaceWeapon": {"id": "heavy_ccw", "count": 2}, "withWeapon": ["ogre_maul"]}],
+          "min": 1,
+          "max": 1
+        }
+      ]
+    },
+    "engineer_leader": {
+      "name": "Combat Engineer Sergeant",
+      "description": "A combat engineer sergeant kitted out for close-range engagements and destroying emplacements.",
+      "category": "leader",
+      "models": [
+        {
+          "name": "Combat Engineer Sergeant",
+          "courage": 5,
+          "shoot": 5,
+          "fight": 5,
+          "defense": 6,
+          "reflexes": 5,
+          "movement": 6,
+          "weapons": ["shotgun", "frags", {"id": "ccw", "count": 2}],
+          "rules": ["leader"],
+          "options": [
+            {"replaceWeapon": ["shotgun"], "withWeapon": ["defense_rifle", "marine_rifle"]},
+            {"replaceWeapon": ["shotgun", "ccw"], "withWeapon": [["pistol", {"id": "ccw", "count": 2}]]},
+            {"replaceWeapon": "pistol", "withWeapon": ["plasma_pistol", "marine_pistol"]},
+            {
+              "replaceWeapon": {"id": "ccw", "count": 2},
+              "withWeapon": [
+                {"id": "energy_sword", "count": 2},
+                {"id": "energy_axe", "count": 2},
+                {"id": "energy_mace", "count": 2},
+                {"id": "energy_fist", "count": 2},
+                {"id": "chainsword", "count": 2}
+              ]
+            },
+            {"addRule": "engineer"}
+          ],
+          "min": 1,
+          "max": 1
+        }
+      ]
+    },
+    "engineer": {
+      "name": "Combat Engineer",
+      "description": "A combat engineer kitted out for close-range engagements and destroying emplacements.",
+      "category": "specialist",
+      "models": [
+        {
+          "name": "Combat Engineer",
+          "courage": 5,
+          "shoot": 5,
+          "fight": 5,
+          "defense": 6,
+          "reflexes": 5,
+          "movement": 6,
+          "weapons": ["shotgun", "frags", {"id": "ccw", "count": 2}],
+          "options": [{"replaceWeapon": "defense_rifle", "withWeapon": ["flamethrower", "grenade_launcher", "fusion_rifle", "plasma_rifle", "heavy_flamethrower"]}],
+          "min": 1,
+          "max": 1
+        }
+      ]
+    }
+  },
+  "weapons": {
+    "hammer_cannon": {"name": "The Hammer", "attacks": 1, "ap": 7, "short": 24, "medium": 48, "rules": [{"id": "blast", "x": 3}]},
+    "titan_hell_cannon": {"name": "Titan Hell Cannon", "attacks": 2, "short": 18, "medium": 36, "ap": 10, "rules": [{"id": "blast", "x": 3}]},
+    "titan_battle_cannon": {"name": "Titan Battle Cannon", "attacks": 2, "ap": 8, "short": 36, "medium": 72, "rules": [{"id": "blast", "x": 3}]},
+    "fusion_cannon": {"name": "Fusion Cannon", "attacks": 2, "short": 12, "medium": 24, "ap": 6, "rules": [{"id": "critical", "x": 1}]},
+    "power_bolt": {"medium": 18, "attacks": 1, "ap": 7},
+    "power_storm": {"medium": 9, "ap": 1, "attacks": 8},
+    "stun_grenades": {"name": "Stun Grenades", "attacks": 1, "short": 6, "rules": ["grenade", "stun"]}
+  },
+  "rules": {
+    "high_command": {"name": "High Command", "description": "This model may use Defense Force Tactics one additional time.", "points": 2},
+    "defense_force_tactics": {
+      "name": "Defense Force Tactics",
+      "inputs": ["x"],
+      "description": "When this unit is activated, choose up to X friendly _Infantry_ units within 6\" to receive one of the following bonuses until the end of the round: \n * Re-roll failed Accuracy tests of 9+ \n * Re-roll failed Strength tests of 9+ \n * +3\" of Movement",
+      "points": ["rule.x", {"multiply": 5}]
+    },
+    "ogre_shield": {"name": "Ogre Shield", "description_short": "+1 Save", "description": "This model gets +1 Save.", "points": 2},
+    "extra_armor": {"name": "Reinforced Hull", "description": "Subtract 1 from all Damage Chart rolls for this model.", "points": 10},
+    "heavy_armor": {"name": "Heavy Armor", "hidden": true, "description": "This model gets +1 Save.", "description_short": "Save +1", "points": 2}
+  },
+  "powers": {
+    "barrier": {"name": "Barrier", "description": "Target friendly unit within 12\" gets +1 Save the next time it is attacked.", "charge": 5},
+    "bolster": {"name": "Bolster", "description": "Target friendly unit within 12\" gets +1 Courage until the end of the round.", "charge": 6},
+    "crush": {"name": "Crush", "description": "Target enemy unit within 12\" takes 2 hits with AP(6).", "charge": 7}
+  },
+  "strategies": {
+    "take_cover": {
+      "name": "Take Cover",
+      "phase": "activation",
+      "description": "Use before taking Save rolls for an _Infantry_ unit. It gets +1 Save.",
+      "flavor": "Imperial Defense force soldiers are trained to take the best advantage of cover they can to survive.",
+      "cost": 2
+    },
+    "bravery": {
+      "name": "Bravery",
+      "phase": "activation",
+      "description": "Use when activating a unit. That unit gets +1 Courage.",
+      "flavor": "These soldiers are particularly brave in the face of many horrors.",
+      "cost": 1
+    },
+    "field_bandage": {
+      "subfactions": ["none", "goblin_army"],
+      "phase": "activation",
+      "name": "Field Bandage",
+      "flavor": "Imperial Defense troopers are trained to patch up injuries on the field to keep on fighting.",
+      "description": "Use before an _Infantry_ unit activates. It may ignore any critical injuries it has sustained for this activation.",
+      "cost": 1
+    },
+    "firing_ports": {
+      "name": "Firing Ports",
+      "subfactions": ["mechanized_focus"],
+      "phase": "activation",
+      "description": "Use when activating an _Infantry_ unit embarked in a Transport. That unit may make a single Shoot action.",
+      "flavor": "Mechanized forces usually have modified firing ports to allow infantry to fire their weapons while embarked.",
+      "cost": 1
+    },
+    "rapid_disembark": {
+      "name": "Rapid Disembark",
+      "subfactions": ["mechanized_focus"],
+      "phase": "activation",
+      "description": "Use when activating a transport _Vehicle_ unit. At any time during this unit's activation, all embarked units may make a free Move action to disembark. This may be used even after the transport has taken 2 Move actions.",
+      "flavor": "Rapidly disembarking is a difficult feat only for those expertly trained.",
+      "cost": 1
+    },
+    "well_built": {
+      "subfactions": ["mechanized_focus"],
+      "phase": "activation",
+      "name": "Well-Built",
+      "flavor": "Expertly built and well-maintained, this vehicle is prepared for battle.",
+      "description": "Use when a _Vehicle_ unit is targeted by an attack. For that attack, roll a D10 each time that unit is hit. On a 3 or less the hit is ignored.",
+      "cost": 2
+    },
+    "drilled_marksmen": {
+      "subfactions": ["marksmanship_focus"],
+      "phase": "activation",
+      "name": "Drilled Marksmen",
+      "description": "Use when an _Infantry_ unit Shoots. That unit gets +1 Accuracy if it did not move this round.",
+      "flavor": "Expertly drilled, these soldiers can aim and hit targets with considerable accuracy.",
+      "cost": 1
+    },
+    "focused_attack": {
+      "subfactions": ["marksmanship_focus"],
+      "phase": "activation",
+      "name": "Focused Attack",
+      "description": "Use when a unit hits an enemy with a shooting attack. The next unit to shoot at that target gets +1 Accuracy.",
+      "flavor": "Spotting targets for other units is sometimes left to the infantry but can be quite effective.",
+      "cost": 1
+    },
+    "ranked_fire": {
+      "subfactions": ["marksmanship_focus"],
+      "phase": "activation",
+      "name": "Ranked Fire",
+      "description": "Use when an _Infantry_ unit shoots. Successful hits cause 2 hits instead of 1.",
+      "flavor": "Sometimes infantry units will organize into multiple ranks, firing one after another in a devastating volley.",
+      "cost": 1
+    },
+    "ambush_tactics": {
+      "subfactions": ["combat_masters"],
+      "name": "Ambush",
+      "phase": "pre_game",
+      "description": "Up to half of any force's units, one point for each may be placed in _Ambush Reserves_ instead of deployed on the field.",
+      "cost": "1/per"
+    },
+    "superhuman_strength": {
+      "subfactions": ["combat_masters"],
+      "name": "Superhuman Strength",
+      "phase": "activation",
+      "flavor": "These soldiers have an unnatural ability to smash their targets.",
+      "description": "Use when an _Infantry_ unit performs a Fight action. Successful hits gain +1 AP.",
+      "cost": 1
+    },
+    "counter_attack": {
+      "subfactions": ["combat_masters"],
+      "name": "Counter Attack",
+      "phase": "activation",
+      "flavor": "Not afraid of a fight, these soldiers will Counter Attack upon their enemies.",
+      "description": "Use when an _Infantry_ unit is targeted by a Fight action. If that unit has not yet activated, it may perform a Counter Attack reaction without testing Initiative.",
+      "cost": 1
+    },
+    "last_stand": {
+      "subfactions": ["survival_focus"],
+      "name": "Last Stand",
+      "phase": "activation",
+      "flavor": "It takes incredible courage to fight to the last man.",
+      "description": "Use when an _Infantry_ unit is defeated. If it has not yet activated, it may make a free Shoot or Fight action before being removed as a casualty.",
+      "cost": 1
+    },
+    "hit_and_run": {
+      "subfactions": ["survival_focus"],
+      "name": "Hit and Run",
+      "phase": "activation",
+      "description": "Use after one of your _Infantry_ or _Biker_ units performs a Shoot or Fight action. You may immediately take a free move action.",
+      "flavor": "Hit and run tactics can sometimes be key to survival.",
+      "cost": 1
+    },
+    "at_all_costs": {
+      "subfactions": ["survival_focus"],
+      "name": "At All Costs",
+      "phase": "activation",
+      "description": "Use when an _Infantry_ unit takes a Break test. That test is automatically passed.",
+      "flavor": "These troopers are prepared to hold at all costs.",
+      "cost": 1
+    },
+    "fearless": {
+      "subfactions": ["entrenchment_focus"],
+      "name": "Fearless",
+      "phase": "activation",
+      "description": "Use before activating a unit. That unit may immediately remove up to 2 Shock.",
+      "flavor": "These trench fighters will not back down, even in the toughest situations.",
+      "cost": 1
+    },
+    "dig_in": {
+      "subfactions": ["entrenchment_focus"],
+      "name": "Dig In",
+      "phase": "activation",
+      "description": "Use when an _Infantry_ unit is targeted by an enemy. If it did not move this round, that unit may increase its cover level by 1 (none to soft, soft to hard).",
+      "flavor": "A strong defensive position ensures greater survival, even against the toughest of weapons.",
+      "cost": 1
+    },
+    "final_stand": {
+      "subfactions": ["entrenchment_focus"],
+      "phase": "activation",
+      "name": "Final Stand",
+      "description": "Use when a unit is destroyed, but before any models are removed from the table. It may perform one shoot or fight action ignoring any shock points.",
+      "flavor": "Even in their last breath, trench fighters will put up resistance.",
+      "cost": 2
+    }
+  },
+  "relics": {
+    "strategist": {
+      "name": "Brilliant Strategist",
+      "rule": "legend_strategist",
+      "description": "Upgrade one Leader model with Brilliant Strategist.",
+      "flavor": "This model has an adept strategic mind.",
+      "points": 15
+    },
+    "high_command": {
+      "name": "High Command",
+      "rule": "high_command",
+      "description": "Upgrade one Leader model with Defense Force Tactics with High Command.",
+      "flavor": "This model has been promoted to a higher position in the defense force ranks.",
+      "points": 5
+    }
+  },
+  "buyLinks": [
+    {"name": "DavikDesigns", "link": "https://davikdesigns.gumroad.com/l/wAKtHk"},
+    {"name": "Games Workshop", "link": "https://www.games-workshop.com/en-US/Warhammer-40-000?N=2562756967+1138996955"},
+    {"name": "Victoria Miniatures", "link": "https://victoriaminiatures.com/"},
+    {"name": "The Makers Cult", "link": "https://www.cgtrader.com/3d-print-models/guard?author=themakerscult"}
+  ]
 }
