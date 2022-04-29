@@ -713,7 +713,56 @@
             "description": "Use when taking an Initiative test for a reaction. That unit is treated as having +2 Initiative for that test.",
             "flavor": "Highly trained and expertly attentive, Astro-raptor troops can react in an instant.",
             "cost": 1
+        },
+        "weave": {
+            "name": "Weave",
+            "phase": "activation",
+            "subfaction": ["claw_masters"],
+            "description": "Use this strategy when a unit is targeted by an enemy Shooting attack. That unit gets -1 Accuracy this attack.",
+            "flavor": "Fast moving creatures that they are, the Astro-raptors instinctively know how to get out of the way of incoming danger.",
+            "cost": 2
+        },
+        "at_them": {
+            "name": "At Them!",
+            "phase": "activation",
+            "subfaction": ["claw_masters"],
+            "description": "Use this strategy when an _Infantry_ unit makes a Charge action. That unit gains +3\" move for that charge.",
+            "flavor": "The Claw Masters believe that the old ways are best, and relish nothing more than tearing their foes apart with tooth and claw.",
+            "cost": 1
+        },
+        "ambush": {
+            "name": "Ambush",
+            "phase": "pre_game",
+            "subfaction": ["claw_masters"],
+            "description": "Up to half of any force's units, one point for each may be placed in _Ambush Reserves_ instead of deployed on the field.",
+            "flavor": "A deadly ambush can catch many off guard.",
+            "cost": "1/per"
+        },
+        "limiters_off": {
+            "name": "Limiters Off",
+            "phase": "activation",
+            "subfaction": ["raygun_focus"],
+            "description": "Use this strategy when Overcharging any Charge weapon. The unit gains +2 AP on Overcharging instead of +1 AP.",
+            "flavor": "Certain commanders have a fondness for tinkering, and they've learned how to get just a little bit more out of the Astro-raptors infamous Charge weaponry.",
+            "cost": 1
+        },
+        "hud_guidance": {
+            "name": "HUD Guidance",
+            "subfactions": ["raygun_focus"],
+            "phase": "activation",
+            "description": "Use when an _Infantry_ unit with any _Assault_ weapons is firing. That unit does not suffer -1 to hit when using the _Assault_ rule.",
+            "flavor": "Astro-raptor operatives often have a Heads Up Display linked to their weapons that makes aiming even at a sprint as easy as if they were standing still.",
+            "cost": 1
+        },
+        "suppressing_fire": {
+            "name": "Suppressing Fire",
+            "subfaction": ["raygun_focus"],
+            "phase": "activation",
+            "description": "Use when shooting with an _Infantry_ unit. If the attack hits, assign 2 additional Shock.",
+            "flavor": "The sight of an overly enthused Astro-raptor firing indescriminately will make all but the most foolhardy begin reconsidering their choices. ",
+            "cost": 1
         }
+
     },
     "buyLinks": [{"name": "Treadhead Rad", "link": "https://www.myminifactory.com/campaigns/raygun-raptors-95"}]
 }
