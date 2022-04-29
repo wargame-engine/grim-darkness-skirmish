@@ -661,7 +661,7 @@
       "subfactions": ["firepower_focus"],
       "name": "Reliability",
       "phase": "activation",
-      "description": "Use when a unit attacks. That unit may re-roll a single hit die.",
+      "description": "Use when a unit shoots. That unit may re-roll a single Accuracy test.",
       "flavor": "With expert craftsmanship, their weapons can perform better than most.",
       "cost": 1
     },
