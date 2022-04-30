@@ -908,18 +908,8 @@
     },
     "field_radio": {
       "name": "Field Radio",
-      "description": "If a friendly unit within 3\" uses the _Defense Force Tactics_ special rule, you may extend the range of that ability to 24\" as long as the target unit also has a Field Radio.",
+      "description": "This model and friendly _Infantry_ units within 3\" gain +1 Initiative.",
       "points": 5
-    },
-    "field_radio_stormtrooper": {
-      "name": "Field Radio",
-      "description": "If a friendly unit within 3\" uses the _Stormtrooper Tactics_ special rule, you may extend the range of that ability to 24\" as long as the target unit also has a Field Radio.",
-      "points": 5
-    },
-    "field_radio_battle_tank": {
-      "name": "Battle Tank Radio",
-      "description": "If a friendly unit within 3\" uses the _Battle Tank Tactics_ special rule, you may extend the range of that ability to 24\" as long as the target unit also has a Battle Tank Radio.",
-      "points": 10
     },
     "stormtrooper_tactics": {
       "name": "Storm Trooper Tactics",
