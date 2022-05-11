@@ -1049,7 +1049,7 @@
       "subfactions": ["speed_focus"],
       "phase": "activation",
       "name": "Run Them Down",
-      "description": "Use when a Vehicle or Super Heavy Vehicle makes a charge action. The Impact Rule gains +1 AP for the charge.",
+      "description": "Use when a unit declares a charge action. If the charge is successful, the target gains +2 Shock.",
       "flavor": "Those clans with a focus on speed enjoy putting a little extra oomph on their vehicles, making them hit just a little harder when they ram into something.",
       "cost": 1
     },
