@@ -1033,7 +1033,7 @@
       "subfactions": ["mobility_focus"],
       "name": "Burst",
       "flavor": "With a wave of fire, surely any target could not survive.",
-      "description": "Use when an _Infantry_ unit makes a Shoot action. Successful hits cause 2 hits instead of 1.",
+      "description": "Use when an _Infantry_ unit makes a Shoot action with a _Pulse_ weapon. Successful hits cause 2 hits instead of 1.",
       "cost": 1
     },
     "vigilance": {
