@@ -1646,7 +1646,8 @@
         "archcorrupted_ranged": {"name": "Dark Gods' Blessed Rifle", "attacks": 2, "short": 12, "medium": 24, "ap": 2, "rules": ["rapid_fire"]},
         "pestilence_great_flail": {"name": "Pestilence Great-flail", "attacks": 1, "ap": 4, "short": "Melee", "rules": ["pestilence"]},
         "legend_flamethrower_pistol": {"name": "Psychic Inferno Pistol", "attacks": 3, "short": 6, "medium": 12, "ap": 2, "rules": ["rending", "flame"]},
-        "legend_staff": {"name": "Psychic Staff", "attacks": 1, "short": "Melee", "ap": 1, "rules": ["shielding", "warding_staff"]}
+        "legend_staff": {"name": "Psychic Staff", "attacks": 1, "short": "Melee", "ap": 1, "rules": ["shielding", "warding_staff"]},
+        "legend_cursed_rifle": {"name": "Accursed Rifle", "attacks": 1, "short": 12, "medium": 24, "ap": 1, "rules": ["rapid_fire", {"id": "blast", "x": 3}]}
     },
     "rules": {
         "archmage_tactics": {
@@ -1656,7 +1657,8 @@
             "points": 5
         },
         "archmage": {"name": "Blessings of the Psyker God", "description": "When this unit casts the Shock Wave Power, double the number of hits it deals.", "points": 10},
-        "warding_staff": {"name": "Warding", "description": "Enemy units suffer -1 to all Power(x) test while within 12\" of this model.", "points": 1}
+        "warding_staff": {"name": "Warding", "description": "Enemy units suffer -1 to all Power(x) test while within 12\" of this model.", "points": 1},
+        "legend_unholy_strength": {"name": "Unholy Strength", "description": "This unit has +1 Strength.", "points": 5}
     },
     "strategies": {
         "hate": {
@@ -1828,6 +1830,30 @@
             "description": "Replace one Hexed Flamethrower Pistol with The Psychic Inferno Pistol",
             "flavor": "This pistol is enhanced with fiery magic immolating those at longer range.",
             "points": 5
+        },
+        "legend_unholy_strength": {
+            "name": "Unholy Strength",
+            "rule": "legend_unholy_strength",
+            "description": "Upgrade one Leader model with Unholy Strength.",
+            "flavor": "Those that pray to the dark gods reveive blessings beyond human comprehension.",
+            "points": 5,
+            "subfactions": ["none"]
+        },
+        "legend_war_veteran": {
+            "name": "War Veteran",
+            "rule": "fearless",
+            "description": "Upgrade one Leader model with Fearless.",
+            "flavor": "This hero has lived through so many battles that nothing can phase it anymore.",
+            "points": 5,
+            "subfactions": ["none"]
+        },
+        "legend_accursed_rifle": {
+            "name": "Accursed Rifle",
+            "weapon": "legend_cursed_rifle",
+            "description": "Replace one Leader model's Marine Rifle with the Accursed Rifle.",
+            "flavor": "This ancient relic emits an aura of malice, shooting purified hatred.",
+            "points": 10,
+            "subfactions": ["none"]
         }
     },
     "powerCategories": {"psychic": {"name": "Psychic", "subfactions": ["psychic_focus"]}, "pestilence": {"name": "Pestilence", "subfactions": ["pestilence_focus"]}},
