@@ -7,9 +7,9 @@
     "units": {
         "inquisitor": {
             "name": "Inquisitor",
-            "description": "An inquisitor trained in dealing with Psychic beings.",
+            "description": "A zealous hunter who is specialized in hunting down a certain enemy.",
             "category": "command",
-            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "ward", "x": 1},  {"id": "wounds", "x": 3}],
+            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "ward", "x": 1}, {"id": "wounds", "x": 3}],
             "models": [
                 {
                     "name": "Inquisitor",
@@ -21,7 +21,10 @@
                     "movement": 6,
                     "weapons": ["marine_rifle", "at_grenade", {"id": "heavy_ccw", "count": 3}],
                     "options": [
-                        {"replaceWeapon": ["marine_rifle"], "withWeapon": ["combi_plasma", "combi_flamer", "combi_fusion", "twin_marine_rifle", "heavy_defense_rifle", "storm_rifle", "plasma_rifle", "fusion_rifle", "flamethrower"], "limit": 1},
+                        {
+                            "replaceWeapon": ["marine_rifle"],
+                            "withWeapon": ["combi_plasma", "combi_flamer", "combi_fusion", "twin_marine_rifle", "storm_rifle", "plasma_rifle", "fusion_rifle", "flamethrower"]
+                        },
                         {"replaceWeapon": ["marine_rifle", {"id": "heavy_ccw", "count": 3}], "withWeapon": [["marine_pistol", {"id": "chainsword", "count": 4}]]},
                         {
                             "replaceWeapon": {"id": "chainsword", "count": 4},
@@ -30,11 +33,13 @@
                                 {"id": "energy_axe", "count": 4},
                                 {"id": "energy_sword", "count": 4},
                                 {"id": "energy_fist", "count": 4},
-                                {"id": "energy_hammer", "count": 4}
+                                {"id": "energy_hammer", "count": 4},
+                                {"id": "energy_claws", "count": 5}
                             ]
                         },
-                        {"replaceWeapon": "marine_pistol", "withWeapon": ["plasma_pistol", "flamethrower_pistol"]},
+                        {"replaceWeapon": "marine_pistol", "withWeapon": ["plasma_pistol", "flamethrower_pistol", "fusion_pistol"]},
                         {"addWeapon": "guardian_eagle"},
+                        {"addRule": "destroyer_armor"},
                         {"replaceRule": {"id": "ward", "x": 1}, "withRule": {"id": "power", "x": 1}}
                     ],
                     "min": 1,
@@ -44,12 +49,10 @@
         },
         "stormtrooper_commander": {
             "name": "Stormtrooper Commander",
-            "description": "Foot infantry of the human inquisition.",
-            "min": 5,
-            "max": 10,
+            "description": "A commander under the command of an inquisitor.",
             "category": "command",
             "keywords": ["Storm Trooper", "Infantry"],
-            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "stormtrooper_tactics", "x": 1},  {"id": "wounds", "x": 2}],
+            "rules": ["leader", {"id": "stormtrooper_tactics", "x": 1}, {"id": "wounds", "x": 2}],
             "models": [
                 {
                     "name": "Stormtrooper Commander",
@@ -59,41 +62,16 @@
                     "defense": 6,
                     "reflexes": 6,
                     "movement": 6,
-                    "weapons": ["heavy_defense_rifle", "frags", "heavy_ccw"],
+                    "weapons": ["heavy_defense_rifle", "frags", {"id": "chainsword", "count": 2}],
                     "options": [
-                        {"replaceRule": {"id": "stormtrooper_tactics", "x": 1}, "withRule": {"id": "stormtrooper_tactics", "x": 2}},
-                        {"replaceWeapon": ["heavy_defense_rifle", "heavy_ccw"], "withWeapon": [["heavy_pistol", {"id": "heavy_ccw", "count": 2}]]},
-                        {"replaceWeapon": "heavy_pistol", "withWeapon": ["plasma_pistol"]},
-                        {"replaceWeapon": "heavy_ccw", "withWeapon": ["energy_sword", "energy_fist"]},
-                        {"addRule": [{"id": "ambush", "name": "Orbital Insertion"}, {"id": "ward", "x": 1}]}
-                    ],
-                    "rules": [],
-                    "min": 1,
-                    "max": 1
-                }
-            ]
-        },
-        "inquisition_stormtrooper_leader": {
-            "name": "Inquisition Stormtrooper Leader",
-            "description": "Specially equipped and elite trained stormtrooper infantry.",
-            "category": "command",
-            "keywords": ["Storm Trooper", "Infantry"],
-            "models": [
-                {
-                    "name": "Stormtrooper Sergeant",
-                    "courage": 6,
-                    "shoot": 6,
-                    "fight": 6,
-                    "defense": 6,
-                    "reflexes": 6,
-                    "movement": 6,
-                    "rules": ["leader"],
-                    "weapons": ["heavy_defense_rifle", "frags", "ccw"],
-                    "options": [
-                        {"addRule": {"id": "ambush", "name": "Orbital Insertion"}},
-                        {"replaceWeapon": ["heavy_defense_rifle", "ccw"], "withWeapon": [["heavy_pistol", {"id": "ccw", "count": 2}]]},
-                        {"replaceWeapon": "heavy_pistol", "withWeapon": ["plasma_pistol"]},
-                        {"replaceWeapon": {"id": "ccw", "count": 2}, "withWeapon": [{"id": "chainsword", "count": 2}, {"id": "energy_sword", "count": 2}, {"id": "energy_fist", "count": 2}]}
+                        {"replaceWeapon": ["heavy_defense_rifle", {"id": "chainsword", "count": 2}], "withWeapon": [["marine_pistol", {"id": "chainsword", "count": 3}]]},
+                        {"replaceWeapon": "marine_pistol", "withWeapon": ["plasma_pistol", "fusion_pistol", "flamethrower_pistol"]},
+                        {
+                            "replaceWeapon": {"id": "chainsword", "count": 3},
+                            "withWeapon": [{"id": "energy_sword", "count": 3}, {"id": "energy_fist", "count": 3}, {"id": "energy_mace", "count": 3}, {"id": "energy_axe", "count": 3}]
+                        },
+                        {"addRule": [{"id": "ambush", "name": "Orbital Insertion"}, {"id": "ward", "x": 1}]},
+                        {"replaceRule": {"id": "stormtrooper_tactics", "x": 1}, "withRule": {"id": "stormtrooper_tactics", "x": 2}}
                     ],
                     "min": 1,
                     "max": 1
@@ -102,24 +80,20 @@
         },
         "inquisition_stormtrooper": {
             "name": "Inquisition Stormtrooper",
-            "description": "Specially equipped and elite trained stormtrooper infantry.",
+            "description": "The personal armed forces of an inquisitor, following every command.",
             "category": "core",
             "keywords": ["Storm Trooper", "Infantry"],
             "models": [
                 {
                     "name": "Stormtrooper",
-                    "courage": 6,
+                    "courage": 5,
                     "shoot": 6,
-                    "fight": 6,
+                    "fight": 5,
                     "defense": 6,
                     "reflexes": 6,
                     "movement": 6,
                     "weapons": ["heavy_defense_rifle", "frags", "ccw"],
-                    "options": [
-                        {"addRule": {"id": "field_radio"}},
-                        {"addRule": {"id": "ambush", "name": "Orbital Insertion"}},
-                        {"replaceWeapon": "heavy_defense_rifle", "withWeapon": ["flamethrower", "volley_gun", "plasma_rifle", "grenade_launcher", "fusion_rifle", "sniper_rifle"]}
-                    ],
+                    "options": [{"addRule": ["field_radio", {"id": "ambush", "name": "Orbital Insertion"}]}],
                     "min": 1,
                     "max": 1
                 }
@@ -127,29 +101,29 @@
         },
         "psyker_hunter_assassin": {
             "name": "Psychic-Hunter Assassin",
-            "description": "An assassin trained in subduing those who misuse psychic powers",
-            "rules": [{"id": "wounds", "x": 3}, "fear", {"id": {"id": "ward", "x": 1}, "x": 4}, "assassin"],
+            "description": "An assassin trained in hunting down rogue psychics.",
             "category": "specialist",
+            "rules": [{"id": "wounds", "x": 3}, "fear", {"id": "ward", "x": 3}, "assassin"],
             "models": [
                 {
-                "name": "Psychic-Hunter Assassin",
-                "movement": 7,
-                "shoot": 7,
-                "fight": 7,
-                "defense": 6,
-                "reflexes": 7,
-                "courage": 7,
-                "min": 1,
-                "max": 1,
-                "weapons": [{"id": "spectral_eye", "count": 1}, {"id": "assassin_unarmed", "count": 4}]
+                    "name": "Psychic-Hunter Assassin",
+                    "movement": 7,
+                    "shoot": 7,
+                    "fight": 7,
+                    "defense": 6,
+                    "reflexes": 7,
+                    "courage": 7,
+                    "min": 1,
+                    "max": 1,
+                    "weapons": ["spectral_eye", {"id": "assassin_unarmed", "count": 4}, "psychic_grenade"]
                 }
             ]
         },
         "sniper_assassin": {
             "name": "Sniper Assassin",
-            "description": "An assassin sent to remove enemy leadership",
-            "rules": [{"id": "wounds", "x": 3}, "assassin"],
+            "description": "An assassin trained in hunting down and removing dangerous leaders.",
             "category": "specialist",
+            "rules": [{"id": "wounds", "x": 3}, "assassin"],
             "models": [
                 {
                     "name": "Sniper Assassin",
@@ -161,68 +135,198 @@
                     "courage": 7,
                     "min": 1,
                     "max": 1,
-                    "weapons": [{"id": "assassin_sniper", "count": 1}, {"id": "ccw", "count": 2}]
+                    "weapons": ["assassin_sniper", {"id": "ccw", "count": 2}]
                 }
             ]
         },
         "berserker_assassin": {
             "name": "Berzerker Assassin",
-            "description": "An assassin sent to uproot entire cults",
-            "rules": [{"id": "wounds", "x": 3}, "assassin", "berzerk_overload"],
+            "description": "An assassin trained in brutal close combat.",
             "category": "specialist",
+            "rules": [{"id": "wounds", "x": 3}, "assassin", "berzerk_overload"],
             "models": [
-                  {
-                      "name": "Berzerker Assassin",
-                      "movement": 7,
-                      "shoot": 7,
-                      "fight": 7,
-                      "defense": 6,
-                      "reflexes": 7,
-                      "courage": 7,
-                      "min": 1,
-                      "max": 1,
-                      "weapons": [{"id": "energy_sword", "count": 8}]
-                    }
-                ]
+                {"name": "Berzerker Assassin", "movement": 7, "shoot": 7, "fight": 7, "defense": 6, "reflexes": 7, "courage": 7, "min": 1, "max": 1, "weapons": [{"id": "energy_sword", "count": 8}]}
+            ]
         },
         "stealth_assassin": {
             "name": "Stealth Assassin",
-            "description": "An assassin sent to strike from the shadows",
-            "rules": [{"id": "wounds", "x": 3}, "assassin", "stealth", "ambush"],
+            "description": "An assassin sent to strike from the shadows.",
             "category": "specialist",
+            "rules": [{"id": "wounds", "x": 3}, "assassin", "stealth", "ambush"],
             "models": [
-                    {
-                        "name": "Stealth Assassin",
-                        "movement": 7,
-                        "shoot": 7,
-                        "fight": 7,
-                        "defense": 6,
-                        "reflexes": 7,
-                        "courage": 7,
-                        "min": 1,
-                        "max": 1,
-                        "weapons": [{"id": "mind_shredder", "count": 1}, {"id": "phase_sword", "count": 4}]
-                    }
-                ]
+                {
+                    "name": "Stealth Assassin",
+                    "movement": 7,
+                    "shoot": 7,
+                    "fight": 7,
+                    "defense": 6,
+                    "reflexes": 7,
+                    "courage": 7,
+                    "min": 1,
+                    "max": 1,
+                    "weapons": ["mind_shredder", {"id": "phase_sword", "count": 4}]
+                }
+            ]
+        },
+        "inquisition_stormtrooper_sergeant": {
+            "name": "Inquisition Stormtrooper Sergeant",
+            "description": "The personal armed forces leader of an inquisitor, following every command.",
+            "category": "command",
+            "keywords": ["Storm Trooper", "Infantry"],
+            "models": [
+                {
+                    "name": "Stormtrooper Sergeant",
+                    "courage": 5,
+                    "shoot": 6,
+                    "fight": 5,
+                    "defense": 6,
+                    "reflexes": 6,
+                    "movement": 6,
+                    "weapons": ["heavy_defense_rifle", "frags", "ccw"],
+                    "options": [
+                        {"replaceWeapon": ["heavy_defense_rifle", "ccw"], "withWeapon": [["marine_pistol", {"id": "ccw", "count": 2}]]},
+                        {"replaceWeapon": "marine_pistol", "withWeapon": ["plasma_pistol", "fusion_pistol", "flamethrower_pistol"]},
+                        {
+                            "replaceWeapon": {"id": "ccw", "count": 2},
+                            "withWeapon": [
+                                {"id": "energy_sword", "count": 2},
+                                {"id": "energy_fist", "count": 2},
+                                {"id": "chainsword", "count": 2},
+                                {"id": "energy_mace", "count": 2},
+                                {"id": "energy_axe", "count": 2}
+                            ]
+                        },
+                        {"addRule": ["field_radio", {"id": "ambush", "name": "Orbital Insertion"}]}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ],
+            "rules": ["leader"]
+        },
+        "inquisition_destroyer": {
+            "name": "Inquisition Destroyer",
+            "description": "Zealous warrior in heavy armor.",
+            "category": "specialist",
+            "rules": ["ambush"],
+            "models": [
+                {
+                    "name": "Inquisition Destroyer",
+                    "movement": 5,
+                    "courage": 6,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 9,
+                    "reflexes": 6,
+                    "weapons": ["twin_marine_rifle", {"id": "energy_sword", "count": 2}],
+                    "options": [
+                        {
+                            "replaceWeapon": "twin_marine_rifle",
+                            "withWeapon": ["heavy_flamethrower", "missile_launcher", "heavy_machinegun", "plasma_cannon", "fusion_cannon", "combi_plasma", "combi_flamer", "combi_fusion", "autocannon"]
+                        },
+                        {"replaceWeapon": ["twin_marine_rifle", {"id": "energy_sword", "count": 2}], "withWeapon": [{"id": "energy_claws", "count": 4}]},
+                        {
+                            "replaceWeapon": {"id": "energy_sword", "count": 2},
+                            "withWeapon": [
+                                {"id": "energy_mace", "count": 2},
+                                {"id": "energy_fist", "count": 2},
+                                {"id": "energy_axe", "count": 2},
+                                {"id": "energy_hammer", "count": 2},
+                                {"id": "energy_claws", "count": 3}
+                            ]
+                        },
+                        {"addRule": ["shield"]}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "inquisition_destroyer_sergeant": {
+            "name": "Inquisition Destroyer Sergeant",
+            "description": "Zealous warrior leader in heavy armor.",
+            "category": "command",
+            "rules": ["ambush", "leader"],
+            "models": [
+                {
+                    "name": "Inquisition Destroyer Sergeant",
+                    "movement": 5,
+                    "courage": 6,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 9,
+                    "reflexes": 6,
+                    "weapons": ["twin_marine_rifle", {"id": "energy_sword", "count": 2}],
+                    "options": [
+                        {
+                            "replaceWeapon": "twin_marine_rifle",
+                            "withWeapon": ["heavy_flamethrower", "missile_launcher", "heavy_machinegun", "plasma_cannon", "fusion_cannon", "combi_plasma", "combi_flamer", "combi_fusion", "autocannon"]
+                        },
+                        {"replaceWeapon": ["twin_marine_rifle", {"id": "energy_sword", "count": 2}], "withWeapon": [{"id": "energy_claws", "count": 4}]},
+                        {
+                            "replaceWeapon": {"id": "energy_sword", "count": 2},
+                            "withWeapon": [
+                                {"id": "energy_mace", "count": 2},
+                                {"id": "energy_fist", "count": 2},
+                                {"id": "energy_axe", "count": 2},
+                                {"id": "energy_hammer", "count": 2},
+                                {"id": "energy_claws", "count": 3}
+                            ]
+                        },
+                        {"addRule": ["shield"]}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "inquisition_stormtrooper_gunner": {
+            "name": "Inquisition Stormtrooper Gunner",
+            "description": "The personal armed forces of an inquisitor, following every command.",
+            "category": "specialist",
+            "keywords": ["Storm Trooper", "Infantry"],
+            "models": [
+                {
+                    "name": "Stormtrooper Gunner",
+                    "courage": 5,
+                    "shoot": 6,
+                    "fight": 5,
+                    "defense": 6,
+                    "reflexes": 6,
+                    "movement": 6,
+                    "weapons": ["sniper_rifle", "frags", "ccw"],
+                    "options": [
+                        {"replaceWeapon": "sniper_rifle", "withWeapon": ["flamethrower", "volley_gun", "plasma_rifle", "grenade_launcher", "fusion_rifle"]},
+                        {"addRule": ["field_radio", {"id": "ambush", "name": "Orbital Insertion"}]}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
         }
     },
-    "weapons": {"guardian_eagle": {"name": "Guardian Eagle", "attacks": 3, "ap": 1, "short": 12, "medium": 24},
-    "spectral_eye": {"name": "Spectral Eye", "attacks": 2, "ap": 4, "short": 9, "medium": 18},
-    "assassin_unarmed": {"name": "Assassin Martial Arts", "attacks": 1, "ap": 4, "short": "Melee", "rules": ["rending"]},
-    "mind_shredder": {"name": "Mind Shredder", "attacks": 1, "ap": 4, "short": 6, "medium": 12, "rules": [{"id": "shocking", "x": 3}]},
-    "phase_sword": {"name": "Phase Sword", "attacks": 1, "ap": 5, "short": "Melee", "rules": ["rending", "phase"]}
-},
+    "weapons": {
+        "guardian_eagle": {"name": "Guardian Eagle", "attacks": 3, "ap": 1, "short": 12, "medium": 24, "rules": ["indirect"]},
+        "spectral_eye": {"name": "Spectral Eye", "attacks": 2, "ap": 4, "short": 9, "medium": 18},
+        "assassin_unarmed": {"name": "Assassin Martial Arts", "attacks": 1, "ap": 4, "short": "Melee", "rules": ["rending"]},
+        "mind_shredder": {"name": "Mind Shredder", "attacks": 1, "ap": 4, "short": 6, "medium": 12, "rules": [{"id": "shocking", "x": 3}]},
+        "phase_sword": {"name": "Phase Sword", "attacks": 1, "ap": 5, "short": "Melee", "rules": ["rending", "phase"]}
+    },
     "powers": {
-        "fortify": {"name": "Fortify", "description": "Target friendly unit within 12\" gets +1 Courage until the end of the round.", "charge": 8},
-        "terror": {"name": "Terror", "description": "Target enemy model within 12\" gets -1 Courage until the end of the round.", "charge": 8},
-        "control": {"name": "Control", "description": "Target friendly unit within 12\" may immediately take a shoot action.", "charge": 7},
-        "interrogate": {"name": "Interrogate", "description": "Target enemy unit within 12\" suffers -1 Accuracy with its next shooting attack.", "charge": 7},
-        "pursuit": {"name": "Pursuit", "description": "Target friendly unit within 12\" may target Character units even if they are protected by enemy units.", "charge": 6},
-        "retribution": {"name": "Retribution", "description": "Target enemy model within 12\" takes 1 automatic hit with AP(3).", "charge": 6}
+        "interrogate": {"name": "Interrogation", "description": "Target enemy unit within 12\" must re-roll one die of your choice on its next Skill test.", "charge": 7},
+        "banishment": {"name": "Banishment", "description": "Target enemy model within 12\" takes 1 automatic hit with AP(7).", "charge": 5},
+        "purge": {"name": "Purge", "description": "Target enemy unit within 12\" take 8 automatic hits with AP 0.", "charge": 6}
     },
     "rules": {
-        "berzerk_overload": {"name": "Berzerk Overload", "description": "When this unit is destroyed, all units within 6\" gain 2 shock", "points": 15},
-        "phase": {"name": "Phase", "description": "Units with the Resilient and Tough rules cannot use them for saves against this weapon's attacks", "points":10}
+        "berzerk_overload": {"name": "Berzerk Overload", "description": "When this unit is destroyed, all units within 6\" gain 2 shock.", "points": 15},
+        "phase": {"name": "Phase", "description": "Units with the Resilient and Tough rules cannot use them for saves against this weapon's attacks.", "points": 2},
+        "legend_witch_hunter": {"name": "Witch Hunter", "description": "Once per turn when a power within 24“ of this model gets dispelled, deal 1 hit with AP(2) to the caster.", "points": 5},
+        "legend_alien_hunter": {"name": "Alien Hunter", "description": "Once per turn a unit with the Resilient and Tough rules cannot use them for saves against this unit's attack.", "points": 5},
+        "legend_mutant_hunter": {
+            "name": "Mutant Hunter",
+            "description": "When this model's unit successfully performs a counter attack or escape reaction, the charging unit suffers 6 hits with no AP.",
+            "oints": 5
+        }
     },
     "strategies": [
         {
@@ -246,5 +350,28 @@
             "flavor": "The Inquisition often arrives via a teleporter to surprise their enemies.",
             "cost": "1/per"
         }
-    ]
+    ],
+    "relics": {
+        "legend_witch_hunter": {
+            "name": "Witch Hunter",
+            "rule": "legend_witch_hunter",
+            "description": "Upgrade one Leader model with Witch Hunter.",
+            "flavor": "Specialized in hunting down rogue psychics, this inquisitor punishes those that are denied their powers.",
+            "points": 5
+        },
+        "legend_alien_hunter": {
+            "name": "Alien Hunter",
+            "rule": "legend_alien_hunter",
+            "description": "Upgrade one Leader model with Alien Hunter.",
+            "flavor": "Specialized in hunting down powerful aliens, this inquisitor punishes those that rely on advanced technology.",
+            "points": 5
+        },
+        "legend_mutant_hunter": {
+            "name": "Mutant Hunter",
+            "rule": "legend_mutant_hunter",
+            "description": "Upgrade one Leader model with Alien Hunter.",
+            "flavor": "Specialized in hunting down horrifying mutants, this inquisitor punishes those who attack from the shadows.",
+            "points": 5
+        }
+    }
 }
