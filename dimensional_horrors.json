@@ -761,7 +761,7 @@
             "effects": [{"type": "alterStat", "statName": "reflexes", "target": "enemy", "value": 2, "frequency": 5}]
         },
         "ritual_dagger": {"name": "Ritual Dagger", "description": "After this model fights in Melee, one enemy unit in its engagement range takes 2 automatic hits."},
-        "glittering_sheild": {"name": "Glittering Sheild", "description": "This model gains Resilient(+1).", "points": 2},
+        "glittering_sheild": {"name": "Glittering Sheild", "description": "This model gains Defiant(+1).", "points": 2},
         "menacing_hand": {"name": "Menacing Hand", "description": "After this model fights, if any non-vehicle model was slain by this model, this model regains 2 lost wounds."}
     },
     "strategies": {
