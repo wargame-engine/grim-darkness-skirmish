@@ -155,6 +155,79 @@
                 }
             ]
         },
+        "initiate_leader": {
+            "name": "Initiate Superior",
+            "description": "A newly trained initiate leader with a marine rifle.",
+            "category": "command",
+            "models": [
+                {
+                    "name": "Initiate Superior",
+                    "movement": 6,
+                    "courage": 5,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 7,
+                    "reflexes": 5,
+                    "rules": ["leader"],
+                    "weapons": ["marine_rifle", "at_grenade", "ccw"],
+                    "options": [
+                        {"replaceWeapon": ["marine_rifle", "ccw"], "withWeapon": [["marine_pistol", {"id": "chainsword", "count": 2}]]},
+                        {"replaceWeapon": "marine_pistol", "withWeapon": ["plasma_pistol"]},
+                        {"replaceWeapon": {"id": "chainsword", "count": 2}, "withWeapon": [{"id": "energy_sword", "count": 2}]}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "initiate": {
+            "name": "Initiate",
+            "description": "A newly trained initiate with a marine rifle.",
+            "category": "core",
+            "models": [
+                {
+                    "name": "Initiate",
+                    "movement": 6,
+                    "courage": 5,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 7,
+                    "reflexes": 5,
+                    "weapons": ["marine_rifle", "at_grenade", "ccw"],
+                    "options": [
+                        {"addRule": ["banner"]},
+                        {"replaceWeapon": ["marine_rifle", "ccw"], "withWeapon": [["marine_pistol", {"id": "heavy_ccw", "count": 2}]]}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "initiate_specialist": {
+            "name": "Initiate Specialist",
+            "description": "A newly trained initiate with a special weapon.",
+            "category": "specialist",
+            "models": [
+                {
+                    "name": "Initiate",
+                    "movement": 6,
+                    "courage": 5,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 7,
+                    "reflexes": 5,
+                    "weapons": ["marine_rifle", "at_grenade", "ccw"],
+                    "options": [
+                        {
+                            "replaceWeapon": "marine_rifle",
+                            "withWeapon": ["flamethrower"]
+                        }
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
         "warden": {
             "name": "Warden",
             "description": "A group of wardens with marine rifles to pack an extra punch.",
