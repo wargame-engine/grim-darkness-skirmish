@@ -1,359 +1,623 @@
 {
-  "name": "Forge Masters",
-  "id": "forge_masters",
-  "author": "Xekon#8266",
-  "units": {
-    "forge_chief": {
-      "name": "Forgeborn Chieftain",
-      "description": "A leader of a clan of ferocious defenders of the great forges.",
-      "category": "command",
-      "models": [
-        {
-          "name": "Forgeborn Chieftain",
-          "movement": 5,
-          "courage": 7,
-          "shoot": 6,
-          "fight": 6,
-          "defense": 9,
-          "reflexes": 6,
-          "rules": ["leader", {"id": "wounds", "x": 3}, {"id": "rifle_tactics", "x": 2}],
-          "weapons": ["burst_pistol", {"id": "heavy_ccw", "count": 3}, "frags"],
-          "options": [
-            {"replaceWeapon": ["burst_pistol"], "withWeapon": ["burst_carbine", "plasma_pistol", "fusion_pistol"]},
-            {"replaceWeapon": [{"id": "heavy_ccw", "count": 3}], "withWeapon": [{"id": "energy_hammer", "count": 3}, {"id": "energy_axe", "count": 3}]},
-            {"addRule": "destroyer_armor"},
-            {"replaceRule": [{"id": "rifle_tactics", "x": 2}], "withRule": [{"id": "melee_tactics", "x": 2}]}
-          ],
-          "min": 1,
-          "max": 1
+    "name": "Forge Masters",
+    "id": "forge_masters",
+    "author": "Xekon#8266",
+    "units": {
+        "forge_chieftain": {
+            "name": "Forgeborn Chieftain",
+            "description": "A leader of a clan of ferocious defenders of the great forges.",
+            "category": "command",
+            "models": [
+                {
+                    "name": "Forgeborn Chieftain",
+                    "movement": 5,
+                    "courage": 7,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 9,
+                    "reflexes": 6,
+                    "rules": ["leader", {"id": "wounds", "x": 3}, {"id": "rifle_tactics", "x": 1}],
+                    "weapons": ["heavy_carbine", {"id": "heavy_ccw", "count": 2}, "frags"],
+                    "options": [
+                        {"replaceWeapon": ["heavy_carbine"], "withWeapon": ["combi_plasma", "combi_fusion", "combi_flamer", "combi_thermal", "storm_rifle"]},
+                        {"replaceWeapon": ["heavy_carbine", {"id": "heavy_ccw", "count": 2}], "withWeapon": [["heavy_pistol", {"id": "heavy_ccw", "count": 3}]]},
+                        {"replaceWeapon": ["heavy_pistol"], "withWeapon": ["combat_shotgun", "plasma_pistol", "fusion_pistol", "flamethrower_pistol"]},
+                        {"replaceWeapon": [{"id": "heavy_ccw", "count": 3}], "withWeapon": [{"id": "energy_hammer", "count": 3}, {"id": "energy_fist", "count": 3}, {"id": "energy_axe", "count": 3}]},
+                        {"replaceRule": [{"id": "rifle_tactics", "x": 1}], "withRule": [{"id": "melee_tactics", "x": 1}]}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "forge_chieftain_bike": {
+            "name": "Forgeborn Chieftain on Combat Bike",
+            "description": "A leader of a clan of ferocious defenders of the great forges.",
+            "category": "command",
+            "models": [
+                {
+                    "name": "Forgeborn Chieftain on Combat Bike",
+                    "movement": 8,
+                    "courage": 7,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 9,
+                    "reflexes": 6,
+                    "rules": [{"id": "leader_x", "x": "Infantry, Biker"}, {"id": "wounds", "x": 3}, {"id": "rifle_tactics", "x": 1}],
+                    "weapons": ["heavy_carbine", {"id": "heavy_ccw", "count": 2}, "frags", {"id": "twin_marine_rifle", "mount": ["Front"]}],
+                    "options": [
+                        {"replaceWeapon": ["heavy_carbine"], "withWeapon": ["combi_plasma", "combi_fusion", "combi_flamer", "combi_thermal", "storm_rifle"]},
+                        {"replaceWeapon": ["heavy_carbine", {"id": "heavy_ccw", "count": 2}], "withWeapon": [["heavy_pistol", {"id": "heavy_ccw", "count": 3}]]},
+                        {"replaceWeapon": ["heavy_pistol"], "withWeapon": ["combat_shotgun", "plasma_pistol", "fusion_pistol", "flamethrower_pistol"]},
+                        {"replaceWeapon": [{"id": "heavy_ccw", "count": 3}], "withWeapon": [{"id": "energy_hammer", "count": 3}, {"id": "energy_fist", "count": 3}, {"id": "energy_axe", "count": 3}]},
+                        {
+                            "replaceWeapon": [{"id": "twin_marine_rifle", "mount": ["Front"]}],
+                            "withWeapon": [{"id": "twin_plasma_rifle", "mount": ["Front"]}, {"id": "twin_fusion_rifle", "mount": ["Front"]}, {"id": "twin_flamethrower", "mount": ["Front"]}]
+                        },
+                        {"replaceRule": [{"id": "rifle_tactics", "x": 1}], "withRule": [{"id": "melee_tactics", "x": 1}]},
+                        {"addRule": ["scout", "hover"]}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ],
+            "keywords": ["Biker"]
+        },
+        "forge_chieftain_destroyer": {
+            "name": "Forgeborn Chieftain in Destroyer Armor",
+            "description": "A leader of a clan of ferocious defenders of the great forges.",
+            "category": "command",
+            "models": [
+                {
+                    "name": "Forgeborn Chieftain in Destroyer Armor",
+                    "movement": 4,
+                    "courage": 7,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 10,
+                    "reflexes": 6,
+                    "rules": ["ambush", "leader", {"id": "wounds", "x": 3}, {"id": "rifle_tactics", "x": 1}],
+                    "weapons": ["twin_heavy_carbine", {"id": "heavy_ccw", "count": 3}, "frags"],
+                    "options": [
+                        {
+                            "replaceWeapon": ["twin_heavy_carbine"],
+                            "withWeapon": ["plasma_cannon", "fusion_cannon", "heavy_flamethrower", "heavy_machinegun", "gravity_cannon", "fusion_beamer", "thermal_lance"]
+                        },
+                        {
+                            "replaceWeapon": [{"id": "heavy_ccw", "count": 3}],
+                            "withWeapon": [{"id": "energy_hammer", "count": 3}, {"id": "energy_fist", "count": 3}, {"id": "assault_drill", "count": 3}, {"id": "energy_axe", "count": 3}]
+                        },
+                        {"replaceRule": [{"id": "rifle_tactics", "x": 1}], "withRule": [{"id": "melee_tactics", "x": 1}]}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "forge_runesmith": {
+            "name": "Forgeborn Runesmith",
+            "description": "A powerful spellcaster, using magical runes to change the outcome of a battle.",
+            "category": "command",
+            "models": [
+                {
+                    "name": "Forgeborn Runesmith",
+                    "movement": 5,
+                    "courage": 6,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 8,
+                    "reflexes": 6,
+                    "rules": [{"id": "power", "x": 1}, "leader", {"id": "wounds", "x": 3}],
+                    "weapons": ["heavy_carbine", {"id": "heavy_ccw", "count": 2}],
+                    "options": [
+                        {"replaceWeapon": ["heavy_carbine"], "withWeapon": ["combi_plasma", "combi_fusion", "combi_flamer", "combi_thermal", "storm_rifle"]},
+                        {"replaceWeapon": ["heavy_carbine", {"id": "heavy_ccw", "count": 2}], "withWeapon": [["heavy_pistol", {"id": "heavy_ccw", "count": 3}]]},
+                        {"replaceWeapon": ["heavy_pistol"], "withWeapon": ["combat_shotgun", "plasma_pistol", "fusion_pistol", "flamethrower_pistol"]},
+                        {
+                            "replaceWeapon": [{"id": "heavy_ccw", "count": 3}],
+                            "withWeapon": [{"id": "energy_axe", "count": 3}, {"id": "energy_hammer", "count": 3}, {"id": "energy_staff", "count": 3}, {"id": "energy_fist", "count": 3}]
+                        },
+                        {"replaceRule": [{"id": "power", "x": 1}], "withRule": [{"id": "power", "x": 2}]}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "forge_runesmith_bike": {
+            "name": "Forgeborn Runesmith on Combat Bike",
+            "description": "A powerful spellcaster, using magical runes to change the outcome of a battle.",
+            "category": "command",
+            "models": [
+                {
+                    "name": "Forgeborn Chieftain on Combat Bike",
+                    "movement": 8,
+                    "courage": 7,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 8,
+                    "reflexes": 6,
+                    "rules": [{"id": "power", "x": 1}, {"id": "leader_x", "x": "Infantry, Biker"}, {"id": "wounds", "x": 3}],
+                    "weapons": ["heavy_carbine", {"id": "heavy_ccw", "count": 2}, "frags", {"id": "twin_marine_rifle", "mount": ["Front"]}],
+                    "options": [
+                        {"replaceWeapon": ["heavy_carbine"], "withWeapon": ["combi_plasma", "combi_fusion", "combi_flamer", "combi_thermal", "storm_rifle"]},
+                        {"replaceWeapon": ["heavy_carbine", {"id": "heavy_ccw", "count": 2}], "withWeapon": [["heavy_pistol", {"id": "heavy_ccw", "count": 3}]]},
+                        {"replaceWeapon": ["heavy_pistol"], "withWeapon": ["combat_shotgun", "plasma_pistol", "fusion_pistol", "flamethrower_pistol"]},
+                        {
+                            "replaceWeapon": [{"id": "heavy_ccw", "count": 3}],
+                            "withWeapon": [{"id": "energy_hammer", "count": 3}, {"id": "energy_fist", "count": 3}, {"id": "energy_axe", "count": 3}, {"id": "energy_staff", "count": 3}]
+                        },
+                        {
+                            "replaceWeapon": [{"id": "twin_marine_rifle", "mount": ["Front"]}],
+                            "withWeapon": [{"id": "twin_plasma_rifle", "mount": ["Front"]}, {"id": "twin_fusion_rifle", "mount": ["Front"]}, {"id": "twin_flamethrower", "mount": ["Front"]}]
+                        },
+                        {"replaceRule": [{"id": "power", "x": 1}], "withRule": [{"id": "power", "x": 2}]},
+                        {"addRule": ["scout", "hover"]}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ],
+            "keywords": ["Biker"]
+        },
+        "forge_runesmith_destroyer": {
+            "name": "Forgeborn Runesmith in Destroyer Armor",
+            "description": "A powerful spellcaster, using magical runes to change the outcome of a battle.",
+            "category": "command",
+            "models": [
+                {
+                    "name": "Forgeborn Runesmith in Destroyer Armor",
+                    "movement": 4,
+                    "courage": 7,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 9,
+                    "reflexes": 6,
+                    "rules": ["ambush", {"id": "power", "x": 1}, "leader", {"id": "wounds", "x": 3}],
+                    "weapons": ["twin_heavy_carbine", {"id": "heavy_ccw", "count": 3}, "frags"],
+                    "options": [
+                        {
+                            "replaceWeapon": ["twin_heavy_carbine"],
+                            "withWeapon": ["thermal_lance", "plasma_cannon", "fusion_cannon", "heavy_flamethrower", "heavy_machinegun", "gravity_cannon", "fusion_beamer"]
+                        },
+                        {
+                            "replaceWeapon": [{"id": "heavy_ccw", "count": 3}],
+                            "withWeapon": [
+                                {"id": "energy_hammer", "count": 3},
+                                {"id": "energy_fist", "count": 3},
+                                {"id": "assault_drill", "count": 3},
+                                {"id": "energy_axe", "count": 3},
+                                {"id": "energy_staff", "count": 3}
+                            ]
+                        },
+                        {"replaceRule": [{"id": "power", "x": 1}], "withRule": [{"id": "power", "x": 2}]}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "forge_militia": {
+            "name": "Forgeborn Militia",
+            "description": "Not all defenders of the Great Forges are trained soldiers.",
+            "category": "core",
+            "models": [{"name": "Militia", "movement": 5, "courage": 5, "shoot": 5, "fight": 5, "defense": 7, "reflexes": 5, "weapons": ["defense_carbine", "heavy_ccw", "frags"], "min": 1, "max": 1}]
+        },
+        "forge_warrior": {
+            "name": "Forgeborn Warrior",
+            "description": "Equipped with better armor than the common militia.",
+            "category": "core",
+            "models": [{"name": "Warrior", "movement": 5, "courage": 5, "shoot": 6, "fight": 5, "defense": 8, "reflexes": 5, "weapons": ["heavy_carbine", "heavy_ccw", "frags"], "min": 1, "max": 1}]
+        },
+        "forge_destroyer": {
+            "name": "Forgeborn Destroyer",
+            "description": "Elite defender wearing destroyer armor and wielding a heavy weapon.",
+            "category": "specialist",
+            "models": [
+                {
+                    "name": "Forgeborn Destroyer",
+                    "movement": 4,
+                    "courage": 6,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 9,
+                    "reflexes": 6,
+                    "rules": ["ambush"],
+                    "weapons": ["twin_heavy_carbine", {"id": "heavy_ccw", "count": 3}],
+                    "options": [
+                        {
+                            "replaceWeapon": ["twin_heavy_carbine"],
+                            "withWeapon": ["heavy_machinegun", "fusion_cannon", "heavy_flamethrower", "plasma_cannon", "gravity_cannon", "fusion_beamer", "thermal_lance"]
+                        },
+                        {
+                            "replaceWeapon": [{"id": "heavy_ccw", "count": 3}],
+                            "withWeapon": [{"id": "energy_hammer", "count": 3}, {"id": "energy_axe", "count": 3}, {"id": "energy_fist", "count": 3}, {"id": "assault_drill", "count": 3}]
+                        },
+                        {"addWeapon": ["rocket_pod"]}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "forge_biker": {
+            "name": "Forgeborn Biker",
+            "description": "A warrior driving a combat bike into battle.",
+            "category": "strike",
+            "models": [
+                {
+                    "name": "Biker",
+                    "movement": 8,
+                    "courage": 5,
+                    "shoot": 6,
+                    "fight": 5,
+                    "defense": 8,
+                    "reflexes": 5,
+                    "options": [
+                        {"replaceWeapon": ["heavy_carbine", "heavy_ccw"], "withWeapon": [["heavy_pistol", {"id": "heavy_ccw", "count": 2}]]},
+                        {"replaceWeapon": ["heavy_pistol"], "withWeapon": ["combat_shotgun", "plasma_pistol", "fusion_pistol", "flamethrower_pistol"]},
+                        {"replaceWeapon": [{"id": "heavy_ccw", "count": 2}], "withWeapon": [{"id": "energy_hammer", "count": 2}, {"id": "energy_fist", "count": 2}, {"id": "energy_axe", "count": 2}]},
+                        {
+                            "replaceWeapon": [{"id": "twin_marine_rifle", "mount": ["Front"]}],
+                            "withWeapon": [{"id": "twin_plasma_rifle", "mount": ["Front"]}, {"id": "twin_fusion_rifle", "mount": ["Front"]}, {"id": "twin_flamethrower", "mount": ["Front"]}]
+                        },
+                        {"addWeapon": ["plasma_cannon", "fusion_cannon", "heavy_machinegun", "missile_launcher", "fusion_beamer", "gravity_cannon", "heavy_flamethrower"]},
+                        {"addRule": ["scout", "hover"]}
+                    ],
+                    "weapons": ["heavy_carbine", "heavy_ccw", "frags", {"id": "twin_marine_rifle", "mount": ["Front"]}],
+                    "min": 1,
+                    "max": 1
+                }
+            ],
+            "keywords": ["Biker"]
+        },
+        "mining_drone": {
+            "name": "Mining Drone",
+            "description": "An autonomous mining robot that has been programmed into a makeshift weapons platform.",
+            "category": "heavy",
+            "models": [
+                {
+                    "name": "Mining Drone",
+                    "movement": 6,
+                    "courage": 5,
+                    "shoot": 6,
+                    "fight": 5,
+                    "defense": 9,
+                    "reflexes": 5,
+                    "options": [{"replaceWeapon": ["mining_laser"], "withWeapon": ["heavy_mining_laser", "fusion_cannon", "thermal_lance"]}, {"addWeapon": [{"id": "assault_drill", "count": 2}]}],
+                    "weapons": ["mining_laser"],
+                    "min": 1,
+                    "max": 1,
+                    "rules": ["fearless", "damage_chart", "vulnerable_rear", {"id": "heavy_impact", "x": 3}]
+                }
+            ]
+        },
+        "forge_engineer": {
+            "name": "Forgeborn Engineer",
+            "description": "Capable of field repairs and sabotage even under heavy fire.",
+            "category": "specialist",
+            "rules": ["engineer", "scout"],
+            "models": [
+                {
+                    "name": "Engineer",
+                    "movement": 5,
+                    "courage": 5,
+                    "shoot": 5,
+                    "fight": 6,
+                    "defense": 6,
+                    "reflexes": 5,
+                    "options": [
+                        {"replaceWeapon": ["heavy_carbine", "heavy_ccw"], "withWeapon": [["heavy_pistol", {"id": "heavy_ccw", "count": 2}], ["combat_shotgun", {"id": "heavy_ccw", "count": 2}]]},
+                        {"replaceWeapon": [{"id": "heavy_ccw", "count": 2}], "withWeapon": [{"id": "energy_hammer", "count": 2}, {"id": "energy_axe", "count": 2}, {"id": "energy_fist", "count": 2}]}
+                    ],
+                    "weapons": ["heavy_carbine", "heavy_ccw", "plasma_grenade"],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "forge_berzerker": {
+            "name": "Forgeborn Berzerker",
+            "description": "Devastating in melee, this elite warrior can break through ranks with ease.",
+            "category": "core",
+            "rules": ["furious"],
+            "models": [
+                {
+                    "name": "Berzerker",
+                    "movement": 5,
+                    "courage": 5,
+                    "shoot": 6,
+                    "fight": 5,
+                    "defense": 8,
+                    "reflexes": 5,
+                    "options": [
+                        {"replaceWeapon": [{"id": "heavy_ccw", "count": 3}], "withWeapon": [{"id": "energy_hammer", "count": 3}, {"id": "energy_fist", "count": 3}, {"id": "energy_axe", "count": 3}]}
+                    ],
+                    "weapons": ["heavy_pistol", {"id": "heavy_ccw", "count": 3}, "frags"],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "forge_militia_sergeant": {
+            "name": "Forgeborn Militia Sergeant",
+            "description": "Not all defenders of the Great Forges are trained soldiers.",
+            "category": "command",
+            "models": [
+                {
+                    "name": "Militia Sergeant",
+                    "movement": 5,
+                    "courage": 5,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 7,
+                    "reflexes": 5,
+                    "weapons": ["defense_carbine", "heavy_ccw", "frags"],
+                    "options": [
+                        {"replaceWeapon": ["defense_carbine"], "withWeapon": ["combi_plasma", "combi_fusion", "combi_flamer", "combi_thermal", "storm_rifle"]},
+                        {"replaceWeapon": ["defense_carbine", "heavy_ccw"], "withWeapon": [["pistol", {"id": "heavy_ccw", "count": 2}]]},
+                        {"replaceWeapon": ["pistol"], "withWeapon": ["shotgun", "plasma_pistol", "fusion_pistol", "flamethrower_pistol"]},
+                        {"replaceWeapon": [{"id": "heavy_ccw", "count": 2}], "withWeapon": [{"id": "energy_hammer", "count": 2}, {"id": "energy_fist", "count": 2}, {"id": "energy_axe", "count": 2}]}
+                    ],
+                    "rules": ["leader"],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "forge_warrior_sergeant": {
+            "name": "Forgeborn Warrior Specialist",
+            "description": "Equipped with better armor than the common militia.",
+            "category": "command",
+            "models": [
+                {
+                    "name": "Warrior Sergeant",
+                    "movement": 5,
+                    "courage": 5,
+                    "shoot": 6,
+                    "fight": 5,
+                    "defense": 8,
+                    "reflexes": 5,
+                    "weapons": ["heavy_carbine", "heavy_ccw", "frags"],
+                    "options": [
+                        {"replaceWeapon": ["heavy_carbine"], "withWeapon": ["combi_plasma", "combi_fusion", "combi_flamer", "combi_thermal", "storm_rifle"]},
+                        {"replaceWeapon": ["heavy_carbine", "heavy_ccw"], "withWeapon": [["heavy_pistol", {"id": "heavy_ccw", "count": 2}]]},
+                        {"replaceWeapon": ["heavy_pistol"], "withWeapon": ["combat_shotgun", "plasma_pistol", "fusion_pistol", "flamethrower_pistol"]},
+                        {"replaceWeapon": [{"id": "heavy_ccw", "count": 2}], "withWeapon": [{"id": "energy_hammer", "count": 2}, {"id": "energy_fist", "count": 2}, {"id": "energy_axe", "count": 2}]}
+                    ],
+                    "rules": ["leader"],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "forge_biker_sergeant": {
+            "name": "Forgeborn Biker Sergeant",
+            "description": "A warrior leader driving a combat bike into battle.",
+            "category": "command",
+            "models": [
+                {
+                    "name": "Biker Sergeant",
+                    "movement": 8,
+                    "courage": 5,
+                    "shoot": 6,
+                    "fight": 5,
+                    "defense": 8,
+                    "reflexes": 5,
+                    "options": [
+                        {"replaceWeapon": ["heavy_carbine", "heavy_ccw"], "withWeapon": [["heavy_pistol", {"id": "heavy_ccw", "count": 2}]]},
+                        {"replaceWeapon": ["heavy_pistol"], "withWeapon": ["combat_shotgun", "plasma_pistol", "fusion_pistol", "flamethrower_pistol"]},
+                        {"replaceWeapon": [{"id": "heavy_ccw", "count": 2}], "withWeapon": [{"id": "energy_hammer", "count": 2}, {"id": "energy_fist", "count": 2}, {"id": "energy_axe", "count": 2}]},
+                        {
+                            "replaceWeapon": [{"id": "twin_marine_rifle", "mount": ["Front"]}],
+                            "withWeapon": [{"id": "twin_plasma_rifle", "mount": ["Front"]}, {"id": "twin_fusion_rifle", "mount": ["Front"]}, {"id": "twin_flamethrower", "mount": ["Front"]}]
+                        },
+                        {"addWeapon": ["plasma_cannon", "fusion_cannon", "heavy_machinegun", "missile_launcher", "fusion_beamer", "gravity_cannon", "heavy_flamethrower"]},
+                        {"addRule": ["scout", "hover"]}
+                    ],
+                    "weapons": ["heavy_carbine", "heavy_ccw", "frags", {"id": "twin_marine_rifle", "mount": ["Front"]}],
+                    "min": 1,
+                    "max": 1,
+                    "rules": [{"id": "leader_x", "x": "Infantry, Biker"}]
+                }
+            ],
+            "keywords": ["Biker"]
+        },
+        "forge_engineer_sergeant": {
+            "name": "Forgeborn Engineer Sergeant",
+            "description": "Capable of field repairs and sabotage even under heavy fire.",
+            "category": "command",
+            "rules": ["engineer", "scout", "leader"],
+            "models": [
+                {
+                    "name": "Engineer Sergeant",
+                    "movement": 5,
+                    "courage": 5,
+                    "shoot": 5,
+                    "fight": 6,
+                    "defense": 6,
+                    "reflexes": 5,
+                    "weapons": ["heavy_carbine", "heavy_ccw", "plasma_grenade"],
+                    "options": [
+                        {"replaceWeapon": ["heavy_carbine"], "withWeapon": ["combi_thermal", "combi_flamer", "combi_fusion", "combi_plasma", "storm_rifle"]},
+                        {"replaceWeapon": ["heavy_carbine", "heavy_ccw"], "withWeapon": [["heavy_pistol", {"id": "heavy_ccw", "count": 2}]]},
+                        {"replaceWeapon": ["heavy_pistol"], "withWeapon": ["combat_shotgun", "plasma_pistol", "flamethrower_pistol", "fusion_pistol"]},
+                        {"replaceWeapon": [{"id": "heavy_ccw", "count": 2}], "withWeapon": [{"id": "energy_hammer", "count": 2}, {"id": "energy_axe", "count": 2}, {"id": "energy_fist", "count": 2}]}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "forge_berzerker_sergeant": {
+            "name": "Forgeborn Berzerker Sergeant",
+            "description": "Devastating in melee, this elite warrior leader can break through ranks with ease.",
+            "category": "command",
+            "rules": ["furious", "leader"],
+            "models": [
+                {
+                    "name": "Berzerker Sergeant",
+                    "movement": 5,
+                    "courage": 5,
+                    "shoot": 6,
+                    "fight": 5,
+                    "defense": 8,
+                    "reflexes": 5,
+                    "weapons": ["heavy_pistol", {"id": "heavy_ccw", "count": 3}, "frags"],
+                    "options": [
+                        {"replaceWeapon": ["heavy_pistol"], "withWeapon": ["combat_shotgun", "plasma_pistol", "fusion_pistol", "flamethrower_pistol"]},
+                        {"replaceWeapon": [{"id": "heavy_ccw", "count": 3}], "withWeapon": [{"id": "energy_hammer", "count": 3}, {"id": "energy_fist", "count": 3}, {"id": "energy_axe", "count": 3}]}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "forge_destroyer_sergeant": {
+            "name": "Forgeborn Destroyer Sergeant",
+            "description": "Elite defender leader wearing destroyer armor and wielding a heavy weapon.",
+            "category": "command",
+            "models": [
+                {
+                    "name": "Forgeborn Destroyer Sergeant",
+                    "movement": 4,
+                    "courage": 6,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 9,
+                    "reflexes": 6,
+                    "rules": ["ambush", "leader"],
+                    "weapons": ["twin_heavy_carbine", {"id": "heavy_ccw", "count": 3}],
+                    "options": [
+                        {
+                            "replaceWeapon": ["twin_heavy_carbine"],
+                            "withWeapon": ["heavy_machinegun", "fusion_cannon", "heavy_flamethrower", "plasma_cannon", "gravity_cannon", "fusion_beamer", "thermal_lance"]
+                        },
+                        {
+                            "replaceWeapon": [{"id": "heavy_ccw", "count": 3}],
+                            "withWeapon": [{"id": "energy_hammer", "count": 3}, {"id": "energy_axe", "count": 3}, {"id": "energy_fist", "count": 3}, {"id": "assault_drill", "count": 3}]
+                        },
+                        {"addWeapon": ["rocket_pod"]}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "forge_militia_specialist": {
+            "name": "Forgeborn Militia Specialist",
+            "description": "Not all defenders of the Great Forges are trained soldiers.",
+            "category": "specialist",
+            "models": [
+                {
+                    "name": "Militia Specialist",
+                    "movement": 5,
+                    "courage": 5,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 7,
+                    "reflexes": 5,
+                    "options": [{"replaceWeapon": ["thermal_rifle"], "withWeapon": ["flamethrower", "plasma_rifle", "fusion_rifle", "grenade_launcher"]}],
+                    "weapons": ["flamethrower", "heavy_ccw", "frags"],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "forge_warrior_specialist": {
+            "name": "Forgeborn Warrior Specialist",
+            "description": "Equipped with better armor than the common militia.",
+            "category": "specialist",
+            "models": [
+                {
+                    "name": "Warrior",
+                    "movement": 5,
+                    "courage": 5,
+                    "shoot": 6,
+                    "fight": 5,
+                    "defense": 8,
+                    "reflexes": 5,
+                    "options": [
+                        {"replaceWeapon": ["thermal_rifle"], "withWeapon": ["flamethrower", "plasma_rifle", "fusion_rifle", "heavy_machinegun", "missile_launcher", "fusion_beamer", "gravity_cannon"]}
+                    ],
+                    "weapons": ["thermal_rifle", "heavy_ccw", "frags"],
+                    "min": 4,
+                    "max": 9
+                }
+            ]
+        },
+        "forge_engineer_specialist": {
+            "name": "Forgeborn Engineer Specialist",
+            "description": "Capable of field repairs and sabotage even under heavy fire.",
+            "category": "specialist",
+            "rules": ["engineer", "scout"],
+            "models": [
+                {
+                    "name": "Engineer Specialist",
+                    "movement": 5,
+                    "courage": 5,
+                    "shoot": 5,
+                    "fight": 6,
+                    "defense": 6,
+                    "reflexes": 5,
+                    "options": [{"replaceWeapon": ["thermal_rifle"], "withWeapon": ["flamethrower", "plasma_rifle", "fusion_rifle", "missile_launcher", "fusion_beamer", "gravity_cannon"]}],
+                    "weapons": ["thermal_rifle", "heavy_ccw", "plasma_grenade"],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
         }
-      ]
     },
-    "forge_champion": {
-      "name": "Forgeborn Champion",
-      "description": "A leader of a warband of ferocious defenders of the great forges.",
-      "category": "command",
-      "models": [
-        {
-          "name": "Forgeborn Champion",
-          "movement": 5,
-          "courage": 6,
-          "shoot": 6,
-          "fight": 6,
-          "defense": 9,
-          "reflexes": 6,
-          "rules": ["leader", {"id": "wounds", "x": 3}],
-          "weapons": ["burst_pistol", {"id": "heavy_ccw", "count": 3}, "frags"],
-          "options": [
-            {"replaceWeapon": ["burst_pistol"], "withWeapon": ["burst_carbine", "plasma_pistol", "fusion_pistol"]},
-            {"replaceWeapon": [{"id": "heavy_ccw", "count": 3}], "withWeapon": [{"id": "energy_hammer", "count": 3}, {"id": "energy_axe", "count": 3}]},
-            {"addRule": "destroyer_armor"}
-          ],
-          "min": 1,
-          "max": 1
-        }
-      ]
+    "weapons": {
+        "heavy_carbine": {"name": "Heavy Carbine", "attacks": 1, "short": 9, "medium": 18, "ap": 1, "rules": ["assault"]},
+        "twin_heavy_carbine": {"name": "Twin Heavy Carbine", "attacks": 2, "short": 9, "medium": 18, "ap": 1, "rules": ["assault"]},
+        "thermal_rifle": {"name": "Thermal Rifle", "attacks": 1, "short": 12, "medium": 24, "ap": 3, "rules": ["flame", "overcharge"]},
+        "combi_thermal": {
+            "name": "Combi Thermal Rifle",
+            "profiles": [
+                {"name": "Thermal", "attacks": 1, "ap": 3, "short": 12, "medium": 24, "rules": ["flame", "overcharge"]},
+                {"name": "Rifle", "attacks": 1, "short": 12, "medium": 24, "ap": 1, "rules": ["rapid_fire"]}
+            ]
+        },
+        "mining_laser": {"name": "Mining Laser", "attacks": 1, "short": 12, "medium": 24, "ap": 8},
+        "heavy_mining_laser": {"name": "Heavy Mining Laser", "attacks": 1, "short": 18, "medium": 36, "ap": 8},
+        "thermal_lance": {"name": "Thermal Lance", "attacks": 1, "short": 24, "medium": 48, "ap": 6, "rules": ["flame", "overcharge"]}
     },
-    "forge_runesmith": {
-      "name": "Forgeborn Runesmith",
-      "description": "A powerful spellcaster, using magical runes to change the outcome of a battle.",
-      "category": "command",
-      "models": [
+    "rules": {},
+    "strategies": [
         {
-          "name": "Forgeborn Runesmith",
-          "movement": 5,
-          "courage": 6,
-          "shoot": 6,
-          "fight": 6,
-          "defense": 8,
-          "reflexes": 6,
-          "rules": [{"id": "power", "x": 1}, "leader", {"id": "wounds", "x": 3}],
-          "weapons": ["burst_pistol", {"id": "heavy_ccw", "count": 2}],
-          "options": [
-            {"replaceWeapon": ["burst_pistol"], "withWeapon": ["burst_carbine", "flamethrower_pistol", "gravity_pistol"]},
-            {"replaceWeapon": [{"id": "heavy_ccw", "count": 2}], "withWeapon": [{"id": "energy_axe", "count": 2}, {"id": "energy_hammer", "count": 2}]},
-            {"addRule": "destroyer_armor"},
-            {"replaceRule": [{"id": "power", "x": 1}], "withRule": [{"id": "power", "x": 2}]}
-          ],
-          "min": 1,
-          "max": 1
-        }
-      ]
-    },
-    "forge_militia": {
-      "name": "Forgeborn Militia",
-      "description": "Not all defenders of the Great Forges are trained soldiers.",
-      "category": "core",
-      "models": [
+            "name": "Stubborn",
+            "phase": "activation",
+            "description": "Use before activating a unit. That unit may immediately remove up to 2 Shock.",
+            "flavor": "Not letting such nuisance as sure defeat break them has made the forge masters withstand many onslaughts.",
+            "cost": 1
+        },
         {
-          "name": "Forgeborn Militia",
-          "movement": 5,
-          "courage": 5,
-          "shoot": 5,
-          "fight": 5,
-          "defense": 7,
-          "reflexes": 5,
-          "weapons": ["burst_carbine", "heavy_ccw"],
-          "min": 1,
-          "max": 1,
-          "options": [{"replaceWeapon": ["burst_carbine", "ccw"], "withWeapon": [["burst_pistol", {"id": "ccw", "count": 2}]]}]
-        }
-      ]
-    },
-    "forge_militia_leader": {
-      "name": "Forgeborn Militia Leader",
-      "description": "Not all defenders of the Great Forges are trained soldiers.",
-      "category": "command",
-      "models": [
+            "name": "Runic Might",
+            "phase": "activation",
+            "description": "Use when an _Infantry_ unit attacks. Hit rolls of 1 or 2 gain +1 AP.",
+            "flavor": "Forge masters can call upon the strength of their ancestors, dealing devastating blows.",
+            "cost": 1
+        },
         {
-          "name": "Forgeborn Militia Leader",
-          "movement": 5,
-          "courage": 5,
-          "shoot": 5,
-          "fight": 5,
-          "defense": 7,
-          "reflexes": 5,
-          "weapons": ["burst_carbine", "heavy_ccw"],
-          "min": 1,
-          "max": 1,
-          "options": [{"replaceWeapon": ["burst_carbine", "ccw"], "withWeapon": [["burst_pistol", {"id": "ccw", "count": 2}]]}],
-          "rules": ["leader"]
+            "name": "Ferocity",
+            "phase": "activation",
+            "description": "Use when an _Infantry_ unit charges. That unit gains +3\" of Movement for the charge action.",
+            "flavor": "With a furious charge, these dwarfs move into combat quickly.",
+            "cost": 1
         }
-      ]
-    },
-    "forge_warrior": {
-      "name": "Forgeborn Warrior",
-      "description": "Equipped with better armor than the common militia.",
-      "category": "core",
-      "models": [
-        {
-          "name": "Forgeborn Warrior",
-          "movement": 5,
-          "courage": 5,
-          "shoot": 6,
-          "fight": 5,
-          "defense": 8,
-          "reflexes": 5,
-          "weapons": ["burst_carbine", "heavy_ccw"],
-          "min": 1,
-          "max": 1,
-          "options": [{"replaceWeapon": ["burst_carbine", "ccw"], "withWeapon": [["burst_pistol", {"id": "heavy_ccw", "count": 2}]]}]
+    ],
+    "powers": {
+        "ancestral_wrath": {"name": "Ancestral Wrath", "description": "Target enemy unit within 12\" takes 4 hits with AP(4).", "charge": 5},
+        "runic_barrier": {
+            "name": "Runic Barrier",
+            "description": "Target friendly unit within 24“ rolls a D10 each time that unit is hit until the end of the turn. On a 2 or less, that hit is ignored.",
+            "charge": 6
+        },
+        "blink": {
+            "name": "Blink",
+            "description": "Target friendly unit within 12\" may move up to 12\" ignoring all models and terrain. This must end outside of 12\" of any enemy units.",
+            "charge": 7
         }
-      ]
-    },
-    "forge_warrior_gunner": {
-      "name": "Gunner Specialist",
-      "description": "A warrior wielding a heavy weapon.",
-      "category": "specialist",
-      "models": [
-        {
-          "name": "Gunner Specialist",
-          "movement": 5,
-          "courage": 5,
-          "shoot": 6,
-          "fight": 5,
-          "defense": 8,
-          "reflexes": 5,
-          "weapons": ["twin_burst_carbine", "heavy_ccw", "frags"],
-          "min": 1,
-          "max": 1,
-          "options": [{"replaceWeapon": ["twin_burst_carbine"], "withWeapon": ["plasma_rifle", "fusion_rifle", "heavy_machinegun", "flamethrower", "missile_launcher"]}]
-        }
-      ]
-    },
-    "forge_warrior_leader": {
-      "name": "Forgeborn Warrior Leader",
-      "description": "Equipped with better armor than the common militia.",
-      "category": "command",
-      "models": [
-        {
-          "name": "Forgeborn Warrior Leader",
-          "movement": 5,
-          "courage": 5,
-          "shoot": 6,
-          "fight": 5,
-          "defense": 8,
-          "reflexes": 5,
-          "weapons": ["burst_carbine", "heavy_ccw"],
-          "min": 1,
-          "max": 1,
-          "options": [{"replaceWeapon": ["burst_carbine", "ccw"], "withWeapon": [["burst_pistol", {"id": "heavy_ccw", "count": 2}]]}],
-          "rules": ["leader"]
-        }
-      ]
-    },
-    "forge_berzerker": {
-      "name": "Forgeborn Berzerker",
-      "description": "Charging into close combat with powerful weapons.",
-      "category": "core",
-      "models": [
-        {
-          "name": "Forgeborn Berzerker",
-          "movement": 5,
-          "courage": 5,
-          "shoot": 5,
-          "fight": 6,
-          "defense": 6,
-          "reflexes": 5,
-          "rules": ["furious"],
-          "weapons": ["burst_pistol", {"id": "heavy_ccw", "count": 2}],
-          "min": 1,
-          "max": 1,
-          "options": [
-            {"replaceWeapon": ["burst_pistol"], "withWeapon": ["plasma_pistol", "flamethrower_pistol"]},
-            {"replaceWeapon": [{"id": "heavy_ccw", "count": 2}], "withWeapon": ["energy_hammer", "energy_axe"]}
-          ]
-        }
-      ]
-    },
-    "forge_berzerker_leader": {
-      "name": "Forgeborn Berzerker Leader",
-      "description": "Charging into close combat with powerful weapons.",
-      "category": "command",
-      "models": [
-        {
-          "name": "Forgeborn Berzerker Leader",
-          "movement": 5,
-          "courage": 5,
-          "shoot": 5,
-          "fight": 6,
-          "defense": 6,
-          "reflexes": 5,
-          "weapons": ["burst_pistol", {"id": "heavy_ccw", "count": 2}],
-          "min": 1,
-          "max": 1,
-          "options": [
-            {"replaceWeapon": ["burst_pistol"], "withWeapon": ["plasma_pistol", "flamethrower_pistol"]},
-            {"replaceWeapon": [{"id": "heavy_ccw", "count": 2}], "withWeapon": ["energy_hammer", "energy_axe"]}
-          ],
-          "rules": ["furious", "leader"]
-        }
-      ]
-    },
-    "forge_destroyer": {
-      "name": "Forgeborn Destroyer",
-      "description": "An elite defender wearing destroyer armor and wielding heavy weapons.",
-      "category": "specialist",
-      "models": [
-        {
-          "name": "Forgeborn Destroyer",
-          "movement": 4,
-          "courage": 6,
-          "shoot": 6,
-          "fight": 6,
-          "defense": 9,
-          "reflexes": 6,
-          "rules": ["ambush"],
-          "weapons": ["heavy_burst_carbine", "energy_hammer"],
-          "options": [
-            {"replaceWeapon": ["heavy_burst_carbine"], "withWeapon": ["heavy_machinegun", "fusion_cannon", "heavy_flamethrower", "plasma_cannon", "seismic_cannon"]},
-            {"addWeapon": ["rocket_pod"]}
-          ],
-          "min": 1,
-          "max": 1
-        }
-      ]
-    },
-    "forge_destroyer_leader": {
-      "name": "Forgeborn Destroyer Leader",
-      "description": "An elite leader wearing destroyer armor and wielding heavy weapons.",
-      "category": "command",
-      "models": [
-        {
-          "name": "Forgeborn Destroyer Leader",
-          "movement": 4,
-          "courage": 6,
-          "shoot": 6,
-          "fight": 6,
-          "defense": 9,
-          "reflexes": 6,
-          "rules": ["ambush", "leader"],
-          "weapons": ["heavy_burst_carbine", "energy_hammer"],
-          "options": [
-            {"replaceWeapon": ["heavy_burst_carbine"], "withWeapon": ["heavy_machinegun", "fusion_cannon", "heavy_flamethrower", "plasma_cannon", "seismic_cannon"]},
-            {"addWeapon": ["rocket_pod"]}
-          ],
-          "min": 1,
-          "max": 1
-        }
-      ]
-    },
-    "forge_engineer": {
-      "name": "Forgeborn Engineer",
-      "description": "Capable of field repairs and hacking even under heavy fire.",
-      "category": "specialist",
-      "models": [
-        {
-          "name": "Forgeborn Engineer",
-          "movement": 5,
-          "courage": 5,
-          "shoot": 5,
-          "fight": 6,
-          "defense": 6,
-          "reflexes": 5,
-          "weapons": ["heavy_burst_pistol", "heavy_ccw", "plasma_grenade"],
-          "min": 1,
-          "max": 1,
-          "options": [
-            {"replaceWeapon": ["heavy_burst_pistol"], "withWeapon": ["combat_shotgun", "plasma_rifle", "flamethrower", "fusion_rifle", "seismic_cannon"]},
-            {"replaceWeapon": ["heavy_ccw"], "withWeapon": ["energy_hammer"]}
-          ],
-          "rules": ["engineer"]
-        }
-      ]
-    },
-    "forge_engineer_leader": {
-      "name": "Forgeborn Engineer Leader",
-      "description": "Capable of field repairs and hacking even under heavy fire.",
-      "category": "command",
-      "models": [
-        {
-          "name": "Forgeborn Engineer Leader",
-          "movement": 5,
-          "courage": 5,
-          "shoot": 5,
-          "fight": 6,
-          "defense": 6,
-          "reflexes": 5,
-          "weapons": ["heavy_burst_pistol", "heavy_ccw", "plasma_grenade"],
-          "min": 1,
-          "max": 1,
-          "options": [
-            {"replaceWeapon": ["heavy_burst_pistol"], "withWeapon": ["combat_shotgun", "plasma_rifle", "flamethrower", "fusion_rifle", "seismic_cannon"]},
-            {"replaceWeapon": ["heavy_ccw"], "withWeapon": ["energy_hammer"]}
-          ],
-          "rules": ["engineer", "leader"]
-        }
-      ]
     }
-  },
-  "weapons": {
-    "burst_carbine": {"name": "Burst Carbine", "attacks": 1, "short": 9, "medium": 18, "rules": ["rapid_fire", "assault"]},
-    "heavy_burst_carbine": {"name": "Heavy Burst Carbine", "attacks": 1, "ap": 1, "short": 9, "medium": 18, "rules": ["rapid_fire", "assault"]},
-    "twin_burst_carbine": {"name": "Twin Burst Carbine", "attacks": 2, "short": 9, "medium": 18, "rules": ["rapid_fire", "assault"]}
-  },
-  "rules": {},
-  "strategies": [
-    {
-      "phase": "activation",
-      "name": "Determined",
-      "flavor": "It's tough to slow down a Dwarf, even when heavily injured.",
-      "description": "Use before an _Infantry_ unit activates. It may ignore any critical injuries it has sustained for this activation.",
-      "cost": 1
-    },
-    {
-      "name": "Stubborn",
-      "phase": "activation",
-      "description": "Use before activating a unit. That unit may immediately remove up to 2 Shock.",
-      "flavor": "Not letting such nuisance as sure defeat break them has made them withstand many onslaughts.",
-      "cost": 1
-    },
-    {
-      "name": "Spider Mines",
-      "phase": "activation",
-      "description": "Use when a _Dwarf Infantry_ unit is charged. The charging unit takes 4 automatic hits with AP0.",
-      "flavor": "Novice Engineers build these to learn the intricate mechanism of greater warmachines.",
-      "cost": 1
-    }
-  ]
 }
