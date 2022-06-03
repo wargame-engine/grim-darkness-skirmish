@@ -508,7 +508,7 @@
           "movement": 6,
           "weapons": ["flamethrower", "frags", "ccw"],
           "options": [
-            {"ArrayItem": "flamethrower", "withWeapon": ["volley_gun", "plasma_rifle", "grenade_launcher", "fusion_rifle", "sniper_rifle"]},
+            {"replaceWeapon": "flamethrower", "withWeapon": ["volley_gun", "plasma_rifle", "grenade_launcher", "fusion_rifle", "sniper_rifle"]},
             {"addRule": [{"id": "ambush", "name": "Orbital Insertion"}, "field_radio"]}
           ],
           "min": 1,
