@@ -1059,6 +1059,30 @@
       "flavor": "By overcharging their weapons, some hits can pierce even heavily armored targets.",
       "description": "Use when an _Infantry_ unit makes a Shoot action. Successful hits gain +1 AP.",
       "cost": 1
+    },
+    "bravery": {
+      "subfactions": ["survival_focus"],
+      "name": "Bravery",
+      "phase": "activation",
+      "description": "Use when activating a unit. That unit gets +1 Courage.",
+      "flavor": "These soldiers are particularly brave in the face of many horrors.",
+      "cost": 1
+    },
+    "hit_and_run": {
+      "subfactions": ["survival_focus"],
+      "name": "Hit and Run",
+      "phase": "activation",
+      "description": "Use after one of your _Infantry_ or _Biker_ units performs a Shoot or Fight action. You may immediately take a free move action.",
+      "flavor": "Hit and run tactics can sometimes be key to survival.",
+      "cost": 1
+    },
+    "at_all_costs": {
+      "subfactions": ["survival_focus"],
+      "name": "At All Costs",
+      "phase": "activation",
+      "description": "Use when an _Infantry_ unit takes a Break test. That test is automatically passed.",
+      "flavor": "These troopers are prepared to hold at all costs.",
+      "cost": 1
     }
   },
   "relics": {
