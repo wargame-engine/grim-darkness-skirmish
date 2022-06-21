@@ -128,8 +128,7 @@
             "description": "The Free Colonies are an alliance of several alien worlds cooperating together in the name of survival and prosperity. They rely on a mix of advanced battle warsuits and deadly pulse weaponry to defeat their enemies.",
             "subfactions": {
                 "vigilance_focus": {"name": "Vigilance", "id": "vigilance_focus", "description": "Free Colonies troops focused on readyness and vigiliant tactics."},
-                "mobility_focus": {"name": "Mobility", "id": "mobility_focus", "description": "Free Colonies troops focused on mobile firing tactics."},
-                "survival_focus": {"name": "Survival", "id": "survival_focus", "color": "#6a0001", "description": "Free Colonies troops focused on survival and outlasting opponents."}
+                "mobility_focus": {"name": "Mobility", "id": "mobility_focus", "description": "Free Colonies troops focused on mobile firing tactics."}
             }
         },
         "faith_wardens": {
@@ -465,7 +464,12 @@
             "charge": 5,
             "category": "earth"
         },
-        "wild_frenzy": {"name": "Wild Frenzy", "description": "Target friendly unit within 12\" may immediately make a free charge action.", "charge": 5, "category": "nature"},
+        "wild_frenzy": {
+            "name": "Wild Frenzy",
+            "description": "Target friendly unit within 12\" may make one additional attack with any Melee weapon until the end of the turn.",
+            "charge": 5,
+            "category": "nature"
+        },
         "entangling_roots": {
             "name": "Entangling Roots",
             "description": "Target enemy unit within 12\" takes 3 hit with AP(0) and has -2\" Movement until the end of the turn.",
@@ -839,19 +843,11 @@
         "razor_talons": {"name": "Razor Talons", "attacks": 1, "short": "Melee", "ap": 1},
         "light_razor_talons": {"name": "Light Razor Talons", "attacks": 1, "short": "Melee"},
         "buckler": {"name": "Buckler", "attacks": 0, "short": "Melee", "rules": ["buckler"]},
-        "heavy_buckler": {"name": "Heavy Buckler", "attacks": 0, "short": "Melee", "rules": ["heavy_buckler"]},
         "shield": {"name": "Shield", "attacks": 0, "short": "Melee", "rules": ["shield"]},
-        "heavy_shield": {"name": "Heavy Shield", "attacks": 0, "short": "Melee", "rules": ["heavy_shield"]},
-        "enchanted_shield": {"name": "Enchanted Shield", "attacks": 0, "short": "Melee", "rules": ["enchanted_shield"]},
-        "tower_shield": {"name": "Tower Shield", "attacks": 0, "short": "Melee", "rules": ["tower_shield"]},
-        "relic_shield": {"name": "Relic Shield", "attacks": 0, "short": "Melee", "rules": ["relic_shield"]},
+        "relic_shield": {"name": "Heavy Shield", "attacks": 0, "short": "Melee", "rules": ["relic_shield"]},
         "spiked_buckler": {"name": "Spiked Buckler", "attacks": 1, "short": "Melee", "rules": ["buckler"]},
-        "spiked_heavy_buckler": {"name": "Spiked Heavy Buckler", "attacks": 1, "short": "Melee", "rules": ["heavy_buckler"]},
         "spiked_shield": {"name": "Spiked Shield", "attacks": 1, "short": "Melee", "rules": ["shield"]},
-        "spiked_heavy_shield": {"name": "Spiked Heavy Shield", "attacks": 1, "short": "Melee", "rules": ["heavy_shield"]},
-        "spiked_enchanted_shield": {"name": "Spiked Enchanted Shield", "attacks": 1, "short": "Melee", "rules": ["enchanted_shield"]},
-        "spiked_tower_shield": {"name": "Spiked Tower Shield", "attacks": 1, "short": "Melee", "rules": ["tower_shield"]},
-        "spiked_relic_shield": {"name": "Spiked Relic Shield", "attacks": 1, "short": "Melee", "rules": ["relic_shield"]},
+        "spiked_relic_shield": {"name": "Spiked Heavy Shield", "attacks": 1, "short": "Melee", "rules": ["relic_shield"]},
         "titan_shield": {"name": "Titan Shield", "attacks": 0, "short": "Melee", "rules": ["titan_shield"]},
         "burst_pistol": {"name": "Burst Pistol", "attacks": 1, "short": 6, "rules": ["pistol", "rapid_fire"]},
         "heavy_burst_pistol": {"name": "Heavy Burst Pistol", "attacks": 1, "short": 6, "ap": 1, "rules": ["pistol", "rapid_fire"]},
@@ -875,7 +871,7 @@
         "twin_storm_rifle": {"name": "Twin Storm Rifle", "attacks": 2, "ap": 1, "short": 6, "medium": 12, "rules": ["rapid_fire"]},
         "gas_grenade": {"name": "Gas Grenades", "attacks": 1, "rules": [{"id": "blast", "x": 3}, "poison", "smoke", "grenade"], "short": 6},
         "riot_shield": {"name": "Riot Shield", "attacks": 1, "short": "Melee", "rules": ["shield"]},
-        "assault_ram": {
+        "assault_ram_grenade": {
             "name": "Assault Ram with Underslung Grenade Launcher",
             "profiles": [
                 {"name": "Melee", "attacks": 1, "ap": 6, "rules": [{"id": "critical", "x": 1}, {"id": "reach", "x": 1}], "short": "Melee"},
@@ -897,7 +893,8 @@
                 {"name": "Rifle", "attacks": 1, "short": 12, "medium": 24, "ap": 1, "rules": ["rapid_fire"]}
             ]
         },
-        "fusion_beamer": {"name": "Fusion Beamer", "attacks": 1, "short": 18, "medium": 36, "ap": 3, "rules": [{"id": "intensity", "x": 2}]}
+        "fusion_beamer": {"name": "Fusion Beamer", "attacks": 1, "short": 18, "medium": 36, "ap": 3, "rules": [{"id": "intensity", "x": 2}]},
+        "assault_ram": {"name": "Assault Ram", "attacks": 1, "short": "Melee", "ap": 6, "rules": [{"id": "critical", "x": 1}, {"id": "reach", "x": 1}]}
     },
     "rules": {
         "legend_strategist": {"name": "Brilliant Strategist", "description": "While this model is on the table you gain 1 additional Strategy Point per round.", "points": 20},
@@ -970,6 +967,7 @@
             "points": 5
         },
         "intensity": {"name": "Intensity", "inputs": ["x"], "description": "This weapon has +X AP at long range.", "points": ["rule.x", {"multiply": 1}]},
+        "inspiration": {"name": "Inspiration", "description": "Models gain +1 Courage when taking Courage Tests within 6\" of this model.", "points": 5},
         "medic_biker": {
             "name": "Medic",
             "description": "Whenever a friendly _Infantry_ or _Biker_ unit within 6\" loses a model or Wound(x), roll a D10. On a 3 or less, that loss is prevented.",
@@ -1027,6 +1025,46 @@
                     "rules": ["terrain", "clearable", {"id": "impassable", "x": "Artillery, Vehicle"}, "soft_cover"],
                     "min": 1,
                     "max": 2
+                }
+            ]
+        },
+        "psychic_crystal": {
+            "name": "Psychic Amplification Crystal",
+            "description": "A crystaline structure that amplifies psychic powers.",
+            "category": "fortification",
+            "keywords": ["Fortification"],
+            "models": [
+                {
+                    "name": "Psychic Amplification Crystal",
+                    "courage": "-",
+                    "movement": "-",
+                    "shoot": "-",
+                    "fight": "-",
+                    "defense": "-",
+                    "reflexes": "-",
+                    "rules": ["terrain", {"id": "impassable", "x": "Artillery, Vehicle, Infantry, Heavy Infantry"}, "hard_cover", "amplification"],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "victory_symbol": {
+            "name": "Symbol of Victory",
+            "description": "Whether it's a hero's statue, a grand banner, or a Holo-Display of home, every sentient race has something to fight for.",
+            "category": "fortification",
+            "keywords": ["Fortification"],
+            "models": [
+                {
+                    "name": "Symbol of Victory",
+                    "courage": "-",
+                    "movement": "-",
+                    "shoot": "-",
+                    "fight": "-",
+                    "defense": "-",
+                    "reflexes": "-",
+                    "rules": ["terrain", {"id": "impassable", "x": "Artillery, Vehicle, Infantry, Heavy Infantry"}, "soft_cover", "inspiration"],
+                    "min": 1,
+                    "max": 1
                 }
             ]
         }
