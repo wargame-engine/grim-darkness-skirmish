@@ -5,14 +5,14 @@
   "author": "guitarninja#5707",
   "units": {
     "gang_leader": {
-      "name": "Ganger Leader",
+      "name": "Ganger Boss",
       "description": "The gang leader and current highest ranking member.",
       "category": "command",
       "keywords": ["Infantry"],
       "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "wounds", "x": 3}],
       "models": [
         {
-          "name": "Ganger Leader",
+          "name": "Ganger Boss",
           "courage": 7,
           "shoot": 6,
           "fight": 6,
