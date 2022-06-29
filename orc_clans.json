@@ -1,1142 +1,1062 @@
 {
-  "id": "orc_clans",
-  "name": "Orc Clans",
-  "author": "guitarninja#5707",
-  "background": "The Orc Clans are a band of roving orcs who scrap, fight and die for the glory of it. Their origin is still unknown, but they are spread across the galaxy in wide numbers. Orcs usually gather with a steady amount of goblins who act as the workers and some even pilot goblin mech creations.",
-  "units": {
-    "warlord": {
-      "name": "Warlord",
-      "description": "The clan leader and toughest orc boss.",
-      "category": "command",
-      "models": [
-        {
-          "name": "Warlord",
-          "courage": 7,
-          "shoot": 4,
-          "fight": 7,
-          "defense": 8,
-          "reflexes": 6,
-          "movement": 5,
-          "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "wounds", "x": 3}, {"id": "orc_tactics", "x": 1}],
-          "weapons": ["heavy_pistol", "frags", {"id": "heavy_ccw", "count": 5}],
-          "options": [
-            {"replaceRule": {"id": "orc_tactics", "x": 1}, "withRule": {"id": "orc_tactics", "x": 2}},
-            {"replaceWeapon": "heavy_pistol", "withWeapon": ["carbine", "twin_carbine", "combi_heavy_flamer", "combi_rocket_launcher"]},
-            {"replaceWeapon": {"id": "heavy_ccw", "count": 5}, "withWeapon": [{"id": "ultra_axe", "count": 5}, {"id": "ultra_saw", "count": 5}, {"id": "ultra_claw", "count": 5}]},
-            {"addRule": ["ultra_armor", "cyborg_body_3"], "limit": 1}
-          ],
-          "min": 1,
-          "max": 1
+    "id": "orc_clans",
+    "name": "Orc Clans",
+    "author": "guitarninja#5707",
+    "background": "The Orc Clans are a band of roving orcs who scrap, fight and die for the glory of it. Their origin is still unknown, but they are spread across the galaxy in wide numbers. Orcs usually gather with a steady amount of goblins who act as the workers and some even pilot goblin mech creations.",
+    "units": {
+        "warlord": {
+            "name": "Warlord",
+            "description": "The clan leader and toughest orc boss.",
+            "category": "command",
+            "models": [
+                {
+                    "name": "Warlord",
+                    "courage": 7,
+                    "shoot": 4,
+                    "fight": 7,
+                    "defense": 8,
+                    "reflexes": 6,
+                    "movement": 5,
+                    "rules": ["leader", {"id": "wounds", "x": 3}, {"id": "orc_tactics", "x": 1}],
+                    "weapons": ["heavy_pistol", "frags", {"id": "heavy_ccw", "count": 5}],
+                    "options": [
+                        {"replaceWeapon": ["heavy_pistol"], "withWeapon": ["carbine", "twin_carbine", "combi_heavy_flamer", "combi_rocket_launcher"]},
+                        {"replaceWeapon": {"id": "heavy_ccw", "count": 5}, "withWeapon": [{"id": "energy_axe", "count": 5}, {"id": "energy_saw", "count": 5}, {"id": "heavy_energy_claw", "count": 5}]},
+                        {"addWeapon": ["attack_beast"]},
+                        {"addRule": ["destroyer_armor", {"id": "defiant", "x": 3, "name": "Cyborg Body"}], "limit": 1},
+                        {"addRule": [{"id": "icon", "x": "Infantry"}, "war_banner"], "limit": 1},
+                        {"replaceRule": {"id": "orc_tactics", "x": 1}, "withRule": {"id": "orc_tactics", "x": 2}}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "warlord_trike": {
+            "name": "Warlord on Trike",
+            "description": "A tough warboss mounted on a battle war trike.",
+            "category": "command",
+            "keywords": ["Biker"],
+            "rules": ["damage_chart", {"id": "leader_x", "x": "Infantry, Vehicle, Biker"}, "relentless", {"id": "orc_tactics", "x": 1}],
+            "models": [
+                {
+                    "name": "Warlord on Trike",
+                    "courage": 7,
+                    "shoot": 4,
+                    "fight": 7,
+                    "defense": 9,
+                    "reflexes": 7,
+                    "movement": 8,
+                    "weapons": ["heavy_pistol", "frags", {"id": "heavy_ccw", "count": 5}, {"id": "twin_double_shotgun", "mount": ["Front"]}],
+                    "options": [
+                        {"replaceWeapon": ["heavy_pistol"], "withWeapon": ["carbine", "twin_carbine", "combi_heavy_flamer", "combi_rocket_launcher", "double_shotgun"]},
+                        {"replaceWeapon": {"id": "heavy_ccw", "count": 5}, "withWeapon": [{"id": "energy_axe", "count": 5}, {"id": "energy_saw", "count": 5}, {"id": "heavy_energy_claw", "count": 5}]},
+                        {"replaceWeapon": [{"id": "twin_double_shotgun", "mount": ["Front"]}], "withWeapon": [{"id": "twin_carbine", "mount": ["Front"]}, {"id": "twin_mini_mg", "mount": ["Front"]}]}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "shaman": {
+            "name": "Shaman",
+            "description": "A strange orc with psychic powers.",
+            "category": "command",
+            "models": [
+                {
+                    "name": "Shaman",
+                    "courage": 5,
+                    "shoot": 4,
+                    "fight": 6,
+                    "defense": 7,
+                    "reflexes": 5,
+                    "movement": 5,
+                    "rules": ["leader", {"id": "power", "x": 1}, {"id": "wounds", "x": 2}],
+                    "weapons": ["heavy_pistol", "frags", {"id": "heavy_ccw", "count": 3}],
+                    "options": [
+                        {"replaceWeapon": "heavy_pistol", "withWeapon": ["carbine", "twin_carbine", "combi_heavy_flamer", "combi_rocket_launcher"]},
+                        {
+                            "replaceWeapon": {"id": "heavy_ccw", "count": 3},
+                            "withWeapon": [{"id": "energy_axe", "count": 3}, {"id": "energy_saw", "count": 3}, {"id": "heavy_energy_claw", "count": 3}, {"id": "energy_staff", "count": 3}]
+                        },
+                        {"replaceRule": {"id": "power", "x": 1}, "withRule": {"id": "power", "x": 2}}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "mechanic": {
+            "name": "Mechanic",
+            "description": "An orc with a knack for scrapping and fixing things.",
+            "category": "command",
+            "models": [
+                {
+                    "name": "Mechanic",
+                    "movement": 5,
+                    "courage": 6,
+                    "shoot": 4,
+                    "fight": 6,
+                    "defense": 7,
+                    "reflexes": 5,
+                    "weapons": ["heavy_pistol", "frags", {"id": "heavy_ccw", "count": 3}],
+                    "options": [
+                        {
+                            "replaceWeapon": "heavy_pistol",
+                            "withWeapon": ["carbine", "twin_carbine", "combi_heavy_flamer", "combi_rocket_launcher", "plasma_pistol", "plasma_rifle", "teleport_pistol", "shock_gun", "rocket_launcher"]
+                        },
+                        {"replaceWeapon": {"id": "heavy_ccw", "count": 3}, "withWeapon": [{"id": "energy_axe", "count": 3}, {"id": "energy_saw", "count": 3}, {"id": "heavy_energy_claw", "count": 3}]},
+                        {"addRule": ["energy_field", "precision_monicle", "goblin_assistant"]},
+                        {"addRule": ["light_armor", "destroyer_armor", {"id": "defiant", "x": 3, "name": "Cyborg Body"}], "limit": 1}
+                    ],
+                    "rules": ["engineer", "leader", {"id": "wounds", "x": 2}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "mad_doctor": {
+            "name": "Mad Doctor",
+            "description": "An orc with a knack for fixing up the wounded.",
+            "category": "command",
+            "models": [
+                {
+                    "name": "Mad Doctor",
+                    "movement": 5,
+                    "courage": 5,
+                    "shoot": 4,
+                    "fight": 6,
+                    "defense": 7,
+                    "reflexes": 5,
+                    "rules": ["leader", "medic", {"id": "wounds", "x": 2}],
+                    "weapons": ["heavy_pistol", "frags", {"id": "heavy_ccw", "count": 3}],
+                    "options": [
+                        {"replaceWeapon": "heavy_pistol", "withWeapon": ["carbine", "twin_carbine", "combi_heavy_flamer", "combi_rocket_launcher", "plasma_pistol"]},
+                        {"replaceWeapon": {"id": "heavy_ccw", "count": 3}, "withWeapon": [{"id": "energy_axe", "count": 3}, {"id": "energy_saw", "count": 3}, {"id": "heavy_energy_claw", "count": 3}]}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "goblin_herder": {
+            "name": "Goblin Herder",
+            "description": "A orc tasked with herding and commanding lowly goblins.",
+            "category": "command",
+            "subfactions": ["none"],
+            "models": [
+                {
+                    "name": "Goblin Herder",
+                    "courage": 5,
+                    "shoot": 4,
+                    "fight": 6,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "movement": 6,
+                    "rules": ["leader"],
+                    "options": [{"addWeapon": ["attack_beast"]}],
+                    "weapons": ["heavy_pistol", "frags", {"id": "heavy_ccw", "count": 2}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "goblin": {
+            "name": "Goblin",
+            "description": "A lowly goblin.",
+            "category": "core",
+            "subfactions": ["none"],
+            "keywords": ["Goblin", "Infantry"],
+            "models": [
+                {
+                    "name": "Goblin",
+                    "courage": 4,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 4,
+                    "reflexes": 5,
+                    "movement": 6,
+                    "weapons": ["goblin_rifle", "ccw"],
+                    "options": [{"replaceWeapon": ["goblin_rifle"], "withWeapon": ["carbine"]}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "orc": {
+            "name": "Orc",
+            "description": "An angry orc.",
+            "category": "core",
+            "models": [
+                {
+                    "name": "Orc",
+                    "courage": 5,
+                    "shoot": 4,
+                    "fight": 6,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "movement": 5,
+                    "weapons": ["carbine", "heavy_ccw", "frags"],
+                    "options": [
+                        {"replaceWeapon": ["carbine", "heavy_ccw"], "withWeapon": [["heavy_pistol", {"id": "heavy_ccw", "count": 2}]]},
+                        {"addRule": "light_armor"},
+                        {"addWeapon": "fusion_bomb"}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "orc_leader": {
+            "name": "Orc Leader",
+            "description": "An angry orc leader.",
+            "category": "command",
+            "models": [
+                {
+                    "name": "Orc Leader",
+                    "courage": 5,
+                    "shoot": 4,
+                    "fight": 6,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "movement": 5,
+                    "rules": ["leader"],
+                    "weapons": ["carbine", "heavy_ccw", "frags"],
+                    "options": [
+                        {"replaceWeapon": ["carbine", "heavy_ccw"], "withWeapon": [["heavy_pistol", {"id": "heavy_ccw", "count": 2}]]},
+                        {"addRule": "light_armor"},
+                        {"addWeapon": "fusion_bomb"}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "orc_boss": {
+            "name": "Orc Boss",
+            "description": "A boss ready to cause maximum havoc.",
+            "category": "core",
+            "models": [
+                {
+                    "name": "Orc Boss",
+                    "courage": 5,
+                    "shoot": 4,
+                    "fight": 6,
+                    "defense": 7,
+                    "reflexes": 5,
+                    "movement": 5,
+                    "options": [
+                        {"replaceWeapon": "carbine", "withWeapon": ["twin_carbine", "combi_heavy_flamer", "combi_rocket_launcher"]},
+                        {"replaceWeapon": ["carbine", {"id": "heavy_ccw", "count": 2}], "withWeapon": [["heavy_pistol", {"id": "heavy_ccw", "count": 3}], {"id": "energy_saw", "count": 4}]},
+                        {"replaceWeapon": {"id": "heavy_ccw", "count": 3}, "withWeapon": [{"id": "energy_axe", "count": 3}, {"id": "energy_saw", "count": 3}, {"id": "heavy_energy_claw", "count": 3}]},
+                        {"addRule": [{"id": "defiant", "x": 3, "name": "Cyborg Body"}]},
+                        {"addRule": [["evasive", "scout"], "fly"]},
+                        {"addWeapon": ["fusion_bomb", "attack_beast"]}
+                    ],
+                    "weapons": ["carbine", {"id": "heavy_ccw", "count": 2}, "frags"],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "orc_boss_leader": {
+            "name": "Orc Boss Leader",
+            "description": "A boss leader ready to cause maximum havoc.",
+            "category": "command",
+            "models": [
+                {
+                    "name": "Orc Boss Leader",
+                    "courage": 5,
+                    "shoot": 4,
+                    "fight": 6,
+                    "defense": 7,
+                    "reflexes": 5,
+                    "movement": 5,
+                    "rules": ["leader"],
+                    "options": [
+                        {"replaceWeapon": "carbine", "withWeapon": ["twin_carbine", "combi_heavy_flamer", "combi_rocket_launcher"]},
+                        {"replaceWeapon": ["carbine", {"id": "heavy_ccw", "count": 2}], "withWeapon": [["heavy_pistol", {"id": "heavy_ccw", "count": 3}], {"id": "energy_saw", "count": 4}]},
+                        {"replaceWeapon": {"id": "heavy_ccw", "count": 3}, "withWeapon": [{"id": "energy_axe", "count": 3}, {"id": "energy_saw", "count": 3}, {"id": "heavy_energy_claw", "count": 3}]},
+                        {"addRule": [{"id": "defiant", "x": 3, "name": "Cyborg Body"}]},
+                        {"addRule": [["evasive", "scout"], "fly"]},
+                        {"addWeapon": ["fusion_bomb", "attack_beast"]}
+                    ],
+                    "weapons": ["carbine", {"id": "heavy_ccw", "count": 2}, "frags"],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "looter": {
+            "name": "Looter Orc",
+            "description": "An Orc obsessed with looting and upgrading weapons. Can be equipped for various specialist roles.",
+            "category": "specialist",
+            "models": [
+                {
+                    "name": "Looter Orc",
+                    "courage": 5,
+                    "shoot": 4,
+                    "fight": 6,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "movement": 5,
+                    "options": [
+                        {"replaceWeapon": "flamethrower", "withWeapon": ["rocket_pistol", "bomb_hammer", "rocket_launcher", "railgun", "heavy_machinegun", "plasma_cannon", "fusion_cannon"]},
+                        {"addWeapon": "fusion_bomb"}
+                    ],
+                    "weapons": ["flamethrower", "heavy_ccw", "frags"],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "looter_leader": {
+            "name": "Looter Orc Leader",
+            "description": "An Orc leader obsessed with looting and upgrading weapons. Can be equipped for various specialist roles.",
+            "category": "command",
+            "models": [
+                {
+                    "name": "Looter Orc Leader",
+                    "courage": 5,
+                    "shoot": 4,
+                    "fight": 6,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "movement": 5,
+                    "rules": ["leader"],
+                    "options": [
+                        {"replaceWeapon": "flamethrower", "withWeapon": ["rocket_pistol", "bomb_hammer", "rocket_launcher", "railgun", "heavy_machinegun", "plasma_cannon", "fusion_cannon"]},
+                        {"addWeapon": "fusion_bomb"}
+                    ],
+                    "weapons": ["flamethrower", "heavy_ccw", "frags"],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "looter_boss": {
+            "name": "Pirate Orc",
+            "description": "A Pirate Orc obsessed with looting and upgrading weapons.",
+            "category": "specialist",
+            "models": [
+                {
+                    "name": "Pirate Orc",
+                    "courage": 5,
+                    "shoot": 4,
+                    "fight": 6,
+                    "defense": 7,
+                    "reflexes": 5,
+                    "movement": 5,
+                    "weapons": ["flamethrower", {"id": "heavy_ccw", "count": 2}, "frags"],
+                    "rules": ["relentless"],
+                    "options": [
+                        {
+                            "replaceWeapon": "flamethrower",
+                            "withWeapon": ["combi_rocket_launcher", "combi_heavy_flamer", "twin_carbine", "rocket_launcher", "railgun", "heavy_machinegun", "plasma_cannon", "fusion_cannon"]
+                        },
+                        {"replaceWeapon": ["flamethrower", {"id": "heavy_ccw", "count": 2}], "withWeapon": [["heavy_pistol", {"id": "heavy_ccw", "count": 3}]]},
+                        {
+                            "replaceWeapon": {"id": "heavy_ccw", "count": 3},
+                            "withWeapon": [{"id": "energy_axe", "count": 3}, {"id": "energy_saw", "count": 3}, {"id": "heavy_energy_claw", "count": 3}, {"id": "cutlass", "count": 3}]
+                        },
+                        {"addRule": {"id": "defiant", "x": 3, "name": "Cyborg Body"}},
+                        {"addWeapon": "fusion_bomb"}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "looter_boss_leader": {
+            "name": "Pirate Orc Leader",
+            "description": "A Pirate Orc leader obsessed with looting and upgrading weapons.",
+            "category": "command",
+            "models": [
+                {
+                    "name": "Pirate Orc Leader",
+                    "courage": 5,
+                    "shoot": 4,
+                    "fight": 6,
+                    "defense": 7,
+                    "reflexes": 5,
+                    "movement": 5,
+                    "weapons": ["flamethrower", {"id": "heavy_ccw", "count": 2}, "frags"],
+                    "rules": ["relentless", "leader"],
+                    "options": [
+                        {
+                            "replaceWeapon": "flamethrower",
+                            "withWeapon": ["combi_rocket_launcher", "combi_heavy_flamer", "twin_carbine", "rocket_launcher", "railgun", "heavy_machinegun", "plasma_cannon", "fusion_cannon"]
+                        },
+                        {"replaceWeapon": ["flamethrower", {"id": "heavy_ccw", "count": 2}], "withWeapon": [["heavy_pistol", {"id": "heavy_ccw", "count": 3}]]},
+                        {
+                            "replaceWeapon": {"id": "heavy_ccw", "count": 3},
+                            "withWeapon": [{"id": "energy_axe", "count": 3}, {"id": "energy_saw", "count": 3}, {"id": "heavy_energy_claw", "count": 3}, {"id": "cutlass", "count": 3}]
+                        },
+                        {"addRule": {"id": "defiant", "x": 3, "name": "Cyborg Body"}},
+                        {"addWeapon": "fusion_bomb"}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "commando_orc": {
+            "name": "Commando Orc",
+            "description": "A sneaky orc.",
+            "category": "specialist",
+            "rules": ["evasive", "scout"],
+            "models": [
+                {
+                    "name": "Commando Orc",
+                    "courage": 5,
+                    "shoot": 4,
+                    "fight": 6,
+                    "defense": 5,
+                    "reflexes": 6,
+                    "movement": 5,
+                    "weapons": ["carbine", "heavy_ccw", "frags"],
+                    "options": [
+                        {"replaceWeapon": ["carbine"], "withWeapon": ["flamethrower", "plasma_rifle", "rocket_launcher", "heavy_machinegun", "combat_shotgun"]},
+                        {"replaceWeapon": ["carbine", "heavy_ccw"], "withWeapon": [["heavy_pistol", {"id": "heavy_ccw", "count": 2}]]},
+                        {"replaceWeapon": {"id": "heavy_ccw", "count": 2}, "withWeapon": ["assault_ram"]},
+                        {"addWeapon": "fusion_bomb"}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "commando_orc_leader": {
+            "name": "Commando Orc Leader",
+            "description": "A sneaky orc leader.",
+            "category": "command",
+            "rules": ["evasive", "scout", "leader"],
+            "models": [
+                {
+                    "name": "Commando Orc",
+                    "courage": 5,
+                    "shoot": 4,
+                    "fight": 6,
+                    "defense": 5,
+                    "reflexes": 6,
+                    "movement": 5,
+                    "weapons": ["carbine", "heavy_ccw", "frags"],
+                    "options": [
+                        {"replaceWeapon": ["carbine"], "withWeapon": ["flamethrower", "plasma_rifle", "rocket_launcher", "heavy_machinegun", "combat_shotgun"]},
+                        {"replaceWeapon": ["carbine", "heavy_ccw"], "withWeapon": [["heavy_pistol", {"id": "heavy_ccw", "count": 2}]]},
+                        {"addWeapon": "fusion_bomb"}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "storm_orc": {
+            "name": "Storm Orc",
+            "description": "An angry orc equipped with a jetpack.",
+            "category": "specialist",
+            "rules": ["fly"],
+            "models": [
+                {
+                    "name": "Storm Orc",
+                    "courage": 5,
+                    "shoot": 4,
+                    "fight": 6,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "movement": 8,
+                    "weapons": ["carbine", "heavy_ccw", "frags"],
+                    "options": [
+                        {"replaceWeapon": ["carbine"], "withWeapon": ["flamethrower", "plasma_rifle", "rocket_launcher", "heavy_machinegun"]},
+                        {"replaceWeapon": ["carbine", "heavy_ccw"], "withWeapon": [["heavy_pistol", {"id": "heavy_ccw", "count": 2}]]},
+                        {"addWeapon": "fusion_bomb"}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "storm_orc_leader": {
+            "name": "Storm Orc Leader",
+            "description": "An angry orc leader equipped with a jetpack.",
+            "category": "command",
+            "rules": ["fly", "leader"],
+            "models": [
+                {
+                    "name": "Storm Orc Leader",
+                    "courage": 5,
+                    "shoot": 4,
+                    "fight": 6,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "movement": 8,
+                    "weapons": ["carbine", "heavy_ccw", "frags"],
+                    "options": [
+                        {"replaceWeapon": ["carbine"], "withWeapon": ["flamethrower", "plasma_rifle", "rocket_launcher", "heavy_machinegun"]},
+                        {"replaceWeapon": ["carbine", "heavy_ccw"], "withWeapon": [["heavy_pistol", {"id": "heavy_ccw", "count": 2}]]},
+                        {"addWeapon": "fusion_bomb"}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "ultra_boss": {
+            "name": "Ultra Boss",
+            "description": "An orc boss that is heavily armored and dangerous.",
+            "category": "specialist",
+            "rules": [{"id": "wounds", "x": 2}],
+            "models": [
+                {
+                    "name": "Ultra Boss",
+                    "courage": 6,
+                    "shoot": 4,
+                    "fight": 6,
+                    "defense": 9,
+                    "reflexes": 5,
+                    "movement": 4,
+                    "options": [
+                        {"replaceWeapon": ["twin_carbine", {"id": "heavy_energy_claw", "count": 3}], "withWeapon": [{"id": "energy_saw", "count": 4}]},
+                        {"replaceWeapon": "twin_carbine", "withWeapon": ["combi_heavy_flamer", "combi_rocket_launcher"]}
+                    ],
+                    "weapons": ["twin_carbine", "frags", {"id": "heavy_energy_claw", "count": 3}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "ultra_boss_leader": {
+            "name": "Ultra Boss Leader",
+            "description": "An orc boss leader that is heavily armored and dangerous.",
+            "category": "command",
+            "rules": ["leader", {"id": "wounds", "x": 2}],
+            "models": [
+                {
+                    "name": "Ultra Boss Leader",
+                    "courage": 6,
+                    "shoot": 4,
+                    "fight": 6,
+                    "defense": 9,
+                    "reflexes": 5,
+                    "movement": 4,
+                    "options": [
+                        {"replaceWeapon": ["twin_carbine", {"id": "heavy_energy_claw", "count": 3}], "withWeapon": [{"id": "energy_saw", "count": 4}]},
+                        {"replaceWeapon": "twin_carbine", "withWeapon": ["combi_heavy_flamer", "combi_rocket_launcher"]}
+                    ],
+                    "weapons": ["twin_carbine", "frags", {"id": "heavy_energy_claw", "count": 3}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "attack_beast": {
+            "name": "Attack Beast",
+            "description": "A bouncing beast with gnashing teeth.",
+            "category": "strike",
+            "subfactions": ["none", "goblin_army"],
+            "models": [
+                {
+                    "name": "Attack Beast",
+                    "courage": 4,
+                    "shoot": 4,
+                    "movement": 8,
+                    "fight": 6,
+                    "defense": 4,
+                    "reflexes": 5,
+                    "weapons": ["beast_bite"],
+                    "options": [{"addRule": {"id": "defiant", "x": 3, "name": "Cyborg Body"}}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "attack_beast_herder": {
+            "name": "Attack Beast Herder",
+            "description": "An orc herding a swarm of ravenous attack beasts.",
+            "category": "command",
+            "subfactions": ["none", "goblin_army"],
+            "models": [
+                {
+                    "name": "Attack Beast Herder",
+                    "courage": 5,
+                    "shoot": 4,
+                    "fight": 6,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "movement": 8,
+                    "weapons": ["heavy_pistol", "frags", {"id": "heavy_ccw", "count": 2}],
+                    "rules": ["leader"],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "orc_biker": {
+            "name": "Orc Biker",
+            "description": "An angry orc on bike.",
+            "category": "strike",
+            "keywords": ["Biker"],
+            "rules": [{"id": "impact", "x": 1}],
+            "models": [
+                {
+                    "name": "Orc Biker",
+                    "courage": 5,
+                    "shoot": 4,
+                    "fight": 6,
+                    "defense": 7,
+                    "reflexes": 5,
+                    "movement": 8,
+                    "weapons": ["heavy_pistol", {"id": "heavy_ccw", "count": 2}, {"id": "twin_carbine", "mount": ["Front"]}],
+                    "options": [{"replaceWeapon": [{"id": "twin_carbine", "mount": ["Front"]}], "withWeapon": [{"id": "twin_mini_mg", "mount": ["Front"]}]}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "orc_biker_leader": {
+            "name": "Orc Biker Leader",
+            "description": "An angry orc leader on bike.",
+            "category": "command",
+            "keywords": ["Biker"],
+            "rules": [{"id": "impact", "x": 1}, {"id": "leader_x", "x": "Infantry, Cavalry"}],
+            "models": [
+                {
+                    "name": "Orc Biker Leader",
+                    "courage": 5,
+                    "shoot": 4,
+                    "fight": 6,
+                    "defense": 7,
+                    "reflexes": 5,
+                    "movement": 8,
+                    "weapons": ["heavy_pistol", {"id": "heavy_ccw", "count": 2}, {"id": "twin_carbine", "mount": ["Front"]}],
+                    "options": [{"replaceWeapon": [{"id": "twin_carbine", "mount": ["Front"]}], "withWeapon": [{"id": "twin_mini_mg", "mount": ["Front"]}]}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "boss_biker": {
+            "name": "Boss Biker",
+            "description": "An orc boss mounted on a bike.",
+            "category": "strike",
+            "keywords": ["Biker"],
+            "rules": [{"id": "impact", "x": 1}],
+            "models": [
+                {
+                    "name": "Boss Biker",
+                    "courage": 6,
+                    "shoot": 4,
+                    "fight": 6,
+                    "defense": 7,
+                    "reflexes": 6,
+                    "movement": 8,
+                    "options": [
+                        {"replaceWeapon": "carbine", "withWeapon": ["twin_carbine", "combi_heavy_flamer", "combi_rocket_launcher"]},
+                        {"replaceWeapon": ["carbine", {"id": "heavy_ccw", "count": 2}], "withWeapon": [["heavy_pistol", {"id": "heavy_ccw", "count": 3}]]},
+                        {"replaceWeapon": {"id": "heavy_ccw", "count": 3}, "withWeapon": [{"id": "energy_axe", "count": 3}, {"id": "energy_saw", "count": 3}, {"id": "heavy_energy_claw", "count": 3}]},
+                        {"replaceWeapon": [{"id": "twin_carbine", "mount": ["Front"]}], "withWeapon": [{"id": "twin_mini_mg", "mount": ["Front"]}]}
+                    ],
+                    "weapons": ["carbine", {"id": "heavy_ccw", "count": 2}, "frags", {"id": "twin_carbine", "mount": ["Front"]}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "boss_biker_leader": {
+            "name": "Boss Biker Leader",
+            "description": "An orc boss leader mounted on a bike.",
+            "category": "command",
+            "keywords": ["Biker"],
+            "rules": [{"id": "impact", "x": 1}, {"id": "leader_x", "x": "Infantry, Cavalry"}],
+            "models": [
+                {
+                    "name": "Boss Biker Leader",
+                    "courage": 6,
+                    "shoot": 4,
+                    "fight": 6,
+                    "defense": 7,
+                    "reflexes": 6,
+                    "movement": 8,
+                    "options": [
+                        {"replaceWeapon": "carbine", "withWeapon": ["twin_carbine", "combi_heavy_flamer", "combi_rocket_launcher"]},
+                        {"replaceWeapon": ["carbine", {"id": "heavy_ccw", "count": 2}], "withWeapon": [["heavy_pistol", {"id": "heavy_ccw", "count": 3}]]},
+                        {"replaceWeapon": {"id": "heavy_ccw", "count": 3}, "withWeapon": [{"id": "energy_axe", "count": 3}, {"id": "energy_saw", "count": 3}, {"id": "heavy_energy_claw", "count": 3}]},
+                        {"replaceWeapon": [{"id": "twin_carbine", "mount": ["Front"]}], "withWeapon": [{"id": "twin_mini_mg", "mount": ["Front"]}]}
+                    ],
+                    "weapons": ["carbine", {"id": "heavy_ccw", "count": 2}, "frags", {"id": "twin_carbine", "mount": ["Front"]}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "orc_minicopter": {
+            "name": "Orc Minicopter",
+            "description": "A miniature helicopter for quick and deadly air attacks.",
+            "category": "strike",
+            "rules": ["fly", {"id": "wounds", "x": 2}],
+            "keywords": ["Vehicle"],
+            "models": [
+                {
+                    "name": "Orc Minicopter",
+                    "courage": 5,
+                    "shoot": 4,
+                    "fight": 6,
+                    "defense": 8,
+                    "reflexes": 5,
+                    "movement": 10,
+                    "weapons": ["heavy_pistol", {"id": "heavy_ccw", "count": 2}],
+                    "options": [
+                        {"addWeapon": ["twin_plasma_rifle", "twin_rocket_launcher", "twin_heavy_machinegun"], "limit": 1},
+                        {"addWeapon": [{"id": "ultra_saw", "count": 3}, "assault_bomb"], "limit": 1}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "orc_minicopter_leader": {
+            "name": "Orc Minicopter Leader",
+            "description": "A miniature helicopter for quick and deadly air attacks.",
+            "category": "command",
+            "rules": ["fly", {"id": "leader_x", "x": "Vehicle"}, {"id": "wounds", "x": 2}],
+            "keywords": ["Vehicle"],
+            "models": [
+                {
+                    "name": "Orc Minicopter Leader",
+                    "courage": 5,
+                    "shoot": 4,
+                    "fight": 6,
+                    "defense": 8,
+                    "reflexes": 5,
+                    "movement": 10,
+                    "weapons": ["heavy_pistol", {"id": "heavy_ccw", "count": 2}],
+                    "options": [
+                        {"addWeapon": ["twin_plasma_rifle", "twin_rocket_launcher", "twin_heavy_machinegun"], "limit": 1},
+                        {"addWeapon": [{"id": "ultra_saw", "count": 3}, "assault_bomb"], "limit": 1}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "attack_quad": {
+            "name": "Attack Quad",
+            "description": "A small vehicle built to swiftly deploy devastating firepower.",
+            "category": "strike",
+            "keywords": ["Vehicle"],
+            "rules": [{"id": "impact", "x": 3}, "vulnerable_side_rear", "damage_chart"],
+            "models": [
+                {
+                    "name": "Attack Quad",
+                    "courage": 5,
+                    "shoot": 4,
+                    "fight": 0,
+                    "defense": 8,
+                    "reflexes": 5,
+                    "movement": 8,
+                    "weapons": ["heavy_flamethrower"],
+                    "options": [{"replaceWeapon": "heavy_flamethrower", "withWeapon": ["twin_rocket_launcher", "twin_heavy_machinegun"]}, {"addRule": ["tracks"]}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
         }
-      ]
     },
-    "shaman": {
-      "name": "Shaman",
-      "description": "A strange orc with psychic powers.",
-      "category": "command",
-      "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "wounds", "x": 2}],
-      "models": [
-        {
-          "name": "Shaman",
-          "courage": 5,
-          "shoot": 4,
-          "fight": 6,
-          "defense": 7,
-          "reflexes": 5,
-          "movement": 5,
-          "weapons": ["heavy_pistol", "frags", {"id": "heavy_ccw", "count": 3}],
-          "options": [
-            {"replaceWeapon": "heavy_pistol", "withWeapon": ["carbine", "twin_carbine", "combi_heavy_flamer", "combi_rocket_launcher"]},
-            {"replaceWeapon": {"id": "heavy_ccw", "count": 3}, "withWeapon": [{"id": "ultra_axe", "count": 3}, {"id": "ultra_saw", "count": 3}, {"id": "ultra_claw", "count": 3}]},
-            {"replaceRule": {"id": "power", "x": 1}, "withRule": {"id": "power", "x": 2}}
-          ],
-          "rules": [{"id": "power", "x": 1}],
-          "min": 1,
-          "max": 1
+    "weapons": {
+        "goblin_rifle": {"name": "Goblin Blaster", "attacks": 1, "short": 9, "medium": 18, "ap": 1, "rules": ["assault"]},
+        "lightning_cannon": {"name": "Lightning Cannon", "attacks": 1, "short": 24, "medium": 48, "ap": 7, "rules": [{"id": "blast", "x": 3}, "overcharge"]},
+        "cannon": {"name": "Cannon", "attacks": 1, "short": 18, "medium": 36, "ap": 5, "rules": [{"id": "blast", "x": 3}]},
+        "heavy_cannon": {"name": "Heavy Cannon", "attacks": 1, "short": 24, "medium": 48, "ap": 6, "rules": [{"id": "blast", "x": 3}]},
+        "boom_cannon": {"name": "Boom Cannon", "attacks": 1, "short": 24, "medium": 48, "ap": 6, "rules": [{"id": "blast", "x": 6}]},
+        "super_cannon": {"name": "Super Cannon", "attacks": 1, "short": 36, "medium": 72, "ap": 7, "rules": [{"id": "blast", "x": 3}]},
+        "combi_gun": {"name": "Combi-Gun", "attacks": 9, "short": 12, "medium": 24, "ap": 3, "rules": ["assault"]},
+        "deathstorm_minigun": {"name": "Deathstorm Minigun", "attacks": 12, "short": 18, "medium": 36, "ap": 3},
+        "titan_gatling_gun": {"name": "Titan Gatling Gun", "attacks": 3, "short": 24, "medium": 48, "ap": 4, "rules": [{"id": "blast", "x": 3}]},
+        "super_gatling_gun": {"name": "Super Gatling Gun", "attacks": 9, "short": 24, "medium": 48, "ap": 5},
+        "titan_death_cannon": {"name": "Titan Death Cannon", "attacks": 3, "short": 18, "ap": 8, "medium": 36, "rules": [{"id": "blast", "x": 3}]},
+        "deathstorm_plasma_cannon": {"name": "Deathstorm Plasma Cannon", "attacks": 2, "short": 18, "medium": 36, "ap": 6, "rules": ["overcharge", {"id": "blast", "x": 3}]},
+        "walker_claw": {"name": "Walker Claw", "attacks": 1, "ap": 6, "short": "Melee"},
+        "walker_saw": {"name": "Walker-Saw", "attacks": 1, "ap": 5, "short": "Melee"},
+        "mega_claw": {"name": "Mega Claw", "profiles": [{"name": "Strike", "attacks": 4, "ap": 8, "short": "Melee"}, {"name": "Sweep", "attacks": 8, "ap": 4, "short": "Melee"}]},
+        "mega_saw": {"name": "Mega Saw", "attacks": 4, "ap": 6, "short": "Melee"},
+        "super_machinegun": {"name": "Super Machinegun", "attacks": 3, "short": 18, "medium": 36, "ap": 3},
+        "twin_super_machinegun": {"name": "Twin Super Machinegun", "attacks": 6, "short": 18, "medium": 36, "ap": 3},
+        "rivet_cannon": {"name": "Rivet Cannon", "attacks": 2, "short": 18, "medium": 36, "ap": 5, "rules": [{"id": "blast", "x": 3}]},
+        "teleport_pistol": {"name": "Teleport Pistol", "attacks": 1, "ap": 6, "short": 6, "medium": 12, "rules": [{"id": "blast", "x": 3}, {"id": "knockback", "x": 1}]},
+        "teleport_rifle": {"name": "Teleport Rifle", "attacks": 1, "ap": 6, "short": 9, "medium": 18, "rules": [{"id": "blast", "x": 3}, {"id": "knockback", "x": 1}]},
+        "twin_teleport_rifle": {"name": "Twin Teleport Rifle", "attacks": 2, "short": 9, "ap": 6, "medium": 18, "rules": [{"id": "blast", "x": 3}, {"id": "knockback", "x": 1}]},
+        "shock_rifle": {"name": "Shock Rifle", "attacks": 2, "short": 9, "medium": 18, "ap": 6},
+        "shock_gun": {"name": "Shock Gun", "attacks": 1, "short": 24, "medium": 48, "ap": 6, "rules": [{"id": "blast", "x": 3}]},
+        "beast_cannon": {"name": "Beast Cannon", "attacks": 2, "short": 18, "ap": 3, "medium": 36, "rules": [{"id": "blast", "x": 3}, "indirect"]},
+        "beast_launcher": {"name": "Beast Launcher", "attacks": 1, "short": 9, "ap": 3, "medium": 18, "rules": [{"id": "blast", "x": 3}, "indirect"]},
+        "carbine": {"name": "Burst Carbine", "attacks": 1, "short": 9, "medium": 18, "ap": 1, "rules": ["assault", "rapid_fire"]},
+        "twin_carbine": {"name": "Twin Burst Carbine", "attacks": 2, "short": 9, "medium": 18, "ap": 1, "rules": ["assault", "rapid_fire"]},
+        "grand_carbine": {"name": "Grand Carbine", "attacks": 12, "short": 9, "medium": 18, "ap": 2, "rules": ["assault"]},
+        "grand_claw": {"name": "Grand Claw", "profiles": [{"name": "Strike", "attacks": 5, "short": "Melee", "ap": 7}, {"name": "Sweep", "attacks": 10, "short": "Melee", "ap": 3}]},
+        "super_claw": {"name": "Super-Claw", "attacks": 3, "short": "Melee", "ap": 5},
+        "twin_mini_mg": {"name": "Twin Mini-MGs", "attacks": 6, "ap": 2, "short": 9, "medium": 18, "rules": ["assault"]},
+        "twin_double_shotgun": {"name": "Twin Double Shotgun", "attacks": 4, "short": 6, "medium": 12, "ap": 2, "rules": ["assault", "brutal"]},
+        "combi_heavy_flamer": {
+            "name": "Combi Heavy Flamer",
+            "profiles": [
+                {"name": "Twin Burst Carbine", "attacks": 2, "short": 9, "medium": 18, "ap": 1, "rules": ["assault", "rapid_fire"]},
+                {"name": "Heavy Flamer", "attacks": 3, "ap": 2, "short": 6, "medium": 12, "rules": ["flame"]}
+            ]
+        },
+        "combi_rocket_launcher": {
+            "name": "Combi Rocket Launcher",
+            "profiles": [
+                {"name": "Twin Burst Carbine", "attacks": 2, "ap": 1, "short": 9, "medium": 18, "rules": ["assault", "rapid_fire"]},
+                {"name": "Rocket Launcher", "attacks": 1, "short": 12, "medium": 24, "ap": 6, "rules": ["assault"]}
+            ]
+        },
+        "cutlass": {"name": "Cutlass", "ap": 2, "attacks": 1, "short": "Melee"},
+        "energy_saw": {"name": "Energy Sawblade", "attacks": 1, "ap": 4, "short": "Melee"},
+        "heavy_energy_claw": {"name": "Heavy Energy Claw", "attacks": 1, "ap": 5, "short": "Melee", "rules": ["cumbersome"]},
+        "beast_bite": {"name": "Beast Bite", "attacks": 2, "ap": 1, "short": "Melee"},
+        "rocket_launcher": {"name": "Rocket Launcher", "attacks": 1, "short": 12, "medium": 24, "ap": 6, "rules": ["assault"]},
+        "titan_rocket_launcher": {"name": "Titan Rocket Launcher", "attacks": 3, "short": 36, "medium": 72, "ap": 6},
+        "goblin_bazooka": {"name": "Goblin Bazooka", "attacks": 1, "ap": 3, "short": 9, "medium": 18, "rules": [{"id": "blast", "x": 3}, "assault"]},
+        "twin_rocket_launcher": {"name": "Twin Rocket Launcher", "attacks": 2, "short": 12, "medium": 24, "ap": 6, "rules": ["assault"]},
+        "rocket_pistol": {"name": "Rocket Pistol", "attacks": 1, "short": 6, "medium": 12, "ap": 6, "rules": ["assault", "pistol"]},
+        "orc_flamethrower": {"name": "Orc Flamethrower", "attacks": 2, "ap": 1, "short": 6, "medium": 12, "rules": ["assault", "flame"]},
+        "bomb_hammer": {"name": "Bomb Hammer", "attacks": 1, "ap": 7, "short": "Melee"},
+        "assault_bomb": {"name": "Assault Bomb", "attacks": 1, "ap": 4, "short": "Melee", "rules": [{"id": "blast", "x": 3}]},
+        "flame_bombs": {"name": "Flame Bombs", "attacks": 2, "ap": 2, "short": 6, "rules": ["bomb", "flame", {"id": "blast", "x": 3}]},
+        "heavy_bombs": {"name": "Heavy Bomb", "attacks": 1, "ap": 3, "short": 6, "rules": ["bomb", {"id": "blast", "x": 3}]},
+        "flame_missiles": {"name": "Flame Missiles", "attacks": 2, "ap": 2, "short": 12, "medium": 24, "rules": ["flame", {"id": "blast", "x": 3}]},
+        "bomb_beast": {"name": "Bomb Beast", "attacks": 1, "ap": 6, "short": 6, "medium": 12, "rules": [{"id": "blast", "x": 3}]},
+        "double_shotgun": {"name": "Double Shotgun", "attacks": 2, "short": 6, "medium": 12, "ap": 2, "rules": ["assault", "brutal"]},
+        "relic_ultra_claw": {"name": "Killer Claw", "attacks": 1, "ap": 6, "short": "Melee", "rules": ["cumbersome"]},
+        "goring_tusks": {"name": "Goring Tusks", "attacks": 1, "ap": 8, "short": "Melee"},
+        "titan_chopper": {"name": "Titan Chopper", "profiles": [{"name": "Strike", "attacks": 3, "short": "Melee", "ap": 8}, {"name": "Sweep", "attacks": 6, "short": "Melee", "ap": 4}]},
+        "attack_beast": {"name": "Attack Beast", "attacks": 2, "ap": 1, "short": "Melee", "rules": ["cumbersome"]}
+    },
+    "rules": {
+        "grand_warlord_tactics": {
+            "name": "Grand Warlord Tactics",
+            "inputs": ["x"],
+            "description": "When this unit is activated, choose up to X friendly _Infantry_ units within 6\" to receive one of the following bonuses until the end of the round: \n * Re-roll all failed Accuracy tests \n * Re-roll all failed Strength tests",
+            "points": ["rule.x", {"multiply": 20}]
+        },
+        "speed_pole": {"name": "Big Boss Pole", "description": "Friendly _Infantry_ units within 6\" add +1\" to their Movement characteristic.", "points": 5},
+        "goblin_tactics": {
+            "name": "Goblin Tactics",
+            "inputs": ["x"],
+            "description": "When this unit is activated, choose up to X friendly _Goblin_ _Infantry_ units within 6\" to receive one of the following bonuses until the end of the round: \n * Re-roll failed Accuracy tests of 9+ \n * Re-roll failed Initiative tests of 9+",
+            "points": ["rule.x", {"multiply": 10}]
+        },
+        "orc_tactics": {
+            "name": "Orc Tactics",
+            "inputs": ["x"],
+            "description": "When this unit is activated, choose up to X friendly _Infantry_ units within 6\" to receive one of the following bonuses until the end of the round: \n * Re-roll failed Strength tests of 9+ \n * Re-roll failed Initiative tests of 9+",
+            "points": ["rule.x", {"multiply": 10}]
+        },
+        "tracks": {"name": "Tracks", "description": "This unit may ignore difficult terrain and obstacles of height 2\" or less when moving.", "points": 5},
+        "goblin_assistant": {"name": "Goblin Assistant", "description": "Models in this unit gain +1 to Repair rolls.", "points": 2},
+        "orc_idol": {"name": "Orc Idol", "description": "This model and friendly _Infantry_ units within 6\" gain +1 Courage.", "points": 10},
+        "precision_monicle": {"name": "Precision Monicle", "hidden": "true", "description_short": "+1 Accuracy", "points": 5},
+        "energy_field": {"name": "Energy Field", "description": "Once per round, a friendly _Infantry_ unit within 6\" may gain +1 Save.", "points": 20},
+        "force_field": {"name": "Force Field", "description": "Roll a die for each hit this model takes, on a 3 or less that hit is prevented.", "points": 20},
+        "wrecking_ball": {"name": "Wrecking Ball", "hidden": true, "description_short": "Impact +3", "points": 6},
+        "boarding_plank": {"name": "Boarding Plank", "description_short": "Impact +3", "hidden": true, "points": 6},
+        "extra_space": {"name": "Extra Space", "description_short": "Transport +10", "hidden": true, "points": 10},
+        "extra_armor": {"name": "Extra Armor", "description_short": "Save +1", "hidden": true, "points": 12},
+        "war_banner": {"name": "War Banner", "description": "Once per round, a friendly _Infantry_ unit within 6\" gains +1 AP on all Melee weapons.", "points": 10},
+        "icon": {"name": "Icon", "description": "Friendly units of X types within 6\" may re-roll a single failed Courage test when removing Shock.", "points": 10, "inputs": ["x"]},
+        "brr": {"name": "Big Red Button", "hidden": true, "description_short": "Movement +2\"", "points": 6}
+    },
+    "relics": {
+        "relic_killer_claw": {
+            "name": "The Killer Claw",
+            "weapon": "relic_ultra_claw",
+            "description": "Replace one model's Heavy Energy Claw with The Killer Claw.",
+            "flavor": "This Claw is the most killy claw you've ever seen.",
+            "points": 5
+        },
+        "speed_pole": {
+            "name": "Big Boss Pole",
+            "rule": "speed_pole",
+            "description": "Upgrade one Warlord model with The Big Boss Pole.",
+            "flavor": "Nearby Orcs are filled with a zeal to charge forward and attack.",
+            "points": 5
+        },
+        "boom_cannon": {
+            "name": "The Boom Cannon",
+            "weapon": "boom_cannon",
+            "description": "Replace one model's Heavy Cannon with The Boom Cannon.",
+            "flavor": "A very scary cannon for pure destruction.",
+            "points": 10
         }
-      ]
     },
-    "mechanic": {
-      "name": "Mechanic",
-      "description": "An orc with a knack for scrapping and fixing things.",
-      "category": "command",
-      "rules": [{"id": "leader_x", "x": "Infantry"}],
-      "models": [
-        {
-          "name": "Mechanic",
-          "movement": 5,
-          "courage": 6,
-          "shoot": 4,
-          "fight": 6,
-          "defense": 7,
-          "reflexes": 5,
-          "weapons": ["heavy_pistol", "frags", {"id": "heavy_ccw", "count": 3}],
-          "options": [
-            {
-              "replaceWeapon": "heavy_pistol",
-              "withWeapon": ["carbine", "twin_carbine", "combi_heavy_flamer", "combi_rocket_launcher", "plasma_pistol", "teleport_pistol", "plasma_rifle", "rocket_launcher", "shock_gun"]
-            },
-            {"replaceWeapon": {"id": "heavy_ccw", "count": 3}, "withWeapon": [{"id": "ultra_axe", "count": 3}, {"id": "ultra_saw", "count": 3}, {"id": "ultra_claw", "count": 3}]},
-            {"addRule": ["heavy_armor", "ultra_armor", "cyborg_body_3"], "limit": 1},
-            {"replaceRule": {"id": "repair", "x": 3}, "withRule": {"id": "repair", "x": 5}},
-            {"addRule": ["precision_monicle"]},
-            {"addRule": ["energy_field"]}
-          ],
-          "rules": [{"id": "wounds", "x": 2}],
-          "min": 1,
-          "max": 1
+    "powers": {
+        "crunch": {"name": "Crunch", "description": "Target enemy unit within 12\" takes 4 hits with AP(1).", "charge": 5},
+        "teleport": {
+            "name": "Jump Teleport",
+            "description": "Target friendly unit within 12\" may move up to 12\" ignoring all models and terrain. This must end outside of 12\" of any enemy units.",
+            "charge": 7
+        },
+        "strength": {"name": "Mighty Strength", "description": "Target friendly unit within 12\" gets +1 Strength until the end of the round.", "charge": 6}
+    },
+    "strategies": {
+        "here_we_go": {"name": "Here We Go!", "phase": "activation", "description": "Use when a unit declares a Charge action. That unit gets +3\" of Movement for that action.", "cost": 1},
+        "ramshackle": {
+            "subfactions": ["none"],
+            "phase": "activation",
+            "name": "Ramshackle",
+            "flavor": "Many parts of Orc vehicles end up being less important than they seem, falling off without causing damage.",
+            "description": "Use when a _Vehicle_ unit is targeted by an attack. For that attack, roll a D10 each time that unit is hit. On a 3 or less the hit is ignored.",
+            "cost": 2
+        },
+        "tough_ones": {
+            "subfactions": ["combat_focus"],
+            "name": "Tough Ones",
+            "phase": "activation",
+            "flavor": "These Orcs are some of the toughest you've ever seen.",
+            "description": "Use before taking Save rolls for an _Infantry_ unit. It gets +1 Save.",
+            "cost": 2
+        },
+        "smash_them": {
+            "subfactions": ["combat_focus"],
+            "name": "Smash Them",
+            "phase": "activation",
+            "flavor": "It's about time we got to fighting.",
+            "description": "Use when an _Infantry_ unit performs a Fight action. Hit rolls of 1 or 2 cause an additional hit.",
+            "cost": 1
+        },
+        "counter_attack": {
+            "subfactions": ["combat_focus"],
+            "name": "Counter Attack",
+            "phase": "activation",
+            "flavor": "The toughest orcs never back down from a challenge.",
+            "description": "Use when an _Infantry_ unit is targeted by a Fight action. If that unit has not yet activated, it may perform a Counter Attack reaction without testing Initiative.",
+            "cost": 1
+        },
+        "quick_aim": {
+            "subfactions": ["speed_focus"],
+            "phase": "activation",
+            "name": "Quick Aim",
+            "description": "Use when an _Infantry_ unit with any _Assault_ weapons is firing. That unit does not suffer -1 to hit when using the _Assault_ rule.",
+            "flavor": "These orcs are so used to firing from the hip while speeding their way upfield that their accuracy doesn't suffer.",
+            "cost": 1
+        },
+        "run_them_down": {
+            "subfactions": ["speed_focus"],
+            "phase": "activation",
+            "name": "Run Them Down",
+            "description": "Use when a Vehicle or Super Heavy Vehicle makes a charge action. The Impact Rule gains +1 AP for the charge.",
+            "flavor": "Those clans with a focus on speed enjoy putting a little extra oomph on their vehicles, making them hit just a little harder when they ram into something.",
+            "cost": 1
+        },
+        "extra_juice": {
+            "subfactions": ["speed_focus"],
+            "phase": "activation",
+            "name": "Extra Juice",
+            "description": "Use when a unit makes a move action. It gains +3\" move for that action",
+            "flavor": "These orcs have either a special fuel or know little tricks to get them upfield just that little bit faster than their slower brethren.",
+            "cost": 1
+        },
+        "indescriminate_fire": {
+            "subfactions": ["shooting_focus"],
+            "phase": "activation",
+            "name": "Indiscriminate Fire",
+            "description": "Use when shooting with an _Infantry_ unit. If the attack hits, assign 2 additional Shock.",
+            "flavor": "Firing mostly at random, it's enough to Shock most enemies.",
+            "cost": 1
+        },
+        "good_shots": {
+            "subfactions": ["shooting_focus"],
+            "phase": "activation",
+            "name": "Good Shots",
+            "description": "Use when an _Infantry_ unit Shoots. That unit gets +1 Accuracy if it did not move this round.",
+            "flavor": "Experienced with ranged weapons, these Orcs can hit targets accurately.",
+            "cost": 1
+        },
+        "tune_up": {
+            "subfactions": ["shooting_focus"],
+            "phase": "activation",
+            "name": "Tune Up",
+            "description": "Use before shooting with a unit. Add 3\" to the short and long ranges of all weapons for that unit.",
+            "flavor": "Souped up and well-oiled, their weapons perform much better than any others.",
+            "cost": 1
+        },
+        "ambush": {
+            "subfactions": ["stealth_focus"],
+            "name": "Ambush",
+            "phase": "pre_game",
+            "description": "Up to half of any force's units, one point for each may be placed in _Ambush Reserves_ instead of deployed on the field.",
+            "flavor": "A deadly ambush can catch many off guard.",
+            "cost": "1/per"
+        },
+        "concealment": {
+            "subfactions": ["stealth_focus"],
+            "name": "Concealment",
+            "phase": "activation",
+            "flavor": "Orcs are sometimes trained in stealth tactics allowing them to hide even in plain sight.",
+            "description": "Use this strategy when a unit is targeted by an enemy Shooting attack. That unit gets -1 Accuracy this attack.",
+            "cost": 2
+        },
+        "stealth_assault": {
+            "subfactions": ["stealth_focus"],
+            "name": "Stealth Assault",
+            "phase": "activation",
+            "flavor": "Striking when the enemy least expects is a good way to quietly deal with an enemy.",
+            "description": "Use this strategy when an _Infantry_ unit charges. If the charging unit only makes a single move action this activation, enemy units may not react to that charge.",
+            "cost": 1
+        },
+        "toughness": {
+            "subfactions": ["toughness_focus"],
+            "name": "Toughness",
+            "phase": "activation",
+            "description": "Use when an _Infantry_ unit takes Save rolls. Roll a die for each hit this unit takes. On a 3 or less that hit is prevented.",
+            "flavor": "These Orcs are particularly tough and can take a hit.",
+            "cost": 2
+        },
+        "durability": {
+            "subfactions": ["toughness_focus"],
+            "name": "Durability",
+            "phase": "activation",
+            "description": "Use before activating a unit with a Damage Chart. That unit is treated as having no critical damage tokens for this activation.",
+            "flavor": "Some of the most well-maintained vehicles and machinery can operate under great stress.",
+            "cost": 1
+        },
+        "piercing_blows": {
+            "subfactions": ["toughness_focus"],
+            "name": "Piercing Blows",
+            "phase": "activation",
+            "flavor": "These Orcs are so tough they can even pentrate some armor for extra damage.",
+            "description": "Use when an _Infantry_ unit performs a Fight action. Hit rolls of 1 or 2 gain +1 AP.",
+            "cost": 1
+        },
+        "divine_intervention": {
+            "subfactions": ["scavenge_focus"],
+            "name": "Divine Intervention",
+            "phase": "activation",
+            "description": "Use when taking a skill test. You may increase or decrease the result of that test by 1.",
+            "flavor": "Suddenly you witness the hand of fate intervene on your behalf.",
+            "cost": 1
+        },
+        "scavenge": {
+            "subfactions": ["scavenge_focus"],
+            "name": "Scavenge",
+            "phase": "activation",
+            "description": "Use when an _Infantry_ unit destroys a unit with a Damage Chart. That unit increases its Save by 1 for the rest of the game.",
+            "flavor": "These parts make great scavenged armor.",
+            "cost": 2
+        },
+        "hop_on": {
+            "subfactions": ["scavenge_focus"],
+            "name": "Hop On",
+            "phase": "activation",
+            "description": "Use when a _Vehicle_ unit performs a Move action within 3\" of a friendly _Infantry_ unit. Place the _Infantry_ unit within 3\" of the Vehicle's ending location.",
+            "flavor": "Hitching a ride on a vehicle is a great way to get across the battlefield.",
+            "cost": 1
         }
-      ]
     },
-    "warbanner_boss": {
-      "name": "Warbanner Noble",
-      "description": "An orc carrying a war banner to inspire the orcs.",
-      "category": "command",
-      "rules": [{"id": "support_x", "x": "Infantry"}, "war_banner", {"id": "wounds", "x": 2}],
-      "models": [
-        {
-          "name": "Warbanner Noble",
-          "movement": 5,
-          "courage": 6,
-          "shoot": 4,
-          "fight": 6,
-          "defense": 7,
-          "reflexes": 5,
-          "weapons": ["heavy_pistol", "frags", {"id": "heavy_ccw", "count": 3}],
-          "options": [
-            {"replaceWeapon": "heavy_pistol", "withWeapon": ["carbine", "twin_carbine"]},
-            {"replaceWeapon": {"id": "heavy_ccw", "count": 3}, "withWeapon": [{"id": "ultra_axe", "count": 3}, {"id": "ultra_saw", "count": 3}, {"id": "ultra_claw", "count": 3}]}
-          ],
-          "min": 1,
-          "max": 1
-        }
-      ]
-    },
-    "mad_doctor": {
-      "name": "Mad Doctor",
-      "description": "An orc with a knack for fixing up the wounded.",
-      "category": "command",
-      "rules": [{"id": "support_x", "x": "Infantry"}, "mad_doctor", {"id": "wounds", "x": 2}],
-      "models": [
-        {
-          "name": "Mad Doctor",
-          "movement": 5,
-          "courage": 5,
-          "shoot": 4,
-          "fight": 6,
-          "defense": 7,
-          "reflexes": 5,
-          "weapons": ["heavy_pistol", "frags", {"id": "heavy_ccw", "count": 3}],
-          "options": [
-            {"replaceWeapon": "heavy_pistol", "withWeapon": ["carbine", "twin_carbine", "combi_heavy_flamer", "combi_rocket_launcher", "plasma_pistol"]},
-            {"replaceWeapon": {"id": "heavy_ccw", "count": 3}, "withWeapon": [{"id": "ultra_axe", "count": 3}, {"id": "ultra_saw", "count": 3}, {"id": "ultra_claw", "count": 3}]}
-          ],
-          "min": 1,
-          "max": 1
-        }
-      ]
-    },
-    "goblin_leader": {
-      "name": "Goblin Leader",
-      "subfactions": ["goblin_army"],
-      "description": "A cunning goblin with a motivating presence.",
-      "category": "command",
-      "keywords": ["Goblin", "Infantry"],
-      "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "wounds", "x": 3}, {"id": "goblin_tactics", "x": 1}],
-      "models": [
-        {
-          "name": "Goblin Leader",
-          "courage": 7,
-          "shoot": 7,
-          "fight": 6,
-          "defense": 6,
-          "reflexes": 6,
-          "movement": 6,
-          "weapons": ["carbine", {"id": "ccw", "count": 3}],
-          "options": [{"replaceRule": {"id": "goblin_tactics", "x": 1}, "withRule": {"id": "goblin_tactics", "x": 2}}],
-          "min": 1,
-          "max": 1
-        }
-      ]
-    },
-    "goblin_doctor": {
-      "name": "Goblin Doctor",
-      "description": "A Goblin with a knack for fixing up the wounded.",
-      "subfactions": ["goblin_army"],
-      "category": "specialist",
-      "keywords": ["Goblin", "Infantry"],
-      "rules": [{"id": "support_x", "x": "Infantry"}, "mad_doctor", {"id": "wounds", "x": 3}],
-      "models": [
-        {
-          "name": "Goblin Doctor",
-          "courage": 6,
-          "shoot": 5,
-          "fight": 5,
-          "defense": 6,
-          "reflexes": 5,
-          "movement": 6,
-          "weapons": ["heavy_pistol", {"id": "ccw", "count": 2}],
-          "options": [{"replaceWeapon": "heavy_pistol", "withWeapon": ["carbine", "plasma_pistol"]}],
-          "min": 1,
-          "max": 1
-        }
-      ]
-    },
-    "goblin_veterans": {
-      "name": "Goblin Veterans",
-      "subfactions": ["goblin_army"],
-      "keywords": ["Goblin", "Infantry"],
-      "description": "A herd of veteran goblin fighters.",
-      "category": "core",
-      "models": [
-        {
-          "name": "Goblin Veteran",
-          "courage": 5,
-          "shoot": 6,
-          "fight": 5,
-          "defense": 4,
-          "reflexes": 5,
-          "movement": 6,
-          "weapons": ["carbine", {"id": "ccw"}],
-          "options": [{"addRule": ["heavy_armor"], "modelLimit": "all"}],
-          "min": 10,
-          "max": 20
-        }
-      ]
-    },
-    "goblin_herder": {
-      "name": "Goblin Herder",
-      "keywords": ["Goblin", "Infantry"],
-      "description": "An orc herder, overseeing a rabble of lowly goblins.",
-      "subfactions": ["none"],
-      "category": "command",
-      "models": [
-        {
-          "name": "Goblin Herder",
-          "courage": 5,
-          "shoot": 4,
-          "fight": 6,
-          "defense": 5,
-          "reflexes": 5,
-          "movement": 6,
-          "weapons": ["heavy_pistol", "frags", {"id": "heavy_ccw", "count": 2}],
-          "min": 1,
-          "max": 1,
-          "rules": ["leader"]
-        }
-      ]
-    },
-    "goblin": {
-      "name": "Goblin",
-      "keywords": ["Goblin", "Infantry"],
-      "description": "A lowly goblin.",
-      "subfactions": ["none", "goblin_army"],
-      "category": "core",
-      "models": [
-        {
-          "name": "Goblin",
-          "courage": 4,
-          "shoot": 5,
-          "fight": 5,
-          "defense": 4,
-          "reflexes": 5,
-          "movement": 6,
-          "weapons": ["goblin_rifle", "ccw"],
-          "min": 1,
-          "max": 1,
-          "options": [{"replaceWeapon": ["goblin_rifle"], "withWeapon": ["carbine"]}]
-        }
-      ]
-    },
-    "orc_boss": {
-      "name": "Orc Noble",
-      "description": "A boss of a smaller orc gang.",
-      "category": "core",
-      "models": [
-        {
-          "name": "Orc Noble",
-          "courage": 6,
-          "shoot": 4,
-          "fight": 6,
-          "defense": 7,
-          "reflexes": 5,
-          "movement": 5,
-          "weapons": ["heavy_pistol", "frags", {"id": "heavy_ccw", "count": 3}],
-          "options": [
-            {
-              "replaceWeapon": ["heavy_pistol"],
-              "withWeapon": [
-                {"id": "heavy_ccw", "count": 1},
-                {"id": "ultra_axe", "count": 1},
-                {"id": "ultra_saw", "count": 1},
-                {"id": "ultra_claw", "count": 1},
-                "carbine",
-                "twin_carbine",
-                "combi_heavy_flamer",
-                "combi_rocket_launcher"
-              ]
-            },
-            {"replaceWeapon": {"id": "heavy_ccw", "count": 3}, "withWeapon": [{"id": "ultra_axe", "count": 3}, {"id": "ultra_saw", "count": 3}, {"id": "ultra_claw", "count": 3}]},
-            {"addRule": [{"id": "heavy_armor"}, "cyborg_body"], "limit": 1},
-            {"addWeapon": "fusion_bomb"}
-          ],
-          "min": 1,
-          "max": 1
-        }
-      ]
-    },
-    "orc_leader": {
-      "name": "Orc Leader",
-      "description": "An orc, ready for a good fight.",
-      "category": "command",
-      "models": [
-        {
-          "name": "Orc Leader",
-          "courage": 5,
-          "shoot": 4,
-          "fight": 6,
-          "defense": 5,
-          "reflexes": 4,
-          "movement": 5,
-          "rules": ["leader"],
-          "weapons": ["heavy_pistol", {"id": "heavy_ccw", "count": 2}],
-          "options": [{"replaceWeapon": ["heavy_pistol", {"id": "heavy_ccw", "count": 1}], "withWeapon": ["carbine"]}, {"addRule": ["heavy_armor"]}],
-          "min": 1,
-          "max": 1
-        }
-      ]
-    },
-    "orc": {
-      "name": "Orc",
-      "description": "An orc, ready for a good fight.",
-      "category": "core",
-      "models": [
-        {
-          "name": "Orc",
-          "courage": 5,
-          "shoot": 4,
-          "fight": 6,
-          "defense": 5,
-          "reflexes": 4,
-          "movement": 5,
-          "weapons": ["heavy_pistol", {"id": "heavy_ccw", "count": 2}],
-          "options": [{"replaceWeapon": ["heavy_pistol", {"id": "heavy_ccw", "count": 1}], "withWeapon": ["carbine"]}, {"addRule": ["heavy_armor"]}],
-          "min": 1,
-          "max": 1
-        }
-      ]
-    },
-    "attack_beast": {
-      "name": "Attack Beast",
-      "description": "A bouncing beast with gnashing teeth.",
-      "category": "strike",
-      "subfactions": ["none", "goblin_army"],
-      "models": [
-        {
-          "name": "Attack Beast",
-          "courage": 4,
-          "shoot": 4,
-          "movement": 8,
-          "fight": 5,
-          "defense": 4,
-          "reflexes": 5,
-          "weapons": [{"id": "beasts_bite", "count": 2}],
-          "options": [{"addRule": "cyborg_body"}],
-          "min": 1,
-          "max": 1
-        }
-      ]
-    },
-    "storm_orc": {
-      "name": "Storm Orc",
-      "description": "",
-      "category": "specialist",
-      "rules": ["fly"],
-      "models": [
-        {
-          "name": "Storm Orc",
-          "courage": 4,
-          "shoot": 4,
-          "fight": 6,
-          "defense": 5,
-          "reflexes": 5,
-          "movement": 8,
-          "weapons": ["heavy_pistol", {"id": "heavy_ccw", "count": 2}, "frags"],
-          "options": [{"replaceWeapon": ["heavy_pistol", {"id": "heavy_ccw", "count": 1}], "withWeapon": ["carbine"]}],
-          "min": 1,
-          "max": 1
-        }
-      ]
-    },
-    "commando_orc": {
-      "name": "Commando Orc",
-      "description": "A sneaky orc.",
-      "category": "specialist",
-      "rules": ["stealth", "scout"],
-      "models": [
-        {
-          "name": "Commando Orc",
-          "courage": 4,
-          "shoot": 4,
-          "fight": 6,
-          "defense": 5,
-          "reflexes": 5,
-          "movement": 5,
-          "weapons": ["heavy_pistol", {"id": "heavy_ccw", "count": 2}, "frags"],
-          "options": [
-            {"replaceWeapon": ["heavy_pistol", {"id": "heavy_ccw", "count": 1}], "withWeapon": ["carbine", "combat_shotgun"]},
-            {"replaceWeapon": ["heavy_pistol", {"id": "heavy_ccw", "count": 1}], "withWeapon": ["flamethrower", "plasma_rifle", "shred_rifle", "rocket_launcher", "heavy_machinegun"], "limit": 1},
-            {"addWeapon": "fusion_bomb"}
-          ],
-          "min": 1,
-          "max": 1
-        }
-      ]
-    },
-    "specialist_orc": {
-      "name": "Looter Orc",
-      "description": "An orc obsessed with looting and upgrading weapons. Can be equipped for various specialist roles.",
-      "category": "specialist",
-      "models": [
-        {
-          "name": "Looter Orc",
-          "courage": 5,
-          "shoot": 4,
-          "fight": 6,
-          "defense": 5,
-          "reflexes": 4,
-          "movement": 5,
-          "weapons": ["orc_flamethrower", {"id": "heavy_ccw", "count": 2}, "frags"],
-          "options": [
-            {"replaceWeapon": "orc_flamethrower", "withWeapon": ["rocket_launcher", "railgun", "heavy_machinegun"]},
-            {"replaceWeapon": "rocket_launcher", "withWeapon": ["bomb_hammer", "rocket_pistol"]},
-            {"addWeapon": "fusion_bomb"}
-          ],
-          "min": 1,
-          "max": 1
-        }
-      ]
-    },
-    "pirate_orc": {
-      "name": "Pirate Orc",
-      "description": "An orc ready to pillage and plunder.",
-      "category": "specialist",
-      "rules": ["relentless"],
-      "models": [
-        {
-          "name": "Pirate Orc",
-          "courage": 5,
-          "shoot": 5,
-          "fight": 6,
-          "defense": 7,
-          "reflexes": 5,
-          "movement": 5,
-          "options": [{"replaceWeapon": {"id": "heavy_ccw", "count": 2}, "withWeapon": [{"id": "cutlass", "count": 2}]}, {"replaceWeapon": "boarding_pistol", "withWeapon": ["boarding_gun"]}],
-          "weapons": ["boarding_pistol", {"id": "heavy_ccw", "count": 2}, "frags"],
-          "min": 1,
-          "max": 1
-        }
-      ]
-    },
-    "biker": {
-      "name": "Orc Biker",
-      "description": "An angry orc on bike.",
-      "category": "strike",
-      "keywords": ["Biker"],
-      "rules": [{"id": "impact", "x": 1}],
-      "models": [
-        {
-          "options": [{"addWeapon": ["twin_carbine", "twin_mini_mg"], "limit": 1}],
-          "name": "Orc Biker",
-          "courage": 5,
-          "shoot": 4,
-          "fight": 6,
-          "defense": 7,
-          "reflexes": 5,
-          "movement": 8,
-          "weapons": ["heavy_pistol", {"id": "heavy_ccw", "count": 2}],
-          "min": 1,
-          "max": 1
-        }
-      ]
-    },
-    "boss_bikers": {
-      "name": "Noble Biker",
-      "description": "An orcs boss mounted on a bike.",
-      "category": "strike",
-      "keywords": ["Biker"],
-      "rules": [{"id": "wounds", "x": 2}],
-      "models": [
-        {
-          "options": [
-            {"replaceWeapon": {"id": "heavy_ccw", "count": 3}, "withWeapon": [{"id": "ultra_axe", "count": 3}, {"id": "ultra_saw", "count": 3}, {"id": "ultra_claw", "count": 3}]},
-            {"replaceWeapon": "heavy_pistol", "withWeapon": ["carbine", "twin_carbine", "combi_heavy_flamer", "combi_rocket_launcher"]}
-          ],
-          "name": "Noble Biker",
-          "courage": 5,
-          "shoot": 4,
-          "fight": 6,
-          "defense": 7,
-          "reflexes": 5,
-          "movement": 8,
-          "weapons": ["heavy_pistol", {"id": "heavy_ccw", "count": 3}, "frags"],
-          "min": 1,
-          "max": 1
-        }
-      ]
-    },
-    "boss_trike": {
-      "name": "Warlord Trike",
-      "description": "A tough warlord mounted on a battle war trike.",
-      "keywords": ["Biker"],
-      "category": "command",
-      "rules": [{"id": "leader_x", "x": "Infantry, Vehicle, Biker"}, "relentless", "damage_table_vehicle"],
-      "models": [
-        {
-          "name": "Warlord Trike",
-          "courage": 7,
-          "shoot": 4,
-          "fight": 7,
-          "defense": 9,
-          "reflexes": 7,
-          "movement": 8,
-          "weapons": ["double_shotgun", "frags", {"id": "ultra_claw", "count": 3}],
-          "options": [{"addWeapon": ["twin_carbine", "twin_mini_mg", "twin_double_shotgun"], "limit": 1}],
-          "min": 1,
-          "max": 1
-        }
-      ]
-    },
-    "orc_minicopter": {
-      "name": "Orc Minicopter",
-      "description": "A miniature helicopter for quick and deadly air attacks.",
-      "keywords": ["Vehicle"],
-      "category": "strike",
-      "rules": ["fly", {"id": "wounds", "x": 2}],
-      "models": [
-        {
-          "name": "Orc Minicopter",
-          "courage": 5,
-          "shoot": 4,
-          "fight": 6,
-          "defense": 8,
-          "reflexes": 5,
-          "movement": 10,
-          "weapons": ["heavy_pistol", {"id": "heavy_ccw", "count": 2}],
-          "options": [{"addWeapon": ["twin_plasma_rifle", "twin_rocket_launcher", "twin_heavy_machinegun"], "limit": 1}, {"addWeapon": [{"id": "ultra_saw", "count": 3}, "assault_bomb"], "limit": 1}],
-          "min": 1,
-          "max": 1
-        }
-      ]
-    },
-    "attack_beast_herder": {
-      "name": "Attack Beast Herder",
-      "description": "A ravening horde of bouncing beasts with gnashing teeth.",
-      "category": "command",
-      "subfactions": ["none", "goblin_army"],
-      "models": [
-        {
-          "name": "Attack Beast Herder",
-          "courage": 5,
-          "shoot": 4,
-          "fight": 6,
-          "defense": 5,
-          "reflexes": 5,
-          "movement": 8,
-          "weapons": ["heavy_pistol", "frags", {"id": "heavy_ccw", "count": 2}],
-          "min": 1,
-          "max": 1,
-          "rules": ["leader"]
-        }
-      ]
-    },
-    "storm_orc_boss": {
-      "name": "Storm Orc Boss",
-      "description": "An angry orc equipped with a jetpack.",
-      "category": "command",
-      "rules": ["fly"],
-      "models": [
-        {
-          "name": "Storm Orc Boss",
-          "courage": 5,
-          "shoot": 4,
-          "fight": 6,
-          "defense": 7,
-          "reflexes": 5,
-          "movement": 8,
-          "rules": ["leader"],
-          "weapons": ["heavy_pistol", "frags", {"id": "heavy_ccw", "count": 3}],
-          "options": [
-            {"replaceWeapon": ["heavy_pistol", {"id": "heavy_ccw", "count": 1}], "withWeapon": ["carbine", "twin_carbine", "combi_heavy_flamer", "combi_rocket_launcher"]},
-            {"replaceWeapon": {"id": "heavy_ccw", "count": 3}, "withWeapon": [{"id": "ultra_axe", "count": 3}, {"id": "ultra_saw", "count": 3}, {"id": "ultra_claw", "count": 3}]},
-            {"addWeapon": "fusion_bomb"}
-          ],
-          "min": 1,
-          "max": 1
-        }
-      ]
-    },
-    "commando_orc_boss": {
-      "name": "Commando Orc Boss",
-      "description": "A sneaky orc.",
-      "category": "command",
-      "rules": ["stealth", "scout"],
-      "models": [
-        {
-          "name": "Commando Orc Boss",
-          "courage": 5,
-          "shoot": 4,
-          "fight": 6,
-          "defense": 7,
-          "reflexes": 5,
-          "movement": 5,
-          "rules": ["leader"],
-          "weapons": ["heavy_pistol", "frags", {"id": "heavy_ccw", "count": 3}],
-          "options": [
-            {"replaceWeapon": ["heavy_pistol", {"id": "heavy_ccw", "count": 1}], "withWeapon": ["combat_shotgun", "carbine", "twin_carbine", "combi_heavy_flamer", "combi_rocket_launcher"]},
-            {"replaceWeapon": {"id": "heavy_ccw", "count": 3}, "withWeapon": [{"id": "ultra_axe", "count": 3}, {"id": "ultra_saw", "count": 3}, {"id": "ultra_claw", "count": 3}]},
-            {"addWeapon": "fusion_bomb"},
-            {"addRule": ["cyborg_body"], "limit": 1}
-          ],
-          "min": 1,
-          "max": 1
-        }
-      ]
-    },
-    "specialist_orc_boss": {
-      "name": "Specialist Orc Boss",
-      "description": "An orc boss who can be equipped to specialize in specific combat roles.",
-      "category": "command",
-      "options": [],
-      "models": [
-        {
-          "name": "Specialist Orc Boss",
-          "courage": 5,
-          "shoot": 4,
-          "fight": 6,
-          "defense": 7,
-          "reflexes": 5,
-          "movement": 5,
-          "rules": ["leader"],
-          "weapons": ["orc_flamethrower", "frags", {"id": "heavy_ccw", "count": 3}],
-          "options": [
-            {"replaceWeapon": "orc_flamethrower", "withWeapon": ["combi_heavy_flamer", "combi_rocket_launcher", "rocket_launcher", "railgun", "heavy_machinegun"]},
-            {"replaceWeapon": "rocket_launcher", "withWeapon": ["bomb_hammer", "rocket_pistol"]},
-            {"addWeapon": "fusion_bomb"},
-            {"addRule": ["cyborg_body"], "limit": 1}
-          ],
-          "min": 1,
-          "max": 1
-        }
-      ]
-    },
-    "pirate_orc_boss": {
-      "name": "Pirate Orc Boss",
-      "description": "An orc boss ready to pillage and plunder.",
-      "category": "command",
-      "rules": ["relentless", "leader"],
-      "models": [
-        {
-          "name": "Pirate Orc Boss",
-          "courage": 5,
-          "shoot": 5,
-          "fight": 6,
-          "defense": 7,
-          "reflexes": 5,
-          "movement": 5,
-          "options": [{"replaceWeapon": {"id": "heavy_ccw", "count": 3}, "withWeapon": [{"id": "cutlass", "count": 3}]}, {"replaceWeapon": "boarding_pistol", "withWeapon": ["boarding_gun"]}],
-          "weapons": ["boarding_pistol", "frags", {"id": "heavy_ccw", "count": 3}],
-          "min": 1,
-          "max": 1
-        }
-      ]
-    },
-    "ultra_boss_leader": {
-      "name": "Ultra Noble Boss",
-      "description": "An leader that is heavily armored and dangerous.",
-      "category": "command",
-      "rules": [{"id": "wounds", "x": 2}, "leader"],
-      "models": [
-        {
-          "name": "Ultra Noble Boss",
-          "courage": 6,
-          "shoot": 4,
-          "fight": 6,
-          "defense": 9,
-          "reflexes": 5,
-          "movement": 4,
-          "weapons": ["twin_carbine", {"id": "ultra_claw", "count": 3}, "frags"],
-          "min": 1,
-          "max": 1,
-          "options": [
-            {"replaceWeapon": [{"id": "ultra_claw", "count": 3}, "twin_carbine"], "withWeapon": [{"id": "ultra_saw", "count": 4}]},
-            {"replaceWeapon": "twin_carbine", "withWeapon": ["combi_heavy_flamer", "combi_rocket_launcher"]}
-          ]
-        }
-      ]
-    },
-    "biker_boss": {
-      "name": "Biker Noble",
-      "description": "An angry leader on bike.",
-      "category": "command",
-      "keywords": ["Biker"],
-      "rules": [{"id": "impact", "x": 1}, "leader"],
-      "models": [
-        {
-          "name": "Biker Noble",
-          "courage": 6,
-          "shoot": 4,
-          "fight": 6,
-          "defense": 7,
-          "reflexes": 4,
-          "movement": 8,
-          "weapons": ["heavy_pistol", "frags", {"id": "heavy_ccw", "count": 3}],
-          "options": [
-            {"addWeapon": ["twin_carbine", "twin_mini_mg"], "limit": 1},
-            {"replaceWeapon": ["heavy_pistol", {"id": "heavy_ccw", "count": 1}], "withWeapon": ["carbine", "twin_carbine", "combi_heavy_flamer", "combi_rocket_launcher"]},
-            {"replaceWeapon": {"id": "heavy_ccw", "count": 3}, "withWeapon": [{"id": "ultra_axe", "count": 3}, {"id": "ultra_saw", "count": 3}, {"id": "ultra_claw", "count": 3}]}
-          ],
-          "min": 1,
-          "max": 1
-        }
-      ]
-    },
-    "boss_biker_leader": {
-      "name": "Noble Biker Boss",
-      "description": "A boss leader mounted on a bike.",
-      "category": "command",
-      "keywords": ["Biker"],
-      "rules": [{"id": "wounds", "x": 2}, "leader"],
-      "models": [
-        {
-          "options": [
-            {"replaceWeapon": {"id": "heavy_ccw", "count": 3}, "withWeapon": [{"id": "ultra_axe", "count": 3}, {"id": "ultra_saw", "count": 3}, {"id": "ultra_claw", "count": 3}]},
-            {"replaceWeapon": "heavy_pistol", "withWeapon": ["carbine", "twin_carbine", "combi_heavy_flamer", "combi_rocket_launcher"]}
-          ],
-          "name": "Noble Biker Boss",
-          "courage": 6,
-          "shoot": 4,
-          "fight": 6,
-          "defense": 7,
-          "reflexes": 5,
-          "movement": 8,
-          "weapons": ["heavy_pistol", "frags", {"id": "heavy_ccw", "count": 3}],
-          "min": 1,
-          "max": 1
-        }
-      ]
-    },
-    "orc_heavy": {
-      "name": "Orc Heavy",
-      "description": "",
-      "category": "heavy",
-      "models": [
-        {
-          "name": "Orc Heavy",
-          "courage": 5,
-          "shoot": 4,
-          "fight": 6,
-          "defense": 5,
-          "reflexes": 4,
-          "movement": 5,
-          "weapons": ["heavy_pistol", {"id": "heavy_ccw", "count": 2}],
-          "options": [
-            {"replaceWeapon": ["heavy_pistol", {"id": "heavy_ccw", "count": 1}], "withWeapon": ["carbine", "rocket_launcher", "heavy_machinegun"]},
-            {"addRule": ["heavy_armor"]},
-            {"addWeapon": "fusion_bomb"}
-          ],
-          "min": 1,
-          "max": 1
-        }
-      ]
-    },
-    "storm_orc_heavy": {
-      "name": "Storm Orc Heavy",
-      "description": "",
-      "category": "heavy",
-      "rules": ["fly"],
-      "models": [
-        {
-          "name": "Storm Orc Heavy",
-          "courage": 4,
-          "shoot": 4,
-          "fight": 6,
-          "defense": 5,
-          "reflexes": 5,
-          "movement": 8,
-          "weapons": ["heavy_pistol", {"id": "heavy_ccw", "count": 2}, "frags"],
-          "options": [
-            {"replaceWeapon": ["heavy_pistol", {"id": "heavy_ccw", "count": 1}], "withWeapon": ["carbine", "flamethrower", "plasma_rifle", "shred_rifle", "rocket_launcher", "heavy_machinegun"]},
-            {"addWeapon": "fusion_bomb"}
-          ],
-          "min": 1,
-          "max": 1
-        }
-      ]
-    },
-    "orc_boss_leader": {
-      "name": "Orc Noble Boss",
-      "description": "A leader of a smaller orc gang.",
-      "category": "command",
-      "models": [
-        {
-          "name": "Orc Noble Boss",
-          "courage": 6,
-          "shoot": 4,
-          "fight": 6,
-          "defense": 7,
-          "reflexes": 5,
-          "movement": 5,
-          "weapons": ["heavy_pistol", "frags", {"id": "heavy_ccw", "count": 3}],
-          "options": [
-            {"replaceWeapon": ["heavy_pistol", {"id": "heavy_ccw", "count": 1}], "withWeapon": ["carbine", "twin_carbine", "combi_heavy_flamer", "combi_rocket_launcher"]},
-            {"replaceWeapon": {"id": "heavy_ccw", "count": 3}, "withWeapon": [{"id": "ultra_axe", "count": 3}, {"id": "ultra_saw", "count": 3}, {"id": "ultra_claw", "count": 3}]},
-            {"addRule": [{"id": "heavy_armor"}]},
-            {"addWeapon": "fusion_bomb"}
-          ],
-          "min": 1,
-          "max": 1,
-          "rules": ["leader"]
-        }
-      ]
-    },
-    "ultra_boss": {
-      "name": "Ultra Noble",
-      "description": "An orc boss that is heavily armored and dangerous.",
-      "category": "specialist",
-      "rules": [{"id": "wounds", "x": 2}],
-      "models": [
-        {
-          "name": "Ultra Noble",
-          "courage": 6,
-          "shoot": 4,
-          "fight": 6,
-          "defense": 9,
-          "reflexes": 5,
-          "movement": 4,
-          "weapons": ["twin_carbine", {"id": "ultra_claw", "count": 3}, "frags"],
-          "min": 1,
-          "max": 1,
-          "options": [
-            {"replaceWeapon": [{"id": "ultra_claw", "count": 3}, "twin_carbine"], "withWeapon": [{"id": "ultra_saw", "count": 4}]},
-            {"replaceWeapon": "twin_carbine", "withWeapon": ["combi_heavy_flamer", "combi_rocket_launcher"]}
-          ]
-        }
-      ]
-    }
-  },
-  "weapons": {
-    "goblin_rifle": {"name": "Goblin Blaster", "attacks": 1, "short": 9, "medium": 18, "ap": 1, "rules": ["assault"]},
-    "smasher_cannon": {"name": "Smasher Cannon", "attacks": 1, "short": 24, "medium": 48, "ap": 7},
-    "tractor_beam": {"name": "Tractor Beam", "attacks": 1, "short": 18, "medium": 36, "ap": 6, "rules": ["anti_air"]},
-    "heavy_tractor_cannon": {"name": "Heavy Tractor Cannon", "attacks": 3, "short": 18, "medium": 36, "ap": 6, "rules": ["anti_air"]},
-    "bubble_cannon": {"name": "Bubble Cannon", "attacks": 1, "short": 18, "ap": 1, "medium": 36, "rules": [{"id": "blast", "x": 3}]},
-    "lightning_cannon": {"name": "Lightning Cannon", "attacks": 1, "short": 24, "medium": 48, "ap": 7},
-    "cannon": {"name": "Cannon", "attacks": 1, "short": 18, "medium": 36, "ap": 5, "rules": [{"id": "blast", "x": 3}]},
-    "heavy_cannon": {"name": "Heavy Cannon", "attacks": 1, "short": 24, "medium": 48, "ap": 6, "rules": [{"id": "blast", "x": 3}]},
-    "boom_cannon": {"name": "Boom Cannon", "attacks": 1, "short": 24, "medium": 48, "ap": 6, "rules": [{"id": "blast", "x": 6}]},
-    "super_cannon": {"name": "Super Cannon", "attacks": 1, "short": 36, "medium": 72, "ap": 7, "rules": [{"id": "blast", "x": 3}]},
-    "combi_gun": {"name": "Combi-Gun", "attacks": 9, "short": 12, "medium": 24, "ap": 3, "rules": ["assault"]},
-    "mini_claw": {"name": "Mini-Claw", "attacks": 1, "short": "Melee", "ap": 5},
-    "walker_claw": {"name": "Walker-Claw", "attacks": 1, "short": "Melee", "ap": 6},
-    "mega_claw": {"name": "Mega Claw", "profiles": [{"name": "Strike", "attacks": 4, "short": "Melee", "ap": 8}, {"name": "Sweep", "attacks": 8, "short": "Melee", "ap": 4}]},
-    "mega_saw": {"name": "Mega-Saw", "attacks": 4, "short": "Melee", "ap": 6},
-    "walker_saw": {"name": "Walker-Saw", "attacks": 1, "short": "Melee", "ap": 5},
-    "super_machinegun": {"name": "Super Machinegun", "attacks": 3, "short": 18, "medium": 36, "ap": 3},
-    "twin_super_machinegun": {"name": "Twin Super Machinegun", "attacks": 6, "short": 18, "medium": 36, "ap": 3},
-    "rivet_cannon": {"name": "Rivet Cannon", "attacks": 2, "short": 18, "medium": 36, "ap": 5, "rules": [{"id": "blast", "x": 3}]},
-    "teleport_pistol": {"name": "Teleport Pistol", "attacks": 1, "short": 6, "ap": 6, "medium": 12, "rules": [{"id": "blast", "x": 3}]},
-    "teleport_rifle": {"name": "Teleport Rifle", "attacks": 1, "short": 9, "ap": 6, "medium": 18, "rules": [{"id": "blast", "x": 3}, "rending"]},
-    "twin_teleport_rifle": {"name": "Twin Teleport Rifle", "attacks": 2, "short": 9, "ap": 6, "medium": 18, "rules": [{"id": "blast", "x": 3}, "rending"]},
-    "boarding_pistol": {"name": "Boarding Pistol", "attacks": 2, "short": 6, "ap": 2, "medium": 12},
-    "boarding_gun": {"name": "Boarding Gun", "attacks": 2, "short": 12, "ap": 4, "medium": 24},
-    "shock_rifle": {"name": "Shock Rifle", "attacks": 2, "short": 9, "medium": 18, "ap": 6},
-    "shock_gun": {"name": "Shock Gun", "attacks": 1, "short": 24, "ap": 6, "medium": 48, "rules": [{"id": "blast", "x": 3}]},
-    "beast_cannon": {"name": "Beast Cannon", "attacks": 2, "short": 18, "ap": 3, "medium": 36, "rules": [{"id": "blast", "x": 3}]},
-    "beast_launcher": {"name": "Beast Launcher", "attacks": 1, "short": 9, "ap": 3, "medium": 18, "rules": [{"id": "blast", "x": 3}]},
-    "carbine": {"name": "Burst Carbine", "attacks": 1, "short": 9, "medium": 18, "ap": 1, "rules": ["assault", "rapid_fire"]},
-    "twin_carbine": {"name": "Twin Burst Carbine", "attacks": 2, "short": 9, "medium": 18, "ap": 1, "rules": ["assault", "rapid_fire"]},
-    "grand_carbine": {"name": "Grand Carbine", "attacks": 12, "short": 9, "medium": 18, "ap": 2, "rules": ["assault"]},
-    "grand_claw": {"name": "Grand Claw", "profiles": [{"name": "Strike", "attacks": 5, "short": "Melee", "ap": 7}, {"name": "Sweep", "attacks": 10, "short": "Melee", "ap": 3}]},
-    "super_claw": {"name": "Super-Claw", "attacks": 3, "short": "Melee", "ap": 5},
-    "super_carbine": {"name": "Super Carbine", "attacks": 4, "short": 12, "medium": 24, "ap": 2, "rules": ["assault"]},
-    "twin_mini_mg": {"name": "Twin Mini-MGs", "attacks": 6, "ap": 2, "short": 9, "medium": 18, "rules": ["assault"]},
-    "twin_double_shotgun": {"name": "Twin Double Shotgun", "attacks": 4, "short": 6, "medium": 12, "ap": 2, "rules": ["assault"]},
-    "combi_heavy_flamer": {
-      "name": "Combi Heavy Flamer",
-      "profiles": [
-        {"name": "Twin Burst Carbine", "attacks": 2, "short": 9, "medium": 18, "ap": 1, "rules": ["assault", "rapid_fire"]},
-        {"name": "Heavy Flamer", "attacks": 3, "ap": 2, "short": 6, "medium": 12, "rules": ["flame"]}
-      ]
-    },
-    "combi_rocket_launcher": {
-      "name": "Combi Rocket Launcher",
-      "profiles": [
-        {"name": "Twin Burst Carbine", "attacks": 2, "ap": 1, "short": 9, "medium": 18, "rules": ["assault", "rapid_fire"]},
-        {"name": "Rocket Launcher", "attacks": 1, "short": 12, "medium": 24, "ap": 6, "rules": ["assault"]}
-      ]
-    },
-    "cutlass": {"name": "Cutlass", "ap": 2, "attacks": 1, "short": "Melee"},
-    "ultra_axe": {"name": "Ultra Axe", "attacks": 1, "ap": 3, "short": "Melee"},
-    "ultra_saw": {"name": "Ultra Sawblade", "attacks": 1, "ap": 4, "short": "Melee"},
-    "ultra_claw": {"name": "Ultra Claw", "attacks": 1, "ap": 5, "short": "Melee", "rules": ["cumbersome"]},
-    "beast_bite": {"name": "Beast Bite", "attacks": 2, "ap": 1, "short": "Melee"},
-    "beasts_bite": {"name": "Beasts Bite", "attacks": 1, "ap": 1, "short": "Melee"},
-    "rocket_launcher": {"name": "Rocket Launcher", "attacks": 1, "short": 12, "medium": 24, "ap": 6, "rules": ["assault"]},
-    "titan_rocket_launcher": {"name": "Titan Rocket Launcher", "attacks": 3, "short": 36, "medium": 72, "ap": 6},
-    "goblin_bazooka": {"name": "Goblin Bazooka", "attacks": 1, "ap": 3, "short": 9, "medium": 18, "rules": [{"id": "blast", "x": 3}, "assault"]},
-    "twin_rocket_launcher": {"name": "Twin Rocket Launcher", "attacks": 2, "short": 12, "medium": 24, "ap": 6, "rules": ["assault"]},
-    "rocket_pistol": {"name": "Rocket Pistol", "attacks": 1, "short": 6, "medium": 12, "ap": 6, "rules": ["assault", "pistol"]},
-    "orc_flamethrower": {"name": "Orc Flamethrower", "attacks": 2, "ap": 1, "short": 6, "medium": 12, "rules": ["assault", "flame"]},
-    "bomb_hammer": {"name": "Bomb Hammer", "attacks": 1, "ap": 7, "short": "Melee"},
-    "assault_bomb": {"name": "Assault Bomb", "attacks": 1, "ap": 4, "short": "Melee", "rules": [{"id": "blast", "x": 3}]},
-    "flame_bombs": {"name": "Flame Bombs", "attacks": 2, "ap": 2, "short": 6, "rules": ["bomb", "flame", {"id": "blast", "x": 3}]},
-    "heavy_bombs": {"name": "Heavy Bomb", "attacks": 1, "ap": 3, "short": 6, "rules": ["bomb", {"id": "blast", "x": 3}]},
-    "flame_missiles": {"name": "Flame Missiles", "attacks": 2, "ap": 2, "short": 12, "medium": 24, "rules": ["flame", {"id": "blast", "x": 3}]},
-    "bomb_beast": {"name": "Bomb Beast", "attacks": 1, "ap": 6, "short": 6, "medium": 12, "rules": [{"id": "blast", "x": 3}]},
-    "sharpest_claw": {"name": "The Sharpest Claw", "attacks": 3, "ap": 4, "short": "Melee"},
-    "double_shotgun": {"name": "Double Shotgun", "attacks": 2, "short": 6, "medium": 12, "ap": 2},
-    "relic_ultra_claw": {"name": "Killer Claw", "attacks": 1, "ap": 6, "short": "Melee", "rules": ["cumbersome"]},
-    "goring_tusks": {"name": "Goring Tusks", "attacks": 1, "ap": 8, "short": "Melee"},
-    "titan_chopper": {"name": "Titan Chopper", "profiles": [{"name": "Strike", "attacks": 3, "short": "Melee", "ap": 8}, {"name": "Sweep", "attacks": 6, "short": "Melee", "ap": 4}]}
-  },
-  "rules": {
-    "grand_warlord_tactics": {
-      "name": "Grand Warlord Tactics",
-      "inputs": ["x"],
-      "description": "When this unit is activated, choose up to X friendly _Infantry_ units within 6\" to receive one of the following bonuses until the end of the round: \n * Re-roll all failed Accuracy tests \n * Re-roll all failed Strength tests",
-      "points": ["rule.x", {"multiply": 20}]
-    },
-    "speed_pole": {"name": "Big Noble Pole", "description": "Friendly _Infantry_ units within 6\" add +1\" to their Movement characteristic.", "points": 5},
-    "goblin_tactics": {
-      "name": "Goblin Tactics",
-      "inputs": ["x"],
-      "description": "When this unit is activated, choose up to X friendly _Goblin_ _Infantry_ units within 6\" to receive one of the following bonuses until the end of the round: \n * Re-roll failed Accuracy tests of 9+ \n * Re-roll failed Initiative tests of 9+",
-      "points": ["rule.x", {"multiply": 10}]
-    },
-    "orc_tactics": {
-      "name": "Orc Tactics",
-      "inputs": ["x"],
-      "description": "When this unit is activated, choose up to X friendly _Infantry_ units within 6\" to receive one of the following bonuses until the end of the round: \n * Re-roll failed Strength tests of 9+ \n * Re-roll failed Initiative tests of 9+",
-      "points": ["rule.x", {"multiply": 10}]
-    },
-    "tracks": {"name": "Tracks", "description": "This unit may ignore difficult terrain and obstacles of height 2\" or less when moving.", "points": 5},
-    "goblin_assistant": {"name": "Goblin Assistant", "description": "Models in this unit gain +1 to Repair rolls for each model with this rule.", "points": 2},
-    "orc_idol": {"name": "Orc Idol", "description": "This model and friendly _Infantry_ units within 6\" gain +1 Courage.", "points": 10},
-    "heavy_armor": {"name": "Heavy Armor", "hidden": "true", "description": "This model gets +1 Save.", "description_short": "+1 Save", "points": [1, {"multiply": "constants.defenseCost"}]},
-    "ultra_armor": {"name": "Ultra Armor", "hidden": "true", "description": "This model gets +1 Save and -1\" of movement.", "description_short": "+1 Save, -1\" Movement", "points": 10},
-    "cyborg_body_3": {"name": "Cyborg Body", "description": "Whenever this model loses a wound, roll a D10. On a 3 or less that wound is not lost.", "points": 5},
-    "cyborg_body": {"name": "Cyborg Body", "description": "Whenever this model loses a wound, roll a D10. On a 3 or less that wound is not lost.", "points": 2},
-    "precision_monicle": {"name": "Precision Monicle", "hidden": "true", "description": "This model gets +1 Shoot.", "description_short": "+1 Accuracy", "points": 5},
-    "energy_field": {"name": "Energy Field", "description": "Friendly _Infantry_ units within 6\" gain +1 Save.", "points": 10},
-    "force_field": {"name": "Force Field", "description": "Roll a die for each hit this model takes, on a 3 or less that hit is prevented.", "points": 10},
-    "mad_doctor": {
-      "name": "Mad Doctor",
-      "description": "Whenever this model, or a friendly _Infantry_ model within 6\" is killed or loses a Wound(x), roll a D10. On a 3 or less, that loss is prevented.",
-      "points": 10
-    },
-    "wrecking_ball": {"name": "Wrecking Ball", "hidden": true, "description_short": "Impact +3", "description": "This model gains +3 impact.", "points": 6},
-    "boarding_plank": {"name": "Boarding Plank", "description_short": "Impact +3", "hidden": true, "description": "This model gains +3 impact.", "points": 6},
-    "extra_space": {"name": "Extra Space", "description_short": "Transport +10", "hidden": true, "description": "This model gains +10 impact.", "points": 10},
-    "extra_armor": {"name": "Extra Armor", "description_short": "Save +1", "hidden": true, "description": "This model gains +1 Save.", "points": 10},
-    "war_banner": {"name": "War Banner", "description": "Once per round, a friendly _Infantry_ unit within 6\" gains +1 AP on all Melee weapons.", "points": 10}
-  },
-  "relics": {
-    "relic_killer_claw": {
-      "name": "The Killer Claw",
-      "weapon": "relic_ultra_claw",
-      "description": "Replace one model's Ultra Claw with The Killer Claw.",
-      "flavor": "This Claw is the most killy claw you've ever seen.",
-      "points": 5
-    },
-    "speed_pole": {
-      "name": "Big Boss Pole",
-      "rule": "speed_pole",
-      "description": "Upgrade one Warlord model with The Big Boss Pole.",
-      "flavor": "Nearby Orcs are filled with a zeal to charge forward and attack.",
-      "points": 5
-    },
-    "boom_cannon": {
-      "name": "The Boom Cannon",
-      "weapon": "boom_cannon",
-      "description": "Replace one model's Heavy Cannon with The Boom Cannon.",
-      "flavor": "A very scary cannon for pure destruction.",
-      "points": 10
-    }
-  },
-  "powers": {
-    "crunch": {"name": "Crunch", "description": "Target enemy unit within 12\" takes 5 hits with AP 1.", "charge": 8},
-    "teleport": {
-      "name": "Jump Teleport",
-      "description": "Target friendly unit within 12\" may move up to 12\" ignoring all models and terrain. This must end outside of 12\" of any enemy units.",
-      "charge": 7
-    },
-    "strength": {"name": "Mighty Strength", "description": "Target friendly unit within 12\" gets +1 Strength until the end of the round.", "charge": 6}
-  },
-  "strategies": {
-    "here_we_go": {"name": "Here We Go!", "phase": "activation", "description": "Use when a unit declares a Charge action. That unit gets +3\" of Movement for that action.", "cost": 1},
-    "goblin_shield": {
-      "name": "Goblin Shield",
-      "phase": "activation",
-      "description": "Use after an _Infantry_ unit has been targeted by a Shooting attack. For this attack, you can roll a D10 each time an attack made with a ranged weapon hits that unit if there is a friendly Goblin Herd unit within 6\" of it. On an 8 or less a hit is transferred to the Goblin Herd instead of the original target.",
-      "cost": 2
-    },
-    "never_surrender": {
-      "subfactions": ["none", "goblin_army"],
-      "phase": "activation",
-      "name": "Never Surrender",
-      "flavor": "Orcs have a will to survive and will fight on even when heavily injured.",
-      "description": "Use before an _Infantry_ unit activates. It may ignore any critical injuries it has sustained for this activation.",
-      "cost": 1
-    },
-    "shoot_them": {
-      "subfactions": ["goblin_army"],
-      "phase": "activation",
-      "name": "Tune Up",
-      "description": "Use before shooting with a unit. Add 3\" to the Short and Long ranges of all weapons.",
-      "flavor": "With the turn of a knob or the twisting of a dial, Goblins squeeze out the best in the equipment.",
-      "cost": 1
-    },
-    "deadly_in_numbers": {
-      "subfactions": ["goblin_army"],
-      "phase": "activation",
-      "name": "Deadly In Numbers",
-      "description": "Use before shooting with an _Infantry_ unit. Successful hits gain +1 AP.",
-      "flavor": "With enough Goblins trained on a target, even they can do significant damage.",
-      "cost": 1
-    },
-    "courageous": {
-      "subfactions": ["goblin_army"],
-      "name": "Courageous",
-      "phase": "activation",
-      "description": "Use when activating a unit. That unit gets +1 Courage.",
-      "flavor": "These goblins are some of the most courageous ever seen, fighting to the bitter end.",
-      "cost": 1
-    },
-    "tough_ones": {
-      "subfactions": ["combat_focus"],
-      "name": "Tough Ones",
-      "phase": "activation",
-      "flavor": "These Orcs are some of the toughest you've ever seen.",
-      "description": "Use before taking Save rolls for an _Infantry_ unit. It gets +1 Save.",
-      "cost": 2
-    },
-    "smash_them": {
-      "subfactions": ["combat_focus"],
-      "name": "Smash Them",
-      "phase": "activation",
-      "flavor": "It's about time we got to fighting.",
-      "description": "Use when an _Infantry_ unit performs a Fight action. Successful hits cause an additional hit.",
-      "cost": 1
-    },
-    "counter_attack": {
-      "subfactions": ["combat_focus"],
-      "name": "Counter Attack",
-      "phase": "activation",
-      "flavor": "The toughest orcs never back down from a challenge.",
-      "description": "Use when an _Infantry_ unit is targeted by a Fight action. If that unit has not yet activated, it may perform a Counter Attack reaction without testing Initiative.",
-      "cost": 1
-    },
-    "quick_aim": {
-      "subfactions": ["speed_focus"],
-      "phase": "activation",
-      "name": "Quick Aim",
-      "description": "Use when an _Infantry_ unit with any _Assault_ weapons is firing. That unit does not suffer -1 to hit when using the _Assault_ rule.",
-      "flavor": "These orcs are so used to firing from the hip while speeding their way upfield that their accuracy doesn't suffer.",
-      "cost": 1
-    },
-    "run_them_down": {
-      "subfactions": ["speed_focus"],
-      "phase": "activation",
-      "name": "Run Them Down",
-      "description": "Use when a unit declares a charge action. If the charge is successful, the target gains +2 Shock.",
-      "flavor": "Those clans with a focus on speed enjoy putting a little extra oomph on their vehicles, making them hit just a little harder when they ram into something.",
-      "cost": 1
-    },
-    "extra_juice": {
-      "subfactions": ["speed_focus"],
-      "phase": "activation",
-      "name": "Extra Juice",
-      "description": "Use when a unit makes a move action it gains +3\" move for that action",
-      "flavor": "These orcs have either a special fuel or know little tricks to get them upfield just that little bit faster than their slower brethren.",
-      "cost": 1
-    },
-    "indescriminate_fire": {
-      "subfactions": ["shooting_focus"],
-      "phase": "activation",
-      "name": "Indiscriminate Fire",
-      "description": "Use when shooting with an _Infantry_ unit. If the attack hits, assign 2 additional Shock.",
-      "flavor": "Firing mostly at random, it's enough to Shock most enemies.",
-      "cost": 1
-    },
-    "good_shots": {
-      "subfactions": ["shooting_focus"],
-      "phase": "activation",
-      "name": "Good Shots",
-      "description": "Use when an _Infantry_ unit Shoots. That unit gets +1 Accuracy if it did not move this round.",
-      "flavor": "Experienced with ranged weapons, these Orcs can hit targets accurately.",
-      "cost": 1
-    },
-    "tune_up": {
-      "subfactions": ["shooting_focus"],
-      "phase": "activation",
-      "name": "Tune Up",
-      "description": "Use before shooting with a unit. Add 3\" to the short and long ranges of all weapons for that unit.",
-      "flavor": "Souped up and well-oiled, their weapons perform much better than any others.",
-      "cost": 1
-    },
-    "ambush": {
-      "subfactions": ["stealth_focus"],
-      "name": "Ambush",
-      "phase": "pre_game",
-      "description": "Up to half of any force's units, one point for each may be placed in _Ambush Reserves_ instead of deployed on the field.",
-      "flavor": "A deadly ambush can catch many off guard.",
-      "cost": "1/per"
-    },
-    "concealment": {
-      "subfactions": ["stealth_focus"],
-      "name": "Concealment",
-      "phase": "activation",
-      "flavor": "Orcs are sometimes trained in stealth tactics allowing them to hide even in plain sight.",
-      "description": "Use this strategy when a unit is targeted by an enemy Shooting attack. That unit gets -1 Accuracy this attack.",
-      "cost": 2
-    },
-    "stealth_assault": {
-      "subfactions": ["stealth_focus"],
-      "name": "Stealth Assault",
-      "phase": "activation",
-      "flavor": "Striking when the enemy least expects is a good way to quietly deal with an enemy.",
-      "description": "Use this strategy when an _Infantry_ unit charges. If the charging unit only makes a single move action this activation, enemy units may not react to that charge.",
-      "cost": 1
-    },
-    "toughness": {
-      "subfactions": ["toughness_focus"],
-      "name": "Toughness",
-      "phase": "activation",
-      "description": "Use when an _Infantry_ unit takes Save rolls. Roll a die for each hit this unit takes. On a 3 or less that hit is prevented.",
-      "flavor": "These Orcs are particularly tough and can take a hit.",
-      "cost": 2
-    },
-    "durability": {
-      "subfactions": ["toughness_focus"],
-      "name": "Durability",
-      "phase": "activation",
-      "description": "Use before activating a unit with a Damage Chart. That unit is treated as having no critical damage tokens for this activation.",
-      "flavor": "Some of the most well-maintained vehicles and machinery can operate under great stress.",
-      "cost": 1
-    },
-    "piercing_blows": {
-      "subfactions": ["toughness_focus"],
-      "name": "Piercing Blows",
-      "phase": "activation",
-      "flavor": "These Orcs are so tough they can even pentrate some armor for extra damage.",
-      "description": "Use when an _Infantry_ unit performs a Fight action. Successful hits gain +1 AP.",
-      "cost": 1
-    }
-  },
-  "buyLinks": [
-    {"name": "Games Workshop", "link": "https://www.games-workshop.com/en-US/Warhammer-40-000?N=2562756967+854227620"},
-    {"name": "Gear Guts' Mek Shop", "link": "https://geargutsmekshop.com/"},
-    {"name": "Bulwark Gaming", "link": "https://www.patreon.com/BulwarkGaming"}
-  ]
+    "buyLinks": [
+        {"name": "Games Workshop", "link": "https://www.games-workshop.com/en-US/Warhammer-40-000?N=2562756967+854227620"},
+        {"name": "Gear Guts' Mek Shop", "link": "https://geargutsmekshop.com/"},
+        {"name": "Bulwark Gaming", "link": "https://www.patreon.com/BulwarkGaming"},
+        {"name": "Mantic Games", "link": "https://www.manticgames.com/games/deadzone/marauder/"}
+    ]
 }
