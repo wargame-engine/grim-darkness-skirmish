@@ -7,8 +7,6 @@
             "name": "High Elf Champion",
             "description": "A leader of the high elf martial forces.",
             "category": "command",
-            "keywords": ["Infantry"],
-            "rules": [{"id": "melee_tactics", "x": 2}, {"id": "wounds", "x": 3}, {"id": "leader_x", "x": "Infantry"}],
             "models": [
                 {
                     "name": "High Elf Champion",
@@ -18,7 +16,16 @@
                     "fight": 7,
                     "defense": 7,
                     "reflexes": 6,
-                    "weapons": [{"id": "star_spear", "count": 4}, "plasma_grenade"],
+                    "rules": ["leader", {"id": "rifle_tactics", "x": 2}, {"id": "wounds", "x": 3}],
+                    "weapons": ["shard_rifle", {"id": "elven_blade", "count": 3}, "plasma_grenade"],
+                    "options": [
+                        {"replaceWeapon": ["shard_rifle"], "withWeapon": ["fusion_rifle", "flamethrower", "shard_sniper", "nova_blaster", "missile_launcher"]},
+                        {"replaceWeapon": ["shard_rifle", {"id": "elven_blade", "count": 3}], "withWeapon": [["shard_pistol", {"id": "elven_blade", "count": 4}]]},
+                        {"replaceWeapon": ["shard_pistol"], "withWeapon": ["fusion_pistol"]},
+                        {"replaceWeapon": [{"id": "elven_blade", "count": 4}], "withWeapon": [{"id": "chainsword", "count": 4}, {"id": "star_spear", "count": 4}, {"id": "energy_sword", "count": 4}]},
+                        {"addRule": ["jetpack", {"name": "Camo-cloak", "id": "evasive"}, "teleport"]},
+                        {"replaceRule": [{"id": "rifle_tactics", "x": 2}], "withRule": [{"id": "melee_tactics", "x": 2}]}
+                    ],
                     "min": 1,
                     "max": 1
                 }
@@ -29,7 +36,6 @@
             "description": "A leader of the high elf martial forces riding a swift hover bike.",
             "category": "command",
             "keywords": ["Biker"],
-            "rules": [{"id": "rifle_tactics", "x": 2}, {"id": "wounds", "x": 3}, "hover", {"id": "leader_x", "x": "Infantry"}],
             "models": [
                 {
                     "name": "High Elf Champion on Bike",
@@ -39,36 +45,19 @@
                     "fight": 7,
                     "defense": 7,
                     "reflexes": 6,
-                    "weapons": [{"id": "energy_sword", "count": 4}, "twin_shard_rifle"],
+                    "rules": ["hover", {"id": "leader_x", "x": "Infantry, Biker"}, {"id": "rifle_tactics", "x": 2}, {"id": "wounds", "x": 3}],
+                    "weapons": ["shard_rifle", {"id": "elven_blade", "count": 3}, "plasma_grenades", {"id": "twin_shard_rifle", "mount": ["Front"]}],
                     "options": [
+                        {"replaceWeapon": ["shard_rifle"], "withWeapon": ["fusion_rifle", "flamethrower", "shard_sniper", "nova_blaster", "missile_launcher"]},
                         {
-                            "replaceWeapon": {"id": "energy_sword", "count": 4},
-                            "withWeapon": [["fusion_rifle", {"id": "ccw", "count": 4}], ["laser_lance_shoot", {"id": "laser_lance_melee", "count": 4}]]
+                            "replaceWeapon": ["shard_rifle", {"id": "elven_blade", "count": 3}],
+                            "withWeapon": [["shard_pistol", {"id": "elven_blade", "count": 4}], ["laser_lance_shoot", {"id": "laser_lance_melee", "count": 4}]]
                         },
-                        {"replaceRule": {"id": "rifle_tactics", "x": 2}, "withRule": [{"id": "melee_tactics", "x": 2}]}
+                        {"replaceWeapon": ["shard_pistol"], "withWeapon": ["fusion_pistol"]},
+                        {"replaceWeapon": [{"id": "elven_blade", "count": 4}], "withWeapon": [{"id": "chainsword", "count": 4}, {"id": "star_spear", "count": 4}, {"id": "energy_sword", "count": 4}]},
+                        {"addRule": [{"name": "Camo-cloak", "id": "evasive"}]},
+                        {"replaceRule": [{"id": "rifle_tactics", "x": 2}], "withRule": [{"id": "melee_tactics", "x": 2}]}
                     ],
-                    "min": 1,
-                    "max": 11
-                }
-            ]
-        },
-        "high_elf_champion_with_wings": {
-            "name": "High Elf Champion with Wings",
-            "description": "A leader of the high elf martial forces using advanced flight technology resembling wings to swoop around the battlefield.",
-            "category": "command",
-            "keywords": ["Infantry"],
-            "rules": [{"id": "melee_tactics", "x": 2}, {"id": "wounds", "x": 3}, "fly", "ambush", {"id": "leader_x", "x": "Infantry"}],
-            "models": [
-                {
-                    "name": "High Elf Champion with Wings",
-                    "courage": 7,
-                    "movement": 8,
-                    "shoot": 7,
-                    "fight": 7,
-                    "defense": 7,
-                    "reflexes": 6,
-                    "weapons": [{"id": "ccw", "count": 4}, "fusion_rifle", "plasma_grenade"],
-                    "options": [{"replaceWeapon": {"id": "ccw", "count": 4}, "withWeapon": [{"id": "energy_sword", "count": 4}]}],
                     "min": 1,
                     "max": 1
                 }
@@ -78,8 +67,7 @@
             "name": "Psychic",
             "description": "A gifted high elf psychic.",
             "category": "command",
-            "keywords": ["Infantry"],
-            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "rifle_tactics", "x": 2}, {"id": "power", "x": 2}, {"id": "wounds", "x": 3}],
+            "rules": ["leader", {"id": "power", "x": 1}, {"id": "wounds", "x": 3}],
             "models": [
                 {
                     "name": "Psychic",
@@ -89,8 +77,15 @@
                     "fight": 7,
                     "defense": 6,
                     "reflexes": 6,
-                    "weapons": ["shard_pistol", {"id": "hexblade", "count": 2}],
-                    "options": [{"replaceWeapon": {"id": "hexblade", "count": 2}, "withWeapon": [["laser_lance_shoot", {"id": "laser_lance_melee", "count": 2}]]}],
+                    "weapons": ["shard_rifle", {"id": "elven_blade", "count": 2}],
+                    "options": [
+                        {
+                            "replaceWeapon": ["shard_rifle", {"id": "elven_blade", "count": 2}],
+                            "withWeapon": [["shard_pistol", {"id": "elven_blade", "count": 3}], ["laser_lance_shoot", {"id": "laser_lance_melee", "count": 3}]]
+                        },
+                        {"replaceWeapon": {"id": "elven_blade", "count": 3}, "withWeapon": [{"id": "energy_staff", "count": 3}]},
+                        {"replaceRule": [{"id": "power", "x": 1}], "withRule": [{"id": "power", "x": 2}]}
+                    ],
                     "min": 1,
                     "max": 1
                 }
@@ -98,99 +93,146 @@
         },
         "psychic_on_bike": {
             "name": "Psychic on Bike",
-            "description": "A gifted high elf psychic riding a sleek motorbike.",
+            "description": "A gifted high elf psychic riding a swift hover bike.",
             "category": "command",
             "keywords": ["Biker"],
-            "rules": [{"id": "leader_x", "x": "Biker"}, {"id": "rifle_tactics", "x": 2}, {"id": "power", "x": 2}, {"id": "wounds", "x": 3}, "hover"],
+            "rules": ["hover", {"id": "leader_x", "x": "Infantry, Biker"}, {"id": "power", "x": 1}, {"id": "wounds", "x": 3}],
             "models": [
                 {
-                    "name": "Psychic",
+                    "name": "Psychic on Bike",
                     "courage": 7,
                     "movement": 8,
                     "shoot": 7,
                     "fight": 7,
                     "defense": 6,
                     "reflexes": 6,
-                    "weapons": ["shard_pistol", {"id": "hexblade", "count": 2}, "twin_shard_rifle"],
-                    "options": [{"replaceWeapon": {"id": "hexblade", "count": 2}, "withWeapon": [["laser_lance_shoot", {"id": "laser_lance_melee", "count": 2}]]}],
+                    "weapons": ["shard_rifle", {"id": "elven_blade", "count": 2}, {"id": "twin_shard_rifle", "mount": ["Front"]}],
+                    "options": [
+                        {
+                            "replaceWeapon": ["shard_rifle", {"id": "elven_blade", "count": 2}],
+                            "withWeapon": [["shard_pistol", {"id": "elven_blade", "count": 3}], ["laser_lance_shoot", {"id": "laser_lance_melee", "count": 3}]]
+                        },
+                        {"replaceWeapon": {"id": "elven_blade", "count": 3}, "withWeapon": [{"id": "energy_staff", "count": 3}]},
+                        {"replaceRule": [{"id": "power", "x": 1}], "withRule": [{"id": "power", "x": 2}]}
+                    ],
                     "min": 1,
                     "max": 1
                 }
             ]
         },
-        "spirit_psychic": {
-            "name": "Spirit Psychic",
-            "description": "A high elf psychic focused on enhancing the mechanical aspects of the army.",
+        "spirit_engineer": {
+            "name": "Spirit Engineer",
+            "description": "A high elf leader focused on enhancing the mechanical aspects of the army.",
             "category": "command",
-            "keywords": ["Infantry"],
-            "rules": [{"id": "rifle_tactics", "x": 2}, {"id": "repair", "x": 1}, {"id": "ward", "x": 1}, {"id": "wounds", "x": 2}],
+            "rules": ["engineer", {"id": "leader_x", "x": "Heavy Infantry"}, {"id": "wounds", "x": 3}],
             "models": [
                 {
-                    "name": "Spirit Psychic",
+                    "name": "Spirit Engineer",
                     "courage": 6,
                     "movement": 7,
                     "shoot": 7,
                     "fight": 7,
                     "defense": 6,
                     "reflexes": 6,
-                    "weapons": ["shard_pistol", {"id": "hexblade", "count": 2}],
+                    "weapons": ["shard_pistol", {"id": "elven_blade", "count": 3}],
                     "min": 1,
                     "max": 1
                 }
             ]
         },
-        "war_psychic": {
-            "name": "War Psychic",
-            "description": "A high elf psychic trained in the arts of war.",
+        "spirit_engineer_bike": {
+            "name": "Spirit Engineer on Bike",
+            "description": "A high elf leader focused on enhancing the mechanical aspects of the army, riding on a swift hover bike.",
             "category": "command",
-            "keywords": ["Infantry"],
-            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "power", "x": 1}],
+            "rules": ["engineer", "hover", {"id": "leader_x", "x": "Heavy Infantry, Biker"}, {"id": "wounds", "x": 3}],
             "models": [
                 {
-                    "name": "War Psychic",
+                    "name": "Spirit Engineer on Bike",
+                    "courage": 6,
+                    "movement": 8,
+                    "shoot": 7,
+                    "fight": 7,
+                    "defense": 6,
+                    "reflexes": 6,
+                    "weapons": ["shard_pistol", {"id": "elven_blade", "count": 3}, {"id": "twin_shard_rifle", "mount": ["Front"]}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "runecaster": {
+            "name": "Runecaster",
+            "description": "A high elf psychic supporting the elven forces on the battlefield.",
+            "category": "command",
+            "rules": ["leader", {"id": "power", "x": 1}, {"id": "wounds", "x": 2}],
+            "models": [
+                {
+                    "name": "Runecaster",
                     "courage": 6,
                     "movement": 7,
                     "shoot": 6,
                     "fight": 6,
                     "defense": 6,
                     "reflexes": 6,
-                    "weapons": ["shard_pistol", {"id": "hexblade", "count": 2}],
-                    "options": [{"replaceWeapon": {"id": "hexblade", "count": 2}, "withWeapon": [["laser_lance_shoot", {"id": "laser_lance_melee", "count": 2}]]}],
+                    "weapons": ["shard_pistol", {"id": "energy_sword", "count": 2}],
+                    "options": [{"replaceWeapon": {"id": "energy_sword", "count": 2}, "withWeapon": [["laser_lance_shoot", {"id": "laser_lance_melee", "count": 2}]]}],
                     "min": 1,
                     "max": 1
                 }
             ]
         },
-        "war_psychic_on_bike": {
-            "name": "War Psychic on Bike",
-            "description": "A high elf psychic practiced in the arts of war riding a sleek motorbike.",
+        "runecaster_on_bike": {
+            "name": "Runecaster on Bike",
+            "description": "A high elf psychic supporting the elven forces on the battlefield, riding a swift hover bike.",
             "category": "command",
             "keywords": ["Biker"],
-            "rules": [{"id": "leader_x", "x": "Biker"}, {"id": "power", "x": 1}, "hover"],
+            "rules": ["hover", {"id": "leader_x", "x": "Infantry, Biker"}, {"id": "power", "x": 1}, {"id": "wounds", "x": 2}],
             "models": [
                 {
-                    "name": "War Psychic on Bike",
+                    "name": "Runecaster on Bike",
                     "courage": 6,
                     "movement": 8,
                     "shoot": 6,
                     "fight": 6,
                     "defense": 6,
                     "reflexes": 6,
-                    "weapons": ["shard_pistol", {"id": "hexblade", "count": 2}, "twin_shard_rifle"],
-                    "options": [{"replaceWeapon": {"id": "hexblade", "count": 2}, "withWeapon": [["laser_lance_shoot", {"id": "laser_lance_melee", "count": 2}]]}],
+                    "weapons": ["shard_pistol", {"id": "energy_sword", "count": 2}, {"id": "twin_shard_rifle", "mount": ["Front"]}],
+                    "options": [{"replaceWeapon": {"id": "energy_sword", "count": 2}, "withWeapon": [["laser_lance_shoot", {"id": "laser_lance_melee", "count": 2}]]}],
                     "min": 1,
                     "max": 1
                 }
             ]
         },
-        "defender_leader": {
-            "name": "Defender Leader",
-            "description": "A group of high elf warriors.",
-            "category": "command",
-            "keywords": ["Infantry"],
+        "warrior": {
+            "name": "Warrior",
+            "description": "A high elf warrior who is trained in various combat styles.",
+            "category": "core",
             "models": [
                 {
-                    "name": "Defender Leader",
+                    "name": "Warrior",
+                    "courage": 5,
+                    "movement": 7,
+                    "shoot": 6,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 6,
+                    "options": [
+                        {"replaceWeapon": ["shard_carbine", "ccw"], "withWeapon": [["shard_pistol", {"id": "ccw", "count": 2}]]},
+                        {"replaceWeapon": [{"id": "ccw", "count": 2}], "withWeapon": [{"id": "energy_sword", "count": 2}]}
+                    ],
+                    "weapons": ["shard_carbine", "ccw", "plasma_grenade"],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "warrior_leader": {
+            "name": "Warrior Leader",
+            "description": "A high elf warrior leader who is trained in various combat styles.",
+            "category": "command",
+            "models": [
+                {
+                    "name": "Warrior Leader",
                     "courage": 5,
                     "movement": 7,
                     "shoot": 6,
@@ -198,36 +240,51 @@
                     "defense": 5,
                     "reflexes": 6,
                     "rules": ["leader"],
-                    "weapons": ["shard_carbine", "plasma_grenade", "ccw"],
+                    "weapons": ["shard_carbine", "ccw", "plasma_grenade"],
+                    "options": [
+                        {"replaceWeapon": ["shard_carbine", "ccw"], "withWeapon": [["shard_pistol", {"id": "ccw", "count": 2}]]},
+                        {"replaceWeapon": ["shard_pistol"], "withWeapon": ["fusion_pistol"]},
+                        {"replaceWeapon": [{"id": "ccw", "count": 2}], "withWeapon": [{"id": "energy_sword", "count": 2}]}
+                    ],
                     "min": 1,
                     "max": 1
                 }
             ]
         },
-        "defender": {
-            "name": "Defender",
-            "description": "A group of high elf warriors.",
-            "category": "core",
-            "keywords": ["Infantry"],
-            "models": [
-                {"name": "Defender", "courage": 5, "movement": 7, "shoot": 6, "fight": 5, "defense": 5, "reflexes": 6, "weapons": ["shard_carbine", "plasma_grenade", "ccw"], "min": 1, "max": 1}
-            ]
-        },
-        "defender_weapon_platform": {
-            "name": "Defender Weapon Platform",
-            "description": "A group of high elf warriors.",
-            "category": "heavy",
-            "keywords": ["Infantry"],
+        "warrior_specialist": {
+            "name": "Warrior Specialist",
+            "description": "A high elf warrior who is trained in various heavy weapons.",
+            "category": "specialist",
             "models": [
                 {
-                    "name": "Defender Weapon Platform",
+                    "name": "Warrior Specialist",
                     "courage": 5,
+                    "movement": 7,
                     "shoot": 6,
                     "fight": 5,
+                    "defense": 5,
+                    "reflexes": 6,
+                    "options": [{"replaceWeapon": ["flamethrower"], "withWeapon": ["heavy_shard_rifle", "fusion_rifle"]}],
+                    "weapons": ["flamethrower", "ccw", "plasma_grenade"],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "weapon_platform": {
+            "name": "Weapon Platform",
+            "description": "An autonomous weapon platform supporting their allies.",
+            "category": "heavy",
+            "models": [
+                {
+                    "name": "Weapon Platform",
+                    "courage": 5,
+                    "shoot": 6,
+                    "fight": 0,
                     "defense": 7,
                     "reflexes": 6,
                     "movement": 7,
-                    "weapons": [{"id": "fusion_cannon", "count": 1, "mount": ["Front"]}],
+                    "weapons": [{"id": "fusion_cannon", "mount": ["Front"]}],
                     "options": [
                         {
                             "replaceWeapon": {"id": "fusion_cannon", "mount": ["Front"]},
@@ -244,14 +301,33 @@
                 }
             ]
         },
-        "avenger_leader": {
-            "name": "Avenger Leader",
-            "description": "A group of elite high elf warriors.",
-            "category": "command",
-            "keywords": ["Infantry"],
+        "guardian": {
+            "name": "Guardian",
+            "description": "An elite high elf warrior who excels at holding objectives.",
+            "category": "core",
             "models": [
                 {
-                    "name": "Avenger Leader",
+                    "name": "Guardian",
+                    "courage": 6,
+                    "movement": 7,
+                    "shoot": 6,
+                    "fight": 5,
+                    "defense": 6,
+                    "reflexes": 6,
+                    "options": [{"addRule": ["shield"]}],
+                    "weapons": ["shard_rifle", "ccw", "plasma_grenade"],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "guardian_leader": {
+            "name": "Guardian Leader",
+            "description": "An elite high elf warrior leader who excels at holding objectives.",
+            "category": "command",
+            "models": [
+                {
+                    "name": "Guardian Leader",
                     "courage": 6,
                     "movement": 7,
                     "shoot": 6,
@@ -259,36 +335,41 @@
                     "defense": 6,
                     "reflexes": 6,
                     "rules": ["leader"],
-                    "weapons": ["shard_rifle", "plasma_grenade", "ccw"],
+                    "weapons": ["shard_rifle", "ccw", "plasma_grenade"],
                     "options": [
-                        {
-                            "replaceWeapon": ["shard_rifle", "ccw"],
-                            "withWeapon": [
-                                [{"id": "shard_rifle", "count": 2}, "ccw"],
-                                [{"id": "energy_glaive", "count": 2}, "shield"],
-                                ["shard_pistol", {"id": "energy_sword", "count": 2}],
-                                ["shard_pistol", {"id": "energy_glaive", "count": 2}]
-                            ]
-                        }
+                        {"replaceWeapon": ["shard_rifle", "ccw"], "withWeapon": [["shard_pistol", {"id": "ccw", "count": 2}]]},
+                        {"replaceWeapon": [{"id": "ccw", "count": 2}], "withWeapon": [{"id": "energy_sword", "count": 2}, {"id": "energy_glaive", "count": 2}]},
+                        {"addRule": ["shield"]}
                     ],
                     "min": 1,
                     "max": 1
                 }
             ]
         },
-        "avenger": {
-            "name": "Avenger",
-            "description": "A group of elite high elf warriors.",
+        "ranger": {
+            "name": "Ranger",
+            "description": "A high elf who is well experienced in sharpshooting.",
             "category": "core",
-            "keywords": ["Infantry"],
-            "models": [{"name": "Avenger", "courage": 6, "movement": 7, "shoot": 6, "fight": 5, "defense": 6, "reflexes": 6, "weapons": ["shard_rifle", "plasma_grenade", "ccw"], "min": 1, "max": 1}]
+            "models": [
+                {
+                    "name": "Ranger",
+                    "courage": 5,
+                    "movement": 7,
+                    "shoot": 6,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 6,
+                    "rules": ["evasive", "scout"],
+                    "weapons": ["shard_sniper", "plasma_grenade", "ccw"],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
         },
         "ranger_leader": {
             "name": "Ranger Leader",
-            "description": "A group of high elf warriors.",
+            "description": "A high elf leader who is well experienced in sharpshooting.",
             "category": "command",
-            "keywords": ["Infantry"],
-            "rules": ["stealth", "scout"],
             "models": [
                 {
                     "name": "Ranger Leader",
@@ -298,128 +379,51 @@
                     "fight": 5,
                     "defense": 5,
                     "reflexes": 6,
-                    "rules": ["leader"],
+                    "rules": ["evasive", "leader", "scout"],
                     "weapons": ["shard_sniper", "plasma_grenade", "ccw"],
+                    "options": [{"replaceWeapon": "shard_sniper", "withWeapon": ["spectre_rifle"]}],
                     "min": 1,
                     "max": 1
                 }
             ]
         },
-        "rangers": {
-            "name": "Ranger",
-            "description": "A group of high elf warriors.",
-            "category": "core",
-            "keywords": ["Infantry"],
-            "rules": ["stealth", "scout"],
-            "models": [{"name": "Ranger", "courage": 5, "movement": 7, "shoot": 6, "fight": 5, "defense": 5, "reflexes": 6, "weapons": ["shard_sniper", "plasma_grenade", "ccw"], "min": 1, "max": 1}]
-        },
-        "storm_leader": {
-            "name": "Storm Warrior Leader",
-            "description": "A group of high elf assault troops.",
-            "category": "command",
-            "keywords": ["Infantry"],
+        "wvyern": {
+            "name": "Wyvern",
+            "description": "A highly trained soldier weilding a powerful gun designed to melt through even the thickest of armor.",
+            "category": "specialist",
             "models": [
                 {
-                    "name": "Storm Warrior Leader",
-                    "courage": 5,
-                    "movement": 7,
-                    "shoot": 5,
-                    "fight": 6,
-                    "defense": 5,
-                    "reflexes": 6,
-                    "rules": ["leader"],
-                    "weapons": ["shard_pistol", "plasma_grenade", {"id": "elven_blade", "count": 2}],
-                    "options": [
-                        {"replaceWeapon": {"id": "elven_blade", "count": 2}, "withWeapon": [{"id": "chainsword", "count": 2}]},
-                        {"replaceWeapon": {"id": "elven_blade", "count": 2}, "withWeapon": {"id": "energy_sword", "count": 2}, "modelLimit": 2},
-                        {"replaceWeapon": [{"id": "elven_blade", "count": 1}, "shard_pistol"], "withWeapon": ["flamethrower", "fusion_rifle"], "modelLimit": 2}
-                    ],
-                    "min": 1,
-                    "max": 1
-                }
-            ]
-        },
-        "storm_warrior": {
-            "name": "Storm Warrior",
-            "description": "A group of high elf assault troops.",
-            "category": "core",
-            "keywords": ["Infantry"],
-            "models": [
-                {
-                    "name": "Storm Warrior",
-                    "courage": 5,
-                    "movement": 7,
-                    "shoot": 5,
-                    "fight": 6,
-                    "defense": 5,
-                    "reflexes": 6,
-                    "weapons": ["shard_pistol", "plasma_grenade", {"id": "elven_blade", "count": 2}],
-                    "options": [
-                        {"replaceWeapon": {"id": "elven_blade", "count": 2}, "withWeapon": [{"id": "chainsword", "count": 2}]},
-                        {"replaceWeapon": {"id": "elven_blade", "count": 2}, "withWeapon": {"id": "energy_sword", "count": 2}, "modelLimit": 2},
-                        {"replaceWeapon": [{"id": "elven_blade", "count": 1}, "shard_pistol"], "withWeapon": ["flamethrower", "fusion_rifle"], "modelLimit": 2}
-                    ],
-                    "min": 1,
-                    "max": 1
-                }
-            ]
-        },
-        "dragon_fire_leader": {
-            "name": "Dragon Fire Leader",
-            "description": "A group of highly trained soldiers weilding powerful guns designed to melt through even the thickest of armor.",
-            "category": "command",
-            "keywords": ["Infantry"],
-            "models": [
-                {
-                    "name": "Dragon Fire Leader",
+                    "name": "Wyvern",
                     "courage": 6,
                     "movement": 7,
                     "shoot": 6,
                     "fight": 6,
                     "defense": 7,
                     "reflexes": 6,
-                    "weapons": ["fusion_rifle", "fusion_bomb"],
-                    "rules": ["champion", "leader"],
-                    "options": [{"replaceWeapon": "fusion_rifle", "withWeapon": ["dragon_flamethrower"]}],
+                    "options": [{"replaceWeapon": ["flamethrower"], "withWeapon": ["fusion_rifle", "missile_launcher"]}],
+                    "weapons": ["flamethrower", "fusion_bomb", "ccw"],
                     "min": 1,
                     "max": 1
                 }
             ]
         },
-        "dragon_fire": {
-            "name": "Dragon Fire Warrior",
-            "description": "A group of highly trained soldiers weilding powerful guns designed to melt through even the thickest of armor.",
-            "category": "specialist",
-            "keywords": ["Infantry"],
-            "models": [
-                {"name": "Dragon Fire Warrior", "courage": 6, "movement": 7, "shoot": 6, "fight": 6, "defense": 7, "reflexes": 6, "weapons": ["fusion_rifle", "fusion_bomb"], "min": 1, "max": 1}
-            ]
-        },
-        "wraith_leader": {
-            "name": "Wraith Leader",
-            "description": "A group of heavily armored constructs.",
+        "wvyern_leader": {
+            "name": "Wyvern Leader",
+            "description": "A highly trained leader weilding a powerful gun designed to melt through even the thickest of armor.",
             "category": "command",
-            "keywords": ["Infantry"],
             "models": [
                 {
-                    "name": "Wraith Leader",
+                    "name": "Wyvern Leader",
                     "courage": 6,
-                    "movement": 5,
+                    "movement": 7,
                     "shoot": 6,
                     "fight": 6,
-                    "defense": 9,
+                    "defense": 7,
                     "reflexes": 6,
-                    "rules": ["leader", {"id": "wounds", "x": 2}],
-                    "weapons": [{"id": "wraith_sword", "count": 2}],
+                    "weapons": ["flamethrower", "fusion_bomb", "ccw"],
                     "options": [
-                        {
-                            "replaceWeapon": [{"id": "wraith_sword", "count": 2}],
-                            "withWeapon": [
-                                [{"id": "wraith_axe", "count": 2}, "shield"],
-                                ["wraith_cannon", {"id": "wraith_fists", "count": 1}],
-                                ["distortion_rifle", {"id": "wraith_fists", "count": 1}]
-                            ]
-                        }
+                        {"replaceWeapon": ["flamethrower"], "withWeapon": ["missile_launcher", "fusion_rifle", "shattersky_launcher", "shard_cannon"]},
+                        {"addWeapon": ["flamethrower", "fusion_rifle"], "limit": 1}
                     ],
                     "min": 1,
                     "max": 1
@@ -427,10 +431,10 @@
             ]
         },
         "wraith": {
-            "name": "Wraith",
-            "description": "A group of heavily armored constructs.",
+            "name": "Wraith Construct",
+            "description": "A heavily armored construct.",
             "category": "specialist",
-            "keywords": ["Infantry"],
+            "keywords": ["Heavy Infantry"],
             "models": [
                 {
                     "name": "Wraith",
@@ -441,82 +445,121 @@
                     "defense": 9,
                     "reflexes": 6,
                     "rules": [{"id": "wounds", "x": 2}],
-                    "weapons": [{"id": "wraith_sword", "count": 2}],
+                    "weapons": [{"id": "energy_sword", "count": 3}],
                     "options": [
-                        {
-                            "replaceWeapon": [{"id": "wraith_sword", "count": 2}],
-                            "withWeapon": [
-                                [{"id": "wraith_axe", "count": 2}, "shield"],
-                                ["wraith_cannon", {"id": "wraith_fists", "count": 1}],
-                                ["distortion_rifle", {"id": "wraith_fists", "count": 1}]
-                            ]
-                        }
+                        {"replaceWeapon": [{"id": "energy_sword", "count": 3}], "withWeapon": [{"id": "energy_greataxe", "count": 2}, "fusion_carbine", "distortion_rifle"]},
+                        {"addRule": ["shield"]}
                     ],
                     "min": 1,
                     "max": 1
                 }
             ]
         },
-        "banshee_leader": {
-            "name": "Banshee Leader",
-            "description": "A group of swift and brutal melee warriors.",
+        "wraith_leader": {
+            "name": "Wraith Construct Leader",
+            "description": "A heavily armored leader construct.",
             "category": "command",
-            "keywords": ["Infantry"],
+            "keywords": ["Heavy Infantry"],
             "models": [
                 {
-                    "name": "Banshee Leader",
+                    "name": "Wraith Leader",
                     "courage": 6,
-                    "movement": 8,
+                    "movement": 5,
                     "shoot": 6,
                     "fight": 6,
-                    "defense": 6,
+                    "defense": 9,
                     "reflexes": 6,
-                    "rules": ["champion", "leader"],
-                    "weapons": [{"id": "energy_sword", "count": 3}, "shard_pistol"],
+                    "rules": ["leader", {"id": "wounds", "x": 2}],
+                    "weapons": [{"id": "energy_sword", "count": 3}],
                     "options": [
-                        {"replaceWeapon": {"id": "energy_sword", "count": 3}, "withWeapon": ["shuriken", {"id": "fusion_glaive", "count": 3}]},
-                        {"replaceWeapon": [{"id": "energy_sword", "count": 3}, "shard_pistol"], "withWeapon": [{"id": "mirror_blades", "count": 3}]}
+                        {"replaceWeapon": [{"id": "energy_sword", "count": 3}], "withWeapon": [{"id": "energy_greataxe", "count": 2}, "fusion_carbine", "distortion_rifle"]},
+                        {"addRule": ["shield"]}
                     ],
                     "min": 1,
                     "max": 1
                 }
             ]
         },
-        "banshee": {
-            "name": "Banshee",
-            "description": "A group of swift and brutal melee warriors.",
+        "assault_warrior": {
+            "name": "Assault Warrior",
+            "description": "A swift and brutal melee warrior.",
             "category": "specialist",
-            "keywords": ["Infantry"],
             "models": [
                 {
-                    "name": "Banshee Warrior",
+                    "name": "Assault Warrior",
                     "courage": 6,
-                    "movement": 8,
+                    "movement": 7,
                     "shoot": 6,
                     "fight": 6,
                     "defense": 6,
                     "reflexes": 6,
-                    "weapons": [{"id": "energy_sword", "count": 2}, "shard_pistol"],
+                    "options": [{"replaceWeapon": [{"id": "chainsword", "count": 2}], "withWeapon": [{"id": "energy_sword", "count": 2}]}, {"addRule": ["evasive", "furious"]}],
+                    "weapons": ["shard_pistol", {"id": "chainsword", "count": 2}],
                     "min": 1,
                     "max": 1
                 }
             ]
         },
-        "spectre_leader": {
-            "name": "Spectre Leader",
-            "description": "A squad of ghostly warriors adept at remaining unseen until they make their attack.",
+        "assault_warrior_leader": {
+            "name": "Assault Warrior Leader",
+            "description": "A swift and brutal melee warrior leader.",
             "category": "command",
-            "keywords": ["Infantry"],
             "models": [
                 {
-                    "name": "Spectre Leader",
+                    "name": "Assault Warrior Leader",
+                    "courage": 6,
+                    "movement": 7,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 6,
+                    "reflexes": 6,
+                    "rules": ["leader"],
+                    "weapons": ["shard_pistol", {"id": "chainsword", "count": 2}],
+                    "options": [
+                        {"replaceWeapon": ["shard_pistol", {"id": "chainsword", "count": 2}], "withWeapon": [{"id": "mirror_blades", "count": 3}]},
+                        {"replaceWeapon": "shard_pistol", "withWeapon": ["shard_blaster"]},
+                        {"replaceWeapon": {"id": "chainsword", "count": 2}, "withWeapon": [{"id": "energy_sword", "count": 2}, {"id": "energy_glaive", "count": 2}, ["energy_sword", "shuriken"]]},
+                        {"addRule": ["evasive", "furious"]}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "phantom": {
+            "name": "Phantom",
+            "description": "A ghostly warrior adept at remaining unseen until they make their attack.",
+            "category": "specialist",
+            "models": [
+                {
+                    "name": "Phantom",
                     "courage": 6,
                     "movement": 8,
                     "shoot": 6,
                     "fight": 6,
                     "defense": 7,
                     "reflexes": 6,
-                    "rules": ["champion", "leader"],
+                    "rules": ["ambush", "evasive", "fear"],
+                    "weapons": ["spectre_rifle", "frags"],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "phantom_leader": {
+            "name": "Phantom Leader",
+            "description": "A ghostly warrior leader adept at remaining unseen until they make their attack.",
+            "category": "command",
+            "models": [
+                {
+                    "name": "Phantom Leader",
+                    "courage": 6,
+                    "movement": 8,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 7,
+                    "reflexes": 6,
+                    "rules": ["ambush", "evasive", "fear", "leader"],
                     "weapons": ["spectre_rifle", "frags"],
                     "options": [{"replaceWeapon": "spectre_rifle", "withWeapon": ["elven_blaster", "emp_cannon"]}],
                     "min": 1,
@@ -524,197 +567,139 @@
                 }
             ]
         },
-        "spectre": {
-            "name": "Spectre Warrior",
-            "description": "A squad of ghostly warriors adept at remaining unseen until they make their attack.",
-            "category": "specialist",
-            "keywords": ["Infantry"],
-            "models": [{"name": "Spectre Warrior", "courage": 6, "movement": 8, "shoot": 6, "fight": 6, "defense": 7, "reflexes": 6, "weapons": ["spectre_rifle", "frags"], "min": 1, "max": 1}]
-        },
-        "scorpion_leader": {
-            "name": "Scorpion Leader",
-            "description": "A squad of warriors trained to weild chainswords and pistols to a deadly result.",
-            "category": "command",
-            "keywords": ["Infantry"],
-            "rules": ["ambush", "stealth"],
-            "models": [
-                {
-                    "name": "Scorpion Leader",
-                    "courage": 6,
-                    "shoot": 6,
-                    "fight": 6,
-                    "defense": 7,
-                    "reflexes": 6,
-                    "movement": 7,
-                    "rules": ["champion", "leader"],
-                    "weapons": [{"id": "chainsword", "count": 3}, "shard_pistol", "frags"],
-                    "options": [
-                        {"replaceWeapon": {"id": "chainsword", "count": 3}, "withWeapon": [{"id": "slicing_sword", "count": 3}]},
-                        {"replaceWeapon": "shard_pistol", "withWeapon": ["scorpion_claw"]}
-                    ],
-                    "min": 1,
-                    "max": 1
-                }
-            ]
-        },
-        "scorpion": {
-            "name": "Scorpion Warrior",
-            "description": "A squad of warriors trained to weild chainswords and pistols to a deadly result.",
-            "category": "specialist",
-            "keywords": ["Infantry"],
-            "rules": ["ambush", "stealth"],
-            "models": [
-                {
-                    "name": "Scorpion Warrior",
-                    "courage": 6,
-                    "shoot": 6,
-                    "fight": 6,
-                    "defense": 7,
-                    "reflexes": 6,
-                    "movement": 7,
-                    "weapons": [{"id": "chainsword", "count": 2}, "shard_pistol", "frags"],
-                    "min": 1,
-                    "max": 1
-                }
-            ]
-        },
-        "glittering_spear_leader": {
-            "name": "Glittering Spear Leader",
-            "description": "A squad of highly trained bikers that are adept at both melee and short range combat.",
-            "category": "command",
-            "keywords": ["Biker"],
-            "rules": ["hover"],
-            "models": [
-                {
-                    "name": "Glittering Spear Leader",
-                    "courage": 6,
-                    "shoot": 6,
-                    "fight": 6,
-                    "defense": 8,
-                    "reflexes": 6,
-                    "movement": 8,
-                    "rules": ["champion"],
-                    "weapons": ["laser_lance_shoot", {"id": "laser_lance_melee", "count": 3}, "twin_shard_rifle"],
-                    "options": [{"replaceWeapon": ["laser_lance_shoot", {"id": "laser_lance_melee", "count": 3}], "withWeapon": [{"id": "exemplar_blade", "count": 3}, "space_lance"]}],
-                    "min": 1,
-                    "max": 1
-                }
-            ]
-        },
-        "glittering_spears": {
-            "name": "Glittering Spear",
-            "description": "A squad of highly trained bikers that are adept at both melee and short range combat.",
+        "hawk": {
+            "name": "Hawk",
+            "description": "A winged warrior trained to use the element of suprise and strike from above.",
             "category": "strike",
-            "keywords": ["Biker"],
-            "rules": ["hover"],
             "models": [
-                {
-                    "name": "Glittering Spear",
-                    "courage": 6,
-                    "shoot": 6,
-                    "fight": 6,
-                    "defense": 8,
-                    "reflexes": 6,
-                    "movement": 8,
-                    "weapons": ["laser_lance_shoot", {"id": "laser_lance_melee", "count": 2}, "twin_shard_rifle"],
-                    "min": 1,
-                    "max": 1
-                }
+                {"name": "Hawk", "courage": 6, "shoot": 6, "fight": 6, "defense": 6, "movement": 8, "reflexes": 6, "rules": ["ambush", "fly"], "weapons": ["elven_blaster", "ccw"], "min": 1, "max": 1}
             ]
         },
-        "wind_rifle": {
-            "name": "Wind Rifle",
-            "description": "A squad of highly trained bikers that are adept at long range, high-speed combat.",
-            "category": "strike",
-            "keywords": ["Biker"],
-            "rules": ["hover"],
-            "models": [
-                {
-                    "name": "Wind Rifle",
-                    "courage": 6,
-                    "shoot": 6,
-                    "fight": 6,
-                    "defense": 8,
-                    "reflexes": 6,
-                    "movement": 8,
-                    "weapons": ["twin_shard_rifle"],
-                    "options": [{"replaceWeapon": "twin_shard_rifle", "withWeapon": ["twin_shard_cannon", "laser_machinegun"]}],
-                    "min": 1,
-                    "max": 1
-                }
-            ]
-        },
-        "hawk_warrior_leader": {
-            "name": "Hawk Warrior Leader",
-            "description": "A group of winged warriors trained to use the element of suprise and strike from above.",
+        "hawk_leader": {
+            "name": "Hawk Leader",
+            "description": "A winged warrior leader trained to use the element of suprise and strike from above.",
             "category": "command",
-            "keyowrds": ["Infantry"],
-            "rules": ["ambush", "fly"],
             "models": [
                 {
                     "name": "Hawk Leader",
                     "courage": 6,
-                    "movement": 8,
                     "shoot": 6,
                     "fight": 6,
                     "defense": 6,
+                    "movement": 8,
                     "reflexes": 6,
-                    "rules": ["champion"],
-                    "weapons": ["elven_blaster", "frags"],
-                    "options": [{"replaceWeapon": "elven_blaster", "withWeapon": ["hawk_talon", "sunlight_rifle"]}, {"addWeapon": ["energy_sword"], "limit": 1}],
+                    "rules": ["ambush", "fly", "leader"],
+                    "weapons": ["elven_blaster", "ccw"],
+                    "options": [{"replaceWeapon": "elven_blaster", "withWeapon": ["hawk_talon", "sunlight_rifle"]}, {"replaceWeapon": ["ccw"], "withWeapon": ["energy_sword"]}],
                     "min": 1,
                     "max": 1
                 }
             ]
         },
-        "hawk_warrior": {
-            "name": "Hawk Warrior",
-            "description": "A group of winged warriors trained to use the element of suprise and strike from above.",
+        "blink": {
+            "name": "Blink",
+            "description": "A stealthy warrior able to quickly teleport across the battlefield.",
             "category": "strike",
-            "keyowrds": ["Infantry"],
-            "rules": ["ambush", "fly"],
-            "models": [{"name": "Hawk Warrior", "courage": 6, "shoot": 6, "fight": 6, "defense": 6, "movement": 8, "reflexes": 6, "weapons": ["elven_blaster", "frags"], "min": 1, "max": 1}]
-        },
-        "spider_leader": {
-            "name": "Spider Warrior Leader",
-            "description": "A group of stealthy warriors able to harness the power of magic to transport themselves quickly across the battlefield.",
-            "category": "command",
-            "keywords": ["Infantry"],
-            "rules": ["stealth", "ambush"],
             "models": [
                 {
-                    "name": "Spider Warrior Leader",
+                    "name": "Blink",
                     "courage": 6,
-                    "movement": 7,
                     "shoot": 6,
                     "fight": 6,
                     "defense": 7,
+                    "movement": 7,
                     "reflexes": 6,
-                    "rules": ["champion"],
-                    "weapons": ["spinnerette_rifle"],
+                    "rules": ["ambush", "evasive", "teleport"],
+                    "weapons": ["nova_blaster", {"id": "ccw", "count": 2}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "blink_leader": {
+            "name": "Blink Leader",
+            "description": "A stealthy warrior leader able to quickly teleport across the battlefield.",
+            "category": "command",
+            "models": [
+                {
+                    "name": "Blink Leader",
+                    "courage": 6,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 7,
+                    "movement": 7,
+                    "reflexes": 6,
+                    "rules": ["ambush", "evasive", "leader", "teleport"],
+                    "weapons": ["nova_blaster", {"id": "ccw", "count": 2}],
                     "options": [
-                        {"replaceWeapon": "spinnerette_rifle", "withWeapon": ["web_rifle", {"id": "spinnerette_rifle", "count": 2}]},
-                        {"addWeapon": [{"id": "energy_sword", "count": 3}], "limit": 1}
+                        {"replaceWeapon": "nova_blaster", "withWeapon": ["web_rifle"]},
+                        {"replaceWeapon": [{"id": "ccw", "count": 2}], "withWeapon": [{"id": "energy_sword", "count": 3}]},
+                        {"addWeapon": ["nova_blaster"]}
                     ],
                     "min": 1,
                     "max": 1
                 }
             ]
         },
-        "spider": {
-            "name": "Spider Warrior",
-            "description": "A group of stealthy warriors able to harness the power of magic to transport themselves quickly across the battlefield.",
+        "elven_biker": {
+            "name": "Elven Biker",
+            "description": "A highly trained biker that is adept at both melee and ranged combat.",
             "category": "strike",
-            "keywords": ["Infantry"],
-            "rules": ["stealth", "ambush"],
-            "models": [{"name": "Spider Warrior", "courage": 6, "shoot": 6, "fight": 6, "defense": 7, "movement": 7, "reflexes": 6, "weapons": ["spinnerette_rifle"], "min": 1, "max": 1}]
+            "keywords": ["Biker"],
+            "models": [
+                {
+                    "name": "Elven Biker",
+                    "courage": 6,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 8,
+                    "reflexes": 6,
+                    "movement": 8,
+                    "rules": ["hover"],
+                    "options": [
+                        {"addWeapon": [["laser_lance_shoot", {"id": "laser_lance_melee", "count": 3}]]},
+                        {"replaceWeapon": [{"id": "twin_shard_rifle", "mount": ["Front"]}], "withWeapon": [{"id": "laser_machinegun", "mount": ["Front"]}, {"id": "shard_cannon", "mount": ["Front"]}]}
+                    ],
+                    "weapons": [{"id": "twin_shard_rifle", "mount": ["Front"]}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "elven_biker_leader": {
+            "name": "Elven Biker Leader",
+            "description": "A highly trained biker leader that is adept at both melee and ranged combat.",
+            "category": "command",
+            "keywords": ["Biker"],
+            "models": [
+                {
+                    "name": "Elven Biker Leader",
+                    "courage": 6,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 8,
+                    "reflexes": 6,
+                    "movement": 8,
+                    "rules": ["hover", "leader"],
+                    "weapons": [{"id": "twin_shard_rifle", "mount": ["Front"]}],
+                    "options": [
+                        {"addWeapon": [["laser_lance_shoot", {"id": "laser_lance_melee", "count": 3}]]},
+                        {
+                            "replaceWeapon": ["laser_lance_shoot", {"id": "laser_lance_melee", "count": 3}],
+                            "withWeapon": [{"id": "exemplar_blade", "count": 3}, ["space_lance_shooting", {"id": "space_lance_melee", "count": 3}]]
+                        },
+                        {"replaceWeapon": [{"id": "twin_shard_rifle", "mount": ["Front"]}], "withWeapon": [{"id": "laser_machinegun", "mount": ["Front"]}, {"id": "shard_cannon", "mount": ["Front"]}]}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
         },
         "ranger_biker": {
             "name": "Ranger Biker",
             "description": "A highly trained biker that is adept at taking out high-value targets on the move.",
             "category": "strike",
             "keywords": ["Biker"],
-            "rules": ["hover", "scout", "stealth"],
             "models": [
                 {
                     "name": "Ranger Biker",
@@ -724,8 +709,11 @@
                     "defense": 8,
                     "reflexes": 6,
                     "movement": 8,
-                    "weapons": ["twin_shard_rifle", "shard_sniper"],
-                    "options": [{"replaceWeapon": "twin_shard_rifle", "withWeapon": ["twin_shard_cannon", "laser_machinegun"]}],
+                    "rules": ["evasive", "hover", "scout"],
+                    "options": [
+                        {"replaceWeapon": [{"id": "twin_shard_rifle", "mount": ["Front"]}], "withWeapon": [{"id": "laser_machinegun", "mount": ["Front"]}, {"id": "shard_cannon", "mount": ["Front"]}]}
+                    ],
+                    "weapons": ["shard_sniper", {"id": "twin_shard_rifle", "mount": ["Front"]}],
                     "min": 1,
                     "max": 1
                 }
@@ -736,7 +724,6 @@
             "description": "A highly trained biker leader that is adept at taking out high-value targets on the move.",
             "category": "command",
             "keywords": ["Biker"],
-            "rules": ["hover", "scout", "stealth", "leader"],
             "models": [
                 {
                     "name": "Ranger Biker Leader",
@@ -746,8 +733,12 @@
                     "defense": 8,
                     "reflexes": 6,
                     "movement": 8,
-                    "weapons": ["twin_shard_rifle", "shard_sniper"],
-                    "options": [{"replaceWeapon": "twin_shard_rifle", "withWeapon": ["twin_shard_cannon", "laser_machinegun"]}],
+                    "rules": ["evasive", "hover", "leader", "scout"],
+                    "weapons": ["shard_sniper", {"id": "twin_shard_rifle", "mount": ["Front"]}],
+                    "options": [
+                        {"replaceWeapon": "shard_sniper", "withWeapon": ["spectre_rifle"]},
+                        {"replaceWeapon": [{"id": "twin_shard_rifle", "mount": ["Front"]}], "withWeapon": [{"id": "laser_machinegun", "mount": ["Front"]}, {"id": "shard_cannon", "mount": ["Front"]}]}
+                    ],
                     "min": 1,
                     "max": 1
                 }
@@ -755,66 +746,63 @@
         }
     },
     "rules": {
-        "rifle_tactics": {
-            "name": "Rifle Tactics",
-            "inputs": ["x"],
-            "description": "When this unit is activated, choose up to X friendly _Infantry_ units within 6\". Those units may re-roll failed Accuracy tests of 9+ until the end of the round.",
-            "points": ["rule.x", {"multiply": 5}]
+        "sky_engine": {
+            "name": "Sky Engine",
+            "hidden": true,
+            "description": "This model may ignore terrain and other models without the Fly special rule when moving and gains an extra 4\" movement.",
+            "description_short": "+2\" Move",
+            "points": 5
         },
-        "melee_tactics": {
-            "name": "Melee Tactics",
-            "inputs": ["x"],
-            "description": "When this unit is activated, choose up to X friendly _Infantry_ units within 6\". Those units may re-roll failed Strength tests of 9+ until the end of the round.",
-            "points": ["rule.x", {"multiply": 5}]
+        "gravity_thrusters": {
+            "name": "Gravity Thrusters",
+            "description": "If this model performs two move actions on its turn, enemy units suffer -1 Accuracy when targeting this model.",
+            "points": 10
+        },
+        "legend_master_of_war": {"name": "Master of War", "description": "When this unit makes an attack targeting an enemy _Leader_ or _Support_ model, it may reroll hit rolls of 9+.", "points": 5},
+        "legend_psychic_mastery": {
+            "name": "Psychic Mastery",
+            "description": "This model may treat the casting value of a power they cast as 2 higher _(for example, a power with a casting value of 6 would require an 8 or lower to cast)_.",
+            "points": 10
         }
     },
     "weapons": {
-        "wraith_sword": {"name": "Wraith Sword", "attacks": 1, "short": "Melee", "ap": 4},
-        "wraith_axe": {"name": "Wraith Axe", "attacks": 1, "short": "Melee", "ap": 5, "rules": ["cumbersome"]},
-        "wraith_fists": {"name": "Wraith Fists", "attacks": 1, "short": "Melee", "ap": 2},
-        "wraith_cannon": {"name": "Wraith Cannon", "attacks": 1, "short": 6, "medium": 12, "ap": 8, "rules": ["assault"]},
-        "distortion_rifle": {"name": "Distortion Rifle", "attacks": 1, "short": 6, "ap": 8, "rules": ["assault", {"id": "critical", "x": 1}]},
-        "doom_artillery_cannon": {"name": "Doom Artillery Cannon", "attacks": 2, "short": 24, "medium": 48, "ap": 4, "rules": ["indirect", "scatter", {"id": "blast", "x": 3}]},
-        "sky_cannon": {"name": "Sky Cannon", "attacks": 2, "short": 18, "medium": 36, "ap": 4},
-        "twin_sky_cannon": {"name": "Twin Sky Cannon", "attacks": 4, "short": 18, "medium": 36, "ap": 4},
-        "star_spear": {"name": "Star Spear", "attacks": 1, "short": "Melee", "ap": 4, "rules": ["cumbersome"]},
-        "laser_lance_melee": {"name": "Laser Lance (Melee)", "attacks": 1, "short": "Melee", "ap": 1, "rules": ["lance"]},
+        "fusion_carbine": {"name": "Fusion Carbine", "attacks": 1, "short": 9, "medium": 18, "ap": 6, "rules": ["assault", {"id": "critical", "x": 1}]},
+        "distortion_rifle": {"name": "Distortion Rifle", "attacks": 1, "short": 6, "medium": 12, "ap": 6, "rules": ["assault", {"id": "blast", "x": 3}]},
+        "distortion_cannon": {"name": "Distortion Cannon", "attacks": 2, "short": 24, "medium": 48, "ap": 8, "rules": [{"id": "blast", "x": 3}, {"id": "critical", "x": 1}]},
+        "distortion_blaster": {"name": "Distortion Blaster", "attacks": 1, "short": 18, "medium": 36, "ap": 8, "rules": ["indirect", {"id": "blast", "x": 3}]},
+        "sky_cannon": {"name": "Sky Cannon", "attacks": 2, "short": 18, "medium": 36, "ap": 4, "rules": ["anti_air"]},
+        "twin_sky_cannon": {"name": "Twin Sky Cannon", "attacks": 4, "short": 18, "medium": 36, "ap": 4, "rules": ["anti_air"]},
+        "star_spear": {"name": "Star Spear", "attacks": 1, "short": "Melee", "ap": 4, "rules": ["cumbersome", {"id": "reach", "x": 1}]},
+        "laser_lance_melee": {"name": "Laser Lance (Melee)", "attacks": 1, "short": "Melee", "ap": 1, "rules": ["lance", {"id": "reach", "x": 1}]},
         "laser_lance_shoot": {"name": "Laser Lance (Shooting)", "attacks": 1, "short": 6, "medium": 12, "ap": 1, "rules": ["rending"]},
-        "shreiking_spear_melee": {"name": "Shreiking Spear (Melee)", "attacks": 1, "short": "Melee", "ap": 6, "rules": [{"id": "critical", "x": 1}]},
+        "shreiking_spear_melee": {"name": "Shreiking Spear (Melee)", "attacks": 1, "short": "Melee", "ap": 6, "rules": [{"id": "critical", "x": 1}, {"id": "reach", "x": 1}]},
         "shreiking_spear_shoot": {"name": "Shreiking Spear (Shooting)", "attacks": 1, "short": 6, "medium": 12, "ap": 6, "rules": [{"id": "critical", "x": 1}]},
-        "shining_cannon": {"name": "Shining Cannon", "attacks": 2, "short": 24, "medium": 48, "ap": 5, "rules": [{"id": "blast", "x": 3}]},
-        "titan_fusion_cannon": {"name": "Titan Fusion Cannon", "attacks": 2, "short": 18, "medium": 36, "ap": 10, "rules": [{"id": "critical", "x": 1}, "assault"]},
-        "titan_glaive": {"name": "Titan Glaive", "profiles": [{"name": "Strike", "attacks": 4, "short": "Melee", "ap": 9}, {"name": "Sweep", "attacks": 8, "short": "Melee", "ap": 4}]},
+        "shining_cannon": {"name": "Shining Cannon", "attacks": 2, "short": 24, "medium": 48, "ap": 6, "rules": [{"id": "blast", "x": 3}]},
         "spectre_rifle": {
             "name": "Spectre Rifle",
             "profiles": [
                 {"name": "Focused", "attacks": 1, "short": 9, "medium": 18, "ap": 4, "rules": [{"id": "critical", "x": 1}]},
-                {"name": "Dispersed", "attacks": 3, "short": 4, "medium": 8, "ap": 2, "rules": ["flame"]}
+                {"name": "Dispersed", "attacks": 3, "short": 6, "medium": 12, "ap": 2, "rules": ["flame"]}
             ]
         },
-        "dragon_flamethrower": {"name": "Dragon Flamethrower", "attacks": 3, "short": 4, "medium": 8, "ap": 2, "rules": ["flame", "assault"]},
-        "shuriken": {
-            "name": "Deadly Shuriken",
-            "profiles": [{"name": "Melee", "attacks": 3, "short": "Melee", "ap": 1}, {"name": "Shooting", "attacks": 3, "short": 6, "medium": 12, "ap": 2, "rules": ["assault"]}]
-        },
-        "fusion_glaive": {"name": "Energy Blade", "attacks": 1, "short": "Melee", "ap": 3, "rules": [{"id": "critical", "x": 1}]},
-        "mirror_blades": {"name": "Mirror Blades", "attacks": 1, "short": "Melee", "ap": 1, "rules": [{"id": "blast", "count": 2}]},
+        "shuriken": {"name": "Great Shuriken", "attacks": 3, "short": 6, "medium": 12, "ap": 2, "rules": ["assault"]},
+        "mirror_blades": {"name": "Mirror Blades", "attacks": 1, "short": "Melee", "ap": 1, "rules": [{"id": "deadly", "x": 2}]},
         "elven_blaster": {"name": "Elven Blaster", "attacks": 2, "short": 6, "medium": 12, "ap": 4, "rules": ["assault"]},
-        "slicing_sword": {"name": "Slicing Sword", "attacks": 1, "short": "Melee", "ap": 2},
-        "scorpion_claw": {
-            "name": "Scorpion Claw",
-            "profiles": [{"name": "Shooting", "attacks": 2, "short": 6, "medium": 12, "ap": 1, "rules": ["assault", "rending"]}, {"name": "Melee", "attacks": 3, "short": "Melee", "ap": 4}]
-        },
+        "shard_blaster": {"name": "Shard Blaster", "attacks": 2, "short": 6, "medium": 12, "ap": 1, "rules": ["assault", "rending"]},
         "exemplar_blade": {"name": "Exemplar Blade", "attacks": 1, "short": "Melee", "ap": 1, "rules": ["accurate"]},
-        "space_lance": {
-            "name": "Space Lance",
-            "profiles": [{"name": "Melee", "attacks": 3, "short": "Melee", "ap": 1, "rules": ["lance"]}, {"name": "Shooting", "attacks": 1, "short": 6, "medium": 12, "ap": 6, "rules": ["assault"]}]
-        },
+        "space_lance_shooting": {"name": "Space Lance (Shooting)", "attacks": 1, "short": 6, "medium": 12, "ap": 6, "rules": ["assault"]},
+        "space_lance_melee": {"name": "Space Lance (Melee)", "attacks": 1, "short": "Melee", "ap": 2, "rules": ["lance", {"id": "reach", "x": 1}]},
         "hawk_talon": {"name": "Hawk Talon", "attacks": 4, "short": 12, "medium": 24, "ap": 2, "rules": ["assault"]},
         "sunlight_rifle": {"name": "Sunlight Rifle", "attacks": 4, "short": 12, "medium": 24, "ap": 1, "rules": ["assault"]},
-        "spinnerette_rifle": {"name": "Spinnerette Rifle", "attacks": 2, "short": 6, "medium": 12, "ap": 3, "rules": ["assault", "rending"]},
-        "web_rifle": {"name": "Web Rifle", "attacks": 1, "short": 9, "medium": 18, "ap": 4, "rules": ["rapid_fire"]},
-        "hexblade": {"name": "Hexblade", "attacks": 1, "short": "Melee", "ap": 0, "rules": [{"id": "rending"}]}
+        "nova_blaster": {"name": "Nova Blaster", "attacks": 1, "ap": 4, "short": 6, "medium": 12, "rules": ["assault", {"id": "blast", "x": 3}]},
+        "web_rifle": {"name": "Web Rifle", "attacks": 1, "short": 9, "medium": 18, "ap": 4, "rules": [{"id": "slowing", "x": 2}, "rapid_fire"]},
+        "shattersky_launcher": {"name": "Skyshatter Launcher", "attacks": 2, "short": 18, "medium": 36, "ap": 2, "rules": [{"id": "blast", "x": 3}, "indirect"]},
+        "revenant_fist": {"name": "Revenant Fist", "attacks": 1, "ap": 4, "short": "Melee"},
+        "revenant_blade": {"name": "Revenant Blade", "attacks": 1, "ap": 5, "short": "Melee"},
+        "energy_blade": {"name": "Energy Blade", "attacks": 1, "short": "Melee", "ap": 3, "rules": [{"id": "critical", "x": 1}]},
+        "heavy_shard_rifle": {"name": "Heavy Shard Rifle", "attacks": 3, "short": 12, "medium": 24, "ap": 1, "rules": ["rending", "assault"]},
+        "heavy_fusion_lance": {"name": "Heavy Fusion Lance", "attacks": 1, "short": 24, "medium": 48, "ap": 10, "rules": [{"id": "critical", "x": 3}, {"id": "blast", "x": 3}]},
+        "titan_sword": {"name": "Titan Sword", "profiles": [{"name": "Strike", "attacks": 4, "short": "Melee", "ap": 8}, {"name": "Sweep", "attacks": 8, "short": "Melee", "ap": 4}]}
     },
     "powers": {
         "luck": {
@@ -846,6 +834,29 @@
             "description": "Use when taking an Initiative test for a reaction. That unit is treated as having +2 Initiative for that test.",
             "flavor": "Highly trained and expertly attentive, High Elf troops can react in an instant.",
             "cost": 1
+        }
+    },
+    "relics": {
+        "master_of_war": {
+            "name": "Master of War",
+            "rule": "legend_master_of_war",
+            "description": "Upgrade one _Leader_ model with Master of War.",
+            "flavor": "This righteous elven champion is always ready to cut down his opposite number",
+            "points": 5
+        },
+        "psychic_mastery": {
+            "name": "Psychic Mastery",
+            "rule": "legend_psychic_mastery",
+            "description": "Upgrade one _Leader_ model with the Power special rule with Psychic Mastery.",
+            "flavor": "An archmage of the psychic arts, this great psychic rivals the champions of the gods.",
+            "points": 10
+        },
+        "runic_armor": {
+            "name": "Runic Armor",
+            "description": "Upgrade one _Leader_ model with Defiant(3).",
+            "flavor": "Sometimes it seems like a champion is protected by an unseen force, deflecting lethal blows.",
+            "points": 5,
+            "rule": {"id": "defiant", "x": 3}
         }
     }
 }
