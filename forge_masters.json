@@ -21,7 +21,7 @@
                     "options": [
                         {"replaceWeapon": ["heavy_carbine"], "withWeapon": ["laser_rifle", "storm_rifle", "combi_plasma", "combi_fusion", "combi_flamer", "combi_thermal"]},
                         {"replaceWeapon": ["heavy_carbine", {"id": "heavy_ccw", "count": 2}], "withWeapon": [["heavy_pistol", {"id": "heavy_ccw", "count": 3}]]},
-                        {"replaceWeapon": ["heavy_pistol"], "withWeapon": ["combat_shotgun", "plasma_pistol", "fusion_pistol", "flamethrower_pistol"]},
+                        {"replaceWeapon": ["heavy_pistol"], "withWeapon": ["combat_shotgun", "plasma_pistol", "fusion_pistol", "flamethrower_pistol", "thermal_pistol"]},
                         {
                             "replaceWeapon": [{"id": "heavy_ccw", "count": 3}],
                             "withWeapon": [
@@ -57,7 +57,7 @@
                     "options": [
                         {"replaceWeapon": ["heavy_carbine"], "withWeapon": ["laser_rifle", "storm_rifle", "combi_plasma", "combi_fusion", "combi_flamer", "combi_thermal"]},
                         {"replaceWeapon": ["heavy_carbine", {"id": "heavy_ccw", "count": 2}], "withWeapon": [["heavy_pistol", {"id": "heavy_ccw", "count": 3}]]},
-                        {"replaceWeapon": ["heavy_pistol"], "withWeapon": ["combat_shotgun", "plasma_pistol", "fusion_pistol", "flamethrower_pistol"]},
+                        {"replaceWeapon": ["heavy_pistol"], "withWeapon": ["combat_shotgun", "plasma_pistol", "fusion_pistol", "flamethrower_pistol", "thermal_pistol"]},
                         {
                             "replaceWeapon": [{"id": "heavy_ccw", "count": 3}],
                             "withWeapon": [
@@ -97,10 +97,7 @@
                     "rules": ["ambush", "leader", {"id": "wounds", "x": 3}, {"id": "rifle_tactics", "x": 1}],
                     "weapons": ["twin_heavy_carbine", {"id": "heavy_ccw", "count": 3}, "frags"],
                     "options": [
-                        {
-                            "replaceWeapon": ["twin_heavy_carbine"],
-                            "withWeapon": ["plasma_cannon", "fusion_cannon", "heavy_flamethrower", "heavy_machinegun", "gravity_cannon", "fusion_beamer", "thermal_lance", "railgun"]
-                        },
+                        {"replaceWeapon": ["twin_heavy_carbine"], "withWeapon": ["fusion_rifle", "flamethrower", "plasma_rifle", "gravity_rifle", "thermal_rifle"]},
                         {
                             "replaceWeapon": [{"id": "heavy_ccw", "count": 3}],
                             "withWeapon": [
@@ -137,7 +134,7 @@
                     "options": [
                         {"replaceWeapon": ["heavy_carbine"], "withWeapon": ["laser_rifle", "storm_rifle", "combi_plasma", "combi_fusion", "combi_flamer", "combi_thermal"]},
                         {"replaceWeapon": ["heavy_carbine", {"id": "heavy_ccw", "count": 2}], "withWeapon": [["heavy_pistol", {"id": "heavy_ccw", "count": 3}]]},
-                        {"replaceWeapon": ["heavy_pistol"], "withWeapon": ["combat_shotgun", "plasma_pistol", "fusion_pistol", "flamethrower_pistol"]},
+                        {"replaceWeapon": ["heavy_pistol"], "withWeapon": ["combat_shotgun", "plasma_pistol", "fusion_pistol", "flamethrower_pistol", "thermal_pistol"]},
                         {
                             "replaceWeapon": [{"id": "heavy_ccw", "count": 3}],
                             "withWeapon": [
@@ -174,7 +171,7 @@
                     "options": [
                         {"replaceWeapon": ["heavy_carbine"], "withWeapon": ["laser_rifle", "storm_rifle", "combi_plasma", "combi_fusion", "combi_flamer", "combi_thermal"]},
                         {"replaceWeapon": ["heavy_carbine", {"id": "heavy_ccw", "count": 2}], "withWeapon": [["heavy_pistol", {"id": "heavy_ccw", "count": 3}]]},
-                        {"replaceWeapon": ["heavy_pistol"], "withWeapon": ["combat_shotgun", "plasma_pistol", "fusion_pistol", "flamethrower_pistol"]},
+                        {"replaceWeapon": ["heavy_pistol"], "withWeapon": ["combat_shotgun", "plasma_pistol", "fusion_pistol", "flamethrower_pistol", "thermal_pistol"]},
                         {
                             "replaceWeapon": [{"id": "heavy_ccw", "count": 3}],
                             "withWeapon": [
@@ -215,10 +212,7 @@
                     "rules": ["ambush", "leader", {"id": "power", "x": 1}, {"id": "wounds", "x": 3}],
                     "weapons": ["twin_heavy_carbine", {"id": "heavy_ccw", "count": 3}, "frags"],
                     "options": [
-                        {
-                            "replaceWeapon": ["twin_heavy_carbine"],
-                            "withWeapon": ["plasma_cannon", "fusion_cannon", "heavy_flamethrower", "heavy_machinegun", "gravity_cannon", "fusion_beamer", "thermal_lance", "railgun"]
-                        },
+                        {"replaceWeapon": ["twin_heavy_carbine"], "withWeapon": ["fusion_rifle", "flamethrower", "plasma_rifle", "gravity_rifle", "thermal_rifle"]},
                         {
                             "replaceWeapon": [{"id": "heavy_ccw", "count": 3}],
                             "withWeapon": [
@@ -294,7 +288,7 @@
                     "options": [
                         {"replaceWeapon": ["heavy_carbine"], "withWeapon": ["laser_rifle", "storm_rifle", "combi_plasma", "combi_fusion", "combi_flamer", "combi_thermal"]},
                         {"replaceWeapon": ["heavy_carbine", {"id": "heavy_ccw", "count": 2}], "withWeapon": [["heavy_pistol", {"id": "heavy_ccw", "count": 3}]]},
-                        {"replaceWeapon": ["heavy_pistol"], "withWeapon": ["combat_shotgun", "plasma_pistol", "fusion_pistol", "flamethrower_pistol"]},
+                        {"replaceWeapon": ["heavy_pistol"], "withWeapon": ["combat_shotgun", "plasma_pistol", "fusion_pistol", "flamethrower_pistol", "thermal_pistol"]},
                         {
                             "replaceWeapon": [{"id": "heavy_ccw", "count": 3}],
                             "withWeapon": [
@@ -336,7 +330,7 @@
                     "options": [
                         {"replaceWeapon": ["heavy_carbine"], "withWeapon": ["laser_rifle", "storm_rifle", "combi_plasma", "combi_fusion", "combi_flamer", "combi_thermal"]},
                         {"replaceWeapon": ["heavy_carbine", {"id": "heavy_ccw", "count": 2}], "withWeapon": [["heavy_pistol", {"id": "heavy_ccw", "count": 3}]]},
-                        {"replaceWeapon": ["heavy_pistol"], "withWeapon": ["combat_shotgun", "plasma_pistol", "fusion_pistol", "flamethrower_pistol"]},
+                        {"replaceWeapon": ["heavy_pistol"], "withWeapon": ["combat_shotgun", "plasma_pistol", "fusion_pistol", "flamethrower_pistol", "thermal_pistol"]},
                         {
                             "replaceWeapon": [{"id": "heavy_ccw", "count": 3}],
                             "withWeapon": [
@@ -432,7 +426,7 @@
                     "options": [
                         {"replaceWeapon": ["heavy_carbine"], "withWeapon": ["laser_rifle", "storm_rifle", "combi_plasma", "combi_fusion", "combi_flamer", "combi_thermal"]},
                         {"replaceWeapon": ["heavy_carbine", "heavy_ccw"], "withWeapon": [["heavy_pistol", {"id": "heavy_ccw", "count": 2}]]},
-                        {"replaceWeapon": ["heavy_pistol"], "withWeapon": ["combat_shotgun", "plasma_pistol", "fusion_pistol", "flamethrower_pistol"]},
+                        {"replaceWeapon": ["heavy_pistol"], "withWeapon": ["combat_shotgun", "plasma_pistol", "fusion_pistol", "flamethrower_pistol", "thermal_pistol"]},
                         {
                             "replaceWeapon": [{"id": "heavy_ccw", "count": 2}],
                             "withWeapon": [
@@ -514,7 +508,7 @@
                     "options": [
                         {"replaceWeapon": ["heavy_carbine"], "withWeapon": ["laser_rifle", "storm_rifle", "combi_thermal", "combi_flamer", "combi_fusion", "combi_plasma"]},
                         {"replaceWeapon": ["heavy_carbine", "heavy_ccw"], "withWeapon": [["heavy_pistol", {"id": "heavy_ccw", "count": 2}]]},
-                        {"replaceWeapon": ["heavy_pistol"], "withWeapon": ["combat_shotgun", "plasma_pistol", "flamethrower_pistol", "fusion_pistol"]},
+                        {"replaceWeapon": ["heavy_pistol"], "withWeapon": ["combat_shotgun", "plasma_pistol", "flamethrower_pistol", "fusion_pistol", "thermal_pistol"]},
                         {
                             "replaceWeapon": [{"id": "heavy_ccw", "count": 2}],
                             "withWeapon": [
@@ -577,7 +571,21 @@
                     "options": [
                         {
                             "replaceWeapon": ["twin_heavy_carbine"],
-                            "withWeapon": ["heavy_machinegun", "fusion_cannon", "heavy_flamethrower", "plasma_cannon", "gravity_cannon", "fusion_beamer", "thermal_lance", "railgun"]
+                            "withWeapon": [
+                                "heavy_machinegun",
+                                "fusion_cannon",
+                                "heavy_flamethrower",
+                                "plasma_cannon",
+                                "gravity_cannon",
+                                "fusion_beamer",
+                                "thermal_lance",
+                                "railgun",
+                                "fusion_rifle",
+                                "flamethrower",
+                                "plasma_rifle",
+                                "gravity_rifle",
+                                "thermal_rifle"
+                            ]
                         },
                         {
                             "replaceWeapon": [{"id": "heavy_ccw", "count": 3}],
@@ -590,7 +598,7 @@
                                 {"id": "energy_pick", "count": 3}
                             ]
                         },
-                        {"addWeapon": ["rocket_pod"]}
+                        {"addWeapon": ["rocket_pod", "grenade_launcher"], "limit": 1}
                     ],
                     "min": 1,
                     "max": 1
@@ -615,7 +623,21 @@
                     "options": [
                         {
                             "replaceWeapon": ["twin_heavy_carbine"],
-                            "withWeapon": ["heavy_machinegun", "fusion_cannon", "heavy_flamethrower", "plasma_cannon", "gravity_cannon", "fusion_beamer", "thermal_lance", "railgun"]
+                            "withWeapon": [
+                                "heavy_machinegun",
+                                "fusion_cannon",
+                                "heavy_flamethrower",
+                                "plasma_cannon",
+                                "gravity_cannon",
+                                "fusion_beamer",
+                                "thermal_lance",
+                                "railgun",
+                                "fusion_rifle",
+                                "flamethrower",
+                                "plasma_rifle",
+                                "gravity_rifle",
+                                "thermal_rifle"
+                            ]
                         },
                         {
                             "replaceWeapon": [{"id": "heavy_ccw", "count": 3}],
@@ -628,7 +650,7 @@
                                 {"id": "energy_pick", "count": 3}
                             ]
                         },
-                        {"addWeapon": ["rocket_pod"]}
+                        {"addWeapon": ["rocket_pod", "grenade_launcher"], "limit": 1}
                     ],
                     "min": 1,
                     "max": 1
@@ -652,7 +674,7 @@
                     "options": [
                         {"replaceWeapon": ["heavy_carbine"], "withWeapon": ["laser_rifle"]},
                         {"replaceWeapon": ["heavy_carbine", "heavy_ccw"], "withWeapon": [["heavy_pistol", {"id": "heavy_ccw", "count": 2}]]},
-                        {"replaceWeapon": ["heavy_pistol"], "withWeapon": ["combat_shotgun", "plasma_pistol", "fusion_pistol", "flamethrower_pistol"]},
+                        {"replaceWeapon": ["heavy_pistol"], "withWeapon": ["combat_shotgun", "plasma_pistol", "fusion_pistol", "flamethrower_pistol", "thermal_pistol"]},
                         {
                             "replaceWeapon": [{"id": "heavy_ccw", "count": 2}],
                             "withWeapon": [
@@ -693,7 +715,7 @@
                     "options": [
                         {"replaceWeapon": ["heavy_carbine"], "withWeapon": ["laser_rifle"]},
                         {"replaceWeapon": ["heavy_carbine", "heavy_ccw"], "withWeapon": [["heavy_pistol", {"id": "heavy_ccw", "count": 2}]]},
-                        {"replaceWeapon": ["heavy_pistol"], "withWeapon": ["combat_shotgun", "plasma_pistol", "fusion_pistol", "flamethrower_pistol"]},
+                        {"replaceWeapon": ["heavy_pistol"], "withWeapon": ["combat_shotgun", "plasma_pistol", "fusion_pistol", "flamethrower_pistol", "thermal_pistol"]},
                         {
                             "replaceWeapon": [{"id": "heavy_ccw", "count": 2}],
                             "withWeapon": [
@@ -734,7 +756,7 @@
                     "reflexes": 5,
                     "weapons": ["heavy_pistol", {"id": "heavy_ccw", "count": 3}, "frags"],
                     "options": [
-                        {"replaceWeapon": ["heavy_pistol"], "withWeapon": ["combat_shotgun", "plasma_pistol", "fusion_pistol", "flamethrower_pistol"]},
+                        {"replaceWeapon": ["heavy_pistol"], "withWeapon": ["combat_shotgun", "plasma_pistol", "fusion_pistol", "flamethrower_pistol", "thermal_pistol"]},
                         {
                             "replaceWeapon": [{"id": "heavy_ccw", "count": 3}],
                             "withWeapon": [
@@ -829,18 +851,18 @@
     "weapons": {
         "heavy_carbine": {"name": "Heavy Carbine", "attacks": 1, "short": 9, "medium": 18, "ap": 1, "rules": ["assault"]},
         "twin_heavy_carbine": {"name": "Twin Heavy Carbine", "attacks": 2, "short": 9, "medium": 18, "ap": 1, "rules": ["assault"]},
-        "thermal_rifle": {"name": "Thermal Rifle", "attacks": 1, "short": 12, "medium": 24, "ap": 3, "rules": ["flame", "overcharge"]},
+        "thermal_rifle": {"name": "Thermal Rifle", "attacks": 1, "short": 12, "medium": 24, "ap": 3, "rules": ["flame", "lethal"]},
         "combi_thermal": {
             "name": "Combi Thermal Rifle",
             "profiles": [
-                {"name": "Thermal", "attacks": 1, "ap": 3, "short": 12, "medium": 24, "rules": ["flame", "overcharge"]},
+                {"name": "Thermal", "attacks": 1, "ap": 3, "short": 12, "medium": 24, "rules": ["flame", "lethal"]},
                 {"name": "Rifle", "attacks": 1, "short": 12, "medium": 24, "ap": 1, "rules": ["rapid_fire"]}
             ]
         },
+        "thermal_lance": {"name": "Thermal Lance", "attacks": 1, "short": 24, "medium": 48, "ap": 6, "rules": ["flame", "lethal"]},
+        "laser_rifle": {"name": "Laser Rifle", "attacks": 1, "short": 12, "medium": 24, "ap": 2},
         "mining_laser": {"name": "Mining Laser", "attacks": 1, "short": 12, "medium": 24, "ap": 8},
         "heavy_mining_laser": {"name": "Heavy Mining Laser", "attacks": 1, "short": 18, "medium": 36, "ap": 8},
-        "thermal_lance": {"name": "Thermal Lance", "attacks": 1, "short": 24, "medium": 48, "ap": 6, "rules": ["flame", "overcharge"]},
-        "laser_rifle": {"name": "Laser Rifle", "attacks": 1, "short": 12, "medium": 24, "ap": 2},
         "energy_saw": {"name": "Energy Sawblade", "attacks": 1, "ap": 4, "short": "Melee"}
     },
     "rules": {},
