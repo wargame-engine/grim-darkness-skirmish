@@ -1547,8 +1547,8 @@
             ],
             "keywords": ["Biker"]
         },
-        "recon_marines": {
-            "name": "Recon Marines",
+        "recon_marine": {
+            "name": "Recon Marine",
             "description": "A lightly armed and armoured marine sent to scout and sow dissent",
             "category": "specialist",
             "subfactions": ["none", "stealth_focus"],
@@ -1561,6 +1561,7 @@
                     "shoot": 6,
                     "fight": 6,
                     "defense": 7,
+                    "reflexes": 7,
                     "weapons": ["marine_rifle", "heavy_ccw", "at_grenade"],
                     "options": [{"replaceWeapon": "marine_rifle", "withWeapon": ["marine_shotgun", "sniper_rifle"]}, {"addRule": {"id": "evasive", "name": "Camouflage Cloak"}}],
                     "min": 1,
